@@ -1,3 +1,9 @@
+## content
+## 1. basic ignore
+## 2. additions and customs
+
+### basic ignore
+
 
 /reports/
 /CI_reports/
@@ -111,3 +117,43 @@ dist
 
 # TernJS port file
 .tern-port
+
+#### customs and additions below
+
+# ignore dot-files/-folders
+.*
+
+# project internals can be ignored
+/CODEOWNERS
+/CONTRIBUTING.*
+/HISTORY.md
+
+# these files are part of the license
+!/LICENSE
+!/NOTICE
+
+# never ignore the build results - these are intended to be shipped
+!/dist/
+
+# no intention to ship the maps, since the source is not shipped either.
+/dist/*.map
+
+/src/
+/tsconfig.json
+/tsconfig.*.json
+
+/test/
+/tests/
+/jest.*
+/examples/
+
+## target of JSDoc
+/out/
+/docs/jsdoc/
+
+## target or reportings, tests, etc
+/reports/
+/CI_reports/
+
+## caches
+/*.cache
