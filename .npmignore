@@ -144,6 +144,8 @@ dist
 
 /test/
 /tests/
+*.spec.*
+*.test.*
 /jest.*
 /examples/
 

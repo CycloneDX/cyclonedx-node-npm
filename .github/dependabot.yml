@@ -1,0 +1,27 @@
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'saturday'
+    allow:
+      - dependency-type: 'all'
+    versioning-strategy: 'auto'
+    labels: [ 'dependencies' ]
+    commit-message:
+      prefix: 'chore'  ## prefix maximum string length of 15
+      include: 'scope'
+    open-pull-requests-limit: 999
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'saturday'
+    labels: [ 'dependencies' ]
+    commit-message:
+      prefix: 'chore'   ## prefix maximum string length of 15
+      include: 'scope'
+    open-pull-requests-limit: 999

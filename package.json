@@ -1,0 +1,72 @@
+{
+  "name": "@cyclonedx/cyclonedx-npm",
+  "version": "1.0.0-alpha0",
+  "description": "Create CycloneDX Software Bill of Materials (SBOM) from NPM projects. ",
+  "keywords": [
+    "CycloneDX",
+    "SBOM",
+    "BOM",
+    "inventory",
+    "bill-of-materials",
+    "software-bill-of-materials",
+    "component",
+    "dependency",
+    "package-url",
+    "PURL",
+    "spdx"
+  ],
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git"
+  },
+  "homepage": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Jan Kowalleck",
+    "email": "jan.kowalleck@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Jan Kowalleck",
+      "email": "jan.kowalleck@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "@cyclonedx/cyclonedx-library": "^1.0.0",
+    "xmlbuilder2": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.6",
+    "jest": "^28.1.3",
+    "jest-junit": "^14.0.0",
+    "npm-run-all": "^4.1.5",
+    "ts-standard": "^11.0.0",
+    "typescript": "^4.7.4"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "main": "./dist/main.js",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
+    "lint": "tsc --noEmit",
+    "prebuild": "node -r fs -e 'fs.rmSync(\"dist.node\",{recursive:true,force:true})'",
+    "build": "tsc -b ./tsconfig.json",
+    "cs-fix": "eslint --fix .",
+    "setup-tests": "echo 'noting yet'",
+    "test": "run-p --aggregate-output -lc test:*",
+    "test:jest": "jest",
+    "test:standard": "eslint ."
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": "reports/jest",
+    "outputName": "tests.junit.xml"
+  }
+}
