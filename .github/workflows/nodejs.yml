@@ -1,0 +1,109 @@
+# For details of what checks are run for PRs please refer below
+# docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: Node CI
+
+on:
+  push:
+    branches: ["master", "1.0-dev" ]
+  pull_request:
+  workflow_dispatch:
+
+
+env:
+  REPORTS_DIR: CI_reports
+  NODE_ACTIVE_LTS: "16"  # https://nodejs.org/en/about/releases/
+
+jobs:
+  build:
+    name: build
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+      - name: setup project
+        run: npm ci --ignore-scripts
+      - name: build
+        run: npm run build
+      - name: artifact build result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist
+          if-no-files-found: error
+  standards:
+    name: Standards
+    timeout-minutes: 30
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+      - name: install project
+        run: npm ci
+      - name: run tests
+        run: npm run test:standard
+  test-jest:
+    needs: [ 'build' ]
+    name: test jest (${{ matrix.node-version }}, ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          # action based on https://github.com/actions/node-versions/releases
+          # see also: https://nodejs.org/en/about/releases/
+          - "18"      # current
+          - "16"      # active LTS
+          - "16.0.0"  # lowest supported
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+      - name: setup project
+        run: npm ci --ignore-scripts
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist
+      - name: test
+        run: npm run test:jest
+      - name: artifact test reports
+        if: ${{ failure() }}
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: reports-jest-node${{ matrix.node-version }}-${{ matrix.os }}
+          path: reports
+          if-no-files-found: error

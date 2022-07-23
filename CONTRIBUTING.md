@@ -10,13 +10,13 @@ first.
 To start developing simply run to install dev-dependencies and tools:
 
 ```shell
-# .. TODO 
+npm ci
 ```
 
 ## Build from source
 
 ```shell
-# .. TODO 
+npm run build
 ```
 
 ## Testing
@@ -24,13 +24,13 @@ To start developing simply run to install dev-dependencies and tools:
 Set up the tests once, via:
 
 ```shell
-# .. TODO 
+npm run setup-tests
 ```
 
 Run to have a proper test suite pass:
 
 ```shell
-# .. TODO 
+npm test
 ```
 
 ## Coding Style guide & standard
@@ -38,7 +38,7 @@ Run to have a proper test suite pass:
 Apply the coding style via:
 
 ```shell
-# .. TODO 
+npm run cs-fix
 ```
 
 ## Sign your commits
