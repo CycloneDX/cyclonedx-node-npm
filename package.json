@@ -35,7 +35,7 @@
     }
   ],
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^1.0.0",
+    "@cyclonedx/cyclonedx-library": "^1.0.1",
     "xmlbuilder2": "^3.0.2"
   },
   "devDependencies": {
