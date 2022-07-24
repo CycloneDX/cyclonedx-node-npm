@@ -17,6 +17,9 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { CLI } from './cli'
-
-process.exitCode = (new CLI()).exec(...process.argv)
+export class CLI {
+  exec (...args: string[]): number {
+    console.info('DEMO', args)
+    return 0
+  }
+}
