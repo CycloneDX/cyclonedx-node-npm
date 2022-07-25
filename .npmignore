@@ -148,6 +148,7 @@ dist
 *.test.*
 /jest.*
 /examples/
+/demo/
 
 ## target of JSDoc
 /out/

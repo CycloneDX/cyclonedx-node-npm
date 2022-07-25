@@ -51,13 +51,16 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "main": "./dist/main.js",
+  "bin": {
+    "cyclonedx-node-npm": "./bin/cyclonedx-node-npm"
+  },
+  "main": "./dist/index.js",
   "exports": "./dist/index.js",
   "scripts": {
     "prepublish": "npm run build",
     "prepublishOnly": "npm run build",
     "lint": "tsc --noEmit",
-    "prebuild": "node -r fs -e 'fs.rmSync(\"dist.node\",{recursive:true,force:true})'",
+    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
     "build": "tsc -b ./tsconfig.json",
     "cs-fix": "eslint --fix .",
     "setup-tests": "echo 'noting yet'",
