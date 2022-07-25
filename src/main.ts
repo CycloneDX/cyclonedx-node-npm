@@ -17,6 +17,69 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { CLI } from './cli'
+import { Command, Option, Argument } from 'commander'
+import { Enums, Spec } from '@cyclonedx/cyclonedx-library'
 
-process.exitCode = (new CLI()).exec(...process.argv)
+enum OutputFormat {
+  XML = 'XML',
+  JSON = 'JSON',
+}
+
+const program = new Command(
+).summary(
+  'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
+).addArgument(
+  new Argument(
+    '[<package-lock>]',
+    'Path to npm lock file.'
+  ).default(
+    'package-lock.json',
+    '"package-lock.json" file in current working directory.'
+  )
+).addOption(
+  new Option(
+    '--output-format <OUTPUT-FORMAT>',
+    'Which output format to use.'
+  ).choices(
+    Object.values(OutputFormat)
+  ).default(
+    OutputFormat.JSON
+  )
+).addOption(
+  new Option(
+    '--output-file <OUTPUT-FILE>',
+    'Path to the output file.\nSet to "-" to write to STDOUT.'
+  ).default(
+    '-'
+  )
+).addOption(
+  new Option(
+    '--exclude-dev',
+    'Exclude dev dependencies.'
+  )
+).addOption(
+  new Option(
+    '--spec-version <SPEC-VERSION>',
+    'Which version of CycloneDX spec to use.'
+  ).choices(
+    Object.keys(Spec.SpecVersionDict)
+  ).default(Spec.Version.v1dot4)
+).addOption(
+  new Option(
+    '--mc-type <MC-TYPE>',
+    'Type of the main component.'
+  ).choices(
+    // Object.values(Enums.ComponentType) -- use all possible
+    [ // for the NPM context only the following make sence:
+      Enums.ComponentType.Application,
+      Enums.ComponentType.Firmware,
+      Enums.ComponentType.Library
+    ]
+  ).default(
+    Enums.ComponentType.Application
+  )
+).parse()
+
+// TODO write the code
+console.log('opts:', program.opts())
+console.log('args:', program.args)
