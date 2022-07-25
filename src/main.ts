@@ -21,8 +21,8 @@ import { Command, Option, Argument } from 'commander'
 import { Enums, Spec } from '@cyclonedx/cyclonedx-library'
 
 enum OutputFormat {
-  XML = 'XML',
   JSON = 'JSON',
+  XML = 'XML',
 }
 
 const program = new Command(
@@ -43,14 +43,16 @@ const program = new Command(
   ).choices(
     Object.values(OutputFormat)
   ).default(
+    // the context is JavaScript - which should prefer JSON
     OutputFormat.JSON
   )
 ).addOption(
   new Option(
     '--output-file <OUTPUT-FILE>',
-    'Path to the output file.\nSet to "-" to write to STDOUT.'
+    'Path to the output file. Set to "-" to write to STDOUT.'
   ).default(
-    '-'
+    '-',
+    'write to STDOUT'
   )
 ).addOption(
   new Option(
