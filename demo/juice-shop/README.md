@@ -4,9 +4,8 @@
 
 The output is _reproducible_, due to the [shipped npm-locked](project/package-lock.json) versions.  
 
-the package manifest is based on
+The package manifest is based on
 https://github.com/juice-shop/juice-shop/tree/v14.1.1
-
 
 ## Reproducible results
 
@@ -25,26 +24,26 @@ so the current code is symlinked and taken into action.
 To get the setup up and running, run from the demo directory:
 
 ```shell
-npm --prefix project install
+npm --prefix project ci
 ```
 
 ## Usage examples
 
 Run one of these from the demo directory:
 
-* See _cyclonedx-php-composer_ help page:
+* See _cyclonedx-node-npm_ help page:
   ```shell
-  npm --prefix project make-bom --help 
+  npx --prefix project cyclonedx-node-npm --help
   ```
 * Make XML sbom:
   ```shell
   npx --prefix project cyclonedx-node-npm --exclude-dev --spec-version=1.2 --output-format=XML --output-file="$PWD/results/bom.1.2.xml"
-  npx --prefix project cyclonedx-node-npm --exclude-dev --spec-version=1.2 --output-format=XML --output-file="$PWD/results/bom.1.3.xml"
-  npx --prefix project cyclonedx-node-npm --exclude-dev --spec-version=1.2 --output-format=XML --output-file="$PWD/results/bom.1.4.xml"
+  npx --prefix project cyclonedx-node-npm --exclude-dev --spec-version=1.3 --output-format=XML --output-file="$PWD/results/bom.1.3.xml"
+  npx --prefix project cyclonedx-node-npm --exclude-dev --spec-version=1.4 --output-format=XML --output-file="$PWD/results/bom.1.4.xml"
   ```
 * Make JSON sbom:
   ```shell
   npx --prefix project cyclonedx-node-npm --exclude-dev --spec-version=1.2 --output-format=JSON --output-file="$PWD/results/bom.1.2.xml"
-  npx --prefix project cyclonedx-node-npm --exclude-dev --spec-version=1.2 --output-format=JSON --output-file="$PWD/results/bom.1.3.xml"
-  npx --prefix project cyclonedx-node-npm --exclude-dev --spec-version=1.2 --output-format=JSON --output-file="$PWD/results/bom.1.4.xml"
+  npx --prefix project cyclonedx-node-npm --exclude-dev --spec-version=1.3 --output-format=JSON --output-file="$PWD/results/bom.1.3.xml"
+  npx --prefix project cyclonedx-node-npm --exclude-dev --spec-version=1.4 --output-format=JSON --output-file="$PWD/results/bom.1.4.xml"
   ```
