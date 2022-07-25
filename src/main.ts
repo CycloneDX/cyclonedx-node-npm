@@ -72,7 +72,7 @@ const program = new Command(
     'Type of the main component.'
   ).choices(
     // Object.values(Enums.ComponentType) -- use all possible
-    [ // for the NPM context only the following make sence:
+    [ // for the NPM context only the following make sense:
       Enums.ComponentType.Application,
       Enums.ComponentType.Firmware,
       Enums.ComponentType.Library
