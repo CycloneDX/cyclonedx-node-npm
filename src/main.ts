@@ -25,6 +25,8 @@ enum OutputFormat {
   XML = 'XML',
 }
 
+const OutputStdOut = '-'
+
 const program = new Command(
 ).summary(
   'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
@@ -49,9 +51,9 @@ const program = new Command(
 ).addOption(
   new Option(
     '--output-file <OUTPUT-FILE>',
-    'Path to the output file. Set to "-" to write to STDOUT.'
+    `Path to the output file. Set to "${OutputStdOut}" to write to STDOUT.`
   ).default(
-    '-',
+    OutputStdOut,
     'write to STDOUT'
   )
 ).addOption(
@@ -65,7 +67,9 @@ const program = new Command(
     'Which version of CycloneDX spec to use.'
   ).choices(
     Object.keys(Spec.SpecVersionDict)
-  ).default(Spec.Version.v1dot4)
+  ).default(
+    Spec.Version.v1dot4
+  )
 ).addOption(
   new Option(
     '--mc-type <MC-TYPE>',
