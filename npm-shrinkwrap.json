@@ -9,7 +9,7 @@
       "version": "1.0.0-alpha0",
       "license": "Apache-2.0",
       "dependencies": {
-        "@cyclonedx/cyclonedx-library": "^1.0.0",
+        "@cyclonedx/cyclonedx-library": "^1.0.2",
         "commander": "^9.4.0",
         "xmlbuilder2": "^3.0.2"
       },
@@ -610,11 +610,11 @@
       "dev": true
     },
     "node_modules/@cyclonedx/cyclonedx-library": {
-      "version": "1.0.1",
-      "resolved": "https://registry.npmjs.org/@cyclonedx/cyclonedx-library/-/cyclonedx-library-1.0.1.tgz",
-      "integrity": "sha512-+MqhU3YEhqg5VSISQm7j/C9XkSnRpP2y1IuyvuFJxHBP+b9RGaRCXd0S72OjdO8tUFNaU2BYHoHl3l8iqMD+Nw==",
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/@cyclonedx/cyclonedx-library/-/cyclonedx-library-1.0.2.tgz",
+      "integrity": "sha512-YHmaLYbpKnIqa0AnpjY5ROKyHwPwkJX2BjoeMjLO2mFWZXLrZNbtdPI5S7TqSqr5xJWpOzWwQ84MqJzfVrGEAA==",
       "dependencies": {
-        "packageurl-js": "^0.0.7"
+        "packageurl-js": ">=0.0.6 <0.0.8"
       },
       "engines": {
         "node": ">=14.0.0"
@@ -7086,11 +7086,11 @@
       "dev": true
     },
     "@cyclonedx/cyclonedx-library": {
-      "version": "1.0.1",
-      "resolved": "https://registry.npmjs.org/@cyclonedx/cyclonedx-library/-/cyclonedx-library-1.0.1.tgz",
-      "integrity": "sha512-+MqhU3YEhqg5VSISQm7j/C9XkSnRpP2y1IuyvuFJxHBP+b9RGaRCXd0S72OjdO8tUFNaU2BYHoHl3l8iqMD+Nw==",
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/@cyclonedx/cyclonedx-library/-/cyclonedx-library-1.0.2.tgz",
+      "integrity": "sha512-YHmaLYbpKnIqa0AnpjY5ROKyHwPwkJX2BjoeMjLO2mFWZXLrZNbtdPI5S7TqSqr5xJWpOzWwQ84MqJzfVrGEAA==",
       "requires": {
-        "packageurl-js": "^0.0.7",
+        "packageurl-js": ">=0.0.6 <0.0.8",
         "xmlbuilder2": "^3.0.2"
       }
     },
