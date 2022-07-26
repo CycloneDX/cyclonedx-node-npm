@@ -17,8 +17,13 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { resolve } from 'path'
+import { writeSync, openSync } from 'fs'
+
 import { Command, Option, Argument } from 'commander'
-import { Enums, Spec } from '@cyclonedx/cyclonedx-library'
+import { Enums, Spec, Serialize, Builders, Factories } from '@cyclonedx/cyclonedx-library'
+
+import { BomBuilder } from './builder'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -26,6 +31,15 @@ enum OutputFormat {
 }
 
 const OutputStdOut = '-'
+
+interface CommandOptions {
+  excludeDev: boolean
+  specVersion: Spec.Version
+  outputReproducible: boolean
+  outputFormat: OutputFormat
+  outputFile: string
+  mcType: Enums.ComponentType
+}
 
 function makeCommand (): Command {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -36,6 +50,28 @@ function makeCommand (): Command {
     'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
   ).version(
     `${selfName as string} ${selfVersion as string}`
+  ).addOption(
+    new Option(
+      '--exclude-dev',
+      'Exclude dev dependencies.'
+    )
+  ).addOption(
+    new Option(
+      '--spec-version <version>',
+      'Which version of CycloneDX spec to use.'
+    ).choices(
+      Object.keys(Spec.SpecVersionDict)
+    ).default(
+      Spec.Version.v1dot4
+    )
+  ).addOption(
+    new Option(
+      '--output-reproducible',
+      'Whether to go the extra mile and make the output reproducible.\n' +
+      'Reproducibility might result in loss of time- and random-based-values.'
+    ).env(
+      'BOM_REPRODUCIBLE'
+    )
   ).addOption(
     new Option(
       '--output-format <format>',
@@ -53,20 +89,6 @@ function makeCommand (): Command {
     ).default(
       OutputStdOut,
       'write to STDOUT'
-    )
-  ).addOption(
-    new Option(
-      '--exclude-dev',
-      'Exclude dev dependencies.'
-    )
-  ).addOption(
-    new Option(
-      '--spec-version <version>',
-      'Which version of CycloneDX spec to use.'
-    ).choices(
-      Object.keys(Spec.SpecVersionDict)
-    ).default(
-      Spec.Version.v1dot4
     )
   ).addOption(
     new Option(
@@ -95,14 +117,52 @@ function makeCommand (): Command {
   )
 }
 
-export function run (process: NodeJS.Process): void {
+export function run (
+  process: NodeJS.Process
+): void {
   process.title = 'cyclonedx-node-npm'
 
   const program = makeCommand()
   program.parse(process.argv)
 
-  // TODO write the code
-  console.log('opts:', program.opts())
-  console.log('args:', program.args)
-  console.log('program:', program)
+  const options: CommandOptions = program.opts()
+  const lockFile = resolve(process.cwd(), program.args[0] ?? 'package-lock.json')
+
+  const bom = new BomBuilder(
+    new Builders.FromPackageJson.ToolBuilder(
+      new Factories.FromPackageJson.ExternalReferenceFactory()
+    ),
+    {
+      metaComponentType: options.mcType,
+      excludeDevDependencies: options.excludeDev,
+      reproducible: options.outputReproducible
+    }
+  ).buildFromPackageJson(lockFile)
+
+  const spec = Spec.SpecVersionDict[options.specVersion]
+  if (undefined === spec) {
+    const msg = 'unsupported spec-version'
+    program.error(msg)
+    throw new Error(msg)
+  }
+
+  let serializer: Serialize.Types.Serializer
+  switch (options.outputFormat) {
+    case OutputFormat.XML:
+      serializer = new Serialize.XmlSerializer(new Serialize.XML.Normalize.Factory(spec))
+      break
+    case OutputFormat.JSON:
+      serializer = new Serialize.JsonSerializer(new Serialize.JSON.Normalize.Factory(spec))
+      break
+  }
+
+  writeSync(
+    options.outputFile === OutputStdOut
+      ? process.stdout.fd
+      : openSync(options.outputFile, 'w'),
+    serializer.serialize(bom, {
+      sortLists: options.outputReproducible,
+      space: 2
+    })
+  )
 }
