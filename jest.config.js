@@ -1,8 +1,29 @@
-/*
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
+'use strict'
+/*!
+This file is part of CycloneDX generator for NPM projects.
 
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+SPDX-License-Identifier: Apache-2.0
+Copyright (c) OWASP Foundation. All Rights Reserved.
+*/
+
+/**
+ * For a detailed explanation regarding each configuration property, visit:
+ * {@link https://jestjs.io/docs/configuration}
+ *
+ * @type {import('jest').Config}
+ */
 module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -11,13 +32,13 @@ module.exports = {
   // bail: 0,
 
   // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "/tmp/jest_rs",
+  cacheDirectory: '.jest.cache',
 
   // Automatically clear mock calls, instances, contexts and results before every test
-  // clearMocks: false,
+  clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: false,
+  collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   // collectCoverageFrom: undefined,
@@ -128,7 +149,7 @@ module.exports = {
 
   // A list of paths to directories that Jest should use to search for files in
   roots: [
-    'tests'
+    '<rootDir>/tests'
   ],
 
   // Allows you to use a custom runner instead of Jest's default test runner
@@ -159,13 +180,12 @@ module.exports = {
   testMatch: [
     //   "**/__tests__/**/*.[jt]s?(x)",
     '**/?(*.)+(spec|test).js'
-  ],
+  ]
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/dist(\\.)?/'
-  ]
+  // testPathIgnorePatterns: [
+  //   "/node_modules/"
+  // ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
