@@ -17,8 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { resolve } from 'path'
-import { writeSync, openSync } from 'fs'
+import { resolve, dirname } from 'path'
+import { writeSync, openSync, existsSync } from 'fs'
 
 import { Command, Option, Argument } from 'commander'
 import { Enums, Spec, Serialize, Builders, Factories } from '@cyclonedx/cyclonedx-library'
@@ -106,11 +106,11 @@ function makeCommand (): Command {
     )
   ).addArgument(
     new Argument(
-      '[<package-lock>]',
-      'Path to npm lock file.'
+      '[<package-manifest>]',
+      "Path to project's manifest file."
     ).default(
-      'package-lock.json',
-      '"package-lock.json" file in current working directory.'
+      'package.json',
+      '"package.json" file in current working directory.'
     )
   ).allowExcessArguments(
     false
@@ -126,7 +126,34 @@ export function run (
   program.parse(process.argv)
 
   const options: CommandOptions = program.opts()
-  const lockFile = resolve(process.cwd(), program.args[0] ?? 'package-lock.json')
+  const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
+  const projectDir = dirname(packageFile)
+
+  if (!existsSync(packageFile)) {
+    const msg = 'missing package manifest file'
+    program.error(msg)
+    throw new Error(msg)
+  }
+
+  /**
+   * The path to the used npm lock file.
+   *
+   * > If both `package-lock.json` and `npm-shrinkwrap.json` are present in a package root,
+   * > `npm-shrinkwrap.json` will be preferred over the `package-lock.json` file.
+   * source: {@link https://docs.npmjs.com/cli/v8/configuring-npm/npm-shrinkwrap-json}
+   */
+  let lockFile: string
+  const shrinkwrapFile = resolve(projectDir, 'npm-shrinkwrap.json')
+  const packageLockFile = resolve(projectDir, 'package-lock.json')
+  if (existsSync(shrinkwrapFile)) {
+    lockFile = shrinkwrapFile
+  } else if (existsSync(packageLockFile)) {
+    lockFile = packageLockFile
+  } else {
+    const msg = 'missing package lock file, missing npm shrinkwrap file'
+    program.error(msg)
+    throw new Error(msg)
+  }
 
   const bom = new BomBuilder(
     new Builders.FromPackageJson.ToolBuilder(
