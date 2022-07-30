@@ -1227,9 +1227,9 @@
       "integrity": "sha512-/xUq6H2aQm261exT6iZTMifUySEt4GR5KX8eYyY+C4MSNPqSh9oNIP7tz2GLKTlFaiBbgZNxffoR3CVRG+cljw=="
     },
     "node_modules/@types/prettier": {
-      "version": "2.6.3",
-      "resolved": "https://registry.npmjs.org/@types/prettier/-/prettier-2.6.3.tgz",
-      "integrity": "sha512-ymZk3LEC/fsut+/Q5qejp6R9O1rMxz3XaRHDV6kX8MrGAhOSPqVARbDi+EZvInBpw+BnCX3TD240byVkOfQsHg==",
+      "version": "2.6.4",
+      "resolved": "https://registry.npmjs.org/@types/prettier/-/prettier-2.6.4.tgz",
+      "integrity": "sha512-fOwvpvQYStpb/zHMx0Cauwywu9yLDmzWiiQBC7gJyq5tYLUXFZvDG7VK1B7WBxxjBJNKFOZ0zLoOQn8vmATbhw==",
       "dev": true
     },
     "node_modules/@types/stack-utils": {
@@ -7596,9 +7596,9 @@
       "integrity": "sha512-/xUq6H2aQm261exT6iZTMifUySEt4GR5KX8eYyY+C4MSNPqSh9oNIP7tz2GLKTlFaiBbgZNxffoR3CVRG+cljw=="
     },
     "@types/prettier": {
-      "version": "2.6.3",
-      "resolved": "https://registry.npmjs.org/@types/prettier/-/prettier-2.6.3.tgz",
-      "integrity": "sha512-ymZk3LEC/fsut+/Q5qejp6R9O1rMxz3XaRHDV6kX8MrGAhOSPqVARbDi+EZvInBpw+BnCX3TD240byVkOfQsHg==",
+      "version": "2.6.4",
+      "resolved": "https://registry.npmjs.org/@types/prettier/-/prettier-2.6.4.tgz",
+      "integrity": "sha512-fOwvpvQYStpb/zHMx0Cauwywu9yLDmzWiiQBC7gJyq5tYLUXFZvDG7VK1B7WBxxjBJNKFOZ0zLoOQn8vmATbhw==",
       "dev": true
     },
     "@types/stack-utils": {
