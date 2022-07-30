@@ -155,16 +155,20 @@ export function run (
     throw new Error(msg)
   }
 
+  const extRefFactory = new Factories.FromPackageJson.ExternalReferenceFactory()
+
   const bom = new BomBuilder(
-    new Builders.FromPackageJson.ToolBuilder(
-      new Factories.FromPackageJson.ExternalReferenceFactory()
+    new Builders.FromPackageJson.ToolBuilder(extRefFactory),
+    new Builders.FromPackageJson.ComponentBuilder(
+      extRefFactory,
+      new Factories.LicenseFactory()
     ),
     {
       metaComponentType: options.mcType,
       excludeDevDependencies: options.excludeDev,
       reproducible: options.outputReproducible
     }
-  ).buildFromPackageJson(lockFile)
+  ).buildFromLockFile(lockFile)
 
   const spec = Spec.SpecVersionDict[options.specVersion]
   if (undefined === spec) {

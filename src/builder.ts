@@ -17,7 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { readFileSync } from 'fs'
+import { basename } from 'path'
+import { spawnSync } from 'child_process'
 
 import { Builders, Enums, Models } from '@cyclonedx/cyclonedx-library'
 
@@ -31,35 +32,58 @@ interface BomBuilderOptions {
 
 export class BomBuilder {
   toolBuilder: Builders.FromPackageJson.ToolBuilder
+  componentBuilder: Builders.FromPackageJson.ComponentBuilder
 
   metaComponentType: Enums.ComponentType
   excludeDevDependencies: boolean
   reproducible: boolean
 
   constructor (
-    toolBuilder: Builders.FromPackageJson.ToolBuilder,
+    toolBuilder: BomBuilder['toolBuilder'],
+    componentBuilder: BomBuilder['componentBuilder'],
     options: BomBuilderOptions
   ) {
     this.toolBuilder = toolBuilder
+    this.componentBuilder = componentBuilder
+
     this.metaComponentType = options.metaComponentType
     this.excludeDevDependencies = options.excludeDevDependencies
     this.reproducible = options.reproducible
   }
 
-  buildFromPackageJson (lockFile: string): Models.Bom {
-    const struct: any = JSON.parse(readFileSync(lockFile, { encoding: 'utf-8' }))
-
-    let bom: Models.Bom
-    switch (struct.lockfileVersion ?? 1) {
-      case 1:
-        bom = this.buildFromPackageJson1(struct)
-        break
-      case 2:
-        bom = this.buildFromPackageJson2(struct)
-        break
-      default:
-        throw new Error('unsupported lockfile version')
+  buildFromLockFile (filePath: string): Models.Bom {
+    const prefix = basename(filePath)
+    const args = ['--prefix', prefix, 'ls', '--json', '--all', '--long']
+    if (this.excludeDevDependencies) {
+      args.push('--omit', 'dev')
     }
+    const npmLsReturns = spawnSync('npm', args, {
+      encoding: 'utf8'
+    })
+    if (npmLsReturns.stderr.length > 0) {
+      console.error('npm ls had errors:\n', npmLsReturns.stderr)
+    }
+    if (npmLsReturns.status !== 0) {
+      throw new Error(`npm ls exited unexpectedly: ${npmLsReturns.status ?? '???'}`)
+    }
+
+    let struct: any
+    try {
+      struct = JSON.parse(npmLsReturns.stdout)
+    } catch (jsonParseError) {
+      throw new Error('failed to parse $npmLsReturns')
+    }
+
+    return this.buildFromNpmLs(struct)
+  }
+
+  buildFromNpmLs (struct: any): Models.Bom {
+    const bom = new Models.Bom()
+
+    // region metadata
+
+    // @FIXME build from this data source does not hold all references and such ...
+    bom.metadata.component = this.componentBuilder.makeComponent(struct, this.metaComponentType)
 
     const thisTool = makeThisTool(this.toolBuilder)
     if (thisTool !== undefined) {
@@ -70,33 +94,7 @@ export class BomBuilder {
       bom.metadata.timestamp = new Date()
     }
 
-    return bom
-  }
-
-  private buildFromPackageJson1 (struct: any): Models.Bom {
-    console.info(
-      this.metaComponentType,
-      this.excludeDevDependencies,
-      this.reproducible,
-      struct
-    )
-
-    return new Models.Bom(
-      // @TODO
-    )
-  }
-
-  private buildFromPackageJson2 (struct: any): Models.Bom {
-    /*
-    console.info(
-      this.metaComponentType,
-      this.excludeDevDependencies,
-      this.reproducible,
-      struct
-    )
-    */
-
-    const bom = new Models.Bom()
+    // endregion metadata
 
     return bom
   }
