@@ -1,0 +1,219 @@
+[
+  {
+    "name": "@cyclonedx/cyclonedx-npm",
+    "version": "1.0.0-alpha0",
+    "path": "/home/flow/Documents/Coding/node/cyclonedx-node-npm",
+    "private": false,
+    "dependencies": {
+      "@cyclonedx/cyclonedx-library": {
+        "from": "@cyclonedx/cyclonedx-library",
+        "version": "1.1.0",
+        "resolved": "https://registry.npmjs.org/@cyclonedx/cyclonedx-library/-/cyclonedx-library-1.1.0.tgz",
+        "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+        "homepage": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+        "repository": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git"
+      },
+      "commander": {
+        "from": "commander",
+        "version": "9.4.0",
+        "resolved": "https://registry.npmjs.org/commander/-/commander-9.4.0.tgz",
+        "description": "the complete solution for node.js command-line programs",
+        "homepage": "https://github.com/tj/commander.js#readme",
+        "repository": "git+https://github.com/tj/commander.js.git"
+      },
+      "xmlbuilder2": {
+        "from": "xmlbuilder2",
+        "version": "3.0.2",
+        "resolved": "https://registry.npmjs.org/xmlbuilder2/-/xmlbuilder2-3.0.2.tgz",
+        "description": "An XML builder for node.js",
+        "homepage": "http://github.com/oozcitak/xmlbuilder2",
+        "repository": "git://github.com/oozcitak/xmlbuilder2.git"
+      }
+    },
+    "devDependencies": {
+      "@typescript-eslint/parser": {
+        "from": "@typescript-eslint/parser",
+        "version": "4.33.0",
+        "resolved": "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-4.33.0.tgz",
+        "description": "An ESLint custom parser which leverages TypeScript ESTree",
+        "homepage": "https://github.com/typescript-eslint/typescript-eslint#readme",
+        "repository": "git+https://github.com/typescript-eslint/typescript-eslint.git"
+      },
+      "@types/node": {
+        "from": "@types/node",
+        "version": "18.0.6",
+        "resolved": "https://registry.npmjs.org/@types/node/-/node-18.0.6.tgz",
+        "description": "TypeScript definitions for Node.js",
+        "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node",
+        "repository": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+      },
+      "eslint": {
+        "from": "eslint",
+        "version": "7.32.0",
+        "resolved": "https://registry.npmjs.org/eslint/-/eslint-7.32.0.tgz",
+        "description": "An AST-based pattern checker for JavaScript.",
+        "homepage": "https://eslint.org",
+        "repository": "git+https://github.com/eslint/eslint.git"
+      },
+      "eslint-plugin-jest": {
+        "from": "eslint-plugin-jest",
+        "version": "25.7.0",
+        "resolved": "https://registry.npmjs.org/eslint-plugin-jest/-/eslint-plugin-jest-25.7.0.tgz",
+        "description": "Eslint rules for Jest",
+        "homepage": "https://github.com/jest-community/eslint-plugin-jest#readme",
+        "repository": "git+https://github.com/jest-community/eslint-plugin-jest.git"
+      },
+      "jest": {
+        "from": "jest",
+        "version": "28.1.3",
+        "resolved": "https://registry.npmjs.org/jest/-/jest-28.1.3.tgz",
+        "description": "Delightful JavaScript Testing.",
+        "homepage": "https://jestjs.io/",
+        "repository": "git+https://github.com/facebook/jest.git"
+      },
+      "jest-junit": {
+        "from": "jest-junit",
+        "version": "14.0.0",
+        "resolved": "https://registry.npmjs.org/jest-junit/-/jest-junit-14.0.0.tgz",
+        "description": "A jest reporter that generates junit xml files",
+        "homepage": "https://github.com/jest-community/jest-junit#readme",
+        "repository": "git+https://github.com/jest-community/jest-junit.git"
+      },
+      "npm-run-all": {
+        "from": "npm-run-all",
+        "version": "4.1.5",
+        "resolved": "https://registry.npmjs.org/npm-run-all/-/npm-run-all-4.1.5.tgz",
+        "description": "A CLI tool to run multiple npm-scripts in parallel or sequential.",
+        "homepage": "https://github.com/mysticatea/npm-run-all",
+        "repository": "git+https://github.com/mysticatea/npm-run-all.git"
+      },
+      "ts-standard": {
+        "from": "ts-standard",
+        "version": "11.0.0",
+        "resolved": "https://registry.npmjs.org/ts-standard/-/ts-standard-11.0.0.tgz",
+        "description": "Typescript Standard Style based on StandardJS",
+        "homepage": "https://github.com/standard/ts-standard"
+      },
+      "typescript": {
+        "from": "typescript",
+        "version": "4.7.4",
+        "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.7.4.tgz",
+        "description": "TypeScript is a language for application scale JavaScript development",
+        "homepage": "https://www.typescriptlang.org/",
+        "repository": "git+https://github.com/Microsoft/TypeScript.git"
+      }
+    },
+    "unsavedDependencies": {
+      "@eslint/eslintrc": {
+        "from": "@eslint/eslintrc",
+        "version": "link:node_modules/.pnpm/@eslint+eslintrc@0.4.3/node_modules/@eslint/eslintrc",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "@types/prettier": {
+        "from": "@types/prettier",
+        "version": "link:node_modules/.pnpm/@types+prettier@2.6.3/node_modules/@types/prettier",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "@typescript-eslint/eslint-plugin": {
+        "from": "@typescript-eslint/eslint-plugin",
+        "version": "link:node_modules/.pnpm/@typescript-eslint+eslint-plugin@4.33.0_3ekaj7j3owlolnuhj3ykrb7u7i/node_modules/@typescript-eslint/eslint-plugin",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "@typescript-eslint/experimental-utils": {
+        "from": "@typescript-eslint/experimental-utils",
+        "version": "link:node_modules/.pnpm/@typescript-eslint+experimental-utils@5.30.7_hxadhbs2xogijvk7vq4t2azzbu/node_modules/@typescript-eslint/experimental-utils",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "@typescript-eslint/scope-manager": {
+        "from": "@typescript-eslint/scope-manager",
+        "version": "link:node_modules/.pnpm/@typescript-eslint+scope-manager@4.33.0/node_modules/@typescript-eslint/scope-manager",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "@typescript-eslint/types": {
+        "from": "@typescript-eslint/types",
+        "version": "link:node_modules/.pnpm/@typescript-eslint+types@4.33.0/node_modules/@typescript-eslint/types",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "@typescript-eslint/typescript-estree": {
+        "from": "@typescript-eslint/typescript-estree",
+        "version": "link:node_modules/.pnpm/@typescript-eslint+typescript-estree@4.33.0_typescript@4.7.4/node_modules/@typescript-eslint/typescript-estree",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "@typescript-eslint/utils": {
+        "from": "@typescript-eslint/utils",
+        "version": "link:node_modules/.pnpm/@typescript-eslint+utils@5.30.7_hxadhbs2xogijvk7vq4t2azzbu/node_modules/@typescript-eslint/utils",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "@typescript-eslint/visitor-keys": {
+        "from": "@typescript-eslint/visitor-keys",
+        "version": "link:node_modules/.pnpm/@typescript-eslint+visitor-keys@4.33.0/node_modules/@typescript-eslint/visitor-keys",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-config-standard": {
+        "from": "eslint-config-standard",
+        "version": "link:node_modules/.pnpm/eslint-config-standard@16.0.3_wnerebu6rbpsve3qx7qqwvcqtq/node_modules/eslint-config-standard",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-config-standard-jsx": {
+        "from": "eslint-config-standard-jsx",
+        "version": "link:node_modules/.pnpm/eslint-config-standard-jsx@10.0.0_5ial3zqfyqwb4ejn6iukjhnqmi/node_modules/eslint-config-standard-jsx",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-config-standard-with-typescript": {
+        "from": "eslint-config-standard-with-typescript",
+        "version": "link:node_modules/.pnpm/eslint-config-standard-with-typescript@21.0.1_gis6fuyfldb4w44phczpb55qgi/node_modules/eslint-config-standard-with-typescript",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-import-resolver-node": {
+        "from": "eslint-import-resolver-node",
+        "version": "link:node_modules/.pnpm/eslint-import-resolver-node@0.3.6/node_modules/eslint-import-resolver-node",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-module-utils": {
+        "from": "eslint-module-utils",
+        "version": "link:node_modules/.pnpm/eslint-module-utils@2.7.3_lkzaig2qiyp6elizstfbgvzhie/node_modules/eslint-module-utils",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-plugin-es": {
+        "from": "eslint-plugin-es",
+        "version": "link:node_modules/.pnpm/eslint-plugin-es@3.0.1_eslint@7.32.0/node_modules/eslint-plugin-es",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-plugin-import": {
+        "from": "eslint-plugin-import",
+        "version": "link:node_modules/.pnpm/eslint-plugin-import@2.26.0_ffi3uiz42rv3jyhs6cr7p7qqry/node_modules/eslint-plugin-import",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-plugin-node": {
+        "from": "eslint-plugin-node",
+        "version": "link:node_modules/.pnpm/eslint-plugin-node@11.1.0_eslint@7.32.0/node_modules/eslint-plugin-node",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-plugin-promise": {
+        "from": "eslint-plugin-promise",
+        "version": "link:node_modules/.pnpm/eslint-plugin-promise@5.2.0_eslint@7.32.0/node_modules/eslint-plugin-promise",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-plugin-react": {
+        "from": "eslint-plugin-react",
+        "version": "link:node_modules/.pnpm/eslint-plugin-react@7.30.1_eslint@7.32.0/node_modules/eslint-plugin-react",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-scope": {
+        "from": "eslint-scope",
+        "version": "link:node_modules/.pnpm/eslint-scope@5.1.1/node_modules/eslint-scope",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-utils": {
+        "from": "eslint-utils",
+        "version": "link:node_modules/.pnpm/eslint-utils@2.1.0/node_modules/eslint-utils",
+        "description": "[Could not find additional info about this dependency]"
+      },
+      "eslint-visitor-keys": {
+        "from": "eslint-visitor-keys",
+        "version": "link:node_modules/.pnpm/eslint-visitor-keys@2.1.0/node_modules/eslint-visitor-keys",
+        "description": "[Could not find additional info about this dependency]"
+      }
+    }
+  }
+]
