@@ -1930,9 +1930,9 @@
       }
     },
     "node_modules/browserslist": {
-      "version": "4.21.2",
-      "resolved": "https://registry.npmjs.org/browserslist/-/browserslist-4.21.2.tgz",
-      "integrity": "sha512-MonuOgAtUB46uP5CezYbRaYKBNt2LxP0yX+Pmj4LkcDFGkn9Cbpi83d9sCjwQDErXsIJSzY5oKGDbgOlF/LPAA==",
+      "version": "4.21.3",
+      "resolved": "https://registry.npmjs.org/browserslist/-/browserslist-4.21.3.tgz",
+      "integrity": "sha512-898rgRXLAyRkM1GryrrBHGkqA5hlpkV5MhtZwg9QXeiyLUYs2k00Un05aX5l2/yJIOObYKOpS2JNo8nJDE7fWQ==",
       "dev": true,
       "funding": [
         {
@@ -1945,10 +1945,10 @@
         }
       ],
       "dependencies": {
-        "caniuse-lite": "^1.0.30001366",
-        "electron-to-chromium": "^1.4.188",
+        "caniuse-lite": "^1.0.30001370",
+        "electron-to-chromium": "^1.4.202",
         "node-releases": "^2.0.6",
-        "update-browserslist-db": "^1.0.4"
+        "update-browserslist-db": "^1.0.5"
       },
       "bin": {
         "browserslist": "cli.js"
@@ -2004,9 +2004,9 @@
       }
     },
     "node_modules/caniuse-lite": {
-      "version": "1.0.30001369",
-      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001369.tgz",
-      "integrity": "sha512-OY1SBHaodJc4wflDIKnlkdqWzJZd1Ls/2zbVJHBSv3AT7vgOJ58yAhd2CN4d57l2kPJrgMb7P9+N1Mhy4tNSQA==",
+      "version": "1.0.30001373",
+      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001373.tgz",
+      "integrity": "sha512-pJYArGHrPp3TUqQzFYRmP/lwJlj8RCbVe3Gd3eJQkAV8SAC6b19XS9BjMvRdvaS8RMkaTN8ZhoHP6S1y8zzwEQ==",
       "dev": true,
       "funding": [
         {
@@ -2235,9 +2235,9 @@
       }
     },
     "node_modules/electron-to-chromium": {
-      "version": "1.4.199",
-      "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.199.tgz",
-      "integrity": "sha512-WIGME0Cs7oob3mxsJwHbeWkH0tYkIE/sjkJ8ML2BYmuRcjhRl/q5kVDXG7W9LOOKwzPU5M0LBlXRq9rlSgnNlg==",
+      "version": "1.4.206",
+      "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.206.tgz",
+      "integrity": "sha512-h+Fadt1gIaQ06JaIiyqPsBjJ08fV5Q7md+V8bUvQW/9OvXfL2LRICTz2EcnnCP7QzrFTS6/27MRV6Bl9Yn97zA==",
       "dev": true
     },
     "node_modules/emittery": {
@@ -8052,15 +8052,15 @@
       }
     },
     "browserslist": {
-      "version": "4.21.2",
-      "resolved": "https://registry.npmjs.org/browserslist/-/browserslist-4.21.2.tgz",
-      "integrity": "sha512-MonuOgAtUB46uP5CezYbRaYKBNt2LxP0yX+Pmj4LkcDFGkn9Cbpi83d9sCjwQDErXsIJSzY5oKGDbgOlF/LPAA==",
+      "version": "4.21.3",
+      "resolved": "https://registry.npmjs.org/browserslist/-/browserslist-4.21.3.tgz",
+      "integrity": "sha512-898rgRXLAyRkM1GryrrBHGkqA5hlpkV5MhtZwg9QXeiyLUYs2k00Un05aX5l2/yJIOObYKOpS2JNo8nJDE7fWQ==",
       "dev": true,
       "requires": {
-        "caniuse-lite": "^1.0.30001366",
-        "electron-to-chromium": "^1.4.188",
+        "caniuse-lite": "^1.0.30001370",
+        "electron-to-chromium": "^1.4.202",
         "node-releases": "^2.0.6",
-        "update-browserslist-db": "^1.0.4"
+        "update-browserslist-db": "^1.0.5"
       }
     },
     "bser": {
@@ -8101,9 +8101,9 @@
       "dev": true
     },
     "caniuse-lite": {
-      "version": "1.0.30001369",
-      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001369.tgz",
-      "integrity": "sha512-OY1SBHaodJc4wflDIKnlkdqWzJZd1Ls/2zbVJHBSv3AT7vgOJ58yAhd2CN4d57l2kPJrgMb7P9+N1Mhy4tNSQA==",
+      "version": "1.0.30001373",
+      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001373.tgz",
+      "integrity": "sha512-pJYArGHrPp3TUqQzFYRmP/lwJlj8RCbVe3Gd3eJQkAV8SAC6b19XS9BjMvRdvaS8RMkaTN8ZhoHP6S1y8zzwEQ==",
       "dev": true
     },
     "chalk": {
@@ -8271,9 +8271,9 @@
       }
     },
     "electron-to-chromium": {
-      "version": "1.4.199",
-      "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.199.tgz",
-      "integrity": "sha512-WIGME0Cs7oob3mxsJwHbeWkH0tYkIE/sjkJ8ML2BYmuRcjhRl/q5kVDXG7W9LOOKwzPU5M0LBlXRq9rlSgnNlg==",
+      "version": "1.4.206",
+      "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.206.tgz",
+      "integrity": "sha512-h+Fadt1gIaQ06JaIiyqPsBjJ08fV5Q7md+V8bUvQW/9OvXfL2LRICTz2EcnnCP7QzrFTS6/27MRV6Bl9Yn97zA==",
       "dev": true
     },
     "emittery": {
