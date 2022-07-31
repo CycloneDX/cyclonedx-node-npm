@@ -42,14 +42,9 @@ interface CommandOptions {
 }
 
 function makeCommand (): Command {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const { name: selfName, version: selfVersion } = require('../package.json')
-
   return new Command(
-  ).summary(
+  ).description(
     'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
-  ).version(
-    `${selfName as string} ${selfVersion as string}`
   ).addOption(
     new Option(
       '--exclude-dev',
@@ -112,6 +107,10 @@ function makeCommand (): Command {
       'package.json',
       '"package.json" file in current working directory.'
     )
+  ).version(
+    // that is supposed to be the last option in the list on the help page.
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    require('../package.json').version as string
   ).allowExcessArguments(
     false
   )

@@ -17,10 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { dirname} from 'path'
+import { dirname } from 'path'
 import { spawnSync } from 'child_process'
 
-import { Builders, Enums, Models } from '@cyclonedx/cyclonedx-library'
+import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
+import { PackageURL } from 'packageurl-js'
 
 import { makeThisTool } from './thisTool'
 
@@ -33,6 +34,7 @@ interface BomBuilderOptions {
 export class BomBuilder {
   toolBuilder: Builders.FromPackageJson.ToolBuilder
   componentBuilder: Builders.FromPackageJson.ComponentBuilder
+  purlFactory: Factories.PackageUrlFactory
 
   metaComponentType: Enums.ComponentType
   excludeDevDependencies: boolean
@@ -41,10 +43,12 @@ export class BomBuilder {
   constructor (
     toolBuilder: BomBuilder['toolBuilder'],
     componentBuilder: BomBuilder['componentBuilder'],
+    purlFactory: BomBuilder['purlFactory'],
     options: BomBuilderOptions
   ) {
     this.toolBuilder = toolBuilder
     this.componentBuilder = componentBuilder
+    this.purlFactory = purlFactory
 
     this.metaComponentType = options.metaComponentType
     this.excludeDevDependencies = options.excludeDevDependencies
@@ -85,7 +89,7 @@ export class BomBuilder {
 
     // region metadata
 
-    bom.metadata.component = this.componentBuilder.makeComponent(struct, this.metaComponentType)
+    bom.metadata.component = this.#makeComponent(struct, this.metaComponentType)
 
     const thisTool = makeThisTool(this.toolBuilder)
     if (thisTool !== undefined) {
@@ -99,5 +103,58 @@ export class BomBuilder {
     // endregion metadata
 
     return bom
+  }
+
+  /**
+   * base64(on 512 bit) = 86 chars + 2 chars padding
+   */
+  #sha512RE = /\bsha512-(.{86}==)\b/i
+
+  #makeComponent (data: any, type: Enums.ComponentType | undefined): Models.Component | undefined {
+    const component = this.componentBuilder.makeComponent(data, type)
+    if (component === undefined) {
+      return component
+    }
+
+    // @TODO -- what to do with `extraneous` ?
+
+    if (typeof data.resolved === 'string') {
+      component.externalReferences.add(
+        new Models.ExternalReference(
+          Enums.ExternalReferenceType.Distribution,
+          data.resolved
+        )
+      )
+    }
+
+    if (typeof data.integrity === 'string') {
+      const hashSha512: string | undefined = (this.#sha512RE.exec(data.integrity) ?? [undefined])[1]
+      if (typeof hashSha512 === 'string') {
+        component.hashes.set(
+          Enums.HashAlgorithm['SHA-512'],
+          hashSha512
+        )
+      }
+    }
+
+    component.purl = this.#makePurl(component)
+    // @TODO component.bomRef.value =
+
+    return component
+  }
+
+  #makePurl (component: Models.Component): PackageURL | undefined {
+    const purl = this.purlFactory.makeFromComponent(component)
+    if (purl === undefined) { return purl }
+
+    // TODO need the nest release of the lib, to get the needed features ...
+
+    /*
+     * @TODO: detect non-standard registry (not "npmjs.org")
+      const qualifiers: PackageURL['qualifiers'] = purl.qualifiers ?? {}
+      qualifiers.repository_url = ...
+     */
+
+    return purl
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "@cyclonedx/cyclonedx-npm",
   "version": "1.0.0-alpha0",
-  "description": "Create CycloneDX Software Bill of Materials (SBOM) from NPM projects. ",
+  "description": "Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.",
   "keywords": [
     "CycloneDX",
     "SBOM",
@@ -37,6 +37,7 @@
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "^1.1.0",
     "commander": "^9.4.0",
+    "packageurl-js": "^0.0.7",
     "xmlbuilder2": "^3.0.2"
   },
   "devDependencies": {
