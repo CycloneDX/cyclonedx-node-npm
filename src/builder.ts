@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { basename } from 'path'
+import { dirname} from 'path'
 import { spawnSync } from 'child_process'
 
 import { Builders, Enums, Models } from '@cyclonedx/cyclonedx-library'
@@ -52,19 +52,22 @@ export class BomBuilder {
   }
 
   buildFromLockFile (filePath: string): Models.Bom {
-    const prefix = basename(filePath)
-    const args = ['--prefix', prefix, 'ls', '--json', '--all', '--long']
+    const prefix = dirname(filePath)
+    const args = ['--prefix', prefix, 'ls', '--json', '--all', '--long', '--package-lock-only']
     if (this.excludeDevDependencies) {
       args.push('--omit', 'dev')
     }
     const npmLsReturns = spawnSync('npm', args, {
       encoding: 'utf8'
     })
-    if (npmLsReturns.stderr.length > 0) {
-      console.error('npm ls had errors:\n', npmLsReturns.stderr)
-    }
     if (npmLsReturns.status !== 0) {
-      throw new Error(`npm ls exited unexpectedly: ${npmLsReturns.status ?? '???'}`)
+      throw new Error(`npm-ls exited with errors: ${npmLsReturns.status ?? '???'}\n${npmLsReturns.stderr}`)
+    }
+    if (npmLsReturns.stderr.length > 0) {
+      console.error('npm-ls had errors:')
+      console.group()
+      console.error(npmLsReturns.stderr)
+      console.groupEnd()
     }
 
     let struct: any
@@ -82,7 +85,6 @@ export class BomBuilder {
 
     // region metadata
 
-    // @FIXME build from this data source does not hold all references and such ...
     bom.metadata.component = this.componentBuilder.makeComponent(struct, this.metaComponentType)
 
     const thisTool = makeThisTool(this.toolBuilder)
