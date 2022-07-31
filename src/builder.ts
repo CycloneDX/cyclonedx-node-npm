@@ -132,7 +132,7 @@ export class BomBuilder {
       if (typeof hashSha512 === 'string') {
         component.hashes.set(
           Enums.HashAlgorithm['SHA-512'],
-          hashSha512 // @TODO convert
+          hashSha512 // @TODO convert from b64 to hex
         )
       }
     }
