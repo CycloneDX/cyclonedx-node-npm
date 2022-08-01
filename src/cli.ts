@@ -162,6 +162,7 @@ export function run (
       extRefFactory,
       new Factories.LicenseFactory()
     ),
+    new Factories.PackageUrlFactory('npm'),
     {
       metaComponentType: options.mcType,
       excludeDevDependencies: options.excludeDev,
