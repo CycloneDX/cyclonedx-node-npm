@@ -70,7 +70,21 @@ export class BomBuilder {
   }
 
   #npmLs (prefix: string): any {
-    const args = ['--prefix', prefix, 'ls', '--json', '--all', '--long', '--package-lock-only']
+    const args = [
+      '--prefix', prefix,
+      'ls',
+      '--json',
+      '--all',
+      '--long',
+     /* '--package-lock-only'
+      * @TODO thing about this param ...
+      * best would be to analyse the actual existing node_modules dir ... but this mght be not a good idea ...
+      * help text:
+      *     If set to true, the current operation will only use the package-lock.json, ignoring node_modules.
+      *     For update this means only the package-lock.json will be updated, instead of checking node_modules and downloading dependencies.
+      *     For list this means the output will be based on the tree described by the package-lock.json, rather than the contents of node_modules.
+      */
+    ]
     if (this.excludeDevDependencies) {
       args.push('--omit', 'dev')
     }
@@ -80,10 +94,13 @@ export class BomBuilder {
     })
     if (npmLsReturns.error instanceof Error) {
       const error = npmLsReturns.error as spawnSyncResultError
-      throw new Error(`npm-ls exited with errors: ${error.errno ?? '???'} ${error.code ?? npmLsReturns.status ?? 'noCode'} ${error.signal ?? npmLsReturns.signal ?? 'noSignal'}`)
+      throw new Error(`npm-ls exited with errors: ${
+        error.errno ?? '???'} ${
+        error.code ?? npmLsReturns.status ?? 'noCode'} ${
+        error.signal ?? npmLsReturns.signal ?? 'noSignal'}`)
     }
     if (npmLsReturns.stderr.length > 0) {
-      console.error('npm-ls had errors on:')
+      console.error('npm-ls had errors:')
       console.group()
       console.error(npmLsReturns.stderr.toString())
       console.groupEnd()
@@ -113,6 +130,10 @@ export class BomBuilder {
     }
 
     // endregion metadata
+
+    // @TODO components
+    // @TODO bundled components
+    // @TODO dependencies
 
     return bom
   }
