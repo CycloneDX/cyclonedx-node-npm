@@ -31,6 +31,12 @@ interface BomBuilderOptions {
   reproducible: BomBuilder['reproducible']
 }
 
+interface spawnSyncResultError {
+  errno?: number
+  code?: string
+  signal?: NodeJS.Signals
+}
+
 export class BomBuilder {
   toolBuilder: Builders.FromNodePackageJson.ToolBuilder
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
@@ -56,32 +62,38 @@ export class BomBuilder {
   }
 
   buildFromLockFile (filePath: string): Models.Bom {
-    const prefix = dirname(filePath)
+    return this.buildFromNpmLs(
+      this.#npmLs(
+        dirname(filePath)
+      )
+    )
+  }
+
+  #npmLs (prefix: string): any {
     const args = ['--prefix', prefix, 'ls', '--json', '--all', '--long', '--package-lock-only']
     if (this.excludeDevDependencies) {
       args.push('--omit', 'dev')
     }
     const npmLsReturns = spawnSync('npm', args, {
-      encoding: 'utf8'
+      encoding: 'buffer',
+      maxBuffer: Number.POSITIVE_INFINITY // DIRTY but effective
     })
-    if (npmLsReturns.status !== 0) {
-      throw new Error(`npm-ls exited with errors: ${npmLsReturns.status ?? '???'}\n${npmLsReturns.stderr}`)
+    if (npmLsReturns.error instanceof Error) {
+      const error = npmLsReturns.error as spawnSyncResultError
+      throw new Error(`npm-ls exited with errors: ${error.errno ?? '???'} ${error.code ?? npmLsReturns.status ?? 'noCode'} ${error.signal ?? npmLsReturns.signal ?? 'noSignal'}`)
     }
     if (npmLsReturns.stderr.length > 0) {
-      console.error('npm-ls had errors:')
+      console.error('npm-ls had errors on:')
       console.group()
-      console.error(npmLsReturns.stderr)
+      console.error(npmLsReturns.stderr.toString())
       console.groupEnd()
     }
 
-    let struct: any
     try {
-      struct = JSON.parse(npmLsReturns.stdout)
+      return JSON.parse(npmLsReturns.stdout.toString())
     } catch (jsonParseError) {
       throw new Error('failed to parse $npmLsReturns')
     }
-
-    return this.buildFromNpmLs(struct)
   }
 
   buildFromNpmLs (struct: any): Models.Bom {
@@ -108,7 +120,7 @@ export class BomBuilder {
   /**
    * base64(on 512 bit) = 86 chars + 2 chars padding
    */
-  #sha512RE = /\bsha512-(.{86}==)\b/i
+  #hashRE_sha512_base64 = /\bsha512-([a-z0-9+/]{86}==)\b/i
 
   #makeComponent (data: any, type: Enums.ComponentType | undefined): Models.Component | undefined {
     const component = this.componentBuilder.makeComponent(data, type)
@@ -128,26 +140,34 @@ export class BomBuilder {
     }
 
     if (typeof data.integrity === 'string') {
-      const hashSha512: string | undefined = (this.#sha512RE.exec(data.integrity) ?? [undefined])[1]
-      if (typeof hashSha512 === 'string') {
+      const hashSha512Match = this.#hashRE_sha512_base64.exec(data.integrity) ?? []
+      if (hashSha512Match?.length === 2) {
         component.hashes.set(
           Enums.HashAlgorithm['SHA-512'],
-          hashSha512 // @TODO convert from b64 to hex
+          Buffer.from(hashSha512Match[1], 'base64').toString('hex')
         )
       }
     }
 
     component.purl = this.#makePurl(component)
-    // @TODO component.bomRef.value =
+
+    // since empty-string handling is needed
+    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+    component.bomRef.value = (typeof data._id === 'string'
+      ? data._id
+      : undefined
+    ) ||
+      component.purl?.toString() ||
+      `${data.name as string}@${data.version as string}`
 
     return component
   }
 
   #makePurl (component: Models.Component): PackageURL | undefined {
-    const purl = this.purlFactory.makeFromComponent(component)
-    if (purl === undefined) { return purl }
-
-    // TODO need the nest release of the lib, to get the needed features ...
+    const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
+    if (purl === undefined) {
+      return purl
+    }
 
     /*
      * @TODO: detect non-standard registry (not "npmjs.org")
