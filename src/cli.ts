@@ -154,11 +154,11 @@ export function run (
     throw new Error(msg)
   }
 
-  const extRefFactory = new Factories.FromPackageJson.ExternalReferenceFactory()
+  const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
 
   const bom = new BomBuilder(
-    new Builders.FromPackageJson.ToolBuilder(extRefFactory),
-    new Builders.FromPackageJson.ComponentBuilder(
+    new Builders.FromNodePackageJson.ToolBuilder(extRefFactory),
+    new Builders.FromNodePackageJson.ComponentBuilder(
       extRefFactory,
       new Factories.LicenseFactory()
     ),

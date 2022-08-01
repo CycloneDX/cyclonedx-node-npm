@@ -32,8 +32,8 @@ interface BomBuilderOptions {
 }
 
 export class BomBuilder {
-  toolBuilder: Builders.FromPackageJson.ToolBuilder
-  componentBuilder: Builders.FromPackageJson.ComponentBuilder
+  toolBuilder: Builders.FromNodePackageJson.ToolBuilder
+  componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
   purlFactory: Factories.PackageUrlFactory
 
   metaComponentType: Enums.ComponentType

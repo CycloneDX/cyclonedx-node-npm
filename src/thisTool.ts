@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { Builders, Models } from '@cyclonedx/cyclonedx-library'
 
-export function makeThisTool (builder: Builders.FromPackageJson.ToolBuilder): Models.Tool | undefined {
+export function makeThisTool (builder: Builders.FromNodePackageJson.ToolBuilder): Models.Tool | undefined {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const packageJson = require('../package.json')
   return builder.makeTool(packageJson)
