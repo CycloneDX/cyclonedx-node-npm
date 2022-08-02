@@ -46,11 +46,14 @@ export class BomBuilder {
   excludeDevDependencies: boolean
   reproducible: boolean
 
+  console: Console
+
   constructor (
     toolBuilder: BomBuilder['toolBuilder'],
     componentBuilder: BomBuilder['componentBuilder'],
     purlFactory: BomBuilder['purlFactory'],
-    options: BomBuilderOptions
+    options: BomBuilderOptions,
+    console_: BomBuilder['console']
   ) {
     this.toolBuilder = toolBuilder
     this.componentBuilder = componentBuilder
@@ -59,6 +62,8 @@ export class BomBuilder {
     this.metaComponentType = options.metaComponentType
     this.excludeDevDependencies = options.excludeDevDependencies
     this.reproducible = options.reproducible
+
+    this.console = console_
   }
 
   buildFromLockFile (filePath: string): Models.Bom {
@@ -101,10 +106,9 @@ export class BomBuilder {
       // @TODO typescript 4.8 - append the prev error to  `Error` as `{ cause: npmLsReturns.error }`
     }
     if (npmLsReturns.stderr.length > 0) {
-      console.warn('npm-ls had errors:')
-      console.group()
-      console.warn(npmLsReturns.stderr.toString())
-      console.groupEnd()
+      this.console.group('npm-ls had errors')
+      this.console.debug(npmLsReturns.stderr.toString())
+      this.console.groupEnd()
     }
 
     try {

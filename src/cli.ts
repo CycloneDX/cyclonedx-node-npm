@@ -167,7 +167,8 @@ export function run (
       metaComponentType: options.mcType,
       excludeDevDependencies: options.excludeDev,
       reproducible: options.outputReproducible
-    }
+    },
+    new console.Console(process.stderr, process.stderr) // all output shall be bound to stdError - stdError is only for result output
   ).buildFromLockFile(lockFile)
 
   const spec = Spec.SpecVersionDict[options.specVersion]
