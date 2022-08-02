@@ -37,8 +37,8 @@ interface spawnSyncResultError {
   signal?: NodeJS.Signals
 }
 
-type ComponentPath = string
-type AllComponents = Map<ComponentPath, Models.Component | undefined>
+type cPath = any
+type AllComponents = Map<cPath, Models.Component | undefined>
 
 export class BomBuilder {
   toolBuilder: Builders.FromNodePackageJson.ToolBuilder
@@ -124,8 +124,8 @@ export class BomBuilder {
   buildFromNpmLs (data: any): Models.Bom {
     // region all components
 
-    const allComponents: AllComponents = new Map()
-    this.#gatherComponents(allComponents, [data])
+    const allComponents: AllComponents = new Map([[data.path, this.#makeComponent(data)]])
+    this.#gatherDependencies(allComponents, data)
 
     // endregion all components
 
@@ -156,19 +156,20 @@ export class BomBuilder {
       bom.components.add(component)
     }
 
-    // @TODO bundled components
+    // @TODO bundled components - proper nesting
     // @TODO dependencies
 
     return bom
   }
 
-  #gatherComponents (allComponents: AllComponents, componentsData: any[]): void {
-    for (const data of componentsData) {
-      if (allComponents.has(data.path)) {
-        continue // for ... of ...
+  #gatherDependencies (allComponents: AllComponents, data: any): void {
+    for (const dependency of Object.values(data.dependencies ?? {}) as any) {
+      if (dependency === null || typeof dependency !== 'object') { continue }
+      if (allComponents.has(dependency.path)) {
+        continue
       }
-      allComponents.set(data.path, this.#makeComponent(data))
-      this.#gatherComponents(allComponents, Object.values(data.dependencies ?? {}))
+      allComponents.set(dependency.path, this.#makeComponent(dependency))
+      this.#gatherDependencies(allComponents, dependency)
     }
   }
 
