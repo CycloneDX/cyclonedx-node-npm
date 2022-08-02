@@ -63,13 +63,13 @@ export class BomBuilder {
 
   buildFromLockFile (filePath: string): Models.Bom {
     return this.buildFromNpmLs(
-      this.#npmLs(
+      this.#fetchNpmLs(
         dirname(filePath)
       )
     )
   }
 
-  #npmLs (prefix: string): any {
+  #fetchNpmLs (prefix: string): any {
     const args = [
       '--prefix', prefix,
       'ls',
@@ -98,17 +98,18 @@ export class BomBuilder {
         error.errno ?? '???'} ${
         error.code ?? npmLsReturns.status ?? 'noCode'} ${
         error.signal ?? npmLsReturns.signal ?? 'noSignal'}`)
+      // @TODO typescript 4.8 - append the prev error to  `Error` as `{ cause: npmLsReturns.error }`
     }
     if (npmLsReturns.stderr.length > 0) {
-      console.error('npm-ls had errors:')
+      console.warn('npm-ls had errors:')
       console.group()
-      console.error(npmLsReturns.stderr.toString())
+      console.warn(npmLsReturns.stderr.toString())
       console.groupEnd()
     }
 
     try {
       return JSON.parse(npmLsReturns.stdout.toString())
-    } catch (jsonParseError) {
+    } catch (jsonParseError: any) {
       throw new Error('failed to parse $npmLsReturns')
     }
   }
