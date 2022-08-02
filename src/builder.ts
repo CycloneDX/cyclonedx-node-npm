@@ -75,8 +75,8 @@ export class BomBuilder {
       'ls',
       '--json',
       '--all',
-      '--long',
-     /* '--package-lock-only'
+      '--long'
+      /* '--package-lock-only'
       * @TODO thing about this param ...
       * best would be to analyse the actual existing node_modules dir ... but this mght be not a good idea ...
       * help text:
