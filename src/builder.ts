@@ -37,6 +37,9 @@ interface spawnSyncResultError {
   signal?: NodeJS.Signals
 }
 
+type ComponentPath = string
+type AllComponents = Map<ComponentPath, Models.Component | undefined>
+
 export class BomBuilder {
   toolBuilder: Builders.FromNodePackageJson.ToolBuilder
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
@@ -119,11 +122,18 @@ export class BomBuilder {
   }
 
   buildFromNpmLs (data: any): Models.Bom {
+    // region all components
+
+    const allComponents: AllComponents = new Map()
+    this.#gatherComponents(allComponents, [data])
+
+    // endregion all components
+
     const bom = new Models.Bom()
 
     // region metadata
 
-    bom.metadata.component = this.#makeComponent(data, this.metaComponentType)
+    bom.metadata.component = allComponents.get(data.path)
 
     const thisTool = makeThisTool(this.toolBuilder)
     if (thisTool !== undefined) {
@@ -136,11 +146,30 @@ export class BomBuilder {
 
     // endregion metadata
 
-    // @TODO components
+    for (const component of allComponents.values()) {
+      if (component === bom.metadata.component) {
+        continue // for ... of ...
+      }
+      if (component === undefined) {
+        continue // for ... of ...
+      }
+      bom.components.add(component)
+    }
+
     // @TODO bundled components
     // @TODO dependencies
 
     return bom
+  }
+
+  #gatherComponents (allComponents: AllComponents, componentsData: any[]): void {
+    for (const data of componentsData) {
+      if (allComponents.has(data.path)) {
+        continue // for ... of ...
+      }
+      allComponents.set(data.path, this.#makeComponent(data))
+      this.#gatherComponents(allComponents, Object.values(data.dependencies ?? {}))
+    }
   }
 
   /**
@@ -148,7 +177,7 @@ export class BomBuilder {
    */
   #hashRE_sha512_base64 = /\bsha512-([a-z0-9+/]{86}==)\b/i
 
-  #makeComponent (data: any, type: Enums.ComponentType | undefined): Models.Component | undefined {
+  #makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | undefined {
     const component = this.componentBuilder.makeComponent(data, type)
     if (component === undefined) {
       return component
