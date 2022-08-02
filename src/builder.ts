@@ -113,12 +113,12 @@ export class BomBuilder {
     }
   }
 
-  buildFromNpmLs (struct: any): Models.Bom {
+  buildFromNpmLs (data: any): Models.Bom {
     const bom = new Models.Bom()
 
     // region metadata
 
-    bom.metadata.component = this.#makeComponent(struct, this.metaComponentType)
+    bom.metadata.component = this.#makeComponent(data, this.metaComponentType)
 
     const thisTool = makeThisTool(this.toolBuilder)
     if (thisTool !== undefined) {
