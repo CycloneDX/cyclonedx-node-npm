@@ -184,7 +184,11 @@ export class BomBuilder {
       return component
     }
 
-    // @TODO -- what to do with `extraneous` ?
+    if (data.extraneous === true) {
+      component.properties.add(
+        new Models.Property('cdx:node-npm:package:extraneous', "true")
+      )
+    }
 
     if (typeof data.resolved === 'string') {
       component.externalReferences.add(
@@ -208,7 +212,7 @@ export class BomBuilder {
     component.purl = this.#makePurl(component)
 
     // since empty-string handling is needed
-    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions -- as empty strings must nbe treated
     component.bomRef.value = (typeof data._id === 'string'
       ? data._id
       : undefined
