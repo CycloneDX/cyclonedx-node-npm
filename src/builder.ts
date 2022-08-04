@@ -24,6 +24,7 @@ import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library
 import { PackageURL } from 'packageurl-js'
 
 import { makeThisTool } from './thisTool'
+import { PropertyNames } from './properties'
 
 interface BomBuilderOptions {
   metaComponentType: BomBuilder['metaComponentType']
@@ -186,7 +187,13 @@ export class BomBuilder {
 
     if (data.extraneous === true) {
       component.properties.add(
-        new Models.Property('cdx:node-npm:package:extraneous', "true")
+        new Models.Property(PropertyNames.PackageExtraneous, 'true')
+      )
+    }
+
+    if (data.private === true) {
+      component.properties.add(
+        new Models.Property(PropertyNames.PackagePrivate, 'true')
       )
     }
 
@@ -211,12 +218,8 @@ export class BomBuilder {
 
     component.purl = this.#makePurl(component)
 
-    // since empty-string handling is needed
-    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions -- as empty strings must nbe treated
-    component.bomRef.value = (typeof data._id === 'string'
-      ? data._id
-      : undefined
-    ) ||
+    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions -- since empty-string handling is needed
+    component.bomRef.value = (typeof data._id === 'string' ? data._id : undefined) ||
       component.purl?.toString() ||
       `${data.name as string}@${data.version as string}`
 
