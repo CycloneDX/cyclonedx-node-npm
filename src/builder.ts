@@ -178,7 +178,7 @@ export class BomBuilder {
   }
 
   /**
-   * base64(on 512 bit) = 86 chars + 2 chars padding
+   * base64 over 512 bit => 86 chars + 2 chars padding
    */
   #hashRE_sha512_base64 = /\bsha512-([a-z0-9+/]{86}==)\b/i
 
