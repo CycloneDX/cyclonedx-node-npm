@@ -165,11 +165,14 @@ export class BomBuilder {
 
   #gatherDependencies (allComponents: AllComponents, data: any): void {
     for (const dependency of Object.values(data.dependencies ?? {}) as any) {
-      if (dependency === null || typeof dependency !== 'object') { continue }
-      if (allComponents.has(dependency.path)) {
+      if (dependency === null || typeof dependency !== 'object') {
         continue
       }
-      allComponents.set(dependency.path, this.#makeComponent(dependency))
+      // one and the same component may appear multiple times in the tree
+      // but only one occurrence has all the direct dependencies.
+      if (!allComponents.has(dependency.path)) {
+        allComponents.set(dependency.path, this.#makeComponent(dependency))
+      }
       this.#gatherDependencies(allComponents, dependency)
     }
   }
