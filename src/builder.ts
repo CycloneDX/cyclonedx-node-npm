@@ -78,16 +78,15 @@ export class BomBuilder {
     )
   }
 
-  #fetchNpmLs (prefix: string): any {
+  #fetchNpmLs (projectDir: string): any {
     const args = [
-      '--prefix', prefix,
       'ls',
       '--json',
       '--all',
       '--long'
       /* '--package-lock-only'
       * @TODO thing about this param ...
-      * best would be to analyse the actual existing node_modules dir ... but this mght be not a good idea ...
+      * best would be to analyse the actual existing node_modules dir ... but this might be not a good idea ...
       * help text:
       *     If set to true, the current operation will only use the package-lock.json, ignoring node_modules.
       *     For update this means only the package-lock.json will be updated, instead of checking node_modules and downloading dependencies.
@@ -98,6 +97,7 @@ export class BomBuilder {
       args.push('--omit', 'dev')
     }
     const npmLsReturns = spawnSync('npm', args, {
+      cwd: projectDir,
       encoding: 'buffer',
       maxBuffer: Number.POSITIVE_INFINITY // DIRTY but effective
     })
