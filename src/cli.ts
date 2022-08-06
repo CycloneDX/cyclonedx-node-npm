@@ -49,8 +49,8 @@ function makeCommand (): Command {
   ).addOption(
     new Option(
       '--package-lock-only',
-      'Whether to only use the package-lock.json, ignoring node_modules.\n' +
-      'This means the output will be based on the tree described by the package-lock.json, rather than the contents of node_modules.'
+      'Whether to only use the lock file, ignoring "node_modules".\n' +
+      'This means the output will be based on the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" dir.'
     ).default(false)
   ).addOption(
     new Option(
