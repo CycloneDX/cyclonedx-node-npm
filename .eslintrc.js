@@ -39,11 +39,11 @@ module.exports = {
         '*.spec.*',
         '*.test.*'
       ],
-      plugins: ['jest'],
-      extends: [
-        'plugin:jest/recommended',
-        'standard-with-typescript'
-      ]
+      env: {
+        node: true,
+        jest: true,
+        browser: false
+      }
     }
   ]
 }
