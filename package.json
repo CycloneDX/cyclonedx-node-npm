@@ -55,7 +55,8 @@
   },
   "type": "commonjs",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=16.0.0",
+    "npm": ">=6.0.0"
   },
   "bin": {
     "cyclonedx-node-npm": "./bin/cyclonedx-node-npm"
