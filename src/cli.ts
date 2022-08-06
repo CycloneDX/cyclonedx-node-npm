@@ -33,7 +33,8 @@ enum OutputFormat {
 const OutputStdOut = '-'
 
 interface CommandOptions {
-  excludeDev: boolean
+  packageLockOnly: boolean
+  omit: string[]
   specVersion: Spec.Version
   outputReproducible: boolean
   outputFormat: OutputFormat
@@ -47,8 +48,23 @@ function makeCommand (): Command {
     'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
   ).addOption(
     new Option(
-      '--exclude-dev',
-      'Exclude dev dependencies.'
+      '--package-lock-only',
+      'Whether to only use the package-lock.json, ignoring node_modules.\n' +
+      'This means the output will be based on the tree described by the package-lock.json, rather than the contents of node_modules.'
+    ).default(false)
+  ).addOption(
+    new Option(
+      '--omit <type...>',
+      'Dependency types to omit from the installation tree. (can be set multiple times)'
+    ).choices([
+      'dev',
+      'optional',
+      'peer'
+    ]).default(
+      process.env.NODE_ENV === 'production'
+        ? ['dev']
+        : [],
+      '"dev" if the NODE_ENV environment variable is set to "production", otherwise empty.'
     )
   ).addOption(
     new Option(
@@ -129,7 +145,7 @@ export function run (
   const projectDir = dirname(packageFile)
 
   if (!existsSync(packageFile)) {
-    const msg = 'missing package manifest file'
+    const msg = `missing package manifest file: ${packageFile}`
     program.error(msg)
     throw new Error(msg)
   }
@@ -165,7 +181,8 @@ export function run (
     new Factories.PackageUrlFactory('npm'),
     {
       metaComponentType: options.mcType,
-      excludeDevDependencies: options.excludeDev,
+      packageLockOnly: options.packageLockOnly,
+      omitDependencyTypes: options.omit,
       reproducible: options.outputReproducible
     },
     new console.Console(process.stderr, process.stderr) // all output shall be bound to stdError - stdError is only for result output

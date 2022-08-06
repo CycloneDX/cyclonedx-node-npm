@@ -27,9 +27,10 @@ import { makeThisTool } from './thisTool'
 import { PropertyNames } from './properties'
 
 interface BomBuilderOptions {
-  metaComponentType: BomBuilder['metaComponentType']
-  excludeDevDependencies: BomBuilder['excludeDevDependencies']
-  reproducible: BomBuilder['reproducible']
+  metaComponentType?: BomBuilder['metaComponentType']
+  packageLockOnly?: BomBuilder['packageLockOnly']
+  omitDependencyTypes?: BomBuilder['omitDependencyTypes']
+  reproducible?: BomBuilder['reproducible']
 }
 
 interface spawnSyncResultError {
@@ -46,8 +47,9 @@ export class BomBuilder {
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
   purlFactory: Factories.PackageUrlFactory
 
-  metaComponentType: Enums.ComponentType
-  excludeDevDependencies: boolean
+  metaComponentType: Enums.ComponentType | undefined
+  packageLockOnly: boolean
+  omitDependencyTypes: string[]
   reproducible: boolean
 
   console: Console
@@ -64,8 +66,9 @@ export class BomBuilder {
     this.purlFactory = purlFactory
 
     this.metaComponentType = options.metaComponentType
-    this.excludeDevDependencies = options.excludeDevDependencies
-    this.reproducible = options.reproducible
+    this.packageLockOnly = options.packageLockOnly ?? false
+    this.omitDependencyTypes = options.omitDependencyTypes ?? []
+    this.reproducible = options.reproducible ?? false
 
     this.console = console_
   }
@@ -79,35 +82,32 @@ export class BomBuilder {
   }
 
   #fetchNpmLs (projectDir: string): any {
+    const command = 'npm' // TODO have env var control it ?
     const args = [
       'ls',
       '--json',
       '--all',
       '--long'
-      /* '--package-lock-only'
-      * @TODO thing about this param ...
-      * best would be to analyse the actual existing node_modules dir ... but this might be not a good idea ...
-      * help text:
-      *     If set to true, the current operation will only use the package-lock.json, ignoring node_modules.
-      *     For update this means only the package-lock.json will be updated, instead of checking node_modules and downloading dependencies.
-      *     For list this means the output will be based on the tree described by the package-lock.json, rather than the contents of node_modules.
-      */
     ]
-    if (this.excludeDevDependencies) {
-      args.push('--omit', 'dev')
+    if (this.packageLockOnly) {
+      args.push('--package-lock-only')
     }
-    const npmLsReturns = spawnSync('npm', args, {
+    for (const odt of this.omitDependencyTypes) {
+      args.push('--omit', odt)
+    }
+
+    const npmLsReturns = spawnSync(command, args, {
       cwd: projectDir,
       encoding: 'buffer',
       maxBuffer: Number.POSITIVE_INFINITY // DIRTY but effective
     })
+
     if (npmLsReturns.error instanceof Error) {
       const error = npmLsReturns.error as spawnSyncResultError
       throw new Error(`npm-ls exited with errors: ${
         error.errno ?? '???'} ${
         error.code ?? npmLsReturns.status ?? 'noCode'} ${
         error.signal ?? npmLsReturns.signal ?? 'noSignal'}`)
-      // @TODO typescript 4.8 - append the prev error to  `Error` as `{ cause: npmLsReturns.error }`
     }
     if (npmLsReturns.stderr.length > 0) {
       this.console.group('npm-ls had errors')
@@ -125,7 +125,7 @@ export class BomBuilder {
   buildFromNpmLs (data: any): Models.Bom {
     // region all components
 
-    const allComponents: AllComponents = new Map([[data.path, this.#makeComponent(data)]])
+    const allComponents: AllComponents = new Map([[data.path, this.#makeComponent(data, this.metaComponentType)]])
     this.#gatherDependencies(allComponents, data)
 
     // endregion all components
@@ -157,8 +157,9 @@ export class BomBuilder {
       bom.components.add(component)
     }
 
-    // @TODO bundled components - proper nesting
-    // @TODO dependencies
+    // @TODO dependency graph
+
+    // @TODO bundled components - proper nesting -- this become optional via feature switch in the future ...
 
     return bom
   }
