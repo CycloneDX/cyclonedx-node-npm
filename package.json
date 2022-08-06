@@ -13,7 +13,9 @@
     "dependency",
     "package-url",
     "PURL",
-    "spdx"
+    "spdx",
+    "node",
+    "npm"
   ],
   "bugs": {
     "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues"
