@@ -180,5 +180,9 @@
   },
   "engines": {
     "node": "14 - 18"
+  },
+  "scripts": {
+    "make-bom:json": "cyclonedx-npm --output-format=JSON",
+    "make-bom:xml": "cyclonedx-npm --output-format=XML"
   }
 }

@@ -17,10 +17,19 @@ Please read the [CONTRIBUTING](CONTRIBUTING.md) file first.
 
 ---- 
 
+## Requirements
+
+* `node: >= 16.0.0`
+* `npm: 6 - 8`
+
+## Install
+
+tbd 
+
 ## Usage
 
 ```text
-$npx cyclonedx-node-npm --help
+$npx cyclonedx-npm --help
 Usage: cyclonedx-node-npm [options] [--] [<package-manifest>]
 
 Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.
@@ -51,3 +60,11 @@ Options:
   -V, --version             output the version number
   -h, --help                display help for command
 ```
+
+## contributing
+
+TBD
+
+## License 
+
+TBD 

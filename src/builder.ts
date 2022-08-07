@@ -82,7 +82,8 @@ export class BomBuilder {
   }
 
   #fetchNpmLs (projectDir: string): any {
-    const command = 'npm' // TODO have env var control it ?
+    // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string
+    const command = process.env.npm_execpath || 'npm'
     const args = [
       'ls',
       '--json',
@@ -96,12 +97,13 @@ export class BomBuilder {
       args.push('--omit', odt)
     }
 
+    // TODO use instead ? : https://www.npmjs.com/package/debug ?
+    this.console.debug('gather dependency tree ...', command, args)
     const npmLsReturns = spawnSync(command, args, {
       cwd: projectDir,
       encoding: 'buffer',
       maxBuffer: Number.POSITIVE_INFINITY // DIRTY but effective
     })
-
     if (npmLsReturns.error instanceof Error) {
       const error = npmLsReturns.error as spawnSyncResultError
       throw new Error(`npm-ls exited with errors: ${
@@ -123,6 +125,9 @@ export class BomBuilder {
   }
 
   buildFromNpmLs (data: any): Models.Bom {
+    // TODO use instead ? : https://www.npmjs.com/package/debug ?
+    this.console.debug('build BOM ...')
+
     // region all components
 
     const allComponents: AllComponents = new Map([[data.path, this.#makeComponent(data, this.metaComponentType)]])

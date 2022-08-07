@@ -55,10 +55,10 @@
   "type": "commonjs",
   "engines": {
     "node": ">=16.0.0",
-    "npm": ">=6.0.0"
+    "npm": "6 - 8"
   },
   "bin": {
-    "cyclonedx-node-npm": "./bin/cyclonedx-node-npm"
+    "cyclonedx-npm": "./bin/cyclonedx-npm-cli.js"
   },
   "main": "./dist/index.js",
   "exports": "./dist/index.js",

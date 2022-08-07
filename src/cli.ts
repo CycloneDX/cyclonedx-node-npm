@@ -137,12 +137,16 @@ export function run (
 ): void {
   process.title = 'cyclonedx-node-npm'
 
+  // all output shall be bound to stdError - stdOut is for result output only
+  const myConsole = new console.Console(process.stderr, process.stderr)
+
   const program = makeCommand()
   program.parse(process.argv)
 
   const options: CommandOptions = program.opts()
   const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
   const projectDir = dirname(packageFile)
+  myConsole.debug('options: %s\npackageFile: %s\nprojectDir: %s', options, packageFile, projectDir)
 
   if (!existsSync(packageFile)) {
     const msg = `missing package manifest file: ${packageFile}`
@@ -169,6 +173,7 @@ export function run (
     program.error(msg)
     throw new Error(msg)
   }
+  myConsole.debug('lockFile:', lockFile)
 
   const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
 
@@ -185,7 +190,7 @@ export function run (
       omitDependencyTypes: options.omit,
       reproducible: options.outputReproducible
     },
-    new console.Console(process.stderr, process.stderr) // all output shall be bound to stdError - stdError is only for result output
+    myConsole
   ).buildFromLockFile(lockFile)
 
   const spec = Spec.SpecVersionDict[options.specVersion]
@@ -205,6 +210,8 @@ export function run (
       break
   }
 
+  // TODO use instead ? : https://www.npmjs.com/package/debug ?
+  myConsole.debug('write BOM to', options.outputFile)
   writeSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd
