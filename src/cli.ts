@@ -146,7 +146,9 @@ export function run (
   const options: CommandOptions = program.opts()
   const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
   const projectDir = dirname(packageFile)
-  myConsole.debug('options: %s\npackageFile: %s\nprojectDir: %s', options, packageFile, projectDir)
+  myConsole.debug('options:', options)
+  myConsole.debug('packageFile:', packageFile)
+  myConsole.debug('projectDir:', projectDir)
 
   if (!existsSync(packageFile)) {
     const msg = `missing package manifest file: ${packageFile}`
