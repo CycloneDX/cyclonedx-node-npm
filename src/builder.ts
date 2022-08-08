@@ -31,6 +31,7 @@ interface BomBuilderOptions {
   packageLockOnly?: BomBuilder['packageLockOnly']
   omitDependencyTypes?: BomBuilder['omitDependencyTypes']
   reproducible?: BomBuilder['reproducible']
+  flattenComponents?: BomBuilder['flattenComponents']
 }
 
 interface spawnSyncResultError {
@@ -39,8 +40,8 @@ interface spawnSyncResultError {
   signal?: NodeJS.Signals
 }
 
-type cPath = any
-type AllComponents = Map<cPath, Models.Component | undefined>
+type cPath = string
+type AllComponents = Map<cPath, Models.Component>
 
 export class BomBuilder {
   toolBuilder: Builders.FromNodePackageJson.ToolBuilder
@@ -51,6 +52,7 @@ export class BomBuilder {
   packageLockOnly: boolean
   omitDependencyTypes: string[]
   reproducible: boolean
+  flattenComponents: boolean
 
   console: Console
 
@@ -69,6 +71,7 @@ export class BomBuilder {
     this.packageLockOnly = options.packageLockOnly ?? false
     this.omitDependencyTypes = options.omitDependencyTypes ?? []
     this.reproducible = options.reproducible ?? false
+    this.flattenComponents = options.flattenComponents ?? true // @TODO default to false
 
     this.console = console_
   }
@@ -129,13 +132,10 @@ export class BomBuilder {
 
     // region all components & dependencies
 
-    const rootComponent = this.#makeComponent(data, this.metaComponentType)
+    const rootComponent = this.#makeComponent(data, this.metaComponentType) ??
+      new DummyComponent(Enums.ComponentType.Library, 'RootComponent')
     const allComponents: AllComponents = new Map([[data.path, rootComponent]])
-
-    const rootComponentDeps = this.#gatherDependencies(allComponents, data)
-    if (rootComponent !== undefined) {
-      rootComponentDeps.forEach(d => rootComponent.dependencies.add(d))
-    }
+    this.#gatherDependencies(allComponents, data, rootComponent.dependencies)
 
     // endregion all components & dependencies
 
@@ -156,47 +156,45 @@ export class BomBuilder {
 
     // endregion metadata
 
-    for (const component of allComponents.values()) {
-      if (component === bom.metadata.component) {
-        continue // for ... of ...
-      }
-      if (component === undefined) {
-        continue // for ... of ...
-      }
-      bom.components.add(component)
-    }
+    // region components
 
-    // @TODO bundled components - proper nesting -- this become optional via feature switch in the future ...
+    if (this.flattenComponents) {
+      for (const component of allComponents.values()) {
+        bom.components.add(component)
+      }
+    } else {
+      // @TODO bundled components - proper nesting
+      bom.components = rootComponent.components
+      rootComponent.components = new Models.ComponentRepository()
+    }
+    bom.components.delete(rootComponent)
+    rootComponent.components.clear()
+
+    // endregion components
 
     return bom
   }
 
-  #gatherDependencies (allComponents: AllComponents, data: any): Set<Models.BomRef> {
-    const directDepRefs = new Set<Models.BomRef>()
-    for (const depData of Object.values(data.dependencies ?? {}) as any) {
+  #gatherDependencies (allComponents: AllComponents, data: any, directDepRefs: Set<Models.BomRef>): void {
+    // one and the same component may appear multiple times in the tree
+    // but only one occurrence has all the direct dependencies.
+    for (const [depName, depData] of Object.entries(data.dependencies ?? {}) as any) {
       if (depData === null || typeof depData !== 'object') {
         continue
       }
-      // one and the same component may appear multiple times in the tree
-      // but only one occurrence has all the direct dependencies.
-
-      let dep: Models.Component | undefined
-      if (allComponents.has(depData.path)) {
-        dep = allComponents.get(depData.path)
-      } else {
-        dep = this.#makeComponent(depData)
+      if (typeof depData.path !== 'string') {
+        // might be an optional dependency that was not installed
+        continue
+      }
+      let dep = allComponents.get(depData.path)
+      if (dep === undefined) {
+        dep = this.#makeComponent(depData) ??
+          new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
         allComponents.set(depData.path, dep)
       }
-      const depDeps = this.#gatherDependencies(allComponents, depData)
-      if (dep === undefined) {
-        // the current dep is undefined -> make transitives to directs
-        depDeps.forEach(d => directDepRefs.add(d))
-      } else {
-        directDepRefs.add(dep.bomRef)
-        depDeps.forEach(d => dep?.dependencies.add(d))
-      }
+      directDepRefs.add(dep.bomRef)
+      this.#gatherDependencies(allComponents, depData, dep.dependencies)
     }
-    return directDepRefs
   }
 
   /**
@@ -264,5 +262,11 @@ export class BomBuilder {
      */
 
     return purl
+  }
+}
+
+class DummyComponent extends Models.Component {
+  constructor (type: Models.Component['type'], name: Models.Component['name']) {
+    super(type, `DummyComponent.${name}`, { bomRef: `DummyComponent.${name}` })
   }
 }
