@@ -188,12 +188,28 @@ export class BomBuilder {
       }
       let dep = allComponents.get(depData.path)
       if (dep === undefined) {
-        dep = this.#makeComponent(depData) ??
+        dep = this.#makeComponent(
+          this.packageLockOnly
+            ? depData
+            : this.#enhancedData(depData)
+        ) ??
           new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
         allComponents.set(depData.path, dep)
       }
       directDepRefs.add(dep.bomRef)
       this.#gatherDependencies(allComponents, depData, dep.dependencies)
+    }
+  }
+
+  #enhancedData (data: {path: string}): any {
+    const packageJson = `${data.path}/package.json`
+    try {
+      return {
+        ...require(packageJson),
+        ...data
+      }
+    } catch {
+      return data
     }
   }
 
