@@ -202,10 +202,9 @@ export class BomBuilder {
   }
 
   #enhancedData (data: {path: string}): any {
-    const packageJson = `${data.path}/package.json`
     try {
       return {
-        ...require(packageJson),
+        ...require(`${data.path}/package.json`),
         ...data
       }
     } catch {
