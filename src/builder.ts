@@ -203,10 +203,11 @@ export class BomBuilder {
 
   #enhancedPackageData (data: {path: string}): any {
     try {
-      return {
-        ...require(`${data.path}/package.json`),
-        ...data
-      }
+      return Object.assign(
+        /* eslint-disable-next-line @typescript-eslint/no-var-requires */
+        require(`${data.path}/package.json`),
+        data
+      )
     } catch {
       return data
     }
