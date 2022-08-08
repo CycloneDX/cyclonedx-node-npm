@@ -192,7 +192,7 @@ export class BomBuilder {
         dep = this.#makeComponent(
           this.packageLockOnly
             ? depData
-            : this.#enhancedData(depData)
+            : this.#enhancedPackageData(depData)
         ) ?? new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
         allComponents.set(depData.path, dep)
       }
@@ -201,7 +201,7 @@ export class BomBuilder {
     }
   }
 
-  #enhancedData (data: {path: string}): any {
+  #enhancedPackageData (data: {path: string}): any {
     try {
       return {
         ...require(`${data.path}/package.json`),
