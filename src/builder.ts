@@ -127,7 +127,8 @@ export class BomBuilder {
     }
   }
 
-  buildFromNpmLs (data: any): Models.Bom { // TODO use instead ? : https://www.npmjs.com/package/debug ?
+  buildFromNpmLs (data: any): Models.Bom {
+    // TODO use instead ? : https://www.npmjs.com/package/debug ?
     this.console.debug('build BOM ...')
 
     // region all components & dependencies
@@ -192,8 +193,7 @@ export class BomBuilder {
           this.packageLockOnly
             ? depData
             : this.#enhancedData(depData)
-        ) ??
-          new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
+        ) ?? new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
         allComponents.set(depData.path, dep)
       }
       directDepRefs.add(dep.bomRef)
