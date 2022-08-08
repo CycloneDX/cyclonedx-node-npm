@@ -82,7 +82,7 @@ export class BomBuilder {
   }
 
   #fetchNpmLs (projectDir: string): any {
-    // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string
+    /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string */
     const command = process.env.npm_execpath || 'npm'
     const args = [
       'ls',
@@ -124,22 +124,26 @@ export class BomBuilder {
     }
   }
 
-  buildFromNpmLs (data: any): Models.Bom {
-    // TODO use instead ? : https://www.npmjs.com/package/debug ?
+  buildFromNpmLs (data: any): Models.Bom { // TODO use instead ? : https://www.npmjs.com/package/debug ?
     this.console.debug('build BOM ...')
 
-    // region all components
+    // region all components & dependencies
 
-    const allComponents: AllComponents = new Map([[data.path, this.#makeComponent(data, this.metaComponentType)]])
-    this.#gatherDependencies(allComponents, data)
+    const rootComponent = this.#makeComponent(data, this.metaComponentType)
+    const allComponents: AllComponents = new Map([[data.path, rootComponent]])
 
-    // endregion all components
+    const rootComponentDeps = this.#gatherDependencies(allComponents, data)
+    if (rootComponent !== undefined) {
+      rootComponentDeps.forEach(d => rootComponent.dependencies.add(d))
+    }
+
+    // endregion all components & dependencies
 
     const bom = new Models.Bom()
 
     // region metadata
 
-    bom.metadata.component = allComponents.get(data.path)
+    bom.metadata.component = rootComponent
 
     const thisTool = makeThisTool(this.toolBuilder)
     if (thisTool !== undefined) {
@@ -162,25 +166,37 @@ export class BomBuilder {
       bom.components.add(component)
     }
 
-    // @TODO dependency graph
-
     // @TODO bundled components - proper nesting -- this become optional via feature switch in the future ...
 
     return bom
   }
 
-  #gatherDependencies (allComponents: AllComponents, data: any): void {
-    for (const dependency of Object.values(data.dependencies ?? {}) as any) {
-      if (dependency === null || typeof dependency !== 'object') {
+  #gatherDependencies (allComponents: AllComponents, data: any): Set<Models.BomRef> {
+    const directDepRefs = new Set<Models.BomRef>()
+    for (const depData of Object.values(data.dependencies ?? {}) as any) {
+      if (depData === null || typeof depData !== 'object') {
         continue
       }
       // one and the same component may appear multiple times in the tree
       // but only one occurrence has all the direct dependencies.
-      if (!allComponents.has(dependency.path)) {
-        allComponents.set(dependency.path, this.#makeComponent(dependency))
+
+      let dep: Models.Component | undefined
+      if (allComponents.has(depData.path)) {
+        dep = allComponents.get(depData.path)
+      } else {
+        dep = this.#makeComponent(depData)
+        allComponents.set(depData.path, dep)
       }
-      this.#gatherDependencies(allComponents, dependency)
+      const depDeps = this.#gatherDependencies(allComponents, depData)
+      if (dep === undefined) {
+        // the current dep is undefined -> make transitives to directs
+        depDeps.forEach(d => directDepRefs.add(d))
+      } else {
+        directDepRefs.add(dep.bomRef)
+        depDeps.forEach(d => dep?.dependencies.add(d))
+      }
     }
+    return directDepRefs
   }
 
   /**
@@ -227,7 +243,7 @@ export class BomBuilder {
 
     component.purl = this.#makePurl(component)
 
-    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions -- since empty-string handling is needed
+    /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions -- since empty-string handling is needed */
     component.bomRef.value = (typeof data._id === 'string' ? data._id : undefined) ||
       component.purl?.toString() ||
       `${data.name as string}@${data.version as string}`

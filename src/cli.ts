@@ -125,7 +125,7 @@ function makeCommand (): Command {
     )
   ).version(
     // that is supposed to be the last option in the list on the help page.
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    /* eslint-disable-next-line @typescript-eslint/no-var-requires */
     require('../package.json').version as string
   ).allowExcessArguments(
     false
