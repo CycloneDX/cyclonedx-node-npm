@@ -24,7 +24,7 @@ import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library
 import { PackageURL } from 'packageurl-js'
 
 import { makeThisTool } from './thisTool'
-import { PropertyNames } from './properties'
+import { PropertyNames, PropertyValueBool } from './properties'
 
 interface BomBuilderOptions {
   metaComponentType?: BomBuilder['metaComponentType']
@@ -169,7 +169,7 @@ export class BomBuilder {
         bom.components.add(component)
       }
     } else {
-      // @TODO bundled components - proper nesting
+      // @TODO proper nesting // also reflect the `inBundle ?? _inBundle` marker`
       bom.components = rootComponent.components
       rootComponent.components = new Models.ComponentRepository()
     }
@@ -228,6 +228,13 @@ export class BomBuilder {
    */
   #hashRE_sha512_base64 = /\bsha512-([a-z0-9+/]{86}==)\b/i
 
+  /**
+   * Ignore pattern for `resolved`.
+   * - ignore: well, just ignore it ... i guess.
+   * - file: local dist cannot be shipped and therefore should be ignored.
+   */
+  #resolvedRE_ignore = /^(?:ignore|file):/i
+
   #makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | undefined {
     const component = this.componentBuilder.makeComponent(data, type)
     if (component === undefined) {
@@ -236,17 +243,17 @@ export class BomBuilder {
 
     if (data.extraneous === true) {
       component.properties.add(
-        new Models.Property(PropertyNames.PackageExtraneous, 'true')
+        new Models.Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
       )
     }
 
     if (data.private === true) {
       component.properties.add(
-        new Models.Property(PropertyNames.PackagePrivate, 'true')
+        new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
       )
     }
 
-    if (typeof data.resolved === 'string') {
+    if (typeof data.resolved === 'string' && !this.#resolvedRE_ignore.test(data.resolved)) {
       component.externalReferences.add(
         new Models.ExternalReference(
           Enums.ExternalReferenceType.Distribution,

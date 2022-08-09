@@ -22,5 +22,10 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 export const enum PropertyNames {
   PackageExtraneous = 'cdx:npm:package:extraneous',
   PackagePrivate = 'cdx:npm:package:private',
-// PackageBundledDependency = 'cdx:npm:package:bundled-dependency',
+  PackageInBundle = 'cdx:npm:package:inBundle',
+}
+
+export const enum PropertyValueBool {
+  True = 'true',
+  False = 'false',
 }
