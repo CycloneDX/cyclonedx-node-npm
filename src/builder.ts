@@ -169,7 +169,22 @@ export class BomBuilder {
         bom.components.add(component)
       }
     } else {
+
       // @TODO proper nesting
+      /* // also reflect the `inBundle ?? _inBundle` marker`
+          const inBundle = data.inBundle ?? data._inBundle
+          if (typeof inBundle === 'boolean') {
+            component.properties.add(
+              new Models.Property(
+                PropertyNames.PackageBundled,
+                inBundle
+                  ? PropertyValueBool.True
+                  : PropertyValueBool.False
+              )
+            )
+          }
+       */
+
       bom.components = rootComponent.components
       rootComponent.components = new Models.ComponentRepository()
     }
@@ -256,18 +271,6 @@ export class BomBuilder {
         new Models.Property(
           PropertyNames.PackagePrivate,
           data.private as boolean
-            ? PropertyValueBool.True
-            : PropertyValueBool.False
-        )
-      )
-    }
-
-    const inBundle = data.inBundle ?? data._inBundle
-    if (typeof inBundle === 'boolean') {
-      component.properties.add(
-        new Models.Property(
-          PropertyNames.PackageBundled,
-          inBundle
             ? PropertyValueBool.True
             : PropertyValueBool.False
         )
