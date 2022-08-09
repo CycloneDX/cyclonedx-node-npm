@@ -171,15 +171,9 @@ export class BomBuilder {
     } else {
       // @TODO proper nesting
       /* // also reflect the `inBundle ?? _inBundle` marker`
-          const inBundle = data.inBundle ?? data._inBundle
-          if (typeof inBundle === 'boolean') {
+          if ((data.inBundle ?? data._inBundle) === true) {
             component.properties.add(
-              new Models.Property(
-                PropertyNames.PackageBundled,
-                inBundle
-                  ? PropertyValueBool.True
-                  : PropertyValueBool.False
-              )
+              new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
             )
           }
        */
@@ -255,24 +249,15 @@ export class BomBuilder {
       return component
     }
 
-    if (typeof data.extraneous === 'boolean') {
+    if (data.extraneous === true) {
       component.properties.add(
-        new Models.Property(PropertyNames.PackageExtraneous,
-          data.extraneous as boolean
-            ? PropertyValueBool.True
-            : PropertyValueBool.False
-        )
+        new Models.Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
       )
     }
 
-    if (typeof data.private === 'boolean') {
+    if (data.private === true) {
       component.properties.add(
-        new Models.Property(
-          PropertyNames.PackagePrivate,
-          data.private as boolean
-            ? PropertyValueBool.True
-            : PropertyValueBool.False
-        )
+        new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
       )
     }
 
