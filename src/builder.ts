@@ -85,12 +85,17 @@ export class BomBuilder {
   }
 
   #fetchNpmLs (projectDir: string): any {
+    // `npm_execpath` is used by `npm` internally, and is propagated when kicking `npm run-script`
     /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string */
     const command = process.env.npm_execpath || 'npm'
+
     const args = [
       'ls',
+      // format as parsable json
       '--json',
+      // depth = infinity
       '--all',
+      // get all the needed content
       '--long'
     ]
     if (this.packageLockOnly) {
@@ -201,6 +206,11 @@ export class BomBuilder {
     }
   }
 
+  /**
+   * Some combinations/versions of `npm-install`/`npm-ls` are insufficient,
+   * they fail to load package details or miss details.
+   * So here is a poly-fill that loads ALL the package's data.
+   */
   #enhancedPackageData (data: {path: string}): any {
     try {
       return Object.assign(
@@ -271,10 +281,9 @@ export class BomBuilder {
       return purl
     }
 
-    /*
-     * @TODO: detect non-standard registry (not "npmjs.org")
-      const qualifiers: PackageURL['qualifiers'] = purl.qualifiers ?? {}
-      qualifiers.repository_url = ...
+    /* @TODO: detect non-standard registry (not "npmjs.org")
+       const qualifiers: PackageURL['qualifiers'] = purl.qualifiers ?? {}
+       qualifiers.repository_url = ...
      */
 
     return purl

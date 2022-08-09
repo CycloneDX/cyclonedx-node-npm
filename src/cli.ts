@@ -46,16 +46,20 @@ function makeCommand (): Command {
   return new Command(
   ).description(
     'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
+  ).usage(
+    // Need to add the `[--]` manually, to indicate how to stop a variadic option.
+    '[options] [--] [<package-manifest>]'
   ).addOption(
     new Option(
       '--package-lock-only',
       'Whether to only use the lock file, ignoring "node_modules".\n' +
-      'This means the output will be based on the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.'
+      'This means the output will be based only on the few details and the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.'
     ).default(false)
   ).addOption(
     new Option(
       '--omit <type...>',
-      'Dependency types to omit from the installation tree. (can be set multiple times)'
+      'Dependency types to omit from the installation tree.' +
+      '(can be set multiple times)'
     ).choices([
       'dev',
       'optional',
@@ -96,7 +100,8 @@ function makeCommand (): Command {
   ).addOption(
     new Option(
       '--output-file <file>',
-      `Path to the output file. Set to "${OutputStdOut}" to write to STDOUT.`
+      'Path to the output file.\n' +
+      `Set to "${OutputStdOut}" to write to STDOUT.`
     ).default(
       OutputStdOut,
       'write to STDOUT'
@@ -144,17 +149,17 @@ export function run (
   program.parse(process.argv)
 
   const options: CommandOptions = program.opts()
-  const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
-  const projectDir = dirname(packageFile)
   myConsole.debug('options:', options)
-  myConsole.debug('packageFile:', packageFile)
-  myConsole.debug('projectDir:', projectDir)
 
+  const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
   if (!existsSync(packageFile)) {
-    const msg = `missing package manifest file: ${packageFile}`
+    const msg = `missing project's manifest file: ${packageFile}`
     program.error(msg)
     throw new Error(msg)
   }
+  myConsole.debug('packageFile:', packageFile)
+  const projectDir = dirname(packageFile)
+  myConsole.debug('projectDir:', projectDir)
 
   /**
    * The path to the used npm lock file.
