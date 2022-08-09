@@ -169,7 +169,7 @@ export class BomBuilder {
         bom.components.add(component)
       }
     } else {
-      // @TODO proper nesting // also reflect the `inBundle ?? _inBundle` marker`
+      // @TODO proper nesting
       bom.components = rootComponent.components
       rootComponent.components = new Models.ComponentRepository()
     }
