@@ -83,7 +83,7 @@ function makeCommand (): Command {
     new Option(
       '--output-reproducible',
       'Whether to go the extra mile and make the output reproducible.\n' +
-      'Reproducibility might result in loss of time- and random-based-values.'
+      'This requires more resources, and might result in loss of time- and random-based-values.'
     ).env(
       'BOM_REPRODUCIBLE'
     )
