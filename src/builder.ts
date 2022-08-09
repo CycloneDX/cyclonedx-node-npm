@@ -169,7 +169,6 @@ export class BomBuilder {
         bom.components.add(component)
       }
     } else {
-
       // @TODO proper nesting
       /* // also reflect the `inBundle ?? _inBundle` marker`
           const inBundle = data.inBundle ?? data._inBundle
