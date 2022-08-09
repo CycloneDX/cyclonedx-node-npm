@@ -15,7 +15,8 @@ ships with bundled version of `yargs`.
 
 * in _npm6_ the `_inBundle` property is set to `true` in a dependency
 * in _npm8_ the  `inBundle` property is set to `true` in a dependency.
-* additionally there is the property `bundleDependencies`/`bundledDependencies` in a component.
+* additionally there is the property `bundleDependencies`(deprecated)/`bundledDependencies` in a component.  
+  Value might be `true`(all), `false`(none), or a list of `string` that point to the keys in dependency list.  
 
 ## output
 
