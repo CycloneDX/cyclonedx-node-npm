@@ -135,6 +135,9 @@ dist
 # never ignore the build results - these are intended to be shipped
 !/dist/
 
+# this is a standaline CLI tool - dont miss the shrinkwrap
+!/npm-shrinkwrap.json
+
 # no intention to ship the maps, since the source is not shipped either.
 /dist/*.map
 
@@ -149,10 +152,10 @@ dist
 /jest.*
 /examples/
 /demo/
+/rnd/
 
-## target of JSDoc
-/out/
-/docs/jsdoc/
+# dont ship internal docs
+/docs/dev/
 
 ## target or reportings, tests, etc
 /reports/
