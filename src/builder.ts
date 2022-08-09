@@ -310,7 +310,7 @@ class DummyComponent extends Models.Component {
   constructor (type: Models.Component['type'], name: Models.Component['name']) {
     super(type, `DummyComponent.${name}`, {
       bomRef: `DummyComponent.${name}`,
-      description: `Dummy component "${name}" to fill in the place where the actual built failed.`
+      description: `This is a dummy component "${name}" that fills the gap where the actual built failed.`
     })
   }
 }
