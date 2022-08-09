@@ -211,7 +211,7 @@ export class BomBuilder {
    * they fail to load package details or miss details.
    * So here is a poly-fill that loads ALL the package's data.
    */
-  #enhancedPackageData (data: {path: string}): any {
+  #enhancedPackageData (data: { path: string }): any {
     try {
       return Object.assign(
         /* eslint-disable-next-line @typescript-eslint/no-var-requires */
@@ -241,15 +241,36 @@ export class BomBuilder {
       return component
     }
 
-    if (data.extraneous === true) {
+    if (typeof data.extraneous === 'boolean') {
       component.properties.add(
-        new Models.Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
+        new Models.Property(PropertyNames.PackageExtraneous,
+          data.extraneous as boolean
+            ? PropertyValueBool.True
+            : PropertyValueBool.False
+        )
       )
     }
 
-    if (data.private === true) {
+    if (typeof data.private === 'boolean') {
       component.properties.add(
-        new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
+        new Models.Property(
+          PropertyNames.PackagePrivate,
+          data.private as boolean
+            ? PropertyValueBool.True
+            : PropertyValueBool.False
+        )
+      )
+    }
+
+    const inBundle = data.inBundle ?? data._inBundle
+    if (typeof inBundle === 'boolean') {
+      component.properties.add(
+        new Models.Property(
+          PropertyNames.PackageBundled,
+          inBundle
+            ? PropertyValueBool.True
+            : PropertyValueBool.False
+        )
       )
     }
 
@@ -272,6 +293,7 @@ export class BomBuilder {
       }
     }
 
+    // even non-public packages may have a PURL for identification
     component.purl = this.#makePurl(component)
 
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions -- since empty-string handling is needed */

@@ -20,9 +20,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 // TODO add link to spec
 // see https://github.com/CycloneDX/cyclonedx-property-taxonomy/pull/21
 export const enum PropertyNames {
+  PackageBundled = 'cdx:npm:package:bundled',
   PackageExtraneous = 'cdx:npm:package:extraneous',
   PackagePrivate = 'cdx:npm:package:private',
-  PackageInBundle = 'cdx:npm:package:inBundle',
 }
 
 export const enum PropertyValueBool {
