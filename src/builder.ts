@@ -120,6 +120,7 @@ export class BomBuilder {
         error.signal ?? npmLsReturns.signal ?? 'noSignal'}`)
     }
     if (npmLsReturns.stderr.length > 0) {
+      // TODO only print if verbosity is high enough
       this.console.group('npm-ls had errors')
       this.console.debug(npmLsReturns.stderr.toString())
       this.console.groupEnd()
@@ -171,6 +172,7 @@ export class BomBuilder {
     } else {
       // @TODO proper nesting
       /* // also reflect the `inBundle ?? _inBundle` marker`
+          // older npm-ls versions (v6) hide properties behind a `_`
           if ((data.inBundle ?? data._inBundle) === true) {
             component.properties.add(
               new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
@@ -200,6 +202,7 @@ export class BomBuilder {
         // might be an optional dependency that was not installed
         continue
       }
+
       let dep = allComponents.get(depData.path)
       if (dep === undefined) {
         dep = this.#makeComponent(
@@ -210,6 +213,7 @@ export class BomBuilder {
         allComponents.set(depData.path, dep)
       }
       directDepRefs.add(dep.bomRef)
+
       this.#gatherDependencies(allComponents, depData, dep.dependencies)
     }
   }
@@ -261,17 +265,22 @@ export class BomBuilder {
       )
     }
 
-    if (typeof data.resolved === 'string' && !this.#resolvedRE_ignore.test(data.resolved)) {
+    // older npm-ls versions (v6) hide properties behind a `_`
+    const resolved = data.resolved ?? data._resolved
+    if (typeof resolved === 'string' && !this.#resolvedRE_ignore.test(resolved)) {
       component.externalReferences.add(
         new Models.ExternalReference(
+          resolved,
           Enums.ExternalReferenceType.Distribution,
-          data.resolved
+          { comment: 'as detected from npm-ls property "resolved"' }
         )
       )
     }
 
-    if (typeof data.integrity === 'string') {
-      const hashSha512Match = this.#hashRE_sha512_base64.exec(data.integrity) ?? []
+    // older npm-ls versions (v6) hide properties behind a `_`
+    const integrity = data.integrity ?? data._integrity
+    if (typeof integrity === 'string') {
+      const hashSha512Match = this.#hashRE_sha512_base64.exec(integrity) ?? []
       if (hashSha512Match?.length === 2) {
         component.hashes.set(
           Enums.HashAlgorithm['SHA-512'],
@@ -280,7 +289,7 @@ export class BomBuilder {
       }
     }
 
-    // even non-public packages may have a PURL for identification
+    // even private packages may have a PURL for identification
     component.purl = this.#makePurl(component)
 
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions -- since empty-string handling is needed */
@@ -294,7 +303,7 @@ export class BomBuilder {
   #makePurl (component: Models.Component): PackageURL | undefined {
     const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
     if (purl === undefined) {
-      return purl
+      return undefined
     }
 
     /* @TODO: detect non-standard registry (not "npmjs.org")
