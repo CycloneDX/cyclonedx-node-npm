@@ -19,8 +19,8 @@ Please read the [CONTRIBUTING](CONTRIBUTING.md) file first.
 
 ## Requirements
 
-* `node: >= 16.0.0`
-* `npm: 6 - 8`
+* `node` >= `16.0.0`
+* `npm` in range `6 - 8`
 
 ## Install
 

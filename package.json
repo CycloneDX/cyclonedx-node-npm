@@ -57,6 +57,11 @@
     "node": ">=16.0.0",
     "npm": "6 - 8"
   },
+  "directories": {
+    "doc": "docs",
+    "example": "demo",
+    "test": "tests"
+  },
   "bin": {
     "cyclonedx-npm": "./bin/cyclonedx-npm-cli.js"
   },
