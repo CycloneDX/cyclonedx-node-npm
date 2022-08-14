@@ -170,32 +170,35 @@ export class BomBuilder {
 
     if (this.flattenComponents) {
       for (const component of allComponents.values()) {
-        bom.components.add(component)
+        if (component !== rootComponent) {
+          bom.components.add(component)
+        }
       }
     } else {
-      this.treeBuilder.fromPaths(
-        new Set(allComponents.keys()),
-        data.path[0] === '/' ? '/' : '\\'
+      bom.components = this.nestComponents(
+        // remove rootComponent - so the elements that are nested below it are just returned.
+        new Map(Array.from(allComponents.entries()).filter(([, c]) => c !== rootComponent)),
+        this.treeBuilder.fromPaths(
+          new Set(allComponents.keys()),
+          data.path[0] === '/' ? '/' : '\\'
+        )
       )
-      // @TODO proper nesting
-      /* // also reflect the `inBundle ?? _inBundle` marker`
-          // older npm-ls versions (v6) hide properties behind a `_`
-          if ((data.inBundle ?? data._inBundle) === true) {
-            component.properties.add(
-              new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
-            )
-          }
-       */
-
-      bom.components = rootComponent.components
       rootComponent.components = new Models.ComponentRepository()
     }
-    bom.components.delete(rootComponent)
-    rootComponent.components.clear()
 
     // endregion components
 
     return bom
+  }
+
+  private nestComponents (allComponents: AllComponents, tree: PTree): Models.ComponentRepository {
+    const children = new Models.ComponentRepository()
+    for (const [p, pTree] of tree) {
+      const component = allComponents.get(p) as Models.Component
+      component.components = this.nestComponents(allComponents, pTree)
+      children.add(component)
+    }
+    return children
   }
 
   private gatherDependencies (allComponents: AllComponents, data: any, directDepRefs: Set<Models.BomRef>): void {
@@ -273,6 +276,13 @@ export class BomBuilder {
     }
 
     // older npm-ls versions (v6) hide properties behind a `_`
+    if ((data.inBundle ?? data._inBundle) === true) {
+      component.properties.add(
+        new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
+      )
+    }
+
+    // older npm-ls versions (v6) hide properties behind a `_`
     const resolved = data.resolved ?? data._resolved
     if (typeof resolved === 'string' && !this.resolvedRE_ignore.test(resolved)) {
       component.externalReferences.add(
@@ -331,22 +341,6 @@ class DummyComponent extends Models.Component {
   }
 }
 
-/*
-interface TreeRoot {
-  name?: string
-  children: Set<TreeNode | TreeLeaf>
-}
-
-interface TreeNode {
-  name: string
-  children: Set<TreeNode | TreeLeaf>
-}
-
-interface TreeLeaf {
-  name: string
-  children: undefined
-}
- */
 type PTree = Map<string, PTree>
 
 export class TreeBuilder {
