@@ -46,6 +46,7 @@ type AllComponents = Map<cPath, Models.Component>
 export class BomBuilder {
   toolBuilder: Builders.FromNodePackageJson.ToolBuilder
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
+  treeBuilder: TreeBuilder
   purlFactory: Factories.PackageUrlFactory
 
   metaComponentType: Enums.ComponentType | undefined
@@ -59,12 +60,14 @@ export class BomBuilder {
   constructor (
     toolBuilder: BomBuilder['toolBuilder'],
     componentBuilder: BomBuilder['componentBuilder'],
+    treeBuilder: BomBuilder['treeBuilder'],
     purlFactory: BomBuilder['purlFactory'],
     options: BomBuilderOptions,
     console_: BomBuilder['console']
   ) {
     this.toolBuilder = toolBuilder
     this.componentBuilder = componentBuilder
+    this.treeBuilder = treeBuilder
     this.purlFactory = purlFactory
 
     this.metaComponentType = options.metaComponentType
@@ -170,6 +173,11 @@ export class BomBuilder {
         bom.components.add(component)
       }
     } else {
+      this.treeBuilder[
+        data.path[0] === '/'
+          ? 'fromUnixPaths'
+          : 'fromDosPaths'
+      ](new Set(allComponents.keys()))
       // @TODO proper nesting
       /* // also reflect the `inBundle ?? _inBundle` marker`
           // older npm-ls versions (v6) hide properties behind a `_`
@@ -321,5 +329,52 @@ class DummyComponent extends Models.Component {
       bomRef: `DummyComponent.${name}`,
       description: `This is a dummy component "${name}" that fills the gap where the actual built failed.`
     })
+  }
+}
+
+interface TreeRoot {
+  name?: string
+  children: Set<TreeNode | TreeLeaf>
+}
+
+interface TreeNode {
+  name: string
+  children: Set<TreeNode | TreeLeaf>
+}
+
+interface TreeLeaf {
+  name: string
+  children: undefined
+}
+
+export class TreeBuilder {
+  fromDosPaths (paths: Set<string>): TreeRoot {
+    return this.fromPaths(new Map(Array.from(
+      paths.values(),
+      p => [
+        p,
+        p.split('\\')
+      ]
+    )))
+  }
+
+  fromUnixPaths (paths: Set<string>): TreeRoot {
+    return this.fromPaths(new Map(Array.from(
+      paths.values(),
+      p => [
+        p,
+        (p[0] === '/'
+          ? p.slice(1)
+          : p
+        ).split('/')
+      ]
+    )))
+  }
+
+  private fromPaths (paths: Map<string, string[]>): TreeRoot {
+    return {
+      name: undefined,
+      children: new Set()
+    }
   }
 }

@@ -23,7 +23,7 @@ import { writeSync, openSync, existsSync } from 'fs'
 import { Command, Option, Argument } from 'commander'
 import { Enums, Spec, Serialize, Builders, Factories } from '@cyclonedx/cyclonedx-library'
 
-import { BomBuilder } from './builder'
+import { BomBuilder, TreeBuilder } from './builders'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -190,12 +190,14 @@ export function run (
       extRefFactory,
       new Factories.LicenseFactory()
     ),
+    new TreeBuilder(),
     new Factories.PackageUrlFactory('npm'),
     {
       metaComponentType: options.mcType,
       packageLockOnly: options.packageLockOnly,
       omitDependencyTypes: options.omit,
       reproducible: options.outputReproducible
+      // flattenComponents: ...TODO
     },
     myConsole
   ).buildFromLockFile(lockFile)
