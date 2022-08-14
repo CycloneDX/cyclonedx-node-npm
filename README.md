@@ -40,7 +40,7 @@ npm i -D @cyclonedx/cyclonedx-npm
 
 ```text
 $npx cyclonedx-npm --help
-Usage: cyclonedx-node-npm [options] [--] [<package-manifest>]
+Usage: cyclonedx-npm [options] [--] [<package-manifest>]
 
 Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.
 
