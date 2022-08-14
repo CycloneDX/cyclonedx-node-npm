@@ -43,7 +43,7 @@
     "xmlbuilder2": "^3.0.2"
   },
   "devDependencies": {
-    "@types/node": "^18.0.6",
+    "@types/node": "^18.7.3",
     "@typescript-eslint/parser": "^4.33.0",
     "eslint": "^7.32.0",
     "jest": "^28.1.3",
