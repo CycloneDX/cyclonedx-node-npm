@@ -1,0 +1,6 @@
+# Lift config. See:
+# https://help.sonatype.com/lift/configuring-lift
+
+ignoreFiles = """
+demo/
+"""

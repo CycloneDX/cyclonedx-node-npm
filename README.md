@@ -1,4 +1,4 @@
-# cyclonedx-node-npm
+# cyclonedx-npm
 
 Create [CycloneDX] Software Bill of Materials (SBOM) from  _[npm]_ projects.
 
@@ -24,7 +24,17 @@ Please read the [CONTRIBUTING](CONTRIBUTING.md) file first.
 
 ## Install
 
-tbd 
+As a global tool:
+
+```shell
+npm install --global @cyclonedx/cyclonedx-npm
+```
+
+As a development dependency of the current package:
+
+```shell
+npm i -D @cyclonedx/cyclonedx-npm
+```
 
 ## Usage
 
@@ -63,10 +73,28 @@ Options:
   -h, --help                display help for command
 ```
 
-## contributing
+## Demo
 
-TBD
+For a demo of _cyclonedx-npm_ see the [demo project][demo_readme].
 
-## License 
+## Internals
 
-TBD 
+This tool utilizes the [CycloneDX library][cyclonedx-library] to generate the actual data structures.
+
+This tool does **not** expose any additional _public_ api or classes - all code is intended to be internal and might change without any notice during version upgrades.
+
+## Contributing
+
+Feel free to open issues, bugreports or pull requests.  
+See the [CONTRIBUTING][contributing_file] file for details.
+
+## License
+
+Permission to modify and redistribute is granted under the terms of the Apache 2.0 license.  
+See the [LICENSE][license_file] file for the full license.
+
+[license_file]: https://github.com/CycloneDX/cyclonedx-node-npm/blob/1.0-dev/LICENSE
+[contributing_file]: https://github.com/CycloneDX/cyclonedx-node-npm/blob/1.0-dev/CONTRIBUTING.md
+[demo_readme]: https://github.com/CycloneDX/cyclonedx-node-npm/blob/1.0-dev/demo/README.md
+
+[cyclonedx-library]: https://www.npmjs.com/package/%40cyclonedx/cyclonedx-library
