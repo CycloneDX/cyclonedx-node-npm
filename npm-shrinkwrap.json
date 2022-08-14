@@ -1149,9 +1149,9 @@
       }
     },
     "node_modules/@sinclair/typebox": {
-      "version": "0.24.27",
-      "resolved": "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.24.27.tgz",
-      "integrity": "sha512-K7C7IlQ3zLePEZleUN21ceBA2aLcMnLHTLph8QWk1JK37L90obdpY+QGY8bXMKxf1ht1Z0MNewvXxWv0oGDYFg==",
+      "version": "0.24.28",
+      "resolved": "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.24.28.tgz",
+      "integrity": "sha512-dgJd3HLOkLmz4Bw50eZx/zJwtBq65nms3N9VBYu5LTjJ883oBFkTyXRlCB/ZGGwqYpJJHA5zW2Ibhl5ngITfow==",
       "dev": true
     },
     "node_modules/@sinonjs/commons": {
@@ -7286,9 +7286,9 @@
       "integrity": "sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ=="
     },
     "@sinclair/typebox": {
-      "version": "0.24.27",
-      "resolved": "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.24.27.tgz",
-      "integrity": "sha512-K7C7IlQ3zLePEZleUN21ceBA2aLcMnLHTLph8QWk1JK37L90obdpY+QGY8bXMKxf1ht1Z0MNewvXxWv0oGDYFg==",
+      "version": "0.24.28",
+      "resolved": "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.24.28.tgz",
+      "integrity": "sha512-dgJd3HLOkLmz4Bw50eZx/zJwtBq65nms3N9VBYu5LTjJ883oBFkTyXRlCB/ZGGwqYpJJHA5zW2Ibhl5ngITfow==",
       "dev": true
     },
     "@sinonjs/commons": {
