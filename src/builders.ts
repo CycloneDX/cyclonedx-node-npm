@@ -348,7 +348,7 @@ interface TreeLeaf {
 }
 
 export class TreeBuilder {
-  fromDosPaths (paths: Set<string>): TreeRoot {
+  fromDosDirs (paths: Set<string>): TreeRoot {
     return this.fromPaths(new Map(Array.from(paths.values(),
       function (p: string): [string, string[]] {
         if (!/^[A-Z]:\\/.test(p)) {
@@ -359,7 +359,7 @@ export class TreeBuilder {
     )))
   }
 
-  fromUnixPaths (paths: Set<string>): TreeRoot {
+  fromUnixDirs (paths: Set<string>): TreeRoot {
     return this.fromPaths(new Map(Array.from(paths.values(),
       function (p: string): [string, string[]] {
         if (p[0] !== '/') {
@@ -370,7 +370,17 @@ export class TreeBuilder {
     )))
   }
 
-  private fromPaths (paths: Map<string, string[]>): TreeRoot {
+  fromPaths (paths: Map<string, string[]>): TreeRoot {
+    const groups = new Map()
+    for (const [path, [part]] of paths) {
+      const group = groups.get(part)
+      if (group === undefined) {
+        groups.set(part, new Set(path))
+      } else {
+        group.add(path)
+      }
+    }
+
     return {
       name: undefined,
       children: new Set()

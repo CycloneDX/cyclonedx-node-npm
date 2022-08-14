@@ -55,7 +55,7 @@ describe('builders.TreeBuilder', () => {
       ]
     ])('%s', (purpose, paths, expected) => {
       const treeBuilder = new TreeBuilder()
-      const actual = treeBuilder.fromDosPaths(paths)
+      const actual = treeBuilder.fromDosDirs(paths)
       expect(actual).toMatchObject(expected)
     })
   })
@@ -93,7 +93,7 @@ describe('builders.TreeBuilder', () => {
       ]
     ])('%s', (purpose, paths, expected) => {
       const treeBuilder = new TreeBuilder()
-      const actual = treeBuilder.fromUnixPaths(paths)
+      const actual = treeBuilder.fromUnixDirs(paths)
       expect(actual).toMatchObject(expected)
     })
   })
