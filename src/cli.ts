@@ -36,6 +36,7 @@ interface CommandOptions {
   packageLockOnly: boolean
   omit: string[]
   specVersion: Spec.Version
+  flattenComponents: boolean
   outputReproducible: boolean
   outputFormat: OutputFormat
   outputFile: string
@@ -70,6 +71,12 @@ function makeCommand (): Command {
         : [],
       '"dev" if the NODE_ENV environment variable is set to "production", otherwise empty.'
     )
+  ).addOption(
+    new Option(
+      '--flatten-components',
+      'Whether to flatten the components.\n' +
+      'This means the original nesting of components is not represented in the output.'
+    ).default(false)
   ).addOption(
     new Option(
       '--spec-version <version>',
@@ -196,8 +203,8 @@ export function run (
       metaComponentType: options.mcType,
       packageLockOnly: options.packageLockOnly,
       omitDependencyTypes: options.omit,
-      reproducible: options.outputReproducible
-      // flattenComponents: ...TODO
+      reproducible: options.outputReproducible,
+      flattenComponents: options.flattenComponents
     },
     myConsole
   ).buildFromLockFile(lockFile)
@@ -224,7 +231,7 @@ export function run (
   writeSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd
-      : openSync(options.outputFile, 'w'),
+      : openSync(resolve(process.cwd(), options.outputFile), 'w'),
     serializer.serialize(bom, {
       sortLists: options.outputReproducible,
       space: 2

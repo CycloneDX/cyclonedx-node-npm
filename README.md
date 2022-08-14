@@ -45,6 +45,8 @@ Options:
   --omit <type...>          Dependency types to omit from the installation tree.
                             (can be set multiple times)
                             (choices: "dev", "optional", "peer", default: "dev" if the NODE_ENV environment variable is set to "production", otherwise empty.)
+  --flatten-components      Whether to flatten the components.
+                            This means the original nesting of components is not represented in the output.
   --spec-version <version>  Which version of CycloneDX spec to use.
                             (choices: "1.2", "1.3", "1.4", default: "1.4")
   --output-reproducible     Whether to go the extra mile and make the output reproducible.
