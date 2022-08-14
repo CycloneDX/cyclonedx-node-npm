@@ -74,7 +74,7 @@ export class BomBuilder {
     this.packageLockOnly = options.packageLockOnly ?? false
     this.omitDependencyTypes = options.omitDependencyTypes ?? []
     this.reproducible = options.reproducible ?? false
-    this.flattenComponents = options.flattenComponents ?? true // @TODO default to false
+    this.flattenComponents = options.flattenComponents ?? false
 
     this.console = console_
   }
@@ -194,9 +194,16 @@ export class BomBuilder {
   private nestComponents (allComponents: AllComponents, tree: PTree): Models.ComponentRepository {
     const children = new Models.ComponentRepository()
     for (const [p, pTree] of tree) {
-      const component = allComponents.get(p) as Models.Component
-      component.components = this.nestComponents(allComponents, pTree)
-      children.add(component)
+      const component = allComponents.get(p)
+      const components = this.nestComponents(allComponents, pTree)
+      if (component === undefined) {
+        for (const c of components ) {
+          children.add(c)
+        }
+      } else {
+        component.components = components
+        children.add(component)
+      }
     }
     return children
   }
