@@ -1,0 +1,7 @@
+{
+  "name": "my-local-b-off",
+  "private": true,
+  "version": "0.0.0",
+  "description": "demo: my-local-b-off - a package with a different name than its dir",
+  "license": "Apache-2.0"
+}

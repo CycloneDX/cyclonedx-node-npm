@@ -103,7 +103,6 @@
     "z85": "^0.0.2"
   },
   "devDependencies": {
-    "@cyclonedx/cyclonedx-npm": "file:../../..",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/chai": "^4.2.14",
     "@types/chai-as-promised": "^7.1.3",
@@ -180,5 +179,9 @@
   },
   "engines": {
     "node": "14 - 18"
+  },
+  "scripts": {
+    "make-bom:json": "node -- ../../../bin/cyclonedx-npm-cli.js --output-reproducible --output-format=JSON --output-file=bom.json",
+    "make-bom:xml": " node -- ../../../bin/cyclonedx-npm-cli.js --output-reproducible --output-format=XML  --output-file=bom.xml"
   }
 }
