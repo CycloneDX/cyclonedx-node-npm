@@ -81,13 +81,13 @@ export class BomBuilder {
 
   buildFromLockFile (filePath: string): Models.Bom {
     return this.buildFromNpmLs(
-      this.#fetchNpmLs(
+      this.fetchNpmLs(
         dirname(filePath)
       )
     )
   }
 
-  #fetchNpmLs (projectDir: string): any {
+  private fetchNpmLs (projectDir: string): any {
     // `npm_execpath` is used by `npm` internally, and is propagated when kicking `npm run-script`
     /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string */
     const command = process.env.npm_execpath || 'npm'
@@ -142,10 +142,10 @@ export class BomBuilder {
 
     // region all components & dependencies
 
-    const rootComponent = this.#makeComponent(data, this.metaComponentType) ??
+    const rootComponent = this.makeComponent(data, this.metaComponentType) ??
       new DummyComponent(Enums.ComponentType.Library, 'RootComponent')
     const allComponents: AllComponents = new Map([[data.path, rootComponent]])
-    this.#gatherDependencies(allComponents, data, rootComponent.dependencies)
+    this.gatherDependencies(allComponents, data, rootComponent.dependencies)
 
     // endregion all components & dependencies
 
@@ -173,11 +173,10 @@ export class BomBuilder {
         bom.components.add(component)
       }
     } else {
-      this.treeBuilder[
-        data.path[0] === '/'
-          ? 'fromUnixPaths'
-          : 'fromDosPaths'
-      ](new Set(allComponents.keys()))
+      this.treeBuilder.fromPaths(
+        new Set(allComponents.keys()),
+        data.path[0] === '/' ? '/' : '\\'
+      )
       // @TODO proper nesting
       /* // also reflect the `inBundle ?? _inBundle` marker`
           // older npm-ls versions (v6) hide properties behind a `_`
@@ -199,7 +198,7 @@ export class BomBuilder {
     return bom
   }
 
-  #gatherDependencies (allComponents: AllComponents, data: any, directDepRefs: Set<Models.BomRef>): void {
+  private gatherDependencies (allComponents: AllComponents, data: any, directDepRefs: Set<Models.BomRef>): void {
     // one and the same component may appear multiple times in the tree
     // but only one occurrence has all the direct dependencies.
     for (const [depName, depData] of Object.entries(data.dependencies ?? {}) as any) {
@@ -213,16 +212,16 @@ export class BomBuilder {
 
       let dep = allComponents.get(depData.path)
       if (dep === undefined) {
-        dep = this.#makeComponent(
+        dep = this.makeComponent(
           this.packageLockOnly
             ? depData
-            : this.#enhancedPackageData(depData)
+            : this.enhancedPackageData(depData)
         ) ?? new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
         allComponents.set(depData.path, dep)
       }
       directDepRefs.add(dep.bomRef)
 
-      this.#gatherDependencies(allComponents, depData, dep.dependencies)
+      this.gatherDependencies(allComponents, depData, dep.dependencies)
     }
   }
 
@@ -231,7 +230,7 @@ export class BomBuilder {
    * they fail to load package details or miss details.
    * So here is a poly-fill that loads ALL the package's data.
    */
-  #enhancedPackageData (data: { path: string }): any {
+  private enhancedPackageData (data: { path: string }): any {
     try {
       return Object.assign(
         /* eslint-disable-next-line @typescript-eslint/no-var-requires */
@@ -246,16 +245,16 @@ export class BomBuilder {
   /**
    * base64 over 512 bit => 86 chars + 2 chars padding
    */
-  #hashRE_sha512_base64 = /\bsha512-([a-z0-9+/]{86}==)\b/i
+  private readonly hashRE_sha512_base64 = /\bsha512-([a-z0-9+/]{86}==)\b/i
 
   /**
    * Ignore pattern for `resolved`.
    * - ignore: well, just ignore it ... i guess.
    * - file: local dist cannot be shipped and therefore should be ignored.
    */
-  #resolvedRE_ignore = /^(?:ignore|file):/i
+  private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
-  #makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | undefined {
+  private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | undefined {
     const component = this.componentBuilder.makeComponent(data, type)
     if (component === undefined) {
       return component
@@ -275,7 +274,7 @@ export class BomBuilder {
 
     // older npm-ls versions (v6) hide properties behind a `_`
     const resolved = data.resolved ?? data._resolved
-    if (typeof resolved === 'string' && !this.#resolvedRE_ignore.test(resolved)) {
+    if (typeof resolved === 'string' && !this.resolvedRE_ignore.test(resolved)) {
       component.externalReferences.add(
         new Models.ExternalReference(
           resolved,
@@ -288,7 +287,7 @@ export class BomBuilder {
     // older npm-ls versions (v6) hide properties behind a `_`
     const integrity = data.integrity ?? data._integrity
     if (typeof integrity === 'string') {
-      const hashSha512Match = this.#hashRE_sha512_base64.exec(integrity) ?? []
+      const hashSha512Match = this.hashRE_sha512_base64.exec(integrity) ?? []
       if (hashSha512Match?.length === 2) {
         component.hashes.set(
           Enums.HashAlgorithm['SHA-512'],
@@ -298,7 +297,7 @@ export class BomBuilder {
     }
 
     // even private packages may have a PURL for identification
-    component.purl = this.#makePurl(component)
+    component.purl = this.makePurl(component)
 
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions -- since empty-string handling is needed */
     component.bomRef.value = (typeof data._id === 'string' ? data._id : undefined) ||
@@ -308,7 +307,7 @@ export class BomBuilder {
     return component
   }
 
-  #makePurl (component: Models.Component): PackageURL | undefined {
+  private makePurl (component: Models.Component): PackageURL | undefined {
     const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
     if (purl === undefined) {
       return undefined
@@ -332,6 +331,7 @@ class DummyComponent extends Models.Component {
   }
 }
 
+/*
 interface TreeRoot {
   name?: string
   children: Set<TreeNode | TreeLeaf>
@@ -346,44 +346,44 @@ interface TreeLeaf {
   name: string
   children: undefined
 }
+ */
+type PTree = Map<string, PTree>
 
 export class TreeBuilder {
-  fromDosDirs (paths: Set<string>): TreeRoot {
-    return this.fromPaths(new Map(Array.from(paths.values(),
-      function (p: string): [string, string[]] {
-        if (!/^[A-Z]:\\/.test(p)) {
-          throw new RangeError(`unexpected path: ${p}`)
-        }
-        return [p, p.split('\\')]
-      }
-    )))
+  fromPaths (paths: Set<string>, dirSeparator: string): PTree {
+    const tree: PTree = new Map(Array.from(paths, p => [p + dirSeparator, new Map()]))
+    this.nestPT(tree)
+    this.renderPR(tree, '')
+    return tree
   }
 
-  fromUnixDirs (paths: Set<string>): TreeRoot {
-    return this.fromPaths(new Map(Array.from(paths.values(),
-      function (p: string): [string, string[]] {
-        if (p[0] !== '/') {
-          throw new RangeError(`unexpected path: ${p}`)
-        }
-        return [p, p.slice(1).split('/')]
-      }
-    )))
+  private renderPR (tree: PTree, pref: string): void {
+    for (const [p, pTree] of [...tree.entries()]) {
+      tree.delete(p)
+      const pFull = pref + p
+      this.renderPR(pTree, pFull)
+      tree.set(pFull.slice(undefined, -1), pTree)
+    }
   }
 
-  fromPaths (paths: Map<string, string[]>): TreeRoot {
-    const groups = new Map()
-    for (const [path, [part]] of paths) {
-      const group = groups.get(part)
-      if (group === undefined) {
-        groups.set(part, new Set(path))
-      } else {
-        group.add(path)
+  private nestPT (tree: PTree): void {
+    if (tree.size < 2) {
+      // nothing to compare ...
+      return
+    }
+    for (const a of tree.keys()) {
+      for (const [b, bTree] of tree) {
+        if (a === b) {
+          continue
+        }
+        if (b.startsWith(a)) {
+          (tree.get(a) as PTree).set(b.slice(a.length), bTree)
+          tree.delete(b)
+        }
       }
     }
-
-    return {
-      name: undefined,
-      children: new Set()
+    for (const c of tree.values()) {
+      this.nestPT(c)
     }
   }
 }

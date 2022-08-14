@@ -22,78 +22,67 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 const { TreeBuilder } = require('../../dist/builders')
 
 describe('builders.TreeBuilder', () => {
-  describe('fromDosPaths', () => {
+  describe('fromPaths', () => {
     test.each([
-      ['distinct paths', [
-        'C:\\foo\\bar',
-        'D:\\foo\\baz'
-      ], {
-        name: undefined,
-        children: new Set([
-          { name: 'C:\\foo\\bar' },
-          { name: 'D:\\foo\\baz' }
+      ['distinct dos-like paths', '\\',
+        [
+          'C:\\foo\\bar',
+          'D:\\foo\\baz'
+        ],
+        new Map([
+          ['C:\\foo\\bar', new Map()],
+          ['D:\\foo\\baz', new Map()]
         ])
-      }
       ],
-      ['transitive paths', [
-        'C:\\a',
-        'C:\\a\\b',
-        'C:\\a\\c\\d',
-        'C:\\a\\c\\e',
-        'C:\\a\\c\\e\\f\\g'
-      ], {
-        name: 'C:\\a',
-        children: new Set([
-          { name: 'C:\\a\\b' },
-          { name: 'C:\\a\\c\\d' },
-          {
-            name: 'C:\\a\\c\\e',
-            children: new Set([{ name: 'C:\\a\\c\\e\\f\\g' }])
-          }
+      ['transitive dos-like paths', '\\',
+        [
+          'C:\\a',
+          'C:\\a\\b',
+          'C:\\a\\c\\d',
+          'C:\\a\\c\\e',
+          'C:\\a\\c\\e\\f\\g'
+        ],
+        new Map([
+          ['C:\\a', new Map([
+            ['C:\\a\\b', new Map()],
+            ['C:\\a\\c\\d', new Map()],
+            ['C:\\a\\c\\e', new Map([
+              ['C:\\a\\c\\e\\f\\g', new Map()]
+            ])]
+          ])]
         ])
-      }
-      ]
-    ])('%s', (purpose, paths, expected) => {
-      const treeBuilder = new TreeBuilder()
-      const actual = treeBuilder.fromDosDirs(paths)
-      expect(actual).toMatchObject(expected)
-    })
-  })
-
-  describe('fromUnixPaths', () => {
-    test.each([
-      ['distinct paths', [
-        '/foo/baz',
-        '/bar/baz'
-      ], {
-        name: undefined,
-        children: new Set([
-          { name: '/foo/baz' },
-          { name: '/bar/baz' }
-        ])
-      }
       ],
-      ['transitive paths', [
-        '/a',
-        '/a/b',
-        '/a/c/d',
-        '/a/c/e',
-        '/a/c/e/f/g'
-      ], {
-        name: '/a',
-        children: new Set([
-          { name: '/a/b' },
-          { name: '/a/c/d' },
-          {
-            name: '/a/c/e',
-            children: new Set([{ name: '/a/c/e/f/g' }])
-          }
+      ['distinct paths', '/',
+        [
+          '/foo/baz',
+          '/bar/baz'
+        ],
+        new Map([
+          ['/foo/baz', new Map()],
+          ['/bar/baz', new Map()]
         ])
-      }
+      ],
+      ['transitive paths', '/',
+        [
+          '/a',
+          '/a/b',
+          '/a/c/d',
+          '/a/c/e',
+          '/a/c/e/f/g'
+        ],
+        new Map([
+          ['/a', new Map([
+            ['/a/b', new Map()],
+            ['/a/c/d', new Map()],
+            ['/a/c/e', new Map([
+              ['/a/c/e/f/g', new Map()]
+            ])]
+          ])]
+        ])
       ]
-    ])('%s', (purpose, paths, expected) => {
+    ])('%s', (purpose, pathSeparator, paths, expected) => {
       const treeBuilder = new TreeBuilder()
-      const actual = treeBuilder.fromUnixDirs(paths)
+      const actual = treeBuilder.fromPaths(paths, pathSeparator)
       expect(actual).toMatchObject(expected)
     })
   })
