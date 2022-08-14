@@ -17,14 +17,14 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import {dirname} from 'path'
-import {spawnSync} from 'child_process'
+import { dirname } from 'path'
+import { spawnSync } from 'child_process'
 
-import {Builders, Enums, Factories, Models} from '@cyclonedx/cyclonedx-library'
-import {PackageURL} from 'packageurl-js'
+import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
+import { PackageURL } from 'packageurl-js'
 
-import {makeThisTool} from './thisTool'
-import {PropertyNames, PropertyValueBool} from './properties'
+import { makeThisTool } from './thisTool'
+import { PropertyNames, PropertyValueBool } from './properties'
 
 interface BomBuilderOptions {
   metaComponentType?: BomBuilder['metaComponentType']
@@ -57,7 +57,7 @@ export class BomBuilder {
 
   console: Console
 
-  constructor(
+  constructor (
     toolBuilder: BomBuilder['toolBuilder'],
     componentBuilder: BomBuilder['componentBuilder'],
     treeBuilder: BomBuilder['treeBuilder'],
@@ -79,7 +79,7 @@ export class BomBuilder {
     this.console = console_
   }
 
-  buildFromLockFile(filePath: string): Models.Bom {
+  buildFromLockFile (filePath: string): Models.Bom {
     return this.buildFromNpmLs(
       this.#fetchNpmLs(
         dirname(filePath)
@@ -87,7 +87,7 @@ export class BomBuilder {
     )
   }
 
-  #fetchNpmLs(projectDir: string): any {
+  #fetchNpmLs (projectDir: string): any {
     // `npm_execpath` is used by `npm` internally, and is propagated when kicking `npm run-script`
     /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string */
     const command = process.env.npm_execpath || 'npm'
@@ -136,7 +136,7 @@ export class BomBuilder {
     }
   }
 
-  buildFromNpmLs(data: any): Models.Bom {
+  buildFromNpmLs (data: any): Models.Bom {
     // TODO use instead ? : https://www.npmjs.com/package/debug ?
     this.console.debug('build BOM ...')
 
@@ -177,7 +177,7 @@ export class BomBuilder {
         data.path[0] === '/'
           ? 'fromUnixPaths'
           : 'fromDosPaths'
-        ](new Set(allComponents.keys()))
+      ](new Set(allComponents.keys()))
       // @TODO proper nesting
       /* // also reflect the `inBundle ?? _inBundle` marker`
           // older npm-ls versions (v6) hide properties behind a `_`
@@ -199,7 +199,7 @@ export class BomBuilder {
     return bom
   }
 
-  #gatherDependencies(allComponents: AllComponents, data: any, directDepRefs: Set<Models.BomRef>): void {
+  #gatherDependencies (allComponents: AllComponents, data: any, directDepRefs: Set<Models.BomRef>): void {
     // one and the same component may appear multiple times in the tree
     // but only one occurrence has all the direct dependencies.
     for (const [depName, depData] of Object.entries(data.dependencies ?? {}) as any) {
@@ -231,7 +231,7 @@ export class BomBuilder {
    * they fail to load package details or miss details.
    * So here is a poly-fill that loads ALL the package's data.
    */
-  #enhancedPackageData(data: { path: string }): any {
+  #enhancedPackageData (data: { path: string }): any {
     try {
       return Object.assign(
         /* eslint-disable-next-line @typescript-eslint/no-var-requires */
@@ -255,7 +255,7 @@ export class BomBuilder {
    */
   #resolvedRE_ignore = /^(?:ignore|file):/i
 
-  #makeComponent(data: any, type?: Enums.ComponentType | undefined): Models.Component | undefined {
+  #makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | undefined {
     const component = this.componentBuilder.makeComponent(data, type)
     if (component === undefined) {
       return component
@@ -280,7 +280,7 @@ export class BomBuilder {
         new Models.ExternalReference(
           resolved,
           Enums.ExternalReferenceType.Distribution,
-          {comment: 'as detected from npm-ls property "resolved"'}
+          { comment: 'as detected from npm-ls property "resolved"' }
         )
       )
     }
@@ -308,7 +308,7 @@ export class BomBuilder {
     return component
   }
 
-  #makePurl(component: Models.Component): PackageURL | undefined {
+  #makePurl (component: Models.Component): PackageURL | undefined {
     const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
     if (purl === undefined) {
       return undefined
@@ -324,7 +324,7 @@ export class BomBuilder {
 }
 
 class DummyComponent extends Models.Component {
-  constructor(type: Models.Component['type'], name: Models.Component['name']) {
+  constructor (type: Models.Component['type'], name: Models.Component['name']) {
     super(type, `DummyComponent.${name}`, {
       bomRef: `DummyComponent.${name}`,
       description: `This is a dummy component "${name}" that fills the gap where the actual built failed.`
@@ -348,9 +348,8 @@ interface TreeLeaf {
 }
 
 export class TreeBuilder {
-  fromDosPaths(paths: Set<string>): TreeRoot {
-    return this.fromPaths(new Map(Array.from(
-      paths.values(),
+  fromDosPaths (paths: Set<string>): TreeRoot {
+    return this.fromPaths(new Map(Array.from(paths.values(),
       function (p: string): [string, string[]] {
         if (!/^[A-Z]:\\/.test(p)) {
           throw new RangeError(`unexpected path: ${p}`)
@@ -360,9 +359,8 @@ export class TreeBuilder {
     )))
   }
 
-  fromUnixPaths(paths: Set<string>): TreeRoot {
-    return this.fromPaths(new Map(Array.from(
-      paths.values(),
+  fromUnixPaths (paths: Set<string>): TreeRoot {
+    return this.fromPaths(new Map(Array.from(paths.values(),
       function (p: string): [string, string[]] {
         if (p[0] !== '/') {
           throw new RangeError(`unexpected path: ${p}`)
@@ -372,7 +370,7 @@ export class TreeBuilder {
     )))
   }
 
-  private fromPaths(paths: Map<string, string[]>): TreeRoot {
+  private fromPaths (paths: Map<string, string[]>): TreeRoot {
     return {
       name: undefined,
       children: new Set()
