@@ -168,6 +168,17 @@ export class BomBuilder {
 
     // region components
 
+    bom.components = this.nestComponents(
+      // remove rootComponent - so the elements that are nested below it are just returned.
+      new Map(Array.from(allComponents.entries()).filter(([, c]) => c !== rootComponent)),
+      this.treeBuilder.fromPaths(
+        new Set(allComponents.keys()),
+        data.path[0] === '/' ? '/' : '\\'
+      )
+    )
+    bom.components.forEach(c => this.adjustNestedBomRefs(c, ''))
+    rootComponent.components.clear()
+
     if (this.flattenComponents) {
       for (const component of allComponents.values()) {
         component.properties.forEach(p => {
@@ -176,25 +187,25 @@ export class BomBuilder {
             component.properties.delete(p)
           }
         })
+        component.components.clear()
         if (component !== rootComponent) {
           bom.components.add(component)
         }
       }
-    } else {
-      bom.components = this.nestComponents(
-        // remove rootComponent - so the elements that are nested below it are just returned.
-        new Map(Array.from(allComponents.entries()).filter(([, c]) => c !== rootComponent)),
-        this.treeBuilder.fromPaths(
-          new Set(allComponents.keys()),
-          data.path[0] === '/' ? '/' : '\\'
-        )
-      )
-      rootComponent.components = new Models.ComponentRepository()
     }
 
     // endregion components
 
     return bom
+  }
+
+  private adjustNestedBomRefs (component: Models.Component, pref: string): void {
+    if (component.bomRef.value === undefined) {
+      return
+    }
+    component.bomRef.value = pref + component.bomRef.value
+    const fill = component.bomRef.value + '|'
+    component.components.forEach(c => this.adjustNestedBomRefs(c, fill))
   }
 
   private nestComponents (allComponents: AllComponents, tree: PTree): Models.ComponentRepository {
@@ -203,9 +214,7 @@ export class BomBuilder {
       const component = allComponents.get(p)
       const components = this.nestComponents(allComponents, pTree)
       if (component === undefined) {
-        for (const c of components) {
-          children.add(c)
-        }
+        components.forEach(c => children.add(c))
       } else {
         component.components = components
         children.add(component)
