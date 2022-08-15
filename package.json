@@ -37,7 +37,7 @@
     }
   ],
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^1.3.2",
+    "@cyclonedx/cyclonedx-library": "^1.3.3",
     "commander": "^9.4.0",
     "packageurl-js": "^0.0.7",
     "xmlbuilder2": "^3.0.2"
