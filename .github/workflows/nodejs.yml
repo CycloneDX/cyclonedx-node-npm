@@ -43,8 +43,8 @@ jobs:
           name: dist
           path: dist
           if-no-files-found: error
-  standards:
-    name: Standards
+  test-standards:
+    name: test standards
     timeout-minutes: 30
     runs-on: "ubuntu-latest"
     steps:
@@ -66,7 +66,7 @@ jobs:
         run: npm run test:standard
   test-jest:
     needs: [ 'build' ]
-    name: test jest (${{ matrix.node-version }}, ${{ matrix.os }})
+    name: jest (node${{ matrix.node-version }} ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -113,3 +113,54 @@ jobs:
           name: reports-jest-node${{ matrix.node-version }}-${{ matrix.os }}
           path: reports
           if-no-files-found: error
+  test-reproducible-demo:
+    needs: [ 'build' ]
+    name: reproducible demo (npm${{ matrix.npm-version}} node${{ matrix.node-version }} ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        npm-version:
+          # THIS IS THE MAIN TARGET OD THE DEMO: test/integrate with alternative versions of npm
+          - "8"      # current
+          - "7"      # legacy
+          - "6"      # legacy
+        node-version:
+          # action based on https://github.com/actions/node-versions/releases
+          # see also: https://nodejs.org/en/about/releases/
+          - "18"      # current
+          - "16"      # active LTS
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+          cache-dependency-path: |
+            **/npm-shrinkwrap.json
+            **/package-lock.json
+      - name: install required npm
+        run: npm install -g 'npm@${{ matrix.npm-version }}'
+      - name: report versions
+        run: |
+          node --version
+          npm --version
+      - name: setup project
+        run: npm ci --ignore-scripts --omit dev
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist
+      - name: run reproducible demo
+        run: echo "TODO"
