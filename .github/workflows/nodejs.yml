@@ -33,7 +33,7 @@ jobs:
           cache-dependency-path: |
             **/npm-shrinkwrap.json
             **/package-lock.json
-      - name: setup project
+      - name: setup subject
         run: npm ci --ignore-scripts
       - name: build
         run: npm run build
@@ -74,7 +74,7 @@ jobs:
           cache-dependency-path: |
             **/npm-shrinkwrap.json
             **/package-lock.json
-      - name: install project
+      - name: install subject
         run: npm ci
       - name: run tests
         run: npm run test:standard
@@ -86,15 +86,15 @@ jobs:
       fail-fast: false
       matrix:
         node-version:
-          # action based on https://github.com/actions/node-versions/releases
-          # see also: https://nodejs.org/en/about/releases/
+          ## action based on https://github.com/actions/node-versions/releases
+          ## see also: https://nodejs.org/en/about/releases/
           - "18"      # current
           - "16"      # active LTS
           - "16.0.0"  # lowest supported
         os:
           - ubuntu-latest
-          - macos-latest
-          - windows-latest
+          #- macos-latest
+          #- windows-latest
     timeout-minutes: 30
     steps:
       - name: Checkout
@@ -109,7 +109,7 @@ jobs:
           cache-dependency-path: |
             **/npm-shrinkwrap.json
             **/package-lock.json
-      - name: setup project
+      - name: setup subject
         run: npm ci --ignore-scripts
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
@@ -129,32 +129,53 @@ jobs:
           if-no-files-found: error
   test-reproducible-demo:
     needs: [ 'build' ]
-    name: demo (npm${{ matrix.npm-version}} node${{ matrix.node-version }} ${{ matrix.os }})
+    name: demo ${{ matrix.subject }} ${{ matrix.spec-version }} ${{ matrix.output-format }} (npm${{ matrix.npm-version }} node${{ matrix.node-version }} ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
+        subject:
+          - juice-shop
+          #- local-deps
+          #- bundled-deps
+        spec-version:
+          - "1.4"
+          # - "1.3"
+          # - "1.2"
+        output-format:
+          - json
+          - xml
         npm-version:
-          # THIS IS THE MAIN TARGET OF THE DEMO: test/integrate with alternative versions of npm
+          ## THIS IS THE MAIN TARGET OF THE DEMO: test/integrate with alternative versions of npm
           - "8"      # current
           - "7"      # legacy
           - "6"      # legacy
         node-version:
-          # action based on https://github.com/actions/node-versions/releases
-          # see also: https://nodejs.org/en/about/releases/
+          ## action based on https://github.com/actions/node-versions/releases
+          ## see also: https://nodejs.org/en/about/releases/
           - "18"      # current
           - "16"      # active LTS
         os:
           - ubuntu-latest
-          - macos-latest
-          - windows-latest
+          #- macos-latest
+          #- windows-latest
     timeout-minutes: 30
     env:
       DEMO_ROOT_DIR: demo
+      REPORTS_ARTIFACT: demo-reproducible
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v3
+      - name: additional env vars
+        run: |
+          echo 'COMPARE_FILE_PATH=results/bom-${{ matrix.spec-version }}.${{ matrix.output-format }}' >> $GITHUB_ENV
+          echo 'OUT_FILE_PATH=${{ env.REPORTS_DIR }}/bom-${{ matrix.spec-version }}-npm${{ matrix.npm-version }}-node${{ matrix.node-version }}-${{ matrix.os }}.${{ matrix.output-format }}' >> $GITHUB_ENV
+          mkdir -p '${{ env.REPORTS_DIR }}'
+        working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v3
@@ -169,24 +190,54 @@ jobs:
       - name: report versions
         run: |
           node --version
-          npm --version
+          npm  --version
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3
         with:
           name: ${{ env.PACK_DIR }}
           path: ${{ env.PACK_DIR }}
-      - name: install project
+      - name: install build result
         run: npm i -g build-result.tgz
         working-directory: ${{ env.PACK_DIR }}
       - name: show help and version
         run: |
           cyclonedx-npm --help
           cyclonedx-npm --version
+      - name: setup reproducible demo
+        run: npm ci
+        working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}/project
       - name: run reproducible demo
-        run: echo "TODO"
-        working-directory: ${{ env.DEMO_ROOT_DIR}}
-      - name: uninstall project
+        run: >
+          cyclonedx-npm
+          --spec-version '${{ matrix.spec-version}}'
+          --output-reproducible
+          --output-format '${{ matrix.output-format }}'
+          --output-file '${{ env.OUT_FILE_PATH }}'
+          project/package.json
+        working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
+      #- name: diff
+      #  if: ${{ startsWith(matrix.os, 'windows') }}
+      #  run: >
+      #    diff
+      #    (cat ${{ env.COMPARE_FILE_PATH }})
+      #    (cat ${{ env.OUT_FILE_PATH }})
+      - name: diff
+        # if: ${{ !startsWith(matrix.os, 'windows') }}
+        run: >
+          diff -s
+          "$COMPARE_FILE_PATH"
+          "$OUT_FILE_PATH"
+        working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
+      - name: Artifact reports
+        if: ${{ failure() }}
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.REPORTS_ARTIFACT }}-${{ matrix.subject }}-failed
+          path: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}/${{ env.REPORTS_DIR }}
+          if-no-files-found: error
+      - name: uninstall subject
         # purpose: remove it from caches
         run: npm uninstall -g @cyclonedx/cyclonedx-npm
         if: ${{ always() }}
