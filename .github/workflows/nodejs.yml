@@ -9,8 +9,9 @@ on:
   pull_request:
   workflow_dispatch:
 
-
 env:
+  PACK_DIR: pack
+  DIST_DIR: dist
   REPORTS_DIR: CI_reports
   NODE_ACTIVE_LTS: "16"  # https://nodejs.org/en/about/releases/
 
@@ -40,8 +41,21 @@ jobs:
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3
         with:
-          name: dist
-          path: dist
+          name: ${{ env.DIST_DIR }}
+          path: ${{ env.DIST_DIR }}
+          if-no-files-found: error
+      - name: pack
+        run: |
+          mkdir -p "${PACK_DIR}"
+          npm pack --pack-destination "${PACK_DIR}" .
+          ls -lisah "${PACK_DIR}" # DEBUG INFO
+          mv "${PACK_DIR}"/cyclonedx-cyclonedx-npm*.tgz "${PACK_DIR}"/build-result.tgz
+      - name: artifact pack result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.PACK_DIR }}
+          path: ${{ env.PACK_DIR }}
           if-no-files-found: error
   test-standards:
     name: test standards
@@ -101,8 +115,8 @@ jobs:
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3
         with:
-          name: dist
-          path: dist
+          name: ${{ env.DIST_DIR }}
+          path: ${{ env.DIST_DIR }}
       - name: test
         run: npm run test:jest
       - name: artifact test reports
@@ -115,13 +129,13 @@ jobs:
           if-no-files-found: error
   test-reproducible-demo:
     needs: [ 'build' ]
-    name: reproducible demo (npm${{ matrix.npm-version}} node${{ matrix.node-version }} ${{ matrix.os }})
+    name: demo (npm${{ matrix.npm-version}} node${{ matrix.node-version }} ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         npm-version:
-          # THIS IS THE MAIN TARGET OD THE DEMO: test/integrate with alternative versions of npm
+          # THIS IS THE MAIN TARGET OF THE DEMO: test/integrate with alternative versions of npm
           - "8"      # current
           - "7"      # legacy
           - "6"      # legacy
@@ -135,6 +149,8 @@ jobs:
           - macos-latest
           - windows-latest
     timeout-minutes: 30
+    env:
+      DEMO_ROOT_DIR: demo
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
@@ -154,13 +170,23 @@ jobs:
         run: |
           node --version
           npm --version
-      - name: setup project
-        run: npm ci --ignore-scripts --omit dev
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3
         with:
-          name: dist
-          path: dist
+          name: ${{ env.PACK_DIR }}
+          path: ${{ env.PACK_DIR }}
+      - name: install project
+        run: npm i -g build-result.tgz
+        working-directory: ${{ env.PACK_DIR }}
+      - name: show help and version
+        run: |
+          cyclonedx-npm --help
+          cyclonedx-npm --version
       - name: run reproducible demo
         run: echo "TODO"
+        working-directory: ${{ env.DEMO_ROOT_DIR}}
+      - name: uninstall project
+        # purpose: remove it from caches
+        run: npm uninstall -g @cyclonedx/cyclonedx-npm
+        if: ${{ always() }}
