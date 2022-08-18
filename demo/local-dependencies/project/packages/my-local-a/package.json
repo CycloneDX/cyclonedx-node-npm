@@ -1,0 +1,15 @@
+{
+  "name": "my-local-a",
+  "description": "demo: my-local-a",
+  "private": true,
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/local-deps/project/packages/my-local-a"
+  },
+  "dependencies": {
+    "my-local-b-off": "file:../my-local-b"
+  }
+}
