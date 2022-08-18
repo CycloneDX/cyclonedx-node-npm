@@ -1,0 +1,13 @@
+{
+  "name": "demo-workspaces",
+  "description": "demo: demo-workspaces -- showcase how workspaces look like",
+  "private": true,
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "workspaces/*"
+  ],
+  "dependencies": {
+    "my-local-a": "*"
+  }
+}

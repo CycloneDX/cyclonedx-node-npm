@@ -13,44 +13,44 @@ ships with bundled version of `yargs`.
 
 ## remarks
 
-* in _npm6_ the `_inBundle` property is set to `true` in a dependency
-* in _npm8_ the  `inBundle` property is set to `true` in a dependency.
-* additionally there is the property `bundleDependencies`(deprecated)/`bundledDependencies` in a component.  
+* In _npm6_ the `_inBundle` property is set to `true` in a dependency
+* In _npm8_ the  `inBundle` property is set to `true` in a dependency.
+* Additionally, there is the property `bundleDependencies`(deprecated)/`bundledDependencies` in a component.  
   Value might be `true`(all), `false`(none), or a list of `string` that point to the keys in dependency list.  
+* Only one `resolved` can be found, since al the other packages were bundled, and are therefore not resolve.
 
 ## output
 
 Output of `npm ls --json -a -l` look like this: 
 
-```text
+```json5
 {
   "name": "demo-bundled-deps",
-  "path": ".../demo/bundled-deps/project/node_modules/bundle-dependencies/node_modules/yargs",
+  "path": "...",
   // other properties
   "dependencies": {
     "bundle-dependencies": {
-      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz",
       "name": "bundle-dependencies",
-      // other properties
       "bundleDependencies": [
         "yargs"
       ],
+      // other properties
+      "path": ".../node_modules/bundle-dependencies",
       "dependencies": {
         "yargs": {
-          "version": "4.1.0",
           "name": "yargs",
           "inBundle": true,
-          "extraneous": false,
-          "path": ".../demo/bundled-deps/project/node_modules/bundle-dependencies/node_modules/yargs",
+          // other properties
+          "path": ".../node_modules/bundle-dependencies/node_modules/yargs",
           "dependencies": {
             "camelcase": {
-              "version": "2.1.0",
               "name": "camelcase",
               "inBundle": true,
-              "path": "/home/flow/Documents/Coding/node/cyclonedx-node-npm/demo/bundled-deps/project/node_modules/bundle-dependencies/node_modules/camelcase",
+              "path": ".../node_modules/bundle-dependencies/node_modules/camelcase",
               // other properties
             },
-            // more dependencies
+            // other dependencies
           }
         }
       }
@@ -58,4 +58,3 @@ Output of `npm ls --json -a -l` look like this:
   }
 }
 ```
-

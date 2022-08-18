@@ -224,8 +224,14 @@ export class BomBuilder {
   }
 
   private gatherDependencies (allComponents: AllComponents, data: any, directDepRefs: Set<Models.BomRef>): void {
-    // one and the same component may appear multiple times in the tree
-    // but only one occurrence has all the direct dependencies.
+    /* One and the same component may appear multiple times in the tree,
+     * but only one occurrence has all the direct dependencies.
+     * So we work only on the one `data` that actually has dependencies.
+     */
+    /* One and the same component may appear multiple times in the tree,
+     * but only the most top-level has a complete set with all `dependencies` *and* `resolved`.
+     * This detail might cause implementation changes: run over the top level first, then go into nested dependencies.
+     */
     for (const [depName, depData] of Object.entries(data.dependencies ?? {}) as any) {
       if (depData === null || typeof depData !== 'object') {
         continue

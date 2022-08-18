@@ -1,8 +1,8 @@
 {
   "name": "demo-local-deps",
+  "description": "demo: demo-local-deps -- showcase how local deps look like",
   "private": true,
   "version": "0.0.0",
-  "description": "demo: demo-local-deps -- showcase how local deps look like",
   "license": "Apache-2.0",
   "dependencies": {
     "my-local-a": "file:packages/my-local-a",

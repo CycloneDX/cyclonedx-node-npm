@@ -1,7 +1,7 @@
 {
   "name": "my-local-a",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "demo: my-local-a",
   "license": "Apache-2.0",
   "repository": {
@@ -10,6 +10,6 @@
     "directory": "demo/local-deps/project/packages/my-local-a"
   },
   "dependencies": {
-    "my-local-b-off": "file:../my-local-b"
+    "my-local-b-off": "*"
   }
 }
