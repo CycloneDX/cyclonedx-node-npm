@@ -23,6 +23,7 @@ export const enum PropertyNames {
   PackageBundled = 'cdx:npm:package:bundled',
   PackageExtraneous = 'cdx:npm:package:extraneous',
   PackagePrivate = 'cdx:npm:package:private',
+  PackageDevelopment = 'cdx:npm:package:development',
 }
 
 export const enum PropertyValueBool {
