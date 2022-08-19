@@ -175,7 +175,7 @@ jobs:
           echo 'OUT_FILE_PATH=${{ env.REPORTS_DIR }}/bom-${{ matrix.spec-version }}-npm${{ matrix.npm-version }}-node${{ matrix.node-version }}-${{ matrix.os }}.${{ matrix.output-format }}' >> $GITHUB_ENV
           mkdir -p '${{ env.REPORTS_DIR }}'
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
-        shell: bash # don't want to write tht code twice
+        shell: bash # don't want to write tht code twice, windows and unix-like
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v3
@@ -205,7 +205,9 @@ jobs:
       #    cyclonedx-npm --help
       #    cyclonedx-npm --version
       - name: setup reproducible demo
-        run: npm ci --no-audit --no-fund
+        run: |
+          pwd 
+          npm ci --no-audit --no-fund
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}/project
       - name: run reproducible demo
         run: >
@@ -231,7 +233,7 @@ jobs:
           "$COMPARE_FILE_PATH"
           "$OUT_FILE_PATH"
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
-        shell: bash # don't want to write tht code twice
+        shell: bash # don't want to write tht code twice, windows and unix-like
       - name: Artifact reports
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
