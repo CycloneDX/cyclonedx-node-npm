@@ -135,10 +135,10 @@ jobs:
       fail-fast: false
       matrix:
         subject:
-          # - bundled-dependencies
+          - bundled-dependencies
           - juice-shop
-          #- local-dependencies
-          #- local-workspaces
+          - local-dependencies
+          - local-workspaces
         spec-version:
           - "1.4"
           ## no need to test all. the serialization is not in our domain
@@ -150,13 +150,13 @@ jobs:
         npm-version:
           ## THIS IS THE MAIN TARGET OF THE DEMO: test/integrate with alternative versions of npm
           - "8"      # current
-          #- "7"      # legacy # TODO reenable
-          #- "6"      # legacy
+          - "7"      # legacy # TODO reenable
+          - "6"      # legacy
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
           - "18"      # current
-          # - "16"      # active LTS # TODO reenable
+          - "16"      # active LTS # TODO reenable
         os:
           # - ubuntu-latest # TODO reenable
           # - macos-latest
@@ -205,7 +205,7 @@ jobs:
       #    cyclonedx-npm --help
       #    cyclonedx-npm --version
       - name: setup reproducible demo
-        run: npm ci
+        run: npm ci --no-audit --no-fund
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}/project
       - name: run reproducible demo
         run: >
