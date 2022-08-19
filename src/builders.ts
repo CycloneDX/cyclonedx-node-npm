@@ -346,8 +346,8 @@ export class BomBuilder {
 
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions -- since empty-string handling is needed */
     component.bomRef.value = (typeof data._id === 'string' ? data._id : undefined) ||
-      component.purl?.toString() ||
-      `${data.name as string}@${data.version as string}`
+      /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing -- since empty-string handling is needed */
+      `${component.group || '-'}/${component.name}@${component.version || '-'}`
 
     return component
   }
