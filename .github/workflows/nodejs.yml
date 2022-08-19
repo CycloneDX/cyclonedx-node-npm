@@ -220,7 +220,7 @@ jobs:
         if: ${{ failure() }}
         run: >
           npm --prefix project
-          ls --all --long
+          ls --all --long --json
           2> ${{ env.OUT_FILE_PATH }}.failed-debug.err.log
           >  ${{ env.OUT_FILE_PATH }}.failed-debug.out.log
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
