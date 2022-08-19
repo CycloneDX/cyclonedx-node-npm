@@ -158,8 +158,8 @@ jobs:
           - "18"      # current
           - "16"      # active LTS
         os:
-          - ubuntu-latest
-          - macos-latest
+          # - ubuntu-latest # TODO reenable
+          # - macos-latest
           - windows-latest
     timeout-minutes: 30
     env:
@@ -200,10 +200,10 @@ jobs:
       - name: install build result
         run: npm i -g build-result.tgz
         working-directory: ${{ env.PACK_DIR }}
-      - name: show help and version
-        run: |
-          cyclonedx-npm --help
-          cyclonedx-npm --version
+      # - name: show help and version
+      #  run: |
+      #    cyclonedx-npm --help
+      #    cyclonedx-npm --version
       - name: setup reproducible demo
         run: npm ci
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}/project
@@ -216,15 +216,15 @@ jobs:
           --output-file '${{ env.OUT_FILE_PATH }}'
           project/package.json
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
-        # shell:
-      #- name: diff
-      #  if: ${{ startsWith(matrix.os, 'windows') }}
-      #  run: >
-      #    diff
-      #    (cat ${{ env.COMPARE_FILE_PATH }})
-      #    (cat ${{ env.OUT_FILE_PATH }})
+      - name: debug npm-ls
+        if: ${{ failure() }}
+        run: >
+          npm --prefix project 
+          ls --all --long 
+          2>&1 > ${{ env.OUT_FILE_PATH }}.failed-debug.log
+        working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
       - name: diff
-        # if: ${{ !startsWith(matrix.os, 'windows') }}
+        if: ${{ success() }}
         run: >
           diff -s
           "$COMPARE_FILE_PATH"
