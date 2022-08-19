@@ -304,6 +304,13 @@ export class BomBuilder {
     }
 
     // older npm-ls versions (v6) hide properties behind a `_`
+    if ((data.dev ?? data._development) === true) {
+      component.properties.add(
+        new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
+      )
+    }
+
+    // older npm-ls versions (v6) hide properties behind a `_`
     if (!this.flattenComponents && (data.inBundle ?? data._inBundle) === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
