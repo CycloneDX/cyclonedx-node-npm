@@ -205,9 +205,7 @@ jobs:
       #    cyclonedx-npm --help
       #    cyclonedx-npm --version
       - name: setup reproducible demo
-        run: |
-          pwd 
-          npm ci --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}/project
       - name: run reproducible demo
         run: >
