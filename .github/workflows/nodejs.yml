@@ -150,13 +150,13 @@ jobs:
         npm-version:
           ## THIS IS THE MAIN TARGET OF THE DEMO: test/integrate with alternative versions of npm
           - "8"      # current
-          - "7"      # legacy
-          - "6"      # legacy
+          #- "7"      # legacy # TODO reenable
+          #- "6"      # legacy
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
           - "18"      # current
-          - "16"      # active LTS
+          # - "16"      # active LTS # TODO reenable
         os:
           # - ubuntu-latest # TODO reenable
           # - macos-latest
@@ -219,9 +219,10 @@ jobs:
       - name: debug npm-ls
         if: ${{ failure() }}
         run: >
-          npm --prefix project 
-          ls --all --long 
-          2>&1 > ${{ env.OUT_FILE_PATH }}.failed-debug.log
+          npm --prefix project
+          ls --all --long
+          2> ${{ env.OUT_FILE_PATH }}.failed-debug.err.log
+          >  ${{ env.OUT_FILE_PATH }}.failed-debug.out.log
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
       - name: diff
         if: ${{ success() }}
