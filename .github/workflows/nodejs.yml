@@ -157,15 +157,12 @@ jobs:
           - "16"      # active LTS
         os:
           - ubuntu-latest
-          #- macos-latest
-          #- windows-latest
+          - macos-latest
+          - windows-latest
     timeout-minutes: 30
     env:
       DEMO_ROOT_DIR: demo
       REPORTS_ARTIFACT: demo-reproducible
-    defaults:
-      run:
-        shell: bash
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
@@ -176,6 +173,7 @@ jobs:
           echo 'OUT_FILE_PATH=${{ env.REPORTS_DIR }}/bom-${{ matrix.spec-version }}-npm${{ matrix.npm-version }}-node${{ matrix.node-version }}-${{ matrix.os }}.${{ matrix.output-format }}' >> $GITHUB_ENV
           mkdir -p '${{ env.REPORTS_DIR }}'
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
+        shell: bash # don't want to write tht code twice
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v3
@@ -216,6 +214,7 @@ jobs:
           --output-file '${{ env.OUT_FILE_PATH }}'
           project/package.json
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
+        # shell:
       #- name: diff
       #  if: ${{ startsWith(matrix.os, 'windows') }}
       #  run: >
@@ -229,6 +228,7 @@ jobs:
           "$COMPARE_FILE_PATH"
           "$OUT_FILE_PATH"
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
+        shell: bash # don't want to write tht code twice
       - name: Artifact reports
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
