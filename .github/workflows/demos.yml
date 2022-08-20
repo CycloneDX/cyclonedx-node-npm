@@ -4,6 +4,15 @@
 name: Produce demo results
 
 on:
+  push:
+    branches: [ 'master', '1.0-dev' ]
+    paths:
+      - demos/*/project/**
+      - .github/workflows/demos.yml # this file
+  pull_request:
+    paths:
+      - demos/*/project/**
+      - .github/workflows/demos.yml # this file
   workflow_dispatch:
 
 env:
