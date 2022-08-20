@@ -23,7 +23,7 @@ on:
           - beta
           - alpha
         default: ''
-        required: true
+        required: false
 
 env:
   REPORTS_DIR: CI_reports
