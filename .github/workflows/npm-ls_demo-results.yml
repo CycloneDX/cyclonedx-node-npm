@@ -1,18 +1,18 @@
 # For details of what checks are run for PRs please refer below
 # docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
-name: Produce demo results
+name: npm-ls demo results
 
 on:
   push:
     branches: [ 'master', '1.0-dev' ]
     paths:
       - demos/*/project/**
-      - .github/workflows/demos.yml # this file
+      - .github/workflows/npm-ls_demo-results.yml # this file
   pull_request:
     paths:
       - demos/*/project/**
-      - .github/workflows/demos.yml # this file
+      - .github/workflows/npm-ls_demo-results.yml # this file
   workflow_dispatch:
 
 env:
