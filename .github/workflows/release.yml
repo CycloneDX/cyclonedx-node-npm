@@ -1,0 +1,134 @@
+# This workflow is used for publishing the Node.js package.
+#
+# Releases are triggered manually. This can be done by browsing to
+# https://github.com/CycloneDX/cyclonedx-node-npm/actions?query=workflow%3ARelease
+# and selecting "Run workflow". If releasing a patch for a previous version
+# make sure the correct branch is selected. It will default to the default
+# branch.
+#
+# You will also need to specify the version level increment for this release.
+#
+# Supported levels are major, minor and patch. Semantic versioning should be
+# followed. i.e. major if the release includes breaking changes, minor for
+# non-breaking changes with additional functionality and patch for bug fixes and
+# dependency updates.
+#
+# You will also need to specify a value for the related commit message.
+
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      newversion:
+        # is param from `npm version`. therefore the description should reference all the options from there
+        description: 'one of: [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]'
+        required: true
+      commitMessage:
+        description: 'Release/commit message (%s will be replaced with the resulting version number)'
+        default: '%s'
+        required: true
+      preid:
+        description: 'The "prerelease identifier" to use as a prefix for the "prerelease" part of a semver. Like  the  rc  in
+       `1.2.0-rc.8`.'
+        type: choice
+        options:
+          - ''
+          - rc
+          - beta
+          - alpha
+        default: ''
+        required: true
+
+env:
+  REPORTS_DIR: CI_reports
+  NODE_ACTIVE_LTS: "16"
+
+jobs:
+  bump:
+    name: bump and tag release
+    concurrency: release-bump
+    outputs:
+      version:       ${{ steps.bump.outputs.version }}
+      version_plain: ${{ steps.bump.outputs.version_plain }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout code
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+      - name: Configure Git
+        # needed for push back of changes
+        run: |
+          git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --local user.name "${GITHUB_ACTOR}"
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+      ## ! no npm build at the moment
+      - name: bump VERSION
+        id: bump
+        run: |-
+          VERSION="$(npm version "$NPMV_NEWVERSION" --message "$NPMV_MESSAGE" --preid "$NPMV_PREID")"
+          echo "::debug::new version = $VERSION"
+          VERSION_PLAIN="${VERSION:1}" # remove 'v' prefix
+          echo "::debug::plain version = $VERSION_PLAIN"
+          echo "::set-output name=version::$VERSION"
+          echo "::set-output name=version_plain::$VERSION_PLAIN"
+        env:
+          NPMV_NEWVERSION: ${{ github.event.inputs.newversion }}
+          NPMV_MESSAGE: ${{ github.event.inputs.commitMessage }}
+          NPMV_PREID: ${{ github.event.inputs.preid }}
+      - name: git push back
+        run: git push --follow-tags
+
+  publish-NPM:
+    needs:
+      - "bump"
+    name: NPM - publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout code
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ needs.bump.outputs.version }}
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+      - name: setup project
+        run: npm ci --ignore-scripts
+      - name: publish to NPM
+        run: |-
+          npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
+          npm publish --access public
+        env:
+          NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  release-GH:
+    needs:
+      - "bump"
+      - "publish-NPM"
+    name: GitHub - release
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      ASSETS_DIR: release_assets
+    steps:
+      - name: create assets dir
+        run: mkdir "$ASSETS_DIR"
+      - name: Create Release
+        id: release
+        # see https://github.com/softprops/action-gh-release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ needs.bump.outputs.version }}
+          name:     ${{ needs.bump.outputs.version_plain }}
+          prerelease: ${{ startsWith(github.event.inputs.newversion, 'pre') }}
