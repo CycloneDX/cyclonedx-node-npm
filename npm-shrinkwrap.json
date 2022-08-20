@@ -1259,9 +1259,9 @@
       "dev": true
     },
     "node_modules/@types/node": {
-      "version": "18.7.3",
-      "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.3.tgz",
-      "integrity": "sha512-LJgzOEwWuMTBxHzgBR/fhhBOWrvBjvO+zPteUgbbuQi80rYIZHrk1mNbRUqPZqSLP2H7Rwt1EFLL/tNLD1Xx/w=="
+      "version": "18.7.8",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.8.tgz",
+      "integrity": "sha512-/YP55EMK2341JkODUb8DM9O0x1SIz2aBvyF33Uf1c76St3VpsMXEIW0nxuKkq/5cxnbz0RD9cfwNZHEAZQD3ag=="
     },
     "node_modules/@types/prettier": {
       "version": "2.7.0",
@@ -7324,9 +7324,9 @@
       "dev": true
     },
     "@types/node": {
-      "version": "18.7.3",
-      "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.3.tgz",
-      "integrity": "sha512-LJgzOEwWuMTBxHzgBR/fhhBOWrvBjvO+zPteUgbbuQi80rYIZHrk1mNbRUqPZqSLP2H7Rwt1EFLL/tNLD1Xx/w=="
+      "version": "18.7.8",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.8.tgz",
+      "integrity": "sha512-/YP55EMK2341JkODUb8DM9O0x1SIz2aBvyF33Uf1c76St3VpsMXEIW0nxuKkq/5cxnbz0RD9cfwNZHEAZQD3ag=="
     },
     "@types/prettier": {
       "version": "2.7.0",
