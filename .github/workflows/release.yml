@@ -18,11 +18,10 @@ on:
        `1.2.0-rc.8`.'
         type: choice
         options:
-          - ''
           - rc
           - beta
           - alpha
-        default: ''
+        default: rc
         required: false
 
 env:
