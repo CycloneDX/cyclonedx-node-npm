@@ -10,7 +10,6 @@ on:
   workflow_dispatch:
 
 env:
-  PACK_DIR: pack
   DIST_DIR: dist
   REPORTS_DIR: CI_reports
   NODE_ACTIVE_LTS: '16'  # https://nodejs.org/en/about/releases/
@@ -30,9 +29,6 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           cache: 'npm'
-          cache-dependency-path: |
-            **/npm-shrinkwrap.json
-            **/package-lock.json
       - name: setup subject
         run: npm ci --ignore-scripts
       - name: build
@@ -43,19 +39,6 @@ jobs:
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
-          if-no-files-found: error
-      - name: pack
-        run: |
-          mkdir -p '${PACK_DIR}'
-          npm pack --pack-destination '${PACK_DIR}' .
-          ls -lisah '${PACK_DIR}' # DEBUG INFO
-          mv '${PACK_DIR}'/cyclonedx-cyclonedx-npm*.tgz '${PACK_DIR}'/build-result.tgz
-      - name: artifact pack result
-        # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ env.PACK_DIR }}
-          path: ${{ env.PACK_DIR }}
           if-no-files-found: error
   test-standards:
     name: test standards
@@ -71,9 +54,6 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           cache: 'npm'
-          cache-dependency-path: |
-            **/npm-shrinkwrap.json
-            **/package-lock.json
       - name: install subject
         run: npm ci
       - name: run tests
@@ -106,9 +86,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-          cache-dependency-path: |
-            **/npm-shrinkwrap.json
-            **/package-lock.json
       - name: setup subject
         run: npm ci --ignore-scripts
       - name: fetch build artifact
