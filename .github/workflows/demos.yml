@@ -21,8 +21,7 @@ env:
   RESULTS_ARTIFACT: npm-ls-results
 
 jobs:
-  test-reproducible-demo:
-    needs: [ 'build' ]
+  demo-results:
     name: ${{ matrix.subject }} npm${{ matrix.npm-version }} node${{ matrix.node-version }} ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
