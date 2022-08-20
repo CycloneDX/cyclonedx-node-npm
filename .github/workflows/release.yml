@@ -1,3 +1,5 @@
+# docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
 # This workflow is used for publishing the Node.js package.
 #
 # Releases are triggered manually. This can be done by browsing to
@@ -131,4 +133,4 @@ jobs:
         with:
           tag_name: ${{ needs.bump.outputs.version }}
           name:     ${{ needs.bump.outputs.version_plain }}
-          prerelease: ${{ startsWith(github.event.inputs.newversion, 'pre') }}
+          prerelease: ${{ startsWith(github.event.inputs.newversion, 'pre') || contains(github.event.inputs.newversion, 'rc') || contains(github.event.inputs.newversion, 'beta') || contains(github.event.inputs.newversion, 'alpha')}}
