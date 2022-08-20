@@ -17,14 +17,14 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import {dirname} from 'path'
-import {spawnSync} from 'child_process'
+import { dirname } from 'path'
+import { spawnSync } from 'child_process'
 
-import {Builders, Enums, Factories, Models} from '@cyclonedx/cyclonedx-library'
-import {PackageURL} from 'packageurl-js'
+import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
+import { PackageURL } from 'packageurl-js'
 
-import {makeThisTool} from './thisTool'
-import {PropertyNames, PropertyValueBool} from './properties'
+import { makeThisTool } from './thisTool'
+import { PropertyNames, PropertyValueBool } from './properties'
 
 type OmittableDependencyTypes = 'dev'|'optional'|'peer'
 
@@ -59,7 +59,7 @@ export class BomBuilder {
 
   console: Console
 
-  constructor(
+  constructor (
     toolBuilder: BomBuilder['toolBuilder'],
     componentBuilder: BomBuilder['componentBuilder'],
     treeBuilder: BomBuilder['treeBuilder'],
@@ -81,7 +81,7 @@ export class BomBuilder {
     this.console = console_
   }
 
-  buildFromLockFile(filePath: string): Models.Bom {
+  buildFromLockFile (filePath: string): Models.Bom {
     return this.buildFromNpmLs(
       this.fetchNpmLs(
         dirname(filePath)
@@ -89,7 +89,7 @@ export class BomBuilder {
     )
   }
 
-  private fetchNpmLs(projectDir: string): any {
+  private fetchNpmLs (projectDir: string): any {
     // `npm_execpath` is used by `npm` internally, and is propagated when kicking `npm run-script`
     /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string */
     const command = process.env.npm_execpath || 'npm'
@@ -154,7 +154,7 @@ export class BomBuilder {
     }
   }
 
-  buildFromNpmLs(data: any): Models.Bom {
+  buildFromNpmLs (data: any): Models.Bom {
     // TODO use instead ? : https://www.npmjs.com/package/debug ?
     this.console.info('INFO  | build BOM ...')
 
@@ -217,7 +217,7 @@ export class BomBuilder {
     return bom
   }
 
-  private adjustNestedBomRefs(component: Models.Component, pref: string): void {
+  private adjustNestedBomRefs (component: Models.Component, pref: string): void {
     if (component.bomRef.value === undefined) {
       return
     }
@@ -226,7 +226,7 @@ export class BomBuilder {
     component.components.forEach(c => this.adjustNestedBomRefs(c, fill))
   }
 
-  private nestComponents(allComponents: AllComponents, tree: PTree): Models.ComponentRepository {
+  private nestComponents (allComponents: AllComponents, tree: PTree): Models.ComponentRepository {
     const children = new Models.ComponentRepository()
     for (const [p, pTree] of tree) {
       const component = allComponents.get(p)
@@ -241,7 +241,7 @@ export class BomBuilder {
     return children
   }
 
-  private gatherDependencies(allComponents: AllComponents, data: any, directDepRefs: Set<Models.BomRef>): void {
+  private gatherDependencies (allComponents: AllComponents, data: any, directDepRefs: Set<Models.BomRef>): void {
     /* One and the same component may appear multiple times in the tree,
      * but only one occurrence has all the direct dependencies.
      * So we work only on the one `data` that actually has dependencies.
@@ -279,7 +279,7 @@ export class BomBuilder {
    * they fail to load package details or miss details.
    * So here is a poly-fill that loads ALL the package's data.
    */
-  private enhancedPackageData(data: { path: string }): any {
+  private enhancedPackageData (data: { path: string }): any {
     try {
       return Object.assign(
         /* eslint-disable-next-line @typescript-eslint/no-var-requires */
@@ -303,7 +303,7 @@ export class BomBuilder {
    */
   private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
-  private makeComponent(data: any, type?: Enums.ComponentType | undefined): Models.Component | undefined {
+  private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | undefined {
     const component = this.componentBuilder.makeComponent(data, type)
     if (component === undefined) {
       return undefined
@@ -345,7 +345,7 @@ export class BomBuilder {
         new Models.ExternalReference(
           resolved,
           Enums.ExternalReferenceType.Distribution,
-          {comment: 'as detected from npm-ls property "resolved"'}
+          { comment: 'as detected from npm-ls property "resolved"' }
         )
       )
     }
@@ -373,7 +373,7 @@ export class BomBuilder {
     return component
   }
 
-  private makePurl(component: Models.Component): PackageURL | undefined {
+  private makePurl (component: Models.Component): PackageURL | undefined {
     const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
     if (purl === undefined) {
       return undefined
@@ -389,7 +389,7 @@ export class BomBuilder {
 }
 
 class DummyComponent extends Models.Component {
-  constructor(type: Models.Component['type'], name: Models.Component['name']) {
+  constructor (type: Models.Component['type'], name: Models.Component['name']) {
     super(type, `DummyComponent.${name}`, {
       bomRef: `DummyComponent.${name}`,
       description: `This is a dummy component "${name}" that fills the gap where the actual built failed.`
@@ -400,14 +400,14 @@ class DummyComponent extends Models.Component {
 type PTree = Map<string, PTree>
 
 export class TreeBuilder {
-  fromPaths(paths: Set<string>, dirSeparator: string): PTree {
+  fromPaths (paths: Set<string>, dirSeparator: string): PTree {
     const tree: PTree = new Map(Array.from(paths, p => [p + dirSeparator, new Map()]))
     this.nestPT(tree)
     this.renderPR(tree, '')
     return tree
   }
 
-  private renderPR(tree: PTree, pref: string): void {
+  private renderPR (tree: PTree, pref: string): void {
     for (const [p, pTree] of [...tree.entries()]) {
       tree.delete(p)
       const pFull = pref + p
@@ -416,7 +416,7 @@ export class TreeBuilder {
     }
   }
 
-  private nestPT(tree: PTree): void {
+  private nestPT (tree: PTree): void {
     if (tree.size < 2) {
       // nothing to compare ...
       return
