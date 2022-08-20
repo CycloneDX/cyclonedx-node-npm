@@ -1,22 +1,5 @@
 # docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
-# This workflow is used for publishing the Node.js package.
-#
-# Releases are triggered manually. This can be done by browsing to
-# https://github.com/CycloneDX/cyclonedx-node-npm/actions?query=workflow%3ARelease
-# and selecting "Run workflow". If releasing a patch for a previous version
-# make sure the correct branch is selected. It will default to the default
-# branch.
-#
-# You will also need to specify the version level increment for this release.
-#
-# Supported levels are major, minor and patch. Semantic versioning should be
-# followed. i.e. major if the release includes breaking changes, minor for
-# non-breaking changes with additional functionality and patch for bug fixes and
-# dependency updates.
-#
-# You will also need to specify a value for the related commit message.
-
 name: Release
 
 on:
@@ -62,6 +45,7 @@ jobs:
       - name: Configure Git
         # needed for push back of changes
         run: |
+          set -ex
           git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --local user.name "${GITHUB_ACTOR}"
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
@@ -72,7 +56,8 @@ jobs:
       ## ! no npm build at the moment
       - name: bump VERSION
         id: bump
-        run: |-
+        run: |
+          set -ex
           VERSION="$(npm version "$NPMV_NEWVERSION" --message "$NPMV_MESSAGE" --preid "$NPMV_PREID")"
           echo "::debug::new version = $VERSION"
           VERSION_PLAIN="${VERSION:1}" # remove 'v' prefix
@@ -86,10 +71,10 @@ jobs:
       - name: git push back
         run: git push --follow-tags
 
-  publish-NPM:
+  publish-NPMJS:
     needs:
       - "bump"
-    name: NPM - publish
+    name: publish NPMJS
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -103,10 +88,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-      - name: setup project
+      - name: install build tools
         run: npm ci --ignore-scripts
-      - name: publish to NPM
-        run: |-
+      # no explicit npm build. if a build is required, it should be configured as prepublish/prepublishOnly script of npm.
+      - name: publish to NPMJS
+        run: |
           npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
           npm publish --access public
         env:
@@ -115,15 +101,13 @@ jobs:
   release-GH:
     needs:
       - "bump"
-      - "publish-NPM"
-    name: GitHub - release
+      - "publish-NPMJS"
+    name: publish GitHub
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
       ASSETS_DIR: release_assets
     steps:
-      - name: create assets dir
-        run: mkdir "$ASSETS_DIR"
       - name: Create Release
         id: release
         # see https://github.com/softprops/action-gh-release
