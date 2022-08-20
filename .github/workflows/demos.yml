@@ -1,0 +1,81 @@
+# For details of what checks are run for PRs please refer below
+# docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: Produce demo results
+
+on:
+  workflow_dispatch:
+
+env:
+  DEMO_ROOT_DIR: demo
+  RESULTS_DIR: CI_results
+  RESULTS_ARTIFACT: npm-ls-results
+
+jobs:
+  test-reproducible-demo:
+    needs: [ 'build' ]
+    name: ${{ matrix.subject }} npm${{ matrix.npm-version }} node${{ matrix.node-version }} ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false # gather all the results !
+      matrix:
+        subject:
+          - bundled-dependencies
+          - dev-dependencies
+          - juice-shop
+          - local-dependencies
+          - local-workspaces
+        npm-version:
+          - '8'      # current
+          - '7'      # legacy
+          - '6'      # legacy
+          - '6.0.0'  # lowest supported
+        node-version:
+          ## action based on https://github.com/actions/node-versions/releases
+          ## see also: https://nodejs.org/en/about/releases/
+          - '18'      # current
+          - '16'      # active LTS
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+    timeout-minutes: 5 # this is a large matrix, just don't waste time!
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+      - name: prepare output
+        run: |
+          mkdir -p '${{ env.RESULTS_DIR }}'
+          echo 'OUT_FILE_PREFIX=${{ env.RESULTS_DIR }}/npm-ls_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}' >> $GITHUB_ENV
+        working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
+        shell: bash # don't want to write tht code twice, windows and unix-like
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: ${{ env.DEMO_ROOT_DIR }}/${{ matrix.subject }}/project/package.json
+      - name: report versions
+        run: |
+          node --version
+          npm  --version
+      - name: setup reproducible demo
+        run: npm i --no-audit --no-fund
+        working-directory: ${{ env.DEMO_ROOT_DIR }}/${{ matrix.subject }}/project
+      - name: npm-ls --all --long --json
+        # important: the command in use is the same used by the internal builders of this project
+        run: >
+          npm --prefix project
+          ls --all --long --json
+          2> ${{ env.OUT_FILE_PREFIX }}.err.log
+          >  ${{ env.OUT_FILE_PREFIX }}.json
+        working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
+      - name: Artifact RESULTS
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.RESULTS_ARTIFACT }}
+          path: ${{ env.DEMO_ROOT_DIR}}/*/${{ env.RESULTS_DIR }}
+          if-no-files-found: error
