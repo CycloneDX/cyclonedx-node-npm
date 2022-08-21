@@ -53,11 +53,8 @@ describe('builders.BomBuilder', () => {
     )('%p', dd => {
       const bom = builder.buildFromNpmLs(dd.path)
 
-      expect(bom.metadata.timestamp).toBeInstanceOf(Date)
-      bom.metadata.timestamp = undefined
-
       expect(bom.metadata.tools[0].version).toBe(thisVersion)
-      bom.metadata.tools[0].version = undefined
+      bom.metadata.tools[0].version = undefined // ignore it from later tests
 
       // TODO match bom against a well-known result - either in JSON or XML rendered.
     })
