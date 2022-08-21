@@ -30,11 +30,17 @@ enum OutputFormat {
   XML = 'XML',
 }
 
+enum Omittable {
+  Dev = 'dev',
+  Optional = 'optional',
+  Peer = 'peer',
+}
+
 const OutputStdOut = '-'
 
 interface CommandOptions {
   packageLockOnly: boolean
-  omit: string[]
+  omit: Omittable[]
   specVersion: Spec.Version
   flattenComponents: boolean
   outputReproducible: boolean
@@ -61,13 +67,11 @@ function makeCommand (): Command {
       '--omit <type...>',
       'Dependency types to omit from the installation tree.' +
       '(can be set multiple times)'
-    ).choices([
-      'dev',
-      'optional',
-      'peer'
-    ]).default(
+    ).choices(
+      Object.values(Omittable)
+    ).default(
       process.env.NODE_ENV === 'production'
-        ? ['dev']
+        ? [Omittable.Dev]
         : [],
       '"dev" if the NODE_ENV environment variable is set to "production", otherwise empty.'
     )
@@ -95,15 +99,22 @@ function makeCommand (): Command {
       'BOM_REPRODUCIBLE'
     )
   ).addOption(
-    new Option(
-      '--output-format <format>',
-      'Which output format to use.'
-    ).choices(
-      Object.values(OutputFormat)
-    ).default(
-      // the context is JavaScript - which should prefer JSON
-      OutputFormat.JSON
-    )
+    (function () {
+      const o = new Option(
+        '--output-format <format>',
+        'Which output format to use.'
+      ).choices(
+        Object.values(OutputFormat)
+      ).default(
+        // the context is JavaScript - which should prefer JSON
+        OutputFormat.JSON
+      )
+      const oldParseArg = o.parseArg ?? // might do input validation on choices, etc...
+        (v => v) // fallback
+      // @ts-expect-error TS2304
+      o.parseArg = (v, p) => oldParseArg(v.toUpperCase(), p)
+      return o
+    })()
   ).addOption(
     new Option(
       '--output-file <file>',
@@ -144,9 +155,7 @@ function makeCommand (): Command {
   )
 }
 
-export function run (
-  process: NodeJS.Process
-): void {
+export function run (process: NodeJS.Process): void {
   process.title = 'cyclonedx-node-npm'
 
   // all output shall be bound to stdError - stdOut is for result output only
@@ -227,7 +236,7 @@ export function run (
   }
 
   // TODO use instead ? : https://www.npmjs.com/package/debug ?
-  myConsole.debug('write BOM to', options.outputFile)
+  myConsole.info('writing BOM to', options.outputFile)
   writeSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd

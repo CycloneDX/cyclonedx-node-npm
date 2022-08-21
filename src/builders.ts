@@ -26,10 +26,12 @@ import { PackageURL } from 'packageurl-js'
 import { makeThisTool } from './thisTool'
 import { PropertyNames, PropertyValueBool } from './properties'
 
+type OmittableDependencyTypes = 'dev'|'optional'|'peer'
+
 interface BomBuilderOptions {
   metaComponentType?: BomBuilder['metaComponentType']
   packageLockOnly?: BomBuilder['packageLockOnly']
-  omitDependencyTypes?: BomBuilder['omitDependencyTypes']
+  omitDependencyTypes?: Iterable<OmittableDependencyTypes>
   reproducible?: BomBuilder['reproducible']
   flattenComponents?: BomBuilder['flattenComponents']
 }
@@ -51,7 +53,7 @@ export class BomBuilder {
 
   metaComponentType: Enums.ComponentType | undefined
   packageLockOnly: boolean
-  omitDependencyTypes: string[]
+  omitDependencyTypes: Set<OmittableDependencyTypes>
   reproducible: boolean
   flattenComponents: boolean
 
@@ -72,7 +74,7 @@ export class BomBuilder {
 
     this.metaComponentType = options.metaComponentType
     this.packageLockOnly = options.packageLockOnly ?? false
-    this.omitDependencyTypes = options.omitDependencyTypes ?? []
+    this.omitDependencyTypes = new Set(options.omitDependencyTypes ?? [])
     this.reproducible = options.reproducible ?? false
     this.flattenComponents = options.flattenComponents ?? false
 
@@ -109,24 +111,38 @@ export class BomBuilder {
     }
 
     // TODO use instead ? : https://www.npmjs.com/package/debug ?
-    this.console.debug('gather dependency tree ...', command, args)
+    this.console.info('gather dependency tree ...')
+    this.console.debug('npm-ls: run', command, 'with', args, 'in', projectDir)
     const npmLsReturns = spawnSync(command, args, {
       cwd: projectDir,
       encoding: 'buffer',
       maxBuffer: Number.POSITIVE_INFINITY // DIRTY but effective
     })
+    /*
+    if (npmLsReturns.stdout?.length > 0) {
+      this.console.group('npm-ls: STDOUT')
+      this.console.debug('%s', npmLsReturns.stdout)
+      this.console.groupEnd()
+    } else {
+      this.console.debug('npm-ls: no STDOUT')
+    }
+    */
+    if (npmLsReturns.stderr?.length > 0) {
+      this.console.group('npm-ls: STDERR')
+      this.console.warn('%s', npmLsReturns.stderr)
+      this.console.groupEnd()
+    } else {
+      this.console.debug('npm-ls: no STDERR')
+    }
     if (npmLsReturns.error instanceof Error) {
       const error = npmLsReturns.error as spawnSyncResultError
+      this.console.group('npm-ls: errors')
+      this.console.debug('%j', error)
+      this.console.groupEnd()
       throw new Error(`npm-ls exited with errors: ${
         error.errno ?? '???'} ${
         error.code ?? npmLsReturns.status ?? 'noCode'} ${
         error.signal ?? npmLsReturns.signal ?? 'noSignal'}`)
-    }
-    if (npmLsReturns.stderr.length > 0) {
-      // TODO only print if verbosity is high enough
-      this.console.group('npm-ls had errors')
-      this.console.debug(npmLsReturns.stderr.toString())
-      this.console.groupEnd()
     }
 
     try {
@@ -138,7 +154,7 @@ export class BomBuilder {
 
   buildFromNpmLs (data: any): Models.Bom {
     // TODO use instead ? : https://www.npmjs.com/package/debug ?
-    this.console.debug('build BOM ...')
+    this.console.info('build BOM ...')
 
     // region all components & dependencies
 
@@ -288,7 +304,17 @@ export class BomBuilder {
   private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | undefined {
     const component = this.componentBuilder.makeComponent(data, type)
     if (component === undefined) {
-      return component
+      return undefined
+    }
+
+    // older npm-ls versions (v6) hide properties behind a `_`
+    if ((data.dev ?? data._development) === true) {
+      if (this.omitDependencyTypes.has('dev')) {
+        return undefined
+      }
+      component.properties.add(
+        new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
+      )
     }
 
     if (data.extraneous === true) {
@@ -300,13 +326,6 @@ export class BomBuilder {
     if (data.private === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
-      )
-    }
-
-    // older npm-ls versions (v6) hide properties behind a `_`
-    if ((data.dev ?? data._development) === true) {
-      component.properties.add(
-        new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
       )
     }
 
