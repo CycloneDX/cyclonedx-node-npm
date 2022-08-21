@@ -19,6 +19,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+const { createWriteStream } = require('fs')
+
 const { Factories, Builders } = require('@cyclonedx/cyclonedx-library')
 const { index: indexNpmLsDemoData } = require('../_data/npm-ls_demo-results')
 
@@ -26,6 +28,14 @@ const { BomBuilder, TreeBuilder } = require('../../dist/builders')
 const { version: thisVersion } = require('../../package.json')
 
 describe('builders.BomBuilder', () => {
+  const mockConsole = {
+    debug: () => {},
+    log: () => {},
+    info: () => {},
+    warn: () => {},
+    group: () => {},
+    groupEnd: () => {},
+  }
   const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
   const builder = new BomBuilder(
     new Builders.FromNodePackageJson.ToolBuilder(extRefFactory),
@@ -42,13 +52,14 @@ describe('builders.BomBuilder', () => {
       reproducible: true,
       flattenComponents: false
     },
-    new console.Console(process.stderr, process.stderr)
+    mockConsole
   )
 
   describe('buildFromNpmLs', () => {
     test.each(
       indexNpmLsDemoData()
     )('$subject npm$npm node$node $os', ({ subject, npm, node, os, path }) => {
+
       const bom = builder.buildFromNpmLs(require(path))
 
       expect(bom.metadata.tools.size).toBe(1)
