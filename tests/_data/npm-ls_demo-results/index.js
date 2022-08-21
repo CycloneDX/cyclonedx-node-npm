@@ -21,20 +21,22 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 const { sync: glob } = require('fast-glob')
 
-const fileGlob = `${__dirname}/*/CI_results/*.json`;
-const filePattern = /\/(?<subject>.+?)\/CI_results\/npm-ls_npm(?<npm>.+?)_node(?<node>.+?)_(?<os>.+?).json$/
+const fileGlob = '*/CI_results/*.json'
+const filePattern = /\/(?<subject>[^/]+?)\/CI_results\/npm-ls_npm(?<npm>.+?)_node(?<node>.+?)_(?<os>.+?).json$/i
+/** @type {import('fast-glob').OptionsInternal} */
+const globOptions = { absolute: true, caseSensitiveMatch: false, cwd: __dirname, deep: 3, onlyFiles: true, unique: true }
 
 /**
  *
  * @return {{path:string, subject?:string, npm?:string, node?:string, os?:string }[]}
  */
 function index () {
-  return glob(fileGlob).map(file => ({
+  return glob(fileGlob, globOptions).map(file => ({
     ...(filePattern.exec(file)?.groups ?? {}),
     path: file
   }))
 }
 
-module.exports= {
+module.exports = {
   index: index
 }

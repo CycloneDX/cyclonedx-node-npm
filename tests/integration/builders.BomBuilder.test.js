@@ -19,15 +19,13 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const {Factories, Builders} = require("@cyclonedx/cyclonedx-library");
-const { index: indexNpmLsDemoData} = require('../_data/npm-ls_demo-results')
+const { Factories, Builders } = require('@cyclonedx/cyclonedx-library')
+const { index: indexNpmLsDemoData } = require('../_data/npm-ls_demo-results')
 
 const { BomBuilder, TreeBuilder } = require('../../dist/builders')
-const { thisVersion } = require('../../package.json').version
-
+const { version: thisVersion } = require('../../package.json')
 
 describe('builders.BomBuilder', () => {
-
   const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
   const builder = new BomBuilder(
     new Builders.FromNodePackageJson.ToolBuilder(extRefFactory),
@@ -42,7 +40,7 @@ describe('builders.BomBuilder', () => {
       packageLockOnly: true,
       omitDependencyTypes: [],
       reproducible: true,
-      flattenComponents: false,
+      flattenComponents: false
     },
     new console.Console(process.stderr, process.stderr)
   )
@@ -50,11 +48,13 @@ describe('builders.BomBuilder', () => {
   describe('buildFromNpmLs', () => {
     test.each(
       indexNpmLsDemoData()
-    )('%p', dd => {
-      const bom = builder.buildFromNpmLs(dd.path)
+    )('$subject npm$npm node$node $os', ({ subject, npm, node, os, path }) => {
+      const bom = builder.buildFromNpmLs(require(path))
 
-      expect(bom.metadata.tools[0].version).toBe(thisVersion)
-      bom.metadata.tools[0].version = undefined // ignore it from later tests
+      expect(bom.metadata.tools.size).toBe(1)
+      const tool = Array.from(bom.metadata.tools)[0]
+      expect(tool.version).toBe(thisVersion)
+      tool.version = undefined // ignore it from later tests
 
       // TODO match bom against a well-known result - either in JSON or XML rendered.
     })
