@@ -54,13 +54,15 @@
   },
   "type": "commonjs",
   "engines": {
-    "node": ">=16.0.0",
+    "node": ">=16",
     "npm": "6 - 8"
   },
   "directories": {
     "doc": "docs",
-    "example": "demo",
-    "test": "tests"
+    "src": "src",
+    "lib": "dist",
+    "test": "tests",
+    "example": "demo"
   },
   "bin": {
     "cyclonedx-npm": "./bin/cyclonedx-npm-cli.js"
