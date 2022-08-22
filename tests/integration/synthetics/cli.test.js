@@ -20,17 +20,20 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { resolve, join } = require('path')
-const { mkdtempSync, mkdirSync, openSync, createWriteStream } = require('fs')
+const { mkdtempSync, mkdirSync, openSync, createWriteStream, readFileSync, existsSync, writeFileSync } = require('fs')
 
-const { index: indexNpmLsDemoData } = require('../_data/npm-ls_demo-results')
+const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
+const { version: thisVersion } = require('../../../package.json')
 
-const cli = require('../../dist/cli')
+const cli = require('../../../dist/cli')
 
 describe('cli', () => {
-  const tmpRoot = mkdtempSync(join(__dirname, '..', '_log', 'CDX_IT_CLI'))
+  const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX_IT_CLI'))
   describe('run()', () => {
     const cases = indexNpmLsDemoData()
     test.each(cases)('$subject npm$npm node$node $os', ({ subject, npm, node, os }) => {
+      const expectedOutputSnapshot = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results', `${subject}_npm${npm}.snap.json`)
+
       const tmpDir = join(tmpRoot, `${subject}_npm${npm}_node${node}_${os}`)
       mkdirSync(tmpDir)
 
@@ -45,7 +48,7 @@ describe('cli', () => {
       const mockProcess = {
         stdout: stdout,
         stderr: stderr,
-        cwd: () => resolve(__dirname, '..', '_data'),
+        cwd: () => resolve(__dirname, '..', '..', '_data'),
         argv0: process.argv0,
         argv: [
           process.argv[0],
@@ -61,14 +64,28 @@ describe('cli', () => {
           CT_NPM: npm,
           CT_NODE: node,
           CT_OS: os,
-          npm_execpath: resolve(__dirname, '..', '_data', 'npm-ls_demo-results', 'cli-replacer.js')
+          npm_execpath: resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'cli-replacer.js')
         }
       }
 
       // no intention to test all the spec-versions nor all the output-formats - this is not our scope.
       cli.run(mockProcess)
 
-      // expect(sbom).toMatchSnapshot()
+      const actualOutput = readFileSync(outFile, 'utf8').replace(
+        // replace metadata.tools.version
+        `"vendor": "@cyclonedx",
+        "name": "cyclonedx-npm",
+        "version": ${JSON.stringify(thisVersion)},`,
+        `"vendor": "@cyclonedx",
+        "name": "cyclonedx-npm",
+        "version": "thisVersion-testing",`
+      )
+
+      if (!existsSync(expectedOutputSnapshot)) {
+        writeFileSync(expectedOutputSnapshot, actualOutput)
+      }
+
+      expect(actualOutput).toEqual(readFileSync(expectedOutputSnapshot))
     })
   })
 })

@@ -81,15 +81,16 @@ export class BomBuilder {
     this.console = console_
   }
 
-  buildFromLockFile (filePath: string): Models.Bom {
+  buildFromLockFile (filePath: string, process: NodeJS.Process): Models.Bom {
     return this.buildFromNpmLs(
       this.fetchNpmLs(
-        dirname(filePath)
+        dirname(filePath),
+        process
       )
     )
   }
 
-  private fetchNpmLs (projectDir: string): any {
+  private fetchNpmLs (projectDir: string, process: NodeJS.Process): any {
     // `npm_execpath` is used by `npm` internally, and is propagated when kicking `npm run-script`
     /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string */
     const command = process.env.npm_execpath || 'npm'
@@ -117,8 +118,9 @@ export class BomBuilder {
       // must use a shell for Windows systems in order to work
       shell: true,
       cwd: projectDir,
+      env: process.env,
       encoding: 'buffer',
-      maxBuffer: Number.POSITIVE_INFINITY // DIRTY but effective
+      maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
     })
     /*
     if (npmLsReturns.stdout?.length > 0) {

@@ -216,7 +216,7 @@ export function run (process: NodeJS.Process): void {
       flattenComponents: options.flattenComponents
     },
     myConsole
-  ).buildFromLockFile(lockFile)
+  ).buildFromLockFile(lockFile, process)
 
   const spec = Spec.SpecVersionDict[options.specVersion]
   if (undefined === spec) {

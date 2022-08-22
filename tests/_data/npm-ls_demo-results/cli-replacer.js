@@ -21,18 +21,18 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const assert = require('assert')
-const { write, readFileSync } = require('fs')
+const { readFileSync, writeSync } = require('fs')
 
 const index = require('./').index()
 
-console.error('debug:', 'env=%j', process.env)
+// console.error('debug:', 'env=%j', process.env)
 
 const expectedArgs = process.env.CT_EXPECTED_ARGS.split(' ')
-assert.deepStrictEqual(process.argv, expectedArgs, 'unexpected args')
+assert.deepStrictEqual(process.argv.slice(2), expectedArgs, 'unexpected args')
 
 const { CT_SUBJECT: subject, CT_NPM: npm, CT_NODE: node, CT_OS: os } = process.env
 const matches = index.filter(i => i.subject === subject && i.npm === npm && i.node === node && i.os === os)
 assert.strictEqual(matches.length, 1, 'did not find exactly 1 match')
 
 const { path } = matches[0]
-write(process.stdout.fd, readFileSync(path))
+writeSync(process.stdout.fd, readFileSync(path))
