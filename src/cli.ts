@@ -49,7 +49,7 @@ interface CommandOptions {
   mcType: Enums.ComponentType
 }
 
-function makeCommand (): Command {
+function makeCommand (process: NodeJS.Process): Command {
   return new Command(
   ).description(
     'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
@@ -161,7 +161,7 @@ export function run (process: NodeJS.Process): void {
   // all output shall be bound to stdError - stdOut is for result output only
   const myConsole = new console.Console(process.stderr, process.stderr)
 
-  const program = makeCommand()
+  const program = makeCommand(process)
   program.parse(process.argv)
 
   const options: CommandOptions = program.opts()
