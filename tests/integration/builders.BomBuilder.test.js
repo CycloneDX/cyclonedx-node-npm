@@ -53,18 +53,19 @@ describe('builders.BomBuilder', () => {
     mockConsole
   )
 
-  describe('buildFromNpmLs', () => {
-    test.each(
-      indexNpmLsDemoData()
-    )('$subject npm$npm node$node $os', ({ subject, npm, node, os, path }) => {
-      const bom = builder.buildFromNpmLs(require(path))
+  describe('buildFromNpmLs()', () => {
+    const cases = indexNpmLsDemoData()
+    describe.each(cases)('$subject npm$npm node$node $os', ({ subject, npm, node, os, path }) => {
+      test('as expected', () => {
+        const bom = builder.buildFromNpmLs(require(path))
 
-      expect(bom.metadata.tools.size).toBe(1)
-      const tool = Array.from(bom.metadata.tools)[0]
-      expect(tool.version).toBe(thisVersion)
-      tool.version = undefined // ignore it from later tests
+        expect(bom.metadata.tools.size).toBe(1)
+        const tool = Array.from(bom.metadata.tools)[0]
+        expect(tool.version).toBe(thisVersion)
+        tool.version = 'testing-dummy'
 
-      // TODO match bom against a well-known result - either in JSON or XML rendered.
+        expect(bom).toMatchSnapshot()
+      })
     })
   })
 })
