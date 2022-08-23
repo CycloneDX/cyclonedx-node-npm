@@ -135,9 +135,6 @@ dist
 # never ignore the build results - these are intended to be shipped
 !/dist/
 
-# this is a standaline CLI tool - dont miss the shrinkwrap
-!/npm-shrinkwrap.json
-
 # no intention to ship the maps, since the source is not shipped either.
 /dist/*.map
 
