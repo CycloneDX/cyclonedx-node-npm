@@ -19,16 +19,15 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const {resolve, join} = require('path')
+const { resolve, join } = require('path')
 const {
   mkdtempSync, mkdirSync,
   createWriteStream,
-  openSync, close, existsSync, writeFileSync, readFileSync,
+  openSync, close, existsSync, writeFileSync, readFileSync
 } = require('fs')
 
-const {hashFile} = require('../../_helper')
-const {index: indexNpmLsDemoData} = require('../../_data/npm-ls_demo-results')
-const {version: thisVersion} = require('../../../package.json')
+const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
+const { version: thisVersion } = require('../../../package.json')
 
 const cli = require('../../../dist/cli')
 

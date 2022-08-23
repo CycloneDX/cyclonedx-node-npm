@@ -45,28 +45,6 @@ function index () {
   return cached
 }
 
-/* filter idea
-
- const uniqueCases = await (async function () {
-      const cm = new Map()
-      for (const cd of indexNpmLsDemoData()) {
-        const ch = await hashFile(cd.path)
-        cm.set(cd, ch)
-      }
-      const cs = []
-      const dc = new Set()
-      for (const [ch, dd] of cm) {
-        if (dc.has(ch)) {
-          continue
-        }
-        dc.add(ch)
-        cs.push(cd)
-      }
-      return cs
-    })()
-
- */
-
 module.exports = {
   index: index
 }
