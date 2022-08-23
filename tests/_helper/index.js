@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 'use strict'
 
 /*!
@@ -20,25 +19,34 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const assert = require('assert')
 const { createReadStream } = require('fs')
 
-const index = require('./').index()
+const MurmurHash3 = require('imurmurhash')
 
-// console.error('debug:', 'env=%j', process.env)
+/**
+ * @type {Map<string, Promise<string>>}
+ */
+const cache = new Map()
 
-const expectedArgs = process.env.CT_EXPECTED_ARGS.split(' ')
-assert.deepStrictEqual(process.argv.slice(2), expectedArgs, 'unexpected args')
+/**
+ * @param {string} filePath
+ * @return {Promise<string>}
+ */
+function hashFile (filePath) {
+  let p = cache.get(filePath)
+  if (p === undefined) {
+    p = new Promise((resolve, reject) => {
+      const hs = new MurmurHash3('')
+      const rs = createReadStream(filePath, 'utf8')
+      rs.on('data', c => hs.hash(c))
+      rs.once('end', () => resolve(hs.result()))
+      rs.once('error', e => reject(e))
+    })
+    cache.set(filePath, p)
+  }
+  return p
+}
 
-const { CT_SUBJECT: subject, CT_NPM: npm, CT_NODE: node, CT_OS: os } = process.env
-const matches = index.filter(i => i.subject === subject && i.npm === npm && i.node === node && i.os === os)
-assert.strictEqual(matches.length, 1, 'did not find exactly 1 match')
-
-const { path } = matches[0]
-
-const rs = createReadStream(path)
-rs.once('error', e => {
-  process.exitCode = 1
-  throw e
-})
-rs.once('open', () => rs.pipe(process.stdout))
+module.exports = {
+  hashFile: hashFile
+}

@@ -26,16 +26,46 @@ const filePattern = /\/(?<subject>[^/]+?)\/CI_results\/npm-ls_npm(?<npm>.+?)_nod
 /** @type {import('fast-glob').OptionsInternal} */
 const globOptions = { absolute: true, caseSensitiveMatch: false, cwd: __dirname, deep: 3, onlyFiles: true, unique: true }
 
+let cached
+
 /**
- *
- * @return {{path:string, subject?:string, npm?:string, node?:string, os?:string }[]}
+ * @return {{path:string, subject?:string, npm?:string, node?:string, os?:string}[]}
  */
 function index () {
-  return glob(fileGlob, globOptions).map(file => ({
-    ...(filePattern.exec(file)?.groups ?? {}),
-    path: file
-  }))
+  if (cached === undefined) {
+    cached = Object.freeze(
+      glob(fileGlob, globOptions).sort().map(
+        file => Object.freeze({
+          ...(filePattern.exec(file)?.groups ?? {}),
+          path: file
+        })
+      )
+    )
+  }
+  return cached
 }
+
+/* filter idea
+
+ const uniqueCases = await (async function () {
+      const cm = new Map()
+      for (const cd of indexNpmLsDemoData()) {
+        const ch = await hashFile(cd.path)
+        cm.set(cd, ch)
+      }
+      const cs = []
+      const dc = new Set()
+      for (const [ch, dd] of cm) {
+        if (dc.has(ch)) {
+          continue
+        }
+        dc.add(ch)
+        cs.push(cd)
+      }
+      return cs
+    })()
+
+ */
 
 module.exports = {
   index: index

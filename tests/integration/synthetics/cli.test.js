@@ -19,22 +19,29 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { resolve, join } = require('path')
-const { mkdtempSync, mkdirSync, openSync, createWriteStream, readFileSync, existsSync, writeFileSync } = require('fs')
+const {resolve, join} = require('path')
+const {
+  mkdtempSync, mkdirSync,
+  createWriteStream,
+  openSync, close, existsSync, writeFileSync, readFileSync,
+} = require('fs')
 
-const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
-const { version: thisVersion } = require('../../../package.json')
+const {hashFile} = require('../../_helper')
+const {index: indexNpmLsDemoData} = require('../../_data/npm-ls_demo-results')
+const {version: thisVersion} = require('../../../package.json')
 
 const cli = require('../../../dist/cli')
 
 describe('cli', () => {
   const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX_IT_CLI'))
+
   describe('run()', () => {
     const cases = indexNpmLsDemoData()
-    test.each(cases)('$subject npm$npm node$node $os', ({ subject, npm, node, os }) => {
-      const expectedOutputSnapshot = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results', `${subject}_npm${npm}.snap.json`)
 
-      const tmpDir = join(tmpRoot, `${subject}_npm${npm}_node${node}_${os}`)
+    test.each(cases)('$subject npm$npm node$node $os', (dd) => {
+      const expectedOutputSnapshot = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results', `${dd.subject}_npm${dd.npm}.snap.json`)
+
+      const tmpDir = join(tmpRoot, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
       mkdirSync(tmpDir)
 
       const outFile = resolve(tmpDir, 'run_out')
@@ -53,6 +60,7 @@ describe('cli', () => {
         argv: [
           process.argv[0],
           'dummy_process',
+          // no intention to test all the spec-versions nor all the output-formats - this is not our scope.
           '--output-reproducible',
           '--spec-version', '1.4',
           '--output-format', 'JSON',
@@ -60,16 +68,22 @@ describe('cli', () => {
         ],
         env: {
           CT_EXPECTED_ARGS: ['ls', '--json', '--all', '--long'].join(' '),
-          CT_SUBJECT: subject,
-          CT_NPM: npm,
-          CT_NODE: node,
-          CT_OS: os,
+          CT_SUBJECT: dd.subject,
+          CT_NPM: dd.npm,
+          CT_NODE: dd.node,
+          CT_OS: dd.os,
           npm_execpath: resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'cli-replacer.js')
         }
       }
 
-      // no intention to test all the spec-versions nor all the output-formats - this is not our scope.
-      cli.run(mockProcess)
+      try {
+        cli.run(mockProcess)
+      } finally {
+        close(stdout.fd)
+        close(stderr.fd)
+        stdout.close()
+        stderr.close()
+      }
 
       const actualOutput = readFileSync(outFile, 'utf8').replace(
         // replace metadata.tools.version
