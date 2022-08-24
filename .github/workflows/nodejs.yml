@@ -11,7 +11,7 @@ on:
 
 env:
   DIST_DIR: dist
-  REPORTS_DIR: CI_reports
+  REPORTS_DIR: reports
   NODE_ACTIVE_LTS: '16'  # https://nodejs.org/en/about/releases/
 
 jobs:
