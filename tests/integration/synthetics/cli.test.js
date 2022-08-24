@@ -41,7 +41,7 @@ describe('cli', () => {
     const cases = indexNpmLsDemoData()
 
     test.each(cases)('$subject npm$npm node$node $os', (dd) => {
-      const expectedOutputSnapshot = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results', `${dd.subject}_npm${dd.npm}_${dd.os}.snap.json`)
+      const expectedOutSnap = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results', `${dd.subject}_npm${dd.npm}_${dd.os}.snap.json`)
 
       const logFileBase = join(tmpRootRun, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
 
@@ -94,11 +94,14 @@ describe('cli', () => {
         "version": "thisVersion-testing",`
       )
 
-      if (!existsSync(expectedOutputSnapshot)) {
-        writeFileSync(expectedOutputSnapshot, actualOutput, 'utf8')
+      if (!existsSync(expectedOutSnap)) {
+        writeFileSync(expectedOutSnap, actualOutput, 'utf8')
       }
 
-      expect(actualOutput).toEqual(readFileSync(expectedOutputSnapshot, 'utf8'))
+      expect(actualOutput).toEqual(
+        readFileSync(expectedOutSnap, 'utf8'),
+        `${outFile} should equal ${expectedOutSnap}`
+      )
     })
   })
 })
