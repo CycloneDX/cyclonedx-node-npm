@@ -33,18 +33,12 @@ async function main () {
     const hash = await hashFile(file)
     const double = hashes.get(hash)
     if (double === undefined) {
-      hashes.set(hash, file)
       console.info(`${hash}: ${file} unique -> keep`)
+      hashes.set(hash, file)
       continue
     }
     console.log(`${hash}: ${file} duplicates ${double} -> delete`)
-    // unlinkSync(file)
-  }
-  console.log('-------------')
-  console.log('SUMMARY: kept')
-  for (const [hash, file] of hashes )
-  {
-    console.log(`${hash}: ${file}`)
+    unlinkSync(file)
   }
 }
 

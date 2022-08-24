@@ -47,11 +47,11 @@ describe('cli', () => {
 
       const outFile = `${logFileBase}.out`
       const outFD = openSync(outFile, 'w')
-      const stdout = createWriteStream(outFile, {fd: outFD})
+      const stdout = createWriteStream(outFile, { fd: outFD })
 
       const errFile = `${logFileBase}.err`
       const errFD = openSync(errFile, 'w')
-      const stderr = createWriteStream(errFile, {fd: errFD})
+      const stderr = createWriteStream(errFile, { fd: errFD })
 
       const mockProcess = {
         stdout: stdout,
