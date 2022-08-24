@@ -103,12 +103,12 @@
       "type": "library",
       "name": "parser",
       "group": "@babel",
-      "version": "7.18.11",
-      "bom-ref": "@babel/parser@7.18.11",
-      "purl": "pkg:npm/%40babel/parser@7.18.11?download_url=https://registry.npmjs.org/@babel/parser/-/parser-7.18.11.tgz",
+      "version": "7.18.13",
+      "bom-ref": "@babel/parser@7.18.13",
+      "purl": "pkg:npm/%40babel/parser@7.18.13?download_url=https://registry.npmjs.org/@babel/parser/-/parser-7.18.13.tgz",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@babel/parser/-/parser-7.18.11.tgz",
+          "url": "https://registry.npmjs.org/@babel/parser/-/parser-7.18.13.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -118,12 +118,12 @@
       "type": "library",
       "name": "types",
       "group": "@babel",
-      "version": "7.18.10",
-      "bom-ref": "@babel/types@7.18.10",
-      "purl": "pkg:npm/%40babel/types@7.18.10?download_url=https://registry.npmjs.org/@babel/types/-/types-7.18.10.tgz",
+      "version": "7.18.13",
+      "bom-ref": "@babel/types@7.18.13",
+      "purl": "pkg:npm/%40babel/types@7.18.13?download_url=https://registry.npmjs.org/@babel/types/-/types-7.18.13.tgz",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@babel/types/-/types-7.18.10.tgz",
+          "url": "https://registry.npmjs.org/@babel/types/-/types-7.18.13.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -1445,12 +1445,12 @@
       "type": "library",
       "name": "node",
       "group": "@types",
-      "version": "18.7.8",
-      "bom-ref": "@types/node@18.7.8",
-      "purl": "pkg:npm/%40types/node@18.7.8?download_url=https://registry.npmjs.org/@types/node/-/node-18.7.8.tgz",
+      "version": "18.7.11",
+      "bom-ref": "@types/node@18.7.11",
+      "purl": "pkg:npm/%40types/node@18.7.11?download_url=https://registry.npmjs.org/@types/node/-/node-18.7.11.tgz",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@types/node/-/node-18.7.8.tgz",
+          "url": "https://registry.npmjs.org/@types/node/-/node-18.7.11.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -9667,12 +9667,12 @@
     {
       "type": "library",
       "name": "moment-timezone",
-      "version": "0.5.34",
-      "bom-ref": "moment-timezone@0.5.34",
-      "purl": "pkg:npm/moment-timezone@0.5.34?download_url=https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.34.tgz",
+      "version": "0.5.35",
+      "bom-ref": "moment-timezone@0.5.35",
+      "purl": "pkg:npm/moment-timezone@0.5.35?download_url=https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.35.tgz",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.34.tgz",
+          "url": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.35.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -13585,12 +13585,12 @@
     {
       "type": "library",
       "name": "spdx-license-ids",
-      "version": "3.0.11",
-      "bom-ref": "spdx-license-ids@3.0.11",
-      "purl": "pkg:npm/spdx-license-ids@3.0.11?download_url=https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.11.tgz",
+      "version": "3.0.12",
+      "bom-ref": "spdx-license-ids@3.0.12",
+      "purl": "pkg:npm/spdx-license-ids@3.0.12?download_url=https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.12.tgz",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.11.tgz",
+          "url": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.12.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -15917,10 +15917,10 @@
       "ref": "@babel/helper-validator-identifier@7.18.6"
     },
     {
-      "ref": "@babel/parser@7.18.11"
+      "ref": "@babel/parser@7.18.13"
     },
     {
-      "ref": "@babel/types@7.18.10",
+      "ref": "@babel/types@7.18.13",
       "dependsOn": [
         "@babel/helper-string-parser@7.18.10",
         "@babel/helper-validator-identifier@7.18.6",
@@ -16488,7 +16488,7 @@
       "ref": "@types/ms@0.7.31"
     },
     {
-      "ref": "@types/node@18.7.8"
+      "ref": "@types/node@18.7.11"
     },
     {
       "ref": "@types/strip-bom@3.0.0"
@@ -16707,7 +16707,7 @@
     {
       "ref": "babel-walk@3.0.0-canary-5",
       "dependsOn": [
-        "@babel/types@7.18.10"
+        "@babel/types@7.18.13"
       ]
     },
     {
@@ -17299,8 +17299,8 @@
     {
       "ref": "constantinople@4.0.1",
       "dependsOn": [
-        "@babel/parser@7.18.11",
-        "@babel/types@7.18.10"
+        "@babel/parser@7.18.13",
+        "@babel/types@7.18.13"
       ]
     },
     {
@@ -19757,7 +19757,7 @@
       "ref": "mkdirp@1.0.4"
     },
     {
-      "ref": "moment-timezone@0.5.34",
+      "ref": "moment-timezone@0.5.35",
       "dependsOn": [
         "moment@2.29.4"
       ]
@@ -20978,7 +20978,7 @@
         "dottie@2.0.2",
         "inflection@1.13.2",
         "lodash@4.17.21",
-        "moment-timezone@0.5.34",
+        "moment-timezone@0.5.35",
         "moment@2.29.4",
         "pg-connection-string@2.5.0",
         "retry-as-promised@5.0.0",
@@ -21241,7 +21241,7 @@
       "dependsOn": [
         "@types/cookie@0.4.1",
         "@types/cors@2.8.12",
-        "@types/node@18.7.8",
+        "@types/node@18.7.11",
         "accepts@1.3.8",
         "base64id@2.0.0",
         "engine.io@4.1.2",
@@ -21334,7 +21334,7 @@
       "ref": "spdx-correct@3.1.1",
       "dependsOn": [
         "spdx-expression-parse@3.0.1",
-        "spdx-license-ids@3.0.11"
+        "spdx-license-ids@3.0.12"
       ]
     },
     {
@@ -21344,11 +21344,11 @@
       "ref": "spdx-expression-parse@3.0.1",
       "dependsOn": [
         "spdx-exceptions@2.3.0",
-        "spdx-license-ids@3.0.11"
+        "spdx-license-ids@3.0.12"
       ]
     },
     {
-      "ref": "spdx-license-ids@3.0.11"
+      "ref": "spdx-license-ids@3.0.12"
     },
     {
       "ref": "split-string@3.1.0",
@@ -22115,8 +22115,8 @@
     {
       "ref": "with@7.0.2",
       "dependsOn": [
-        "@babel/parser@7.18.11",
-        "@babel/types@7.18.10",
+        "@babel/parser@7.18.13",
+        "@babel/types@7.18.13",
         "assert-never@1.2.1",
         "babel-walk@3.0.0-canary-5"
       ]
@@ -22124,7 +22124,7 @@
     {
       "ref": "wkx@0.5.0",
       "dependsOn": [
-        "@types/node@18.7.8"
+        "@types/node@18.7.11"
       ]
     },
     {

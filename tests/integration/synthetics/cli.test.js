@@ -23,7 +23,7 @@ const { resolve, join } = require('path')
 const {
   mkdtempSync, mkdirSync,
   createWriteStream,
-  openSync, close, existsSync, writeFileSync, readFileSync
+  openSync, closeSync, existsSync, writeFileSync, readFileSync
 } = require('fs')
 
 const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
@@ -32,24 +32,26 @@ const { version: thisVersion } = require('../../../package.json')
 const cli = require('../../../dist/cli')
 
 describe('cli', () => {
-  const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX_IT_CLI'))
+  const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX-IT-CLI.'))
 
   describe('run()', () => {
+    const tmpRootRun = join(tmpRoot, 'run')
+    mkdirSync(tmpRootRun)
+
     const cases = indexNpmLsDemoData()
 
     test.each(cases)('$subject npm$npm node$node $os', (dd) => {
-      const expectedOutputSnapshot = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results', `${dd.subject}_npm${dd.npm}.snap.json`)
+      const expectedOutputSnapshot = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results', `${dd.subject}_npm${dd.npm}_${dd.os}.snap.json`)
 
-      const tmpDir = join(tmpRoot, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
-      mkdirSync(tmpDir)
+      const logFileBase = join(tmpRootRun, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
 
-      const outFile = resolve(tmpDir, 'run_out')
-      const stdout = createWriteStream(outFile)
-      stdout.fd = openSync(outFile, 'w')
+      const outFile = `${logFileBase}.out`
+      const outFD = openSync(outFile, 'w')
+      const stdout = createWriteStream(outFile, {fd: outFD})
 
-      const errFile = resolve(tmpDir, 'run_err')
-      const stderr = createWriteStream(errFile)
-      stderr.fd = openSync(errFile, 'w')
+      const errFile = `${logFileBase}.err`
+      const errFD = openSync(errFile, 'w')
+      const stderr = createWriteStream(errFile, {fd: errFD})
 
       const mockProcess = {
         stdout: stdout,
@@ -78,10 +80,8 @@ describe('cli', () => {
       try {
         cli.run(mockProcess)
       } finally {
-        close(stdout.fd)
-        close(stderr.fd)
-        stdout.close()
-        stderr.close()
+        closeSync(outFD)
+        closeSync(errFD)
       }
 
       const actualOutput = readFileSync(outFile, 'utf8').replace(
@@ -95,10 +95,10 @@ describe('cli', () => {
       )
 
       if (!existsSync(expectedOutputSnapshot)) {
-        writeFileSync(expectedOutputSnapshot, actualOutput)
+        writeFileSync(expectedOutputSnapshot, actualOutput, 'utf8')
       }
 
-      expect(actualOutput).toEqual(readFileSync(expectedOutputSnapshot))
+      expect(actualOutput).toEqual(readFileSync(expectedOutputSnapshot, 'utf8'))
     })
   })
 })

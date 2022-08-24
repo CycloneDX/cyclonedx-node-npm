@@ -17,12 +17,12 @@
   "peerDependencies": {},
   "dependencies": {
     "@types/node": {
-      "version": "18.7.8",
-      "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.8.tgz",
+      "version": "18.7.11",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.11.tgz",
       "name": "@types/node",
-      "integrity": "sha512-/YP55EMK2341JkODUb8DM9O0x1SIz2aBvyF33Uf1c76St3VpsMXEIW0nxuKkq/5cxnbz0RD9cfwNZHEAZQD3ag==",
+      "integrity": "sha512-KZhFpSLlmK/sdocfSAjqPETTMd0ug6HIMIAwkwUpU79olnZdQtMxpQP+G1wDzCH7na+FltSIhbaZuKdwZ8RDrw==",
       "dev": true,
-      "_id": "@types/node@18.7.8",
+      "_id": "@types/node@18.7.11",
       "extraneous": false,
       "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/dev-dependencies/project/node_modules/@types/node",
       "_dependencies": {},

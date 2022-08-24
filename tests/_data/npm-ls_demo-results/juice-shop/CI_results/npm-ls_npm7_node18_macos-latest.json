@@ -5231,11 +5231,11 @@
                           "peerDependencies": {}
                         },
                         "spdx-license-ids": {
-                          "version": "3.0.11",
-                          "resolved": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.11.tgz",
+                          "version": "3.0.12",
+                          "resolved": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.12.tgz",
                           "name": "spdx-license-ids",
-                          "integrity": "sha512-Ctl2BrFiM0X3MANYgj3CkygxhRmr9mi6xhejbdO960nF6EDJApTYpn0BQnDKlnNBULKiCN1n3w9EBkHK8ZWg+g==",
-                          "_id": "spdx-license-ids@3.0.11",
+                          "integrity": "sha512-rr+VVSXtRhO4OHbXUiAF7xW3Bo9DuuF6C5jH+q/x15j2jniycgKbxU09Hr0WqlSLUs4i4ltHGXqTe7VHclYWyA==",
+                          "_id": "spdx-license-ids@3.0.12",
                           "extraneous": false,
                           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/spdx-license-ids",
                           "_dependencies": {},
@@ -5272,11 +5272,11 @@
                           "peerDependencies": {}
                         },
                         "spdx-license-ids": {
-                          "version": "3.0.11",
+                          "version": "3.0.12",
                           "name": "spdx-license-ids",
-                          "resolved": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.11.tgz",
-                          "integrity": "sha512-Ctl2BrFiM0X3MANYgj3CkygxhRmr9mi6xhejbdO960nF6EDJApTYpn0BQnDKlnNBULKiCN1n3w9EBkHK8ZWg+g==",
-                          "_id": "spdx-license-ids@3.0.11",
+                          "resolved": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.12.tgz",
+                          "integrity": "sha512-rr+VVSXtRhO4OHbXUiAF7xW3Bo9DuuF6C5jH+q/x15j2jniycgKbxU09Hr0WqlSLUs4i4ltHGXqTe7VHclYWyA==",
+                          "_id": "spdx-license-ids@3.0.12",
                           "extraneous": false,
                           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/spdx-license-ids",
                           "_dependencies": {},
@@ -22528,17 +22528,17 @@
               "peerDependencies": {},
               "dependencies": {
                 "@babel/parser": {
-                  "version": "7.18.11",
-                  "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.18.11.tgz",
+                  "version": "7.18.13",
+                  "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.18.13.tgz",
                   "name": "@babel/parser",
-                  "integrity": "sha512-9JKn5vN+hDt0Hdqn1PiJ2guflwP+B6Ga8qbDuoF0PzzVhrzsKIJo8yGqVk6CmMHiMei9w1C1Bp9IMJSIK+HPIQ==",
+                  "integrity": "sha512-dgXcIfMuQ0kgzLB2b9tRZs7TTFFaGM2AbtA4fJgUUYukzGH4jwsS7hzQHEGs67jdehpm22vkgKwvbU+aEflgwg==",
                   "bin": {
                     "parser": "bin/babel-parser.js"
                   },
                   "engines": {
                     "node": ">=6.0.0"
                   },
-                  "_id": "@babel/parser@7.18.11",
+                  "_id": "@babel/parser@7.18.13",
                   "extraneous": false,
                   "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@babel/parser",
                   "_dependencies": {},
@@ -22546,14 +22546,14 @@
                   "peerDependencies": {}
                 },
                 "@babel/types": {
-                  "version": "7.18.10",
-                  "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.18.10.tgz",
+                  "version": "7.18.13",
+                  "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.18.13.tgz",
                   "name": "@babel/types",
-                  "integrity": "sha512-MJvnbEiiNkpjo+LknnmRrqbY1GPUUggjv+wQVjetM/AONoupqRALB7I6jGqNUAZsKcRIEu2J6FRFvsczljjsaQ==",
+                  "integrity": "sha512-ePqfTihzW0W6XAU+aMw2ykilisStJfDnsejDCXRchCcMJ4O0+8DhPXf2YUbZ6wjBlsEmZwLK/sPweWtu8hcJYQ==",
                   "engines": {
                     "node": ">=6.9.0"
                   },
-                  "_id": "@babel/types@7.18.10",
+                  "_id": "@babel/types@7.18.13",
                   "extraneous": false,
                   "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@babel/types",
                   "_dependencies": {
@@ -22754,17 +22754,17 @@
               "peerDependencies": {},
               "dependencies": {
                 "@babel/parser": {
-                  "version": "7.18.11",
+                  "version": "7.18.13",
                   "name": "@babel/parser",
-                  "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.18.11.tgz",
-                  "integrity": "sha512-9JKn5vN+hDt0Hdqn1PiJ2guflwP+B6Ga8qbDuoF0PzzVhrzsKIJo8yGqVk6CmMHiMei9w1C1Bp9IMJSIK+HPIQ==",
+                  "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.18.13.tgz",
+                  "integrity": "sha512-dgXcIfMuQ0kgzLB2b9tRZs7TTFFaGM2AbtA4fJgUUYukzGH4jwsS7hzQHEGs67jdehpm22vkgKwvbU+aEflgwg==",
                   "bin": {
                     "parser": "bin/babel-parser.js"
                   },
                   "engines": {
                     "node": ">=6.0.0"
                   },
-                  "_id": "@babel/parser@7.18.11",
+                  "_id": "@babel/parser@7.18.13",
                   "extraneous": false,
                   "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@babel/parser",
                   "_dependencies": {},
@@ -22772,14 +22772,14 @@
                   "peerDependencies": {}
                 },
                 "@babel/types": {
-                  "version": "7.18.10",
+                  "version": "7.18.13",
                   "name": "@babel/types",
-                  "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.18.10.tgz",
-                  "integrity": "sha512-MJvnbEiiNkpjo+LknnmRrqbY1GPUUggjv+wQVjetM/AONoupqRALB7I6jGqNUAZsKcRIEu2J6FRFvsczljjsaQ==",
+                  "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.18.13.tgz",
+                  "integrity": "sha512-ePqfTihzW0W6XAU+aMw2ykilisStJfDnsejDCXRchCcMJ4O0+8DhPXf2YUbZ6wjBlsEmZwLK/sPweWtu8hcJYQ==",
                   "engines": {
                     "node": ">=6.9.0"
                   },
-                  "_id": "@babel/types@7.18.10",
+                  "_id": "@babel/types@7.18.13",
                   "extraneous": false,
                   "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@babel/types",
                   "_dependencies": {
@@ -22820,14 +22820,14 @@
                   "peerDependencies": {},
                   "dependencies": {
                     "@babel/types": {
-                      "version": "7.18.10",
+                      "version": "7.18.13",
                       "name": "@babel/types",
-                      "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.18.10.tgz",
-                      "integrity": "sha512-MJvnbEiiNkpjo+LknnmRrqbY1GPUUggjv+wQVjetM/AONoupqRALB7I6jGqNUAZsKcRIEu2J6FRFvsczljjsaQ==",
+                      "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.18.13.tgz",
+                      "integrity": "sha512-ePqfTihzW0W6XAU+aMw2ykilisStJfDnsejDCXRchCcMJ4O0+8DhPXf2YUbZ6wjBlsEmZwLK/sPweWtu8hcJYQ==",
                       "engines": {
                         "node": ">=6.9.0"
                       },
-                      "_id": "@babel/types@7.18.10",
+                      "_id": "@babel/types@7.18.13",
                       "extraneous": false,
                       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@babel/types",
                       "_dependencies": {
@@ -25321,14 +25321,14 @@
           "peerDependencies": {}
         },
         "moment-timezone": {
-          "version": "0.5.34",
-          "resolved": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.34.tgz",
+          "version": "0.5.35",
+          "resolved": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.35.tgz",
           "name": "moment-timezone",
-          "integrity": "sha512-3zAEHh2hKUs3EXLESx/wsgw6IQdusOT8Bxm3D9UrHPQR7zlMmzwybC8zHEM1tQ4LJwP7fcxrWr8tuBg05fFCbg==",
+          "integrity": "sha512-cY/pBOEXepQvlgli06ttCTKcIf8cD1nmNwOKQQAdHBqYApQSpAqotBMX0RJZNgMp6i0PlZuf1mFtnlyEkwyvFw==",
           "engines": {
             "node": "*"
           },
-          "_id": "moment-timezone@0.5.34",
+          "_id": "moment-timezone@0.5.35",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/moment-timezone",
           "_dependencies": {
@@ -25485,11 +25485,11 @@
           "peerDependencies": {},
           "dependencies": {
             "@types/node": {
-              "version": "18.7.8",
+              "version": "18.7.11",
               "name": "@types/node",
-              "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.8.tgz",
-              "integrity": "sha512-/YP55EMK2341JkODUb8DM9O0x1SIz2aBvyF33Uf1c76St3VpsMXEIW0nxuKkq/5cxnbz0RD9cfwNZHEAZQD3ag==",
-              "_id": "@types/node@18.7.8",
+              "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.11.tgz",
+              "integrity": "sha512-KZhFpSLlmK/sdocfSAjqPETTMd0ug6HIMIAwkwUpU79olnZdQtMxpQP+G1wDzCH7na+FltSIhbaZuKdwZ8RDrw==",
+              "_id": "@types/node@18.7.11",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@types/node",
               "_dependencies": {},
@@ -25739,11 +25739,11 @@
           "peerDependencies": {}
         },
         "@types/node": {
-          "version": "18.7.8",
-          "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.8.tgz",
+          "version": "18.7.11",
+          "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.11.tgz",
           "name": "@types/node",
-          "integrity": "sha512-/YP55EMK2341JkODUb8DM9O0x1SIz2aBvyF33Uf1c76St3VpsMXEIW0nxuKkq/5cxnbz0RD9cfwNZHEAZQD3ag==",
-          "_id": "@types/node@18.7.8",
+          "integrity": "sha512-KZhFpSLlmK/sdocfSAjqPETTMd0ug6HIMIAwkwUpU79olnZdQtMxpQP+G1wDzCH7na+FltSIhbaZuKdwZ8RDrw==",
+          "_id": "@types/node@18.7.11",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@types/node",
           "_dependencies": {},
