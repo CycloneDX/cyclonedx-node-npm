@@ -102,6 +102,14 @@ jobs:
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3
         with:
+          name: logs-jest-node${{ matrix.node-version }}-${{ matrix.os }}
+          path: tests/_log
+          if-no-files-found: error
+      - name: artifact test reports
+        if: ${{ failure() }}
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
           name: reports-jest-node${{ matrix.node-version }}-${{ matrix.os }}
-          path: reports
+          path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
