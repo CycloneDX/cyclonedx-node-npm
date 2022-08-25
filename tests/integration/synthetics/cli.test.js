@@ -38,7 +38,7 @@ describe('cli', () => {
     const tmpRootRun = join(tmpRoot, 'run-broken')
     mkdirSync(tmpRootRun)
 
-    const npmLsReplacement = resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement.js')
+    const npmLsReplacement = resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement')
 
     test('non-existing', () => {
       const logFileBase = join(tmpRootRun, 'non-existing')
