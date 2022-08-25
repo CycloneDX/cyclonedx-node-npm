@@ -59,6 +59,7 @@ describe('cli.run()', () => {
           'dummy_process'
         ],
         env: {
+          ...process.env,
           npm_execpath: resolve(__dirname, 'a-missing-executable')
         }
       }
@@ -92,6 +93,7 @@ describe('cli.run()', () => {
           'dummy_process'
         ],
         env: {
+          ...process.env,
           CT_EXPECTED_ARGS: 'some unexpected to cause a crash',
           // abuse the npm-ls replacement, as it can be caused to crash under control.
           npm_execpath: npmLsReplacement
@@ -141,6 +143,7 @@ describe('cli.run()', () => {
           join('dummy_project', 'package.json')
         ],
         env: {
+          ...process.env,
           CT_EXPECTED_ARGS: ['ls', '--json', '--all', '--long'].join(' '),
           CT_SUBJECT: dd.subject,
           CT_NPM: dd.npm,

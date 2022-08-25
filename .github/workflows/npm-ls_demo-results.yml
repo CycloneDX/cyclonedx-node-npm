@@ -7,12 +7,14 @@ on:
   push:
     branches: [ 'master', '1.0-dev' ]
     paths:
-      - demos/*/project/**
-      - .github/workflows/npm-ls_demo-results.yml # this file
+      - '!**'
+      - 'demos/*/project/*'
+      - '.github/workflows/npm-ls_demo-results.yml' # this file
   pull_request:
     paths:
-      - demos/*/project/**
-      - .github/workflows/npm-ls_demo-results.yml # this file
+      - '!**'
+      - 'demos/*/project/**'
+      - '.github/workflows/npm-ls_demo-results.yml' # this file
   workflow_dispatch:
 
 env:
