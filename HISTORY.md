@@ -5,7 +5,8 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Fixed
-  * Run on Windows systems was fixed. 
+  * Run on Windows systems was fixed.
+  * Debug output was made clearer to understand.
 
 ## 1.0.0-beta.3
 

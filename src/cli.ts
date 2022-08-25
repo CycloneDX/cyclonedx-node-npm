@@ -165,7 +165,7 @@ export function run (process: NodeJS.Process): void {
   program.parse(process.argv)
 
   const options: CommandOptions = program.opts()
-  myConsole.debug('options:', options)
+  myConsole.debug('DEBUG | options: %j', options)
 
   const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
   if (!existsSync(packageFile)) {
@@ -173,9 +173,9 @@ export function run (process: NodeJS.Process): void {
     program.error(msg)
     throw new Error(msg)
   }
-  myConsole.debug('packageFile:', packageFile)
+  myConsole.debug('DEBUG | packageFile: %s', packageFile)
   const projectDir = dirname(packageFile)
-  myConsole.debug('projectDir:', projectDir)
+  myConsole.debug('DEBUG | projectDir: %s', projectDir)
 
   /**
    * The path to the used npm lock file.
@@ -196,7 +196,7 @@ export function run (process: NodeJS.Process): void {
     program.error(msg)
     throw new Error(msg)
   }
-  myConsole.debug('lockFile:', lockFile)
+  myConsole.debug('DEBUG | lockFile: %s', lockFile)
 
   const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
 
@@ -236,7 +236,7 @@ export function run (process: NodeJS.Process): void {
   }
 
   // TODO use instead ? : https://www.npmjs.com/package/debug ?
-  myConsole.info('writing BOM to', options.outputFile)
+  myConsole.info('INFO  | writing BOM to', options.outputFile)
   writeSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd

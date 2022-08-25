@@ -111,8 +111,8 @@ export class BomBuilder {
     }
 
     // TODO use instead ? : https://www.npmjs.com/package/debug ?
-    this.console.info('gather dependency tree ...')
-    this.console.debug('npm-ls: run', command, 'with', args, 'in', projectDir)
+    this.console.info('INFO  | gather dependency tree ...')
+    this.console.debug('DEBUG | npm-ls: run %s with %j in %s', command, args, projectDir)
     const npmLsReturns = spawnSync(command, args, {
       // must use a shell for Windows systems in order to work
       shell: true,
@@ -122,7 +122,7 @@ export class BomBuilder {
     })
     /*
     if (npmLsReturns.stdout?.length > 0) {
-      this.console.group('npm-ls: STDOUT')
+      this.console.group('DEBUG | npm-ls: STDOUT')
       this.console.debug('%s', npmLsReturns.stdout)
       this.console.groupEnd()
     } else {
@@ -130,16 +130,16 @@ export class BomBuilder {
     }
     */
     if (npmLsReturns.stderr?.length > 0) {
-      this.console.group('npm-ls: STDERR')
+      this.console.group('WARN  | npm-ls: STDERR')
       this.console.warn('%s', npmLsReturns.stderr)
       this.console.groupEnd()
     } else {
-      this.console.debug('npm-ls: no STDERR')
+      this.console.debug('DEBUG | npm-ls: no STDERR')
     }
     if (npmLsReturns.error instanceof Error) {
       const error = npmLsReturns.error as spawnSyncResultError
-      this.console.group('npm-ls: errors')
-      this.console.debug('%j', error)
+      this.console.group('ERROR | npm-ls: errors')
+      this.console.error('%j', error)
       this.console.groupEnd()
       throw new Error(`npm-ls exited with errors: ${
         error.errno ?? '???'} ${
@@ -156,7 +156,7 @@ export class BomBuilder {
 
   buildFromNpmLs (data: any): Models.Bom {
     // TODO use instead ? : https://www.npmjs.com/package/debug ?
-    this.console.info('build BOM ...')
+    this.console.info('INFO  | build BOM ...')
 
     // region all components & dependencies
 
