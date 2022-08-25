@@ -73,7 +73,7 @@
     "prepublish": "npm run build",
     "prepublishOnly": "npm run build",
     "lint": "tsc --noEmit",
-    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "prebuild": "node -r fs -e 'fs.rmSync(`dist`,{recursive:true,force:true})'",
     "build": "tsc -b ./tsconfig.json",
     "cs-fix": "eslint --fix .",
     "setup-tests": "echo 'noting yet'",
