@@ -114,6 +114,8 @@ export class BomBuilder {
     this.console.info('gather dependency tree ...')
     this.console.debug('npm-ls: run', command, 'with', args, 'in', projectDir)
     const npmLsReturns = spawnSync(command, args, {
+      // must use a shell for Windows systems in order to work
+      shell: true,
       cwd: projectDir,
       encoding: 'buffer',
       maxBuffer: Number.POSITIVE_INFINITY // DIRTY but effective
