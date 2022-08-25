@@ -193,6 +193,7 @@ export class BomBuilder {
       new Map(Array.from(allComponents.entries()).filter(([, c]) => c !== rootComponent)),
       this.treeBuilder.fromPaths(
         new Set(allComponents.keys()),
+        // do not depend on `path.sep` -- this would be runtime-dependent, not input-dependent
         data.path[0] === '/' ? '/' : '\\'
       )
     )
