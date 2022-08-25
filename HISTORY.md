@@ -4,14 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Misc
+  * Improved test coverage.
+
 ## 1.0.0-beta.4
 
 * Fixed
   * Run on Windows systems was fixed.
   * Improved error reporting.
   * Debug output was made clearer to understand.
-* Misc
-  * Improved test coverage. 
 
 ## 1.0.0-beta.3
 
