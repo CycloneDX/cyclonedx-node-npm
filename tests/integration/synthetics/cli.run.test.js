@@ -44,12 +44,10 @@ describe('cli.run()', () => {
       const logFileBase = join(tmpRootRun, 'non-existing')
 
       const outFile = `${logFileBase}.out`
-      const outFD = openSync(outFile, 'w')
-      const stdout = createWriteStream(outFile, { fd: outFD })
+      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
 
       const errFile = `${logFileBase}.err`
-      const errFD = openSync(errFile, 'w')
-      const stderr = createWriteStream(errFile, { fd: errFD })
+      const stderr = createWriteStream(errFile) // not perfect, but works
 
       const mockProcess = {
         stdout: stdout,
@@ -70,8 +68,8 @@ describe('cli.run()', () => {
           cli.run(mockProcess)
         }).toThrow(/^npm-ls exited with errors: \?\?\? \d+ noSignal$/i)
       } finally {
-        closeSync(outFD)
-        closeSync(errFD)
+        closeSync(stdout.fd)
+        stderr.close()
       }
     })
 
@@ -79,12 +77,10 @@ describe('cli.run()', () => {
       const logFileBase = join(tmpRootRun, 'error-exit')
 
       const outFile = `${logFileBase}.out`
-      const outFD = openSync(outFile, 'w')
-      const stdout = createWriteStream(outFile, { fd: outFD })
+      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
 
       const errFile = `${logFileBase}.err`
-      const errFD = openSync(errFile, 'w')
-      const stderr = createWriteStream(errFile, { fd: errFD })
+      const stderr = createWriteStream(errFile) // not perfect, but works
 
       const mockProcess = {
         stdout: stdout,
@@ -107,8 +103,8 @@ describe('cli.run()', () => {
           cli.run(mockProcess)
         }).toThrow(/^npm-ls exited with errors: \?\?\? 1 noSignal$/i)
       } finally {
-        closeSync(outFD)
-        closeSync(errFD)
+        closeSync(stdout.fd)
+        stderr.close()
       }
     })
   })
