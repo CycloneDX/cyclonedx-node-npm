@@ -73,8 +73,6 @@ jobs:
           - '16.0.0'  # lowest supported
         os:
           - ubuntu-latest
-          - macos-latest
-          - windows-latest
           ## disabled unless needed
           #- macos-latest
           #- windows-latest

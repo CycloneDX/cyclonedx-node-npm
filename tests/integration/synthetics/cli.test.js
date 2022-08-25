@@ -34,8 +34,8 @@ const cli = require('../../../dist/cli')
 describe('cli', () => {
   const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX-IT-CLI.'))
 
-  describe('run()', () => {
-    const tmpRootRun = join(tmpRoot, 'run')
+  describe('run() with prepared', () => {
+    const tmpRootRun = join(tmpRoot, 'run-prepared')
     mkdirSync(tmpRootRun)
 
     const cases = indexNpmLsDemoData()
@@ -61,7 +61,7 @@ describe('cli', () => {
         argv: [
           process.argv[0],
           'dummy_process',
-          // no intention to test all the spec-versions nor all the output-formats - this is not our scope.
+          // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
           '--output-reproducible',
           '--spec-version', '1.4',
           '--output-format', 'JSON',
@@ -73,7 +73,7 @@ describe('cli', () => {
           CT_NPM: dd.npm,
           CT_NODE: dd.node,
           CT_OS: dd.os,
-          npm_execpath: resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'cli-replacer.js')
+          npm_execpath: resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement.js')
         }
       }
 
