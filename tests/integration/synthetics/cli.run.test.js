@@ -125,12 +125,12 @@ describe('cli.run()', () => {
       const logFileBase = join(tmpRootRun, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
 
       const outFile = `${logFileBase}.out`
-      const outFD = openSync(outFile, 'w')
-      const stdout = createWriteStream(outFile, { fd: outFD })
+      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
 
       const errFile = `${logFileBase}.err`
-      const errFD = openSync(errFile, 'w')
-      const stderr = createWriteStream(errFile, { fd: errFD })
+      const stderr = createWriteStream(errFile) // not perfect, but works
+
+      stderr.write('saddsad')
 
       const mockProcess = {
         stdout: stdout,
@@ -159,8 +159,8 @@ describe('cli.run()', () => {
       try {
         cli.run(mockProcess)
       } finally {
-        closeSync(outFD)
-        closeSync(errFD)
+        closeSync(stdout.fd)
+        stderr.close()
       }
 
       const actualOutput = readFileSync(outFile, 'utf8').replace(
