@@ -31,14 +31,14 @@ const { version: thisVersion } = require('../../../package.json')
 
 const cli = require('../../../dist/cli')
 
-describe('cli', () => {
+describe('cli.run()', () => {
   const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX-IT-CLI.'))
 
-  describe('run() with broken npm-ls', () => {
+  const npmLsReplacement = resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement')
+
+  describe('with broken npm-ls', () => {
     const tmpRootRun = join(tmpRoot, 'run-broken')
     mkdirSync(tmpRootRun)
-
-    const npmLsReplacement = resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement')
 
     test('non-existing', () => {
       const logFileBase = join(tmpRootRun, 'non-existing')
@@ -54,7 +54,7 @@ describe('cli', () => {
       const mockProcess = {
         stdout: stdout,
         stderr: stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_project', 'package.json'),
+        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_project'),
         argv0: process.argv0,
         argv: [
           process.argv[0],
@@ -89,7 +89,7 @@ describe('cli', () => {
       const mockProcess = {
         stdout: stdout,
         stderr: stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_project', 'package.json'),
+        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_project'),
         argv0: process.argv0,
         argv: [
           process.argv[0],
@@ -113,7 +113,7 @@ describe('cli', () => {
     })
   })
 
-  describe('run() with prepared npm-ls', () => {
+  describe('with prepared npm-ls', () => {
     const tmpRootRun = join(tmpRoot, 'run-prepared')
     mkdirSync(tmpRootRun)
 
