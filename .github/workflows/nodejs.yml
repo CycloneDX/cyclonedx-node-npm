@@ -96,7 +96,7 @@ jobs:
           path: ${{ env.DIST_DIR }}
       - name: test
         run: npm run test:jest
-      - name: artifact test reports
+      - name: artifact test logs
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3
