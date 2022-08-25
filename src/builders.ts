@@ -36,7 +36,7 @@ interface BomBuilderOptions {
   flattenComponents?: BomBuilder['flattenComponents']
 }
 
-interface spawnSyncResultError {
+interface SpawnSyncResultError extends Error {
   errno?: number
   code?: string
   signal?: NodeJS.Signals
@@ -126,7 +126,7 @@ export class BomBuilder {
       this.console.debug('%s', npmLsReturns.stdout)
       this.console.groupEnd()
     } else {
-      this.console.debug('npm-ls: no STDOUT')
+      this.console.debug('DEBUG | npm-ls: no STDOUT')
     }
     */
     if (npmLsReturns.stderr?.length > 0) {
@@ -136,8 +136,8 @@ export class BomBuilder {
     } else {
       this.console.debug('DEBUG | npm-ls: no STDERR')
     }
-    if (npmLsReturns.error instanceof Error) {
-      const error = npmLsReturns.error as spawnSyncResultError
+    if (npmLsReturns.status !== 0 || npmLsReturns.error instanceof Error) {
+      const error = npmLsReturns.error as SpawnSyncResultError ?? {}
       this.console.group('ERROR | npm-ls: errors')
       this.console.error('%j', error)
       this.console.groupEnd()
