@@ -73,9 +73,8 @@ jobs:
           - '16.0.0'  # lowest supported
         os:
           - ubuntu-latest
-          ## disabled unless needed
-          #- macos-latest
-          #- windows-latest
+          - windows-latest
+          - macos-latest
     timeout-minutes: 10
     steps:
       - name: Checkout
