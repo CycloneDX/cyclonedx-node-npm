@@ -38,6 +38,8 @@ describe('cli', () => {
     const tmpRootRun = join(tmpRoot, 'run-broken')
     mkdirSync(tmpRootRun)
 
+    const npmLsReplacement = resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement.js')
+
     test('non-existing', () => {
       const logFileBase = join(tmpRootRun, 'non-existing')
 
@@ -52,15 +54,14 @@ describe('cli', () => {
       const mockProcess = {
         stdout: stdout,
         stderr: stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data'),
+        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_project', 'package.json'),
         argv0: process.argv0,
         argv: [
           process.argv[0],
-          'dummy_process',
-          join('dummy_project', 'package.json')
+          'dummy_process'
         ],
         env: {
-          npm_execpath: resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'a-missing-executable')
+          npm_execpath: resolve(__dirname, 'a-missing-executable')
         }
       }
 
@@ -88,17 +89,16 @@ describe('cli', () => {
       const mockProcess = {
         stdout: stdout,
         stderr: stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data'),
+        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_project', 'package.json'),
         argv0: process.argv0,
         argv: [
           process.argv[0],
-          'dummy_process',
-          join('dummy_project', 'package.json')
+          'dummy_process'
         ],
         env: {
           CT_EXPECTED_ARGS: 'some unexpected to cause a crash',
           // abuse the npm-ls replacement, as it can be caused to crash under control.
-          npm_execpath: resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement.js')
+          npm_execpath: npmLsReplacement
         }
       }
 
@@ -152,7 +152,7 @@ describe('cli', () => {
           CT_NPM: dd.npm,
           CT_NODE: dd.node,
           CT_OS: dd.os,
-          npm_execpath: resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement.js')
+          npm_execpath: npmLsReplacement
         }
       }
 
