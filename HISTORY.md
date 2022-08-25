@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.0.0-beta.4
+
 * Fixed
   * Run on Windows systems was fixed.
   * Improved error reporting.
