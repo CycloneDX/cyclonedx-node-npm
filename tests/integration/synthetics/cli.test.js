@@ -34,7 +34,86 @@ const cli = require('../../../dist/cli')
 describe('cli', () => {
   const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX-IT-CLI.'))
 
-  describe('run() with prepared', () => {
+  describe('run() with broken npm-ls', () => {
+    const tmpRootRun = join(tmpRoot, 'run-broken')
+    mkdirSync(tmpRootRun)
+
+    test('non-existing', () => {
+      const logFileBase = join(tmpRootRun, 'non-existing')
+
+      const outFile = `${logFileBase}.out`
+      const outFD = openSync(outFile, 'w')
+      const stdout = createWriteStream(outFile, { fd: outFD })
+
+      const errFile = `${logFileBase}.err`
+      const errFD = openSync(errFile, 'w')
+      const stderr = createWriteStream(errFile, { fd: errFD })
+
+      const mockProcess = {
+        stdout: stdout,
+        stderr: stderr,
+        cwd: () => resolve(__dirname, '..', '..', '_data'),
+        argv0: process.argv0,
+        argv: [
+          process.argv[0],
+          'dummy_process',
+          join('dummy_project', 'package.json')
+        ],
+        env: {
+          npm_execpath: resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'a-missing-executable')
+        }
+      }
+
+      try {
+        expect(() => {
+          cli.run(mockProcess)
+        }).toThrow(/^npm-ls exited with errors: \?\?\? \d+ noSignal$/i)
+      } finally {
+        closeSync(outFD)
+        closeSync(errFD)
+      }
+    })
+
+    test('error exit', () => {
+      const logFileBase = join(tmpRootRun, 'error-exit')
+
+      const outFile = `${logFileBase}.out`
+      const outFD = openSync(outFile, 'w')
+      const stdout = createWriteStream(outFile, { fd: outFD })
+
+      const errFile = `${logFileBase}.err`
+      const errFD = openSync(errFile, 'w')
+      const stderr = createWriteStream(errFile, { fd: errFD })
+
+      const mockProcess = {
+        stdout: stdout,
+        stderr: stderr,
+        cwd: () => resolve(__dirname, '..', '..', '_data'),
+        argv0: process.argv0,
+        argv: [
+          process.argv[0],
+          'dummy_process',
+          join('dummy_project', 'package.json')
+        ],
+        env: {
+          CT_EXPECTED_ARGS: 'some unexpected to cause a crash',
+          // abuse the npm-ls replacement, as it can be caused to crash under control.
+          npm_execpath: resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement.js')
+        }
+      }
+
+      try {
+        expect(() => {
+          cli.run(mockProcess)
+        }).toThrow(/^npm-ls exited with errors: \?\?\? 1 noSignal$/i)
+      } finally {
+        closeSync(outFD)
+        closeSync(errFD)
+      }
+    })
+  })
+
+  describe('run() with prepared npm-ls', () => {
     const tmpRootRun = join(tmpRoot, 'run-prepared')
     mkdirSync(tmpRootRun)
 
