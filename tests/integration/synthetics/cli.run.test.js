@@ -126,8 +126,6 @@ describe('cli.run()', () => {
       const errFile = `${logFileBase}.err`
       const stderr = createWriteStream(errFile) // not perfect, but works
 
-      stderr.write('saddsad')
-
       const mockProcess = {
         stdout: stdout,
         stderr: stderr,
