@@ -44,7 +44,6 @@ assert.strictEqual(matches.length, 1, 'did not find exactly 1 match')
 const { path } = matches[0]
 
 const rs = createReadStream(path)
-rs.once('error', e => {
-  throw e
-})
+rs.once('error', e => { throw e })
 rs.once('open', () => rs.pipe(process.stdout))
+rs.once('end', () => process.exit(0))
