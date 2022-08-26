@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Misc
+  * Improved test coverage.
+
 ## 1.0.0-beta.4
 
 * Fixed

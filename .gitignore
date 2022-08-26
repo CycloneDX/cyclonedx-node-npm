@@ -1,6 +1,11 @@
 
 /reports/
 /CI_reports/
+
+/dist/
+
+/pack/
+/build/
 /release_assets/
 
 *.cache

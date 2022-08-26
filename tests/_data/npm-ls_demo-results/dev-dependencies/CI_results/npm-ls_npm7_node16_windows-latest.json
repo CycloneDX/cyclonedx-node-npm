@@ -1,0 +1,33 @@
+{
+  "version": "0.0.0",
+  "name": "demo-dev-dependencies",
+  "description": "demo: demo-dev-dependencies -- showcase how workspaces look like",
+  "private": true,
+  "license": "Apache-2.0",
+  "workspaces": [
+    "workspaces/*"
+  ],
+  "devDependencies": {
+    "@types/node": ">=16"
+  },
+  "_id": "demo-dev-dependencies@0.0.0",
+  "extraneous": false,
+  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project",
+  "_dependencies": {},
+  "peerDependencies": {},
+  "dependencies": {
+    "@types/node": {
+      "version": "18.7.11",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.11.tgz",
+      "name": "@types/node",
+      "integrity": "sha512-KZhFpSLlmK/sdocfSAjqPETTMd0ug6HIMIAwkwUpU79olnZdQtMxpQP+G1wDzCH7na+FltSIhbaZuKdwZ8RDrw==",
+      "dev": true,
+      "_id": "@types/node@18.7.11",
+      "extraneous": false,
+      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project\\node_modules\\@types\\node",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
+    }
+  }
+}

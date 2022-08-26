@@ -81,15 +81,16 @@ export class BomBuilder {
     this.console = console_
   }
 
-  buildFromLockFile (filePath: string): Models.Bom {
+  buildFromLockFile (filePath: string, process: NodeJS.Process): Models.Bom {
     return this.buildFromNpmLs(
       this.fetchNpmLs(
-        dirname(filePath)
+        dirname(filePath),
+        process
       )
     )
   }
 
-  private fetchNpmLs (projectDir: string): any {
+  private fetchNpmLs (projectDir: string, process: NodeJS.Process): any {
     // `npm_execpath` is used by `npm` internally, and is propagated when kicking `npm run-script`
     /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string */
     const command = process.env.npm_execpath || 'npm'
@@ -117,8 +118,9 @@ export class BomBuilder {
       // must use a shell for Windows systems in order to work
       shell: true,
       cwd: projectDir,
+      env: process.env,
       encoding: 'buffer',
-      maxBuffer: Number.POSITIVE_INFINITY // DIRTY but effective
+      maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
     })
     /*
     if (npmLsReturns.stdout?.length > 0) {
@@ -149,8 +151,9 @@ export class BomBuilder {
 
     try {
       return JSON.parse(npmLsReturns.stdout.toString())
-    } catch (jsonParseError: any) {
-      throw new Error('failed to parse $npmLsReturns')
+    } catch (jsonParseError) {
+      // @ts-expect-error TS2554
+      throw new Error('failed to parse npm-ls response', { cause: jsonParseError })
     }
   }
 
@@ -191,6 +194,7 @@ export class BomBuilder {
       new Map(Array.from(allComponents.entries()).filter(([, c]) => c !== rootComponent)),
       this.treeBuilder.fromPaths(
         new Set(allComponents.keys()),
+        // do not depend on `path.sep` -- this would be runtime-dependent, not input-dependent
         data.path[0] === '/' ? '/' : '\\'
       )
     )
