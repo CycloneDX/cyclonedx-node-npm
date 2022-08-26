@@ -23,9 +23,16 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 const assert = require('assert')
 const { createReadStream } = require('fs')
 
-const index = require('./').index()
-
 // console.error('debug:', 'env=%j', process.env)
+
+process.exitCode = Number(process.env.CT_EXIT_CODE ?? 0)
+
+if (process.env.CT_SUBJECT === 'broken-json') {
+  process.stdout.write('{"broken-json"')
+  process.exit()
+}
+
+const index = require('./').index()
 
 const expectedArgs = process.env.CT_EXPECTED_ARGS.split(' ')
 assert.deepStrictEqual(process.argv.slice(2), expectedArgs, 'unexpected args')
@@ -38,7 +45,6 @@ const { path } = matches[0]
 
 const rs = createReadStream(path)
 rs.once('error', e => {
-  process.exitCode = 1
   throw e
 })
 rs.once('open', () => rs.pipe(process.stdout))

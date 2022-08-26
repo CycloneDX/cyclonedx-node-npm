@@ -32,15 +32,56 @@ const { version: thisVersion } = require('../../../package.json')
 const cli = require('../../../dist/cli')
 
 describe('cli.run()', () => {
-  const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX-IT-CLI.'))
+  const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX-IT-CLI.run.'))
 
   const npmLsReplacement = resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement')
 
-  describe('with broken npm-ls', () => {
-    const tmpRootRun = join(tmpRoot, 'run-broken')
+  describe('broken project', () => {
+    const tmpRootRun = join(tmpRoot, 'broken-project')
     mkdirSync(tmpRootRun)
 
-    test('non-existing', () => {
+    test.each([
+      ['no-lockfile', /missing .*(?:lock|shrinkwrap) file/i],
+      ['no-manifest', /missing .*manifest file/i]
+    ])('%s', (folderName, expectedError) => {
+      const logFileBase = join(tmpRootRun, folderName)
+
+      const outFile = `${logFileBase}.out`
+      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
+
+      const errFile = `${logFileBase}.err`
+      const stderr = createWriteStream(errFile) // not perfect, but works
+
+      const mockProcess = {
+        stdout: stdout,
+        stderr: stderr,
+        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', folderName),
+        argv0: process.argv0,
+        argv: [
+          process.argv[0],
+          'dummy_process'
+        ],
+        env: {
+          ...process.env
+        }
+      }
+
+      try {
+        expect(() => {
+          cli.run(mockProcess)
+        }).toThrow(expectedError)
+      } finally {
+        closeSync(stdout.fd)
+        stderr.close()
+      }
+    })
+  })
+
+  describe('with broken npm-ls', () => {
+    const tmpRootRun = join(tmpRoot, 'with-broken')
+    mkdirSync(tmpRootRun)
+
+    test('error on non-existing binary', () => {
       const logFileBase = join(tmpRootRun, 'non-existing')
 
       const outFile = `${logFileBase}.out`
@@ -52,7 +93,7 @@ describe('cli.run()', () => {
       const mockProcess = {
         stdout: stdout,
         stderr: stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_project'),
+        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', 'with-lockfile'),
         argv0: process.argv0,
         argv: [
           process.argv[0],
@@ -74,8 +115,8 @@ describe('cli.run()', () => {
       }
     })
 
-    test('error exit', () => {
-      const logFileBase = join(tmpRootRun, 'error-exit')
+    test('error on non-zero exit', () => {
+      const logFileBase = join(tmpRootRun, 'error-exit-nonzero')
 
       const outFile = `${logFileBase}.out`
       const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
@@ -86,7 +127,7 @@ describe('cli.run()', () => {
       const mockProcess = {
         stdout: stdout,
         stderr: stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_project'),
+        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', 'with-lockfile'),
         argv0: process.argv0,
         argv: [
           process.argv[0],
@@ -109,10 +150,46 @@ describe('cli.run()', () => {
         stderr.close()
       }
     })
+
+    test('error on broken json response', () => {
+      const logFileBase = join(tmpRootRun, 'error-json-broken')
+
+      const outFile = `${logFileBase}.out`
+      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
+
+      const errFile = `${logFileBase}.err`
+      const stderr = createWriteStream(errFile) // not perfect, but works
+
+      const mockProcess = {
+        stdout: stdout,
+        stderr: stderr,
+        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', 'with-lockfile'),
+        argv0: process.argv0,
+        argv: [
+          process.argv[0],
+          'dummy_process'
+        ],
+        env: {
+          ...process.env,
+          CT_SUBJECT: 'broken-json',
+          // abuse the npm-ls replacement, as it can be caused to crash under control.
+          npm_execpath: npmLsReplacement
+        }
+      }
+
+      try {
+        expect(() => {
+          cli.run(mockProcess)
+        }).toThrow(/failed to parse npm-ls response/i)
+      } finally {
+        closeSync(stdout.fd)
+        stderr.close()
+      }
+    })
   })
 
   describe('with prepared npm-ls', () => {
-    const tmpRootRun = join(tmpRoot, 'run-prepared')
+    const tmpRootRun = join(tmpRoot, 'with-prepared')
     mkdirSync(tmpRootRun)
 
     const cases = indexNpmLsDemoData()
@@ -140,7 +217,7 @@ describe('cli.run()', () => {
           '--output-reproducible',
           '--spec-version', '1.4',
           '--output-format', 'JSON',
-          join('dummy_project', 'package.json')
+          join('dummy_projects', 'with-lockfile', 'package.json')
         ],
         env: {
           ...process.env,

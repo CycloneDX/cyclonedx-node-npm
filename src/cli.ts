@@ -169,9 +169,7 @@ export function run (process: NodeJS.Process): void {
 
   const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
   if (!existsSync(packageFile)) {
-    const msg = `missing project's manifest file: ${packageFile}`
-    program.error(msg)
-    throw new Error(msg)
+    throw new Error(`missing project's manifest file: ${packageFile}`)
   }
   myConsole.debug('DEBUG | packageFile: %s', packageFile)
   const projectDir = dirname(packageFile)
@@ -192,9 +190,7 @@ export function run (process: NodeJS.Process): void {
   } else if (existsSync(packageLockFile)) {
     lockFile = packageLockFile
   } else {
-    const msg = 'missing package lock file, missing npm shrinkwrap file'
-    program.error(msg)
-    throw new Error(msg)
+    throw new Error('missing package lock file or npm shrinkwrap file')
   }
   myConsole.debug('DEBUG | lockFile: %s', lockFile)
 
@@ -220,9 +216,7 @@ export function run (process: NodeJS.Process): void {
 
   const spec = Spec.SpecVersionDict[options.specVersion]
   if (undefined === spec) {
-    const msg = 'unsupported spec-version'
-    program.error(msg)
-    throw new Error(msg)
+    throw new Error('unsupported spec-version')
   }
 
   let serializer: Serialize.Types.Serializer
