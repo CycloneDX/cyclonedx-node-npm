@@ -25,7 +25,7 @@ Development will happen in branch [`1.0-dev`](https://github.com/CycloneDX/cyclo
 
 ## Requirements
 
-* `node` >= `16`
+* `node` >= `14`
 * `npm` in range `6 - 8`
 
 ## Install
