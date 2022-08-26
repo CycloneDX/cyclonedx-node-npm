@@ -45,5 +45,5 @@ const { path } = matches[0]
 
 const rs = createReadStream(path)
 rs.once('error', e => { throw e })
-rs.once('open', () => rs.pipe(process.stdout))
-rs.once('end', () => process.exit(0))
+rs.once('open', () => { rs.pipe(process.stdout) })
+rs.once('end', () => { rs.unpipe(); rs.close() })
