@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.0.6",
-    "@typescript-eslint/parser": "^4.33.0",
+    "@typescript-eslint/parser": "^5.35.1",
     "eslint": "^7.32.0",
     "fast-glob": "^3.2.11",
     "imurmurhash": "^0.1.4",
