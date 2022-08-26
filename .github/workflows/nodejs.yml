@@ -99,6 +99,8 @@ jobs:
           npm run test:jest -- 
           --ci
           --verbose
+          --runInBand
+          --logHeapUsage
       - name: artifact test logs
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
