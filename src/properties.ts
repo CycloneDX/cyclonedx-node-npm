@@ -17,8 +17,10 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-// TODO add link to spec
-// see https://github.com/CycloneDX/cyclonedx-property-taxonomy/pull/21
+/**
+ * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md npm property taxonomy}
+ */
+
 export const enum PropertyNames {
   PackageBundled = 'cdx:npm:package:bundled',
   PackageExtraneous = 'cdx:npm:package:extraneous',
