@@ -2,6 +2,6 @@
 try {
   require('../dist/cli.js').run(process)
 } catch (e) {
-  process.stderr.write(`ERROR | ${e}`)
+  process.stderr.write(`\n${e}\n`)
   process.exit(e?.code || 1)
 }
