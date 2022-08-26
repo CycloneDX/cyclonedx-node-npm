@@ -4,17 +4,17 @@
 name: npm-ls demo results
 
 on:
-  push:
-    branches: [ 'master', '1.0-dev' ]
-    paths:
-      - '!**'
-      - 'demos/*/project/*'
-      - '.github/workflows/npm-ls_demo-results.yml' # this file
-  pull_request:
-    paths:
-      - '!**'
-      - 'demos/*/project/**'
-      - '.github/workflows/npm-ls_demo-results.yml' # this file
+  #push:
+  #  branches: [ 'master', '1.0-dev' ]
+  #  paths:
+  #    - '!**'
+  #    - 'demos/*/project/*'
+  #    - '.github/workflows/npm-ls_demo-results.yml' # this file
+  #pull_request:
+  #  paths:
+  #    - '!**'
+  #    - 'demos/*/project/**'
+  #    - '.github/workflows/npm-ls_demo-results.yml' # this file
   workflow_dispatch:
 
 env:
