@@ -1,2 +1,3 @@
 
-*/CI_results/**     linguist-generated binary
+*/CI_results/*       linguist-generated binary
+*/CI_results/*.json  linguist-generated binary diff=json

@@ -25321,14 +25321,14 @@
           "peerDependencies": {}
         },
         "moment-timezone": {
-          "version": "0.5.35",
-          "resolved": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.35.tgz",
+          "version": "0.5.37",
+          "resolved": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.37.tgz",
           "name": "moment-timezone",
-          "integrity": "sha512-cY/pBOEXepQvlgli06ttCTKcIf8cD1nmNwOKQQAdHBqYApQSpAqotBMX0RJZNgMp6i0PlZuf1mFtnlyEkwyvFw==",
+          "integrity": "sha512-uEDzDNFhfaywRl+vwXxffjjq1q0Vzr+fcQpQ1bU0kbzorfS7zVtZnCnGc8mhWmF39d4g4YriF6kwA75mJKE/Zg==",
           "engines": {
             "node": "*"
           },
-          "_id": "moment-timezone@0.5.35",
+          "_id": "moment-timezone@0.5.37",
           "extraneous": false,
           "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/moment-timezone",
           "_dependencies": {
@@ -25485,11 +25485,11 @@
           "peerDependencies": {},
           "dependencies": {
             "@types/node": {
-              "version": "18.7.11",
+              "version": "18.7.13",
               "name": "@types/node",
-              "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.11.tgz",
-              "integrity": "sha512-KZhFpSLlmK/sdocfSAjqPETTMd0ug6HIMIAwkwUpU79olnZdQtMxpQP+G1wDzCH7na+FltSIhbaZuKdwZ8RDrw==",
-              "_id": "@types/node@18.7.11",
+              "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.13.tgz",
+              "integrity": "sha512-46yIhxSe5xEaJZXWdIBP7GU4HDTG8/eo0qd9atdiL+lFpA03y8KS+lkTN834TWJj5767GbWv4n/P6efyTFt1Dw==",
+              "_id": "@types/node@18.7.13",
               "extraneous": false,
               "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@types/node",
               "_dependencies": {},
@@ -25739,11 +25739,11 @@
           "peerDependencies": {}
         },
         "@types/node": {
-          "version": "18.7.11",
-          "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.11.tgz",
+          "version": "18.7.13",
+          "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.13.tgz",
           "name": "@types/node",
-          "integrity": "sha512-KZhFpSLlmK/sdocfSAjqPETTMd0ug6HIMIAwkwUpU79olnZdQtMxpQP+G1wDzCH7na+FltSIhbaZuKdwZ8RDrw==",
-          "_id": "@types/node@18.7.11",
+          "integrity": "sha512-46yIhxSe5xEaJZXWdIBP7GU4HDTG8/eo0qd9atdiL+lFpA03y8KS+lkTN834TWJj5767GbWv4n/P6efyTFt1Dw==",
+          "_id": "@types/node@18.7.13",
           "extraneous": false,
           "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@types/node",
           "_dependencies": {},
@@ -29063,10 +29063,10 @@
               "peerDependencies": {}
             },
             "typescript": {
-              "version": "4.7.4",
+              "version": "4.8.2",
               "name": "typescript",
-              "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.7.4.tgz",
-              "integrity": "sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==",
+              "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.8.2.tgz",
+              "integrity": "sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==",
               "peer": true,
               "bin": {
                 "tsc": "bin/tsc",
@@ -29075,7 +29075,7 @@
               "engines": {
                 "node": ">=4.2.0"
               },
-              "_id": "typescript@4.7.4",
+              "_id": "typescript@4.8.2",
               "extraneous": false,
               "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/typescript",
               "_dependencies": {},
@@ -29173,10 +29173,10 @@
           }
         },
         "typescript": {
-          "version": "4.7.4",
-          "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.7.4.tgz",
+          "version": "4.8.2",
+          "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.8.2.tgz",
           "name": "typescript",
-          "integrity": "sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==",
+          "integrity": "sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==",
           "peer": true,
           "bin": {
             "tsc": "bin/tsc",
@@ -29185,7 +29185,7 @@
           "engines": {
             "node": ">=4.2.0"
           },
-          "_id": "typescript@4.7.4",
+          "_id": "typescript@4.8.2",
           "extraneous": false,
           "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/typescript",
           "_dependencies": {},

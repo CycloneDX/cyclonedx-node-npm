@@ -1,4 +1,5 @@
 
-*.snap.json     linguist-generated binary
-*.snap.xml      linguist-generated binary
+*.snap.*   linguist-generated binary
+*.json     linguist-generated binary diff=json
+*.xml      linguist-generated binary diff=xml
 

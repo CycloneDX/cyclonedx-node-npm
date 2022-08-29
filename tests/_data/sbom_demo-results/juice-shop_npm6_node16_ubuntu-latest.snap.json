@@ -1445,12 +1445,12 @@
       "type": "library",
       "name": "node",
       "group": "@types",
-      "version": "18.7.11",
-      "bom-ref": "@types/node@18.7.11",
-      "purl": "pkg:npm/%40types/node@18.7.11?download_url=https://registry.npmjs.org/@types/node/-/node-18.7.11.tgz",
+      "version": "18.7.13",
+      "bom-ref": "@types/node@18.7.13",
+      "purl": "pkg:npm/%40types/node@18.7.13?download_url=https://registry.npmjs.org/@types/node/-/node-18.7.13.tgz",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@types/node/-/node-18.7.11.tgz",
+          "url": "https://registry.npmjs.org/@types/node/-/node-18.7.13.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -9653,12 +9653,12 @@
     {
       "type": "library",
       "name": "moment-timezone",
-      "version": "0.5.35",
-      "bom-ref": "moment-timezone@0.5.35",
-      "purl": "pkg:npm/moment-timezone@0.5.35?download_url=https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.35.tgz",
+      "version": "0.5.37",
+      "bom-ref": "moment-timezone@0.5.37",
+      "purl": "pkg:npm/moment-timezone@0.5.37?download_url=https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.37.tgz",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.35.tgz",
+          "url": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.37.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -14661,12 +14661,12 @@
     {
       "type": "library",
       "name": "typescript",
-      "version": "4.7.4",
-      "bom-ref": "typescript@4.7.4",
-      "purl": "pkg:npm/typescript@4.7.4?download_url=https://registry.npmjs.org/typescript/-/typescript-4.7.4.tgz",
+      "version": "4.8.2",
+      "bom-ref": "typescript@4.8.2",
+      "purl": "pkg:npm/typescript@4.8.2?download_url=https://registry.npmjs.org/typescript/-/typescript-4.8.2.tgz",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/typescript/-/typescript-4.7.4.tgz",
+          "url": "https://registry.npmjs.org/typescript/-/typescript-4.8.2.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -16474,7 +16474,7 @@
       "ref": "@types/ms@0.7.31"
     },
     {
-      "ref": "@types/node@18.7.11"
+      "ref": "@types/node@18.7.13"
     },
     {
       "ref": "@types/strip-bom@3.0.0"
@@ -19739,7 +19739,7 @@
       "ref": "mkdirp@1.0.4"
     },
     {
-      "ref": "moment-timezone@0.5.35",
+      "ref": "moment-timezone@0.5.37",
       "dependsOn": [
         "moment@2.29.4"
       ]
@@ -20960,7 +20960,7 @@
         "dottie@2.0.2",
         "inflection@1.13.2",
         "lodash@4.17.21",
-        "moment-timezone@0.5.35",
+        "moment-timezone@0.5.37",
         "moment@2.29.4",
         "pg-connection-string@2.5.0",
         "retry-as-promised@5.0.0",
@@ -21223,7 +21223,7 @@
       "dependsOn": [
         "@types/cookie@0.4.1",
         "@types/cors@2.8.12",
-        "@types/node@18.7.11",
+        "@types/node@18.7.13",
         "accepts@1.3.8",
         "base64id@2.0.0",
         "engine.io@4.1.2",
@@ -21701,7 +21701,7 @@
         "ts-node-dev@1.1.8|rimraf@2.7.1",
         "ts-node@9.1.1",
         "tsconfig@7.0.0",
-        "typescript@4.7.4"
+        "typescript@4.8.2"
       ]
     },
     {
@@ -21718,7 +21718,7 @@
         "diff@4.0.2",
         "make-error@1.3.6",
         "source-map-support@0.5.21",
-        "typescript@4.7.4",
+        "typescript@4.8.2",
         "yn@3.1.1"
       ]
     },
@@ -21763,7 +21763,7 @@
       "ref": "typedarray@0.0.6"
     },
     {
-      "ref": "typescript@4.7.4"
+      "ref": "typescript@4.8.2"
     },
     {
       "ref": "uglify-js@3.17.0"
@@ -22106,7 +22106,7 @@
     {
       "ref": "wkx@0.5.0",
       "dependsOn": [
-        "@types/node@18.7.11"
+        "@types/node@18.7.13"
       ]
     },
     {
