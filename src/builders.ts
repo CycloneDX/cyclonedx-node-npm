@@ -35,6 +35,7 @@ interface BomBuilderOptions {
   omitDependencyTypes?: Iterable<OmittableDependencyTypes>
   reproducible?: BomBuilder['reproducible']
   flattenComponents?: BomBuilder['flattenComponents']
+  includeUrlQualifiers?: BomBuilder['includeUrlQualifiers']
 }
 
 interface SpawnSyncResultError extends Error {
@@ -57,6 +58,7 @@ export class BomBuilder {
   omitDependencyTypes: Set<OmittableDependencyTypes>
   reproducible: boolean
   flattenComponents: boolean
+  includeUrlQualifiers: boolean
 
   console: Console
 
@@ -94,6 +96,7 @@ export class BomBuilder {
     this.omitDependencyTypes = new Set(options.omitDependencyTypes ?? [])
     this.reproducible = options.reproducible ?? false
     this.flattenComponents = options.flattenComponents ?? false
+    this.includeUrlQualifiers = options.includeUrlQualifiers ?? false
 
     this.console = console_
   }
@@ -430,7 +433,7 @@ export class BomBuilder {
       return undefined
     }
 
-    if (purl.qualifiers != null) {
+    if (!this.includeUrlQualifiers && purl.qualifiers != null) {
       purl.qualifiers = this.filterQualifiers(purl.qualifiers)
     }
 

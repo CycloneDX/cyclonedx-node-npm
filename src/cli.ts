@@ -47,6 +47,7 @@ interface CommandOptions {
   outputFormat: OutputFormat
   outputFile: string
   mcType: Enums.ComponentType
+  includeUrlQualifiers: boolean
 }
 
 function makeCommand (process: NodeJS.Process): Command {
@@ -138,6 +139,12 @@ function makeCommand (process: NodeJS.Process): Command {
     ).default(
       Enums.ComponentType.Application
     )
+  ).addOption(
+    new Option(
+      '--include-url-qualifiers',
+      'Include URL qualifiers in PURL.\n' +
+      'URL qualifiers such as download_url and vcs_url can cause long PURLs and are omitted by default'
+    ).default(false)
   ).addArgument(
     new Argument(
       '[<package-manifest>]',
@@ -209,7 +216,8 @@ export function run (process: NodeJS.Process): void {
       packageLockOnly: options.packageLockOnly,
       omitDependencyTypes: options.omit,
       reproducible: options.outputReproducible,
-      flattenComponents: options.flattenComponents
+      flattenComponents: options.flattenComponents,
+      includeUrlQualifiers: options.includeUrlQualifiers
     },
     myConsole
   ).buildFromLockFile(lockFile, process)
