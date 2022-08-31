@@ -41,7 +41,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/demo-workspaces@0.0.0?",
+      "purl": "pkg:npm/demo-workspaces@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:private",
@@ -63,7 +63,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-a@0.1.0?"
+      "purl": "pkg:npm/my-local-a@0.1.0"
     },
     {
       "type": "library",
@@ -77,7 +77,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0?"
+      "purl": "pkg:npm/my-local-b-off@0.0.0"
     },
     {
       "type": "library",
@@ -91,7 +91,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-c@0.23.42?"
+      "purl": "pkg:npm/my-local-c@0.23.42"
     }
   ],
   "dependencies": [

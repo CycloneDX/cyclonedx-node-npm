@@ -41,7 +41,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/demo-workspaces@0.0.0?",
+      "purl": "pkg:npm/demo-workspaces@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:private",
@@ -64,7 +64,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-a@0.1.0?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
+      "purl": "pkg:npm/my-local-a@0.1.0#demo/local-deps/project/packages/my-local-a",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -102,7 +102,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0?",
+      "purl": "pkg:npm/my-local-b-off@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:private",

@@ -413,10 +413,25 @@ export class BomBuilder {
     return component
   }
 
+  URL_QUALIFIERS_TO_DROP = ['download_url', 'vcs_url']
+
+  private filterQualifiers (qualifiers: { [key: string]: string }): {} | undefined {
+    const filteredQualifiers = Object.keys(qualifiers)
+      .filter(key => !this.URL_QUALIFIERS_TO_DROP.includes(key))
+      .reduce((obj, key) => {
+        return Object.assign(obj, { key: qualifiers[key] })
+      }, {})
+    return Object.keys(filteredQualifiers).length > 0 ? filteredQualifiers : undefined
+  }
+
   private makePurl (component: Models.Component): PackageURL | undefined {
     const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
     if (purl === undefined) {
       return undefined
+    }
+
+    if (purl.qualifiers != null) {
+      purl.qualifiers = this.filterQualifiers(purl.qualifiers)
     }
 
     /* @TODO: detect non-standard registry (not "npmjs.org")
