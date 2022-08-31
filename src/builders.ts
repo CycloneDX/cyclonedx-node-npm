@@ -17,8 +17,9 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { dirname } from 'path'
+import { dirname, resolve } from 'path'
 import { spawnSync } from 'child_process'
+import { existsSync } from 'fs'
 
 import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
 import { PackageURL } from 'packageurl-js'
@@ -59,6 +60,22 @@ export class BomBuilder {
 
   console: Console
 
+  /**
+   * Matches the filename for the npx cli script in a given path:
+   *
+   * Matches:
+   *   - npx-cli.js     // plain
+   *   - foo/npx-cli.js // unix-like paths
+   *   - foo\npx-cli.js // windows-like paths
+   *
+   * Does not match:
+   *   - foobar/            // Not the filename
+   *   - foobar-npx-cli.js  // Invalid leading string
+   *   - foo/npx-cli_js     // Invalid extension
+   *   - npx-cli.js/foo.sh  // Directory of the same name
+   */
+  private readonly npxMatcher = /(^|\\|\/)npx-cli\.js$/g
+
   constructor (
     toolBuilder: BomBuilder['toolBuilder'],
     componentBuilder: BomBuilder['componentBuilder'],
@@ -90,11 +107,30 @@ export class BomBuilder {
     )
   }
 
-  private fetchNpmLs (projectDir: string, process: NodeJS.Process): any {
-    // `npm_execpath` is used by `npm` internally, and is propagated when kicking `npm run-script`
-    /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string */
-    const command = process.env.npm_execpath || 'npm'
+  private getNpmCommand (process: NodeJS.Process): string {
+    // `npm_execpath` will be whichever cli script has called this application.
+    // This can be `npm`, `npx`, or `undefined` if called by `node` directly.
+    const execPath = process.env.npm_execpath ?? ''
 
+    if (this.npxMatcher.test(execPath)) {
+      // `npm` must be used for executing `ls`.
+      this.console.debug('DEBUG | command: npx-cli.js usage detected, checking for npm-cli.js ...')
+      // Typically `npm-cli.js` is alongside `npx-cli.js`, as such we attempt to use this and validate it exists.
+      // Replace the script in the path, and normalise it with resolve (eliminates any extraneous path separators).
+      const npmPath = resolve(execPath.replace(this.npxMatcher, '$1npm-cli.js'))
+
+      return existsSync(npmPath)
+        ? npmPath // `npm` path detected
+        : 'npm' // fallback to global npm
+    }
+
+    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+    return execPath || 'npm'
+  }
+
+  private fetchNpmLs (projectDir: string, process: NodeJS.Process): any {
+    const command = this.getNpmCommand(process)
+    this.console.debug(`DEBUG | command: ${command}`)
     const args = [
       'ls',
       // format as parsable json

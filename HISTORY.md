@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 * Added
   * Support for node 14 was enabled.
+  * Support for handling when run via `npx`.
 * Docs
   * Improve installation instructions and usage instructions.
 * Misc
