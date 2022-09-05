@@ -28,9 +28,9 @@ Development will happen in branch [`1.0-dev`](https://github.com/CycloneDX/cyclo
 * `node` >= `14`
 * `npm` in range `6 - 8`
 
-## Install
+## Installation
 
-There are multiple options to install this tool:
+There are multiple methods for installing this tool:
 
 * As a global tool ala `npm`:
   ```shell
@@ -47,13 +47,13 @@ There are multiple options to install this tool:
 
 ## Usage
 
-Depending on the install method, the following describes the proper usage:
+Depending on the installation method, the following describes the proper usage:
 
 * If installed as a global tool ala `npm`:
   ```shell
   cyclonedx-npm --help
   ```
-* If installed As a global tool ala `npx`:
+* If installed as a global tool ala `npx`:
   ```shell
   npm exec -- @cyclonedx/cyclonedx-npm --help
   ```
