@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Added
-  * Support for node 14.
+  * Support for node 14 was enabled.
 * Docs
   * Improve installation instructions and usage instructions.
 * Misc
   * Improved test coverage.
-  * Use TypeScript v4.8 for compiling, was v4.7.
+* Build
+  * Use _TypeScript_ `v4.8.2` now, was `v4.7.4`.
 
 ## 1.0.0-beta.4
 
