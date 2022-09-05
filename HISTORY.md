@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
   * Improve installation instructions and usage instructions.
 * Misc
   * Improved test coverage.
+  * Use TypeScript v4.8 for compiling, was v4.7.
 
 ## 1.0.0-beta.4
 
