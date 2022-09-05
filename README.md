@@ -28,24 +28,43 @@ Development will happen in branch [`1.0-dev`](https://github.com/CycloneDX/cyclo
 * `node` >= `14`
 * `npm` in range `6 - 8`
 
-## Install
+## Installation
 
-As a global tool:
+There are multiple methods for installing this tool:
 
-```shell
-npm install --global @cyclonedx/cyclonedx-npm
-```
-
-As a development dependency of the current package:
-
-```shell
-npm i -D @cyclonedx/cyclonedx-npm
-```
+* As a global tool ala `npm`:
+  ```shell
+  npm install --global @cyclonedx/cyclonedx-npm
+  ```
+* As a global tool ala `npx`:
+  ```shell
+  npm exec --package @cyclonedx/cyclonedx-npm --yes -- exit
+  ```
+* As a development dependency of the current projects:
+  ```shell
+  npm i -D @cyclonedx/cyclonedx-npm
+  ```
 
 ## Usage
 
+Depending on the installation method, the following describes the proper usage:
+
+* If installed as a global tool ala `npm`:
+  ```shell
+  cyclonedx-npm --help
+  ```
+* If installed as a global tool ala `npx`:
+  ```shell
+  npm exec -- @cyclonedx/cyclonedx-npm --help
+  ```
+* If installed as a development dependency of the current projects:
+  ```shell
+  npm exec -- @cyclonedx/cyclonedx-npm --help
+  ```
+
+The help page:
+
 ```text
-$ cyclonedx-npm --help
 Usage: cyclonedx-npm [options] [--] [<package-manifest>]
 
 Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.
