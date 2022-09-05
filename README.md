@@ -30,31 +30,37 @@ Development will happen in branch [`1.0-dev`](https://github.com/CycloneDX/cyclo
 
 ## Install
 
-As a global tool:
+There are multiple options to install this tool:
 
-```shell
-npm install --global @cyclonedx/cyclonedx-npm
-```
-
-As a development dependency of the current projects:
-
-```shell
-npm i -D @cyclonedx/cyclonedx-npm
-```
+* As a global tool ala `npm`:
+  ```shell
+  npm install --global @cyclonedx/cyclonedx-npm
+  ```
+* As a global tool ala `npx`:
+  ```shell
+  npm exec --package @cyclonedx/cyclonedx-npm --yes -- exit
+  ```
+* As a development dependency of the current projects:
+  ```shell
+  npm i -D @cyclonedx/cyclonedx-npm
+  ```
 
 ## Usage
 
-If installed as a global tool:
+Depending on the install method, the following describes the proper usage:
 
-```shell
-cyclonedx-npm --help
-```
-
-If installed as a development dependency of the current projects:
-
-```shell
-npm exec cyclonedx-npm -- --help
-```
+* If installed as a global tool ala `npm`:
+  ```shell
+  cyclonedx-npm --help
+  ```
+* If installed As a global tool ala `npx`:
+  ```shell
+  npm exec -- @cyclonedx/cyclonedx-npm --help
+  ```
+* If installed as a development dependency of the current projects:
+  ```shell
+  npm exec -- @cyclonedx/cyclonedx-npm --help
+  ```
 
 The help page:
 
