@@ -32,23 +32,28 @@ jobs:
         subject:
           - bundled-dependencies
           - dev-dependencies
-          - juice-shop
           - local-dependencies
           - local-workspaces
+          - juice-shop
         npm-version:
-          - '8'      # current
-          - '7'      # legacy
-          - '6'      # legacy
-          - '6.0.0'  # lowest supported
+          - '8'      # Current
+          - '7'      # Legacy
+          - '6'      # Legacy
+          - '6.0.0'  # Lowest supported by this project
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '18'      # current
-          - '16'      # active LTS
+          - '18'      # Current
+          - '16'      # Active LTS
+          - '14'      # Maintenance LTS
         os:
           - ubuntu-latest
           - windows-latest
           - macos-latest
+        exclude:
+          - # juice-shop might not be node14 compatible
+            subject: juice-shop
+            node-version: '14'
     timeout-minutes: 10 # this is a large matrix, just don't waste time!
     steps:
       - name: Checkout

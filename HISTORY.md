@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Added
+  * Support for node 14.
 * Misc
   * Improved test coverage.
 
