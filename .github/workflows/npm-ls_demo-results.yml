@@ -36,14 +36,14 @@ jobs:
           - local-workspaces
           - juice-shop
         npm-version:
-          - '8'      # current
-          - '7'      # legacy
-          - '6'      # legacy
-          - '6.0.0'  # lowest supported
+          - '8'      # Current
+          - '7'      # Legacy
+          - '6'      # Legacy
+          - '6.0.0'  # Lowest supported by this project
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '18'      #Ccurrent
+          - '18'      # Current
           - '16'      # Active LTS
           - '14'      # Maintenance LTS
         os:
