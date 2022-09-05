@@ -36,7 +36,7 @@ As a global tool:
 npm install --global @cyclonedx/cyclonedx-npm
 ```
 
-As a development dependency of the current package:
+As a development dependency of the current projects:
 
 ```shell
 npm i -D @cyclonedx/cyclonedx-npm
@@ -44,8 +44,21 @@ npm i -D @cyclonedx/cyclonedx-npm
 
 ## Usage
 
+If installed as a global tool:
+
+```shell
+cyclonedx-npm --help
+```
+
+If installed as a development dependency of the current projects:
+
+```shell
+npm exec cyclonedx-npm -- --help
+```
+
+The help page:
+
 ```text
-$ cyclonedx-npm --help
 Usage: cyclonedx-npm [options] [--] [<package-manifest>]
 
 Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.
