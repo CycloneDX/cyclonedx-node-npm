@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 * Added
   * Support for node 14.
+* Docs
+  * Improve installation instructions and usage instructions.
 * Misc
   * Improved test coverage.
 
