@@ -108,7 +108,7 @@ export class BomBuilder {
   }
 
   private getNpmCommand (process: NodeJS.Process): string {
-    // `npm_execpath` will be whichever cli script has called this application.
+    // `npm_execpath` will be whichever cli script has called this application by npm.
     // This can be `npm`, `npx`, or `undefined` if called by `node` directly.
     const execPath = process.env.npm_execpath ?? ''
 
@@ -120,11 +120,11 @@ export class BomBuilder {
       const npmPath = resolve(execPath.replace(this.npxMatcher, '$1npm-cli.js'))
 
       return existsSync(npmPath)
-        ? npmPath // `npm` path detected
+        ? npmPath // path detected
         : 'npm' // fallback to global npm
     }
 
-    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+    /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string */
     return execPath || 'npm'
   }
 
