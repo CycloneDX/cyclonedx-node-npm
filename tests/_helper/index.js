@@ -48,5 +48,5 @@ function hashFile (filePath) {
 }
 
 module.exports = {
-  hashFile: hashFile
+  hashFile
 }

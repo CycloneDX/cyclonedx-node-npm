@@ -46,5 +46,5 @@ function index () {
 }
 
 module.exports = {
-  index: index
+  index
 }
