@@ -30,8 +30,8 @@ module.exports = {
     project: './tsconfig.json'
   },
   env: {
-    node: true,
-    browser: false
+    commonjs: true,
+    node: true
   },
   overrides: [
     {
@@ -40,9 +40,9 @@ module.exports = {
         '*.test.*'
       ],
       env: {
-        node: true,
         jest: true,
-        browser: false
+        commonjs: true,
+        node: true
       }
     }
   ]
