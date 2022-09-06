@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.0.0-beta.6
+
 * Added
   * CLI switch `--ignore-npm-errors` to ignore/suppress NPM errors.
 
