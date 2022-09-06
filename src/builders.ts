@@ -27,7 +27,7 @@ import { PackageURL } from 'packageurl-js'
 import { makeThisTool } from './thisTool'
 import { PropertyNames, PropertyValueBool } from './properties'
 
-type OmittableDependencyTypes = 'dev'|'optional'|'peer'
+type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
 interface BomBuilderOptions {
   metaComponentType?: BomBuilder['metaComponentType']

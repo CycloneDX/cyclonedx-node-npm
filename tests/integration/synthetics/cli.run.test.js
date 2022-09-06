@@ -53,8 +53,8 @@ describe('cli.run()', () => {
       const stderr = createWriteStream(errFile) // not perfect, but works
 
       const mockProcess = {
-        stdout: stdout,
-        stderr: stderr,
+        stdout,
+        stderr,
         cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', folderName),
         argv0: process.argv0,
         argv: [
@@ -91,8 +91,8 @@ describe('cli.run()', () => {
       const stderr = createWriteStream(errFile) // not perfect, but works
 
       const mockProcess = {
-        stdout: stdout,
-        stderr: stderr,
+        stdout,
+        stderr,
         cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', 'with-lockfile'),
         argv0: process.argv0,
         argv: [
@@ -125,8 +125,8 @@ describe('cli.run()', () => {
       const stderr = createWriteStream(errFile) // not perfect, but works
 
       const mockProcess = {
-        stdout: stdout,
-        stderr: stderr,
+        stdout,
+        stderr,
         cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', 'with-lockfile'),
         argv0: process.argv0,
         argv: [
@@ -161,8 +161,8 @@ describe('cli.run()', () => {
       const stderr = createWriteStream(errFile) // not perfect, but works
 
       const mockProcess = {
-        stdout: stdout,
-        stderr: stderr,
+        stdout,
+        stderr,
         cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', 'with-lockfile'),
         argv0: process.argv0,
         argv: [
@@ -206,8 +206,8 @@ describe('cli.run()', () => {
       const stderr = createWriteStream(errFile) // not perfect, but works
 
       const mockProcess = {
-        stdout: stdout,
-        stderr: stderr,
+        stdout,
+        stderr,
         cwd: () => resolve(__dirname, '..', '..', '_data'),
         argv0: process.argv0,
         argv: [
