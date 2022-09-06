@@ -72,6 +72,9 @@ Arguments:
                             (default: "package.json" file in current working directory.)
 
 Options:
+  --ignore-npm-errors       Whether to ignore errors of NPM.
+                            This might be used, if NPM install was run with "--force" or "--legacy-peer-deps".
+                            (default: false)
   --package-lock-only       Whether to only use the lock file, ignoring "node_modules".
                             This means the output will be based only on the few details in and the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.
                             (default: false)

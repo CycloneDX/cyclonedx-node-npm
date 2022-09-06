@@ -23,13 +23,16 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 const assert = require('assert')
 const { createReadStream } = require('fs')
 
-// console.error('debug:', 'env=%j', process.env)
-
 process.exitCode = Number(process.env.CT_EXIT_CODE ?? 0)
 
-if (process.env.CT_SUBJECT === 'broken-json') {
-  process.stdout.write('{"broken-json"')
-  process.exit()
+switch (process.env.CT_SUBJECT) {
+  case 'just-exit':
+    process.exit(process.exitCode)
+    break
+  case 'broken-json':
+    process.stdout.write('{"broken-json"')
+    process.exit(process.exitCode)
+    break
 }
 
 const index = require('./').index()
