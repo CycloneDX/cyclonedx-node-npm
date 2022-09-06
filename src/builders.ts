@@ -30,6 +30,7 @@ import { PropertyNames, PropertyValueBool } from './properties'
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
 interface BomBuilderOptions {
+  ignoreNpmErrors?: BomBuilder['ignoreNpmErrors']
   metaComponentType?: BomBuilder['metaComponentType']
   packageLockOnly?: BomBuilder['packageLockOnly']
   omitDependencyTypes?: Iterable<OmittableDependencyTypes>
@@ -51,6 +52,8 @@ export class BomBuilder {
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
   treeBuilder: TreeBuilder
   purlFactory: Factories.PackageUrlFactory
+
+  ignoreNpmErrors: boolean
 
   metaComponentType: Enums.ComponentType | undefined
   packageLockOnly: boolean
@@ -89,6 +92,7 @@ export class BomBuilder {
     this.treeBuilder = treeBuilder
     this.purlFactory = purlFactory
 
+    this.ignoreNpmErrors = options.ignoreNpmErrors ?? false
     this.metaComponentType = options.metaComponentType
     this.packageLockOnly = options.packageLockOnly ?? false
     this.omitDependencyTypes = new Set(options.omitDependencyTypes ?? [])
@@ -177,12 +181,16 @@ export class BomBuilder {
     if (npmLsReturns.status !== 0 || npmLsReturns.error instanceof Error) {
       const error = npmLsReturns.error as SpawnSyncResultError ?? {}
       this.console.group('ERROR | npm-ls: errors')
-      this.console.error('%j', error)
+      this.console.error('%j', { error, status: npmLsReturns.status, signal: npmLsReturns.signal })
       this.console.groupEnd()
-      throw new Error(`npm-ls exited with errors: ${
-        error.errno ?? '???'} ${
-        error.code ?? npmLsReturns.status ?? 'noCode'} ${
-        error.signal ?? npmLsReturns.signal ?? 'noSignal'}`)
+      if (this.ignoreNpmErrors) {
+        this.console.debug('DEBUG | npm-ls exited with errors that are to be ignored.')
+      } else {
+        throw new Error(`npm-ls exited with errors: ${
+          error.errno ?? '???'} ${
+          error.code ?? npmLsReturns.status ?? 'noCode'} ${
+          error.signal ?? npmLsReturns.signal ?? 'noSignal'}`)
+      }
     }
 
     try {

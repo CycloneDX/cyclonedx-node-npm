@@ -118,6 +118,8 @@ describe('cli.run()', () => {
     test('error on non-zero exit', () => {
       const logFileBase = join(tmpRootRun, 'error-exit-nonzero')
 
+      const expectedExitCode = 1 + Math.floor(254 * Math.random())
+
       const outFile = `${logFileBase}.out`
       const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
 
@@ -135,7 +137,8 @@ describe('cli.run()', () => {
         ],
         env: {
           ...process.env,
-          CT_EXPECTED_ARGS: 'some unexpected to cause a crash',
+          CT_EXIT_CODE: `${expectedExitCode}`, // non-zero exit code
+          CT_SUBJECT: 'just-exit',
           // abuse the npm-ls replacement, as it can be caused to crash under control.
           npm_execpath: npmLsReplacement
         }
@@ -144,7 +147,7 @@ describe('cli.run()', () => {
       try {
         expect(() => {
           cli.run(mockProcess)
-        }).toThrow(/^npm-ls exited with errors: \?\?\? 1 noSignal$/i)
+        }).toThrow(`npm-ls exited with errors: ??? ${expectedExitCode} noSignal`)
       } finally {
         closeSync(stdout.fd)
         stderr.close()
@@ -256,5 +259,75 @@ describe('cli.run()', () => {
         `${outFile} should equal ${expectedOutSnap}`
       )
     })
+  })
+
+  test('suppressed error on non-zero exit', () => {
+    const dd = { subject: 'dev-dependencies', npm: '8', node: '16', os: 'ubuntu-latest' }
+
+    const expectedOutSnap = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
+    const expectedExitCode = 1 + Math.floor(254 * Math.random())
+
+    const tmpRootRun = join(tmpRoot, 'suppressed-error-on-non-zero-exit')
+    mkdirSync(tmpRootRun)
+    const logFileBase = join(tmpRootRun, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
+
+    const outFile = `${logFileBase}.out`
+    const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
+
+    const errFile = `${logFileBase}.err`
+    const stderr = createWriteStream(errFile) // not perfect, but works
+
+    const mockProcess = {
+      stdout,
+      stderr,
+      cwd: () => resolve(__dirname, '..', '..', '_data'),
+      argv0: process.argv0,
+      argv: [
+        process.argv[0],
+        'dummy_process',
+        '--ignore-npm-errors',
+        // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
+        '--output-reproducible',
+        '--spec-version', '1.4',
+        '--output-format', 'JSON',
+        join('dummy_projects', 'with-lockfile', 'package.json')
+      ],
+      env: {
+        ...process.env,
+        CT_EXIT_CODE: expectedExitCode, // non-zero exit code
+        CT_EXPECTED_ARGS: ['ls', '--json', '--all', '--long'].join(' '),
+        CT_SUBJECT: dd.subject,
+        CT_NPM: dd.npm,
+        CT_NODE: dd.node,
+        CT_OS: dd.os,
+        npm_execpath: npmLsReplacement
+      }
+    }
+
+    try {
+      cli.run(mockProcess)
+    } finally {
+      closeSync(stdout.fd)
+      stderr.close()
+    }
+
+    const actualOutput = readFileSync(outFile, 'utf8').replace(
+      // replace metadata.tools.version
+      `"vendor": "@cyclonedx",
+        "name": "cyclonedx-npm",
+        "version": ${JSON.stringify(thisVersion)},`,
+      `"vendor": "@cyclonedx",
+        "name": "cyclonedx-npm",
+        "version": "thisVersion-testing",`
+    )
+
+    if (!existsSync(expectedOutSnap)) {
+      writeFileSync(expectedOutSnap, actualOutput, 'utf8')
+    }
+
+    expect(actualOutput).toEqual(
+      readFileSync(expectedOutSnap, 'utf8'),
+      `${outFile} should equal ${expectedOutSnap}`
+    )
   })
 })

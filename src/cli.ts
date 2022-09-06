@@ -39,6 +39,7 @@ enum Omittable {
 const OutputStdOut = '-'
 
 interface CommandOptions {
+  ignoreNpmErrors: boolean
   packageLockOnly: boolean
   omit: Omittable[]
   specVersion: Spec.Version
@@ -56,6 +57,12 @@ function makeCommand (process: NodeJS.Process): Command {
   ).usage(
     // Need to add the `[--]` manually, to indicate how to stop a variadic option.
     '[options] [--] [<package-manifest>]'
+  ).addOption(
+    new Option(
+      '--ignore-npm-errors',
+      'Whether to ignore errors of NPM.\n' +
+      'This might be used, if NPM install was run with "--force" or "--legacy-peer-deps".'
+    ).default(false)
   ).addOption(
     new Option(
       '--package-lock-only',
@@ -205,6 +212,7 @@ export function run (process: NodeJS.Process): void {
     new TreeBuilder(),
     new Factories.PackageUrlFactory('npm'),
     {
+      ignoreNpmErrors: options.ignoreNpmErrors,
       metaComponentType: options.mcType,
       packageLockOnly: options.packageLockOnly,
       omitDependencyTypes: options.omit,
