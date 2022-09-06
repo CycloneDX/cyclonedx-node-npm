@@ -38,11 +38,11 @@ There are multiple methods for installing this tool:
   ```
 * As a global tool ala `npx`:
   ```shell
-  npx @cyclonedx/cyclonedx-npm
+  npx --package @cyclonedx/cyclonedx-npm --call exit
   ```
 * As a development dependency of the current projects:
   ```shell
-  npm i -D @cyclonedx/cyclonedx-npm
+  npm install --save-dev @cyclonedx/cyclonedx-npm
   ```
 
 ## Usage
@@ -53,9 +53,11 @@ Depending on the installation method, the following describes the proper usage:
   ```shell
   cyclonedx-npm --help
   ```
-* If installed as a global tool ala `npx` or as a development dependency of the current projects:
+* If installed as a global tool ala `npx`:  
+  — or —  
+  If installed as a development dependency of the current projects:
   ```shell
-  npx cyclonedx-npm --help
+  npx @cyclonedx/cyclonedx-npm --help
   ```
 
 The help page:
