@@ -418,13 +418,13 @@ export class BomBuilder {
 
   URL_QUALIFIERS_TO_DROP = ['download_url', 'vcs_url']
 
-  private filterQualifiers (qualifiers: { [key: string]: string }): {} | undefined {
-    const filteredQualifiers = Object.keys(qualifiers)
+  private filterQualifiers (qualifiers: Exclude<PackageURL['qualifiers'], undefined | null>): PackageURL['qualifiers'] {
+    const filterQualifiers = Object.keys(qualifiers)
       .filter(key => !this.URL_QUALIFIERS_TO_DROP.includes(key))
       .reduce((obj, key) => {
-        return Object.assign(obj, { key: qualifiers[key] })
+        return Object.assign(obj, { [key]: qualifiers[key] })
       }, {})
-    return Object.keys(filteredQualifiers).length > 0 ? filteredQualifiers : undefined
+    return Object.keys(filterQualifiers).length > 0 ? filterQualifiers : undefined
   }
 
   private makePurl (component: Models.Component): PackageURL | undefined {

@@ -143,7 +143,7 @@ function makeCommand (process: NodeJS.Process): Command {
     new Option(
       '--include-url-qualifiers',
       'Include URL qualifiers in PURL.\n' +
-      'URL qualifiers such as download_url and vcs_url can cause long PURLs and are omitted by default'
+      'URL qualifiers such as "download_url" and "vcs_url" can cause long PURLs and are omitted by default'
     ).default(false)
   ).addArgument(
     new Argument(
