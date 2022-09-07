@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.0.0-beta.7
+
 * Changed
   * PackageUrl(PURL) in JSON and XML results are as short as possible, but still precise. 
 
