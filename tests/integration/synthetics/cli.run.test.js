@@ -34,7 +34,7 @@ const cli = require('../../../dist/cli')
 describe('cli.run()', () => {
   const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX-IT-CLI.run.'))
 
-  const npmLsReplacement = resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement')
+  const npmLsReplacement = resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement.js')
 
   describe('broken project', () => {
     const tmpRootRun = join(tmpRoot, 'broken-project')
@@ -56,6 +56,7 @@ describe('cli.run()', () => {
         stdout,
         stderr,
         cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', folderName),
+        execPath: process.execPath,
         argv0: process.argv0,
         argv: [
           process.argv[0],
@@ -94,6 +95,7 @@ describe('cli.run()', () => {
         stdout,
         stderr,
         cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', 'with-lockfile'),
+        execPath: process.execPath,
         argv0: process.argv0,
         argv: [
           process.argv[0],
@@ -108,7 +110,7 @@ describe('cli.run()', () => {
       try {
         expect(() => {
           cli.run(mockProcess)
-        }).toThrow(/^npm-ls exited with errors: \?\?\? \d+ noSignal$/i)
+        }).toThrow(/^npm-ls exited with errors: \?\?\? [1-9]\d* noSignal$/i)
       } finally {
         closeSync(stdout.fd)
         stderr.close()
@@ -130,6 +132,7 @@ describe('cli.run()', () => {
         stdout,
         stderr,
         cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', 'with-lockfile'),
+        execPath: process.execPath,
         argv0: process.argv0,
         argv: [
           process.argv[0],
@@ -167,6 +170,7 @@ describe('cli.run()', () => {
         stdout,
         stderr,
         cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', 'with-lockfile'),
+        execPath: process.execPath,
         argv0: process.argv0,
         argv: [
           process.argv[0],
@@ -212,6 +216,7 @@ describe('cli.run()', () => {
         stdout,
         stderr,
         cwd: () => resolve(__dirname, '..', '..', '_data'),
+        execPath: process.execPath,
         argv0: process.argv0,
         argv: [
           process.argv[0],
@@ -281,6 +286,7 @@ describe('cli.run()', () => {
       stdout,
       stderr,
       cwd: () => resolve(__dirname, '..', '..', '_data'),
+      execPath: process.execPath,
       argv0: process.argv0,
       argv: [
         process.argv[0],

@@ -133,9 +133,8 @@ export class BomBuilder {
   }
 
   private fetchNpmLs (projectDir: string, process: NodeJS.Process): any {
-    const command = this.getNpmCommand(process)
-    this.console.debug(`DEBUG | command: ${command}`)
-    const args = [
+    let command: string = this.getNpmCommand(process)
+    const args: string[] = [
       'ls',
       // format as parsable json
       '--json',
@@ -149,6 +148,10 @@ export class BomBuilder {
     }
     for (const odt of this.omitDependencyTypes) {
       args.push('--omit', odt)
+    }
+    if (command.endsWith('.js')) {
+      args.unshift('--', command)
+      command = process.execPath
     }
 
     // TODO use instead ? : https://www.npmjs.com/package/debug ?
