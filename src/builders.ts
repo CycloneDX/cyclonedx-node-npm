@@ -51,7 +51,7 @@ export class BomBuilder {
   toolBuilder: Builders.FromNodePackageJson.ToolBuilder
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
   treeBuilder: TreeBuilder
-  purlFactory: Factories.PackageUrlFactory
+  purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
 
   ignoreNpmErrors: boolean
 
