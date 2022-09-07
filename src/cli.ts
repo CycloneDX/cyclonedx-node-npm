@@ -210,7 +210,7 @@ export function run (process: NodeJS.Process): void {
       new Factories.LicenseFactory()
     ),
     new TreeBuilder(),
-    new Factories.PackageUrlFactory('npm'),
+    new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
     {
       ignoreNpmErrors: options.ignoreNpmErrors,
       metaComponentType: options.mcType,

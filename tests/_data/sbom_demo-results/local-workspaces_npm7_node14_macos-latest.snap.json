@@ -41,7 +41,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/demo-workspaces@0.0.0?",
+      "purl": "pkg:npm/demo-workspaces@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:private",
@@ -102,7 +102,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0?",
+      "purl": "pkg:npm/my-local-b-off@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:private",
