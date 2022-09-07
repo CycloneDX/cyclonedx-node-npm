@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Fixed
+  * Run on Windows systems was improved for `npm`/`npx` sub-processes.
+
 ## 1.0.0-beta.7
 
 * Changed
