@@ -17,11 +17,10 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { resolve, dirname } from 'path'
-import { writeSync, openSync, existsSync } from 'fs'
-
-import { Command, Option, Argument } from 'commander'
-import { Enums, Spec, Serialize, Builders, Factories } from '@cyclonedx/cyclonedx-library'
+import { Builders, Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
+import { Argument, Command, Option } from 'commander'
+import { existsSync, openSync, writeSync } from 'fs'
+import { dirname, resolve } from 'path'
 
 import { BomBuilder, TreeBuilder } from './builders'
 

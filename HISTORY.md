@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 * Fixed
   * Run on Windows systems was improved for `npm`/`npx` sub-processes.
+* Misc
+  * Style: imports are sorted, now.
 
 ## 1.0.0-beta.7
 
