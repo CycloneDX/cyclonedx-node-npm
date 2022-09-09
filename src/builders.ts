@@ -17,15 +17,14 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { dirname, resolve } from 'path'
+import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
 import { spawnSync } from 'child_process'
 import { existsSync } from 'fs'
-
-import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
 import { PackageURL } from 'packageurl-js'
+import { dirname, resolve } from 'path'
 
-import { makeThisTool } from './thisTool'
 import { PropertyNames, PropertyValueBool } from './properties'
+import { makeThisTool } from './thisTool'
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
