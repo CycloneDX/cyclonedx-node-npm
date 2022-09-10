@@ -18,7 +18,7 @@ All features are implemented. Most of them are tested and working as expected.
 Implementations are not ideal, internal refactoring and rework will be done to improve performance and maintainability.
 
 See the projects [issues](https://github.com/CycloneDX/cyclonedx-node-npm/issues),
-[pull requests](https://github.com/CycloneDX/cyclonedx-node-npm/pulls) and 
+[pull requests](https://github.com/CycloneDX/cyclonedx-node-npm/pulls) and
 [milestones](https://github.com/CycloneDX/cyclonedx-node-npm/milestones) for the progress.
 
 Development will happen in branch [`1.0-dev`](https://github.com/CycloneDX/cyclonedx-node-npm/tree/1.0-dev).
@@ -33,14 +33,19 @@ Development will happen in branch [`1.0-dev`](https://github.com/CycloneDX/cyclo
 There are multiple methods for installing this tool:
 
 * As a global tool ala `npm`:
+
   ```shell
   npm install --global @cyclonedx/cyclonedx-npm
   ```
+
 * As a global tool ala `npx`:
+
   ```shell
   npx --package @cyclonedx/cyclonedx-npm --call exit
   ```
+
 * As a development dependency of the current projects:
+
   ```shell
   npm install --save-dev @cyclonedx/cyclonedx-npm
   ```
@@ -50,12 +55,15 @@ There are multiple methods for installing this tool:
 Depending on the installation method, the following describes the proper usage:
 
 * If installed as a global tool ala `npm`:
+
   ```shell
   cyclonedx-npm --help
   ```
+
 * If installed as a global tool ala `npx`:  
   — or —  
   If installed as a development dependency of the current projects:
+
   ```shell
   npx @cyclonedx/cyclonedx-npm --help
   ```

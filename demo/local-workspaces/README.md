@@ -4,7 +4,6 @@
 
 Install local workspaces and see how they behave.
 
-
 ## remarks
 
 * The `resolved` is not present in every dependency listing. Only on top-most level.
