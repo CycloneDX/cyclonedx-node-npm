@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
   * Run on Windows systems was improved for `npm`/`npx` sub-processes.
 * Misc
   * Style: imports are sorted, now.
+* Build
+  * Use _TypeScript_ `v4.8.3` now, was `v4.8.2`.
 
 ## 1.0.0-beta.7
 
