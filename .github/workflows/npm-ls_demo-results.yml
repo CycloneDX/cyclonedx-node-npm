@@ -5,7 +5,7 @@ name: npm-ls demo results
 
 on:
   #push:
-  #  branches: [ 'master', '1.0-dev' ]
+  #  branches: [ 'main', 'master', '1.0-dev' ]
   #  paths:
   #    - '!**'
   #    - 'demos/*/project/*'

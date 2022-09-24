@@ -5,7 +5,7 @@ name: Node CI
 
 on:
   push:
-    branches: [ 'master', '1.0-dev' ]
+    branches: [ 'main', 'master', '1.0-dev' ]
   pull_request:
   workflow_dispatch:
 
