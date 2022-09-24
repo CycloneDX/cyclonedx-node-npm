@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## 1.0.0 - unreleased
+## 1.0.0 - 2022-09-24
+
+First major version (via [#1])
+
+Thanks to all the beta testers. Your efforts, feedback and contributions are appreciated.
+
+[#1]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1
 
 ## 1.0.0-beta.8 - 2022-09-10
 
