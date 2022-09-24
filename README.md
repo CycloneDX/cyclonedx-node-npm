@@ -66,20 +66,20 @@ Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.
 
 Arguments:
   <package-manifest>        Path to project's manifest file. 
-                            (default: "package.json" file in current working directory.)
+                            (default: "package.json" file in current working directory)
 
 Options:
   --ignore-npm-errors       Whether to ignore errors of NPM.
-                            This might be used, if NPM install was run with "--force" or "--legacy-peer-deps".
+                            This might be used, if "npm install" was run with "--force" or "--legacy-peer-deps".
                             (default: false)
   --package-lock-only       Whether to only use the lock file, ignoring "node_modules".
                             This means the output will be based only on the few details in and the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.
                             (default: false)
   --omit <type...>          Dependency types to omit from the installation tree.
                             (can be set multiple times)
-                            (choices: "dev", "optional", "peer", default: "dev" if the NODE_ENV environment variable is set to "production", otherwise empty.)
+                            (choices: "dev", "optional", "peer", default: "dev" if the NODE_ENV environment variable is set to "production", otherwise empty)
   --flatten-components      Whether to flatten the components.
-                            This means the original nesting of components is not represented in the output.
+                            This means the actual nesting of node packages is not represented in the SBOM result.
   --spec-version <version>  Which version of CycloneDX spec to use.
                             (choices: "1.2", "1.3", "1.4", default: "1.4")
   --output-reproducible     Whether to go the extra mile and make the output reproducible.

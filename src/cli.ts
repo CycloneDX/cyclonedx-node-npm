@@ -60,7 +60,7 @@ function makeCommand (process: NodeJS.Process): Command {
     new Option(
       '--ignore-npm-errors',
       'Whether to ignore errors of NPM.\n' +
-      'This might be used, if NPM install was run with "--force" or "--legacy-peer-deps".'
+      'This might be used, if "npm install" was run with "--force" or "--legacy-peer-deps".'
     ).default(false)
   ).addOption(
     new Option(
@@ -79,13 +79,13 @@ function makeCommand (process: NodeJS.Process): Command {
       process.env.NODE_ENV === 'production'
         ? [Omittable.Dev]
         : [],
-      '"dev" if the NODE_ENV environment variable is set to "production", otherwise empty.'
+      '"dev" if the NODE_ENV environment variable is set to "production", otherwise empty'
     )
   ).addOption(
     new Option(
       '--flatten-components',
       'Whether to flatten the components.\n' +
-      'This means the original nesting of components is not represented in the output.'
+      'This means the actual nesting of node packages is not represented in the SBOM result.'
     ).default(false)
   ).addOption(
     new Option(
@@ -150,7 +150,7 @@ function makeCommand (process: NodeJS.Process): Command {
       "Path to project's manifest file."
     ).default(
       'package.json',
-      '"package.json" file in current working directory.'
+      '"package.json" file in current working directory'
     )
   ).version(
     // that is supposed to be the last option in the list on the help page.
