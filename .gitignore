@@ -1,3 +1,17 @@
+
+/reports/
+/CI_reports/
+
+/dist/
+
+/pack/
+/build/
+/release_assets/
+
+*.cache
+
+## taken from https://github.com/github/gitignore/blob/main/Node.gitignore
+
 # Logs
 logs
 *.log

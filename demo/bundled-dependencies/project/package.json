@@ -1,0 +1,10 @@
+{
+  "name": "demo-bundled-deps",
+  "private": true,
+  "version": "0.0.0",
+  "description": "demo: demo-bundled-deps -- showcase how bundled deps look like",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bundle-dependencies": "1.0.2"
+  }
+}
