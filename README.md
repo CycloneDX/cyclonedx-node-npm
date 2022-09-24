@@ -12,17 +12,6 @@
 
 Create [CycloneDX] Software Bill of Materials (SBOM) from  _[npm]_ projects.
 
-## 🚧 🏗️ this project is in late development stage - BETA STATUS
-
-All features are implemented. Most of them are tested and working as expected.  
-Implementations are not ideal, internal refactoring and rework will be done to improve performance and maintainability.
-
-See the projects [issues](https://github.com/CycloneDX/cyclonedx-node-npm/issues),
-[pull requests](https://github.com/CycloneDX/cyclonedx-node-npm/pulls) and
-[milestones](https://github.com/CycloneDX/cyclonedx-node-npm/milestones) for the progress.
-
-Development will happen in branch [`1.0-dev`](https://github.com/CycloneDX/cyclonedx-node-npm/tree/1.0-dev).
-
 ## Requirements
 
 * `node` >= `14`
