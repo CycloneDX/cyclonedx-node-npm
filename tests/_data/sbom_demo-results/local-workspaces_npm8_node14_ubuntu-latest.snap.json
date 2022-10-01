@@ -56,7 +56,6 @@
       "name": "my-local-a",
       "version": "0.1.0",
       "bom-ref": "my-local-a@0.1.0",
-      "description": "demo: my-local-a",
       "licenses": [
         {
           "license": {
@@ -64,37 +63,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-a@0.1.0?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
-      "externalReferences": [
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
-        },
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:private",
-          "value": "true"
-        }
-      ]
+      "purl": "pkg:npm/my-local-a@0.1.0"
     },
     {
       "type": "library",
       "name": "my-local-b-off",
       "version": "0.0.0",
       "bom-ref": "my-local-b-off@0.0.0",
-      "description": "demo: my-local-b-off - a package with a different name than its dir",
       "licenses": [
         {
           "license": {
@@ -102,20 +77,30 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0",
-      "properties": [
+      "purl": "pkg:npm/my-local-b-off@0.0.0"
+    },
+    {
+      "type": "library",
+      "name": "my-local-c",
+      "version": "0.23.42",
+      "bom-ref": "my-local-c@0.23.42",
+      "licenses": [
         {
-          "name": "cdx:npm:package:private",
-          "value": "true"
+          "license": {
+            "id": "Apache-2.0"
+          }
         }
-      ]
+      ],
+      "purl": "pkg:npm/my-local-c@0.23.42"
     }
   ],
   "dependencies": [
     {
       "ref": "demo-workspaces@0.0.0",
       "dependsOn": [
-        "my-local-a@0.1.0"
+        "my-local-a@0.1.0",
+        "my-local-b-off@0.0.0",
+        "my-local-c@0.23.42"
       ]
     },
     {
@@ -126,6 +111,13 @@
     },
     {
       "ref": "my-local-b-off@0.0.0"
+    },
+    {
+      "ref": "my-local-c@0.23.42",
+      "dependsOn": [
+        "my-local-a@0.1.0",
+        "my-local-b-off@0.0.0"
+      ]
     }
   ]
 }

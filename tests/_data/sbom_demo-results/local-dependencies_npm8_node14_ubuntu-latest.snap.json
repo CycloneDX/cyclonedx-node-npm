@@ -53,16 +53,9 @@
   "components": [
     {
       "type": "library",
-      "name": "DummyComponent.InterferedDependency.my-noname",
-      "bom-ref": "DummyComponent.InterferedDependency.my-noname",
-      "description": "This is a dummy component \"InterferedDependency.my-noname\" that fills the gap where the actual built failed."
-    },
-    {
-      "type": "library",
       "name": "my-local-a",
       "version": "0.0.0",
       "bom-ref": "my-local-a@0.0.0",
-      "description": "demo: my-local-a",
       "licenses": [
         {
           "license": {
@@ -70,37 +63,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-a@0.0.0?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
-      "externalReferences": [
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
-        },
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:private",
-          "value": "true"
-        }
-      ]
+      "purl": "pkg:npm/my-local-a@0.0.0"
     },
     {
       "type": "library",
-      "name": "my-local-b-off",
+      "name": "my-local-b",
       "version": "0.0.0",
-      "bom-ref": "my-local-b-off@0.0.0",
-      "description": "demo: my-local-b-off - a package with a different name than its dir",
+      "bom-ref": "my-local-b@0.0.0",
       "licenses": [
         {
           "license": {
@@ -108,34 +77,42 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0",
-      "properties": [
+      "purl": "pkg:npm/my-local-b@0.0.0"
+    },
+    {
+      "type": "library",
+      "name": "my-noname",
+      "version": "0.0.0",
+      "bom-ref": "my-noname@0.0.0",
+      "licenses": [
         {
-          "name": "cdx:npm:package:private",
-          "value": "true"
+          "license": {
+            "id": "Apache-2.0"
+          }
         }
-      ]
+      ],
+      "purl": "pkg:npm/my-noname@0.0.0"
     }
   ],
   "dependencies": [
     {
       "ref": "demo-local-deps@0.0.0",
       "dependsOn": [
-        "DummyComponent.InterferedDependency.my-noname",
-        "my-local-a@0.0.0"
+        "my-local-a@0.0.0",
+        "my-noname@0.0.0"
       ]
-    },
-    {
-      "ref": "DummyComponent.InterferedDependency.my-noname"
     },
     {
       "ref": "my-local-a@0.0.0",
       "dependsOn": [
-        "my-local-b-off@0.0.0"
+        "my-local-b@0.0.0"
       ]
     },
     {
-      "ref": "my-local-b-off@0.0.0"
+      "ref": "my-local-b@0.0.0"
+    },
+    {
+      "ref": "my-noname@0.0.0"
     }
   ]
 }
