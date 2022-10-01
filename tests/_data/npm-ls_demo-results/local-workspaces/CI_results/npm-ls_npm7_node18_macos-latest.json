@@ -19,7 +19,6 @@
     "my-local-a": {
       "version": "0.1.0",
       "resolved": "file:../workspaces/my-local-a",
-      "overridden": false,
       "name": "my-local-a",
       "license": "Apache-2.0",
       "_id": "my-local-a@0.1.0",
@@ -47,7 +46,6 @@
     "my-local-b-off": {
       "version": "0.0.0",
       "resolved": "file:../workspaces/my-local-b",
-      "overridden": false,
       "name": "my-local-b-off",
       "license": "Apache-2.0",
       "_id": "my-local-b-off@0.0.0",
@@ -60,7 +58,6 @@
     "my-local-c": {
       "version": "0.23.42",
       "resolved": "file:../workspaces/my-local",
-      "overridden": false,
       "name": "my-local-c",
       "license": "Apache-2.0",
       "_id": "my-local-c@0.23.42",

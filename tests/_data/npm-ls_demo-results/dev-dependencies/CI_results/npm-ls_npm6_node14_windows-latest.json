@@ -19,9 +19,9 @@
     "requires": true,
     "dependencies": {
       "@types/node": {
-        "version": "18.7.13",
-        "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.13.tgz",
-        "integrity": "sha512-46yIhxSe5xEaJZXWdIBP7GU4HDTG8/eo0qd9atdiL+lFpA03y8KS+lkTN834TWJj5767GbWv4n/P6efyTFt1Dw==",
+        "version": "18.7.23",
+        "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.23.tgz",
+        "integrity": "sha512-DWNcCHolDq0ZKGizjx2DZjR/PqsYwAcYUJmfMWqtVU2MBMG5Mo+xFZrhGId5r/O5HOuMPyQEcM6KUBp5lBZZBg==",
         "dev": true
       }
     }
@@ -29,27 +29,27 @@
   "dependencies": {
     "@types/node": {
       "_from": "@types/node@>=16",
-      "_id": "@types/node@18.7.13",
-      "_integrity": "sha512-46yIhxSe5xEaJZXWdIBP7GU4HDTG8/eo0qd9atdiL+lFpA03y8KS+lkTN834TWJj5767GbWv4n/P6efyTFt1Dw==",
+      "_id": "@types/node@18.7.23",
+      "_integrity": "sha512-DWNcCHolDq0ZKGizjx2DZjR/PqsYwAcYUJmfMWqtVU2MBMG5Mo+xFZrhGId5r/O5HOuMPyQEcM6KUBp5lBZZBg==",
       "_location": "/@types/node",
       "_phantomChildren": {},
       "_requested": {
         "type": "version",
         "registry": true,
-        "raw": "@types/node@18.7.13",
+        "raw": "@types/node@18.7.23",
         "name": "@types/node",
         "escapedName": "@types%2fnode",
         "scope": "@types",
-        "rawSpec": "18.7.13",
+        "rawSpec": "18.7.23",
         "saveSpec": null,
-        "fetchSpec": "18.7.13"
+        "fetchSpec": "18.7.23"
       },
       "_requiredBy": [
         "#DEV:/"
       ],
-      "_resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.13.tgz",
-      "_shasum": "23e6c5168333480d454243378b69e861ab5c011a",
-      "_spec": "18.7.13",
+      "_resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.23.tgz",
+      "_shasum": "75c580983846181ebe5f4abc40fe9dfb2d65665f",
+      "_spec": "18.7.23",
       "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project",
       "bugs": {
         "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
@@ -233,16 +233,23 @@
         "directory": "types/node"
       },
       "scripts": {},
-      "typeScriptVersion": "4.0",
+      "typeScriptVersion": "4.1",
       "types": "index.d.ts",
-      "typesPublisherContentHash": "25486c39271d0972bf5cd93fe21ef2423a533efc749c47d5f39973be04d2f89a",
-      "version": "18.7.13",
-      "readme": "# Installation\r\n> `npm install --save @types/node`\r\n\r\n# Summary\r\nThis package contains type definitions for Node.js (https://nodejs.org/).\r\n\r\n# Details\r\nFiles were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node.\r\n\r\n### Additional Details\r\n * Last updated: Wed, 24 Aug 2022 08:32:18 GMT\r\n * Dependencies: none\r\n * Global values: `AbortController`, `AbortSignal`, `__dirname`, `__filename`, `console`, `exports`, `gc`, `global`, `module`, `process`, `require`, `structuredClone`\r\n\r\n# Credits\r\nThese definitions were written by [Microsoft TypeScript](https://github.com/Microsoft), [DefinitelyTyped](https://github.com/DefinitelyTyped), [Alberto Schiabel](https://github.com/jkomyno), [Alvis HT Tang](https://github.com/alvis), [Andrew Makarov](https://github.com/r3nya), [Benjamin Toueg](https://github.com/btoueg), [Chigozirim C.](https://github.com/smac89), [David Junger](https://github.com/touffy), [Deividas Bakanas](https://github.com/DeividasBakanas), [Eugene Y. Q. Shen](https://github.com/eyqs), [Hannes Magnusson](https://github.com/Hannes-Magnusson-CK), [Huw](https://github.com/hoo29), [Kelvin Jin](https://github.com/kjin), [Klaus Meinhardt](https://github.com/ajafff), [Lishude](https://github.com/islishude), [Mariusz Wiktorczyk](https://github.com/mwiktorczyk), [Mohsen Azimi](https://github.com/mohsen1), [Nicolas Even](https://github.com/n-e), [Nikita Galkin](https://github.com/galkin), [Parambir Singh](https://github.com/parambirs), [Sebastian Silbermann](https://github.com/eps1lon), [Simon Schick](https://github.com/SimonSchick), [Thomas den Hollander](https://github.com/ThomasdenH), [Wilco Bakker](https://github.com/WilcoBakker), [wwwy3y3](https://github.com/wwwy3y3), [Samuel Ainsworth](https://github.com/samuela), [Kyle Uehlein](https://github.com/kuehlein), [Thanik Bhongbhibhat](https://github.com/bhongy), [Marcin Kopacz](https://github.com/chyzwar), [Trivikram Kamat](https://github.com/trivikr), [Junxiao Shi](https://github.com/yoursunny), [Ilia Baryshnikov](https://github.com/qwelias), [ExE Boss](https://github.com/ExE-Boss), [Piotr Błażejewicz](https://github.com/peterblazejewicz), [Anna Henningsen](https://github.com/addaleax), [Victor Perin](https://github.com/victorperin), [Yongsheng Zhang](https://github.com/ZYSzys), [NodeJS Contributors](https://github.com/NodeJS), [Linus Unnebäck](https://github.com/LinusU), [wafuwafu13](https://github.com/wafuwafu13), and [Matteo Collina](https://github.com/mcollina).\r\n",
+      "typesPublisherContentHash": "24d6e2b547c899309701e1e64ad11f0255c46a6f27da723607d3d1505e43d8da",
+      "typesVersions": {
+        "<4.9.0-0": {
+          "*": [
+            "ts4.8/*"
+          ]
+        }
+      },
+      "version": "18.7.23",
+      "readme": "# Installation\r\n> `npm install --save @types/node`\r\n\r\n# Summary\r\nThis package contains type definitions for Node.js (https://nodejs.org/).\r\n\r\n# Details\r\nFiles were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node.\r\n\r\n### Additional Details\r\n * Last updated: Mon, 26 Sep 2022 19:33:03 GMT\r\n * Dependencies: none\r\n * Global values: `AbortController`, `AbortSignal`, `__dirname`, `__filename`, `console`, `exports`, `gc`, `global`, `module`, `process`, `require`, `structuredClone`\r\n\r\n# Credits\r\nThese definitions were written by [Microsoft TypeScript](https://github.com/Microsoft), [DefinitelyTyped](https://github.com/DefinitelyTyped), [Alberto Schiabel](https://github.com/jkomyno), [Alvis HT Tang](https://github.com/alvis), [Andrew Makarov](https://github.com/r3nya), [Benjamin Toueg](https://github.com/btoueg), [Chigozirim C.](https://github.com/smac89), [David Junger](https://github.com/touffy), [Deividas Bakanas](https://github.com/DeividasBakanas), [Eugene Y. Q. Shen](https://github.com/eyqs), [Hannes Magnusson](https://github.com/Hannes-Magnusson-CK), [Huw](https://github.com/hoo29), [Kelvin Jin](https://github.com/kjin), [Klaus Meinhardt](https://github.com/ajafff), [Lishude](https://github.com/islishude), [Mariusz Wiktorczyk](https://github.com/mwiktorczyk), [Mohsen Azimi](https://github.com/mohsen1), [Nicolas Even](https://github.com/n-e), [Nikita Galkin](https://github.com/galkin), [Parambir Singh](https://github.com/parambirs), [Sebastian Silbermann](https://github.com/eps1lon), [Simon Schick](https://github.com/SimonSchick), [Thomas den Hollander](https://github.com/ThomasdenH), [Wilco Bakker](https://github.com/WilcoBakker), [wwwy3y3](https://github.com/wwwy3y3), [Samuel Ainsworth](https://github.com/samuela), [Kyle Uehlein](https://github.com/kuehlein), [Thanik Bhongbhibhat](https://github.com/bhongy), [Marcin Kopacz](https://github.com/chyzwar), [Trivikram Kamat](https://github.com/trivikr), [Junxiao Shi](https://github.com/yoursunny), [Ilia Baryshnikov](https://github.com/qwelias), [ExE Boss](https://github.com/ExE-Boss), [Piotr Błażejewicz](https://github.com/peterblazejewicz), [Anna Henningsen](https://github.com/addaleax), [Victor Perin](https://github.com/victorperin), [Yongsheng Zhang](https://github.com/ZYSzys), [NodeJS Contributors](https://github.com/NodeJS), [Linus Unnebäck](https://github.com/LinusU), [wafuwafu13](https://github.com/wafuwafu13), and [Matteo Collina](https://github.com/mcollina).\r\n",
       "readmeFilename": "README.md",
       "_development": true,
       "_args": [
         [
-          "@types/node@18.7.13",
+          "@types/node@18.7.23",
           "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project"
         ]
       ],
