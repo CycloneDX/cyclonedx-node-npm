@@ -12,6 +12,9 @@ Install local workspaces and see how they behave.
 
 ## output
 
+
+(i) see [demo snapshots](../../tests/_data/npm-ls_demo-results/dev-dependencies).
+
 Output of `npm ls --json -a -l` look like this:
 
 ```json5
