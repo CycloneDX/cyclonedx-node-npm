@@ -75,7 +75,7 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
-          # - macos-latest # hanging for unknown reasons. but is unix-like so "ubuntu-latest" should be enough
+          - macos-latest
     timeout-minutes: 10
     steps:
       - name: Checkout
