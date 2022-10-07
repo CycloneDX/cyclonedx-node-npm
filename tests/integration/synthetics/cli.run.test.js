@@ -225,11 +225,14 @@ describe('cli.run()', () => {
           '--output-reproducible',
           '--spec-version', '1.4',
           '--output-format', 'JSON',
+          // prevent file interaction in this synthetic scenario - they would not exist anyway
+          '--package-lock-only',
+          '--',
           join('dummy_projects', 'with-lockfile', 'package.json')
         ],
         env: {
           ...process.env,
-          CT_EXPECTED_ARGS: ['ls', '--json', '--all', '--long'].join(' '),
+          CT_EXPECTED_ARGS: ['ls', '--json', '--all', '--long', '--package-lock-only'].join(' '),
           CT_SUBJECT: dd.subject,
           CT_NPM: dd.npm,
           CT_NODE: dd.node,
@@ -296,12 +299,15 @@ describe('cli.run()', () => {
         '--output-reproducible',
         '--spec-version', '1.4',
         '--output-format', 'JSON',
+        // prevent file interaction in this synthetic scenario - they would not exist anyway
+        '--package-lock-only',
+        '--',
         join('dummy_projects', 'with-lockfile', 'package.json')
       ],
       env: {
         ...process.env,
         CT_EXIT_CODE: expectedExitCode, // non-zero exit code
-        CT_EXPECTED_ARGS: ['ls', '--json', '--all', '--long'].join(' '),
+        CT_EXPECTED_ARGS: ['ls', '--json', '--all', '--long', '--package-lock-only'].join(' '),
         CT_SUBJECT: dd.subject,
         CT_NPM: dd.npm,
         CT_NODE: dd.node,
