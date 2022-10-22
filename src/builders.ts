@@ -113,10 +113,13 @@ export class BomBuilder {
     )
   }
 
-  private getNpmCommand (process: NodeJS.Process): string {
+  private getNpmCommand (process: NodeJS.Process): string | 'npm' {
     // `npm_execpath` will be whichever cli script has called this application by npm.
     // This can be `npm`, `npx`, or `undefined` if called by `node` directly.
     const execPath = process.env.npm_execpath ?? ''
+    if (execPath === '') {
+      return 'npm'
+    }
 
     if (this.npxMatcher.test(execPath)) {
       // `npm` must be used for executing `ls`.
@@ -124,14 +127,14 @@ export class BomBuilder {
       // Typically `npm-cli.js` is alongside `npx-cli.js`, as such we attempt to use this and validate it exists.
       // Replace the script in the path, and normalise it with resolve (eliminates any extraneous path separators).
       const npmPath = resolve(execPath.replace(this.npxMatcher, '$1npm-cli.js'))
-
-      return existsSync(npmPath)
-        ? npmPath // path detected
-        : 'npm' // fallback to global npm
+      if (existsSync(npmPath)) {
+        return npmPath
+      }
+    } else if (existsSync(execPath)) {
+      return execPath
     }
 
-    /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string */
-    return execPath || 'npm'
+    throw new Error(`unexpected NPM execPath: ${execPath}`)
   }
 
   private fetchNpmLs (projectDir: string, process: NodeJS.Process): any {
@@ -160,8 +163,7 @@ export class BomBuilder {
     this.console.info('INFO  | gather dependency tree ...')
     this.console.debug('DEBUG | npm-ls: run %s with %j in %s', command, args, projectDir)
     const npmLsReturns = spawnSync(command, args, {
-      // must use a shell for Windows systems in order to work
-      shell: true,
+      shell: command === 'npm',
       cwd: projectDir,
       env: process.env,
       encoding: 'buffer',
