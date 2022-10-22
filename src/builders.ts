@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
-import { spawnSync } from 'child_process'
+import {execFileSync, execSync, ExecSyncOptionsWithBufferEncoding} from 'child_process'
 import { existsSync } from 'fs'
 import { PackageURL } from 'packageurl-js'
 import { dirname, resolve } from 'path'
@@ -36,12 +36,6 @@ interface BomBuilderOptions {
   reproducible?: BomBuilder['reproducible']
   flattenComponents?: BomBuilder['flattenComponents']
   shortPURLs?: BomBuilder['shortPURLs']
-}
-
-interface SpawnSyncResultError extends Error {
-  errno?: number
-  code?: string
-  signal?: NodeJS.Signals
 }
 
 type cPath = string
@@ -113,29 +107,27 @@ export class BomBuilder {
     )
   }
 
-  private getNpmCommand (process: NodeJS.Process): string {
+  private getNpmCommand (process: NodeJS.Process): [cmd: string, runSync: typeof execSync | typeof execFileSync] {
     // `npm_execpath` will be whichever cli script has called this application by npm.
     // This can be `npm`, `npx`, or `undefined` if called by `node` directly.
     const execPath = process.env.npm_execpath ?? ''
-
     if (this.npxMatcher.test(execPath)) {
       // `npm` must be used for executing `ls`.
       this.console.debug('DEBUG | command: npx-cli.js usage detected, checking for npm-cli.js ...')
       // Typically `npm-cli.js` is alongside `npx-cli.js`, as such we attempt to use this and validate it exists.
       // Replace the script in the path, and normalise it with resolve (eliminates any extraneous path separators).
       const npmPath = resolve(execPath.replace(this.npxMatcher, '$1npm-cli.js'))
-
-      return existsSync(npmPath)
-        ? npmPath // path detected
-        : 'npm' // fallback to global npm
+      if (existsSync(npmPath)) {
+        return [npmPath, execFileSync]
+      }
+    } else if (existsSync(execPath)) {
+      return [execPath, execFileSync]
     }
-
-    /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to handle optional empty-string */
-    return execPath || 'npm'
+    return ['npm', execSync]
   }
 
   private fetchNpmLs (projectDir: string, process: NodeJS.Process): any {
-    let command: string = this.getNpmCommand(process)
+    let [command, runSync] = this.getNpmCommand(process)
     const args: string[] = [
       'ls',
       // format as parsable json
@@ -154,52 +146,44 @@ export class BomBuilder {
     if (command.endsWith('.js')) {
       args.unshift('--', command)
       command = process.execPath
+      runSync = execFileSync
     }
 
     // TODO use instead ? : https://www.npmjs.com/package/debug ?
     this.console.info('INFO  | gather dependency tree ...')
-    this.console.debug('DEBUG | npm-ls: run %s with %j in %s', command, args, projectDir)
-    const npmLsReturns = spawnSync(command, args, {
-      // must use a shell for Windows systems in order to work
-      shell: true,
-      cwd: projectDir,
-      env: process.env,
-      encoding: 'buffer',
-      maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
-    })
-    /*
-    if (npmLsReturns.stdout?.length > 0) {
-      this.console.group('DEBUG | npm-ls: STDOUT')
-      this.console.debug('%s', npmLsReturns.stdout)
-      this.console.groupEnd()
-    } else {
-      this.console.debug('DEBUG | npm-ls: no STDOUT')
-    }
-    */
-    if (npmLsReturns.stderr?.length > 0) {
-      this.console.group('WARN  | npm-ls: STDERR')
-      this.console.warn('%s', npmLsReturns.stderr)
-      this.console.groupEnd()
-    } else {
-      this.console.debug('DEBUG | npm-ls: no STDERR')
-    }
-    if (npmLsReturns.status !== 0 || npmLsReturns.error instanceof Error) {
-      const error = npmLsReturns.error as SpawnSyncResultError ?? {}
-      this.console.group('ERROR | npm-ls: errors')
-      this.console.error('%j', { error, status: npmLsReturns.status, signal: npmLsReturns.signal })
-      this.console.groupEnd()
-      if (this.ignoreNpmErrors) {
-        this.console.debug('DEBUG | npm-ls exited with errors that are to be ignored.')
-      } else {
-        throw new Error(`npm-ls exited with errors: ${
-          error.errno ?? '???'} ${
-          error.code ?? npmLsReturns.status ?? 'noCode'} ${
-          error.signal ?? npmLsReturns.signal ?? 'noSignal'}`)
-      }
-    }
-
+    this.console.debug('DEBUG | npm-ls: run %j via %j with %j in %j', command, runSync.name, args, projectDir)
+    let npmLsReturns: Buffer
     try {
-      return JSON.parse(npmLsReturns.stdout.toString())
+      const runOptions: ExecSyncOptionsWithBufferEncoding = {
+        cwd: projectDir,
+        env: process.env,
+        encoding: 'buffer',
+        maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
+      };
+      npmLsReturns = runSync === execSync
+        ? runSync(command +' '+ args.join(' '), runOptions)
+        : runSync(command, args, runOptions)
+    } catch (runError: any) {
+      // this.console.group('DEBUG | npm-ls: STDOUT')
+      // this.console.debug('%s', runError.stdout)
+      // this.console.groupEnd()
+      this.console.group('WARN  | npm-ls: MESSAGE')
+      this.console.warn('%s', runError.message)
+      this.console.groupEnd()
+      this.console.group('ERROR | npm-ls: STDERR')
+      this.console.error('%s', runError.stderr)
+      this.console.groupEnd()
+      if (!this.ignoreNpmErrors) {
+        throw new Error(`npm-ls exited with errors: ${
+          runError.status as string ?? 'noStatus'} ${
+          runError.signal as string ?? 'noSignal'}`)
+      }
+      this.console.debug('DEBUG | npm-ls exited with errors that are to be ignored.')
+      npmLsReturns = runError.stdout ?? Buffer.alloc(0)
+    }
+    // this.console.debug('stdout: %s', npmLsReturns)
+    try {
+      return JSON.parse(npmLsReturns.toString())
     } catch (jsonParseError) {
       // @ts-expect-error TS2554
       throw new Error('failed to parse npm-ls response', { cause: jsonParseError })

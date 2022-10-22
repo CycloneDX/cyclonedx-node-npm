@@ -110,7 +110,7 @@ describe('cli.run()', () => {
       try {
         expect(() => {
           cli.run(mockProcess)
-        }).toThrow(/^npm-ls exited with errors: \?\?\? [1-9]\d* noSignal$/i)
+        }).toThrow(/^npm-ls exited with errors: [1-9]\d* noSignal$/i)
       } finally {
         closeSync(stdout.fd)
         stderr.close()
@@ -150,7 +150,7 @@ describe('cli.run()', () => {
       try {
         expect(() => {
           cli.run(mockProcess)
-        }).toThrow(`npm-ls exited with errors: ??? ${expectedExitCode} noSignal`)
+        }).toThrow(`npm-ls exited with errors: ${expectedExitCode} noSignal`)
       } finally {
         closeSync(stdout.fd)
         stderr.close()
