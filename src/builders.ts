@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
-import {execFileSync, execSync, ExecSyncOptionsWithBufferEncoding} from 'child_process'
+import { execFileSync, execSync, ExecSyncOptionsWithBufferEncoding } from 'child_process'
 import { existsSync } from 'fs'
 import { PackageURL } from 'packageurl-js'
 import { dirname, resolve } from 'path'
@@ -107,10 +107,14 @@ export class BomBuilder {
     )
   }
 
-  private getNpmCommand (process: NodeJS.Process): [cmd: string, runSync: typeof execSync | typeof execFileSync] {
+  private getNpmExecPath (process: NodeJS.Process): string | undefined {
     // `npm_execpath` will be whichever cli script has called this application by npm.
     // This can be `npm`, `npx`, or `undefined` if called by `node` directly.
     const execPath = process.env.npm_execpath ?? ''
+    if (execPath === '') {
+      return undefined
+    }
+
     if (this.npxMatcher.test(execPath)) {
       // `npm` must be used for executing `ls`.
       this.console.debug('DEBUG | command: npx-cli.js usage detected, checking for npm-cli.js ...')
@@ -118,16 +122,17 @@ export class BomBuilder {
       // Replace the script in the path, and normalise it with resolve (eliminates any extraneous path separators).
       const npmPath = resolve(execPath.replace(this.npxMatcher, '$1npm-cli.js'))
       if (existsSync(npmPath)) {
-        return [npmPath, execFileSync]
+        return npmPath
       }
     } else if (existsSync(execPath)) {
-      return [execPath, execFileSync]
+      return execPath
     }
-    return ['npm', execSync]
+
+    throw new Error(`unexpected NPM execPath: ${execPath}`)
   }
 
   private fetchNpmLs (projectDir: string, process: NodeJS.Process): any {
-    let [command, runSync] = this.getNpmCommand(process)
+    let execPath = this.getNpmExecPath(process)
     const args: string[] = [
       'ls',
       // format as parsable json
@@ -143,15 +148,14 @@ export class BomBuilder {
     for (const odt of this.omitDependencyTypes) {
       args.push('--omit', odt)
     }
-    if (command.endsWith('.js')) {
-      args.unshift('--', command)
-      command = process.execPath
-      runSync = execFileSync
+    if (execPath?.endsWith('.js') === true) {
+      args.unshift('--', execPath)
+      execPath = process.execPath
     }
 
     // TODO use instead ? : https://www.npmjs.com/package/debug ?
     this.console.info('INFO  | gather dependency tree ...')
-    this.console.debug('DEBUG | npm-ls: run %j via %j with %j in %j', command, runSync.name, args, projectDir)
+    this.console.debug('DEBUG | npm-ls: run %j with %j in %j', execPath ?? 'npm', args, projectDir)
     let npmLsReturns: Buffer
     try {
       const runOptions: ExecSyncOptionsWithBufferEncoding = {
@@ -159,10 +163,10 @@ export class BomBuilder {
         env: process.env,
         encoding: 'buffer',
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
-      };
-      npmLsReturns = runSync === execSync
-        ? runSync(command +' '+ args.join(' '), runOptions)
-        : runSync(command, args, runOptions)
+      }
+      npmLsReturns = execPath === undefined
+        ? execSync('npm ' + args.join(' '), runOptions)
+        : execFileSync(execPath, args, runOptions)
     } catch (runError: any) {
       // this.console.group('DEBUG | npm-ls: STDOUT')
       // this.console.debug('%s', runError.stdout)
