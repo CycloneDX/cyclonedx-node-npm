@@ -203,7 +203,10 @@ export function run (process: NodeJS.Process): void {
   } else if (existsSync(packageLockFile)) {
     lockFile = packageLockFile
   } else {
-    throw new Error('missing package lock file or npm shrinkwrap file')
+    throw new Error(
+      'Missing package lock file or npm shrinkwrap file.\n' +
+      'Did you forget to run `npm install` on your project accordingly?'
+    )
   }
   myConsole.debug('DEBUG | lockFile: %s', lockFile)
 

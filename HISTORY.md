@@ -5,13 +5,17 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Added
-  * CLI got a new switch `--short-PURLs` ([#225] via [#226]) 
+  * CLI got a new switch `--short-PURLs` ([#225] via [#226])
+* Misc
+  * Improved the error message when a lock files was missing ([#196] via [#231]) 
 * Build
   * Use _TypeScript_ `v4.8.4` now, was `v4.8.3` (via [#164])
 
 [#164]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/164
+[#196]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/196
 [#225]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/225
 [#226]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/226
+[#231]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/231
 
 ## 1.0.0 - 2022-09-24
 
