@@ -80,6 +80,9 @@ Options:
                             (choices: "dev", "optional", "peer", default: "dev" if the NODE_ENV environment variable is set to "production", otherwise empty)
   --flatten-components      Whether to flatten the components.
                             This means the actual nesting of node packages is not represented in the SBOM result.
+  --short-PURLs             Omit all qualifiers from PackageURLs.
+                            This causes information loss in trade of shorter PURLs, which might improve digesting these strings. 
+                            (default: false)
   --spec-version <version>  Which version of CycloneDX spec to use.
                             (choices: "1.2", "1.3", "1.4", default: "1.4")
   --output-reproducible     Whether to go the extra mile and make the output reproducible.

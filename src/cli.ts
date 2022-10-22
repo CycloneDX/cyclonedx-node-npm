@@ -43,6 +43,7 @@ interface CommandOptions {
   omit: Omittable[]
   specVersion: Spec.Version
   flattenComponents: boolean
+  shortPURLs: boolean
   outputReproducible: boolean
   outputFormat: OutputFormat
   outputFile: string
@@ -86,6 +87,12 @@ function makeCommand (process: NodeJS.Process): Command {
       '--flatten-components',
       'Whether to flatten the components.\n' +
       'This means the actual nesting of node packages is not represented in the SBOM result.'
+    ).default(false)
+  ).addOption(
+    new Option(
+      '--short-PURLs',
+      'Omit all qualifiers from PackageURLs.\n' +
+      'This causes information loss in trade of shorter PURLs, which might improve digesting these strings.'
     ).default(false)
   ).addOption(
     new Option(
@@ -216,7 +223,8 @@ export function run (process: NodeJS.Process): void {
       packageLockOnly: options.packageLockOnly,
       omitDependencyTypes: options.omit,
       reproducible: options.outputReproducible,
-      flattenComponents: options.flattenComponents
+      flattenComponents: options.flattenComponents,
+      shortPURLs: options.shortPURLs
     },
     myConsole
   ).buildFromLockFile(lockFile, process)
