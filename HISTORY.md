@@ -4,10 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Added
+  * CLI got a new switch `--short-PURLs` ([#225] via [#226]) 
 * Build
   * Use _TypeScript_ `v4.8.4` now, was `v4.8.3` (via [#164])
 
 [#164]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/164
+[#225]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/225
+[#226]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/226
 
 ## 1.0.0 - 2022-09-24
 
