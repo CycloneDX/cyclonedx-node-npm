@@ -60,8 +60,8 @@ jobs:
           echo "::debug::new version = $VERSION"
           VERSION_PLAIN="${VERSION:1}" # remove 'v' prefix
           echo "::debug::plain version = $VERSION_PLAIN"
-          echo "::set-output name=version::$VERSION"
-          echo "::set-output name=version_plain::$VERSION_PLAIN"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "version_plain=$VERSION_PLAIN" >> $GITHUB_OUTPUT
         env:
           NPMV_NEWVERSION: ${{ github.event.inputs.newversion }}
           NPMV_MESSAGE: ${{ github.event.inputs.commitMessage }}
