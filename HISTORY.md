@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## unreleased
+## 1.1.0 - 2022-10-22
 
 * Added
   * CLI got a new switch `--short-PURLs` ([#225] via [#226])
