@@ -41,7 +41,7 @@ describe('cli.run()', () => {
     mkdirSync(tmpRootRun)
 
     test.each([
-      ['no-lockfile', /missing .*(?:lock|shrinkwrap) file/i],
+      ['no-lockfile', /missing evidence/i],
       ['no-manifest', /missing .*manifest file/i]
     ])('%s', (folderName, expectedError) => {
       const logFileBase = join(tmpRootRun, folderName)

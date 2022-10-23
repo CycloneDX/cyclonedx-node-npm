@@ -21,7 +21,7 @@ import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library
 import { execFileSync, execSync, ExecSyncOptionsWithBufferEncoding } from 'child_process'
 import { existsSync } from 'fs'
 import { PackageURL } from 'packageurl-js'
-import { dirname, resolve } from 'path'
+import { resolve } from 'path'
 
 import { PropertyNames, PropertyValueBool } from './properties'
 import { makeThisTool } from './thisTool'
@@ -98,12 +98,9 @@ export class BomBuilder {
     this.console = console_
   }
 
-  buildFromLockFile (filePath: string, process: NodeJS.Process): Models.Bom {
+  buildFromProjectDir (projectDir: string, process: NodeJS.Process): Models.Bom {
     return this.buildFromNpmLs(
-      this.fetchNpmLs(
-        dirname(filePath),
-        process
-      )
+      this.fetchNpmLs(projectDir, process)
     )
   }
 

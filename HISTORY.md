@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## unreleased 
+
+* Changed
+  * The existence of a lock file is no longer enforced, as long as there are other evidence. ([#247] via [#248])  
+
+[#247]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/247
+[#248]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/248
+
 ## 1.1.0 - 2022-10-22
 
 * Added

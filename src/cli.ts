@@ -188,27 +188,21 @@ export function run (process: NodeJS.Process): void {
   const projectDir = dirname(packageFile)
   myConsole.debug('DEBUG | projectDir: %s', projectDir)
 
-  /**
-   * The path to the used npm lock file.
-   *
-   * > If both `package-lock.json` and `npm-shrinkwrap.json` are present in a package root,
-   * > `npm-shrinkwrap.json` will be preferred over the `package-lock.json` file.
-   * source: {@link https://docs.npmjs.com/cli/v8/configuring-npm/npm-shrinkwrap-json}
-   */
-  let lockFile: string
-  const shrinkwrapFile = resolve(projectDir, 'npm-shrinkwrap.json')
-  const packageLockFile = resolve(projectDir, 'package-lock.json')
-  if (existsSync(shrinkwrapFile)) {
-    lockFile = shrinkwrapFile
-  } else if (existsSync(packageLockFile)) {
-    lockFile = packageLockFile
+  if (existsSync(resolve(projectDir, 'npm-shrinkwrap.json'))) {
+    myConsole.debug('DEBUG | detected a npm shrinkwrap file')
+  } else if (existsSync(resolve(projectDir, 'package-lock.json'))) {
+    myConsole.debug('DEBUG | detected a package lock file')
+  } else if (!options.packageLockOnly && existsSync(resolve(projectDir, 'node_modules'))) {
+    myConsole.debug('DEBUG | detected a node_modules dir')
+    // npm7 and later also might put a `node_modules/.package-lock.json` file
   } else {
-    throw new Error(
-      'Missing package lock file or npm shrinkwrap file.\n' +
-      'Did you forget to run `npm install` on your project accordingly?'
-    )
+    myConsole.log('LOG   | No evidence: no package lock file nor npm shrinkwrap file')
+    if (!options.packageLockOnly) {
+      myConsole.log('LOG   | No evidence: no node_modules dir')
+    }
+    myConsole.info('INFO  | ? Did you forget to run `npm install` on your project accordingly ?')
+    throw new Error('missing evidence')
   }
-  myConsole.debug('DEBUG | lockFile: %s', lockFile)
 
   const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
 
@@ -230,7 +224,7 @@ export function run (process: NodeJS.Process): void {
       shortPURLs: options.shortPURLs
     },
     myConsole
-  ).buildFromLockFile(lockFile, process)
+  ).buildFromProjectDir(projectDir, process)
 
   const spec = Spec.SpecVersionDict[options.specVersion]
   if (undefined === spec) {
