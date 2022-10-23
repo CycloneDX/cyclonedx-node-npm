@@ -36,20 +36,31 @@ jobs:
           - local-workspaces
           - juice-shop
         npm-version:
-          - '8'      # Current
+          ## see https://www.npmjs.com/package/npm?activeTab=versions
+          ## see also: https://github.com/npm/cli/releases
+          - '9'      # Current
+          - '8'      # Latest
           - '7'      # Legacy
           - '6'      # Legacy
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '18'      # Current
-          - '16'      # Active LTS
-          - '14'      # Maintenance LTS
+          - '18'     # Current
+          - '16'     # Active LTS
+          - '14'     # Maintenance LTS
         os:
           - ubuntu-latest
           - windows-latest
           - macos-latest
         exclude:
+          - # npm9 upgrade/install failed on node14
+            # !! REVISIT THIS !!
+            npm-version: '9'
+            node-version: '14'
+          - # npm9 seams to no longer support transitive local dependencies
+            # !! REVISIT THIS !!
+            subject: local-dependencies
+            npm-version: '9'
           - # juice-shop might not be node14 compatible
             subject: juice-shop
             node-version: '14'
