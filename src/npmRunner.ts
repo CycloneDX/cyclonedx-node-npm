@@ -54,6 +54,7 @@ export function makeNpmRunner (process: NodeJS.Process, console_: Console): runF
   const execPath = getExecPath(process, console_)
   if (execPath === undefined) {
     console_.debug('DEBUG | makeNpmRunner caused execSync "npm"', execPath)
+    // not shell-save - but this is okay four our use case - since we have complete control over `args` in the caller.
     return (args, options) => execSync('npm ' + args.join(' '), options)
   }
 
