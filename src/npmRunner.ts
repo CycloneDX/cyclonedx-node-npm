@@ -53,7 +53,7 @@ function getExecPath (process: NodeJS.Process, console_: Console): string | unde
 export function makeNpmRunner (process: NodeJS.Process, console_: Console): runFunc {
   const execPath = getExecPath(process, console_)
   if (execPath === undefined) {
-    console_.debug('DEBUG | makeNpmRunner caused execSync "npm"', execPath)
+    console_.debug('DEBUG | makeNpmRunner caused execSync "npm"')
     // not shell-save - but this is okay four our use case - since we have complete control over `args` in the caller.
     return (args, options) => execSync('npm ' + args.join(' '), options)
   }
