@@ -18,10 +18,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
-import { ExecSyncOptionsWithBufferEncoding } from 'child_process'
 import { PackageURL } from 'packageurl-js'
 
-import { makeNpmRunner } from './npmRunner'
+import { makeNpmRunner, runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { makeThisTool } from './thisTool'
 
@@ -87,37 +86,88 @@ export class BomBuilder {
     )
   }
 
+  private getNpmVersion (npmRunner: runFunc, process_: NodeJS.Process): number[] {
+    let npmVersion: number[]
+    this.console.info('INFO  | detect NPM version ...')
+    try {
+      npmVersion = npmRunner(['--version'], {
+        env: process_.env,
+        encoding: 'buffer',
+        maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
+      }).toString().split('.').map(v => Number(v))
+    } catch (runError: any) {
+      this.console.group('DEBUG | npm-ls: STDOUT')
+      this.console.debug('%s', runError.stdout)
+      this.console.groupEnd()
+      this.console.group('WARN  | npm-ls: MESSAGE')
+      this.console.warn('%s', runError.message)
+      this.console.groupEnd()
+      this.console.group('ERROR | npm-ls: STDERR')
+      this.console.error('%s', runError.stderr)
+      this.console.groupEnd()
+      throw runError
+    }
+    this.console.log('LOG   | detected NPM version %j', npmVersion)
+    return npmVersion
+  }
+
   private fetchNpmLs (projectDir: string, process_: NodeJS.Process): any {
+    const npmRunner = makeNpmRunner(process_, this.console)
+
+    const npmVersion = this.getNpmVersion(npmRunner, process_)
+
     const args: string[] = [
       'ls',
       // format as parsable json
       '--json',
-      // depth = infinity
-      '--all',
       // get all the needed content
-      '--long'
+      '--long',
+      // depth = infinity
+      npmVersion[0] >= 7
+        ? '--all'
+        : '--depth 255'
     ]
+
     if (this.packageLockOnly) {
-      args.push('--package-lock-only')
-    }
-    for (const odt of this.omitDependencyTypes) {
-      args.push('--omit', odt)
+      if (npmVersion[0] >= 7) {
+        args.push('--package-lock-only')
+      } else {
+        this.console.warn('WARN  | your NPM does not support "--package-lock-only", internally skipped this option')
+      }
     }
 
-    const runOptions: ExecSyncOptionsWithBufferEncoding = {
-      cwd: projectDir,
-      env: process_.env,
-      encoding: 'buffer',
-      maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
+    if (npmVersion >= [8, 7]) {
+      // since NPM v8.7
+      for (const odt of this.omitDependencyTypes) {
+        args.push(`--omit=${odt}`)
+      }
+    } else {
+      // see https://github.com/npm/cli/pull/4744
+      for (const odt of this.omitDependencyTypes) {
+        switch (odt) {
+          case 'dev':
+            this.console.warn('WARN  | your NPM does not support "--omit=%s", internally using "--production" to mitigate', odt)
+            args.push('--production')
+            break
+          case 'peer':
+          case 'optional':
+            this.console.warn('WARN  | your NPM does not support "--omit=%s", internally skipped this option', odt)
+            break
+        }
+      }
     }
-    const npmRunner = makeNpmRunner(process_, this.console)
 
     // TODO use instead ? : https://www.npmjs.com/package/debug ?
     this.console.info('INFO  | gather dependency tree ...')
     this.console.debug('DEBUG | npm-ls: run npm with %j in %j', args, projectDir)
     let npmLsReturns: Buffer
     try {
-      npmLsReturns = npmRunner(args, runOptions)
+      npmLsReturns = npmRunner(args, {
+        cwd: projectDir,
+        env: process_.env,
+        encoding: 'buffer',
+        maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
+      })
     } catch (runError: any) {
       // this.console.group('DEBUG | npm-ls: STDOUT')
       // this.console.debug('%s', runError.stdout)

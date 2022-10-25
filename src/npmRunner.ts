@@ -26,10 +26,10 @@ const jsMatcher = /\.[cm]?js$/
 /**
  * @throws {Error} when npm path unexpected
  */
-function getExecPath (process: NodeJS.Process, console_: Console): string | undefined {
+function getExecPath (process_: NodeJS.Process, console_: Console): string | undefined {
   // `npm_execpath` will be whichever cli script has called this application by npm.
   // This can be `npm`, `npx`, or `undefined` if called by `node` directly.
-  const execPath = process.env.npm_execpath ?? ''
+  const execPath = process_.env.npm_execpath ?? ''
   if (execPath === '') {
     return undefined
   }
@@ -50,8 +50,8 @@ function getExecPath (process: NodeJS.Process, console_: Console): string | unde
   throw new Error(`unexpected NPM execPath: ${execPath}`)
 }
 
-export function makeNpmRunner (process: NodeJS.Process, console_: Console): runFunc {
-  const execPath = getExecPath(process, console_)
+export function makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
+  const execPath = getExecPath(process_, console_)
   if (execPath === undefined) {
     console_.debug('DEBUG | makeNpmRunner caused execSync "npm"')
     // not shell-save - but this is okay four our use case - since we have complete control over `args` in the caller.
@@ -59,7 +59,7 @@ export function makeNpmRunner (process: NodeJS.Process, console_: Console): runF
   }
 
   if (jsMatcher.test(execPath)) {
-    const nodeExecPath = process.execPath
+    const nodeExecPath = process_.execPath
     console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with  "-- %s"', nodeExecPath, execPath)
     return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
   }

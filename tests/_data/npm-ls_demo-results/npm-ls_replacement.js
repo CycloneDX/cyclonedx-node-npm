@@ -25,6 +25,11 @@ const { createReadStream } = require('fs')
 
 process.exitCode = Number(process.env.CT_EXIT_CODE ?? 0)
 
+if (process.argv[2] === '--version') {
+  process.stdout.write(process.env.CT_VERSION)
+  process.exit(0)
+}
+
 switch (process.env.CT_SUBJECT) {
   case 'just-exit':
     process.exit(process.exitCode)

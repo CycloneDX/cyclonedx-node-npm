@@ -140,6 +140,7 @@ describe('cli.run()', () => {
         ],
         env: {
           ...process.env,
+          CT_VERSION: '8.99.0',
           CT_EXIT_CODE: `${expectedExitCode}`, // non-zero exit code
           CT_SUBJECT: 'just-exit',
           // abuse the npm-ls replacement, as it can be caused to crash under control.
@@ -178,6 +179,7 @@ describe('cli.run()', () => {
         ],
         env: {
           ...process.env,
+          CT_VERSION: '8.99.0',
           CT_SUBJECT: 'broken-json',
           // abuse the npm-ls replacement, as it can be caused to crash under control.
           npm_execpath: npmLsReplacement
@@ -232,7 +234,8 @@ describe('cli.run()', () => {
         ],
         env: {
           ...process.env,
-          CT_EXPECTED_ARGS: ['ls', '--json', '--all', '--long', '--package-lock-only'].join(' '),
+          CT_VERSION: '8.99.0',
+          CT_EXPECTED_ARGS: ['ls', '--json', '--long', '--all', '--package-lock-only'].join(' '),
           CT_SUBJECT: dd.subject,
           CT_NPM: dd.npm,
           CT_NODE: dd.node,
@@ -306,8 +309,9 @@ describe('cli.run()', () => {
       ],
       env: {
         ...process.env,
+        CT_VERSION: '8.99.0',
         CT_EXIT_CODE: expectedExitCode, // non-zero exit code
-        CT_EXPECTED_ARGS: ['ls', '--json', '--all', '--long', '--package-lock-only'].join(' '),
+        CT_EXPECTED_ARGS: ['ls', '--json', '--long', '--all', '--package-lock-only'].join(' '),
         CT_SUBJECT: dd.subject,
         CT_NPM: dd.npm,
         CT_NODE: dd.node,
