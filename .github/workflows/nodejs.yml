@@ -107,7 +107,7 @@ jobs:
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3
         with:
-          name: logs-jest-node${{ matrix.node-version }}-${{ matrix.os }}
+          name: logs-jest_node${{ matrix.node-version }}-${{ matrix.os }}
           path: tests/_log
           if-no-files-found: error
       - name: artifact test reports
@@ -115,6 +115,104 @@ jobs:
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3
         with:
-          name: reports-jest-node${{ matrix.node-version }}-${{ matrix.os }}
+          name: reports-jest_node${{ matrix.node-version }}-${{ matrix.os }}
+          path: ${{ env.REPORTS_DIR }}
+          if-no-files-found: error
+  dogfooding-via-npx:
+    needs: [ 'build' ]
+    name: dogfooding via npx (node${{ matrix.node-version }} ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          ## action based on https://github.com/actions/node-versions/releases
+          ## see also: https://nodejs.org/en/about/releases/
+          - '18'      # Current
+          - '16'      # Active LTS
+          # - '14'      # Maintenance LTS ## does not support that feature
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: setup subject
+        run: npm i --ignore-scripts
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ env.DIST_DIR }}
+          path: ${{ env.DIST_DIR }}
+      - name: dogfooding
+        run: > 
+          npx . 
+          --omit dev 
+          --output-file ${{ env.REPORTS_DIR }}/bom.json
+      - name: artifact test reports
+        if: ${{ failure() }}
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dogfooding-via-npx_node${{ matrix.node-version }}-${{ matrix.os }}
+          path: ${{ env.REPORTS_DIR }}
+          if-no-files-found: error
+  dogfooding-via-direct:
+    needs: [ 'build' ]
+    name: dogfooding via direct (node${{ matrix.node-version }} ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          ## action based on https://github.com/actions/node-versions/releases
+          ## see also: https://nodejs.org/en/about/releases/
+          - '18'      # Current
+          - '16'      # Active LTS
+          - '14'      # Maintenance LTS
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: setup subject
+        run: npm i --ignore-scripts
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ env.DIST_DIR }}
+          path: ${{ env.DIST_DIR }}
+      - name: dogfooding
+        run: >
+          node -- bin/cyclonedx-npm-cli.js 
+          --omit dev 
+          --output-file ${{ env.REPORTS_DIR }}/bom.json
+      - name: artifact test reports
+        if: ${{ failure() }}
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dogfooding-via-direct_node${{ matrix.node-version }}-${{ matrix.os }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
