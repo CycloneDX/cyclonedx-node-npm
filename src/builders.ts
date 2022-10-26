@@ -23,6 +23,7 @@ import { PackageURL } from 'packageurl-js'
 import { makeNpmRunner, runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { makeThisTool } from './thisTool'
+import { versionCompare } from './versionCompare'
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
@@ -136,7 +137,7 @@ export class BomBuilder {
       }
     }
 
-    if (npmVersion >= [8, 7]) {
+    if (versionCompare(npmVersion, [8, 7]) >= 0) {
       // since NPM v8.7
       for (const odt of this.omitDependencyTypes) {
         args.push(`--omit=${odt}`)
