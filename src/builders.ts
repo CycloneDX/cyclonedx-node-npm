@@ -348,12 +348,14 @@ export class BomBuilder {
   private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | undefined {
     const component = this.componentBuilder.makeComponent(data, type)
     if (component === undefined) {
+      this.console.debug('DEBUG | skip undefined component: %j %j', data.name, data._id)
       return undefined
     }
 
     // older npm-ls versions (v6) hide properties behind a `_`
     if ((data.dev ?? data._development) === true) {
       if (this.omitDependencyTypes.has('dev')) {
+        this.console.debug('DEBUG | skip dev component: %j %j', data.name, data._id)
         return undefined
       }
       component.properties.add(
