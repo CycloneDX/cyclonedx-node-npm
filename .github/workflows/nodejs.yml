@@ -118,9 +118,9 @@ jobs:
           name: reports-jest_node${{ matrix.node-version }}-${{ matrix.os }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
-  dogfooding-via-npx:
+  dogfooding-npx:
     needs: [ 'build' ]
-    name: dogfooding via npx (node${{ matrix.node-version }} ${{ matrix.os }})
+    name: dogfooding/npx (node${{ matrix.node-version }} ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -140,6 +140,7 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v3
+      - run: mkdir -p ${{ env.REPORTS_DIR }}
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v3
@@ -167,9 +168,9 @@ jobs:
           name: dogfooding-via-npx_node${{ matrix.node-version }}-${{ matrix.os }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
-  dogfooding-via-direct:
+  dogfooding-direct:
     needs: [ 'build' ]
-    name: dogfooding via direct (node${{ matrix.node-version }} ${{ matrix.os }})
+    name: dogfooding/direct (node${{ matrix.node-version }} ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -189,6 +190,7 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v3
+      - run: mkdir -p ${{ env.REPORTS_DIR }}
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v3
