@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased 
 
+* Fixed
+  * In case of an error, the exit code is guaranteed to be non-zero (via [#260])
+
+[#260]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/260
+
 ## 1.2.0 - 2022-10-23
 
 * Changed
