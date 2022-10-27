@@ -48,7 +48,7 @@ export class BomBuilder {
 
   ignoreNpmErrors: boolean
 
-  metaComponentType: Enums.ComponentType | undefined
+  metaComponentType: Enums.ComponentType
   packageLockOnly: boolean
   omitDependencyTypes: Set<OmittableDependencyTypes>
   reproducible: boolean
@@ -71,7 +71,7 @@ export class BomBuilder {
     this.purlFactory = purlFactory
 
     this.ignoreNpmErrors = options.ignoreNpmErrors ?? false
-    this.metaComponentType = options.metaComponentType
+    this.metaComponentType = options.metaComponentType ?? Enums.ComponentType.Library
     this.packageLockOnly = options.packageLockOnly ?? false
     this.omitDependencyTypes = new Set(options.omitDependencyTypes ?? [])
     this.reproducible = options.reproducible ?? false
@@ -202,8 +202,10 @@ export class BomBuilder {
 
     // region all components & dependencies
 
-    const rootComponent = this.makeComponent(data, this.metaComponentType) ??
-      new DummyComponent(Enums.ComponentType.Library, 'RootComponent')
+    /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
+     * as we need to enforce a proper root component to enable all features of SBOM */
+    const rootComponent: Models.Component = this.makeComponent(data, this.metaComponentType) ||
+      new DummyComponent(this.metaComponentType, 'RootComponent')
     const allComponents: AllComponents = new Map([[data.path, rootComponent]])
     this.gatherDependencies(allComponents, data, rootComponent.dependencies)
 
@@ -295,20 +297,32 @@ export class BomBuilder {
      */
     for (const [depName, depData] of Object.entries(data.dependencies ?? {}) as any) {
       if (depData === null || typeof depData !== 'object') {
-        continue
+        // cannot build
+        continue // for-loop
       }
       if (typeof depData.path !== 'string') {
         // might be an optional dependency that was not installed
-        continue
+        // skip, as it was not installed anyway
+        continue // for-loop
       }
 
       let dep = allComponents.get(depData.path)
       if (dep === undefined) {
-        dep = this.makeComponent(
+        const _dep = this.makeComponent(
           this.packageLockOnly
             ? depData
             : this.enhancedPackageData(depData)
-        ) ?? new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
+        )
+        if (_dep === false) {
+          // shall be skipped
+          continue // for-loop
+        }
+        dep = _dep ??
+          new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
+        if (dep instanceof DummyComponent) {
+          this.console.warn('WARN  | InterferedDependency $j', dep.name)
+        }
+
         allComponents.set(depData.path, dep)
       }
       directDepRefs.add(dep.bomRef)
@@ -346,42 +360,45 @@ export class BomBuilder {
    */
   private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
-  private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | undefined {
+  private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | false | undefined {
+    // older npm-ls versions (v6) hide properties behind a `_`
+    const isDev = (data.dev ?? data._development) === true
+    if (isDev && this.omitDependencyTypes.has('dev')) {
+      this.console.debug('DEBUG | omit dev component: %j %j', data.name, data._id)
+      return false
+    }
+
     const component = this.componentBuilder.makeComponent(data, type)
     if (component === undefined) {
-      this.console.debug('DEBUG | skip undefined component: %j %j', data.name, data._id)
+      this.console.debug('DEBUG | skip broken component: %j %j', data.name, data._id)
       return undefined
     }
 
-    // older npm-ls versions (v6) hide properties behind a `_`
-    if ((data.dev ?? data._development) === true) {
-      if (this.omitDependencyTypes.has('dev')) {
-        this.console.debug('DEBUG | skip dev component: %j %j', data.name, data._id)
-        return undefined
-      }
+    // region properties
+
+    if (isDev) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
       )
     }
-
     if (data.extraneous === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
       )
     }
-
     if (data.private === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
       )
     }
-
     // older npm-ls versions (v6) hide properties behind a `_`
     if (!this.flattenComponents && (data.inBundle ?? data._inBundle) === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
       )
     }
+
+    // endregion properties
 
     // older npm-ls versions (v6) hide properties behind a `_`
     const resolved = data.resolved ?? data._resolved

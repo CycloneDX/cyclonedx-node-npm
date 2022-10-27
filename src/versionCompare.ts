@@ -24,8 +24,8 @@ export function versionCompare (a: Version, b: Version): CompareResult {
   let ai: Number, bi: Number
   for (let i = 0, l = Math.max(a.length, b.length); i < l; ++i) {
     // make values NaN-save, null-safe, undefined-safe
-    ai = a[i] || 0 // eslint-disable-line @typescript-eslint/strict-boolean-expressions
-    bi = b[i] || 0 // eslint-disable-line @typescript-eslint/strict-boolean-expressions
+    ai = a[i] || 0 /* eslint-disable-line @typescript-eslint/strict-boolean-expressions */
+    bi = b[i] || 0 /* eslint-disable-line @typescript-eslint/strict-boolean-expressions */
     if (ai < bi) {
       // A < B
       return -1
