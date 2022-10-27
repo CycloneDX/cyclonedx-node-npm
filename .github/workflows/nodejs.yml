@@ -155,11 +155,17 @@ jobs:
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
+      - name: clear npx caches
+        if: ${{ ! startsWith(matrix.os, 'windows-') }}
+        run: rm -rfv "$HOME/.npm/_npx/"
+      - name: clear npx caches
+        if: ${{ startsWith(matrix.os, 'windows-') }}
+        run: Remove-Item -Path "%LocalAppData%\npm-cache\_npx" -Force -Recurse
       - name: dogfooding
         run: > 
           npx . 
-          --omit dev 
-          --output-file ${{ env.REPORTS_DIR }}/bom.json
+          --omit=dev 
+          --output-file=${{ env.REPORTS_DIR }}/bom.json
       - name: artifact test reports
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
@@ -208,8 +214,8 @@ jobs:
       - name: dogfooding
         run: >
           node -- bin/cyclonedx-npm-cli.js 
-          --omit dev 
-          --output-file ${{ env.REPORTS_DIR }}/bom.json
+          --omit=dev 
+          --output-file=${{ env.REPORTS_DIR }}/bom.json
       - name: artifact test reports
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact

@@ -108,7 +108,7 @@ export class BomBuilder {
       this.console.groupEnd()
       throw runError
     }
-    this.console.log('LOG   | detected NPM version %j', npmVersion)
+    this.console.debug('DEBUG | detected NPM version %j', npmVersion)
     return npmVersion
   }
 
