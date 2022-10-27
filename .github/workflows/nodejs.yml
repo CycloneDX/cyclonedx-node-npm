@@ -118,62 +118,6 @@ jobs:
           name: reports-jest_node${{ matrix.node-version }}-${{ matrix.os }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
-  dogfooding-npx:
-    needs: [ 'build' ]
-    name: dogfooding/npx (node${{ matrix.node-version }} ${{ matrix.os }})
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version:
-          ## action based on https://github.com/actions/node-versions/releases
-          ## see also: https://nodejs.org/en/about/releases/
-          - '18'      # Current
-          - '16'      # Active LTS
-          # - '14'      # Maintenance LTS ## does not support that feature
-        os:
-          - ubuntu-latest
-          - windows-latest
-          - macos-latest
-    timeout-minutes: 10
-    steps:
-      - name: Checkout
-        # see https://github.com/actions/checkout
-        uses: actions/checkout@v3
-      - run: mkdir -p ${{ env.REPORTS_DIR }}
-      - name: Setup Node.js ${{ matrix.node-version }}
-        # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - name: setup subject
-        run: npm i --ignore-scripts
-      - name: fetch build artifact
-        # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: ${{ env.DIST_DIR }}
-          path: ${{ env.DIST_DIR }}
-      - name: clear npx caches
-        if: ${{ ! startsWith(matrix.os, 'windows-') }}
-        run: rm -rfv "$HOME/.npm/_npx/"
-      - name: clear npx caches
-        if: ${{ startsWith(matrix.os, 'windows-') }}
-        run: Remove-Item -Path "%LocalAppData%\npm-cache\_npx" -Force -Recurse
-      - name: dogfooding
-        run: > 
-          npx . 
-          --omit=dev 
-          --output-file=${{ env.REPORTS_DIR }}/bom.json
-      - name: artifact test reports
-        if: ${{ failure() }}
-        # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: dogfooding-via-npx_node${{ matrix.node-version }}-${{ matrix.os }}
-          path: ${{ env.REPORTS_DIR }}
-          if-no-files-found: error
   dogfooding-direct:
     needs: [ 'build' ]
     name: dogfooding/direct (node${{ matrix.node-version }} ${{ matrix.os }})
@@ -221,6 +165,6 @@ jobs:
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3
         with:
-          name: dogfooding-via-direct_node${{ matrix.node-version }}-${{ matrix.os }}
+          name: dogfooding-direct_node${{ matrix.node-version }}-${{ matrix.os }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
