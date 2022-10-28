@@ -85,7 +85,9 @@
     "test": "run-p --aggregate-output -lc test:*",
     "test:jest": "jest",
     "test:standard": "eslint .",
-    "dog-feed": "node -- bin/cyclonedx-npm-cli.js"
+    "dogfooding:npx": "npx .",
+    "dogfooding:npm-exec": "npm exec .",
+    "dogfooding:direct": "node -- bin/cyclonedx-npm-cli.js"
   },
   "jest-junit": {
     "suiteName": "jest tests",
