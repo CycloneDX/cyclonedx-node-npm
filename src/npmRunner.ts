@@ -22,7 +22,7 @@ import { existsSync } from 'fs'
 import { resolve } from 'path'
 
 /** !attention: args might not be shell-save. */
-export declare type runFunc = (args: string[], options: ExecSyncOptionsWithBufferEncoding) => Buffer
+export type runFunc = (args: string[], options: ExecSyncOptionsWithBufferEncoding) => Buffer
 
 /**
  * Matches the filename for the npx cli script in a given path:
