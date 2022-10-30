@@ -21,37 +21,15 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const assert = require('assert')
-const { createReadStream } = require('fs')
-
-process.exitCode = Number(process.env.CT_EXIT_CODE ?? 0)
 
 if (process.argv[2] === '--version') {
   process.stdout.write(process.env.CT_VERSION)
   process.exit(0)
 }
 
-switch (process.env.CT_SUBJECT) {
-  case 'just-exit':
-    process.exit(process.exitCode)
-    break
-  case 'broken-json':
-    process.stdout.write('{"broken-json"')
-    process.exit(process.exitCode)
-    break
-}
-
-const index = require('./').index()
+process.exitCode = Number(process.env.CT_EXIT_CODE || 0)
 
 const expectedArgs = process.env.CT_EXPECTED_ARGS.split(' ')
 assert.deepStrictEqual(process.argv.slice(2), expectedArgs, 'unexpected args')
 
-const { CT_SUBJECT: subject, CT_NPM: npm, CT_NODE: node, CT_OS: os } = process.env
-const matches = index.filter(i => i.subject === subject && i.npm === npm && i.node === node && i.os === os)
-assert.strictEqual(matches.length, 1, 'did not find exactly 1 match')
-
-const { path } = matches[0]
-
-const rs = createReadStream(path)
-rs.once('error', e => { throw e })
-rs.once('open', () => { rs.pipe(process.stdout) })
-rs.once('end', () => { rs.unpipe(); rs.close() })
+process.stdout.write('{}')
