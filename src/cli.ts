@@ -186,7 +186,7 @@ export function run (process: NodeJS.Process): void {
   }
   myConsole.debug('DEBUG | packageFile: %s', packageFile)
   const projectDir = dirname(packageFile)
-  myConsole.debug('DEBUG | projectDir: %s', projectDir)
+  myConsole.info('INFO  | projectDir: %s', projectDir)
 
   if (existsSync(resolve(projectDir, 'npm-shrinkwrap.json'))) {
     myConsole.debug('DEBUG | detected a npm shrinkwrap file')
@@ -242,7 +242,7 @@ export function run (process: NodeJS.Process): void {
   }
 
   // TODO use instead ? : https://www.npmjs.com/package/debug ?
-  myConsole.info('INFO  | writing BOM to', options.outputFile)
+  myConsole.log('LOG   | writing BOM to', options.outputFile)
   writeSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd

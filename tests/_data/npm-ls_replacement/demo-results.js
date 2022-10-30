@@ -23,22 +23,14 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 const assert = require('assert')
 const { createReadStream } = require('fs')
 
-process.exitCode = Number(process.env.CT_EXIT_CODE ?? 0)
-
-switch (process.env.CT_SUBJECT) {
-  case 'just-exit':
-    process.exit(process.exitCode)
-    break
-  case 'broken-json':
-    process.stdout.write('{"broken-json"')
-    process.exit(process.exitCode)
-    break
+if (process.argv[2] === '--version') {
+  process.stdout.write(process.env.CT_VERSION)
+  process.exit(0)
 }
 
-const index = require('./').index()
+process.exitCode = Number(process.env.CT_EXIT_CODE || 0)
 
-const expectedArgs = process.env.CT_EXPECTED_ARGS.split(' ')
-assert.deepStrictEqual(process.argv.slice(2), expectedArgs, 'unexpected args')
+const index = require('../npm-ls_demo-results').index()
 
 const { CT_SUBJECT: subject, CT_NPM: npm, CT_NODE: node, CT_OS: os } = process.env
 const matches = index.filter(i => i.subject === subject && i.npm === npm && i.node === node && i.os === os)

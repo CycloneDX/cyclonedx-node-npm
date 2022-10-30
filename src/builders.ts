@@ -18,12 +18,12 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
-import { ExecSyncOptionsWithBufferEncoding } from 'child_process'
 import { PackageURL } from 'packageurl-js'
 
-import { makeNpmRunner } from './npmRunner'
+import { makeNpmRunner, runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { makeThisTool } from './thisTool'
+import { versionCompare } from './versionCompare'
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
@@ -48,7 +48,7 @@ export class BomBuilder {
 
   ignoreNpmErrors: boolean
 
-  metaComponentType: Enums.ComponentType | undefined
+  metaComponentType: Enums.ComponentType
   packageLockOnly: boolean
   omitDependencyTypes: Set<OmittableDependencyTypes>
   reproducible: boolean
@@ -71,7 +71,7 @@ export class BomBuilder {
     this.purlFactory = purlFactory
 
     this.ignoreNpmErrors = options.ignoreNpmErrors ?? false
-    this.metaComponentType = options.metaComponentType
+    this.metaComponentType = options.metaComponentType ?? Enums.ComponentType.Library
     this.packageLockOnly = options.packageLockOnly ?? false
     this.omitDependencyTypes = new Set(options.omitDependencyTypes ?? [])
     this.reproducible = options.reproducible ?? false
@@ -87,37 +87,88 @@ export class BomBuilder {
     )
   }
 
+  private getNpmVersion (npmRunner: runFunc, process_: NodeJS.Process): number[] {
+    let npmVersion: number[]
+    this.console.info('INFO  | detect NPM version ...')
+    try {
+      npmVersion = npmRunner(['--version'], {
+        env: process_.env,
+        encoding: 'buffer',
+        maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
+      }).toString().split('.').map(v => Number(v))
+    } catch (runError: any) {
+      this.console.group('DEBUG | npm-ls: STDOUT')
+      this.console.debug('%s', runError.stdout)
+      this.console.groupEnd()
+      this.console.group('WARN  | npm-ls: MESSAGE')
+      this.console.warn('%s', runError.message)
+      this.console.groupEnd()
+      this.console.group('ERROR | npm-ls: STDERR')
+      this.console.error('%s', runError.stderr)
+      this.console.groupEnd()
+      throw runError
+    }
+    this.console.debug('DEBUG | detected NPM version %j', npmVersion)
+    return npmVersion
+  }
+
   private fetchNpmLs (projectDir: string, process_: NodeJS.Process): any {
+    const npmRunner = makeNpmRunner(process_, this.console)
+
+    const npmVersion = this.getNpmVersion(npmRunner, process_)
+
     const args: string[] = [
       'ls',
       // format as parsable json
       '--json',
-      // depth = infinity
-      '--all',
       // get all the needed content
-      '--long'
+      '--long',
+      // depth = infinity
+      npmVersion[0] >= 7
+        ? '--all'
+        : '--depth=255'
     ]
+
     if (this.packageLockOnly) {
-      args.push('--package-lock-only')
-    }
-    for (const odt of this.omitDependencyTypes) {
-      args.push('--omit', odt)
+      if (npmVersion[0] >= 7) {
+        args.push('--package-lock-only')
+      } else {
+        this.console.warn('WARN  | your NPM does not support "--package-lock-only", internally skipped this option')
+      }
     }
 
-    const runOptions: ExecSyncOptionsWithBufferEncoding = {
-      cwd: projectDir,
-      env: process_.env,
-      encoding: 'buffer',
-      maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
+    if (versionCompare(npmVersion, [8, 7]) >= 0) {
+      // since NPM v8.7 -- https://github.com/npm/cli/pull/4744
+      for (const odt of this.omitDependencyTypes) {
+        args.push(`--omit=${odt}`)
+      }
+    } else {
+      // see https://github.com/npm/cli/pull/4744
+      for (const odt of this.omitDependencyTypes) {
+        switch (odt) {
+          case 'dev':
+            this.console.warn('WARN  | your NPM does not support "--omit=%s", internally using "--production" to mitigate', odt)
+            args.push('--production')
+            break
+          case 'peer':
+          case 'optional':
+            this.console.warn('WARN  | your NPM does not support "--omit=%s", internally skipped this option', odt)
+            break
+        }
+      }
     }
-    const npmRunner = makeNpmRunner(process_, this.console)
 
     // TODO use instead ? : https://www.npmjs.com/package/debug ?
     this.console.info('INFO  | gather dependency tree ...')
     this.console.debug('DEBUG | npm-ls: run npm with %j in %j', args, projectDir)
     let npmLsReturns: Buffer
     try {
-      npmLsReturns = npmRunner(args, runOptions)
+      npmLsReturns = npmRunner(args, {
+        cwd: projectDir,
+        env: process_.env,
+        encoding: 'buffer',
+        maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
+      })
     } catch (runError: any) {
       // this.console.group('DEBUG | npm-ls: STDOUT')
       // this.console.debug('%s', runError.stdout)
@@ -151,8 +202,10 @@ export class BomBuilder {
 
     // region all components & dependencies
 
-    const rootComponent = this.makeComponent(data, this.metaComponentType) ??
-      new DummyComponent(Enums.ComponentType.Library, 'RootComponent')
+    /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
+     * as we need to enforce a proper root component to enable all features of SBOM */
+    const rootComponent: Models.Component = this.makeComponent(data, this.metaComponentType) ||
+      new DummyComponent(this.metaComponentType, 'RootComponent')
     const allComponents: AllComponents = new Map([[data.path, rootComponent]])
     this.gatherDependencies(allComponents, data, rootComponent.dependencies)
 
@@ -244,20 +297,32 @@ export class BomBuilder {
      */
     for (const [depName, depData] of Object.entries(data.dependencies ?? {}) as any) {
       if (depData === null || typeof depData !== 'object') {
-        continue
+        // cannot build
+        continue // for-loop
       }
       if (typeof depData.path !== 'string') {
         // might be an optional dependency that was not installed
-        continue
+        // skip, as it was not installed anyway
+        continue // for-loop
       }
 
       let dep = allComponents.get(depData.path)
       if (dep === undefined) {
-        dep = this.makeComponent(
+        const _dep = this.makeComponent(
           this.packageLockOnly
             ? depData
             : this.enhancedPackageData(depData)
-        ) ?? new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
+        )
+        if (_dep === false) {
+          // shall be skipped
+          continue // for-loop
+        }
+        dep = _dep ??
+          new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
+        if (dep instanceof DummyComponent) {
+          this.console.warn('WARN  | InterferedDependency $j', dep.name)
+        }
+
         allComponents.set(depData.path, dep)
       }
       directDepRefs.add(dep.bomRef)
@@ -295,40 +360,45 @@ export class BomBuilder {
    */
   private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
-  private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | undefined {
+  private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | false | undefined {
+    // older npm-ls versions (v6) hide properties behind a `_`
+    const isDev = (data.dev ?? data._development) === true
+    if (isDev && this.omitDependencyTypes.has('dev')) {
+      this.console.debug('DEBUG | omit dev component: %j %j', data.name, data._id)
+      return false
+    }
+
     const component = this.componentBuilder.makeComponent(data, type)
     if (component === undefined) {
+      this.console.debug('DEBUG | skip broken component: %j %j', data.name, data._id)
       return undefined
     }
 
-    // older npm-ls versions (v6) hide properties behind a `_`
-    if ((data.dev ?? data._development) === true) {
-      if (this.omitDependencyTypes.has('dev')) {
-        return undefined
-      }
+    // region properties
+
+    if (isDev) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
       )
     }
-
     if (data.extraneous === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
       )
     }
-
     if (data.private === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
       )
     }
-
     // older npm-ls versions (v6) hide properties behind a `_`
     if (!this.flattenComponents && (data.inBundle ?? data._inBundle) === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
       )
     }
+
+    // endregion properties
 
     // older npm-ls versions (v6) hide properties behind a `_`
     const resolved = data.resolved ?? data._resolved

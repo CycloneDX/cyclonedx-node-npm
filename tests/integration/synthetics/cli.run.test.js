@@ -34,7 +34,17 @@ const cli = require('../../../dist/cli')
 describe('cli.run()', () => {
   const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX-IT-CLI.run.'))
 
-  const npmLsReplacement = resolve(__dirname, '..', '..', '_data', 'npm-ls_demo-results', 'npm-ls_replacement.js')
+  const dummyProjectsRoot = resolve(__dirname, '..', '..', '_data', 'dummy_projects')
+  const demoResultsRoot = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results')
+  const npmLsReplacementPath = resolve(__dirname, '..', '..', '_data', 'npm-ls_replacement')
+
+  const npmLsReplacement = {
+    brokenJson: resolve(npmLsReplacementPath, 'broken-json.js'),
+    checkArgs: resolve(npmLsReplacementPath, 'check-args.js'),
+    demoResults: resolve(npmLsReplacementPath, 'demo-results.js'),
+    justExit: resolve(npmLsReplacementPath, 'just-exit.js'),
+    nonExistingBinary: resolve(npmLsReplacementPath, 'aNonExistingBinary')
+  }
 
   describe('broken project', () => {
     const tmpRootRun = join(tmpRoot, 'broken-project')
@@ -55,7 +65,7 @@ describe('cli.run()', () => {
       const mockProcess = {
         stdout,
         stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', folderName),
+        cwd: () => resolve(dummyProjectsRoot, folderName),
         execPath: process.execPath,
         argv0: process.argv0,
         argv: [
@@ -63,7 +73,9 @@ describe('cli.run()', () => {
           'dummy_process'
         ],
         env: {
-          ...process.env
+          ...process.env,
+          // use original npm-ls
+          npm_execpath: undefined
         }
       }
 
@@ -94,7 +106,7 @@ describe('cli.run()', () => {
       const mockProcess = {
         stdout,
         stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', 'with-lockfile'),
+        cwd: () => resolve(dummyProjectsRoot, 'with-lockfile'),
         execPath: process.execPath,
         argv0: process.argv0,
         argv: [
@@ -103,7 +115,7 @@ describe('cli.run()', () => {
         ],
         env: {
           ...process.env,
-          npm_execpath: resolve(__dirname, 'a-missing-executable')
+          npm_execpath: npmLsReplacement.nonExistingBinary
         }
       }
 
@@ -131,7 +143,7 @@ describe('cli.run()', () => {
       const mockProcess = {
         stdout,
         stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', 'with-lockfile'),
+        cwd: () => resolve(dummyProjectsRoot, 'with-lockfile'),
         execPath: process.execPath,
         argv0: process.argv0,
         argv: [
@@ -140,10 +152,10 @@ describe('cli.run()', () => {
         ],
         env: {
           ...process.env,
-          CT_EXIT_CODE: `${expectedExitCode}`, // non-zero exit code
-          CT_SUBJECT: 'just-exit',
-          // abuse the npm-ls replacement, as it can be caused to crash under control.
-          npm_execpath: npmLsReplacement
+          CT_VERSION: '8.99.0',
+          // non-zero exit code
+          CT_EXIT_CODE: `${expectedExitCode}`,
+          npm_execpath: npmLsReplacement.justExit
         }
       }
 
@@ -169,7 +181,7 @@ describe('cli.run()', () => {
       const mockProcess = {
         stdout,
         stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects', 'with-lockfile'),
+        cwd: () => resolve(dummyProjectsRoot, 'with-lockfile'),
         execPath: process.execPath,
         argv0: process.argv0,
         argv: [
@@ -178,9 +190,9 @@ describe('cli.run()', () => {
         ],
         env: {
           ...process.env,
-          CT_SUBJECT: 'broken-json',
+          CT_VERSION: '8.99.0',
           // abuse the npm-ls replacement, as it can be caused to crash under control.
-          npm_execpath: npmLsReplacement
+          npm_execpath: npmLsReplacement.brokenJson
         }
       }
 
@@ -200,9 +212,8 @@ describe('cli.run()', () => {
     mkdirSync(tmpRootRun)
 
     const cases = indexNpmLsDemoData()
-
     test.each(cases)('$subject npm$npm node$node $os', (dd) => {
-      const expectedOutSnap = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
+      const expectedOutSnap = resolve(demoResultsRoot, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
 
       const logFileBase = join(tmpRootRun, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
 
@@ -215,7 +226,7 @@ describe('cli.run()', () => {
       const mockProcess = {
         stdout,
         stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data'),
+        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
         execPath: process.execPath,
         argv0: process.argv0,
         argv: [
@@ -228,16 +239,17 @@ describe('cli.run()', () => {
           // prevent file interaction in this synthetic scenario - they would not exist anyway
           '--package-lock-only',
           '--',
-          join('dummy_projects', 'with-lockfile', 'package.json')
+          // just some dummy project
+          join('with-lockfile', 'package.json')
         ],
         env: {
           ...process.env,
-          CT_EXPECTED_ARGS: ['ls', '--json', '--all', '--long', '--package-lock-only'].join(' '),
+          CT_VERSION: `${dd.npm}.99.0`,
           CT_SUBJECT: dd.subject,
           CT_NPM: dd.npm,
           CT_NODE: dd.node,
           CT_OS: dd.os,
-          npm_execpath: npmLsReplacement
+          npm_execpath: npmLsReplacement.demoResults
         }
       }
 
@@ -248,14 +260,15 @@ describe('cli.run()', () => {
         stderr.close()
       }
 
+      const toolIndent = '        '
       const actualOutput = readFileSync(outFile, 'utf8').replace(
-        // replace metadata.tools.version
-        `"vendor": "@cyclonedx",
-        "name": "cyclonedx-npm",
-        "version": ${JSON.stringify(thisVersion)},`,
-        `"vendor": "@cyclonedx",
-        "name": "cyclonedx-npm",
-        "version": "thisVersion-testing",`
+          // replace metadata.tools.version
+          `${toolIndent}"vendor": "@cyclonedx",\n` +
+          `${toolIndent}"name": "cyclonedx-npm",\n` +
+          `${toolIndent}"version": ${JSON.stringify(thisVersion)},\n`,
+          `${toolIndent}"vendor": "@cyclonedx",\n` +
+          `${toolIndent}"name": "cyclonedx-npm",\n` +
+          `${toolIndent}"version": "thisVersion-testing",\n`
       )
 
       if (!existsSync(expectedOutSnap)) {
@@ -264,7 +277,7 @@ describe('cli.run()', () => {
 
       expect(actualOutput).toEqual(
         readFileSync(expectedOutSnap, 'utf8'),
-        `${outFile} should equal ${expectedOutSnap}`
+          `${outFile} should equal ${expectedOutSnap}`
       )
     })
   })
@@ -272,7 +285,7 @@ describe('cli.run()', () => {
   test('suppressed error on non-zero exit', () => {
     const dd = { subject: 'dev-dependencies', npm: '8', node: '16', os: 'ubuntu-latest' }
 
-    const expectedOutSnap = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
+    const expectedOutSnap = resolve(demoResultsRoot, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
     const expectedExitCode = 1 + Math.floor(254 * Math.random())
 
     const tmpRootRun = join(tmpRoot, 'suppressed-error-on-non-zero-exit')
@@ -288,7 +301,7 @@ describe('cli.run()', () => {
     const mockProcess = {
       stdout,
       stderr,
-      cwd: () => resolve(__dirname, '..', '..', '_data'),
+      cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
       execPath: process.execPath,
       argv0: process.argv0,
       argv: [
@@ -302,17 +315,18 @@ describe('cli.run()', () => {
         // prevent file interaction in this synthetic scenario - they would not exist anyway
         '--package-lock-only',
         '--',
-        join('dummy_projects', 'with-lockfile', 'package.json')
+        join('with-lockfile', 'package.json')
       ],
       env: {
         ...process.env,
-        CT_EXIT_CODE: expectedExitCode, // non-zero exit code
-        CT_EXPECTED_ARGS: ['ls', '--json', '--all', '--long', '--package-lock-only'].join(' '),
+        CT_VERSION: `${dd.npm}.99.0`,
+        // non-zero exit code
+        CT_EXIT_CODE: expectedExitCode,
         CT_SUBJECT: dd.subject,
         CT_NPM: dd.npm,
         CT_NODE: dd.node,
         CT_OS: dd.os,
-        npm_execpath: npmLsReplacement
+        npm_execpath: npmLsReplacement.demoResults
       }
     }
 
@@ -341,5 +355,73 @@ describe('cli.run()', () => {
       readFileSync(expectedOutSnap, 'utf8'),
       `${outFile} should equal ${expectedOutSnap}`
     )
+  })
+
+  describe('npm-version depending npm-args', () => {
+    const tmpRootRun = join(tmpRoot, 'npmVersion-depending-npmArgs')
+    mkdirSync(tmpRootRun)
+
+    const rMinor = Math.round(99 * Math.random())
+    const rPatch = Math.round(99 * Math.random())
+    const le6 = Math.round(6 * Math.random())
+    const ge7 = 7 + Math.round(92 * Math.random())
+
+    const npmArgsGeneral = ['--json', '--long']
+    const npm6ArgsGeneral = [...npmArgsGeneral, '--depth=255']
+    const npm7ArgsGeneral = [...npmArgsGeneral, '--all']
+    const npm8ArgsGeneral = [...npmArgsGeneral, '--all']
+
+    test.each([
+      ['basic npm 6', `6.${rMinor}.${rPatch}`, [], npm6ArgsGeneral],
+      ['basic npm 7', `7.${rMinor}.${rPatch}`, [], npm7ArgsGeneral],
+      ['basic npm 8', `8.${rMinor}.${rPatch}`, [], npm8ArgsGeneral],
+      // region omit
+      ['omit everything npm 6', `6.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm6ArgsGeneral, '--production']],
+      ['omit everything npm 7', `7.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm7ArgsGeneral, '--production']],
+      ['omit everything npm lower 8.7', `8.${le6}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm8ArgsGeneral, '--production']],
+      ['omit everything npm greater-equal 8.7 ', `8.${ge7}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm8ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
+      // endregion
+      // region package-lock-only
+      ['package-lock-only not supported npm 6 ', `6.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm6ArgsGeneral]],
+      ['package-lock-only npm 7', `7.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm7ArgsGeneral, '--package-lock-only']],
+      ['package-lock-only npm 8', `8.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm8ArgsGeneral, '--package-lock-only']]
+      // endregion
+    ])('%s', (purpose, npmVersion, cdxArgs, expectedArgs) => {
+      const logFileBase = join(tmpRootRun, purpose.replace(/\W/g, '_'))
+
+      const outFile = `${logFileBase}.out`
+      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
+
+      const errFile = `${logFileBase}.err`
+      const stderr = createWriteStream(errFile) // not perfect, but works
+
+      const mockProcess = {
+        stdout,
+        stderr,
+        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
+        execPath: process.execPath,
+        argv0: process.argv0,
+        argv: [
+          process.argv[0],
+          'dummy_process',
+          ...cdxArgs,
+          '--',
+          join('with-lockfile', 'package.json')
+        ],
+        env: {
+          ...process.env,
+          CT_VERSION: npmVersion,
+          CT_EXPECTED_ARGS: expectedArgs.join(' '),
+          npm_execpath: npmLsReplacement.checkArgs
+        }
+      }
+
+      try {
+        cli.run(mockProcess)
+      } finally {
+        closeSync(stdout.fd)
+        stderr.close()
+      }
+    })
   })
 })
