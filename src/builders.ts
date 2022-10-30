@@ -126,7 +126,7 @@ export class BomBuilder {
       // depth = infinity
       npmVersion[0] >= 7
         ? '--all'
-        : '--depth 255'
+        : '--depth=255'
     ]
 
     if (this.packageLockOnly) {
@@ -138,7 +138,7 @@ export class BomBuilder {
     }
 
     if (versionCompare(npmVersion, [8, 7]) >= 0) {
-      // since NPM v8.7
+      // since NPM v8.7 -- https://github.com/npm/cli/pull/4744
       for (const odt of this.omitDependencyTypes) {
         args.push(`--omit=${odt}`)
       }

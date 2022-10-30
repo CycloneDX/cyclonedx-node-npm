@@ -358,14 +358,70 @@ describe('cli.run()', () => {
   })
 
   describe('npm-version depending npm-args', () => {
+    const tmpRootRun = join(tmpRoot, 'npmVersion-depending-npmArgs')
+    mkdirSync(tmpRootRun)
+
+    const rMinor = Math.round(99 * Math.random())
+    const rPatch = Math.round(99 * Math.random())
+    const le6 = Math.round(6 * Math.random())
+    const ge7 = 7 + Math.round(92 * Math.random())
+
+    const npmArgsGeneral = ['--json', '--long']
+    const npm6ArgsGeneral = [...npmArgsGeneral, '--depth=255']
+    const npm7ArgsGeneral = [...npmArgsGeneral, '--all']
+    const npm8ArgsGeneral = [...npmArgsGeneral, '--all']
+
     test.each([
-      ['6.0.0'],
-      ['7.0.0'],
-      ['8.0.0'],
-      ['8.7.0']
-    ])('%s', (npmVersion) => {
-      console.log('TODO', npmVersion)
-      /* TODO */
+      ['basic npm 6', `6.${rMinor}.${rPatch}`, [], npm6ArgsGeneral],
+      ['basic npm 7', `7.${rMinor}.${rPatch}`, [], npm7ArgsGeneral],
+      ['basic npm 8', `8.${rMinor}.${rPatch}`, [], npm8ArgsGeneral],
+      // region omit
+      ['omit everything npm 6', `6.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm6ArgsGeneral, '--production']],
+      ['omit everything npm 7', `7.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm7ArgsGeneral, '--production']],
+      ['omit everything npm lower 8.7', `8.${le6}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm8ArgsGeneral, '--production']],
+      ['omit everything npm greater-equal 8.7 ', `8.${ge7}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm8ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
+      // endregion
+      // region package-lock-only
+      ['package-lock-only not supported npm 6 ', `6.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm6ArgsGeneral]],
+      ['package-lock-only npm 7', `7.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm7ArgsGeneral, '--package-lock-only']],
+      ['package-lock-only npm 8', `8.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm8ArgsGeneral, '--package-lock-only']]
+      // endregion
+    ])('%s', (purpose, npmVersion, cdxArgs, expectedArgs) => {
+      const logFileBase = join(tmpRootRun, purpose.replace(/\W/g, '_'))
+
+      const outFile = `${logFileBase}.out`
+      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
+
+      const errFile = `${logFileBase}.err`
+      const stderr = createWriteStream(errFile) // not perfect, but works
+
+      const mockProcess = {
+        stdout,
+        stderr,
+        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
+        execPath: process.execPath,
+        argv0: process.argv0,
+        argv: [
+          process.argv[0],
+          'dummy_process',
+          ...cdxArgs,
+          '--',
+          join('with-lockfile', 'package.json')
+        ],
+        env: {
+          ...process.env,
+          CT_VERSION: npmVersion,
+          CT_EXPECTED_ARGS: expectedArgs.join(' '),
+          npm_execpath: npmLsReplacement.checkArgs
+        }
+      }
+
+      try {
+        cli.run(mockProcess)
+      } finally {
+        closeSync(stdout.fd)
+        stderr.close()
+      }
     })
   })
 })

@@ -21,6 +21,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const assert = require('assert')
+const { resolve } = require('path')
 
 if (process.argv[2] === '--version') {
   process.stdout.write(process.env.CT_VERSION)
@@ -29,7 +30,16 @@ if (process.argv[2] === '--version') {
 
 process.exitCode = Number(process.env.CT_EXIT_CODE || 0)
 
-const expectedArgs = process.env.CT_EXPECTED_ARGS.split(' ')
+const expectedArgs = ['ls', ...process.env.CT_EXPECTED_ARGS.split(' ')]
 assert.deepStrictEqual(process.argv.slice(2), expectedArgs, 'unexpected args')
 
-process.stdout.write('{}')
+const packagePath = resolve(__dirname, '..', 'dummy_projects', 'no-lockfile')
+process.stdout.write(`{
+  "name": "dummy",
+  "private": true,
+  "extraneous": false,
+  "path": ${JSON.stringify(packagePath)},
+  "_dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {}
+}`)
