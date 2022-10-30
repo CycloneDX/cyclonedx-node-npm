@@ -57,10 +57,6 @@ jobs:
             # !! REVISIT THIS !!
             npm-version: '9'
             node-version: '14'
-          - # npm9 seams to no longer support transitive local dependencies
-            # !! REVISIT THIS !!
-            subject: local-dependencies
-            npm-version: '9'
           - # juice-shop might not be node14 compatible
             subject: juice-shop
             node-version: '14'
@@ -84,19 +80,23 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: up-/down-grade npm to ${{ matrix.npm-version }}
-        run: npm i -g npm@${{ matrix.npm-version }}
+        run: npm i -g 'npm@${{ matrix.npm-version }}'
       - name: report versions
         run: |
           node --version
           npm  --version
       - name: setup demo
-        run: npm i --no-audit --no-fund
+        run: >
+          npm i
+          --no-audit --no-fund
+          --install-links=false
+        # the `install-links` is required for https://github.com/npm/cli/issues/5733
         working-directory: ${{ env.DEMO_ROOT_DIR }}/${{ matrix.subject }}/project
-      - name: npm-ls --all --long --json
+      - name: npm-ls ls --json --all --long
         # important: the command in use is the same used by the internal builders of this project
         run: >
           npm --prefix project
-          ls --all --long --json
+          ls --json --all --long
           2> ${{ env.OUT_FILE_PREFIX }}.err.log
           1> ${{ env.OUT_FILE_PREFIX }}.json
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
