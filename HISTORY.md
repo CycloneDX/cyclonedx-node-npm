@@ -2,10 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
-## unreleased 
+## unreleased
+
+## 1.3.0 - 2022-10-30
 
 * Fixed
-  * Improved the npm compatibility with `--omit` options. ([#254] via [#259])
+  * Improved the NPM compatibility with `--omit` options. ([#254] via [#259])
   * In case of an error, the exit code is guaranteed to be non-zero (via [#260])
 * Misc
   * Added more debug output regarding NPM version detection. (via [#259])
