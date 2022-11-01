@@ -86,11 +86,7 @@ jobs:
           node --version
           npm  --version
       - name: setup demo
-        run: >
-          npm i
-          --no-audit --no-fund
-          --install-links=false
-        # the `install-links` is required for https://github.com/npm/cli/issues/5733
+        run: npm i --no-audit --no-fund
         working-directory: ${{ env.DEMO_ROOT_DIR }}/${{ matrix.subject }}/project
       - name: npm-ls ls --json --all --long
         # important: the command in use is the same used by the internal builders of this project
