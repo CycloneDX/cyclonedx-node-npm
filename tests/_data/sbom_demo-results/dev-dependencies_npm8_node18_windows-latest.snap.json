@@ -55,12 +55,12 @@
       "type": "library",
       "name": "node",
       "group": "@types",
-      "version": "18.7.23",
-      "bom-ref": "@types/node@18.7.23",
-      "purl": "pkg:npm/%40types/node@18.7.23",
+      "version": "18.11.9",
+      "bom-ref": "@types/node@18.11.9",
+      "purl": "pkg:npm/%40types/node@18.11.9",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@types/node/-/node-18.7.23.tgz",
+          "url": "https://registry.npmjs.org/@types/node/-/node-18.11.9.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -75,12 +75,12 @@
   ],
   "dependencies": [
     {
-      "ref": "@types/node@18.7.23"
+      "ref": "@types/node@18.11.9"
     },
     {
       "ref": "demo-dev-dependencies@0.0.0",
       "dependsOn": [
-        "@types/node@18.7.23"
+        "@types/node@18.11.9"
       ]
     }
   ]
