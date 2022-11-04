@@ -15,7 +15,7 @@ Create [CycloneDX] Software Bill of Materials (SBOM) from  _[npm]_ projects.
 ## Requirements
 
 * `node` >= `14`
-* `npm` in range `6 - 8`
+* `npm` in range `6 - 9`
 
 ## Installation
 

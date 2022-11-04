@@ -112,15 +112,15 @@
   "peerDependencies": {},
   "dependencies": {
     "body-parser": {
-      "version": "1.20.0",
-      "resolved": "https://registry.npmjs.org/body-parser/-/body-parser-1.20.0.tgz",
+      "version": "1.20.1",
+      "resolved": "https://registry.npmjs.org/body-parser/-/body-parser-1.20.1.tgz",
       "name": "body-parser",
-      "integrity": "sha512-DfJ+q6EPcGKZD1QWUjSpqp+Q7bDQTsQIF4zfUAtZ6qk+H/3/QRhg9CEp39ss+/T2vw0+HaidC0ecJj/DRLIaKg==",
+      "integrity": "sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==",
       "engines": {
         "node": ">= 0.8",
         "npm": "1.2.8000 || >= 1.4.16"
       },
-      "_id": "body-parser@1.20.0",
+      "_id": "body-parser@1.20.1",
       "extraneous": false,
       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/body-parser",
       "_dependencies": {
@@ -132,7 +132,7 @@
         "http-errors": "2.0.0",
         "iconv-lite": "0.4.24",
         "on-finished": "2.4.1",
-        "qs": "6.10.3",
+        "qs": "6.11.0",
         "raw-body": "2.5.1",
         "type-is": "~1.6.18",
         "unpipe": "1.0.0"
@@ -370,17 +370,17 @@
           "peerDependencies": {}
         },
         "qs": {
-          "version": "6.10.3",
-          "resolved": "https://registry.npmjs.org/qs/-/qs-6.10.3.tgz",
+          "version": "6.11.0",
+          "resolved": "https://registry.npmjs.org/qs/-/qs-6.11.0.tgz",
           "name": "qs",
-          "integrity": "sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==",
+          "integrity": "sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==",
           "engines": {
             "node": ">=0.6"
           },
           "funding": {
             "url": "https://github.com/sponsors/ljharb"
           },
-          "_id": "qs@6.10.3",
+          "_id": "qs@6.11.0",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/qs",
           "_dependencies": {
@@ -765,11 +765,14 @@
               "peerDependencies": {}
             },
             "minimist": {
-              "version": "0.2.1",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.2.1.tgz",
+              "version": "0.2.2",
+              "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.2.2.tgz",
               "name": "minimist",
-              "integrity": "sha512-GY8fANSrTMfBVfInqJAY41QkOM+upUTytK1jZ0c8+3HdHrJxBJ3rF5i9moClXTE8uUSnUo8cAsCoxDXvSY4DHg==",
-              "_id": "minimist@0.2.1",
+              "integrity": "sha512-g92kDfAOAszDRtHNagjZPPI/9lfOFaRBL/Ud6Z0RKZua/x+49awTydZLh5Gkhb80Xy5hmcvZNLGzscW5n5yd0g==",
+              "funding": {
+                "url": "https://github.com/sponsors/ljharb"
+              },
+              "_id": "minimist@0.2.2",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/bower-config/node_modules/minimist",
               "_dependencies": {},
@@ -4780,11 +4783,14 @@
           "peerDependencies": {}
         },
         "minimist": {
-          "version": "1.2.6",
-          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
+          "version": "1.2.7",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
           "name": "minimist",
-          "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-          "_id": "minimist@1.2.6",
+          "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+          "funding": {
+            "url": "https://github.com/sponsors/ljharb"
+          },
+          "_id": "minimist@1.2.7",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/minimist",
           "_dependencies": {},
@@ -8433,20 +8439,20 @@
       "devDependencies": {},
       "dependencies": {
         "express": {
-          "version": "4.18.1",
+          "version": "4.18.2",
           "name": "express",
-          "resolved": "https://registry.npmjs.org/express/-/express-4.18.1.tgz",
-          "integrity": "sha512-zZBcOX9TfehHQhtupq57OF8lFZ3UZi08Y97dwFCkD8p9d/d2Y3M+ykKcwaMDEL+4qyUolgBDX6AblpR3fL212Q==",
+          "resolved": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
+          "integrity": "sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==",
           "engines": {
             "node": ">= 0.10.0"
           },
-          "_id": "express@4.18.1",
+          "_id": "express@4.18.2",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/express",
           "_dependencies": {
             "accepts": "~1.3.8",
             "array-flatten": "1.1.1",
-            "body-parser": "1.20.0",
+            "body-parser": "1.20.1",
             "content-disposition": "0.5.4",
             "content-type": "~1.0.4",
             "cookie": "0.5.0",
@@ -8465,7 +8471,7 @@
             "parseurl": "~1.3.3",
             "path-to-regexp": "0.1.7",
             "proxy-addr": "~2.0.7",
-            "qs": "6.10.3",
+            "qs": "6.11.0",
             "range-parser": "~1.2.1",
             "safe-buffer": "5.2.1",
             "send": "0.18.0",
@@ -8494,20 +8500,20 @@
       "peerDependencies": {}
     },
     "express": {
-      "version": "4.18.1",
-      "resolved": "https://registry.npmjs.org/express/-/express-4.18.1.tgz",
+      "version": "4.18.2",
+      "resolved": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
       "name": "express",
-      "integrity": "sha512-zZBcOX9TfehHQhtupq57OF8lFZ3UZi08Y97dwFCkD8p9d/d2Y3M+ykKcwaMDEL+4qyUolgBDX6AblpR3fL212Q==",
+      "integrity": "sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==",
       "engines": {
         "node": ">= 0.10.0"
       },
-      "_id": "express@4.18.1",
+      "_id": "express@4.18.2",
       "extraneous": false,
       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/express",
       "_dependencies": {
         "accepts": "~1.3.8",
         "array-flatten": "1.1.1",
-        "body-parser": "1.20.0",
+        "body-parser": "1.20.1",
         "content-disposition": "0.5.4",
         "content-type": "~1.0.4",
         "cookie": "0.5.0",
@@ -8526,7 +8532,7 @@
         "parseurl": "~1.3.3",
         "path-to-regexp": "0.1.7",
         "proxy-addr": "~2.0.7",
-        "qs": "6.10.3",
+        "qs": "6.11.0",
         "range-parser": "~1.2.1",
         "safe-buffer": "5.2.1",
         "send": "0.18.0",
@@ -8571,15 +8577,15 @@
           "peerDependencies": {}
         },
         "body-parser": {
-          "version": "1.20.0",
+          "version": "1.20.1",
           "name": "body-parser",
-          "resolved": "https://registry.npmjs.org/body-parser/-/body-parser-1.20.0.tgz",
-          "integrity": "sha512-DfJ+q6EPcGKZD1QWUjSpqp+Q7bDQTsQIF4zfUAtZ6qk+H/3/QRhg9CEp39ss+/T2vw0+HaidC0ecJj/DRLIaKg==",
+          "resolved": "https://registry.npmjs.org/body-parser/-/body-parser-1.20.1.tgz",
+          "integrity": "sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==",
           "engines": {
             "node": ">= 0.8",
             "npm": "1.2.8000 || >= 1.4.16"
           },
-          "_id": "body-parser@1.20.0",
+          "_id": "body-parser@1.20.1",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/body-parser",
           "_dependencies": {
@@ -8591,7 +8597,7 @@
             "http-errors": "2.0.0",
             "iconv-lite": "0.4.24",
             "on-finished": "2.4.1",
-            "qs": "6.10.3",
+            "qs": "6.11.0",
             "raw-body": "2.5.1",
             "type-is": "~1.6.18",
             "unpipe": "1.0.0"
@@ -8983,17 +8989,17 @@
           "peerDependencies": {}
         },
         "qs": {
-          "version": "6.10.3",
+          "version": "6.11.0",
           "name": "qs",
-          "resolved": "https://registry.npmjs.org/qs/-/qs-6.10.3.tgz",
-          "integrity": "sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==",
+          "resolved": "https://registry.npmjs.org/qs/-/qs-6.11.0.tgz",
+          "integrity": "sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==",
           "engines": {
             "node": ">=0.6"
           },
           "funding": {
             "url": "https://github.com/sponsors/ljharb"
           },
-          "_id": "qs@6.10.3",
+          "_id": "qs@6.11.0",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/qs",
           "_dependencies": {
@@ -10144,11 +10150,11 @@
               "peerDependencies": {}
             },
             "util": {
-              "version": "0.12.4",
-              "resolved": "https://registry.npmjs.org/util/-/util-0.12.4.tgz",
+              "version": "0.12.5",
+              "resolved": "https://registry.npmjs.org/util/-/util-0.12.5.tgz",
               "name": "util",
-              "integrity": "sha512-bxZ9qtSlGUWSOy9Qa9Xgk11kSslpuZwaxCg4sNIDj6FLucDab2JxnHwyNTCpHMtK1MjoQiWQ6DiUMZYbSrO+Sw==",
-              "_id": "util@0.12.4",
+              "integrity": "sha512-kZf/K6hEIrWHI6XqOFUiiMa+79wE/D8Q+NCNAWclkyg3b4d2k7s0QGepNjiABc+aR3N1PAyHL7p6UcLY6LmrnA==",
+              "_id": "util@0.12.5",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/util",
               "_dependencies": {
@@ -10156,7 +10162,6 @@
                 "is-arguments": "^1.0.4",
                 "is-generator-function": "^1.0.7",
                 "is-typed-array": "^1.1.3",
-                "safe-buffer": "^5.1.2",
                 "which-typed-array": "^1.1.2"
               },
               "devDependencies": {},
@@ -10358,17 +10363,17 @@
                       "peerDependencies": {}
                     },
                     "es-abstract": {
-                      "version": "1.20.3",
-                      "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.3.tgz",
+                      "version": "1.20.4",
+                      "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.4.tgz",
                       "name": "es-abstract",
-                      "integrity": "sha512-AyrnaKVpMzljIdwjzrj+LxGmj8ik2LckwXacHqrJJ/jxz6dDDBcZ7I7nlHM0FvEW8MfbWJwOd+yT2XzYW49Frw==",
+                      "integrity": "sha512-0UtvRN79eMe2L+UNEF1BwRe364sj/DXhQ/k5FmivgoSdpM90b8Jc0mDzKMGo7QS0BVbOP/bTwBKNnDc9rNzaPA==",
                       "engines": {
                         "node": ">= 0.4"
                       },
                       "funding": {
                         "url": "https://github.com/sponsors/ljharb"
                       },
-                      "_id": "es-abstract@1.20.3",
+                      "_id": "es-abstract@1.20.4",
                       "extraneous": false,
                       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/es-abstract",
                       "_dependencies": {
@@ -10382,7 +10387,7 @@
                         "has-property-descriptors": "^1.0.0",
                         "has-symbols": "^1.0.3",
                         "internal-slot": "^1.0.3",
-                        "is-callable": "^1.2.6",
+                        "is-callable": "^1.2.7",
                         "is-negative-zero": "^2.0.2",
                         "is-regex": "^1.1.4",
                         "is-shared-array-buffer": "^1.0.2",
@@ -10575,17 +10580,17 @@
                               "peerDependencies": {}
                             },
                             "es-abstract": {
-                              "version": "1.20.3",
+                              "version": "1.20.4",
                               "name": "es-abstract",
-                              "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.3.tgz",
-                              "integrity": "sha512-AyrnaKVpMzljIdwjzrj+LxGmj8ik2LckwXacHqrJJ/jxz6dDDBcZ7I7nlHM0FvEW8MfbWJwOd+yT2XzYW49Frw==",
+                              "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.4.tgz",
+                              "integrity": "sha512-0UtvRN79eMe2L+UNEF1BwRe364sj/DXhQ/k5FmivgoSdpM90b8Jc0mDzKMGo7QS0BVbOP/bTwBKNnDc9rNzaPA==",
                               "engines": {
                                 "node": ">= 0.4"
                               },
                               "funding": {
                                 "url": "https://github.com/sponsors/ljharb"
                               },
-                              "_id": "es-abstract@1.20.3",
+                              "_id": "es-abstract@1.20.4",
                               "extraneous": false,
                               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/es-abstract",
                               "_dependencies": {
@@ -10599,7 +10604,7 @@
                                 "has-property-descriptors": "^1.0.0",
                                 "has-symbols": "^1.0.3",
                                 "internal-slot": "^1.0.3",
-                                "is-callable": "^1.2.6",
+                                "is-callable": "^1.2.7",
                                 "is-negative-zero": "^2.0.2",
                                 "is-regex": "^1.1.4",
                                 "is-shared-array-buffer": "^1.0.2",
@@ -11226,17 +11231,17 @@
                               "peerDependencies": {}
                             },
                             "es-abstract": {
-                              "version": "1.20.3",
+                              "version": "1.20.4",
                               "name": "es-abstract",
-                              "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.3.tgz",
-                              "integrity": "sha512-AyrnaKVpMzljIdwjzrj+LxGmj8ik2LckwXacHqrJJ/jxz6dDDBcZ7I7nlHM0FvEW8MfbWJwOd+yT2XzYW49Frw==",
+                              "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.4.tgz",
+                              "integrity": "sha512-0UtvRN79eMe2L+UNEF1BwRe364sj/DXhQ/k5FmivgoSdpM90b8Jc0mDzKMGo7QS0BVbOP/bTwBKNnDc9rNzaPA==",
                               "engines": {
                                 "node": ">= 0.4"
                               },
                               "funding": {
                                 "url": "https://github.com/sponsors/ljharb"
                               },
-                              "_id": "es-abstract@1.20.3",
+                              "_id": "es-abstract@1.20.4",
                               "extraneous": false,
                               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/es-abstract",
                               "_dependencies": {
@@ -11250,7 +11255,7 @@
                                 "has-property-descriptors": "^1.0.0",
                                 "has-symbols": "^1.0.3",
                                 "internal-slot": "^1.0.3",
-                                "is-callable": "^1.2.6",
+                                "is-callable": "^1.2.7",
                                 "is-negative-zero": "^2.0.2",
                                 "is-regex": "^1.1.4",
                                 "is-shared-array-buffer": "^1.0.2",
@@ -11329,17 +11334,17 @@
                               "peerDependencies": {}
                             },
                             "es-abstract": {
-                              "version": "1.20.3",
+                              "version": "1.20.4",
                               "name": "es-abstract",
-                              "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.3.tgz",
-                              "integrity": "sha512-AyrnaKVpMzljIdwjzrj+LxGmj8ik2LckwXacHqrJJ/jxz6dDDBcZ7I7nlHM0FvEW8MfbWJwOd+yT2XzYW49Frw==",
+                              "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.4.tgz",
+                              "integrity": "sha512-0UtvRN79eMe2L+UNEF1BwRe364sj/DXhQ/k5FmivgoSdpM90b8Jc0mDzKMGo7QS0BVbOP/bTwBKNnDc9rNzaPA==",
                               "engines": {
                                 "node": ">= 0.4"
                               },
                               "funding": {
                                 "url": "https://github.com/sponsors/ljharb"
                               },
-                              "_id": "es-abstract@1.20.3",
+                              "_id": "es-abstract@1.20.4",
                               "extraneous": false,
                               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/es-abstract",
                               "_dependencies": {
@@ -11353,7 +11358,7 @@
                                 "has-property-descriptors": "^1.0.0",
                                 "has-symbols": "^1.0.3",
                                 "internal-slot": "^1.0.3",
-                                "is-callable": "^1.2.6",
+                                "is-callable": "^1.2.7",
                                 "is-negative-zero": "^2.0.2",
                                 "is-regex": "^1.1.4",
                                 "is-shared-array-buffer": "^1.0.2",
@@ -11525,18 +11530,6 @@
                     }
                   }
                 },
-                "safe-buffer": {
-                  "version": "5.1.2",
-                  "name": "safe-buffer",
-                  "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
-                  "integrity": "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==",
-                  "_id": "safe-buffer@5.1.2",
-                  "extraneous": false,
-                  "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/safe-buffer",
-                  "_dependencies": {},
-                  "devDependencies": {},
-                  "peerDependencies": {}
-                },
                 "which-typed-array": {
                   "version": "1.1.8",
                   "resolved": "https://registry.npmjs.org/which-typed-array/-/which-typed-array-1.1.8.tgz",
@@ -11599,17 +11592,17 @@
                       "peerDependencies": {}
                     },
                     "es-abstract": {
-                      "version": "1.20.3",
+                      "version": "1.20.4",
                       "name": "es-abstract",
-                      "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.3.tgz",
-                      "integrity": "sha512-AyrnaKVpMzljIdwjzrj+LxGmj8ik2LckwXacHqrJJ/jxz6dDDBcZ7I7nlHM0FvEW8MfbWJwOd+yT2XzYW49Frw==",
+                      "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.4.tgz",
+                      "integrity": "sha512-0UtvRN79eMe2L+UNEF1BwRe364sj/DXhQ/k5FmivgoSdpM90b8Jc0mDzKMGo7QS0BVbOP/bTwBKNnDc9rNzaPA==",
                       "engines": {
                         "node": ">= 0.4"
                       },
                       "funding": {
                         "url": "https://github.com/sponsors/ljharb"
                       },
-                      "_id": "es-abstract@1.20.3",
+                      "_id": "es-abstract@1.20.4",
                       "extraneous": false,
                       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/es-abstract",
                       "_dependencies": {
@@ -11623,7 +11616,7 @@
                         "has-property-descriptors": "^1.0.0",
                         "has-symbols": "^1.0.3",
                         "internal-slot": "^1.0.3",
-                        "is-callable": "^1.2.6",
+                        "is-callable": "^1.2.7",
                         "is-negative-zero": "^2.0.2",
                         "is-regex": "^1.1.4",
                         "is-shared-array-buffer": "^1.0.2",
@@ -11708,18 +11701,18 @@
       }
     },
     "finale-rest": {
-      "version": "1.1.1",
-      "resolved": "https://registry.npmjs.org/finale-rest/-/finale-rest-1.1.1.tgz",
+      "version": "1.2.0",
+      "resolved": "https://registry.npmjs.org/finale-rest/-/finale-rest-1.2.0.tgz",
       "name": "finale-rest",
-      "integrity": "sha512-TYjhq+2x6rz/pxdr6kQycC1ih9AUI/jhcCJwAfHiWniTjRwbA+FBvGtjKyXI9PPY/F46VFWxycDcYcPeSWXLcg==",
-      "_id": "finale-rest@1.1.1",
+      "integrity": "sha512-HE9mOSSo9g3bfPud/RM3HbPQM8A8foQ09grP8cLMW5YfB6fS3bv2v2O44smRm6ZxLC+ij3zYmzY8z+QyORDyQQ==",
+      "_id": "finale-rest@1.2.0",
       "extraneous": false,
       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/finale-rest",
       "_dependencies": {
-        "bluebird": "^3.0.0",
-        "inflection": "^1.7.1",
-        "lodash": "^4.17.15",
-        "moment": "^2.19.3"
+        "bluebird": "^3.7.2",
+        "inflection": "^1.13.4",
+        "lodash": "^4.17.21",
+        "moment": "^2.29.4"
       },
       "devDependencies": {},
       "peerDependencies": {},
@@ -13082,12 +13075,12 @@
               "peerDependencies": {}
             },
             "nan": {
-              "version": "2.16.0",
-              "resolved": "https://registry.npmjs.org/nan/-/nan-2.16.0.tgz",
+              "version": "2.17.0",
+              "resolved": "https://registry.npmjs.org/nan/-/nan-2.17.0.tgz",
               "name": "nan",
-              "integrity": "sha512-UdAqHyFngu7TfQKsCBgAA6pWDkT8MAO7d0jyOecVhN5354xbLqdn8mV9Tat9gepAupm0bt2DbeaSC8vS52MuFA==",
+              "integrity": "sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==",
               "optional": true,
-              "_id": "nan@2.16.0",
+              "_id": "nan@2.17.0",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/nan",
               "_dependencies": {},
@@ -13194,11 +13187,14 @@
                   "peerDependencies": {}
                 },
                 "minimist": {
-                  "version": "1.2.6",
+                  "version": "1.2.7",
                   "name": "minimist",
-                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-                  "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-                  "_id": "minimist@1.2.6",
+                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+                  "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+                  "funding": {
+                    "url": "https://github.com/sponsors/ljharb"
+                  },
+                  "_id": "minimist@1.2.7",
                   "extraneous": false,
                   "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/minimist",
                   "_dependencies": {},
@@ -15673,11 +15669,14 @@
           "peerDependencies": {},
           "dependencies": {
             "minimist": {
-              "version": "1.2.6",
+              "version": "1.2.7",
               "name": "minimist",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-              "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-              "_id": "minimist@1.2.6",
+              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+              "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+              "funding": {
+                "url": "https://github.com/sponsors/ljharb"
+              },
+              "_id": "minimist@1.2.7",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/minimist",
               "_dependencies": {},
@@ -15712,10 +15711,10 @@
               "peerDependencies": {}
             },
             "uglify-js": {
-              "version": "3.17.2",
-              "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.17.2.tgz",
+              "version": "3.17.4",
+              "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.17.4.tgz",
               "name": "uglify-js",
-              "integrity": "sha512-bbxglRjsGQMchfvXZNusUcYgiB9Hx2K4AHYXQy2DITZ9Rd+JzhX7+hoocE5Winr7z2oHvPsekkBwXtigvxevXg==",
+              "integrity": "sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==",
               "optional": true,
               "bin": {
                 "uglifyjs": "bin/uglifyjs"
@@ -15723,7 +15722,7 @@
               "engines": {
                 "node": ">=0.8.0"
               },
-              "_id": "uglify-js@3.17.2",
+              "_id": "uglify-js@3.17.4",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/uglify-js",
               "_dependencies": {},
@@ -15905,11 +15904,14 @@
               "peerDependencies": {},
               "dependencies": {
                 "minimist": {
-                  "version": "1.2.6",
+                  "version": "1.2.7",
                   "name": "minimist",
-                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-                  "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-                  "_id": "minimist@1.2.6",
+                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+                  "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+                  "funding": {
+                    "url": "https://github.com/sponsors/ljharb"
+                  },
+                  "_id": "minimist@1.2.7",
                   "extraneous": false,
                   "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/minimist",
                   "_dependencies": {},
@@ -16167,14 +16169,14 @@
       }
     },
     "jssha": {
-      "version": "3.2.0",
-      "resolved": "https://registry.npmjs.org/jssha/-/jssha-3.2.0.tgz",
+      "version": "3.3.0",
+      "resolved": "https://registry.npmjs.org/jssha/-/jssha-3.3.0.tgz",
       "name": "jssha",
-      "integrity": "sha512-QuruyBENDWdN4tZwJbQq7/eAK85FqrI4oDbXjy5IBhYD+2pTJyBUWZe8ctWaCkrV0gy6AaelgOZZBMeswEa/6Q==",
+      "integrity": "sha512-w9OtT4ALL+fbbwG3gw7erAO0jvS5nfvrukGPMWIAoea359B26ALXGpzy4YJSp9yGnpUvuvOw1nSjSoHDfWSr1w==",
       "engines": {
         "node": "*"
       },
-      "_id": "jssha@3.2.0",
+      "_id": "jssha@3.3.0",
       "extraneous": false,
       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/jssha",
       "_dependencies": {},
@@ -16182,11 +16184,11 @@
       "peerDependencies": {}
     },
     "juicy-chat-bot": {
-      "version": "0.6.5",
-      "resolved": "https://registry.npmjs.org/juicy-chat-bot/-/juicy-chat-bot-0.6.5.tgz",
+      "version": "0.6.6",
+      "resolved": "https://registry.npmjs.org/juicy-chat-bot/-/juicy-chat-bot-0.6.6.tgz",
       "name": "juicy-chat-bot",
-      "integrity": "sha512-KhIxJblsjz0zYvCZFNX3yfJbsVwLZoxLNUd6jLgg/y1SDh7vuueIT9IdxCKf7nzACJbnalzDlUhE4E8/cphBAw==",
-      "_id": "juicy-chat-bot@0.6.5",
+      "integrity": "sha512-X5+uayv+pG7VFIIJo9CCO3ir33xx7YoA6EM66N0wXjin3Ef51kK3iJOTv1ZVwXBz+zDsgMq8nnMeKRsoCnQhvw==",
+      "_id": "juicy-chat-bot@0.6.6",
       "extraneous": false,
       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/juicy-chat-bot",
       "_dependencies": {
@@ -16198,7 +16200,7 @@
         "@nlpjs/nlu": "^4.4.0",
         "@nlpjs/request": "^4.4.0",
         "@nlpjs/sentiment": "^4.4.0",
-        "vm2": "3.9.3"
+        "vm2": "3.9.11"
       },
       "devDependencies": {},
       "peerDependencies": {},
@@ -18357,22 +18359,60 @@
           }
         },
         "vm2": {
-          "version": "3.9.3",
-          "resolved": "https://registry.npmjs.org/vm2/-/vm2-3.9.3.tgz",
+          "version": "3.9.11",
+          "resolved": "https://registry.npmjs.org/vm2/-/vm2-3.9.11.tgz",
           "name": "vm2",
-          "integrity": "sha512-smLS+18RjXYMl9joyJxMNI9l4w7biW8ilSDaVRvFBDwOH8P0BK1ognFQTpg0wyQ6wIKLTblHJvROW692L/E53Q==",
+          "integrity": "sha512-PFG8iJRSjvvBdisowQ7iVF580DXb1uCIiGaXgm7tynMR1uTBlv7UJlB1zdv5KJ+Tmq1f0Upnj3fayoEOPpCBKg==",
           "bin": {
             "vm2": "bin/vm2"
           },
           "engines": {
             "node": ">=6.0"
           },
-          "_id": "vm2@3.9.3",
+          "_id": "vm2@3.9.11",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/vm2",
-          "_dependencies": {},
+          "_dependencies": {
+            "acorn": "^8.7.0",
+            "acorn-walk": "^8.2.0"
+          },
           "devDependencies": {},
-          "peerDependencies": {}
+          "peerDependencies": {},
+          "dependencies": {
+            "acorn-walk": {
+              "version": "8.2.0",
+              "resolved": "https://registry.npmjs.org/acorn-walk/-/acorn-walk-8.2.0.tgz",
+              "name": "acorn-walk",
+              "integrity": "sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==",
+              "engines": {
+                "node": ">=0.4.0"
+              },
+              "_id": "acorn-walk@8.2.0",
+              "extraneous": false,
+              "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/acorn-walk",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            },
+            "acorn": {
+              "version": "8.8.1",
+              "resolved": "https://registry.npmjs.org/acorn/-/acorn-8.8.1.tgz",
+              "name": "acorn",
+              "integrity": "sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==",
+              "bin": {
+                "acorn": "bin/acorn"
+              },
+              "engines": {
+                "node": ">=0.4.0"
+              },
+              "_id": "acorn@8.8.1",
+              "extraneous": false,
+              "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/vm2/node_modules/acorn",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            }
+          }
         }
       }
     },
@@ -19014,17 +19054,17 @@
               "peerDependencies": {}
             },
             "semver": {
-              "version": "7.3.7",
+              "version": "7.3.8",
               "name": "semver",
-              "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.7.tgz",
-              "integrity": "sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==",
+              "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz",
+              "integrity": "sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==",
               "bin": {
                 "semver": "bin/semver.js"
               },
               "engines": {
                 "node": ">=10"
               },
-              "_id": "semver@7.3.7",
+              "_id": "semver@7.3.8",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/semver",
               "_dependencies": {
@@ -19678,11 +19718,14 @@
           "peerDependencies": {},
           "dependencies": {
             "minimist": {
-              "version": "1.2.6",
+              "version": "1.2.7",
               "name": "minimist",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-              "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-              "_id": "minimist@1.2.6",
+              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+              "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+              "funding": {
+                "url": "https://github.com/sponsors/ljharb"
+              },
+              "_id": "minimist@1.2.7",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/minimist",
               "_dependencies": {},
@@ -19821,11 +19864,14 @@
           "peerDependencies": {},
           "dependencies": {
             "minimist": {
-              "version": "1.2.6",
+              "version": "1.2.7",
               "name": "minimist",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-              "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-              "_id": "minimist@1.2.6",
+              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+              "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+              "funding": {
+                "url": "https://github.com/sponsors/ljharb"
+              },
+              "_id": "minimist@1.2.7",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/minimist",
               "_dependencies": {},
@@ -20461,11 +20507,14 @@
               "peerDependencies": {}
             },
             "minimist": {
-              "version": "1.2.6",
+              "version": "1.2.7",
               "name": "minimist",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-              "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-              "_id": "minimist@1.2.6",
+              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+              "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+              "funding": {
+                "url": "https://github.com/sponsors/ljharb"
+              },
+              "_id": "minimist@1.2.7",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/minimist",
               "_dependencies": {},
@@ -21096,11 +21145,11 @@
               "peerDependencies": {},
               "dependencies": {
                 "tslib": {
-                  "version": "2.4.0",
-                  "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",
+                  "version": "2.4.1",
+                  "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.1.tgz",
                   "name": "tslib",
-                  "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==",
-                  "_id": "tslib@2.4.0",
+                  "integrity": "sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==",
+                  "_id": "tslib@2.4.1",
                   "extraneous": false,
                   "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/tslib",
                   "_dependencies": {},
@@ -22612,17 +22661,17 @@
               "peerDependencies": {},
               "dependencies": {
                 "@babel/parser": {
-                  "version": "7.19.3",
-                  "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.19.3.tgz",
+                  "version": "7.20.1",
+                  "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.20.1.tgz",
                   "name": "@babel/parser",
-                  "integrity": "sha512-pJ9xOlNWHiy9+FuFP09DEAFbAn4JskgRsVcc169w2xRBC3FRGuQEwjeIMMND9L2zc0iEhO/tGv4Zq+km+hxNpQ==",
+                  "integrity": "sha512-hp0AYxaZJhxULfM1zyp7Wgr+pSUKBcP3M+PHnSzWGdXOzg/kHWIgiUWARvubhUKGOEw3xqY4x+lyZ9ytBVcELw==",
                   "bin": {
                     "parser": "bin/babel-parser.js"
                   },
                   "engines": {
                     "node": ">=6.0.0"
                   },
-                  "_id": "@babel/parser@7.19.3",
+                  "_id": "@babel/parser@7.20.1",
                   "extraneous": false,
                   "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@babel/parser",
                   "_dependencies": {},
@@ -22630,18 +22679,18 @@
                   "peerDependencies": {}
                 },
                 "@babel/types": {
-                  "version": "7.19.3",
-                  "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.19.3.tgz",
+                  "version": "7.20.0",
+                  "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.20.0.tgz",
                   "name": "@babel/types",
-                  "integrity": "sha512-hGCaQzIY22DJlDh9CH7NOxgKkFjBk0Cw9xDO1Xmh2151ti7wiGfQ3LauXzL4HP1fmFlTX6XjpRETTpUcv7wQLw==",
+                  "integrity": "sha512-Jlgt3H0TajCW164wkTOTzHkZb075tMQMULzrLUoUeKmO7eFL96GgDxf7/Axhc5CAuKE3KFyVW1p6ysKsi2oXAg==",
                   "engines": {
                     "node": ">=6.9.0"
                   },
-                  "_id": "@babel/types@7.19.3",
+                  "_id": "@babel/types@7.20.0",
                   "extraneous": false,
                   "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@babel/types",
                   "_dependencies": {
-                    "@babel/helper-string-parser": "^7.18.10",
+                    "@babel/helper-string-parser": "^7.19.4",
                     "@babel/helper-validator-identifier": "^7.19.1",
                     "to-fast-properties": "^2.0.0"
                   },
@@ -22649,14 +22698,14 @@
                   "peerDependencies": {},
                   "dependencies": {
                     "@babel/helper-string-parser": {
-                      "version": "7.18.10",
-                      "resolved": "https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.18.10.tgz",
+                      "version": "7.19.4",
+                      "resolved": "https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.19.4.tgz",
                       "name": "@babel/helper-string-parser",
-                      "integrity": "sha512-XtIfWmeNY3i4t7t4D2t02q50HvqHybPqW2ki1kosnvWCwuCMeo81Jf0gwr85jy/neUdg5XDdeFE/80DXiO+njw==",
+                      "integrity": "sha512-nHtDoQcuqFmwYNYPz3Rah5ph2p8PFeFCsZk9A/48dPc/rGocJ5J3hAAZ7pb76VWX3fZKu+uEr/FhH5jLx7umrw==",
                       "engines": {
                         "node": ">=6.9.0"
                       },
-                      "_id": "@babel/helper-string-parser@7.18.10",
+                      "_id": "@babel/helper-string-parser@7.19.4",
                       "extraneous": false,
                       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@babel/helper-string-parser",
                       "_dependencies": {},
@@ -22838,17 +22887,17 @@
               "peerDependencies": {},
               "dependencies": {
                 "@babel/parser": {
-                  "version": "7.19.3",
+                  "version": "7.20.1",
                   "name": "@babel/parser",
-                  "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.19.3.tgz",
-                  "integrity": "sha512-pJ9xOlNWHiy9+FuFP09DEAFbAn4JskgRsVcc169w2xRBC3FRGuQEwjeIMMND9L2zc0iEhO/tGv4Zq+km+hxNpQ==",
+                  "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.20.1.tgz",
+                  "integrity": "sha512-hp0AYxaZJhxULfM1zyp7Wgr+pSUKBcP3M+PHnSzWGdXOzg/kHWIgiUWARvubhUKGOEw3xqY4x+lyZ9ytBVcELw==",
                   "bin": {
                     "parser": "bin/babel-parser.js"
                   },
                   "engines": {
                     "node": ">=6.0.0"
                   },
-                  "_id": "@babel/parser@7.19.3",
+                  "_id": "@babel/parser@7.20.1",
                   "extraneous": false,
                   "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@babel/parser",
                   "_dependencies": {},
@@ -22856,18 +22905,18 @@
                   "peerDependencies": {}
                 },
                 "@babel/types": {
-                  "version": "7.19.3",
+                  "version": "7.20.0",
                   "name": "@babel/types",
-                  "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.19.3.tgz",
-                  "integrity": "sha512-hGCaQzIY22DJlDh9CH7NOxgKkFjBk0Cw9xDO1Xmh2151ti7wiGfQ3LauXzL4HP1fmFlTX6XjpRETTpUcv7wQLw==",
+                  "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.20.0.tgz",
+                  "integrity": "sha512-Jlgt3H0TajCW164wkTOTzHkZb075tMQMULzrLUoUeKmO7eFL96GgDxf7/Axhc5CAuKE3KFyVW1p6ysKsi2oXAg==",
                   "engines": {
                     "node": ">=6.9.0"
                   },
-                  "_id": "@babel/types@7.19.3",
+                  "_id": "@babel/types@7.20.0",
                   "extraneous": false,
                   "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@babel/types",
                   "_dependencies": {
-                    "@babel/helper-string-parser": "^7.18.10",
+                    "@babel/helper-string-parser": "^7.19.4",
                     "@babel/helper-validator-identifier": "^7.19.1",
                     "to-fast-properties": "^2.0.0"
                   },
@@ -22904,18 +22953,18 @@
                   "peerDependencies": {},
                   "dependencies": {
                     "@babel/types": {
-                      "version": "7.19.3",
+                      "version": "7.20.0",
                       "name": "@babel/types",
-                      "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.19.3.tgz",
-                      "integrity": "sha512-hGCaQzIY22DJlDh9CH7NOxgKkFjBk0Cw9xDO1Xmh2151ti7wiGfQ3LauXzL4HP1fmFlTX6XjpRETTpUcv7wQLw==",
+                      "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.20.0.tgz",
+                      "integrity": "sha512-Jlgt3H0TajCW164wkTOTzHkZb075tMQMULzrLUoUeKmO7eFL96GgDxf7/Axhc5CAuKE3KFyVW1p6ysKsi2oXAg==",
                       "engines": {
                         "node": ">=6.9.0"
                       },
-                      "_id": "@babel/types@7.19.3",
+                      "_id": "@babel/types@7.20.0",
                       "extraneous": false,
                       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@babel/types",
                       "_dependencies": {
-                        "@babel/helper-string-parser": "^7.18.10",
+                        "@babel/helper-string-parser": "^7.19.4",
                         "@babel/helper-validator-identifier": "^7.19.1",
                         "to-fast-properties": "^2.0.0"
                       },
@@ -23352,10 +23401,10 @@
       }
     },
     "replace": {
-      "version": "1.2.1",
-      "resolved": "https://registry.npmjs.org/replace/-/replace-1.2.1.tgz",
+      "version": "1.2.2",
+      "resolved": "https://registry.npmjs.org/replace/-/replace-1.2.2.tgz",
       "name": "replace",
-      "integrity": "sha512-KZCBe/tPanwBlbjSMQby4l+zjSiFi3CLEP/6VLClnRYgJ46DZ5u9tmA6ceWeFS8coaUnU4ZdGNb/puUGMHNSRg==",
+      "integrity": "sha512-C4EDifm22XZM2b2JOYe6Mhn+lBsLBAvLbK8drfUQLTfD1KYl/n3VaW/CDju0Ny4w3xTtegBpg8YNSpFJPUDSjA==",
       "bin": {
         "replace": "bin/replace.js",
         "search": "bin/search.js"
@@ -23363,12 +23412,12 @@
       "engines": {
         "node": ">= 6"
       },
-      "_id": "replace@1.2.1",
+      "_id": "replace@1.2.2",
       "extraneous": false,
       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/replace",
       "_dependencies": {
         "chalk": "2.4.2",
-        "minimatch": "3.0.4",
+        "minimatch": "3.0.5",
         "yargs": "^15.3.1"
       },
       "devDependencies": {},
@@ -23394,14 +23443,14 @@
           "peerDependencies": {}
         },
         "minimatch": {
-          "version": "3.0.4",
-          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
+          "version": "3.0.5",
+          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.5.tgz",
           "name": "minimatch",
-          "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
+          "integrity": "sha512-tUpxzX0VAzJHjLu0xUfFv1gwVp9ba3IOuRAVH2EGuRW8a5emA2FlACLqiT/lDVtS1W+TGNwqz3sWaNyLgDJWuw==",
           "engines": {
             "node": "*"
           },
-          "_id": "minimatch@3.0.4",
+          "_id": "minimatch@3.0.5",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/replace/node_modules/minimatch",
           "_dependencies": {
@@ -25173,17 +25222,17 @@
       }
     },
     "semver": {
-      "version": "7.3.7",
-      "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.7.tgz",
+      "version": "7.3.8",
+      "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz",
       "name": "semver",
-      "integrity": "sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==",
+      "integrity": "sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==",
       "bin": {
         "semver": "bin/semver.js"
       },
       "engines": {
         "node": ">=10"
       },
-      "_id": "semver@7.3.7",
+      "_id": "semver@7.3.8",
       "extraneous": false,
       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/semver",
       "_dependencies": {
@@ -25226,10 +25275,10 @@
       }
     },
     "sequelize": {
-      "version": "6.23.2",
-      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.23.2.tgz",
+      "version": "6.25.3",
+      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.25.3.tgz",
       "name": "sequelize",
-      "integrity": "sha512-0jy5pkRV7LZlBArIrYKfpKa+DowC+fIcI6LrWDfvdqFmuXZfmS4qq8gzFmIu0C210ts2Mmw/dghzRhX73xPoMg==",
+      "integrity": "sha512-sbbvDGft6UfSRdIC0dcZvMxxJYi6g0+IgWvIpTuk6ccEoIyLcr7Sk6nXWwGfkdlDabGeunhhhI4yH8PleVMvtw==",
       "funding": [
         {
           "type": "opencollective",
@@ -25268,7 +25317,7 @@
           "optional": true
         }
       },
-      "_id": "sequelize@6.23.2",
+      "_id": "sequelize@6.25.3",
       "extraneous": false,
       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/sequelize",
       "_dependencies": {
@@ -25321,11 +25370,11 @@
           }
         },
         "@types/validator": {
-          "version": "13.7.7",
-          "resolved": "https://registry.npmjs.org/@types/validator/-/validator-13.7.7.tgz",
+          "version": "13.7.10",
+          "resolved": "https://registry.npmjs.org/@types/validator/-/validator-13.7.10.tgz",
           "name": "@types/validator",
-          "integrity": "sha512-jiEw2kTUJ8Jsh4A1K4b5Pkjj9Xz6FktLLOQ36ZVLRkmxFbpTvAV2VRoKMojz8UlZxNg/2dZqzpigH4JYn1bkQg==",
-          "_id": "@types/validator@13.7.7",
+          "integrity": "sha512-t1yxFAR2n0+VO6hd/FJ9F2uezAZVWHLmpmlJzm1eX03+H7+HsuTAp7L8QJs+2pQCfWkP1+EXsGK9Z9v7o/qPVQ==",
+          "_id": "@types/validator@13.7.10",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@types/validator",
           "_dependencies": {},
@@ -25408,14 +25457,14 @@
           "peerDependencies": {}
         },
         "moment-timezone": {
-          "version": "0.5.37",
-          "resolved": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.37.tgz",
+          "version": "0.5.38",
+          "resolved": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.38.tgz",
           "name": "moment-timezone",
-          "integrity": "sha512-uEDzDNFhfaywRl+vwXxffjjq1q0Vzr+fcQpQ1bU0kbzorfS7zVtZnCnGc8mhWmF39d4g4YriF6kwA75mJKE/Zg==",
+          "integrity": "sha512-nMIrzGah4+oYZPflDvLZUgoVUO4fvAqHstvG3xAUnMolWncuAiLDWNnJZj6EwJGMGfb1ZcuTFE6GI3hNOVWI/Q==",
           "engines": {
             "node": "*"
           },
-          "_id": "moment-timezone@0.5.37",
+          "_id": "moment-timezone@0.5.38",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/moment-timezone",
           "_dependencies": {
@@ -25481,17 +25530,17 @@
           "peerDependencies": {}
         },
         "semver": {
-          "version": "7.3.7",
+          "version": "7.3.8",
           "name": "semver",
-          "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.7.tgz",
-          "integrity": "sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==",
+          "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz",
+          "integrity": "sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==",
           "bin": {
             "semver": "bin/semver.js"
           },
           "engines": {
             "node": ">=10"
           },
-          "_id": "semver@7.3.7",
+          "_id": "semver@7.3.8",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/semver",
           "_dependencies": {
@@ -25572,11 +25621,11 @@
           "peerDependencies": {},
           "dependencies": {
             "@types/node": {
-              "version": "18.7.23",
+              "version": "18.11.9",
               "name": "@types/node",
-              "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.23.tgz",
-              "integrity": "sha512-DWNcCHolDq0ZKGizjx2DZjR/PqsYwAcYUJmfMWqtVU2MBMG5Mo+xFZrhGId5r/O5HOuMPyQEcM6KUBp5lBZZBg==",
-              "_id": "@types/node@18.7.23",
+              "resolved": "https://registry.npmjs.org/@types/node/-/node-18.11.9.tgz",
+              "integrity": "sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==",
+              "_id": "@types/node@18.11.9",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@types/node",
               "_dependencies": {},
@@ -25826,11 +25875,11 @@
           "peerDependencies": {}
         },
         "@types/node": {
-          "version": "18.7.23",
-          "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.23.tgz",
+          "version": "18.11.9",
+          "resolved": "https://registry.npmjs.org/@types/node/-/node-18.11.9.tgz",
           "name": "@types/node",
-          "integrity": "sha512-DWNcCHolDq0ZKGizjx2DZjR/PqsYwAcYUJmfMWqtVU2MBMG5Mo+xFZrhGId5r/O5HOuMPyQEcM6KUBp5lBZZBg==",
-          "_id": "@types/node@18.7.23",
+          "integrity": "sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==",
+          "_id": "@types/node@18.11.9",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/@types/node",
           "_dependencies": {},
@@ -26193,10 +26242,10 @@
       }
     },
     "sqlite3": {
-      "version": "5.1.1",
-      "resolved": "https://registry.npmjs.org/sqlite3/-/sqlite3-5.1.1.tgz",
+      "version": "5.1.2",
+      "resolved": "https://registry.npmjs.org/sqlite3/-/sqlite3-5.1.2.tgz",
       "name": "sqlite3",
-      "integrity": "sha512-mMinkrQr/LKJqFiFF+AF7imPSzRCCpTCreusZO3D/ssJHVjZOrbu2Caz+zPH5KTmGGXBxXMGSRDssL+44CLxvg==",
+      "integrity": "sha512-D0Reg6pRWAFXFUnZKsszCI67tthFD8fGPewRddDCX6w4cYwz3MbvuwRICbL+YQjBAh9zbw+lJ/V9oC8nG5j6eg==",
       "hasInstallScript": true,
       "optionalDependencies": {
         "node-gyp": "8.x"
@@ -26209,7 +26258,7 @@
           "optional": true
         }
       },
-      "_id": "sqlite3@5.1.1",
+      "_id": "sqlite3@5.1.2",
       "extraneous": false,
       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/sqlite3",
       "_dependencies": {
@@ -26543,17 +26592,17 @@
                           "peerDependencies": {}
                         },
                         "semver": {
-                          "version": "7.3.7",
+                          "version": "7.3.8",
                           "name": "semver",
-                          "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.7.tgz",
-                          "integrity": "sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==",
+                          "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz",
+                          "integrity": "sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==",
                           "bin": {
                             "semver": "bin/semver.js"
                           },
                           "engines": {
                             "node": ">=10"
                           },
-                          "_id": "semver@7.3.7",
+                          "_id": "semver@7.3.8",
                           "extraneous": false,
                           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/semver",
                           "_dependencies": {
@@ -27536,16 +27585,16 @@
                       }
                     },
                     "socks": {
-                      "version": "2.7.0",
-                      "resolved": "https://registry.npmjs.org/socks/-/socks-2.7.0.tgz",
+                      "version": "2.7.1",
+                      "resolved": "https://registry.npmjs.org/socks/-/socks-2.7.1.tgz",
                       "name": "socks",
-                      "integrity": "sha512-scnOe9y4VuiNUULJN72GrM26BNOjVsfPXI+j+98PkyEfsIXroa5ofyjT+FzGvn/xHs73U2JtoBYAVx9Hl4quSA==",
+                      "integrity": "sha512-7maUZy1N7uo6+WVEX6psASxtNlKaNVMlGQKkG/63nEDdLOWNbiUMoLK7X4uYoLhQstau72mLgfEWcXcwsaHbYQ==",
                       "optional": true,
                       "engines": {
                         "node": ">= 10.13.0",
                         "npm": ">= 3.0.0"
                       },
-                      "_id": "socks@2.7.0",
+                      "_id": "socks@2.7.1",
                       "extraneous": false,
                       "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/socks",
                       "_dependencies": {
@@ -28032,17 +28081,17 @@
               "peerDependencies": {}
             },
             "semver": {
-              "version": "7.3.7",
+              "version": "7.3.8",
               "name": "semver",
-              "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.7.tgz",
-              "integrity": "sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==",
+              "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz",
+              "integrity": "sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==",
               "bin": {
                 "semver": "bin/semver.js"
               },
               "engines": {
                 "node": ">=10"
               },
-              "_id": "semver@7.3.7",
+              "_id": "semver@7.3.8",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/semver",
               "_dependencies": {
@@ -28352,20 +28401,20 @@
       "devDependencies": {},
       "dependencies": {
         "express": {
-          "version": "4.18.1",
+          "version": "4.18.2",
           "name": "express",
-          "resolved": "https://registry.npmjs.org/express/-/express-4.18.1.tgz",
-          "integrity": "sha512-zZBcOX9TfehHQhtupq57OF8lFZ3UZi08Y97dwFCkD8p9d/d2Y3M+ykKcwaMDEL+4qyUolgBDX6AblpR3fL212Q==",
+          "resolved": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
+          "integrity": "sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==",
           "engines": {
             "node": ">= 0.10.0"
           },
-          "_id": "express@4.18.1",
+          "_id": "express@4.18.2",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/express",
           "_dependencies": {
             "accepts": "~1.3.8",
             "array-flatten": "1.1.1",
-            "body-parser": "1.20.0",
+            "body-parser": "1.20.1",
             "content-disposition": "0.5.4",
             "content-type": "~1.0.4",
             "cookie": "0.5.0",
@@ -28384,7 +28433,7 @@
             "parseurl": "~1.3.3",
             "path-to-regexp": "0.1.7",
             "proxy-addr": "~2.0.7",
-            "qs": "6.10.3",
+            "qs": "6.11.0",
             "range-parser": "~1.2.1",
             "safe-buffer": "5.2.1",
             "send": "0.18.0",
@@ -28399,11 +28448,11 @@
           "peerDependencies": {}
         },
         "swagger-ui-dist": {
-          "version": "4.14.2",
-          "resolved": "https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-4.14.2.tgz",
+          "version": "4.15.2",
+          "resolved": "https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-4.15.2.tgz",
           "name": "swagger-ui-dist",
-          "integrity": "sha512-kOIU7Ts3TrXDLb3/c9jRe4qGp8O3bRT19FFJA8wJfrRFkcK/4atPn3krhtBVJ57ZkNNofworXHxuYwmaisXBdg==",
-          "_id": "swagger-ui-dist@4.14.2",
+          "integrity": "sha512-sanLAioshpa+Q0PpPxD86uo4labSqeIxtjLoC7xoce3HTnECPoQwY7PUVOiGMZ4dnEnROZPLUTloCEM86jZc1Q==",
+          "_id": "swagger-ui-dist@4.15.2",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/swagger-ui-dist",
           "_dependencies": {},
@@ -28835,11 +28884,14 @@
           }
         },
         "minimist": {
-          "version": "1.2.6",
+          "version": "1.2.7",
           "name": "minimist",
-          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-          "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-          "_id": "minimist@1.2.6",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+          "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+          "funding": {
+            "url": "https://github.com/sponsors/ljharb"
+          },
+          "_id": "minimist@1.2.7",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/minimist",
           "_dependencies": {},
@@ -28888,14 +28940,14 @@
           "peerDependencies": {},
           "dependencies": {
             "is-core-module": {
-              "version": "2.10.0",
-              "resolved": "https://registry.npmjs.org/is-core-module/-/is-core-module-2.10.0.tgz",
+              "version": "2.11.0",
+              "resolved": "https://registry.npmjs.org/is-core-module/-/is-core-module-2.11.0.tgz",
               "name": "is-core-module",
-              "integrity": "sha512-Erxj2n/LDAZ7H8WNJXd9tw38GYM3dv8rk8Zcs+jJuxYTW7sozH+SS8NtrSjVL1/vpLvWi1hxy96IzjJ3EHTJJg==",
+              "integrity": "sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==",
               "funding": {
                 "url": "https://github.com/sponsors/ljharb"
               },
-              "_id": "is-core-module@2.10.0",
+              "_id": "is-core-module@2.11.0",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/is-core-module",
               "_dependencies": {
@@ -29531,11 +29583,14 @@
               "peerDependencies": {},
               "dependencies": {
                 "minimist": {
-                  "version": "1.2.6",
+                  "version": "1.2.7",
                   "name": "minimist",
-                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-                  "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-                  "_id": "minimist@1.2.6",
+                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+                  "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+                  "funding": {
+                    "url": "https://github.com/sponsors/ljharb"
+                  },
+                  "_id": "minimist@1.2.7",
                   "extraneous": false,
                   "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/minimist",
                   "_dependencies": {},
@@ -30027,14 +30082,14 @@
               "peerDependencies": {}
             },
             "safe-stable-stringify": {
-              "version": "2.4.0",
+              "version": "2.4.1",
               "name": "safe-stable-stringify",
-              "resolved": "https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.4.0.tgz",
-              "integrity": "sha512-eehKHKpab6E741ud7ZIMcXhKcP6TSIezPkNZhy5U8xC6+VvrRdUA2tMgxGxaGl4cz7c2Ew5+mg5+wNB16KQqrA==",
+              "resolved": "https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.4.1.tgz",
+              "integrity": "sha512-dVHE6bMtS/bnL2mwualjc6IxEv1F+OCUpA46pKUj6F8uDbUM0jCCulPqRNPSnWwGNKx5etqMjZYdXtrm5KJZGA==",
               "engines": {
                 "node": ">=10"
               },
-              "_id": "safe-stable-stringify@2.4.0",
+              "_id": "safe-stable-stringify@2.4.1",
               "extraneous": false,
               "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/safe-stable-stringify",
               "_dependencies": {},
@@ -30143,14 +30198,14 @@
           }
         },
         "safe-stable-stringify": {
-          "version": "2.4.0",
-          "resolved": "https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.4.0.tgz",
+          "version": "2.4.1",
+          "resolved": "https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.4.1.tgz",
           "name": "safe-stable-stringify",
-          "integrity": "sha512-eehKHKpab6E741ud7ZIMcXhKcP6TSIezPkNZhy5U8xC6+VvrRdUA2tMgxGxaGl4cz7c2Ew5+mg5+wNB16KQqrA==",
+          "integrity": "sha512-dVHE6bMtS/bnL2mwualjc6IxEv1F+OCUpA46pKUj6F8uDbUM0jCCulPqRNPSnWwGNKx5etqMjZYdXtrm5KJZGA==",
           "engines": {
             "node": ">=10"
           },
-          "_id": "safe-stable-stringify@2.4.0",
+          "_id": "safe-stable-stringify@2.4.1",
           "extraneous": false,
           "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/juice-shop/project/node_modules/safe-stable-stringify",
           "_dependencies": {},

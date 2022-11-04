@@ -1,0 +1,1147 @@
+{
+  "version": "0.0.0",
+  "name": "demo-bundled-deps",
+  "private": true,
+  "description": "demo: demo-bundled-deps -- showcase how bundled deps look like",
+  "license": "Apache-2.0",
+  "_id": "demo-bundled-deps@0.0.0",
+  "extraneous": false,
+  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project",
+  "_dependencies": {
+    "bundle-dependencies": "1.0.2"
+  },
+  "devDependencies": {},
+  "peerDependencies": {},
+  "dependencies": {
+    "bundle-dependencies": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz",
+      "overridden": false,
+      "name": "bundle-dependencies",
+      "integrity": "sha512-fM9Q9hJcX1ZYnyjveHTptFZqpLKDO2gdxRhuB8MNSYEQvC6kImDDH2038J/tHfcuV0JRGUj8n8axDY0AnFkXfA==",
+      "bundleDependencies": [
+        "yargs"
+      ],
+      "bin": {
+        "bundle-dependencies": "dist/bin/index.js"
+      },
+      "_id": "bundle-dependencies@1.0.2",
+      "extraneous": false,
+      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies",
+      "_dependencies": {
+        "yargs": "^4.1.0"
+      },
+      "devDependencies": {},
+      "peerDependencies": {},
+      "dependencies": {
+        "yargs": {
+          "version": "4.1.0",
+          "overridden": false,
+          "name": "yargs",
+          "inBundle": true,
+          "license": "MIT",
+          "_id": "yargs@4.1.0",
+          "extraneous": false,
+          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\yargs",
+          "_dependencies": {
+            "camelcase": "^2.0.1",
+            "cliui": "^3.0.3",
+            "decamelize": "^1.1.1",
+            "os-locale": "^1.4.0",
+            "pkg-conf": "^1.1.1",
+            "read-pkg-up": "^1.0.1",
+            "require-main-filename": "^1.0.0",
+            "string-width": "^1.0.1",
+            "window-size": "^0.2.0",
+            "y18n": "^3.2.0",
+            "yargs-parser": "^2.1.0"
+          },
+          "devDependencies": {},
+          "peerDependencies": {},
+          "dependencies": {
+            "camelcase": {
+              "version": "2.1.0",
+              "overridden": false,
+              "name": "camelcase",
+              "inBundle": true,
+              "license": "MIT",
+              "engines": {
+                "node": ">=0.10.0"
+              },
+              "_id": "camelcase@2.1.0",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\camelcase",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            },
+            "cliui": {
+              "version": "3.1.0",
+              "overridden": false,
+              "name": "cliui",
+              "inBundle": true,
+              "license": "ISC",
+              "_id": "cliui@3.1.0",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\cliui",
+              "_dependencies": {
+                "string-width": "^1.0.1",
+                "strip-ansi": "^3.0.0",
+                "wrap-ansi": "^1.0.0"
+              },
+              "devDependencies": {},
+              "peerDependencies": {},
+              "dependencies": {
+                "string-width": {
+                  "version": "1.0.1",
+                  "name": "string-width",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "string-width@1.0.1",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\string-width",
+                  "_dependencies": {
+                    "code-point-at": "^1.0.0",
+                    "is-fullwidth-code-point": "^1.0.0",
+                    "strip-ansi": "^3.0.0"
+                  },
+                  "devDependencies": {},
+                  "peerDependencies": {}
+                },
+                "strip-ansi": {
+                  "version": "3.0.1",
+                  "overridden": false,
+                  "name": "strip-ansi",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "strip-ansi@3.0.1",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\strip-ansi",
+                  "_dependencies": {
+                    "ansi-regex": "^2.0.0"
+                  },
+                  "devDependencies": {},
+                  "peerDependencies": {},
+                  "dependencies": {
+                    "ansi-regex": {
+                      "version": "2.0.0",
+                      "overridden": false,
+                      "name": "ansi-regex",
+                      "inBundle": true,
+                      "license": "MIT",
+                      "engines": {
+                        "node": ">=0.10.0"
+                      },
+                      "_id": "ansi-regex@2.0.0",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\ansi-regex",
+                      "_dependencies": {},
+                      "devDependencies": {},
+                      "peerDependencies": {}
+                    }
+                  }
+                },
+                "wrap-ansi": {
+                  "version": "1.0.0",
+                  "overridden": false,
+                  "name": "wrap-ansi",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "wrap-ansi@1.0.0",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\wrap-ansi",
+                  "_dependencies": {
+                    "string-width": "^1.0.1"
+                  },
+                  "devDependencies": {},
+                  "peerDependencies": {},
+                  "dependencies": {
+                    "string-width": {
+                      "version": "1.0.1",
+                      "name": "string-width",
+                      "inBundle": true,
+                      "license": "MIT",
+                      "engines": {
+                        "node": ">=0.10.0"
+                      },
+                      "_id": "string-width@1.0.1",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\string-width",
+                      "_dependencies": {
+                        "code-point-at": "^1.0.0",
+                        "is-fullwidth-code-point": "^1.0.0",
+                        "strip-ansi": "^3.0.0"
+                      },
+                      "devDependencies": {},
+                      "peerDependencies": {}
+                    }
+                  }
+                }
+              }
+            },
+            "decamelize": {
+              "version": "1.1.2",
+              "overridden": false,
+              "name": "decamelize",
+              "inBundle": true,
+              "license": "MIT",
+              "engines": {
+                "node": ">=0.10.0"
+              },
+              "_id": "decamelize@1.1.2",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\decamelize",
+              "_dependencies": {
+                "escape-string-regexp": "^1.0.4"
+              },
+              "devDependencies": {},
+              "peerDependencies": {},
+              "dependencies": {
+                "escape-string-regexp": {
+                  "version": "1.0.5",
+                  "overridden": false,
+                  "name": "escape-string-regexp",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.8.0"
+                  },
+                  "_id": "escape-string-regexp@1.0.5",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\escape-string-regexp",
+                  "_dependencies": {},
+                  "devDependencies": {},
+                  "peerDependencies": {}
+                }
+              }
+            },
+            "os-locale": {
+              "version": "1.4.0",
+              "overridden": false,
+              "name": "os-locale",
+              "inBundle": true,
+              "license": "MIT",
+              "engines": {
+                "node": ">=0.10.0"
+              },
+              "_id": "os-locale@1.4.0",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\os-locale",
+              "_dependencies": {
+                "lcid": "^1.0.0"
+              },
+              "devDependencies": {},
+              "peerDependencies": {},
+              "dependencies": {
+                "lcid": {
+                  "version": "1.0.0",
+                  "overridden": false,
+                  "name": "lcid",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "lcid@1.0.0",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\lcid",
+                  "_dependencies": {
+                    "invert-kv": "^1.0.0"
+                  },
+                  "devDependencies": {},
+                  "peerDependencies": {},
+                  "dependencies": {
+                    "invert-kv": {
+                      "version": "1.0.0",
+                      "overridden": false,
+                      "name": "invert-kv",
+                      "inBundle": true,
+                      "license": "MIT",
+                      "engines": {
+                        "node": ">=0.10.0"
+                      },
+                      "_id": "invert-kv@1.0.0",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\invert-kv",
+                      "_dependencies": {},
+                      "devDependencies": {},
+                      "peerDependencies": {}
+                    }
+                  }
+                }
+              }
+            },
+            "pkg-conf": {
+              "version": "1.1.1",
+              "overridden": false,
+              "name": "pkg-conf",
+              "inBundle": true,
+              "license": "MIT",
+              "engines": {
+                "node": ">=0.10.0"
+              },
+              "_id": "pkg-conf@1.1.1",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\pkg-conf",
+              "_dependencies": {
+                "find-up": "^1.0.0",
+                "object-assign": "^4.0.1",
+                "read-pkg": "^1.0.0",
+                "symbol": "^0.2.1"
+              },
+              "devDependencies": {},
+              "peerDependencies": {},
+              "dependencies": {
+                "find-up": {
+                  "version": "1.1.0",
+                  "overridden": false,
+                  "name": "find-up",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "find-up@1.1.0",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\find-up",
+                  "_dependencies": {
+                    "path-exists": "^2.0.0",
+                    "pinkie-promise": "^2.0.0"
+                  },
+                  "devDependencies": {},
+                  "peerDependencies": {},
+                  "dependencies": {
+                    "path-exists": {
+                      "version": "2.1.0",
+                      "overridden": false,
+                      "name": "path-exists",
+                      "inBundle": true,
+                      "license": "MIT",
+                      "engines": {
+                        "node": ">=0.10.0"
+                      },
+                      "_id": "path-exists@2.1.0",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\path-exists",
+                      "_dependencies": {
+                        "pinkie-promise": "^2.0.0"
+                      },
+                      "devDependencies": {},
+                      "peerDependencies": {},
+                      "dependencies": {
+                        "pinkie-promise": {
+                          "version": "2.0.0",
+                          "name": "pinkie-promise",
+                          "inBundle": true,
+                          "license": "MIT",
+                          "engines": {
+                            "node": ">=0.10.0"
+                          },
+                          "_id": "pinkie-promise@2.0.0",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\pinkie-promise",
+                          "_dependencies": {
+                            "pinkie": "^2.0.0"
+                          },
+                          "devDependencies": {},
+                          "peerDependencies": {}
+                        }
+                      }
+                    },
+                    "pinkie-promise": {
+                      "version": "2.0.0",
+                      "overridden": false,
+                      "name": "pinkie-promise",
+                      "inBundle": true,
+                      "license": "MIT",
+                      "engines": {
+                        "node": ">=0.10.0"
+                      },
+                      "_id": "pinkie-promise@2.0.0",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\pinkie-promise",
+                      "_dependencies": {
+                        "pinkie": "^2.0.0"
+                      },
+                      "devDependencies": {},
+                      "peerDependencies": {},
+                      "dependencies": {
+                        "pinkie": {
+                          "version": "2.0.4",
+                          "overridden": false,
+                          "name": "pinkie",
+                          "inBundle": true,
+                          "license": "MIT",
+                          "engines": {
+                            "node": ">=0.10.0"
+                          },
+                          "_id": "pinkie@2.0.4",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\pinkie",
+                          "_dependencies": {},
+                          "devDependencies": {},
+                          "peerDependencies": {}
+                        }
+                      }
+                    }
+                  }
+                },
+                "object-assign": {
+                  "version": "4.0.1",
+                  "overridden": false,
+                  "name": "object-assign",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "object-assign@4.0.1",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\object-assign",
+                  "_dependencies": {},
+                  "devDependencies": {},
+                  "peerDependencies": {}
+                },
+                "read-pkg": {
+                  "version": "1.1.0",
+                  "overridden": false,
+                  "name": "read-pkg",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "read-pkg@1.1.0",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\read-pkg",
+                  "_dependencies": {
+                    "load-json-file": "^1.0.0",
+                    "normalize-package-data": "^2.3.2",
+                    "path-type": "^1.0.0"
+                  },
+                  "devDependencies": {},
+                  "peerDependencies": {},
+                  "dependencies": {
+                    "load-json-file": {
+                      "version": "1.1.0",
+                      "overridden": false,
+                      "name": "load-json-file",
+                      "inBundle": true,
+                      "license": "MIT",
+                      "engines": {
+                        "node": ">=0.10.0"
+                      },
+                      "_id": "load-json-file@1.1.0",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\load-json-file",
+                      "_dependencies": {
+                        "graceful-fs": "^4.1.2",
+                        "parse-json": "^2.2.0",
+                        "pify": "^2.0.0",
+                        "pinkie-promise": "^2.0.0",
+                        "strip-bom": "^2.0.0"
+                      },
+                      "devDependencies": {},
+                      "peerDependencies": {},
+                      "dependencies": {
+                        "graceful-fs": {
+                          "version": "4.1.3",
+                          "overridden": false,
+                          "name": "graceful-fs",
+                          "inBundle": true,
+                          "license": "ISC",
+                          "engines": {
+                            "node": ">=0.4.0"
+                          },
+                          "_id": "graceful-fs@4.1.3",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\graceful-fs",
+                          "_dependencies": {},
+                          "devDependencies": {},
+                          "peerDependencies": {}
+                        },
+                        "parse-json": {
+                          "version": "2.2.0",
+                          "overridden": false,
+                          "name": "parse-json",
+                          "inBundle": true,
+                          "license": "MIT",
+                          "engines": {
+                            "node": ">=0.10.0"
+                          },
+                          "_id": "parse-json@2.2.0",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\parse-json",
+                          "_dependencies": {
+                            "error-ex": "^1.2.0"
+                          },
+                          "devDependencies": {},
+                          "peerDependencies": {},
+                          "dependencies": {
+                            "error-ex": {
+                              "version": "1.3.0",
+                              "overridden": false,
+                              "name": "error-ex",
+                              "inBundle": true,
+                              "license": "MIT",
+                              "_id": "error-ex@1.3.0",
+                              "extraneous": false,
+                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\error-ex",
+                              "_dependencies": {
+                                "is-arrayish": "^0.2.1"
+                              },
+                              "devDependencies": {},
+                              "peerDependencies": {},
+                              "dependencies": {
+                                "is-arrayish": {
+                                  "version": "0.2.1",
+                                  "overridden": false,
+                                  "name": "is-arrayish",
+                                  "inBundle": true,
+                                  "license": "MIT",
+                                  "_id": "is-arrayish@0.2.1",
+                                  "extraneous": false,
+                                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\is-arrayish",
+                                  "_dependencies": {},
+                                  "devDependencies": {},
+                                  "peerDependencies": {}
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "pify": {
+                          "version": "2.3.0",
+                          "overridden": false,
+                          "name": "pify",
+                          "inBundle": true,
+                          "license": "MIT",
+                          "engines": {
+                            "node": ">=0.10.0"
+                          },
+                          "_id": "pify@2.3.0",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\pify",
+                          "_dependencies": {},
+                          "devDependencies": {},
+                          "peerDependencies": {}
+                        },
+                        "pinkie-promise": {
+                          "version": "2.0.0",
+                          "name": "pinkie-promise",
+                          "inBundle": true,
+                          "license": "MIT",
+                          "engines": {
+                            "node": ">=0.10.0"
+                          },
+                          "_id": "pinkie-promise@2.0.0",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\pinkie-promise",
+                          "_dependencies": {
+                            "pinkie": "^2.0.0"
+                          },
+                          "devDependencies": {},
+                          "peerDependencies": {}
+                        },
+                        "strip-bom": {
+                          "version": "2.0.0",
+                          "overridden": false,
+                          "name": "strip-bom",
+                          "inBundle": true,
+                          "license": "MIT",
+                          "engines": {
+                            "node": ">=0.10.0"
+                          },
+                          "_id": "strip-bom@2.0.0",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\strip-bom",
+                          "_dependencies": {
+                            "is-utf8": "^0.2.0"
+                          },
+                          "devDependencies": {},
+                          "peerDependencies": {},
+                          "dependencies": {
+                            "is-utf8": {
+                              "version": "0.2.1",
+                              "overridden": false,
+                              "name": "is-utf8",
+                              "inBundle": true,
+                              "license": "MIT",
+                              "_id": "is-utf8@0.2.1",
+                              "extraneous": false,
+                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\is-utf8",
+                              "_dependencies": {},
+                              "devDependencies": {},
+                              "peerDependencies": {}
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "normalize-package-data": {
+                      "version": "2.3.5",
+                      "overridden": false,
+                      "name": "normalize-package-data",
+                      "inBundle": true,
+                      "license": "BSD-2-Clause",
+                      "_id": "normalize-package-data@2.3.5",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\normalize-package-data",
+                      "_dependencies": {
+                        "hosted-git-info": "^2.1.4",
+                        "is-builtin-module": "^1.0.0",
+                        "semver": "2 || 3 || 4 || 5",
+                        "validate-npm-package-license": "^3.0.1"
+                      },
+                      "devDependencies": {},
+                      "peerDependencies": {},
+                      "dependencies": {
+                        "hosted-git-info": {
+                          "version": "2.1.4",
+                          "overridden": false,
+                          "name": "hosted-git-info",
+                          "inBundle": true,
+                          "license": "ISC",
+                          "_id": "hosted-git-info@2.1.4",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\hosted-git-info",
+                          "_dependencies": {},
+                          "devDependencies": {},
+                          "peerDependencies": {}
+                        },
+                        "is-builtin-module": {
+                          "version": "1.0.0",
+                          "overridden": false,
+                          "name": "is-builtin-module",
+                          "inBundle": true,
+                          "license": "MIT",
+                          "engines": {
+                            "node": ">=0.10.0"
+                          },
+                          "_id": "is-builtin-module@1.0.0",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\is-builtin-module",
+                          "_dependencies": {
+                            "builtin-modules": "^1.0.0"
+                          },
+                          "devDependencies": {},
+                          "peerDependencies": {},
+                          "dependencies": {
+                            "builtin-modules": {
+                              "version": "1.1.1",
+                              "overridden": false,
+                              "name": "builtin-modules",
+                              "inBundle": true,
+                              "license": "MIT",
+                              "engines": {
+                                "node": ">=0.10.0"
+                              },
+                              "_id": "builtin-modules@1.1.1",
+                              "extraneous": false,
+                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\builtin-modules",
+                              "_dependencies": {},
+                              "devDependencies": {},
+                              "peerDependencies": {}
+                            }
+                          }
+                        },
+                        "semver": {
+                          "version": "5.1.0",
+                          "overridden": false,
+                          "name": "semver",
+                          "inBundle": true,
+                          "license": "ISC",
+                          "bin": {
+                            "semver": "bin/semver"
+                          },
+                          "_id": "semver@5.1.0",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\semver",
+                          "_dependencies": {},
+                          "devDependencies": {},
+                          "peerDependencies": {}
+                        },
+                        "validate-npm-package-license": {
+                          "version": "3.0.1",
+                          "overridden": false,
+                          "name": "validate-npm-package-license",
+                          "inBundle": true,
+                          "license": "Apache-2.0",
+                          "_id": "validate-npm-package-license@3.0.1",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\validate-npm-package-license",
+                          "_dependencies": {
+                            "spdx-correct": "~1.0.0",
+                            "spdx-expression-parse": "~1.0.0"
+                          },
+                          "devDependencies": {},
+                          "peerDependencies": {},
+                          "dependencies": {
+                            "spdx-correct": {
+                              "version": "1.0.2",
+                              "overridden": false,
+                              "name": "spdx-correct",
+                              "inBundle": true,
+                              "license": "Apache-2.0",
+                              "_id": "spdx-correct@1.0.2",
+                              "extraneous": false,
+                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\spdx-correct",
+                              "_dependencies": {
+                                "spdx-license-ids": "^1.0.2"
+                              },
+                              "devDependencies": {},
+                              "peerDependencies": {},
+                              "dependencies": {
+                                "spdx-license-ids": {
+                                  "version": "1.2.0",
+                                  "overridden": false,
+                                  "name": "spdx-license-ids",
+                                  "inBundle": true,
+                                  "license": "Unlicense",
+                                  "_id": "spdx-license-ids@1.2.0",
+                                  "extraneous": false,
+                                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\spdx-license-ids",
+                                  "_dependencies": {},
+                                  "devDependencies": {},
+                                  "peerDependencies": {}
+                                }
+                              }
+                            },
+                            "spdx-expression-parse": {
+                              "version": "1.0.2",
+                              "overridden": false,
+                              "name": "spdx-expression-parse",
+                              "inBundle": true,
+                              "license": "(MIT AND CC-BY-3.0)",
+                              "_id": "spdx-expression-parse@1.0.2",
+                              "extraneous": false,
+                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\spdx-expression-parse",
+                              "_dependencies": {
+                                "spdx-exceptions": "^1.0.4",
+                                "spdx-license-ids": "^1.0.0"
+                              },
+                              "devDependencies": {},
+                              "peerDependencies": {},
+                              "dependencies": {
+                                "spdx-exceptions": {
+                                  "version": "1.0.4",
+                                  "overridden": false,
+                                  "name": "spdx-exceptions",
+                                  "inBundle": true,
+                                  "license": "CC-BY-3.0",
+                                  "_id": "spdx-exceptions@1.0.4",
+                                  "extraneous": false,
+                                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\spdx-exceptions",
+                                  "_dependencies": {},
+                                  "devDependencies": {},
+                                  "peerDependencies": {}
+                                },
+                                "spdx-license-ids": {
+                                  "version": "1.2.0",
+                                  "name": "spdx-license-ids",
+                                  "inBundle": true,
+                                  "license": "Unlicense",
+                                  "_id": "spdx-license-ids@1.2.0",
+                                  "extraneous": false,
+                                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\spdx-license-ids",
+                                  "_dependencies": {},
+                                  "devDependencies": {},
+                                  "peerDependencies": {}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "path-type": {
+                      "version": "1.1.0",
+                      "overridden": false,
+                      "name": "path-type",
+                      "inBundle": true,
+                      "license": "MIT",
+                      "engines": {
+                        "node": ">=0.10.0"
+                      },
+                      "_id": "path-type@1.1.0",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\path-type",
+                      "_dependencies": {
+                        "graceful-fs": "^4.1.2",
+                        "pify": "^2.0.0",
+                        "pinkie-promise": "^2.0.0"
+                      },
+                      "devDependencies": {},
+                      "peerDependencies": {},
+                      "dependencies": {
+                        "graceful-fs": {
+                          "version": "4.1.3",
+                          "name": "graceful-fs",
+                          "inBundle": true,
+                          "license": "ISC",
+                          "engines": {
+                            "node": ">=0.4.0"
+                          },
+                          "_id": "graceful-fs@4.1.3",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\graceful-fs",
+                          "_dependencies": {},
+                          "devDependencies": {},
+                          "peerDependencies": {}
+                        },
+                        "pify": {
+                          "version": "2.3.0",
+                          "name": "pify",
+                          "inBundle": true,
+                          "license": "MIT",
+                          "engines": {
+                            "node": ">=0.10.0"
+                          },
+                          "_id": "pify@2.3.0",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\pify",
+                          "_dependencies": {},
+                          "devDependencies": {},
+                          "peerDependencies": {}
+                        },
+                        "pinkie-promise": {
+                          "version": "2.0.0",
+                          "name": "pinkie-promise",
+                          "inBundle": true,
+                          "license": "MIT",
+                          "engines": {
+                            "node": ">=0.10.0"
+                          },
+                          "_id": "pinkie-promise@2.0.0",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\pinkie-promise",
+                          "_dependencies": {
+                            "pinkie": "^2.0.0"
+                          },
+                          "devDependencies": {},
+                          "peerDependencies": {}
+                        }
+                      }
+                    }
+                  }
+                },
+                "symbol": {
+                  "version": "0.2.1",
+                  "overridden": false,
+                  "name": "symbol",
+                  "inBundle": true,
+                  "license": "MPLv2.0",
+                  "_id": "symbol@0.2.1",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\symbol",
+                  "_dependencies": {},
+                  "devDependencies": {},
+                  "peerDependencies": {}
+                }
+              }
+            },
+            "read-pkg-up": {
+              "version": "1.0.1",
+              "overridden": false,
+              "name": "read-pkg-up",
+              "inBundle": true,
+              "license": "MIT",
+              "engines": {
+                "node": ">=0.10.0"
+              },
+              "_id": "read-pkg-up@1.0.1",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\read-pkg-up",
+              "_dependencies": {
+                "find-up": "^1.0.0",
+                "read-pkg": "^1.0.0"
+              },
+              "devDependencies": {},
+              "peerDependencies": {},
+              "dependencies": {
+                "find-up": {
+                  "version": "1.1.0",
+                  "name": "find-up",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "find-up@1.1.0",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\find-up",
+                  "_dependencies": {
+                    "path-exists": "^2.0.0",
+                    "pinkie-promise": "^2.0.0"
+                  },
+                  "devDependencies": {},
+                  "peerDependencies": {}
+                },
+                "read-pkg": {
+                  "version": "1.1.0",
+                  "name": "read-pkg",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "read-pkg@1.1.0",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\read-pkg",
+                  "_dependencies": {
+                    "load-json-file": "^1.0.0",
+                    "normalize-package-data": "^2.3.2",
+                    "path-type": "^1.0.0"
+                  },
+                  "devDependencies": {},
+                  "peerDependencies": {}
+                }
+              }
+            },
+            "require-main-filename": {
+              "version": "1.0.1",
+              "overridden": false,
+              "name": "require-main-filename",
+              "inBundle": true,
+              "license": "ISC",
+              "_id": "require-main-filename@1.0.1",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\require-main-filename",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            },
+            "string-width": {
+              "version": "1.0.1",
+              "overridden": false,
+              "name": "string-width",
+              "inBundle": true,
+              "license": "MIT",
+              "engines": {
+                "node": ">=0.10.0"
+              },
+              "_id": "string-width@1.0.1",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\string-width",
+              "_dependencies": {
+                "code-point-at": "^1.0.0",
+                "is-fullwidth-code-point": "^1.0.0",
+                "strip-ansi": "^3.0.0"
+              },
+              "devDependencies": {},
+              "peerDependencies": {},
+              "dependencies": {
+                "code-point-at": {
+                  "version": "1.0.0",
+                  "overridden": false,
+                  "name": "code-point-at",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "code-point-at@1.0.0",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\code-point-at",
+                  "_dependencies": {
+                    "number-is-nan": "^1.0.0"
+                  },
+                  "devDependencies": {},
+                  "peerDependencies": {},
+                  "dependencies": {
+                    "number-is-nan": {
+                      "version": "1.0.0",
+                      "overridden": false,
+                      "name": "number-is-nan",
+                      "inBundle": true,
+                      "license": "MIT",
+                      "engines": {
+                        "node": ">=0.10.0"
+                      },
+                      "_id": "number-is-nan@1.0.0",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\number-is-nan",
+                      "_dependencies": {},
+                      "devDependencies": {},
+                      "peerDependencies": {}
+                    }
+                  }
+                },
+                "is-fullwidth-code-point": {
+                  "version": "1.0.0",
+                  "overridden": false,
+                  "name": "is-fullwidth-code-point",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "is-fullwidth-code-point@1.0.0",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\is-fullwidth-code-point",
+                  "_dependencies": {
+                    "number-is-nan": "^1.0.0"
+                  },
+                  "devDependencies": {},
+                  "peerDependencies": {},
+                  "dependencies": {
+                    "number-is-nan": {
+                      "version": "1.0.0",
+                      "name": "number-is-nan",
+                      "inBundle": true,
+                      "license": "MIT",
+                      "engines": {
+                        "node": ">=0.10.0"
+                      },
+                      "_id": "number-is-nan@1.0.0",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\number-is-nan",
+                      "_dependencies": {},
+                      "devDependencies": {},
+                      "peerDependencies": {}
+                    }
+                  }
+                },
+                "strip-ansi": {
+                  "version": "3.0.1",
+                  "name": "strip-ansi",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "strip-ansi@3.0.1",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\strip-ansi",
+                  "_dependencies": {
+                    "ansi-regex": "^2.0.0"
+                  },
+                  "devDependencies": {},
+                  "peerDependencies": {}
+                }
+              }
+            },
+            "window-size": {
+              "version": "0.2.0",
+              "overridden": false,
+              "name": "window-size",
+              "inBundle": true,
+              "license": "MIT",
+              "bin": {
+                "window-size": "cli.js"
+              },
+              "engines": {
+                "node": ">= 0.10.0"
+              },
+              "_id": "window-size@0.2.0",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\window-size",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            },
+            "y18n": {
+              "version": "3.2.0",
+              "overridden": false,
+              "name": "y18n",
+              "inBundle": true,
+              "license": "ISC",
+              "_id": "y18n@3.2.0",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\y18n",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            },
+            "yargs-parser": {
+              "version": "2.1.0",
+              "overridden": false,
+              "name": "yargs-parser",
+              "inBundle": true,
+              "license": "ISC",
+              "_id": "yargs-parser@2.1.0",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\yargs-parser",
+              "_dependencies": {
+                "camelcase": "^2.1.0",
+                "lodash.assign": "^4.0.2"
+              },
+              "devDependencies": {},
+              "peerDependencies": {},
+              "dependencies": {
+                "camelcase": {
+                  "version": "2.1.0",
+                  "name": "camelcase",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "engines": {
+                    "node": ">=0.10.0"
+                  },
+                  "_id": "camelcase@2.1.0",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\camelcase",
+                  "_dependencies": {},
+                  "devDependencies": {},
+                  "peerDependencies": {}
+                },
+                "lodash.assign": {
+                  "version": "4.0.3",
+                  "overridden": false,
+                  "name": "lodash.assign",
+                  "inBundle": true,
+                  "license": "MIT",
+                  "_id": "lodash.assign@4.0.3",
+                  "extraneous": false,
+                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\lodash.assign",
+                  "_dependencies": {
+                    "lodash.keys": "^4.0.0",
+                    "lodash.rest": "^4.0.0"
+                  },
+                  "devDependencies": {},
+                  "peerDependencies": {},
+                  "dependencies": {
+                    "lodash.keys": {
+                      "version": "4.0.3",
+                      "overridden": false,
+                      "name": "lodash.keys",
+                      "inBundle": true,
+                      "license": "MIT",
+                      "_id": "lodash.keys@4.0.3",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\lodash.keys",
+                      "_dependencies": {},
+                      "devDependencies": {},
+                      "peerDependencies": {}
+                    },
+                    "lodash.rest": {
+                      "version": "4.0.1",
+                      "overridden": false,
+                      "name": "lodash.rest",
+                      "inBundle": true,
+                      "license": "MIT",
+                      "_id": "lodash.rest@4.0.1",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\\node_modules\\bundle-dependencies\\node_modules\\lodash.rest",
+                      "_dependencies": {},
+                      "devDependencies": {},
+                      "peerDependencies": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
