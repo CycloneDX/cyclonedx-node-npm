@@ -60,7 +60,7 @@
   "type": "commonjs",
   "engines": {
     "node": ">=14",
-    "npm": "6 - 8"
+    "npm": "6 - 9"
   },
   "directories": {
     "doc": "docs",
