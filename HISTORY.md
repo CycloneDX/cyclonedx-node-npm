@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Added
-  * Enabled support for _npm_ v9. ([#245] via [#246])
+  * Enabled support for NPM v9. ([#245] via [#246])
 
 [#245]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/245
 [#246]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/246
