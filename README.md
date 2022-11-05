@@ -10,7 +10,7 @@
 
 # cyclonedx-npm
 
-Create [CycloneDX] Software Bill of Materials (SBOM) from  _[npm]_ projects.
+Create [CycloneDX] Software Bill of Materials (SBOM) from _[npm]_ projects.
 
 ## Requirements
 
@@ -124,7 +124,7 @@ See the [LICENSE][license_file] file for the full license.
 [demo_readme]: https://github.com/CycloneDX/cyclonedx-node-npm/blob/main/demo/README.md
 
 [CycloneDX]: https://cyclonedx.org/
-[npm]: http://www.npmjs.com//
+[npm]: http://www.npmjs.com/
 [cyclonedx-library]: https://www.npmjs.com/package/@cyclonedx/cyclonedx-library
 
 [shield_gh-workflow-test]: https://img.shields.io/github/workflow/status/CycloneDX/cyclonedx-node-npm/Node%20CI/main?logo=GitHub&logoColor=white "tests"

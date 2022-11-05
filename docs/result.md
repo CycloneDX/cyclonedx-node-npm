@@ -9,11 +9,11 @@ This information is usually stored in a `package.json` file.
 
 ## Project -> `bom.metadata.component`
 
-TBD
+... to be described
 
 ## Package -> `...component`
 
-TBD
+... to be described
 
 ## Bundled dependencies -> `...component.components`
 
