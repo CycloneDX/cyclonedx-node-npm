@@ -6,7 +6,7 @@ set -e
 
 THIS_DIR="$(dirname "$0")"
 BIN_CDX_N="$(realpath "$THIS_DIR/../bin/cyclonedx-npm-cli.js")"
-npm_execpath="${npm_execpath:-npm}"
+export npm_execpath="${npm_execpath:-$(which npm)}"
 
 for package in $THIS_DIR/*/project/package.json
 do
