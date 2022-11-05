@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.4.0 - 2022-11-05
+
 * Added
   * Enabled support for NPM v9. ([#245] via [#246])
 
@@ -25,7 +27,7 @@ All notable changes to this project will be documented in this file.
 ## 1.2.0 - 2022-10-23
 
 * Changed
-  * The existence of a lock file is no longer enforced, as long as there are other evidence ([#247] via [#248])  
+  * The existence of a lock file is no longer enforced, as long as there are other evidence ([#247] via [#248])
 
 [#247]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/247
 [#248]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/248
@@ -37,7 +39,7 @@ All notable changes to this project will be documented in this file.
 * Fixed
   * Improved usability on Windows ([#161] via [#234])
 * Misc
-  * Improved the error message when a lock files was missing ([#196] via [#231]) 
+  * Improved the error message when a lock files was missing ([#196] via [#231])
 * Build
   * Use _TypeScript_ `v4.8.4` now, was `v4.8.3` (via [#164])
 
