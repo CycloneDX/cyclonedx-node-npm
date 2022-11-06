@@ -44,6 +44,10 @@
       "purl": "pkg:npm/demo-workspaces@0.0.0",
       "properties": [
         {
+          "name": "cdx:npm:package:installPath",
+          "value": ""
+        },
+        {
           "name": "cdx:npm:package:private",
           "value": "true"
         }
@@ -63,7 +67,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-a@0.1.0"
+      "purl": "pkg:npm/my-local-a@0.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:installPath",
+          "value": "node_modules/my-local-a"
+        }
+      ]
     },
     {
       "type": "library",
@@ -77,7 +87,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0"
+      "purl": "pkg:npm/my-local-b-off@0.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:installPath",
+          "value": "node_modules/my-local-b-off"
+        }
+      ]
     },
     {
       "type": "library",
@@ -91,7 +107,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-c@0.23.42"
+      "purl": "pkg:npm/my-local-c@0.23.42",
+      "properties": [
+        {
+          "name": "cdx:npm:package:installPath",
+          "value": "node_modules/my-local-c"
+        }
+      ]
     }
   ],
   "dependencies": [

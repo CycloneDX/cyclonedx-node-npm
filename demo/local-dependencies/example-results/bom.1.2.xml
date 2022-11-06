@@ -5,7 +5,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.4.0</version>
+        <version>1.4.1</version>
       </tool>
     </tools>
     <component type="application" bom-ref="demo-local-deps@0.0.0">

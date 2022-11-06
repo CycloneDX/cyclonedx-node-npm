@@ -8,7 +8,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.4.0"
+        "version": "1.4.1"
       }
     ],
     "component": {
@@ -26,6 +26,10 @@
       ],
       "purl": "pkg:npm/demo-workspaces@0.0.0",
       "properties": [
+        {
+          "name": "cdx:npm:package:installPath",
+          "value": ""
+        },
         {
           "name": "cdx:npm:package:private",
           "value": "true"
@@ -57,6 +61,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:installPath",
+          "value": "node_modules/my-local-a"
+        },
+        {
           "name": "cdx:npm:package:private",
           "value": "true"
         }
@@ -77,6 +85,10 @@
       ],
       "purl": "pkg:npm/my-local-b-off@0.0.0",
       "properties": [
+        {
+          "name": "cdx:npm:package:installPath",
+          "value": "node_modules/my-local-b-off"
+        },
         {
           "name": "cdx:npm:package:private",
           "value": "true"
@@ -105,6 +117,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:installPath",
+          "value": "node_modules/my-local-c"
+        },
         {
           "name": "cdx:npm:package:private",
           "value": "true"

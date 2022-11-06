@@ -44,6 +44,10 @@
       "purl": "pkg:npm/demo-local-deps@0.0.0",
       "properties": [
         {
+          "name": "cdx:npm:package:installPath",
+          "value": ""
+        },
+        {
           "name": "cdx:npm:package:private",
           "value": "true"
         }
@@ -90,6 +94,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:installPath",
+          "value": "node_modules/my-local-a"
+        },
+        {
           "name": "cdx:npm:package:private",
           "value": "true"
         }
@@ -110,6 +118,10 @@
       ],
       "purl": "pkg:npm/my-local-b-off@0.0.0",
       "properties": [
+        {
+          "name": "cdx:npm:package:installPath",
+          "value": "node_modules/my-local-b-off"
+        },
         {
           "name": "cdx:npm:package:private",
           "value": "true"

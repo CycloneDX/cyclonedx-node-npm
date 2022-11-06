@@ -5,7 +5,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.4.0</version>
+        <version>1.4.1</version>
       </tool>
     </tools>
     <component type="application" bom-ref="demo-workspaces@0.0.0">
@@ -19,6 +19,7 @@
       </licenses>
       <purl>pkg:npm/demo-workspaces@0.0.0</purl>
       <properties>
+        <property name="cdx:npm:package:installPath"/>
         <property name="cdx:npm:package:private">true</property>
       </properties>
     </component>
@@ -41,6 +42,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:installPath">node_modules/my-local-a</property>
         <property name="cdx:npm:package:private">true</property>
       </properties>
     </component>
@@ -55,6 +57,7 @@
       </licenses>
       <purl>pkg:npm/my-local-b-off@0.0.0</purl>
       <properties>
+        <property name="cdx:npm:package:installPath">node_modules/my-local-b-off</property>
         <property name="cdx:npm:package:private">true</property>
       </properties>
     </component>
@@ -75,6 +78,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:installPath">node_modules/my-local-c</property>
         <property name="cdx:npm:package:private">true</property>
       </properties>
     </component>
