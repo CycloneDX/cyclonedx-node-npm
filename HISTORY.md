@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.4.1 - 2022-11-06
+
 * Fixed
   * Components' "sha512" hash is properly detected and populated in the SBOM result. ([#302] via [#303]) 
 
