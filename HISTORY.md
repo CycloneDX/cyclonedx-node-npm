@@ -5,9 +5,10 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Fixed
-  * Components' "sha512" hash is properly detected and populated in the SBOM result. ([#]) 
+  * Components' "sha512" hash is properly detected and populated in the SBOM result. ([#302] via [#303]) 
 
-[#]: 
+[#302]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/302
+[#303]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/303
 
 ## 1.4.0 - 2022-11-05
 
