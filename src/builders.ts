@@ -349,9 +349,14 @@ export class BomBuilder {
   }
 
   /**
-   * base64 over 512 bit => 86 chars + 2 chars padding
+   * base64 over 512 bit => 86 chars + 2 chars padding.
+   * base64 alphabet: `A-Za-a+/` and `=` padding
+   * examples:
+   * - sha512-EYuhVinaPQ2QMvF+SXUOxKpwmMp5rZxHQVHhuMfwhdSIjkwX+F8f+R/b0gyvZXc7eGu5qJJgOOmtR2likwgcFg==
+   * - sha512-DXUS22Y57/LAFSg3x7Vi6RNAuLpTXwxB9S2nIA7msBb/Zt8p7XqMwdpdc1IU7CkOQUPgAqR5fWvxuKCbneKGmA==
+   * - sha512-5BejraMXMC+2UjefDvrH0Fo/eLwZRV6859SXRg+FgbhA0R0l6lDqDGAQYhKbXhPN2ofk2kY5sgGyLNL907UXpA==
    */
-  private readonly hashRE_sha512_base64 = /\bsha512-([a-z0-9+/]{86}==)\b/i
+  private readonly hashRE_sha512_base64 = /^sha512-([a-z0-9+/]{86}==)$/i
 
   /**
    * Ignore pattern for `resolved`.
