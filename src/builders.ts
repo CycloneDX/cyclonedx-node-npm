@@ -19,6 +19,8 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
 import { PackageURL } from 'packageurl-js'
+import { relative as relativePathPosix } from 'path/posix'
+import { relative as relativePathWin } from 'path/win32'
 
 import { makeNpmRunner, runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
@@ -208,6 +210,7 @@ export class BomBuilder {
       new DummyComponent(this.metaComponentType, 'RootComponent')
     const allComponents: AllComponents = new Map([[data.path, rootComponent]])
     this.gatherDependencies(allComponents, data, rootComponent.dependencies)
+    this.finalizePathProperties(data.path, allComponents.values())
 
     // endregion all components & dependencies
 
@@ -381,6 +384,11 @@ export class BomBuilder {
 
     // region properties
 
+    if (typeof data.path === 'string') {
+      component.properties.add(
+        new Models.Property(PropertyNames.PackageInstallPath, data.path)
+      )
+    }
     if (isDev) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
@@ -452,6 +460,28 @@ export class BomBuilder {
     }
 
     return purl
+  }
+
+  private finalizePathProperties (rootPath: any, components: IterableIterator<Models.Component>): void {
+    if (typeof rootPath !== 'string' || rootPath === '') {
+      return
+    }
+    // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
+    const [relativePath, dirSep] = rootPath[0] === '/'
+      ? [relativePathPosix, '/']
+      : [relativePathWin, '\\']
+    for (const component of components) {
+      for (const property of component.properties) {
+        if (property.name !== PropertyNames.PackageInstallPath) {
+          continue
+        }
+        if (property.value === '') {
+          component.properties.delete(property)
+          continue
+        }
+        property.value = relativePath(rootPath, property.value).replace(dirSep, '/')
+      }
+    }
   }
 }
 
