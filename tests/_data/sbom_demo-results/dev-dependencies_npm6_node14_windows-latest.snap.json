@@ -58,6 +58,12 @@
       "version": "18.11.9",
       "bom-ref": "@types/node@18.11.9",
       "description": "TypeScript definitions for Node.js",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "091a57db5fe419dce33a916c65291cad730620158c18d2075d70551521fe82091fb7183e5d83f6d131126e1fb316f163dc440e9796f29341d3467d482fa85baa"
+        }
+      ],
       "licenses": [
         {
           "license": {

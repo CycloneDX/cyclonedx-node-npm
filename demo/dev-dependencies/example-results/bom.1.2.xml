@@ -5,7 +5,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.3.0</version>
+        <version>1.4.0</version>
       </tool>
     </tools>
     <component type="application" bom-ref="demo-dev-dependencies@0.0.0">
@@ -26,6 +26,9 @@
       <name>node</name>
       <version>18.7.16</version>
       <description>TypeScript definitions for Node.js</description>
+      <hashes>
+        <hash alg="SHA-512">1101e18b17eefa692a1cc665d51d8ebeebe7e3b3d4c35f1accc24e4f0499afdfdf8731cd197009d266b475ac9155c869ae90a3d0a7352b5c4aa166804d6175aa</hash>
+      </hashes>
       <licenses>
         <license>
           <id>MIT</id>
