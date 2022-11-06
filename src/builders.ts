@@ -350,7 +350,7 @@ export class BomBuilder {
 
   /**
    * base64 over 512 bit => 86 chars + 2 chars padding.
-   * base64 alphabet: `A-Za-a+/` and `=` padding
+   * base64 alphabet: `A-Za-a+/` and `=` for padding
    * examples:
    * - sha512-EYuhVinaPQ2QMvF+SXUOxKpwmMp5rZxHQVHhuMfwhdSIjkwX+F8f+R/b0gyvZXc7eGu5qJJgOOmtR2likwgcFg==
    * - sha512-DXUS22Y57/LAFSg3x7Vi6RNAuLpTXwxB9S2nIA7msBb/Zt8p7XqMwdpdc1IU7CkOQUPgAqR5fWvxuKCbneKGmA==
