@@ -19,8 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
 import { PackageURL } from 'packageurl-js'
-import { relative as relativePathPosix } from 'path/posix'
-import { relative as relativePathWin } from 'path/win32'
+import * as path from 'path'
 
 import { makeNpmRunner, runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
@@ -468,8 +467,8 @@ export class BomBuilder {
     }
     // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
     const [relativePath, dirSep] = rootPath[0] === '/'
-      ? [relativePathPosix, '/']
-      : [relativePathWin, '\\']
+      ? [path.posix.relative, '/']
+      : [path.win32.relative, '\\']
     for (const component of components) {
       for (const property of component.properties) {
         if (property.name !== PropertyNames.PackageInstallPath) {
