@@ -12,6 +12,10 @@
 
 Create [CycloneDX] Software Bill of Materials (SBOM) from _[npm]_ projects.
 
+The resulting SBOM documents follow [official specifications and standards](https://github.com/CycloneDX/specification), 
+and might have properties following [`cdx:npm` Namespace Taxonomy](https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md)
+.
+
 ## Requirements
 
 * `node` >= `14`
