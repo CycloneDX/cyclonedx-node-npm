@@ -19,7 +19,7 @@
       </licenses>
       <purl>pkg:npm/demo-dev-dependencies@0.0.0</purl>
       <properties>
-        <property name="cdx:npm:package:installPath"/>
+        <property name="cdx:npm:package:path"/>
         <property name="cdx:npm:package:private">true</property>
       </properties>
     </component>
@@ -55,7 +55,7 @@
       </externalReferences>
       <properties>
         <property name="cdx:npm:package:development">true</property>
-        <property name="cdx:npm:package:installPath">node_modules/@types/node</property>
+        <property name="cdx:npm:package:path">node_modules/@types/node</property>
       </properties>
     </component>
   </components>

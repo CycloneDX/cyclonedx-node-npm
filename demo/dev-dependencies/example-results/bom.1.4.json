@@ -44,7 +44,7 @@
       "purl": "pkg:npm/demo-dev-dependencies@0.0.0",
       "properties": [
         {
-          "name": "cdx:npm:package:installPath",
+          "name": "cdx:npm:package:path",
           "value": ""
         },
         {
@@ -99,7 +99,7 @@
           "value": "true"
         },
         {
-          "name": "cdx:npm:package:installPath",
+          "name": "cdx:npm:package:path",
           "value": "node_modules/@types/node"
         }
       ]

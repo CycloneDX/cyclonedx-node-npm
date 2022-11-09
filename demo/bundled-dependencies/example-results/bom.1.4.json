@@ -44,7 +44,7 @@
       "purl": "pkg:npm/demo-bundled-deps@0.0.0",
       "properties": [
         {
-          "name": "cdx:npm:package:installPath",
+          "name": "cdx:npm:package:path",
           "value": ""
         },
         {
@@ -90,7 +90,7 @@
       ],
       "properties": [
         {
-          "name": "cdx:npm:package:installPath",
+          "name": "cdx:npm:package:path",
           "value": "node_modules/bundle-dependencies"
         }
       ],
@@ -138,7 +138,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/ansi-regex"
             }
           ]
@@ -186,7 +186,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/builtin-modules"
             }
           ]
@@ -234,7 +234,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/camelcase"
             }
           ]
@@ -282,7 +282,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/cliui"
             }
           ]
@@ -330,7 +330,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/code-point-at"
             }
           ]
@@ -378,7 +378,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/decamelize"
             }
           ]
@@ -425,7 +425,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/error-ex"
             }
           ]
@@ -473,7 +473,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/escape-string-regexp"
             }
           ]
@@ -521,7 +521,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/find-up"
             }
           ]
@@ -568,7 +568,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/graceful-fs"
             }
           ]
@@ -616,7 +616,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/hosted-git-info"
             }
           ]
@@ -664,7 +664,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/invert-kv"
             }
           ]
@@ -712,7 +712,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/is-arrayish"
             }
           ]
@@ -760,7 +760,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/is-builtin-module"
             }
           ]
@@ -808,7 +808,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/is-fullwidth-code-point"
             }
           ]
@@ -856,7 +856,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/is-utf8"
             }
           ]
@@ -904,7 +904,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/lcid"
             }
           ]
@@ -952,7 +952,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/load-json-file"
             }
           ]
@@ -1000,7 +1000,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/lodash.assign"
             }
           ]
@@ -1048,7 +1048,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/lodash.keys"
             }
           ]
@@ -1096,7 +1096,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/lodash.rest"
             }
           ]
@@ -1144,7 +1144,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/normalize-package-data"
             }
           ]
@@ -1192,7 +1192,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/number-is-nan"
             }
           ]
@@ -1240,7 +1240,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/object-assign"
             }
           ]
@@ -1288,7 +1288,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/os-locale"
             }
           ]
@@ -1336,7 +1336,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/parse-json"
             }
           ]
@@ -1384,7 +1384,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/path-exists"
             }
           ]
@@ -1432,7 +1432,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/path-type"
             }
           ]
@@ -1480,7 +1480,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/pify"
             }
           ]
@@ -1528,7 +1528,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/pinkie-promise"
             }
           ]
@@ -1576,7 +1576,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/pinkie"
             }
           ]
@@ -1624,7 +1624,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/pkg-conf"
             }
           ]
@@ -1672,7 +1672,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/read-pkg-up"
             }
           ]
@@ -1720,7 +1720,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/read-pkg"
             }
           ]
@@ -1768,7 +1768,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/require-main-filename"
             }
           ]
@@ -1815,7 +1815,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/semver"
             }
           ]
@@ -1863,7 +1863,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/spdx-correct"
             }
           ]
@@ -1911,7 +1911,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/spdx-exceptions"
             }
           ]
@@ -1957,7 +1957,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/spdx-expression-parse"
             }
           ]
@@ -2005,7 +2005,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/spdx-license-ids"
             }
           ]
@@ -2053,7 +2053,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/string-width"
             }
           ]
@@ -2101,7 +2101,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/strip-ansi"
             }
           ]
@@ -2149,7 +2149,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/strip-bom"
             }
           ]
@@ -2197,7 +2197,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/symbol"
             }
           ]
@@ -2245,7 +2245,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/validate-npm-package-license"
             }
           ]
@@ -2293,7 +2293,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/window-size"
             }
           ]
@@ -2341,7 +2341,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/wrap-ansi"
             }
           ]
@@ -2389,7 +2389,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/y18n"
             }
           ]
@@ -2437,7 +2437,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/yargs-parser"
             }
           ]
@@ -2484,7 +2484,7 @@
               "value": "true"
             },
             {
-              "name": "cdx:npm:package:installPath",
+              "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/yargs"
             }
           ]

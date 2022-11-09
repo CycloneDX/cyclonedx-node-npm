@@ -44,7 +44,7 @@
       "purl": "pkg:npm/demo-workspaces@0.0.0",
       "properties": [
         {
-          "name": "cdx:npm:package:installPath",
+          "name": "cdx:npm:package:path",
           "value": ""
         },
         {
@@ -78,7 +78,7 @@
       ],
       "properties": [
         {
-          "name": "cdx:npm:package:installPath",
+          "name": "cdx:npm:package:path",
           "value": "node_modules/my-local-a"
         },
         {
@@ -103,7 +103,7 @@
       "purl": "pkg:npm/my-local-b-off@0.0.0",
       "properties": [
         {
-          "name": "cdx:npm:package:installPath",
+          "name": "cdx:npm:package:path",
           "value": "node_modules/my-local-b-off"
         },
         {
@@ -135,7 +135,7 @@
       ],
       "properties": [
         {
-          "name": "cdx:npm:package:installPath",
+          "name": "cdx:npm:package:path",
           "value": "node_modules/my-local-c"
         },
         {
