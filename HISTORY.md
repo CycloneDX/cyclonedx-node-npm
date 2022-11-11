@@ -4,10 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Added
+  * new CLI option `--deduplicate-components` ... write something ([#306] via [#309])
 * Misc
   * Added test for flattened results (via [#312])
 
 [#312]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/312
+
+[#306]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/306
+[#309]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/309
 
 ## 1.6.0 - 2022-11-12
 

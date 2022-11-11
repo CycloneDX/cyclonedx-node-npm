@@ -35,6 +35,7 @@ interface BomBuilderOptions {
   omitDependencyTypes?: Iterable<OmittableDependencyTypes>
   reproducible?: BomBuilder['reproducible']
   flattenComponents?: BomBuilder['flattenComponents']
+  deduplicateComponents?: BomBuilder['deduplicateComponents']
   shortPURLs?: BomBuilder['shortPURLs']
 }
 
@@ -54,6 +55,7 @@ export class BomBuilder {
   omitDependencyTypes: Set<OmittableDependencyTypes>
   reproducible: boolean
   flattenComponents: boolean
+  deduplicateComponents: boolean
   shortPURLs: boolean
 
   console: Console
@@ -77,6 +79,7 @@ export class BomBuilder {
     this.omitDependencyTypes = new Set(options.omitDependencyTypes ?? [])
     this.reproducible = options.reproducible ?? false
     this.flattenComponents = options.flattenComponents ?? false
+    this.deduplicateComponents = options.deduplicateComponents ?? false
     this.shortPURLs = options.shortPURLs ?? false
 
     this.console = console_
@@ -250,6 +253,9 @@ export class BomBuilder {
         if (component !== rootComponent) {
           bom.components.add(component)
         }
+      }
+      if (this.deduplicateComponents) {
+        // TODO
       }
     }
 
