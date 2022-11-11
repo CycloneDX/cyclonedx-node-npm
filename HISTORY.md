@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.5.0 - 2022-11-11
+
 * Added
   * Components' install path/location will be visible in the SBOM result ([#305] via [#308])
 
