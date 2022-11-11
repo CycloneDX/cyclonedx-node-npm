@@ -8,7 +8,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.4.0",
+        "version": "1.4.1",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -44,6 +44,10 @@
       "purl": "pkg:npm/demo-local-deps@0.0.0",
       "properties": [
         {
+          "name": "cdx:npm:package:path",
+          "value": ""
+        },
+        {
           "name": "cdx:npm:package:private",
           "value": "true"
         }
@@ -74,6 +78,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/my-local-a"
+        },
+        {
           "name": "cdx:npm:package:private",
           "value": "true"
         }
@@ -95,6 +103,10 @@
       "purl": "pkg:npm/my-local-b-off@0.0.0",
       "properties": [
         {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/my-local-b-off"
+        },
+        {
           "name": "cdx:npm:package:private",
           "value": "true"
         }
@@ -115,6 +127,10 @@
       ],
       "purl": "pkg:npm/my-noname@0.0.0",
       "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/my-noname"
+        },
         {
           "name": "cdx:npm:package:private",
           "value": "true"

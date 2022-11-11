@@ -4,10 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Added
+  * Components' install path/location will be visible in the SBOM result ([#305] via [#308])
+
+[#305]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/305
+[#308]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/308
+
 ## 1.4.1 - 2022-11-06
 
 * Fixed
-  * Components' "sha512" hash is properly detected and populated in the SBOM result. ([#302] via [#303]) 
+  * Components' "sha512" hash is properly detected and populated in the SBOM result ([#302] via [#303]) 
 
 [#302]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/302
 [#303]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/303
@@ -15,7 +21,7 @@ All notable changes to this project will be documented in this file.
 ## 1.4.0 - 2022-11-05
 
 * Added
-  * Enabled support for NPM v9. ([#245] via [#246])
+  * Enabled support for NPM v9 ([#245] via [#246])
 
 [#245]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/245
 [#246]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/246
@@ -23,10 +29,10 @@ All notable changes to this project will be documented in this file.
 ## 1.3.0 - 2022-10-30
 
 * Fixed
-  * Improved the NPM compatibility with `--omit` options. ([#254] via [#259])
+  * Improved the NPM compatibility with `--omit` options ([#254] via [#259])
   * In case of an error, the exit code is guaranteed to be non-zero (via [#260])
 * Misc
-  * Added more debug output regarding NPM version detection. (via [#259])
+  * Added more debug output regarding NPM version detection (via [#259])
 
 [#254]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/254
 [#259]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/259

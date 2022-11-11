@@ -18,16 +18,21 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 /**
+ * CDX properties' names - specific to this very tool.
  * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md npm property taxonomy}
  */
-
 export const enum PropertyNames {
   PackageBundled = 'cdx:npm:package:bundled',
   PackageExtraneous = 'cdx:npm:package:extraneous',
   PackagePrivate = 'cdx:npm:package:private',
   PackageDevelopment = 'cdx:npm:package:development',
+  PackageInstallPath = 'cdx:npm:package:path',
 }
 
+/**
+ * CDX properties' values' boolean representation - specific to this very tool.
+ * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md npm property taxonomy}
+ */
 export const enum PropertyValueBool {
   True = 'true',
   False = 'false',
