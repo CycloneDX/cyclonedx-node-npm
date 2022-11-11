@@ -37,99 +37,99 @@ Example:
   "version": 1,
   "metadata": {
     "component": {
-      "bom-ref": "acme/my-project",
+      "bom-ref": "@acme/my-project",
       "type": "application",
-      "group": "acme",
+      "group": "@acme",
       "name": "my-project",
-      "purl": "pkg:npm/acme/my-project",
+      "purl": "pkg:npm/%40acme/my-project",
       "components": [
         {
-          "bom-ref": "acme/my-project#acme/my-bundled-package",
+          "bom-ref": "@acme/my-project|@acme/my-bundled-package@1",
           "type": "library",
-          "group": "acme",
+          "group": "@acme",
           "name": "my-bundled-package",
           "version": "1",
-          "purl": "pkg:npm/acme/my-bundled-package@1"
+          "purl": "pkg:npm/%40acme/my-bundled-package@1"
         },
         {
-          "bom-ref": "acme/my-project#foo/package-A",
+          "bom-ref": "@acme/my-project|@foo/package-A@1",
           "type": "library",
-          "group": "foo",
+          "group": "@foo",
           "name": "package-A",
           "version": "1",
-          "purl": "pkg:npm/foo/package-A@1"
+          "purl": "pkg:npm/%40foo/package-A@1"
         }
       ]
     }
   },
   "components": [
     {
-      "bom-ref": "bar/package-with-bundled-deps",
+      "bom-ref": "@bar/package-with-bundled-deps@1",
       "type": "library",
-      "group": "bar",
+      "group": "@bar",
       "name": "package-with-bundled-deps",
       "version": "1",
-      "purl": "pkg:npm/bar/package-with-bundled-deps@1",
+      "purl": "pkg:npm/%40bar/package-with-bundled-deps@1",
       "components": [
         {
-          "bom-ref": "bar/package-with-bundled-deps#baz/package-B",
+          "bom-ref": "@bar/package-with-bundled-deps@1|@baz/package-B@1",
           "type": "library",
-          "group": "baz",
+          "group": "@baz",
           "name": "package-B",
           "version": "1",
-          "purl": "pkg:npm/baz/package-B@1"
+          "purl": "pkg:npm/%40baz/package-B@1"
         },
         {
-          "bom-ref": "bar/package-with-bundled-deps#bundled-internal-package",
+          "bom-ref": "@bar/package-with-bundled-deps@1|bundled-internal-package",
           "type": "library",
           "name": "bundled-internal-package",
-          "purl": "pkg:npm/bundled-internal-package"
+          "purl": "pkg:npm/%40bundled-internal-package"
         }
       ]
     },
     {
-      "bom-ref": "foo/package-A",
+      "bom-ref": "@foo/package-A@3",
       "type": "library",
-      "group": "foo",
+      "group": "@foo",
       "name": "package-A",
       "version": "3",
-      "purl": "pkg:npm/foo/package-A@3"
+      "purl": "pkg:npm/%40foo/package-A@3"
     }
   ],
   "dependencies": [
     {
-      "ref": "my-project",
+      "ref": "@acme/my-project",
       "dependsOn": [
-        "acme/my-project#acme/my-bundled-package",
-        "acme/my-project#foo/package-A",
-        "bar/package-with-bundled-deps"
+        "@acme/my-project|@acme/my-bundled-package@1",
+        "@acme/my-project|@foo/package-A@1",
+        "@bar/package-with-bundled-deps@1"
       ]
     },
     {
-      "ref": "acme/my-project#acme/my-bundled-package",
-      "dependsOn": ["acme/my-project#foo/package-A"]
+      "ref": "@acme/my-project|@acme/my-bundled-package@1",
+      "dependsOn": ["@acme/my-project|@foo/package-A@1"]
     },
     {
-      "ref": "acme/my-project#foo/package-A"
+      "ref": "@acme/my-project|@foo/package-A@1"
     },
     {
-      "ref": "bar/package-with-bundled-deps",
+      "ref": "@bar/package-with-bundled-deps@1",
       "dependsOn": [
-        "bar/package-with-bundled-deps#bundled-internal-package",
-        "foo/package-A"
+        "@bar/package-with-bundled-deps@1|bundled-internal-package",
+        "@acme/my-project|@foo/package-A@1"
       ]
     },
     {
-      "ref": "bar/package-with-bundled-deps#bundled-internal-package",
+      "ref": "@bar/package-with-bundled-deps@1|bundled-internal-package",
       "dependsOn": [
-        "bar/package-with-bundled-deps#baz/package-B"
+        "@bar/package-with-bundled-deps@1|@baz/package-B@1"
       ]
     },
     {
-      "ref": "bar/package-with-bundled-deps#baz/package-B"
+      "ref": "@bar/package-with-bundled-deps@1|@baz/package-B@1"
     },
     {
-      "ref": "foo/package-A"
+      "ref": "@foo/package-A@3"
     }
   ]
 }
