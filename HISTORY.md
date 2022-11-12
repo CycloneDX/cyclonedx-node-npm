@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Added
+  * When CLI option `--flatten-components=true` is set, then the property [`cdx:npm:package:bundled`](https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md) might be added ([#311] via [#310])
+* Misc
+  * Added demos for flattened results (via [#310]) 
+
+[#310]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/310
+[#311]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/311
+
 ## 1.5.0 - 2022-11-11
 
 * Added
