@@ -246,12 +246,6 @@ export class BomBuilder {
 
     if (this.flattenComponents) {
       for (const component of allComponents.values()) {
-        component.properties.forEach(p => {
-          if (p.name === PropertyNames.PackageBundled) {
-            // bundle-markers have no value when components are flattened, because it is impossible to identify where a component was bundled into.
-            component.properties.delete(p)
-          }
-        })
         component.components.clear()
         if (component !== rootComponent) {
           bom.components.add(component)
@@ -404,7 +398,7 @@ export class BomBuilder {
       )
     }
     // older npm-ls versions (v6) hide properties behind a `_`
-    if (!this.flattenComponents && (data.inBundle ?? data._inBundle) === true) {
+    if ((data.inBundle ?? data._inBundle) === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
       )
