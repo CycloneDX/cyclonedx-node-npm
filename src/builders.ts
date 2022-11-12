@@ -192,7 +192,7 @@ export class BomBuilder {
     try {
       return JSON.parse(npmLsReturns.toString())
     } catch (jsonParseError) {
-      // @ts-expect-error TS2554
+      /* @ts-expect-error TS2554 */
       throw new Error('failed to parse npm-ls response', { cause: jsonParseError })
     }
   }
