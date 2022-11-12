@@ -211,57 +211,66 @@ describe('cli.run()', () => {
     const tmpRootRun = join(tmpRoot, 'with-prepared')
     mkdirSync(tmpRootRun)
 
-    const cases = indexNpmLsDemoData()
-    test.each(cases)('$subject npm$npm node$node $os', (dd) => {
-      const expectedOutSnap = resolve(demoResultsRoot, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
+    const useCases = [
+      { subject: 'bare', args: [] },
+      { subject: 'flatten-components', args: ['--flatten-components'] }
+    ]
+    const demoCases = indexNpmLsDemoData()
+    describe.each(useCases)('$subject', (ud) => {
+      mkdirSync(join(tmpRootRun, ud.subject))
 
-      const logFileBase = join(tmpRootRun, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
+      test.each(demoCases)('$subject npm$npm node$node $os', (dd) => {
+        const expectedOutSnap = resolve(demoResultsRoot, ud.subject, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
+        const logFileBase = join(tmpRootRun, ud.subject, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
 
-      const outFile = `${logFileBase}.out`
-      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
+        const outFile = `${logFileBase}.out`
+        const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
 
-      const errFile = `${logFileBase}.err`
-      const stderr = createWriteStream(errFile) // not perfect, but works
+        const errFile = `${logFileBase}.err`
+        const stderr = createWriteStream(errFile) // not perfect, but works
 
-      const mockProcess = {
-        stdout,
-        stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
-        execPath: process.execPath,
-        argv0: process.argv0,
-        argv: [
-          process.argv[0],
-          'dummy_process',
-          // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-          '--output-reproducible',
-          '--spec-version', '1.4',
-          '--output-format', 'JSON',
-          // prevent file interaction in this synthetic scenario - they would not exist anyway
-          '--package-lock-only',
-          '--',
-          // just some dummy project
-          join('with-lockfile', 'package.json')
-        ],
-        env: {
-          ...process.env,
-          CT_VERSION: `${dd.npm}.99.0`,
-          CT_SUBJECT: dd.subject,
-          CT_NPM: dd.npm,
-          CT_NODE: dd.node,
-          CT_OS: dd.os,
-          npm_execpath: npmLsReplacement.demoResults
+        const mockProcess = {
+          stdout,
+          stderr,
+          cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
+          execPath: process.execPath,
+          argv0: process.argv0,
+          argv: [
+            process.argv[0],
+            'dummy_process',
+            '--output-reproducible',
+            // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
+            // just use json with the latest most feature-rich version.
+            '--spec-version', '1.4',
+            '--output-format', 'JSON',
+            // prevent file interaction in this synthetic scenario - they would not exist anyway
+            '--package-lock-only',
+            // case-specific args
+            ...ud.args,
+            '--',
+            // just some dummy project
+            join('with-lockfile', 'package.json')
+          ],
+          env: {
+            ...process.env,
+            CT_VERSION: `${dd.npm}.99.0`,
+            CT_SUBJECT: dd.subject,
+            CT_NPM: dd.npm,
+            CT_NODE: dd.node,
+            CT_OS: dd.os,
+            npm_execpath: npmLsReplacement.demoResults
+          }
         }
-      }
 
-      try {
-        cli.run(mockProcess)
-      } finally {
-        closeSync(stdout.fd)
-        stderr.close()
-      }
+        try {
+          cli.run(mockProcess)
+        } finally {
+          closeSync(stdout.fd)
+          stderr.close()
+        }
 
-      const toolIndent = '        '
-      const actualOutput = readFileSync(outFile, 'utf8').replace(
+        const toolIndent = '        '
+        const actualOutput = readFileSync(outFile, 'utf8').replace(
           // replace metadata.tools.version
           `${toolIndent}"vendor": "@cyclonedx",\n` +
           `${toolIndent}"name": "cyclonedx-npm",\n` +
@@ -269,28 +278,28 @@ describe('cli.run()', () => {
           `${toolIndent}"vendor": "@cyclonedx",\n` +
           `${toolIndent}"name": "cyclonedx-npm",\n` +
           `${toolIndent}"version": "thisVersion-testing",\n`
-      )
+        )
 
-      if (!existsSync(expectedOutSnap)) {
-        writeFileSync(expectedOutSnap, actualOutput, 'utf8')
-      }
+        if (!existsSync(expectedOutSnap)) {
+          writeFileSync(expectedOutSnap, actualOutput, 'utf8')
+        }
 
-      expect(actualOutput).toEqual(
-        readFileSync(expectedOutSnap, 'utf8'),
+        expect(actualOutput).toEqual(
+          readFileSync(expectedOutSnap, 'utf8'),
           `${outFile} should equal ${expectedOutSnap}`
-      )
+        )
+      })
     })
   })
 
   test('suppressed error on non-zero exit', () => {
     const dd = { subject: 'dev-dependencies', npm: '8', node: '16', os: 'ubuntu-latest' }
 
-    const expectedOutSnap = resolve(demoResultsRoot, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
-    const expectedExitCode = 1 + Math.floor(254 * Math.random())
+    mkdirSync(join(tmpRoot, 'suppressed-error-on-non-zero-exit'))
+    const expectedOutSnap = resolve(demoResultsRoot, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
+    const logFileBase = join(tmpRoot, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
 
-    const tmpRootRun = join(tmpRoot, 'suppressed-error-on-non-zero-exit')
-    mkdirSync(tmpRootRun)
-    const logFileBase = join(tmpRootRun, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
+    const expectedExitCode = 1 + Math.floor(254 * Math.random())
 
     const outFile = `${logFileBase}.out`
     const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works

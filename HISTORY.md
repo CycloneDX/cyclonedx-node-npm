@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Misc
+  * Added test for flattened results (via [#310])
+
 ## 1.6.0 - 2022-11-12
 
 * Added
