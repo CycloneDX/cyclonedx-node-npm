@@ -83,9 +83,10 @@ Options:
                             (can be set multiple times)
                             (choices: "dev", "optional", "peer", default: "dev" if the NODE_ENV environment variable is set to "production", otherwise empty)
   --flatten-components      Whether to flatten the components.
-                            Enabling this feature means the actual nesting of node packages is not represented in the SBOM result.
+                            Enabling this feature means the actual nesting of node packages is not represented in the SBOM result, which causes a massive information loss.
                             (default: false)
   --deduplicate-components  Whether to artificially de-duplicate the node packages.
+                            Enabling this feature means the actual multiple/parallel installed instances of a packages are displayed as one component, which causes a massive information loss.
                             Enabling this feature implies option "--flatten-components=true"
                             (default: false)
   --short-PURLs             Omit all qualifiers from PackageURLs.

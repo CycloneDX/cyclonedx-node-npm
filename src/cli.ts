@@ -87,12 +87,13 @@ function makeCommand (process: NodeJS.Process): Command {
     new Option(
       '--flatten-components',
       'Whether to flatten the components.\n' +
-      'Enabling this feature means the actual nesting of node packages is not represented in the SBOM result.'
+      'Enabling this feature means the actual nesting of node packages is not represented in the SBOM result, which causes a massive information loss.'
     ).default(false)
   ).addOption(
     new Option(
       '--deduplicate-components',
       'Whether to artificially de-duplicate the node packages.\n' +
+      'Enabling this feature means the actual multiple/parallel installed instances of a packages are displayed as one component, which causes a massive information loss.\n' +
       'Enabling this feature implies option "--flatten-components=true"'
     ).default(false)
   ).addOption(
