@@ -5,7 +5,9 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Misc
-  * Added test for flattened results (via [#310])
+  * Added test for flattened results (via [#312])
+
+[#312]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/312
 
 ## 1.6.0 - 2022-11-12
 
