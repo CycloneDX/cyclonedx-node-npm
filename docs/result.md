@@ -25,7 +25,10 @@ This results in a bundle where the project itself and all the `bundleDependencie
 When rendering a CycloneDX document:
 
 * `bundleDependencies` should be rendered as subcomponents of a `component`.
+* `bundleDependencies` should be rendered as component with property `cdx:npm:package:path = true`.
 * `bundleDependencies` should be treated as regular `dependencies`.
+
+Flattening subcomponents should not be an issue, as long as every component has the property `cdx:npm:package:path` set.
 
 Example:
 
@@ -47,48 +50,46 @@ Example:
           "name": "cdx:npm:package:path",
           "value": ""
         }
-      ],
-      "components": [
-        {
-          "bom-ref": "@acme/my-project|@acme/my-bundled-package@1",
-          "type": "library",
-          "group": "@acme",
-          "name": "my-bundled-package",
-          "version": "1",
-          "purl": "pkg:npm/%40acme/my-bundled-package@1",
-          "properties": [
-            {
-              "name": "cdx:npm:package:bundled",
-              "value": "true"
-            },
-            {
-              "name": "cdx:npm:package:path",
-              "value": "node_modules/@acme/my-bundled-package"
-            }
-          ]
-        },
-        {
-          "bom-ref": "@acme/my-project|@foo/package-A@1",
-          "type": "library",
-          "group": "@foo",
-          "name": "package-A",
-          "version": "1",
-          "purl": "pkg:npm/%40foo/package-A@1",
-          "properties": [
-            {
-              "name": "cdx:npm:package:bundled",
-              "value": "true"
-            },
-            {
-              "name": "cdx:npm:package:path",
-              "value": "node_modules/@foo/package-A"
-            }
-          ]
-        }
       ]
     }
   },
   "components": [
+    {
+      "bom-ref": "@acme/my-project|@acme/my-bundled-package@1",
+      "type": "library",
+      "group": "@acme",
+      "name": "my-bundled-package",
+      "version": "1",
+      "purl": "pkg:npm/%40acme/my-bundled-package@1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@acme/my-bundled-package"
+        }
+      ]
+    },
+    {
+      "bom-ref": "@acme/my-project|@foo/package-A@1",
+      "type": "library",
+      "group": "@foo",
+      "name": "package-A",
+      "version": "1",
+      "purl": "pkg:npm/%40foo/package-A@1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@foo/package-A"
+        }
+      ]
+    },
     {
       "bom-ref": "@bar/package-with-bundled-deps@1",
       "type": "library",
