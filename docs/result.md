@@ -47,6 +47,7 @@ c) both sets of all direct and transitive edges form equal complete sub-graphs f
 ### Examples and Visualisation 
 
 #### dependency tree
+
 ```mermaid
 graph TB
     R  --> A
@@ -63,7 +64,8 @@ graph TB
     D2((strip-ansi<br/>7.0.1))
 ```
 
-#### the file-system tree
+#### the corresponding file-system tree
+
 ```text
 application
 |- node_modules
@@ -78,7 +80,8 @@ application
    |- ansi-regex
 ```
 
-#### module resolution graph
+#### the corresponding module resolution graph
+
 ```mermaid
 graph TB
     R  --> A
@@ -89,8 +92,10 @@ graph TB
     C  --- A
     A  --> D1
     B  --> D2
+    D1 --> A
     D1 --> B
     D2 --> A
+    D2 --> B
     D1 --> C
     D2 --> C
     R((application))
@@ -101,7 +106,7 @@ graph TB
     D2((strip-ansi<br/>7.0.1))
 ```
 
-#### CycloneDX SBOM
+#### the resulting CycloneDX SBOM
 
 ... to be described
 
