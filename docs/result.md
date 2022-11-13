@@ -4,7 +4,7 @@ This document will describe, how certain SBOM results should be deducted.
 
 ## Preamble 
 
-### Basics
+### _NodeJS_ Basics
 
 A package might have a name, a version, and dependencies.  
 This information is usually stored in a `package.json` file.
@@ -12,12 +12,12 @@ This information is usually stored in a `package.json` file.
 A package might have submodules or subpackages.  
 These are usually stored in a `node_modules` folder next to the `package.json`.
 
-### How node's module/package resolution works
+### How _NodeJS_'s module/package resolution works
 
-_Node_'s module/package system is file-system based. It works regardless of package dependencies.  
+_NodeJS_'s module/package system is file-system based. It works regardless of package dependencies.  
 When code in package `foo` tries to use/require/access code from a different package "bar",
-then _node_ will look in `foo`'s own/direct `node_modules` folder. 
-If it did not find any "bar" there, then node traverses all folders upwards and does the same lookup there,
+then _NodeJS_ will look in `foo`'s own/direct `node_modules` folder. 
+If it did not find any "bar" there, then NodeJS traverses all folders upwards and does the same lookup there,
 until it finds any "bar".  
 This file-based loading behavior happens regardless of components' "dependency graph"
 
@@ -35,7 +35,7 @@ as their position in the global module-resolution-tree is different and therefor
 to have different dependencies in the first place.  
 So two modules with equal file content are never the same module.
 
-Imagine each module as a node in a directed graph.  
+Imagine each NodeJS-module as a node in a directed graph.  
 Each node has a set of properties. Properties represent file-content(checksums), module-name, and so on.
 A directed edge in this graph represents module access in terms of node's module-resolution-system. Therefore, the graph is not implicit.
 This graph is per definition in the format of a directed tree.  
@@ -44,18 +44,13 @@ a) both sets of node properties are equal, and
 b) both sets of all direct and transitive edges form equal complete sub-graphs from tree-root to that node, and
 c) both sets of all direct and transitive edges form equal complete sub-graphs from that node to each accessible leaf.
 
-#### Examples and Visualisation 
+### Examples and Visualisation 
 
-(reminder: not dependency-graphs, but a module-resolution-graph)
-
+#### dependency tree
 ```mermaid
-graph LR
+graph TB
     R  --> A
     R  --> B
-    R  --> C
-    A  --- B
-    B  --- C
-    C  --- A
     A  --> D1
     B  --> D2
     D1 --> C
@@ -68,13 +63,57 @@ graph LR
     D2((strip-ansi<br/>7.0.1))
 ```
 
-### What NPM does about it
+#### the file-system tree
+```text
+application
+|- node_modules
+   |- some-module
+   |  |- node_modules
+   |     |- strip-ansi
+   |
+   |- other-module
+   |  |- node_modules
+   |     |- strip-ansi
+   |
+   |- ansi-regex
+```
 
-NPM does these needed graph de-duplications internally already when it generates the affective module layout in the file system.
+#### module resolution graph
+```mermaid
+graph TB
+    R  --> A
+    R  --> B
+    R  --> C
+    A  --- B
+    B  --- C
+    C  --- A
+    A  --> D1
+    B  --> D2
+    D1 --> B
+    D2 --> A
+    D1 --> C
+    D2 --> C
+    R((application))
+    A((some-module))
+    B((other-module))
+    C((ansi-regex<br/>6.0.1))
+    D1((strip-ansi<br/>7.0.0))
+    D2((strip-ansi<br/>7.0.1))
+```
+
+#### CycloneDX SBOM
+
+... to be described
+
+### De-duplication
+
+NPM does the needed graph de-duplications internally already when it generates the affective module layout in the file system.
 This makes additional after-the-fact deduplication redundant (and mere unnecessary).  
 
 See [Milestone: after-the-fact component deduplication](https://github.com/CycloneDX/cyclonedx-node-npm/milestone/2)  
 See [Discussion: describe how component de-duplication works](https://github.com/CycloneDX/cyclonedx-node-npm/discussions/307)  
+
+----
 
 ## Project -> `bom.metadata.component`
 
