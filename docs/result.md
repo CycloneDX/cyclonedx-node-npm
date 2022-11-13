@@ -111,7 +111,7 @@ NPM does the needed graph de-duplications internally already when it generates t
 This makes additional after-the-fact deduplication redundant.
 
 All additional logic how module de-deduplication could be done will come to the conclusion that it is invalid per definition,
-due to the rules of graph identity that apply.
+due to the previously described rules of graph/node identity that applies here.
 
 See [Milestone: after-the-fact component deduplication](https://github.com/CycloneDX/cyclonedx-node-npm/milestone/2)  
 See [Discussion: describe how component de-duplication works](https://github.com/CycloneDX/cyclonedx-node-npm/discussions/307)  
