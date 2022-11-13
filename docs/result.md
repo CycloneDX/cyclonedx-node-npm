@@ -70,7 +70,7 @@ graph LR
 
 ### What NPM does about it
 
-NPM does these needed graph de-duplications internally already when it generates the affective module layout.
+NPM does these needed graph de-duplications internally already when it generates the affective module layout in the file system.
 This makes additional after-the-fact deduplication redundant (and mere unnecessary).  
 
 See [Milestone: after-the-fact component deduplication](https://github.com/CycloneDX/cyclonedx-node-npm/milestone/2)  
