@@ -8,7 +8,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.4.1"
+        "version": "1.6.0"
       }
     ],
     "component": {
@@ -16,7 +16,7 @@
       "name": "demo-local-deps",
       "version": "0.0.0",
       "bom-ref": "demo-local-deps@0.0.0",
-      "description": "demo: demo-local-deps -- showcase how local deps look like",
+      "description": "demo: demo-local-deps -- showcase how local dependencies look like",
       "licenses": [
         {
           "license": {
@@ -72,9 +72,9 @@
     },
     {
       "type": "library",
-      "name": "my-local-b-off",
+      "name": "my-local-b",
       "version": "0.0.0",
-      "bom-ref": "my-local-b-off@0.0.0",
+      "bom-ref": "my-local-b@0.0.0",
       "description": "demo: my-local-b-off - a package with a different name than its dir",
       "licenses": [
         {
@@ -83,7 +83,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0",
+      "purl": "pkg:npm/my-local-b@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:path",
@@ -132,11 +132,11 @@
     {
       "ref": "my-local-a@0.0.0",
       "dependsOn": [
-        "my-local-b-off@0.0.0"
+        "my-local-b@0.0.0"
       ]
     },
     {
-      "ref": "my-local-b-off@0.0.0"
+      "ref": "my-local-b@0.0.0"
     },
     {
       "ref": "my-noname@0.0.0"

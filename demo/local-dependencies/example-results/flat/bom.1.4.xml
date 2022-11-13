@@ -5,7 +5,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.4.1</version>
+        <version>1.6.0</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
@@ -25,7 +25,7 @@
     <component type="application" bom-ref="demo-local-deps@0.0.0">
       <name>demo-local-deps</name>
       <version>0.0.0</version>
-      <description>demo: demo-local-deps -- showcase how local deps look like</description>
+      <description>demo: demo-local-deps -- showcase how local dependencies look like</description>
       <licenses>
         <license>
           <id>Apache-2.0</id>
@@ -60,8 +60,8 @@
         <property name="cdx:npm:package:private">true</property>
       </properties>
     </component>
-    <component type="library" bom-ref="my-local-b-off@0.0.0">
-      <name>my-local-b-off</name>
+    <component type="library" bom-ref="my-local-b@0.0.0">
+      <name>my-local-b</name>
       <version>0.0.0</version>
       <description>demo: my-local-b-off - a package with a different name than its dir</description>
       <licenses>
@@ -69,7 +69,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-b-off@0.0.0</purl>
+      <purl>pkg:npm/my-local-b@0.0.0</purl>
       <properties>
         <property name="cdx:npm:package:path">node_modules/my-local-b-off</property>
         <property name="cdx:npm:package:private">true</property>
@@ -97,9 +97,9 @@
       <dependency ref="my-noname@0.0.0"/>
     </dependency>
     <dependency ref="my-local-a@0.0.0">
-      <dependency ref="my-local-b-off@0.0.0"/>
+      <dependency ref="my-local-b@0.0.0"/>
     </dependency>
-    <dependency ref="my-local-b-off@0.0.0"/>
+    <dependency ref="my-local-b@0.0.0"/>
     <dependency ref="my-noname@0.0.0"/>
   </dependencies>
 </bom>

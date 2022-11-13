@@ -60,7 +60,6 @@
       "name": "my-local-a",
       "version": "0.1.0",
       "bom-ref": "my-local-a@0.1.0",
-      "description": "demo: my-local-a",
       "licenses": [
         {
           "license": {
@@ -68,22 +67,11 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-a@0.1.0?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
-      "externalReferences": [
-        {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
-        }
-      ],
+      "purl": "pkg:npm/my-local-a@0.1.0",
       "properties": [
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/my-local-a"
-        },
-        {
-          "name": "cdx:npm:package:private",
-          "value": "true"
         }
       ]
     },
@@ -92,7 +80,6 @@
       "name": "my-local-b-off",
       "version": "0.0.0",
       "bom-ref": "my-local-b-off@0.0.0",
-      "description": "demo: my-local-b-off - a package with a different name than its dir",
       "licenses": [
         {
           "license": {
@@ -105,10 +92,6 @@
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/my-local-b-off"
-        },
-        {
-          "name": "cdx:npm:package:private",
-          "value": "true"
         }
       ]
     },
@@ -117,7 +100,6 @@
       "name": "my-local-c",
       "version": "0.23.42",
       "bom-ref": "my-local-c@0.23.42",
-      "description": "demo: my-local-c",
       "licenses": [
         {
           "license": {
@@ -125,22 +107,11 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-c@0.23.42?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
-      "externalReferences": [
-        {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
-        }
-      ],
+      "purl": "pkg:npm/my-local-c@0.23.42",
       "properties": [
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/my-local-c"
-        },
-        {
-          "name": "cdx:npm:package:private",
-          "value": "true"
         }
       ]
     }

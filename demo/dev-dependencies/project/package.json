@@ -1,12 +1,9 @@
 {
   "name": "demo-dev-dependencies",
-  "description": "demo: demo-dev-dependencies -- showcase how workspaces look like",
+  "description": "demo: demo-dev-dependencies -- showcase how devDependencies look like",
   "private": true,
   "version": "0.0.0",
   "license": "Apache-2.0",
-  "workspaces": [
-    "workspaces/*"
-  ],
   "devDependencies": {
     "@types/node": ">=16"
   }

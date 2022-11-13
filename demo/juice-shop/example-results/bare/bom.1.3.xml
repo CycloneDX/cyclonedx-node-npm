@@ -5,7 +5,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.4.1</version>
+        <version>1.6.0</version>
       </tool>
     </tools>
     <component type="application" bom-ref="juice-shop@14.1.1">

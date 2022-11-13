@@ -5,7 +5,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.4.1</version>
+        <version>1.6.0</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
@@ -48,10 +48,10 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-a@0.1.0?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a</purl>
+      <purl>pkg:npm/my-local-a@0.1.0?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a</purl>
       <externalReferences>
         <reference type="vcs">
-          <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a</url>
+          <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
         </reference>
       </externalReferences>
@@ -84,10 +84,10 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-c@0.23.42?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a</purl>
+      <purl>pkg:npm/my-local-c@0.23.42?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local</purl>
       <externalReferences>
         <reference type="vcs">
-          <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a</url>
+          <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
         </reference>
       </externalReferences>
