@@ -90,12 +90,10 @@ graph TB
     A  --- B
     B  --- C
     C  --- A
-    A  --> D1
-    B  --> D2
-    D1 --> A
+    A  --- D1
+    B  --- D2
     D1 --> B
     D2 --> A
-    D2 --> B
     D1 --> C
     D2 --> C
     R((application))
