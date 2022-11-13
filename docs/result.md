@@ -46,7 +46,7 @@ c) both sets of all direct and transitive edges form equal complete sub-graphs f
 
 ### Examples and Visualisation 
 
-#### dependency tree
+#### Dependency Graph
 
 ```mermaid
 graph TB
@@ -64,7 +64,7 @@ graph TB
     D2((strip-ansi<br/>7.0.1))
 ```
 
-#### the corresponding file-system tree
+#### the corresponding File-System Tree
 
 ```text
 application
@@ -80,7 +80,7 @@ application
    |- ansi-regex
 ```
 
-#### the corresponding module resolution graph
+#### the corresponding Module Resolution Graph
 
 ```mermaid
 graph TB
