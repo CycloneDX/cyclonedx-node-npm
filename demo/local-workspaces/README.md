@@ -4,6 +4,8 @@
 
 Install local workspaces and see how they behave.
 
+Workspaces are a feature that is available since NPM7.
+
 ## remarks
 
 * The `resolved` is not present in every dependency listing. Only on top-most level.
