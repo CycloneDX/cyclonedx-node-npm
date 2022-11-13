@@ -4,14 +4,24 @@ This document will describe, how certain SBOM results should be deducted.
 
 ## Preamble 
 
-### How node's module resolution works
+### Basics
 
-_Node_'s module system is file-system based. It works regardless of package dependencies.  
-When code in module "foo" tries to use/require/access code from a different module "bar",
-then _node_ will look in "foo"'s own/direct `node_module` folder (depth 1). 
+A package might have a name, a version, and dependencies.  
+This information is usually stored in a `package.json` file.
+
+A package might have submodules or subpackages.  
+These are usually stored in a `node_modules` folder next to the `package.json`.
+
+### How node's module/package resolution works
+
+_Node_'s module/package system is file-system based. It works regardless of package dependencies.  
+When code in package `foo` tries to use/require/access code from a different package "bar",
+then _node_ will look in `foo`'s own/direct `node_modules` folder. 
 If it did not find any "bar" there, then node traverses all folders upwards and does the same lookup there,
 until it finds any "bar".  
 This file-based loading behavior happens regardless of components' "dependency graph"
+
+read [Node docs](https://nodejs.org/api/packages.html#introduction)
 
 ### Implications
 
@@ -19,7 +29,7 @@ Based on this module resolution system it might appear that one complex tree mig
 instances of module "bar".
 Each of these instances might have a different content.
 If two of these instances had equal content - on a module basis - they are still not the same module, 
-as their own `node_module` might be different, which causes submodules being not the same.
+as their own `node_modules` might be different, which causes submodules being not the same.
 If two of these instances had equal content - on a module basis - they are still not the same module,
 as their position in the global module-resolution-tree is different and therefore causes this very instances
 to have different dependencies in the first place.  
@@ -27,12 +37,36 @@ So two modules with equal file content are never the same module.
 
 Imagine each module as a node in a directed graph.  
 Each node has a set of properties. Properties represent file-content(checksums), module-name, and so on.
-A directed edge in this graph represents module access in terms of node's module-resolution-system.
+A directed edge in this graph represents module access in terms of node's module-resolution-system. Therefore, the graph is not implicit.
 This graph is per definition in the format of a directed tree.  
 In that graph two nodes are identical, if and only if:  
 a) both sets of node properties are equal, and 
 b) both sets of all direct and transitive edges form equal complete sub-graphs from tree-root to that node, and
 c) both sets of all direct and transitive edges form equal complete sub-graphs from that node to each accessible leaf.
+
+#### Examples and Visualisation 
+
+(reminder: not dependency-graphs, but a module-resolution-graph)
+
+```mermaid
+graph LR
+    R  --> A
+    R  --> B
+    R  --> C
+    A  --- B
+    B  --- C
+    C  --- A
+    A  --> D1
+    B  --> D2
+    D1 --> C
+    D2 --> C
+    R((application))
+    A((some-module))
+    B((other-module))
+    C((ansi-regex<br/>6.0.1))
+    D1((strip-ansi<br/>7.0.0))
+    D2((strip-ansi<br/>7.0.1))
+```
 
 ### What NPM does about it
 
@@ -41,11 +75,6 @@ This makes additional after-the-fact deduplication redundant (and mere unnecessa
 
 See [Milestone: after-the-fact component deduplication](https://github.com/CycloneDX/cyclonedx-node-npm/milestone/2)  
 See [Discussion: describe how component de-duplication works](https://github.com/CycloneDX/cyclonedx-node-npm/discussions/307)  
-
-## Basics
-
-A package might have a name, a version, and dependencies.  
-This information is usually stored in a `package.json` file.
 
 ## Project -> `bom.metadata.component`
 
