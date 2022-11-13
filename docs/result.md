@@ -2,6 +2,46 @@
 
 This document will describe, how certain SBOM results should be deducted.
 
+## Preamble 
+
+### How node's module resolution works
+
+_Node_'s module system is file-system based. It works regardless of package dependencies.  
+When code in module "foo" tries to use/require/access code from a different module "bar",
+then _node_ will look in "foo"'s own/direct `node_module` folder (depth 1). 
+If it did not find any "bar" there, then node traverses all folders upwards and does the same lookup there,
+until it finds any "bar".  
+This file-based loading behavior happens regardless of components' "dependency graph"
+
+### Implications
+
+Based on this module resolution system it might appear that one complex tree might have multiple individual
+instances of module "bar".
+Each of these instances might have a different content.
+If two of these instances had equal content - on a module basis - they are still not the same module, 
+as their own `node_module` might be different, which causes submodules being not the same.
+If two of these instances had equal content - on a module basis - they are still not the same module,
+as their position in the global module-resolution-tree is different and therefore causes this very instances
+to have different dependencies in the first place.  
+So two modules with equal file content are never the same module.
+
+Imagine each module as a node in a directed graph.  
+Each node has a set of properties. Properties represent file-content(checksums), module-name, and so on.
+A directed edge in this graph represents module access in terms of node's module-resolution-system.
+This graph is per definition in the format of a directed tree.  
+In that graph two nodes are identical, if and only if:  
+a) both sets of node properties are equal, and 
+b) both sets of all direct and transitive edges form equal complete sub-graphs from tree-root to that node, and
+c) both sets of all direct and transitive edges form equal complete sub-graphs from that node to each accessible leaf.
+
+### What NPM does about it
+
+NPM does these needed graph de-duplications internally already when it generates the affective module layout.
+This makes additional after-the-fact deduplication redundant (and mere unnecessary).  
+
+See [Milestone: after-the-fact component deduplication](https://github.com/CycloneDX/cyclonedx-node-npm/milestone/2)  
+See [Discussion: describe how component de-duplication works](https://github.com/CycloneDX/cyclonedx-node-npm/discussions/307)  
+
 ## Basics
 
 A package might have a name, a version, and dependencies.  
