@@ -8,7 +8,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.4.1"
+        "version": "1.6.0"
       }
     ],
     "component": {
@@ -16,7 +16,7 @@
       "name": "demo-dev-dependencies",
       "version": "0.0.0",
       "bom-ref": "demo-dev-dependencies@0.0.0",
-      "description": "demo: demo-dev-dependencies -- showcase how workspaces look like",
+      "description": "demo: demo-dev-dependencies -- showcase how devDependencies look like",
       "licenses": [
         {
           "license": {
@@ -42,13 +42,13 @@
       "type": "library",
       "name": "node",
       "group": "@types",
-      "version": "18.7.16",
-      "bom-ref": "@types/node@18.7.16",
+      "version": "18.11.9",
+      "bom-ref": "@types/node@18.11.9",
       "description": "TypeScript definitions for Node.js",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "1101e18b17eefa692a1cc665d51d8ebeebe7e3b3d4c35f1accc24e4f0499afdfdf8731cd197009d266b475ac9155c869ae90a3d0a7352b5c4aa166804d6175aa"
+          "content": "091a57db5fe419dce33a916c65291cad730620158c18d2075d70551521fe82091fb7183e5d83f6d131126e1fb316f163dc440e9796f29341d3467d482fa85baa"
         }
       ],
       "licenses": [
@@ -58,10 +58,10 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/node@18.7.16#types/node",
+      "purl": "pkg:npm/%40types/node@18.11.9#types/node",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@types/node/-/node-18.7.16.tgz",
+          "url": "https://registry.npmjs.org/@types/node/-/node-18.11.9.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         },
@@ -90,12 +90,12 @@
   ],
   "dependencies": [
     {
-      "ref": "@types/node@18.7.16"
+      "ref": "@types/node@18.11.9"
     },
     {
       "ref": "demo-dev-dependencies@0.0.0",
       "dependsOn": [
-        "@types/node@18.7.16"
+        "@types/node@18.11.9"
       ]
     }
   ]
