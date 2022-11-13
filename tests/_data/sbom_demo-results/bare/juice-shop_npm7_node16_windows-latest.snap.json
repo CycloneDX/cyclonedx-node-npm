@@ -131,18 +131,18 @@
       "type": "library",
       "name": "parser",
       "group": "@babel",
-      "version": "7.20.1",
-      "bom-ref": "@babel/parser@7.20.1",
+      "version": "7.20.3",
+      "bom-ref": "@babel/parser@7.20.3",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "869d00631699261c542df335cf2a7b5a0afea5250a05c3f733e3c79d2cd619d5cece0fe41d622089458046fb9b854286384c37c6a638c7e97267dcad0557042f"
+          "content": "38ffece5af787eb20f5f08f311cbf94bfb6941f73a5e1c58527996a6076a3161a0602b84ac0dd2ce8cda44031081265629e4c9c61b7d696024518fb4533bce16"
         }
       ],
-      "purl": "pkg:npm/%40babel/parser@7.20.1",
+      "purl": "pkg:npm/%40babel/parser@7.20.3",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@babel/parser/-/parser-7.20.1.tgz",
+          "url": "https://registry.npmjs.org/@babel/parser/-/parser-7.20.3.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -158,18 +158,18 @@
       "type": "library",
       "name": "types",
       "group": "@babel",
-      "version": "7.20.0",
-      "bom-ref": "@babel/types@7.20.0",
+      "version": "7.20.2",
+      "bom-ref": "@babel/types@7.20.2",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "26582ddc7d136a3096d7ae30913393cc79196f4ef9b4c40c50bceb2d4a1478a98eede14bf7a1a00f17fbfc0c61739080b8a137285c955b5a7acac2ac8b6a1702"
+          "content": "1679efb0d5a0642af6df6b2ab578206a9be5924fedbb047faa11b3726c48d065cb0a398f6103f38a8d856dd956b98eb2d6c1c57d02a4fab45b519f554ad40ca2"
         }
       ],
-      "purl": "pkg:npm/%40babel/types@7.20.0",
+      "purl": "pkg:npm/%40babel/types@7.20.2",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@babel/types/-/types-7.20.0.tgz",
+          "url": "https://registry.npmjs.org/@babel/types/-/types-7.20.2.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -7494,18 +7494,18 @@
     {
       "type": "library",
       "name": "deep-equal",
-      "version": "2.0.5",
-      "bom-ref": "deep-equal@2.0.5",
+      "version": "2.1.0",
+      "bom-ref": "deep-equal@2.1.0",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "9cf8918266c0b66d5adc9b272c27fafd22df5dc8f2379bfc2f54d7cdd0a61eb5c9e21c7e816ff0d5809c9fbcfc809b5288302b642818b5b6a8dd0a8b9bf3754b"
+          "content": "da9c60bd6bb7025bf53e8584c9583b1d2f1884695415457b379a0ebdf2fa77eef10262d27a6330bff73c66ffe2f4a173c55e4ab79080bd073bd1f2f056e7f850"
         }
       ],
-      "purl": "pkg:npm/deep-equal@2.0.5",
+      "purl": "pkg:npm/deep-equal@2.1.0",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/deep-equal/-/deep-equal-2.0.5.tgz",
+          "url": "https://registry.npmjs.org/deep-equal/-/deep-equal-2.1.0.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -8697,32 +8697,6 @@
     },
     {
       "type": "library",
-      "name": "es-abstract",
-      "version": "1.20.4",
-      "bom-ref": "es-abstract@1.20.4",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "d14b6f44defd78c7b62fe50d105d41c117b7eb8b23fc35e143f9391668af82849da4cf746fc25cd260f328c1a8ed04b40556ce3ff6d3c0128d9c373dacdcda3c"
-        }
-      ],
-      "purl": "pkg:npm/es-abstract@1.20.4",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.4.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/es-abstract"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "es-get-iterator",
       "version": "1.1.2",
       "bom-ref": "es-get-iterator@1.1.2",
@@ -8744,32 +8718,6 @@
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/es-get-iterator"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "es-to-primitive",
-      "version": "1.2.1",
-      "bom-ref": "es-to-primitive@1.2.1",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "4023a5960649b5a528f6689805c2c285351a1cd8c91773d8b35562743ec0c22123d6463129e41372d2c07b300e1f964a447d20d8880f9fa2b0078213f22469bc"
-        }
-      ],
-      "purl": "pkg:npm/es-to-primitive@1.2.1",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/es-to-primitive/-/es-to-primitive-1.2.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/es-to-primitive"
         }
       ]
     },
@@ -11107,32 +11055,6 @@
     },
     {
       "type": "library",
-      "name": "function.prototype.name",
-      "version": "1.1.5",
-      "bom-ref": "function.prototype.name@1.1.5",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "b8dee6fc1cd52909c2505fe25bc8d879aebbbfefb6bbb9b952010d6c746d74355c94e50ff8530f94235d9a4d21ff2b06ca8dad6af309103a8902425d45ad6f30"
-        }
-      ],
-      "purl": "pkg:npm/function.prototype.name@1.1.5",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/function.prototype.name/-/function.prototype.name-1.1.5.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/function.prototype.name"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "functions-have-names",
       "version": "1.2.3",
       "bom-ref": "functions-have-names@1.2.3",
@@ -11310,32 +11232,6 @@
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/get-stream"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "get-symbol-description",
-      "version": "1.0.0",
-      "bom-ref": "get-symbol-description@1.0.0",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "d8499d1f562f210899a65b4236092e8949f2ba4cf133f47a343257df529edc11b536ae5bd12d8f857e7d50a8bdbd9a4f0d055daa7fb521c680c27cd34f9bc28f"
-        }
-      ],
-      "purl": "pkg:npm/get-symbol-description@1.0.0",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/get-symbol-description/-/get-symbol-description-1.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/get-symbol-description"
         }
       ]
     },
@@ -11654,6 +11550,32 @@
               "value": "node_modules/global-prefix\\node_modules\\which"
             }
           ]
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "gopd",
+      "version": "1.0.1",
+      "bom-ref": "gopd@1.0.1",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "77ae5b36521a771be96ff03669b55d96a2aa579eb78ee4676755ad93ab35b0847cb8db1747bd31a88cd5ab155fd5e4ea0ee9f04f632473311e69ecc2293661c0"
+        }
+      ],
+      "purl": "pkg:npm/gopd@1.0.1",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/gopd/-/gopd-1.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/gopd"
         }
       ]
     },
@@ -13871,32 +13793,6 @@
     },
     {
       "type": "library",
-      "name": "internal-slot",
-      "version": "1.0.3",
-      "bom-ref": "internal-slot@1.0.3",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "3b40c1d490bfb0fc9997b708a3bf27e5d47b7944b0c2960f8974614f337165500c52e07cbe59d11722f176b553a24b3a5cf2d59c57dbcda55de562e386083ebc"
-        }
-      ],
-      "purl": "pkg:npm/internal-slot@1.0.3",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/internal-slot/-/internal-slot-1.0.3.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/internal-slot"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "interpret",
       "version": "1.1.0",
       "bom-ref": "interpret@1.1.0",
@@ -14677,32 +14573,6 @@
     },
     {
       "type": "library",
-      "name": "is-negative-zero",
-      "version": "2.0.2",
-      "bom-ref": "is-negative-zero@2.0.2",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "76a26f6ab2dac17b056cd0de256ef3033f08b49f5c776f18b9fbae1738741bca4d1e324c9d8d3c0efeec617dae17952940ec2278078e13111801659fbbb65950"
-        }
-      ],
-      "purl": "pkg:npm/is-negative-zero@2.0.2",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/is-negative-zero/-/is-negative-zero-2.0.2.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/is-negative-zero"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "is-number-like",
       "version": "1.0.8",
       "bom-ref": "is-number-like@1.0.8",
@@ -15017,32 +14887,6 @@
     },
     {
       "type": "library",
-      "name": "is-shared-array-buffer",
-      "version": "1.0.2",
-      "bom-ref": "is-shared-array-buffer@1.0.2",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "b2a376503bb5ff4cbabaf5f24ad08ecf28408c24a51dc785a0c2895bc5bd114f5cbe273f41db19d24114f771c4cb7214105648887ff7c3e007fd441b3c735d84"
-        }
-      ],
-      "purl": "pkg:npm/is-shared-array-buffer@1.0.2",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/is-shared-array-buffer/-/is-shared-array-buffer-1.0.2.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/is-shared-array-buffer"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "is-stream",
       "version": "1.1.0",
       "bom-ref": "is-stream@1.1.0",
@@ -15122,18 +14966,18 @@
     {
       "type": "library",
       "name": "is-typed-array",
-      "version": "1.1.9",
-      "bom-ref": "is-typed-array@1.1.9",
+      "version": "1.1.10",
+      "bom-ref": "is-typed-array@1.1.10",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "91fae59d34e7f296647e924c520603ed8677ab3789816527f177d5601011738c2798d3a62db9aeb9a02cdeae5fbc1d1424e9fac8700a6864cf33b77a7b3a03fc"
+          "content": "3c9aa010789666f329685677b9373c9073cce3ee000d39439e2b902fb714fd40c0d1097b17bd3219f1e987770b35ef9cf6da1a8a0bfe0c5cd324a85cd82b4ee8"
         }
       ],
-      "purl": "pkg:npm/is-typed-array@1.1.9",
+      "purl": "pkg:npm/is-typed-array@1.1.10",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/is-typed-array/-/is-typed-array-1.1.9.tgz",
+          "url": "https://registry.npmjs.org/is-typed-array/-/is-typed-array-1.1.10.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -15220,32 +15064,6 @@
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/is-weakmap"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "is-weakref",
-      "version": "1.0.2",
-      "bom-ref": "is-weakref@1.0.2",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "a9cb6cb8b666210d3ebd248c7e856fc857b6f86484be7999d9ecd3ba9d5206c7bdfadc0209e89a97a1048b735cd8a15c7fafaacf61413e78d7b24f3184a49a3d"
-        }
-      ],
-      "purl": "pkg:npm/is-weakref@1.0.2",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/is-weakref/-/is-weakref-1.0.2.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/is-weakref"
         }
       ]
     },
@@ -22866,32 +22684,6 @@
     },
     {
       "type": "library",
-      "name": "safe-regex-test",
-      "version": "1.0.0",
-      "bom-ref": "safe-regex-test@1.0.0",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "241514cf23a01305d063536e3edbdc8ffa9c0436c3984bd6b9f8659d76489bbe43107a7e69f335af5ba326926c57f812338b79f6da43c8f8b5b1de9968f15fb0"
-        }
-      ],
-      "purl": "pkg:npm/safe-regex-test@1.0.0",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/safe-regex-test/-/safe-regex-test-1.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/safe-regex-test"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "safe-regex",
       "version": "1.1.0",
       "bom-ref": "safe-regex@1.1.0",
@@ -23235,18 +23027,18 @@
     {
       "type": "library",
       "name": "sequelize",
-      "version": "6.25.3",
-      "bom-ref": "sequelize@6.25.3",
+      "version": "6.25.5",
+      "bom-ref": "sequelize@6.25.5",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "b1b6ef0c67ede947d245d202d1d719bccc712588ba834f88816bc8a53ba4e9c704a08c8b72bed293a9d75b019f91d94369b19eba7861848e321fc3e579532fb7"
+          "content": "43003690be2548dcb89984efd599b80e3be5a192da61a8ee605e5030ebf43bb15a99e314125f10e73396443f8534a1822f3c8e276f20402a371d7d0df6672cb0"
         }
       ],
-      "purl": "pkg:npm/sequelize@6.25.3",
+      "purl": "pkg:npm/sequelize@6.25.5",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/sequelize/-/sequelize-6.25.3.tgz",
+          "url": "https://registry.npmjs.org/sequelize/-/sequelize-6.25.5.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -23262,7 +23054,7 @@
           "type": "library",
           "name": "debug",
           "version": "4.3.4",
-          "bom-ref": "sequelize@6.25.3|debug@4.3.4",
+          "bom-ref": "sequelize@6.25.5|debug@4.3.4",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -23288,7 +23080,7 @@
           "type": "library",
           "name": "ms",
           "version": "2.1.2",
-          "bom-ref": "sequelize@6.25.3|ms@2.1.2",
+          "bom-ref": "sequelize@6.25.5|ms@2.1.2",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -23314,7 +23106,7 @@
           "type": "library",
           "name": "uuid",
           "version": "8.3.2",
-          "bom-ref": "sequelize@6.25.3|uuid@8.3.2",
+          "bom-ref": "sequelize@6.25.5|uuid@8.3.2",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -25558,58 +25350,6 @@
     },
     {
       "type": "library",
-      "name": "string.prototype.trimend",
-      "version": "1.0.5",
-      "bom-ref": "string.prototype.trimend@1.0.5",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "23b446be68d5e2927b3b791d7fe2d716955f74d3b1b425bfd82f1fea33625b8f8f41c870c64083ce5935ffba7e5a5e1ba85219785e3ba801d72ee1c758a031a2"
-        }
-      ],
-      "purl": "pkg:npm/string.prototype.trimend@1.0.5",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/string.prototype.trimend/-/string.prototype.trimend-1.0.5.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/string.prototype.trimend"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "string.prototype.trimstart",
-      "version": "1.0.5",
-      "bom-ref": "string.prototype.trimstart@1.0.5",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "4c7c75e932421a5b0dd28e9d976a3a9dc594b1d8272d1480db7ad1139a72181c3f98baf7123fd1d8b6aa0ad80ff1534c199b2f3169dff68a193f26366c7bd416"
-        }
-      ],
-      "purl": "pkg:npm/string.prototype.trimstart@1.0.5",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/string.prototype.trimstart/-/string.prototype.trimstart-1.0.5.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/string.prototype.trimstart"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "strip-ansi",
       "version": "3.0.1",
       "bom-ref": "strip-ansi@3.0.1",
@@ -25845,18 +25585,18 @@
     {
       "type": "library",
       "name": "swagger-ui-dist",
-      "version": "4.15.2",
-      "bom-ref": "swagger-ui-dist@4.15.2",
+      "version": "4.15.5",
+      "bom-ref": "swagger-ui-dist@4.15.5",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "b1a9cb022a2c8696be4343e93f10fceaea3895a6d2a9e231b632e80bbc6871edc74e71023e843063b3d454e886319e1d9c49d13993cb51396808433cea365cd5"
+          "content": "5777886b6f25c01ea083bff07cdbc06e3c096260d7cb5268d4f3a3c93ce507ac0f707886951c6adfd4d28d81958d0ad4480ce9bfe6bb9f3a7b983c60372e7bc4"
         }
       ],
-      "purl": "pkg:npm/swagger-ui-dist@4.15.2",
+      "purl": "pkg:npm/swagger-ui-dist@4.15.5",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-4.15.2.tgz",
+          "url": "https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-4.15.5.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -25871,18 +25611,18 @@
     {
       "type": "library",
       "name": "swagger-ui-express",
-      "version": "4.5.0",
-      "bom-ref": "swagger-ui-express@4.5.0",
+      "version": "4.6.0",
+      "bom-ref": "swagger-ui-express@4.6.0",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "0c7937cc5becc6b91c9eeac6bd094070bb930da70054dd491ca0e071b6bf82bd8d1511381c6c0fd587872173221b39e4591e00792ed7e6f11b94d9f84258ee34"
+          "content": "671a50169d49476445f00afef82c89cc40ddbee7dad3cba33542603154cc58f8bce82b90795741b6f69e3bfcacaf3e9d2406177fd91b54d8560fb256a1cc2ab0"
         }
       ],
-      "purl": "pkg:npm/swagger-ui-express@4.5.0",
+      "purl": "pkg:npm/swagger-ui-express@4.6.0",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/swagger-ui-express/-/swagger-ui-express-4.5.0.tgz",
+          "url": "https://registry.npmjs.org/swagger-ui-express/-/swagger-ui-express-4.6.0.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -26055,18 +25795,18 @@
     {
       "type": "library",
       "name": "tar",
-      "version": "6.1.11",
-      "bom-ref": "tar@6.1.11",
+      "version": "6.1.12",
+      "bom-ref": "tar@6.1.12",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "6a7fca650cd052464292ea0003ae2133dd97d14adbe95a51840165943cf3e3853699c0f9b1c993df305ce15815a64ba0179f34f83427f1e0054b2a10b74b739c"
+          "content": "8d4e1375e992df5b8004777e2ede5611826ece7f932530812e58ef2001d93b3e8cf4eb39a49e1d0febd114bc4f6bf9f74f4884173a62fb4c7551fb836586d133"
         }
       ],
-      "purl": "pkg:npm/tar@6.1.11",
+      "purl": "pkg:npm/tar@6.1.12",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/tar/-/tar-6.1.11.tgz",
+          "url": "https://registry.npmjs.org/tar/-/tar-6.1.12.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -27015,32 +26755,6 @@
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/uglify-js"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "unbox-primitive",
-      "version": "1.0.2",
-      "bom-ref": "unbox-primitive@1.0.2",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "eb5a4f9420fd879d55a2b7b22740517a275e33730328c2a787af95f4bd3cdf7d62a6ae90f0e1576588aa3fa9ffb5b1f1e2ce48f6e4617327ba06b6e48b39010f"
-        }
-      ],
-      "purl": "pkg:npm/unbox-primitive@1.0.2",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.0.2.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/unbox-primitive"
         }
       ]
     },
@@ -28307,18 +28021,18 @@
     {
       "type": "library",
       "name": "which-typed-array",
-      "version": "1.1.8",
-      "bom-ref": "which-typed-array@1.1.8",
+      "version": "1.1.9",
+      "bom-ref": "which-typed-array@1.1.9",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "267e1ee4f22d6dc007c8ba110f0bcf8f5ca9bb6ec325bb5d61751ae73b229eb531efb52f7dbd1c5f0c2718c4e7edc8d47e186a8154275490b017eedc814eeda7"
+          "content": "c3d738c64c7a98f89dc29ef5f347246167cc9afc698e566e22e74db437f837fb5301407c5496d7db9a99a00b2bb46b983671b0de96b401781b18a441f3f11c78"
         }
       ],
-      "purl": "pkg:npm/which-typed-array@1.1.8",
+      "purl": "pkg:npm/which-typed-array@1.1.9",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/which-typed-array/-/which-typed-array-1.1.8.tgz",
+          "url": "https://registry.npmjs.org/which-typed-array/-/which-typed-array-1.1.9.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -29283,10 +28997,10 @@
       "ref": "@babel/helper-validator-identifier@7.19.1"
     },
     {
-      "ref": "@babel/parser@7.20.1"
+      "ref": "@babel/parser@7.20.3"
     },
     {
-      "ref": "@babel/types@7.20.0",
+      "ref": "@babel/types@7.20.2",
       "dependsOn": [
         "@babel/helper-string-parser@7.19.4",
         "@babel/helper-validator-identifier@7.19.1",
@@ -29318,7 +29032,7 @@
         "node-fetch@2.6.7",
         "rimraf@3.0.2",
         "semver@7.3.8",
-        "tar@6.1.11"
+        "tar@6.1.12"
       ]
     },
     {
@@ -30076,7 +29790,7 @@
     {
       "ref": "babel-walk@3.0.0-canary-5",
       "dependsOn": [
-        "@babel/types@7.20.0"
+        "@babel/types@7.20.2"
       ]
     },
     {
@@ -30305,7 +30019,7 @@
         "promise-inflight@1.0.1",
         "rimraf@3.0.2",
         "ssri@8.0.1",
-        "tar@6.1.11",
+        "tar@6.1.12",
         "unique-filename@1.1.1"
       ]
     },
@@ -30667,8 +30381,8 @@
     {
       "ref": "constantinople@4.0.1",
       "dependsOn": [
-        "@babel/parser@7.20.1",
-        "@babel/types@7.20.0"
+        "@babel/parser@7.20.3",
+        "@babel/types@7.20.2"
       ]
     },
     {
@@ -30841,7 +30555,7 @@
       "ref": "decompress@4.2.1|pify@2.3.0"
     },
     {
-      "ref": "deep-equal@2.0.5",
+      "ref": "deep-equal@2.1.0",
       "dependsOn": [
         "call-bind@1.0.2",
         "es-get-iterator@1.1.2",
@@ -30857,7 +30571,7 @@
         "side-channel@1.0.4",
         "which-boxed-primitive@1.0.2",
         "which-collection@1.0.1",
-        "which-typed-array@1.1.8"
+        "which-typed-array@1.1.9"
       ]
     },
     {
@@ -31074,35 +30788,6 @@
       ]
     },
     {
-      "ref": "es-abstract@1.20.4",
-      "dependsOn": [
-        "call-bind@1.0.2",
-        "es-to-primitive@1.2.1",
-        "function-bind@1.1.1",
-        "function.prototype.name@1.1.5",
-        "get-intrinsic@1.1.3",
-        "get-symbol-description@1.0.0",
-        "has-property-descriptors@1.0.0",
-        "has-symbols@1.0.3",
-        "has@1.0.3",
-        "internal-slot@1.0.3",
-        "is-callable@1.2.7",
-        "is-negative-zero@2.0.2",
-        "is-regex@1.1.4",
-        "is-shared-array-buffer@1.0.2",
-        "is-string@1.0.7",
-        "is-weakref@1.0.2",
-        "object-inspect@1.12.2",
-        "object-keys@1.1.1",
-        "object.assign@4.1.4",
-        "regexp.prototype.flags@1.4.3",
-        "safe-regex-test@1.0.0",
-        "string.prototype.trimend@1.0.5",
-        "string.prototype.trimstart@1.0.5",
-        "unbox-primitive@1.0.2"
-      ]
-    },
-    {
       "ref": "es-get-iterator@1.1.2",
       "dependsOn": [
         "call-bind@1.0.2",
@@ -31113,14 +30798,6 @@
         "is-set@2.0.2",
         "is-string@1.0.7",
         "isarray@2.0.5"
-      ]
-    },
-    {
-      "ref": "es-to-primitive@1.2.1",
-      "dependsOn": [
-        "is-callable@1.2.7",
-        "is-date-object@1.0.5",
-        "is-symbol@1.0.4"
       ]
     },
     {
@@ -31540,7 +31217,7 @@
         "@swc/helpers@0.3.17",
         "brotli@1.3.3",
         "clone@2.1.2",
-        "deep-equal@2.0.5",
+        "deep-equal@2.1.0",
         "dfa@1.2.0",
         "restructure@2.0.1",
         "tiny-inflate@1.0.3",
@@ -31648,15 +31325,6 @@
       "ref": "function-bind@1.1.1"
     },
     {
-      "ref": "function.prototype.name@1.1.5",
-      "dependsOn": [
-        "call-bind@1.0.2",
-        "define-properties@1.1.4",
-        "es-abstract@1.20.4",
-        "functions-have-names@1.2.3"
-      ]
-    },
-    {
       "ref": "functions-have-names@1.2.3"
     },
     {
@@ -31699,13 +31367,6 @@
       "ref": "get-stream@4.1.0",
       "dependsOn": [
         "pump@3.0.0"
-      ]
-    },
-    {
-      "ref": "get-symbol-description@1.0.0",
-      "dependsOn": [
-        "call-bind@1.0.2",
-        "get-intrinsic@1.1.3"
       ]
     },
     {
@@ -31781,6 +31442,12 @@
       "ref": "global-prefix@1.0.2|which@1.3.1",
       "dependsOn": [
         "isexe@2.0.0"
+      ]
+    },
+    {
+      "ref": "gopd@1.0.1",
+      "dependsOn": [
+        "get-intrinsic@1.1.3"
       ]
     },
     {
@@ -32277,14 +31944,6 @@
       "ref": "ini@1.3.8"
     },
     {
-      "ref": "internal-slot@1.0.3",
-      "dependsOn": [
-        "get-intrinsic@1.1.3",
-        "has@1.0.3",
-        "side-channel@1.0.4"
-      ]
-    },
-    {
       "ref": "interpret@1.1.0"
     },
     {
@@ -32433,9 +32092,6 @@
       "ref": "is-natural-number@4.0.1"
     },
     {
-      "ref": "is-negative-zero@2.0.2"
-    },
-    {
       "ref": "is-number-like@1.0.8",
       "dependsOn": [
         "lodash.isfinite@3.3.2"
@@ -32494,12 +32150,6 @@
       "ref": "is-set@2.0.2"
     },
     {
-      "ref": "is-shared-array-buffer@1.0.2",
-      "dependsOn": [
-        "call-bind@1.0.2"
-      ]
-    },
-    {
       "ref": "is-stream@1.1.0"
     },
     {
@@ -32515,12 +32165,12 @@
       ]
     },
     {
-      "ref": "is-typed-array@1.1.9",
+      "ref": "is-typed-array@1.1.10",
       "dependsOn": [
         "available-typed-arrays@1.0.5",
         "call-bind@1.0.2",
-        "es-abstract@1.20.4",
         "for-each@0.3.3",
+        "gopd@1.0.1",
         "has-tostringtag@1.0.0"
       ]
     },
@@ -32535,12 +32185,6 @@
     },
     {
       "ref": "is-weakmap@2.0.1"
-    },
-    {
-      "ref": "is-weakref@1.0.2",
-      "dependsOn": [
-        "call-bind@1.0.2"
-      ]
     },
     {
       "ref": "is-weakset@2.0.2",
@@ -32700,12 +32344,12 @@
         "sanitize-filename@1.6.3",
         "sanitize-html@1.4.2",
         "semver@7.3.8",
-        "sequelize@6.25.3",
+        "sequelize@6.25.5",
         "serve-index@1.9.1",
         "socket.io@3.1.2",
         "sqlite3@5.1.2",
         "svg-captcha@1.4.0",
-        "swagger-ui-express@4.5.0",
+        "swagger-ui-express@4.6.0",
         "ts-node-dev@1.1.8",
         "unzipper@0.9.15",
         "winston@3.8.2",
@@ -33250,7 +32894,7 @@
         "node-gyp@8.4.1|npmlog@6.0.2",
         "rimraf@3.0.2",
         "semver@7.3.8",
-        "tar@6.1.11",
+        "tar@6.1.12",
         "which@2.0.2"
       ]
     },
@@ -34266,14 +33910,6 @@
       "ref": "safe-buffer@5.1.2"
     },
     {
-      "ref": "safe-regex-test@1.0.0",
-      "dependsOn": [
-        "call-bind@1.0.2",
-        "get-intrinsic@1.1.3",
-        "is-regex@1.1.4"
-      ]
-    },
-    {
       "ref": "safe-regex@1.1.0",
       "dependsOn": [
         "ret@0.1.15"
@@ -34345,7 +33981,7 @@
       "ref": "sequelize-pool@7.1.0"
     },
     {
-      "ref": "sequelize@6.25.3",
+      "ref": "sequelize@6.25.5",
       "dependsOn": [
         "@types/debug@4.1.7",
         "@types/validator@13.7.10",
@@ -34358,24 +33994,24 @@
         "retry-as-promised@6.1.0",
         "semver@7.3.8",
         "sequelize-pool@7.1.0",
-        "sequelize@6.25.3|debug@4.3.4",
-        "sequelize@6.25.3|uuid@8.3.2",
+        "sequelize@6.25.5|debug@4.3.4",
+        "sequelize@6.25.5|uuid@8.3.2",
         "toposort-class@1.0.1",
         "validator@13.7.0",
         "wkx@0.5.0"
       ]
     },
     {
-      "ref": "sequelize@6.25.3|debug@4.3.4",
+      "ref": "sequelize@6.25.5|debug@4.3.4",
       "dependsOn": [
-        "sequelize@6.25.3|ms@2.1.2"
+        "sequelize@6.25.5|ms@2.1.2"
       ]
     },
     {
-      "ref": "sequelize@6.25.3|ms@2.1.2"
+      "ref": "sequelize@6.25.5|ms@2.1.2"
     },
     {
-      "ref": "sequelize@6.25.3|uuid@8.3.2"
+      "ref": "sequelize@6.25.5|uuid@8.3.2"
     },
     {
       "ref": "serve-index@1.9.1",
@@ -34739,7 +34375,7 @@
         "@mapbox/node-pre-gyp@1.0.10",
         "node-addon-api@4.3.0",
         "node-gyp@8.4.1",
-        "tar@6.1.11"
+        "tar@6.1.12"
       ]
     },
     {
@@ -34846,22 +34482,6 @@
       "ref": "string.prototype.codepointat@0.2.1"
     },
     {
-      "ref": "string.prototype.trimend@1.0.5",
-      "dependsOn": [
-        "call-bind@1.0.2",
-        "define-properties@1.1.4",
-        "es-abstract@1.20.4"
-      ]
-    },
-    {
-      "ref": "string.prototype.trimstart@1.0.5",
-      "dependsOn": [
-        "call-bind@1.0.2",
-        "define-properties@1.1.4",
-        "es-abstract@1.20.4"
-      ]
-    },
-    {
       "ref": "strip-ansi@3.0.1",
       "dependsOn": [
         "ansi-regex@2.1.1"
@@ -34908,13 +34528,13 @@
       ]
     },
     {
-      "ref": "swagger-ui-dist@4.15.2"
+      "ref": "swagger-ui-dist@4.15.5"
     },
     {
-      "ref": "swagger-ui-express@4.5.0",
+      "ref": "swagger-ui-express@4.6.0",
       "dependsOn": [
         "express@4.18.2",
-        "swagger-ui-dist@4.15.2"
+        "swagger-ui-dist@4.15.5"
       ]
     },
     {
@@ -34968,7 +34588,7 @@
       ]
     },
     {
-      "ref": "tar@6.1.11",
+      "ref": "tar@6.1.12",
       "dependsOn": [
         "chownr@2.0.0",
         "fs-minipass@2.1.0",
@@ -35161,15 +34781,6 @@
       "ref": "uglify-js@3.17.4"
     },
     {
-      "ref": "unbox-primitive@1.0.2",
-      "dependsOn": [
-        "call-bind@1.0.2",
-        "has-bigints@1.0.2",
-        "has-symbols@1.0.3",
-        "which-boxed-primitive@1.0.2"
-      ]
-    },
-    {
       "ref": "unbzip2-stream@1.4.3",
       "dependsOn": [
         "buffer@5.7.1",
@@ -35319,8 +34930,8 @@
         "inherits@2.0.4",
         "is-arguments@1.1.1",
         "is-generator-function@1.0.10",
-        "is-typed-array@1.1.9",
-        "which-typed-array@1.1.8"
+        "is-typed-array@1.1.10",
+        "which-typed-array@1.1.9"
       ]
     },
     {
@@ -35425,14 +35036,14 @@
       "ref": "which-pm-runs@1.1.0"
     },
     {
-      "ref": "which-typed-array@1.1.8",
+      "ref": "which-typed-array@1.1.9",
       "dependsOn": [
         "available-typed-arrays@1.0.5",
         "call-bind@1.0.2",
-        "es-abstract@1.20.4",
         "for-each@0.3.3",
+        "gopd@1.0.1",
         "has-tostringtag@1.0.0",
-        "is-typed-array@1.1.9"
+        "is-typed-array@1.1.10"
       ]
     },
     {
@@ -35496,8 +35107,8 @@
     {
       "ref": "with@7.0.2",
       "dependsOn": [
-        "@babel/parser@7.20.1",
-        "@babel/types@7.20.0",
+        "@babel/parser@7.20.3",
+        "@babel/types@7.20.2",
         "assert-never@1.2.1",
         "babel-walk@3.0.0-canary-5"
       ]

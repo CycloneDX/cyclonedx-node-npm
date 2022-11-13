@@ -33,7 +33,7 @@
       "name": "demo-dev-dependencies",
       "version": "0.0.0",
       "bom-ref": "demo-dev-dependencies@0.0.0",
-      "description": "demo: demo-dev-dependencies -- showcase how workspaces look like",
+      "description": "demo: demo-dev-dependencies -- showcase how devDependencies look like",
       "licenses": [
         {
           "license": {
