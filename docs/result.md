@@ -15,13 +15,13 @@ These are usually stored in a `node_modules` folder next to the `package.json`.
 ### How _NodeJS_'s module/package resolution works
 
 _NodeJS_'s module/package system is file-system based. It works regardless of package dependencies.  
-When code in package `foo` tries to use/require/access code from a different package "bar",
+When code in package `foo` tries to use/require/access code from a different package `bar`,
 then _NodeJS_ will look in `foo`'s own/direct `node_modules` folder. 
-If it did not find any "bar" there, then NodeJS traverses all folders upwards and does the same lookup there,
-until it finds any "bar".  
+If it did not find any `bar` there, then NodeJS traverses all folders upwards and does the same lookup there,
+until it finds any `bar`.  
 This file-based loading behavior happens regardless of components' "dependency graph"
 
-read [Node docs](https://nodejs.org/api/packages.html#introduction)
+See [NodeJS docs](https://nodejs.org/api/packages.html#introduction)
 
 ### Implications
 
