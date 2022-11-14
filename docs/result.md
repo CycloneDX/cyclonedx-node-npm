@@ -107,19 +107,15 @@ graph TB
     B  --- D3
     D3 --- A
     A  --- C1
-    A  --- D1
     B  --- C2
+    A  --- D1
     B  --- D2
     C1 --- D1
     C2 --- D2
-    C1 --> A
     C1 --> B
     C2 --> A
-    C2 --> B
-    D1 --> A
     D1 --> B
     D2 --> A
-    D2 --> B
 ```
 
 #### the resulting CycloneDX SBOM
