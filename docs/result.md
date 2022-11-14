@@ -4,52 +4,14 @@ This document will describe, how certain SBOM results should be deducted.
 
 ## Preamble 
 
-### _NodeJS_ Basics
+Read [NodeJs Internals](nodejs_internals.md) first.
 
-A package might have a name, a version, and dependencies.  
-This information is usually stored in a `package.json` file.
+## Examples and Visualisation
 
-A package might have submodules or subpackages.  
-These are usually stored in a `node_modules` folder next to the `package.json`.
+Let the dependencies be in a non-range manner.
+Let component `strip-ansi@7.0.1` require in a range manner: `ansi-regex@^6`.
 
-### How _NodeJS_'s module/package resolution works
-
-_NodeJS_'s module/package system is file-system based. It works regardless of package dependencies.  
-When code in package `foo` tries to use/require/access code from a different package `bar`,
-then _NodeJS_ will look in `foo`'s own/direct `node_modules` folder. 
-If it did not find any `bar` there, then NodeJS traverses all folders upwards and does the same lookup there,
-until it finds any `bar`.  
-This file-based loading behavior happens regardless of components' "dependency graph"
-
-See [NodeJS docs](https://nodejs.org/api/packages.html#introduction)
-
-### Implications
-
-Based on this module resolution system it might appear that one complex tree might have multiple individual
-instances of module "bar".
-Each of these instances might have a different content.
-If two of these instances had equal content - on a module basis - they are still not the same module, 
-as their own `node_modules` might be different, which causes submodules being not the same.
-If two of these instances had equal content - on a module basis - they are still not the same module,
-as their position in the global module-resolution-tree is different and therefore causes this very instances
-to have different dependencies in the first place.  
-So two modules with equal file content are never the same module.
-
-Imagine each NodeJS-module as a node in a directed graph.  
-Each node has a set of properties. Properties represent file-content(checksums), module-name, and so on.
-A directed edge in this graph represents module access in terms of node's module-resolution-system. Therefore, the graph is not implicit.
-This graph is per definition in the format of a directed tree.  
-In that graph two nodes are identical, if and only if:  
-a) both sets of node properties are equal, and  
-b) both sets of all direct and transitive edges form equal complete sub-graphs from tree-root to that node, and  
-c) both sets of all direct and transitive edges form equal complete sub-graphs from that node to each accessible leaf.
-
-### Examples and Visualisation 
-
-All the dependencies are in a non-range manner, except
-a loose dependency constraint on `strip-ansi@7.0.1`: it requires `ansi-regex@^6`.
-
-#### Dependency Graph
+### Affective Dependency Graph
 
 ```mermaid
 graph TB
@@ -72,7 +34,7 @@ graph TB
     C2 --> D2
 ```
 
-#### a corresponding File-System Tree
+### a corresponding File-System Tree
 
 ```text
 application
@@ -88,7 +50,7 @@ application
             └── strip-ansi
 ```
 
-#### the corresponding Module Resolution Graph
+### the corresponding Module Resolution Graph
 
 ```mermaid
 graph LR
@@ -118,24 +80,15 @@ graph LR
     D2 --> A
 ```
 
-#### the resulting CycloneDX SBOM
+### the resulting CycloneDX SBOM
 
 ... to be described
 
 ### De-duplication
 
 NPM does the needed graph de-duplications internally already when it generates the affective module layout in the file system.
-This makes additional after-the-fact deduplication redundant.
 
-Idea: Additional logic how module de-deduplication could be done will come to the conclusion that
-it is either invalid per definition, due to the previously described rules of graph/node identity that applies here,
-or that it is unnecessary, because it was already done by NPM.
-
-This idea shall to be falsified.  
-See [Milestone: after-the-fact component deduplication](https://github.com/CycloneDX/cyclonedx-node-npm/milestone/2)  
-See [Discussion: describe how component de-duplication works](https://github.com/CycloneDX/cyclonedx-node-npm/discussions/307)  
-
-----
+See also: [Component De-duplication](component_deduplication.md)
 
 ## Project -> `bom.metadata.component`
 
