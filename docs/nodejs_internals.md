@@ -34,12 +34,11 @@ So two modules with equal file content are never the same module.
 
 Imagine each NodeJS-module as a node in a directed graph.  
 Each node has a set of properties. Properties represent file-content(checksums), module-name, and so on.
-A directed edge in this graph represents module access in terms of node's module-resolution-system. Therefore, the graph is not implicit.
+A directed edge in this graph represents module access in terms of node's module-resolution-system. Therefore, the graph is not implicit, so that no transitive module-resolution is to be expected. If a module A can (implicit/transitive) load module B, then a directed edge A --> B must exist.
 This graph is per definition in the format of a directed tree.  
-In that graph two nodes are identical, if and only if:  
-a) both sets of node properties are equal, and  
-b) both sets of all direct and transitive edges form equal complete sub-graphs from tree-root to that node, and  
-c) both sets of all direct and transitive edges form equal complete sub-graphs from that node to each accessible leaf.
+In that graph two nodes A and B are identical, if and only if:  
+a) A's sets of node properties is equal to B's sets of node properties, and  
+b) all directed edged of A are identical to all directed edged of B.
 
 ## Examples
 
