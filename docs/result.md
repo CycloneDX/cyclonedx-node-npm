@@ -40,8 +40,8 @@ Each node has a set of properties. Properties represent file-content(checksums),
 A directed edge in this graph represents module access in terms of node's module-resolution-system. Therefore, the graph is not implicit.
 This graph is per definition in the format of a directed tree.  
 In that graph two nodes are identical, if and only if:  
-a) both sets of node properties are equal, and 
-b) both sets of all direct and transitive edges form equal complete sub-graphs from tree-root to that node, and
+a) both sets of node properties are equal, and  
+b) both sets of all direct and transitive edges form equal complete sub-graphs from tree-root to that node, and  
 c) both sets of all direct and transitive edges form equal complete sub-graphs from that node to each accessible leaf.
 
 ### Examples and Visualisation 
