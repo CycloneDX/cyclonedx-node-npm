@@ -46,62 +46,80 @@ c) both sets of all direct and transitive edges form equal complete sub-graphs f
 
 ### Examples and Visualisation 
 
+All the dependencies are in a non-range manner, except
+a loose dependency constraint on `strip-ansi@7.0.1`: it requires `ansi-regex@^6`.
+
 #### Dependency Graph
 
 ```mermaid
 graph TB
-    R  --> A
-    R  --> B
-    A  --> D1
-    B  --> D2
-    D1 --> C
-    D2 --> C
     R((application))
     A((some-module))
     B((other-module))
-    C((ansi-regex<br/>6.0.1))
-    D1((strip-ansi<br/>7.0.0))
-    D2((strip-ansi<br/>7.0.1))
+    C1((strip-ansi<br/>7.0.1))
+    C2((strip-ansi<br/>7.0.1))
+    D1((ansi-regex<br/>6.0.1))
+    D2((ansi-regex<br/>6.0.0))
+    D3((ansi-regex<br/>5.0.1))
+    R  --> A
+    R  --> B
+    R  --> D3
+    A  --> C1
+    B  --> C2
+    A  --> D1
+    B  --> D2
+    C1 --> D1
+    C2 --> D2
 ```
 
-#### the corresponding File-System Tree
+#### a corresponding File-System Tree
 
 ```text
 application
-|- node_modules
-   |- some-module
-   |  |- node_modules
-   |     |- strip-ansi
-   |
-   |- other-module
-   |  |- node_modules
-   |     |- strip-ansi
-   |
-   |- ansi-regex
+└── node_modules
+    ├── ansi-regex
+    ├── other-module
+    │   └── node_modules
+    │       ├── ansi-regex
+    │       └── strip-ansi
+    └── some-module
+        └── node_modules
+            ├── ansi-regex
+            └── strip-ansi
 ```
 
 #### the corresponding Module Resolution Graph
 
 ```mermaid
 graph TB
-    R  --> A
-    R  --> B
-    R  --> C
-    A  --- B
-    B  --- C
-    C  --- A
-    A  --- D1
-    B  --- D2
-    D1 --> B
-    D2 --> A
-    D1 --> C
-    D2 --> C
     R((application))
     A((some-module))
     B((other-module))
-    C((ansi-regex<br/>6.0.1))
-    D1((strip-ansi<br/>7.0.0))
-    D2((strip-ansi<br/>7.0.1))
+    C1((strip-ansi<br/>7.0.1))
+    C2((strip-ansi<br/>7.0.1))
+    D1((ansi-regex<br/>6.0.1))
+    D2((ansi-regex<br/>6.0.0))
+    D3((ansi-regex<br/>5.0.1))
+    R  --> A
+    R  --> B
+    R  --> D3
+    A  --- B
+    B  --- D3
+    D3 --- A
+    A  --- C1
+    A  --- D1
+    B  --- C2
+    B  --- D2
+    C1 --- D1
+    C2 --- D2
+    C1 --> A
+    C1 --> B
+    C2 --> A
+    C2 --> B
+    D1 --> A
+    D1 --> B
+    D2 --> A
+    D2 --> B
 ```
 
 #### the resulting CycloneDX SBOM
