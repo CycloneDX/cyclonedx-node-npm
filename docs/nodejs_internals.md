@@ -15,7 +15,7 @@ When code in package `foo` tries to use/require/access code from a different pac
 then _NodeJS_ will look in `foo`'s own/direct `node_modules` folder.
 If it did not find any `bar` there, then NodeJS traverses all folders upwards and does the same lookup there,
 until it finds any `bar`.  
-This file-based loading behavior happens regardless of components' "dependency graph"
+This file-based loading behavior happens regardless of components' "dependency graph".  
 This loading behavior is - as described - not flat but hierarchical.
 
 See [NodeJS docs](https://nodejs.org/api/packages.html#introduction)
