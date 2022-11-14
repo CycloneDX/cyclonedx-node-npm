@@ -113,9 +113,9 @@ graph TB
 NPM does the needed graph de-duplications internally already when it generates the affective module layout in the file system.
 This makes additional after-the-fact deduplication redundant.
 
-All additional logic how module de-deduplication could be done will come to the conclusion that it is invalid per definition,
-due to the previously described rules of graph/node identity that applies here.
-
+Idea: Additional logic how module de-deduplication could be done will come to the conclusion that
+it is either invalid per definition, due to the previously described rules of graph/node identity that applies here,
+or that it is unnecessary, because it was already done bt NPM.
 See [Milestone: after-the-fact component deduplication](https://github.com/CycloneDX/cyclonedx-node-npm/milestone/2)  
 See [Discussion: describe how component de-duplication works](https://github.com/CycloneDX/cyclonedx-node-npm/discussions/307)  
 
