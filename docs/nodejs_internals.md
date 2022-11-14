@@ -1,6 +1,6 @@
-# Node Internals
+# _NodeJS_ Internals
 
-## _NodeJS_ Basics
+## Basics
 
 A package might have a name, a version, and dependencies.  
 This information is usually stored in a `package.json` file.
@@ -16,6 +16,7 @@ then _NodeJS_ will look in `foo`'s own/direct `node_modules` folder.
 If it did not find any `bar` there, then NodeJS traverses all folders upwards and does the same lookup there,
 until it finds any `bar`.  
 This file-based loading behavior happens regardless of components' "dependency graph"
+This loading behavior is - as described - not flat but hierarchical.
 
 See [NodeJS docs](https://nodejs.org/api/packages.html#introduction)
 
