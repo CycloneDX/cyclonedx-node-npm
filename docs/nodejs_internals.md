@@ -23,14 +23,14 @@ See [NodeJS docs](https://nodejs.org/api/packages.html#introduction)
 ## Implications
 
 Based on this module resolution system it might appear that one complex tree might have multiple individual
-instances of module "bar".
+instances of module `bar`.
 Each of these instances might have a different content.
 If two of these instances had equal content - on a module basis - they are still not the same module,
 as their own `node_modules` might be different, which causes submodules being not the same.
 If two of these instances had equal content - on a module basis - they are still not the same module,
-as their position in the global module-resolution-tree is different and therefore causes this very instances
-to have different dependencies in the first place.  
-So two modules with equal file content are never the same module.
+as their position in the global module-resolution-tree might be different and therefore causes this very instances
+to have different dependencies in the first place. 
+So two modules at different paths with equal file contents are most likely not the same.
 
 Imagine each NodeJS-module as a node in a directed graph.  
 Each node has a set of properties. Properties represent file-content(checksums), module-name, and so on.
