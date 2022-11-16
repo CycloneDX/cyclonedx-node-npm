@@ -37,8 +37,8 @@ Each node has a set of properties. Properties represent file-content(checksums),
 A directed edge in this graph represents module access in terms of node's module-resolution-system. Therefore, the graph is not implicit, so that no transitive module-resolution is to be expected. If a module A can (implicit/transitive) load module B, then a directed edge A --> B must exist.
 This graph is per definition in the format of a directed tree.  
 In that graph two nodes A and B are identical, if and only if:  
-a) A's sets of node properties is equal to B's sets of node properties, and  
-b) the set of directed edges of A are equal to the set of directed edges of B.
+a) A's set of node properties is equal to B's set of node properties, and  
+b) A's set of directed edges is equal to B's set of directed edges.
 
 ## Examples
 
