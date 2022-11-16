@@ -2,7 +2,8 @@
 
 Read [NodeJS internals](nodejs_internals.md) first.
 
-NPM does the needed graph de-duplications internally already when it generates the affective module layout in the file-system.
+NPM does the needed graph de-duplications internally already when it generates the affective module layout in the file-system.  
+See [`npm dedupe` docs](https://github.com/npm/cli/blob/latest/docs/lib/content/commands/npm-dedupe.md).
 
 Idea: Additional logic how module de-deduplication could be done will come to the conclusion that
 it is either invalid per definition, due to the previously described rules of graph/node identity that applies here,
