@@ -36,9 +36,14 @@ Imagine each NodeJS-module as a node in a directed graph.
 Each node has a set of properties. Properties represent file-content(checksums), module-name, and so on.
 A directed edge in this graph represents module access in terms of node's module-resolution-system. Therefore, the graph is not implicit, so that no transitive module-resolution is to be expected. If a module A can (implicit/transitive) load module B, then a directed edge A --> B must exist.
 This graph is per definition in the format of a directed tree.  
-In that graph two nodes A and B are identical, if and only if:  
-a) A's set of node properties is equal to B's set of node properties, and  
-b) A's set of directed edges is equal to B's set of directed edges, requiring the edge to have equal direction and equal nodes.
+In that graph two directed edges E1 and E2 are equal, if and only if:  
+a) E1's start-node equals E2's end-node, and
+b) E1's end-node equals E2's end-node.  
+In that graph two nodes N1 and N2 are equal, if and only if:  
+a) N1's set of node properties is equal to N2's set of node properties, and  
+b) N1's set of directed edges is equal to N2's set of directed edges.
+
+In graph following the given definition, two NodeJS-modules described as nodes can be de-duplicated if they are equal.
 
 ## Examples
 
