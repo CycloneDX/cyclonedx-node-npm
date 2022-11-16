@@ -38,7 +38,7 @@ A directed edge in this graph represents module access in terms of node's module
 This graph is per definition in the format of a directed tree.  
 In that graph two nodes A and B are identical, if and only if:  
 a) A's sets of node properties is equal to B's sets of node properties, and  
-b) all directed edged of A are equal to all directed edged of B.
+b) the set of directed edges of A are equal to the set of directed edges of B.
 
 ## Examples
 
