@@ -86,7 +86,8 @@ graph LR
 
 ### De-duplication
 
-NPM does the needed graph de-duplications internally already when it generates the affective module layout in the file system.
+NPM does the needed graph de-duplications internally already when it generates the affective module layout in the file system.  
+See [`npm dedupe` docs](https://github.com/npm/cli/blob/latest/docs/lib/content/commands/npm-dedupe.md).
 
 See also: [Component De-duplication](component_deduplication.md)
 
