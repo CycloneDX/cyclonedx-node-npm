@@ -39,6 +39,16 @@ do
       --output-format "$format" \
       --output-file "$result_dir/flat/bom.$spec.$format" \
       "$package"
+
+      echo ">>> $result_dir $spec $format deduplicated"
+      mkdir -p "$result_dir/deduplicated"
+      node -- "$BIN_CDX_N" \
+      --deduplicate-components \
+      --spec-version "$spec" \
+      --output-reproducible \
+      --output-format "$format" \
+      --output-file "$result_dir/deduplicated/bom.$spec.$format" \
+      "$package"
     done
   done
 done

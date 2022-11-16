@@ -43,6 +43,7 @@ interface CommandOptions {
   omit: Omittable[]
   specVersion: Spec.Version
   flattenComponents: boolean
+  deduplicateComponents: boolean
   shortPURLs: boolean
   outputReproducible: boolean
   outputFormat: OutputFormat
@@ -67,7 +68,7 @@ function makeCommand (process: NodeJS.Process): Command {
     new Option(
       '--package-lock-only',
       'Whether to only use the lock file, ignoring "node_modules".\n' +
-      'This means the output will be based only on the few details in and the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.'
+      'Enabling this feature means the output will be based only on the few details in and the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.'
     ).default(false)
   ).addOption(
     new Option(
@@ -86,13 +87,20 @@ function makeCommand (process: NodeJS.Process): Command {
     new Option(
       '--flatten-components',
       'Whether to flatten the components.\n' +
-      'This means the actual nesting of node packages is not represented in the SBOM result.'
+      'Enabling this feature means the actual nesting of node packages is not represented in the SBOM result, which causes a massive information loss.'
+    ).default(false)
+  ).addOption(
+    new Option(
+      '--deduplicate-components',
+      'Whether to artificially de-duplicate the node packages.\n' +
+      'Enabling this feature means the actual multiple/parallel installed instances of a packages are displayed as one component, which causes a massive information loss.\n' +
+      'Enabling this feature implies option "--flatten-components=true"'
     ).default(false)
   ).addOption(
     new Option(
       '--short-PURLs',
       'Omit all qualifiers from PackageURLs.\n' +
-      'This causes information loss in trade of shorter PURLs, which might improve digesting these strings.'
+      'Enabling this feature causes information loss in trade of shorter PURLs, which might improve digesting these strings.'
     ).default(false)
   ).addOption(
     new Option(
@@ -107,7 +115,7 @@ function makeCommand (process: NodeJS.Process): Command {
     new Option(
       '--output-reproducible',
       'Whether to go the extra mile and make the output reproducible.\n' +
-      'This requires more resources, and might result in loss of time- and random-based-values.'
+      'Enabling this feature requires more resources, and might result in loss of time- and random-based-values.'
     ).env(
       'BOM_REPRODUCIBLE'
     )
@@ -178,6 +186,10 @@ export function run (process: NodeJS.Process): void {
   program.parse(process.argv)
 
   const options: CommandOptions = program.opts()
+  if (options.deduplicateComponents && !options.flattenComponents) {
+    myConsole.info('INFO  | Found option --deduplicate-components=true - therefore, forced option --flatten-components=true')
+    options.flattenComponents = true
+  }
   myConsole.debug('DEBUG | options: %j', options)
 
   const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
@@ -221,6 +233,7 @@ export function run (process: NodeJS.Process): void {
       omitDependencyTypes: options.omit,
       reproducible: options.outputReproducible,
       flattenComponents: options.flattenComponents,
+      deduplicateComponents: options.deduplicateComponents,
       shortPURLs: options.shortPURLs
     },
     myConsole

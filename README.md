@@ -77,15 +77,20 @@ Options:
                             This might be used, if "npm install" was run with "--force" or "--legacy-peer-deps".
                             (default: false)
   --package-lock-only       Whether to only use the lock file, ignoring "node_modules".
-                            This means the output will be based only on the few details in and the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.
+                            Enabling this feature means the output will be based only on the few details in and the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.
                             (default: false)
   --omit <type...>          Dependency types to omit from the installation tree.
                             (can be set multiple times)
                             (choices: "dev", "optional", "peer", default: "dev" if the NODE_ENV environment variable is set to "production", otherwise empty)
   --flatten-components      Whether to flatten the components.
-                            This means the actual nesting of node packages is not represented in the SBOM result.
+                            Enabling this feature means the actual nesting of node packages is not represented in the SBOM result, which causes a massive information loss.
+                            (default: false)
+  --deduplicate-components  Whether to artificially de-duplicate the node packages.
+                            Enabling this feature means the actual multiple/parallel installed instances of a packages are displayed as one component, which causes a massive information loss.
+                            Enabling this feature implies option "--flatten-components=true"
+                            (default: false)
   --short-PURLs             Omit all qualifiers from PackageURLs.
-                            This causes information loss in trade of shorter PURLs, which might improve digesting these strings. 
+                            Enabling this feature causes information loss in trade of shorter PURLs, which might improve digesting these strings.
                             (default: false)
   --spec-version <version>  Which version of CycloneDX spec to use.
                             (choices: "1.2", "1.3", "1.4", default: "1.4")
