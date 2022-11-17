@@ -11,7 +11,7 @@ Read [NodeJs Internals](nodejs_internals.md) first.
 Let the dependencies be in a non-range manner.
 Let component `strip-ansi@7.0.1` require in a range manner: `ansi-regex@^6`.
 
-### Affective Dependency Graph
+### Dependency Graph
 
 ```mermaid
 graph TB
@@ -34,23 +34,23 @@ graph TB
     C2 --> D2
 ```
 
-### a corresponding File-System Tree
+### A corresponding File-System Tree
 
 ```text
 application
 └── node_modules
-    ├── ansi-regex
+    ├── ansi-regex              <- ansi-regex@5.0.1
     ├── other-module
     │   └── node_modules
-    │       ├── ansi-regex
-    │       └── strip-ansi
+    │       ├── ansi-regex      <- ansi-regex@6.0.0
+    │       └── strip-ansi      <- strip-ansi@7.0.1
     └── some-module
         └── node_modules
-            ├── ansi-regex
-            └── strip-ansi
+            ├── ansi-regex      <- ansi-regex@6.0.1
+            └── strip-ansi      <- strip-ansi@7.0.1
 ```
 
-### the corresponding Module Resolution Graph
+### The corresponding Module Resolution Graph
 
 ```mermaid
 graph LR
@@ -80,16 +80,18 @@ graph LR
     D2 --> A
 ```
 
-### the resulting CycloneDX SBOM
+### The resulting CycloneDX SBOM
 
 ... to be described
 
-### De-duplication
+### Component De-duplication
 
 NPM does the needed graph de-duplications internally already when it generates the affective module layout in the file system.  
 See [`npm dedupe` docs](https://github.com/npm/cli/blob/latest/docs/lib/content/commands/npm-dedupe.md).
 
 See also: [Component De-duplication](component_deduplication.md)
+
+----
 
 ## Project -> `bom.metadata.component`
 
