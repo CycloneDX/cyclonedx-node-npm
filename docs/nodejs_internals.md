@@ -39,7 +39,7 @@ Therefore, the graph is not implicit, so that no transitive module-resolution is
 If a module A can (by any means) load module B, then a directed edge from A to B must exist.
 This graph is per definition in the format of a directed tree.  
 In that graph two directed edges E1 and E2 are equal, if and only if:  
-a) E1's start-node equals E2's end-node, and
+a) E1's start-node equals E2's end-node, and  
 b) E1's end-node equals E2's end-node.  
 In that graph two nodes N1 and N2 are equal, if and only if:  
 a) N1's set of node properties is equal to N2's set of node properties, and  
