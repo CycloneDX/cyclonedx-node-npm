@@ -34,7 +34,9 @@ So two modules at different paths with equal file contents are most likely not t
 
 Imagine each NodeJS-module as a node in a directed graph.  
 Each node has a set of properties. Properties represent file-content(checksums), module-name, and so on.
-A directed edge in this graph represents module access in terms of node's module-resolution-system. Therefore, the graph is not implicit, so that no transitive module-resolution is to be expected. If a module A can (implicit/transitive) load module B, then a directed edge A --> B must exist.
+A directed edge in this graph represents module access in terms of node's module-resolution-system.
+Therefore, the graph is not implicit, so that no transitive module-resolution is to be expected.
+If a module A can (by any means) load module B, then a directed edge from A to B must exist.
 This graph is per definition in the format of a directed tree.  
 In that graph two directed edges E1 and E2 are equal, if and only if:  
 a) E1's start-node equals E2's end-node, and
