@@ -93,15 +93,15 @@ See also: [Component De-duplication](component_deduplication.md)
 
 ----
 
-## Project -> `bom.metadata.component`
+## Project => `bom.metadata.component`
 
 ... to be described
 
-## Package -> `...component`
+## Package => `...component`
 
 ... to be described
 
-## Bundled dependencies -> `...component.components`
+## Bundled dependencies => `...component.components`
 
 Some projects might have [`bundleDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#bundledependencies),
 which means, that dependencies are part of a package
