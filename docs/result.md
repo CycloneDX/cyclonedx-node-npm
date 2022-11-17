@@ -2,20 +2,106 @@
 
 This document will describe, how certain SBOM results should be deducted.
 
-## Basics
+## Preamble 
 
-A package might have a name, a version, and dependencies.  
-This information is usually stored in a `package.json` file.
+Read [NodeJs Internals](nodejs_internals.md) first.
 
-## Project -> `bom.metadata.component`
+## Examples and Visualisation
+
+Let the dependencies be in a non-range manner.
+Let component `strip-ansi@7.0.1` require in a range manner: `ansi-regex@^6`.
+
+### Dependency Graph
+
+```mermaid
+graph TB
+    R((application))
+    A((some-module))
+    B((other-module))
+    C1((strip-ansi<br/>7.0.1))
+    C2((strip-ansi<br/>7.0.1))
+    D1((ansi-regex<br/>6.0.1))
+    D2((ansi-regex<br/>6.0.0))
+    D3((ansi-regex<br/>5.0.1))
+    R  --> A
+    R  --> B
+    R  --> D3
+    A  --> C1
+    B  --> C2
+    A  --> D1
+    B  --> D2
+    C1 --> D1
+    C2 --> D2
+```
+
+### A corresponding File-System Tree
+
+```text
+application
+└── node_modules
+    ├── ansi-regex              <- @5.0.1
+    ├── other-module
+    │   └── node_modules
+    │       ├── ansi-regex      <- @6.0.0
+    │       └── strip-ansi      <- @7.0.1
+    └── some-module
+        └── node_modules
+            ├── ansi-regex      <- @6.0.1
+            └── strip-ansi      <- @7.0.1
+```
+
+### The corresponding Module Resolution Graph
+
+```mermaid
+graph LR
+    R((application))
+    A((some-module))
+    B((other-module))
+    C1((strip-ansi<br/>7.0.1))
+    C2((strip-ansi<br/>7.0.1))
+    D1((ansi-regex<br/>6.0.1))
+    D2((ansi-regex<br/>6.0.0))
+    D3((ansi-regex<br/>5.0.1))
+    R  --> A
+    R  --> B
+    R  --> D3
+    A  --- B
+    B  --- D3
+    D3 --- A
+    A  --- C1
+    B  --- C2
+    A  --- D1
+    B  --- D2
+    C1 --- D1
+    C2 --- D2
+    C1 --> B
+    C2 --> A
+    D1 --> B
+    D2 --> A
+```
+
+### The resulting CycloneDX SBOM
 
 ... to be described
 
-## Package -> `...component`
+### Component De-duplication
+
+NPM does the needed graph de-duplications internally already when it generates the affective module layout in the file system.  
+See [`npm dedupe` docs](https://github.com/npm/cli/blob/latest/docs/lib/content/commands/npm-dedupe.md).
+
+See also: [Component De-duplication](component_deduplication.md)
+
+----
+
+## Project => `bom.metadata.component`
 
 ... to be described
 
-## Bundled dependencies -> `...component.components`
+## Package => `...component`
+
+... to be described
+
+## Bundled dependencies => `...component.components`
 
 Some projects might have [`bundleDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#bundledependencies),
 which means, that dependencies are part of a package
