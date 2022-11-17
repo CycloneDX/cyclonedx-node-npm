@@ -39,15 +39,15 @@ graph TB
 ```text
 application
 └── node_modules
-    ├── ansi-regex              <- ansi-regex@5.0.1
+    ├── ansi-regex              <- @5.0.1
     ├── other-module
     │   └── node_modules
-    │       ├── ansi-regex      <- ansi-regex@6.0.0
-    │       └── strip-ansi      <- strip-ansi@7.0.1
+    │       ├── ansi-regex      <- @6.0.0
+    │       └── strip-ansi      <- @7.0.1
     └── some-module
         └── node_modules
-            ├── ansi-regex      <- ansi-regex@6.0.1
-            └── strip-ansi      <- strip-ansi@7.0.1
+            ├── ansi-regex      <- @6.0.1
+            └── strip-ansi      <- @7.0.1
 ```
 
 ### The corresponding Module Resolution Graph
