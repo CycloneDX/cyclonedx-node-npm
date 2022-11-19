@@ -4,12 +4,19 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.6.1 - 2022-11-19
+
+Maintenance release
+
+* Docs
+  * Enhanced documentation regarding NodeJS/NPM internals, package-dedupe and results (via [#331]) 
 * Misc
   * Added test for flattened results (via [#312])
 * Build
   * Use _TypeScript_ `v4.9.3` now, was `v4.8.4` (via [#333])
 
 [#312]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/312
+[#331]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/331
 [#333]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/333
 
 ## 1.6.0 - 2022-11-12
