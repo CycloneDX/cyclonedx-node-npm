@@ -6,8 +6,11 @@ All notable changes to this project will be documented in this file.
 
 * Misc
   * Added test for flattened results (via [#312])
+* Build
+  * Use _TypeScript_ `v4.9.3` now, was `v4.8.4` (via [#333])
 
 [#312]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/312
+[#333]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/333
 
 ## 1.6.0 - 2022-11-12
 
