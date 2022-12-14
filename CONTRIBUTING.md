@@ -41,9 +41,9 @@ Apply the coding style via:
 npm run cs-fix
 ```
 
-## Sign your commits
+## Sign off your commits
 
-Please sign your commits,
+Please sign off your commits,
 to show that you agree to publish your changes under the current terms and licenses of the project.
 
 ```shell
