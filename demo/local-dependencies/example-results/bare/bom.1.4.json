@@ -8,7 +8,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.6.0",
+        "version": "1.6.1",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -89,9 +89,9 @@
     },
     {
       "type": "library",
-      "name": "my-local-b",
+      "name": "my-local-b-off",
       "version": "0.0.0",
-      "bom-ref": "my-local-b@0.0.0",
+      "bom-ref": "my-local-b-off@0.0.0",
       "description": "demo: my-local-b-off - a package with a different name than its dir",
       "licenses": [
         {
@@ -100,7 +100,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b@0.0.0",
+      "purl": "pkg:npm/my-local-b-off@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:path",
@@ -149,11 +149,11 @@
     {
       "ref": "my-local-a@0.0.0",
       "dependsOn": [
-        "my-local-b@0.0.0"
+        "my-local-b-off@0.0.0"
       ]
     },
     {
-      "ref": "my-local-b@0.0.0"
+      "ref": "my-local-b-off@0.0.0"
     },
     {
       "ref": "my-noname@0.0.0"

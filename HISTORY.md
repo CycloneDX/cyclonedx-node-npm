@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Added
+  * SBOM result might have `serialNumber` populated ([#375] via [#376])
+
+[#375]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/375
+[#376]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/376
+
 ## 1.6.1 - 2022-11-19
 
 Maintenance release

@@ -5,7 +5,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.6.0</version>
+        <version>1.6.1</version>
       </tool>
     </tools>
     <component type="application" bom-ref="juice-shop@14.1.1">
@@ -5384,31 +5384,6 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="cacheable-request@2.1.4|lowercase-keys@1.0.0">
-      <author>Sindre Sorhus</author>
-      <name>lowercase-keys</name>
-      <version>1.0.0</version>
-      <description>Lowercase the keys of an object</description>
-      <hashes>
-        <hash alg="SHA-512">44f957d3e3c7bafc550d9ef15fe101540a7846c5713ff4dd0d237698961d8aad4b7381f3ec45128d423b459aca2a59ab2335617fa268dacb63efefa055aad2d0</hash>
-      </hashes>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:npm/lowercase-keys@1.0.0</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-1.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>sindresorhus/lowercase-keys</url>
-          <comment>as detected from PackageJson property "repository"</comment>
-        </reference>
-      </externalReferences>
-    </component>
     <component type="library" bom-ref="call-bind@1.0.2">
       <author>Jordan Harband &lt;ljharb@gmail.com&gt;</author>
       <name>call-bind</name>
@@ -7292,23 +7267,23 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="core-util-is@1.0.3">
+    <component type="library" bom-ref="core-util-is@1.0.2">
       <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
       <name>core-util-is</name>
-      <version>1.0.3</version>
+      <version>1.0.2</version>
       <description>The `util.is*` functions introduced in Node v0.12.</description>
       <hashes>
-        <hash alg="SHA-512">65006f8b50dca49e060ea6a78ee719d878f7c043b9a590d2f3d0566e472bbddc64b09a2bc140c365a997f65745929f5ac369660432e090e6c40380d6349f4561</hash>
+        <hash alg="SHA-512">de5ab3e588d64d89d6e9d9436b94cb69309c4a17daaf57b8d2b99c255c020490ba996945ba3d1e0872049661b5839932b89fc60fef169f814509ccf88093df69</hash>
       </hashes>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/core-util-is@1.0.3</purl>
+      <purl>pkg:npm/core-util-is@1.0.2</purl>
       <externalReferences>
         <reference type="distribution">
-          <url>https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.3.tgz</url>
+          <url>https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
@@ -12263,23 +12238,23 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="glob@7.2.3">
+    <component type="library" bom-ref="glob@7.1.7">
       <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
       <name>glob</name>
-      <version>7.2.3</version>
+      <version>7.1.7</version>
       <description>a little globber</description>
       <hashes>
-        <hash alg="SHA-512">9c5474ccba54d9809a471c28089bcbe94bc21f6245c85548bf04cbb087f6d40b8794cb240358614dd93e2e5609b4e958b7dbfa76fb330f604646a04bfa240af5</hash>
+        <hash alg="SHA-512">3af0fd10dccf2db7a010d9d83f95147c9222ad3838f97c0c5866907d04d8d097a7c4dbef20a3f7537fed01048f22efe51f15d84999a95e55077aa00874acc12d</hash>
       </hashes>
       <licenses>
         <license>
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/glob@7.2.3</purl>
+      <purl>pkg:npm/glob@7.1.7</purl>
       <externalReferences>
         <reference type="distribution">
-          <url>https://registry.npmjs.org/glob/-/glob-7.2.3.tgz</url>
+          <url>https://registry.npmjs.org/glob/-/glob-7.1.7.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="vcs">
@@ -12288,7 +12263,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="glob@7.2.3|brace-expansion@1.1.11">
+    <component type="library" bom-ref="glob@7.1.7|brace-expansion@1.1.11">
       <author>Julian Gruber</author>
       <name>brace-expansion</name>
       <version>1.1.11</version>
@@ -12317,7 +12292,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="glob@7.2.3|minimatch@3.1.2">
+    <component type="library" bom-ref="glob@7.1.7|minimatch@3.1.2">
       <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me)</author>
       <name>minimatch</name>
       <version>3.1.2</version>
@@ -13203,31 +13178,6 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/glob/-/glob-5.0.15.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git://github.com/isaacs/node-glob.git</url>
-          <comment>as detected from PackageJson property "repository.url"</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="grunt@1.5.3|glob@7.1.7">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
-      <name>glob</name>
-      <version>7.1.7</version>
-      <description>a little globber</description>
-      <hashes>
-        <hash alg="SHA-512">3af0fd10dccf2db7a010d9d83f95147c9222ad3838f97c0c5866907d04d8d097a7c4dbef20a3f7537fed01048f22efe51f15d84999a95e55077aa00874acc12d</hash>
-      </hashes>
-      <licenses>
-        <license>
-          <id>ISC</id>
-        </license>
-      </licenses>
-      <purl>pkg:npm/glob@7.1.7</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/glob/-/glob-7.1.7.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="vcs">
@@ -17263,30 +17213,6 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="libxmljs2@0.30.1|nan@2.15.0">
-      <name>nan</name>
-      <version>2.15.0</version>
-      <description>Native Abstractions for Node.js: C++ header for Node 0.8 -&gt; 14 compatibility</description>
-      <hashes>
-        <hash alg="SHA-512">f19b6f12703673969809961dd5cbe076753a72ac22c51a1883bd313cb594c2ce4e4536bf967c3ebb86a68b1452fc0739539990560a7da679525276cd58569665</hash>
-      </hashes>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:npm/nan@2.15.0</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/nan/-/nan-2.15.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git://github.com/nodejs/nan.git</url>
-          <comment>as detected from PackageJson property "repository.url"</comment>
-        </reference>
-      </externalReferences>
-    </component>
     <component type="library" bom-ref="liftup@3.0.1">
       <author>Grunt Development Team (https://gruntjs.com/development-team)</author>
       <name>liftup</name>
@@ -17874,23 +17800,23 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="lowercase-keys@1.0.1">
+    <component type="library" bom-ref="lowercase-keys@1.0.0">
       <author>Sindre Sorhus</author>
       <name>lowercase-keys</name>
-      <version>1.0.1</version>
+      <version>1.0.0</version>
       <description>Lowercase the keys of an object</description>
       <hashes>
-        <hash alg="SHA-512">1b62e3eb5b570e754514e8bc55976cf92a108ed402ddd82890a7431b69939b5b71e26e743541c1399481c10407cb2d15d760342531b889c7d9407fb13f287c54</hash>
+        <hash alg="SHA-512">44f957d3e3c7bafc550d9ef15fe101540a7846c5713ff4dd0d237698961d8aad4b7381f3ec45128d423b459aca2a59ab2335617fa268dacb63efefa055aad2d0</hash>
       </hashes>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lowercase-keys@1.0.1</purl>
+      <purl>pkg:npm/lowercase-keys@1.0.0</purl>
       <externalReferences>
         <reference type="distribution">
-          <url>https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-1.0.1.tgz</url>
+          <url>https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-1.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="vcs">
@@ -19229,22 +19155,22 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="nan@2.17.0">
+    <component type="library" bom-ref="nan@2.15.0">
       <name>nan</name>
-      <version>2.17.0</version>
-      <description>Native Abstractions for Node.js: C++ header for Node 0.8 -&gt; 18 compatibility</description>
+      <version>2.15.0</version>
+      <description>Native Abstractions for Node.js: C++ header for Node 0.8 -&gt; 14 compatibility</description>
       <hashes>
-        <hash alg="SHA-512">d994e0b65d2726c3b42900a3129c5c22be43f98bfdd299538ad66df4905f42f5490d2e6c78c97714ebec877fbd0a86165dfff597939a673cc5ea70e6e1c6a069</hash>
+        <hash alg="SHA-512">f19b6f12703673969809961dd5cbe076753a72ac22c51a1883bd313cb594c2ce4e4536bf967c3ebb86a68b1452fc0739539990560a7da679525276cd58569665</hash>
       </hashes>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/nan@2.17.0</purl>
+      <purl>pkg:npm/nan@2.15.0</purl>
       <externalReferences>
         <reference type="distribution">
-          <url>https://registry.npmjs.org/nan/-/nan-2.17.0.tgz</url>
+          <url>https://registry.npmjs.org/nan/-/nan-2.15.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="vcs">
@@ -29917,35 +29843,6 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="verror@1.10.0|core-util-is@1.0.2">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
-      <name>core-util-is</name>
-      <version>1.0.2</version>
-      <description>The `util.is*` functions introduced in Node v0.12.</description>
-      <hashes>
-        <hash alg="SHA-512">de5ab3e588d64d89d6e9d9436b94cb69309c4a17daaf57b8d2b99c255c020490ba996945ba3d1e0872049661b5839932b89fc60fef169f814509ccf88093df69</hash>
-      </hashes>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:npm/core-util-is@1.0.2</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/isaacs/core-util-is/issues</url>
-          <comment>as detected from PackageJson property "bugs.url"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git://github.com/isaacs/core-util-is</url>
-          <comment>as detected from PackageJson property "repository.url"</comment>
-        </reference>
-      </externalReferences>
-    </component>
     <component type="library" bom-ref="vm2@3.9.11">
       <author>Patrik Simek</author>
       <name>vm2</name>
@@ -31668,7 +31565,7 @@
     </dependency>
     <dependency ref="archive-type@4.0.0|file-type@4.4.0"/>
     <dependency ref="archiver-utils@1.3.0">
-      <dependency ref="glob@7.2.3"/>
+      <dependency ref="glob@7.1.7"/>
       <dependency ref="graceful-fs@4.2.10"/>
       <dependency ref="lazystream@1.0.1"/>
       <dependency ref="lodash@4.17.21"/>
@@ -31679,7 +31576,7 @@
       <dependency ref="archiver-utils@1.3.0"/>
       <dependency ref="async@2.6.4"/>
       <dependency ref="buffer-crc32@0.2.13"/>
-      <dependency ref="glob@7.2.3"/>
+      <dependency ref="glob@7.1.7"/>
       <dependency ref="lodash@4.17.21"/>
       <dependency ref="readable-stream@2.3.7"/>
       <dependency ref="tar-stream@1.6.2"/>
@@ -31827,7 +31724,7 @@
     <dependency ref="busboy@0.2.14|readable-stream@1.1.14">
       <dependency ref="busboy@0.2.14|isarray@0.0.1"/>
       <dependency ref="busboy@0.2.14|string_decoder@0.10.31"/>
-      <dependency ref="core-util-is@1.0.3"/>
+      <dependency ref="core-util-is@1.0.2"/>
       <dependency ref="inherits@2.0.4"/>
     </dependency>
     <dependency ref="busboy@0.2.14|string_decoder@0.10.31"/>
@@ -31838,7 +31735,7 @@
       <dependency ref="@npmcli/move-file@1.1.2"/>
       <dependency ref="chownr@2.0.0"/>
       <dependency ref="fs-minipass@2.1.0"/>
-      <dependency ref="glob@7.2.3"/>
+      <dependency ref="glob@7.1.7"/>
       <dependency ref="infer-owner@1.0.4"/>
       <dependency ref="lru-cache@6.0.0"/>
       <dependency ref="minipass-collect@1.0.2"/>
@@ -31866,15 +31763,14 @@
     </dependency>
     <dependency ref="cacheable-request@2.1.4">
       <dependency ref="cacheable-request@2.1.4|get-stream@3.0.0"/>
-      <dependency ref="cacheable-request@2.1.4|lowercase-keys@1.0.0"/>
       <dependency ref="clone-response@1.0.2"/>
       <dependency ref="http-cache-semantics@3.8.1"/>
       <dependency ref="keyv@3.0.0"/>
+      <dependency ref="lowercase-keys@1.0.0"/>
       <dependency ref="normalize-url@2.0.1"/>
       <dependency ref="responselike@1.0.2"/>
     </dependency>
     <dependency ref="cacheable-request@2.1.4|get-stream@3.0.0"/>
-    <dependency ref="cacheable-request@2.1.4|lowercase-keys@1.0.0"/>
     <dependency ref="call-bind@1.0.2">
       <dependency ref="function-bind@1.1.1"/>
       <dependency ref="get-intrinsic@1.1.3"/>
@@ -32064,7 +31960,7 @@
     <dependency ref="cookie-signature@1.0.6"/>
     <dependency ref="cookie@0.4.1"/>
     <dependency ref="copy-descriptor@0.1.1"/>
-    <dependency ref="core-util-is@1.0.3"/>
+    <dependency ref="core-util-is@1.0.2"/>
     <dependency ref="cors@2.8.5">
       <dependency ref="object-assign@4.1.1"/>
       <dependency ref="vary@1.1.2"/>
@@ -32178,7 +32074,7 @@
     </dependency>
     <dependency ref="dicer@0.2.5|isarray@0.0.1"/>
     <dependency ref="dicer@0.2.5|readable-stream@1.1.14">
-      <dependency ref="core-util-is@1.0.3"/>
+      <dependency ref="core-util-is@1.0.2"/>
       <dependency ref="dicer@0.2.5|isarray@0.0.1"/>
       <dependency ref="dicer@0.2.5|string_decoder@0.10.31"/>
       <dependency ref="inherits@2.0.4"/>
@@ -32563,7 +32459,7 @@
       <dependency ref="minimist@1.2.7"/>
     </dependency>
     <dependency ref="fstream@1.0.12|rimraf@2.7.1">
-      <dependency ref="glob@7.2.3"/>
+      <dependency ref="glob@7.1.7"/>
     </dependency>
     <dependency ref="function-bind@1.1.1"/>
     <dependency ref="functions-have-names@1.2.3"/>
@@ -32605,20 +32501,20 @@
     <dependency ref="glob-parent@5.1.2|is-glob@4.0.3">
       <dependency ref="is-extglob@2.1.1"/>
     </dependency>
-    <dependency ref="glob@7.2.3">
+    <dependency ref="glob@7.1.7">
       <dependency ref="fs.realpath@1.0.0"/>
-      <dependency ref="glob@7.2.3|minimatch@3.1.2"/>
+      <dependency ref="glob@7.1.7|minimatch@3.1.2"/>
       <dependency ref="inflight@1.0.6"/>
       <dependency ref="inherits@2.0.4"/>
       <dependency ref="once@1.4.0"/>
       <dependency ref="path-is-absolute@1.0.1"/>
     </dependency>
-    <dependency ref="glob@7.2.3|brace-expansion@1.1.11">
+    <dependency ref="glob@7.1.7|brace-expansion@1.1.11">
       <dependency ref="balanced-match@1.0.2"/>
       <dependency ref="concat-map@0.0.1"/>
     </dependency>
-    <dependency ref="glob@7.2.3|minimatch@3.1.2">
-      <dependency ref="glob@7.2.3|brace-expansion@1.1.11"/>
+    <dependency ref="glob@7.1.7|minimatch@3.1.2">
+      <dependency ref="glob@7.1.7|brace-expansion@1.1.11"/>
     </dependency>
     <dependency ref="global-modules@1.0.0">
       <dependency ref="global-prefix@1.0.2"/>
@@ -32648,7 +32544,7 @@
       <dependency ref="into-stream@3.1.0"/>
       <dependency ref="is-retry-allowed@1.2.0"/>
       <dependency ref="isurl@1.0.0"/>
-      <dependency ref="lowercase-keys@1.0.1"/>
+      <dependency ref="lowercase-keys@1.0.0"/>
       <dependency ref="mimic-response@1.0.1"/>
       <dependency ref="p-cancelable@0.4.1"/>
       <dependency ref="p-timeout@2.0.1"/>
@@ -32732,12 +32628,12 @@
       <dependency ref="dateformat@3.0.3"/>
       <dependency ref="eventemitter2@0.4.14"/>
       <dependency ref="exit@0.1.2"/>
+      <dependency ref="glob@7.1.7"/>
       <dependency ref="grunt-cli@1.4.3"/>
       <dependency ref="grunt-known-options@2.0.0"/>
       <dependency ref="grunt-legacy-log@3.0.0"/>
       <dependency ref="grunt-legacy-util@2.0.1"/>
       <dependency ref="grunt@1.5.3|findup-sync@0.3.0"/>
-      <dependency ref="grunt@1.5.3|glob@7.1.7"/>
       <dependency ref="grunt@1.5.3|minimatch@3.0.8"/>
       <dependency ref="iconv-lite@0.4.24"/>
       <dependency ref="js-yaml@3.14.1"/>
@@ -32753,14 +32649,6 @@
       <dependency ref="grunt@1.5.3|findup-sync@0.3.0|glob@5.0.15"/>
     </dependency>
     <dependency ref="grunt@1.5.3|findup-sync@0.3.0|glob@5.0.15">
-      <dependency ref="grunt@1.5.3|minimatch@3.0.8"/>
-      <dependency ref="inflight@1.0.6"/>
-      <dependency ref="inherits@2.0.4"/>
-      <dependency ref="once@1.4.0"/>
-      <dependency ref="path-is-absolute@1.0.1"/>
-    </dependency>
-    <dependency ref="grunt@1.5.3|glob@7.1.7">
-      <dependency ref="fs.realpath@1.0.0"/>
       <dependency ref="grunt@1.5.3|minimatch@3.0.8"/>
       <dependency ref="inflight@1.0.6"/>
       <dependency ref="inherits@2.0.4"/>
@@ -32838,7 +32726,7 @@
     </dependency>
     <dependency ref="htmlparser2@3.3.0|isarray@0.0.1"/>
     <dependency ref="htmlparser2@3.3.0|readable-stream@1.0.34">
-      <dependency ref="core-util-is@1.0.3"/>
+      <dependency ref="core-util-is@1.0.2"/>
       <dependency ref="htmlparser2@3.3.0|isarray@0.0.1"/>
       <dependency ref="htmlparser2@3.3.0|string_decoder@0.10.31"/>
       <dependency ref="inherits@2.0.4"/>
@@ -32901,7 +32789,7 @@
     </dependency>
     <dependency ref="iltorb@2.4.5">
       <dependency ref="detect-libc@1.0.3"/>
-      <dependency ref="nan@2.17.0"/>
+      <dependency ref="nan@2.15.0"/>
       <dependency ref="npmlog@4.1.2"/>
       <dependency ref="prebuild-install@5.3.6"/>
       <dependency ref="which-pm-runs@1.1.0"/>
@@ -33104,7 +32992,7 @@
       <dependency ref="finale-rest@1.2.0"/>
       <dependency ref="fs-extra@9.1.0"/>
       <dependency ref="fuzzball@1.4.0"/>
-      <dependency ref="glob@7.2.3"/>
+      <dependency ref="glob@7.1.7"/>
       <dependency ref="graceful-fs@4.2.10"/>
       <dependency ref="grunt-contrib-compress@1.6.0"/>
       <dependency ref="grunt-replace-json@0.1.0"/>
@@ -33188,9 +33076,8 @@
     <dependency ref="libxmljs2@0.30.1">
       <dependency ref="@mapbox/node-pre-gyp@1.0.10"/>
       <dependency ref="bindings@1.5.0"/>
-      <dependency ref="libxmljs2@0.30.1|nan@2.15.0"/>
+      <dependency ref="nan@2.15.0"/>
     </dependency>
-    <dependency ref="libxmljs2@0.30.1|nan@2.15.0"/>
     <dependency ref="liftup@3.0.1">
       <dependency ref="extend@3.0.2"/>
       <dependency ref="fined@1.2.0"/>
@@ -33250,7 +33137,7 @@
     <dependency ref="loose-envify@1.4.0">
       <dependency ref="js-tokens@4.0.0"/>
     </dependency>
-    <dependency ref="lowercase-keys@1.0.1"/>
+    <dependency ref="lowercase-keys@1.0.0"/>
     <dependency ref="lru-cache@6.0.0">
       <dependency ref="yallist@4.0.0"/>
     </dependency>
@@ -33405,7 +33292,7 @@
       <dependency ref="minimist@1.2.7"/>
     </dependency>
     <dependency ref="mustache@4.2.0"/>
-    <dependency ref="nan@2.17.0"/>
+    <dependency ref="nan@2.15.0"/>
     <dependency ref="nanomatch@1.2.13">
       <dependency ref="arr-diff@4.0.0"/>
       <dependency ref="array-unique@0.3.2"/>
@@ -33442,7 +33329,7 @@
     </dependency>
     <dependency ref="node-gyp@8.4.1">
       <dependency ref="env-paths@2.2.1"/>
-      <dependency ref="glob@7.2.3"/>
+      <dependency ref="glob@7.1.7"/>
       <dependency ref="graceful-fs@4.2.10"/>
       <dependency ref="make-fetch-happen@9.1.0"/>
       <dependency ref="node-gyp@8.4.1|nopt@5.0.0"/>
@@ -33521,7 +33408,7 @@
       <dependency ref="osenv@0.1.5"/>
     </dependency>
     <dependency ref="node-pre-gyp@0.15.0|rimraf@2.7.1">
-      <dependency ref="glob@7.2.3"/>
+      <dependency ref="glob@7.1.7"/>
     </dependency>
     <dependency ref="node-pre-gyp@0.15.0|safe-buffer@5.2.1"/>
     <dependency ref="node-pre-gyp@0.15.0|semver@5.7.1"/>
@@ -33859,7 +33746,7 @@
     </dependency>
     <dependency ref="read-pkg@4.0.1|pify@3.0.0"/>
     <dependency ref="readable-stream@2.3.7">
-      <dependency ref="core-util-is@1.0.3"/>
+      <dependency ref="core-util-is@1.0.2"/>
       <dependency ref="inherits@2.0.4"/>
       <dependency ref="process-nextick-args@2.0.1"/>
       <dependency ref="readable-stream@2.3.7|isarray@1.0.0"/>
@@ -33997,14 +33884,14 @@
       <dependency ref="supports-preserve-symlinks-flag@1.0.0"/>
     </dependency>
     <dependency ref="responselike@1.0.2">
-      <dependency ref="lowercase-keys@1.0.1"/>
+      <dependency ref="lowercase-keys@1.0.0"/>
     </dependency>
     <dependency ref="restructure@2.0.1"/>
     <dependency ref="ret@0.1.15"/>
     <dependency ref="retry-as-promised@6.1.0"/>
     <dependency ref="retry@0.10.1"/>
     <dependency ref="rimraf@3.0.2">
-      <dependency ref="glob@7.2.3"/>
+      <dependency ref="glob@7.1.7"/>
     </dependency>
     <dependency ref="rxjs@6.6.7">
       <dependency ref="rxjs@6.6.7|tslib@1.14.1"/>
@@ -34453,7 +34340,7 @@
       <dependency ref="typescript@4.8.4"/>
     </dependency>
     <dependency ref="ts-node-dev@1.1.8|rimraf@2.7.1">
-      <dependency ref="glob@7.2.3"/>
+      <dependency ref="glob@7.1.7"/>
     </dependency>
     <dependency ref="ts-node@9.1.1">
       <dependency ref="arg@4.1.3"/>
@@ -34586,10 +34473,9 @@
     <dependency ref="vary@1.1.2"/>
     <dependency ref="verror@1.10.0">
       <dependency ref="assert-plus@1.0.0"/>
+      <dependency ref="core-util-is@1.0.2"/>
       <dependency ref="extsprintf@1.3.0"/>
-      <dependency ref="verror@1.10.0|core-util-is@1.0.2"/>
     </dependency>
-    <dependency ref="verror@1.10.0|core-util-is@1.0.2"/>
     <dependency ref="vm2@3.9.11">
       <dependency ref="acorn-walk@8.2.0"/>
       <dependency ref="vm2@3.9.11|acorn@8.8.1"/>
