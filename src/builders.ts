@@ -225,6 +225,7 @@ export class BomBuilder {
     }
 
     if (!this.reproducible) {
+      bom.serialNumber = this.makeRandomSerialNumber()
       bom.metadata.timestamp = new Date()
     }
 
@@ -475,6 +476,13 @@ export class BomBuilder {
         property.value = relativePath(rootPath, property.value).replace(dirSep, '/')
       }
     }
+  }
+
+  private makeRandomSerialNumber (): string {
+    const r = [0, 1, 2, 3, 4, 5, 6, 7].map(
+      () => Math.round(Math.random() * 65536).toString(16).padStart(4, '0')
+    )
+    return `urn:uuid:${r[0]}${r[1]}-${r[2]}-${r[3]}-${r[4]}-${r[5]}${r[6]}${r[7]}`
   }
 }
 

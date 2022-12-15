@@ -8,7 +8,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.6.0"
+        "version": "1.6.1"
       }
     ],
     "component": {
@@ -7237,40 +7237,6 @@
     },
     {
       "type": "library",
-      "name": "lowercase-keys",
-      "version": "1.0.0",
-      "bom-ref": "cacheable-request@2.1.4|lowercase-keys@1.0.0",
-      "author": "Sindre Sorhus",
-      "description": "Lowercase the keys of an object",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "44f957d3e3c7bafc550d9ef15fe101540a7846c5713ff4dd0d237698961d8aad4b7381f3ec45128d423b459aca2a59ab2335617fa268dacb63efefa055aad2d0"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/lowercase-keys@1.0.0",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-1.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "sindresorhus/lowercase-keys",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "call-bind",
       "version": "1.0.2",
       "bom-ref": "call-bind@1.0.2",
@@ -9814,14 +9780,14 @@
     {
       "type": "library",
       "name": "core-util-is",
-      "version": "1.0.3",
-      "bom-ref": "core-util-is@1.0.3",
+      "version": "1.0.2",
+      "bom-ref": "core-util-is@1.0.2",
       "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
       "description": "The `util.is*` functions introduced in Node v0.12.",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "65006f8b50dca49e060ea6a78ee719d878f7c043b9a590d2f3d0566e472bbddc64b09a2bc140c365a997f65745929f5ac369660432e090e6c40380d6349f4561"
+          "content": "de5ab3e588d64d89d6e9d9436b94cb69309c4a17daaf57b8d2b99c255c020490ba996945ba3d1e0872049661b5839932b89fc60fef169f814509ccf88093df69"
         }
       ],
       "licenses": [
@@ -9831,10 +9797,10 @@
           }
         }
       ],
-      "purl": "pkg:npm/core-util-is@1.0.3",
+      "purl": "pkg:npm/core-util-is@1.0.2",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.3.tgz",
+          "url": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         },
@@ -16526,14 +16492,14 @@
     {
       "type": "library",
       "name": "glob",
-      "version": "7.2.3",
-      "bom-ref": "glob@7.2.3",
+      "version": "7.1.7",
+      "bom-ref": "glob@7.1.7",
       "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
       "description": "a little globber",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "9c5474ccba54d9809a471c28089bcbe94bc21f6245c85548bf04cbb087f6d40b8794cb240358614dd93e2e5609b4e958b7dbfa76fb330f604646a04bfa240af5"
+          "content": "3af0fd10dccf2db7a010d9d83f95147c9222ad3838f97c0c5866907d04d8d097a7c4dbef20a3f7537fed01048f22efe51f15d84999a95e55077aa00874acc12d"
         }
       ],
       "licenses": [
@@ -16543,10 +16509,10 @@
           }
         }
       ],
-      "purl": "pkg:npm/glob@7.2.3",
+      "purl": "pkg:npm/glob@7.1.7",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/glob/-/glob-7.2.3.tgz",
+          "url": "https://registry.npmjs.org/glob/-/glob-7.1.7.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         },
@@ -16561,7 +16527,7 @@
       "type": "library",
       "name": "brace-expansion",
       "version": "1.1.11",
-      "bom-ref": "glob@7.2.3|brace-expansion@1.1.11",
+      "bom-ref": "glob@7.1.7|brace-expansion@1.1.11",
       "author": "Julian Gruber",
       "description": "Brace expansion as known from sh/bash",
       "hashes": [
@@ -16600,7 +16566,7 @@
       "type": "library",
       "name": "minimatch",
       "version": "3.1.2",
-      "bom-ref": "glob@7.2.3|minimatch@3.1.2",
+      "bom-ref": "glob@7.1.7|minimatch@3.1.2",
       "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me)",
       "description": "a glob matcher in javascript",
       "hashes": [
@@ -17797,40 +17763,6 @@
       "externalReferences": [
         {
           "url": "https://registry.npmjs.org/glob/-/glob-5.0.15.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "git://github.com/isaacs/node-glob.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "glob",
-      "version": "7.1.7",
-      "bom-ref": "grunt@1.5.3|glob@7.1.7",
-      "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
-      "description": "a little globber",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "3af0fd10dccf2db7a010d9d83f95147c9222ad3838f97c0c5866907d04d8d097a7c4dbef20a3f7537fed01048f22efe51f15d84999a95e55077aa00874acc12d"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/glob@7.1.7",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/glob/-/glob-7.1.7.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         },
@@ -23262,39 +23194,6 @@
     },
     {
       "type": "library",
-      "name": "nan",
-      "version": "2.15.0",
-      "bom-ref": "libxmljs2@0.30.1|nan@2.15.0",
-      "description": "Native Abstractions for Node.js: C++ header for Node 0.8 -> 14 compatibility",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "f19b6f12703673969809961dd5cbe076753a72ac22c51a1883bd313cb594c2ce4e4536bf967c3ebb86a68b1452fc0739539990560a7da679525276cd58569665"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/nan@2.15.0",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/nan/-/nan-2.15.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "git://github.com/nodejs/nan.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "liftup",
       "version": "3.0.1",
       "bom-ref": "liftup@3.0.1",
@@ -24090,14 +23989,14 @@
     {
       "type": "library",
       "name": "lowercase-keys",
-      "version": "1.0.1",
-      "bom-ref": "lowercase-keys@1.0.1",
+      "version": "1.0.0",
+      "bom-ref": "lowercase-keys@1.0.0",
       "author": "Sindre Sorhus",
       "description": "Lowercase the keys of an object",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "1b62e3eb5b570e754514e8bc55976cf92a108ed402ddd82890a7431b69939b5b71e26e743541c1399481c10407cb2d15d760342531b889c7d9407fb13f287c54"
+          "content": "44f957d3e3c7bafc550d9ef15fe101540a7846c5713ff4dd0d237698961d8aad4b7381f3ec45128d423b459aca2a59ab2335617fa268dacb63efefa055aad2d0"
         }
       ],
       "licenses": [
@@ -24107,10 +24006,10 @@
           }
         }
       ],
-      "purl": "pkg:npm/lowercase-keys@1.0.1",
+      "purl": "pkg:npm/lowercase-keys@1.0.0",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-1.0.1.tgz",
+          "url": "https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-1.0.0.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         },
@@ -25929,13 +25828,13 @@
     {
       "type": "library",
       "name": "nan",
-      "version": "2.17.0",
-      "bom-ref": "nan@2.17.0",
-      "description": "Native Abstractions for Node.js: C++ header for Node 0.8 -> 18 compatibility",
+      "version": "2.15.0",
+      "bom-ref": "nan@2.15.0",
+      "description": "Native Abstractions for Node.js: C++ header for Node 0.8 -> 14 compatibility",
       "hashes": [
         {
           "alg": "SHA-512",
-          "content": "d994e0b65d2726c3b42900a3129c5c22be43f98bfdd299538ad66df4905f42f5490d2e6c78c97714ebec877fbd0a86165dfff597939a673cc5ea70e6e1c6a069"
+          "content": "f19b6f12703673969809961dd5cbe076753a72ac22c51a1883bd313cb594c2ce4e4536bf967c3ebb86a68b1452fc0739539990560a7da679525276cd58569665"
         }
       ],
       "licenses": [
@@ -25945,10 +25844,10 @@
           }
         }
       ],
-      "purl": "pkg:npm/nan@2.17.0",
+      "purl": "pkg:npm/nan@2.15.0",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/nan/-/nan-2.17.0.tgz",
+          "url": "https://registry.npmjs.org/nan/-/nan-2.15.0.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         },
@@ -40376,45 +40275,6 @@
     },
     {
       "type": "library",
-      "name": "core-util-is",
-      "version": "1.0.2",
-      "bom-ref": "verror@1.10.0|core-util-is@1.0.2",
-      "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
-      "description": "The `util.is*` functions introduced in Node v0.12.",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "de5ab3e588d64d89d6e9d9436b94cb69309c4a17daaf57b8d2b99c255c020490ba996945ba3d1e0872049661b5839932b89fc60fef169f814509ccf88093df69"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/core-util-is@1.0.2",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "https://github.com/isaacs/core-util-is/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git://github.com/isaacs/core-util-is",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "vm2",
       "version": "3.9.11",
       "bom-ref": "vm2@3.9.11",
@@ -42934,7 +42794,7 @@
     {
       "ref": "archiver-utils@1.3.0",
       "dependsOn": [
-        "glob@7.2.3",
+        "glob@7.1.7",
         "graceful-fs@4.2.10",
         "lazystream@1.0.1",
         "lodash@4.17.21",
@@ -42948,7 +42808,7 @@
         "archiver-utils@1.3.0",
         "async@2.6.4",
         "buffer-crc32@0.2.13",
-        "glob@7.2.3",
+        "glob@7.1.7",
         "lodash@4.17.21",
         "readable-stream@2.3.7",
         "tar-stream@1.6.2",
@@ -43238,7 +43098,7 @@
       "dependsOn": [
         "busboy@0.2.14|isarray@0.0.1",
         "busboy@0.2.14|string_decoder@0.10.31",
-        "core-util-is@1.0.3",
+        "core-util-is@1.0.2",
         "inherits@2.0.4"
       ]
     },
@@ -43258,7 +43118,7 @@
         "@npmcli/move-file@1.1.2",
         "chownr@2.0.0",
         "fs-minipass@2.1.0",
-        "glob@7.2.3",
+        "glob@7.1.7",
         "infer-owner@1.0.4",
         "lru-cache@6.0.0",
         "minipass-collect@1.0.2",
@@ -43292,19 +43152,16 @@
       "ref": "cacheable-request@2.1.4",
       "dependsOn": [
         "cacheable-request@2.1.4|get-stream@3.0.0",
-        "cacheable-request@2.1.4|lowercase-keys@1.0.0",
         "clone-response@1.0.2",
         "http-cache-semantics@3.8.1",
         "keyv@3.0.0",
+        "lowercase-keys@1.0.0",
         "normalize-url@2.0.1",
         "responselike@1.0.2"
       ]
     },
     {
       "ref": "cacheable-request@2.1.4|get-stream@3.0.0"
-    },
-    {
-      "ref": "cacheable-request@2.1.4|lowercase-keys@1.0.0"
     },
     {
       "ref": "call-bind@1.0.2",
@@ -43665,7 +43522,7 @@
       "ref": "copy-descriptor@0.1.1"
     },
     {
-      "ref": "core-util-is@1.0.3"
+      "ref": "core-util-is@1.0.2"
     },
     {
       "ref": "cors@2.8.5",
@@ -43879,7 +43736,7 @@
     {
       "ref": "dicer@0.2.5|readable-stream@1.1.14",
       "dependsOn": [
-        "core-util-is@1.0.3",
+        "core-util-is@1.0.2",
         "dicer@0.2.5|isarray@0.0.1",
         "dicer@0.2.5|string_decoder@0.10.31",
         "inherits@2.0.4"
@@ -44569,7 +44426,7 @@
     {
       "ref": "fstream@1.0.12|rimraf@2.7.1",
       "dependsOn": [
-        "glob@7.2.3"
+        "glob@7.1.7"
       ]
     },
     {
@@ -44648,10 +44505,10 @@
       ]
     },
     {
-      "ref": "glob@7.2.3",
+      "ref": "glob@7.1.7",
       "dependsOn": [
         "fs.realpath@1.0.0",
-        "glob@7.2.3|minimatch@3.1.2",
+        "glob@7.1.7|minimatch@3.1.2",
         "inflight@1.0.6",
         "inherits@2.0.4",
         "once@1.4.0",
@@ -44659,16 +44516,16 @@
       ]
     },
     {
-      "ref": "glob@7.2.3|brace-expansion@1.1.11",
+      "ref": "glob@7.1.7|brace-expansion@1.1.11",
       "dependsOn": [
         "balanced-match@1.0.2",
         "concat-map@0.0.1"
       ]
     },
     {
-      "ref": "glob@7.2.3|minimatch@3.1.2",
+      "ref": "glob@7.1.7|minimatch@3.1.2",
       "dependsOn": [
-        "glob@7.2.3|brace-expansion@1.1.11"
+        "glob@7.1.7|brace-expansion@1.1.11"
       ]
     },
     {
@@ -44713,7 +44570,7 @@
         "into-stream@3.1.0",
         "is-retry-allowed@1.2.0",
         "isurl@1.0.0",
-        "lowercase-keys@1.0.1",
+        "lowercase-keys@1.0.0",
         "mimic-response@1.0.1",
         "p-cancelable@0.4.1",
         "p-timeout@2.0.1",
@@ -44856,12 +44713,12 @@
         "dateformat@3.0.3",
         "eventemitter2@0.4.14",
         "exit@0.1.2",
+        "glob@7.1.7",
         "grunt-cli@1.4.3",
         "grunt-known-options@2.0.0",
         "grunt-legacy-log@3.0.0",
         "grunt-legacy-util@2.0.1",
         "grunt@1.5.3|findup-sync@0.3.0",
-        "grunt@1.5.3|glob@7.1.7",
         "grunt@1.5.3|minimatch@3.0.8",
         "iconv-lite@0.4.24",
         "js-yaml@3.14.1",
@@ -44886,17 +44743,6 @@
     {
       "ref": "grunt@1.5.3|findup-sync@0.3.0|glob@5.0.15",
       "dependsOn": [
-        "grunt@1.5.3|minimatch@3.0.8",
-        "inflight@1.0.6",
-        "inherits@2.0.4",
-        "once@1.4.0",
-        "path-is-absolute@1.0.1"
-      ]
-    },
-    {
-      "ref": "grunt@1.5.3|glob@7.1.7",
-      "dependsOn": [
-        "fs.realpath@1.0.0",
         "grunt@1.5.3|minimatch@3.0.8",
         "inflight@1.0.6",
         "inherits@2.0.4",
@@ -45051,7 +44897,7 @@
     {
       "ref": "htmlparser2@3.3.0|readable-stream@1.0.34",
       "dependsOn": [
-        "core-util-is@1.0.3",
+        "core-util-is@1.0.2",
         "htmlparser2@3.3.0|isarray@0.0.1",
         "htmlparser2@3.3.0|string_decoder@0.10.31",
         "inherits@2.0.4"
@@ -45163,7 +45009,7 @@
       "ref": "iltorb@2.4.5",
       "dependsOn": [
         "detect-libc@1.0.3",
-        "nan@2.17.0",
+        "nan@2.15.0",
         "npmlog@4.1.2",
         "prebuild-install@5.3.6",
         "which-pm-runs@1.1.0"
@@ -45561,7 +45407,7 @@
         "finale-rest@1.2.0",
         "fs-extra@9.1.0",
         "fuzzball@1.4.0",
-        "glob@7.2.3",
+        "glob@7.1.7",
         "graceful-fs@4.2.10",
         "grunt-contrib-compress@1.6.0",
         "grunt-replace-json@0.1.0",
@@ -45673,11 +45519,8 @@
       "dependsOn": [
         "@mapbox/node-pre-gyp@1.0.10",
         "bindings@1.5.0",
-        "libxmljs2@0.30.1|nan@2.15.0"
+        "nan@2.15.0"
       ]
-    },
-    {
-      "ref": "libxmljs2@0.30.1|nan@2.15.0"
     },
     {
       "ref": "liftup@3.0.1",
@@ -45790,7 +45633,7 @@
       ]
     },
     {
-      "ref": "lowercase-keys@1.0.1"
+      "ref": "lowercase-keys@1.0.0"
     },
     {
       "ref": "lru-cache@6.0.0",
@@ -46071,7 +45914,7 @@
       "ref": "mustache@4.2.0"
     },
     {
-      "ref": "nan@2.17.0"
+      "ref": "nan@2.15.0"
     },
     {
       "ref": "nanomatch@1.2.13",
@@ -46138,7 +45981,7 @@
       "ref": "node-gyp@8.4.1",
       "dependsOn": [
         "env-paths@2.2.1",
-        "glob@7.2.3",
+        "glob@7.1.7",
         "graceful-fs@4.2.10",
         "make-fetch-happen@9.1.0",
         "node-gyp@8.4.1|nopt@5.0.0",
@@ -46265,7 +46108,7 @@
     {
       "ref": "node-pre-gyp@0.15.0|rimraf@2.7.1",
       "dependsOn": [
-        "glob@7.2.3"
+        "glob@7.1.7"
       ]
     },
     {
@@ -46893,7 +46736,7 @@
     {
       "ref": "readable-stream@2.3.7",
       "dependsOn": [
-        "core-util-is@1.0.3",
+        "core-util-is@1.0.2",
         "inherits@2.0.4",
         "process-nextick-args@2.0.1",
         "readable-stream@2.3.7|isarray@1.0.0",
@@ -47127,7 +46970,7 @@
     {
       "ref": "responselike@1.0.2",
       "dependsOn": [
-        "lowercase-keys@1.0.1"
+        "lowercase-keys@1.0.0"
       ]
     },
     {
@@ -47145,7 +46988,7 @@
     {
       "ref": "rimraf@3.0.2",
       "dependsOn": [
-        "glob@7.2.3"
+        "glob@7.1.7"
       ]
     },
     {
@@ -47970,7 +47813,7 @@
     {
       "ref": "ts-node-dev@1.1.8|rimraf@2.7.1",
       "dependsOn": [
-        "glob@7.2.3"
+        "glob@7.1.7"
       ]
     },
     {
@@ -48222,12 +48065,9 @@
       "ref": "verror@1.10.0",
       "dependsOn": [
         "assert-plus@1.0.0",
-        "extsprintf@1.3.0",
-        "verror@1.10.0|core-util-is@1.0.2"
+        "core-util-is@1.0.2",
+        "extsprintf@1.3.0"
       ]
-    },
-    {
-      "ref": "verror@1.10.0|core-util-is@1.0.2"
     },
     {
       "ref": "vm2@3.9.11",
