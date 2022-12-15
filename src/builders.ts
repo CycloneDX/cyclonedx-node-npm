@@ -479,10 +479,11 @@ export class BomBuilder {
   }
 
   private makeRandomSerialNumber (): string {
-    const r = [0, 1, 2, 3, 4, 5, 6, 7].map(
-      () => Math.round(Math.random() * 65536).toString(16).padStart(4, '0')
-    )
-    return `urn:uuid:${r[0]}${r[1]}-${r[2]}-${r[3]}-${r[4]}-${r[5]}${r[6]}${r[7]}`
+    const b = [0, 1, 2, 3, 4, 5, 6, 7].map(() => Math.round(Math.random() * 0xFFFF))
+    b[3] = b[3] & 0x0FFF | 0x4000 // UUID version 4
+    b[4] = b[4] & 0x3FFF | 0x8000 // UUID version 4 variant 1
+    const s = b.map(n => n.toString(16).padStart(4, '0'))
+    return `urn:uuid:${s[0]}${s[1]}-${s[2]}-${s[3]}-${s[4]}-${s[5]}${s[6]}${s[7]}`
   }
 }
 
