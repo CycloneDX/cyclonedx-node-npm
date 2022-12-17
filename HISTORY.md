@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Build
+  * Use _TypeScript_ `v4.9.4` now, was `v4.9.3` (via [#366])
+
+[#366]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/366
+
 ## 1.7.1 - 2022-12-16
 
 Maintenance release
