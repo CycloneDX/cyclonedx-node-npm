@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.7.2 - 2022-12-19
+
 * Changed
   * Enhanced randomness when generating a `serialNumber` (via [#389])
 * Build
