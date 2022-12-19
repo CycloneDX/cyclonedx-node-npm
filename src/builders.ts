@@ -479,9 +479,18 @@ export class BomBuilder {
   }
 
   private makeRandomSerialNumber (): string {
-    const b = [0, 1, 2, 3, 4, 5, 6, 7].map(() => Math.round(Math.random() * 0xFFFF))
-    b[3] = b[3] & 0x0FFF | 0x4000 // UUID version 4
-    b[4] = b[4] & 0x3FFF | 0x8000 // UUID version 4 variant 1
+    const b = [
+      Math.round(Math.random() * 0xFFFF),
+      Math.round(Math.random() * 0xFFFF),
+      Math.round(Math.random() * 0xFFFF),
+      // UUID version 4
+      Math.round(Math.random() * 0x0FFF) | 0x4000,
+      // UUID version 4 variant 1
+      Math.round(Math.random() * 0x3FFF) | 0x8000,
+      Math.round(Math.random() * 0xFFFF),
+      Math.round(Math.random() * 0xFFFF),
+      Math.round(Math.random() * 0xFFFF)
+    ]
     const s = b.map(n => n.toString(16).padStart(4, '0'))
     return `urn:uuid:${s[0]}${s[1]}-${s[2]}-${s[3]}-${s[4]}-${s[5]}${s[6]}${s[7]}`
   }
