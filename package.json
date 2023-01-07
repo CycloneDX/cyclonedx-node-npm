@@ -48,7 +48,7 @@
   "devDependencies": {
     "@types/node": "^18.0.6",
     "eslint": "^8.23.0",
-    "eslint-config-standard-with-typescript": "^24.0.0",
+    "eslint-config-standard-with-typescript": "^26.0.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "fast-glob": "^3.2.11",
     "imurmurhash": "^0.1.4",
