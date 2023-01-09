@@ -1,8 +1,12 @@
-# Integration test: local workspaces
+# Integration test: dev dependencies
 
 *ATTENTION*: this demo might use known vulnerable dependencies for showcasing purposes.
 
-Install local workspaces and see how they behave.
+Install
+[dev dependencies](https://docs.npmjs.com/cli/v9/configuring-npm/package-json?v=true#devdependencies)
+and see how they behave different from
+[runtime dependencies](https://docs.npmjs.com/cli/v9/configuring-npm/package-json?v=true#dependencies)
+.
 
 ## remarks
 
@@ -12,8 +16,7 @@ Install local workspaces and see how they behave.
 
 ## output
 
-
-(i) see [demo snapshots](../../tests/_data/npm-ls_demo-results/dev-dependencies).
+see [demo snapshots](../../tests/_data/npm-ls_demo-results/dev-dependencies).
 
 Output of `npm ls --json -a -l` look like this:
 
