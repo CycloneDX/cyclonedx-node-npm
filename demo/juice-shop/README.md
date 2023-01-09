@@ -12,7 +12,7 @@ The package manifest is based on
 
 ## output
 
-(i) see [demo snapshots](../../tests/_data/npm-ls_demo-results/juice-shop).
+see [demo snapshots](../../tests/_data/npm-ls_demo-results/juice-shop).
 
 Output of `npm ls --json -a -l` look like this:
 

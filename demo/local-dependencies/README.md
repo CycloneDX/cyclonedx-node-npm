@@ -10,7 +10,7 @@ Install local packages/dependencies and see how they behave.
 
 ## output
 
-(i) see [demo snapshots](../../tests/_data/npm-ls_demo-results/local-dependencies).
+see [demo snapshots](../../tests/_data/npm-ls_demo-results/local-dependencies).
 
 Output of `npm ls --json -a -l` look like this:
 

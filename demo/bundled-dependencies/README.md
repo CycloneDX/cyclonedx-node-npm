@@ -21,7 +21,7 @@ ships with bundled version of `yargs`.
 
 ## output
 
-(i) see [demo snapshots](../../tests/_data/npm-ls_demo-results/bundled-dependencies).
+see [demo snapshots](../../tests/_data/npm-ls_demo-results/bundled-dependencies).
 
 Output of `npm ls --json -a -l` look like this:
 
