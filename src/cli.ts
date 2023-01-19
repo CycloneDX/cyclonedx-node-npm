@@ -80,7 +80,7 @@ function makeCommand (process: NodeJS.Process): Command {
       process.env.NODE_ENV === 'production'
         ? [Omittable.Dev]
         : [],
-      '"dev" if the NODE_ENV environment variable is set to "production", otherwise empty'
+      `"${Omittable.Dev}" if the NODE_ENV environment variable is set to "production", otherwise empty`
     )
   ).addOption(
     new Option(
@@ -119,11 +119,11 @@ function makeCommand (process: NodeJS.Process): Command {
       ).choices(
         Object.values(OutputFormat)
       ).default(
-        // the context is JavaScript - which should prefer JSON
+        // the context is node/JavaScript - which should prefer JSON
         OutputFormat.JSON
       )
       const oldParseArg = o.parseArg ?? // might do input validation on choices, etc...
-        (v => v) // fallback
+        (v => v) // fallback: pass-through
       // @ts-expect-error TS2304
       o.parseArg = (v, p) => oldParseArg(v.toUpperCase(), p)
       return o
