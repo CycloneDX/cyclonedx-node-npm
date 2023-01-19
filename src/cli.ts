@@ -124,7 +124,7 @@ function makeCommand (process: NodeJS.Process): Command {
       )
       const oldParseArg = o.parseArg ?? // might do input validation on choices, etc...
         (v => v) // fallback: pass-through
-      // @ts-expect-error TS2304
+      /* @ts-expect-error TS2304 */
       o.parseArg = (v, p) => oldParseArg(v.toUpperCase(), p)
       return o
     })()
