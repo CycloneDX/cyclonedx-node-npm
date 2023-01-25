@@ -490,9 +490,8 @@ export class BomBuilder {
       Math.round(Math.random() * 0xFFFF),
       Math.round(Math.random() * 0xFFFF),
       Math.round(Math.random() * 0xFFFF)
-    ]
-    const s = b.map(n => n.toString(16).padStart(4, '0'))
-    return `urn:uuid:${s[0]}${s[1]}-${s[2]}-${s[3]}-${s[4]}-${s[5]}${s[6]}${s[7]}`
+    ].map(n => n.toString(16).padStart(4, '0'))
+    return `urn:uuid:${b[0]}${b[1]}-${b[2]}-${b[3]}-${b[4]}-${b[5]}${b[6]}${b[7]}`
   }
 }
 
