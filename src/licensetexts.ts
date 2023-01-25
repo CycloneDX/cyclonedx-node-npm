@@ -19,6 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { Enums, Models } from '@cyclonedx/cyclonedx-library'
 import * as fs from 'fs'
+import * as minimatch from 'minimatch'
 import { join } from 'path'
 
 import { PropertyNames } from './properties'
@@ -50,14 +51,14 @@ function searchLicenseSources (pkgPath: string, licenseName: string): Map<string
   if (pkgPath.length < 1) {
     return licenseFilenamesWType
   }
-  const typicalFilenames = ['LICENSE', 'License', 'license', 'LICENCE', 'Licence', 'licence', 'NOTICE', 'Notice', 'notice']
+  const typicalFilenames = ['license', 'licence', 'notice', 'unlicense', 'unlicence']
   const licenseContentTypes = { 'text/plain': '', 'text/txt': '.txt', 'text/markdown': '.md', 'text/xml': '.xml' }
+  const potentialFilenames = fs.readdirSync(pkgPath)
   for (const typicalFilename of typicalFilenames) {
     for (const filenameVariant of [typicalFilename, typicalFilename + '.' + licenseName, typicalFilename + '-' + licenseName]) {
       for (const [licenseContentType, fileExtension] of Object.entries(licenseContentTypes)) {
-        const filename = join(pkgPath, filenameVariant + fileExtension)
-        if (fs.existsSync(filename) && fs.realpathSync.native(filename).endsWith(filename)) { // needed to fix case-insensitivity on Windows
-          licenseFilenamesWType.set(filename, licenseContentType)
+        for (const filename of minimatch.match(potentialFilenames, filenameVariant + fileExtension, { nocase: true, noglobstar: true, noext: true })) {
+          licenseFilenamesWType.set(join(pkgPath, filename), licenseContentType)
         }
       }
     }
