@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-'use strict'
-
 /*!
 This file is part of CycloneDX generator for NPM projects.
 

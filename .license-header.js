@@ -16,35 +16,3 @@ limitations under the License.
 SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
-
-const { createReadStream } = require('fs')
-
-const MurmurHash3 = require('imurmurhash')
-
-/**
- * @type {Map<string, Promise<string>>}
- */
-const cache = new Map()
-
-/**
- * @param {string} filePath
- * @return {Promise<string>}
- */
-function hashFile (filePath) {
-  let p = cache.get(filePath)
-  if (p === undefined) {
-    p = new Promise((resolve, reject) => {
-      const hs = new MurmurHash3('')
-      const rs = createReadStream(filePath, 'utf8')
-      rs.on('data', c => hs.hash(c))
-      rs.once('end', () => resolve(hs.result()))
-      rs.once('error', e => reject(e))
-    })
-    cache.set(filePath, p)
-  }
-  return p
-}
-
-module.exports = {
-  hashFile
-}
