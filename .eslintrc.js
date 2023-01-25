@@ -1,4 +1,3 @@
-'use strict'
 /*!
 This file is part of CycloneDX generator for NPM projects.
 
@@ -30,7 +29,10 @@ module.exports = {
     project: './tsconfig.json'
   },
   plugins: [
-    'simple-import-sort'
+    /* see https://github.com/lydell/eslint-plugin-simple-import-sort#readme */
+    'simple-import-sort',
+    /* see https://github.com/Stuk/eslint-plugin-header#readme */
+    'header'
   ],
   env: {
     commonjs: true,
@@ -47,6 +49,15 @@ module.exports = {
         commonjs: true,
         node: true
       }
+    },
+    {
+      files: ['bin/*.js'],
+      rules: {
+        // region license-header
+        /* see https://github.com/Stuk/eslint-plugin-header#readme */
+        'header/header': 'off'
+        // endregion license-header
+      }
     }
   ],
   rules: {
@@ -56,7 +67,11 @@ module.exports = {
     'sort-imports': 0,
     /** @see https://github.com/lydell/eslint-plugin-simple-import-sort/ */
     'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error'
+    'simple-import-sort/exports': 'error',
     // endregion sort imports/exports
+    // region license-header
+    /* see https://github.com/Stuk/eslint-plugin-header#readme */
+    'header/header': ['error', '.license-header.js']
+    // endregion license-header
   }
 }
