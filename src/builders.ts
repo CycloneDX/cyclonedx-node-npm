@@ -17,11 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { Builders, Enums, Factories, Models } from '@cyclonedx/cyclonedx-library'
-import { PackageURL } from 'packageurl-js'
+import { type Builders, type Factories, Enums, Models } from '@cyclonedx/cyclonedx-library'
+import { type PackageURL } from 'packageurl-js'
 import * as path from 'path'
 
-import { makeNpmRunner, runFunc } from './npmRunner'
+import { type runFunc, makeNpmRunner } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { makeThisTool } from './thisTool'
 import { versionCompare } from './versionCompare'
@@ -242,7 +242,7 @@ export class BomBuilder {
         data.path[0] === '/' ? '/' : '\\'
       )
     )
-    bom.components.forEach(c => this.adjustNestedBomRefs(c, ''))
+    bom.components.forEach(c => { this.adjustNestedBomRefs(c, '') })
     rootComponent.components.clear()
 
     if (this.flattenComponents) {
@@ -265,7 +265,7 @@ export class BomBuilder {
     }
     component.bomRef.value = pref + component.bomRef.value
     const fill = component.bomRef.value + '|'
-    component.components.forEach(c => this.adjustNestedBomRefs(c, fill))
+    component.components.forEach(c => { this.adjustNestedBomRefs(c, fill) })
   }
 
   private nestComponents (allComponents: AllComponents, tree: PTree): Models.ComponentRepository {
