@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { execFileSync, execSync, ExecSyncOptionsWithBufferEncoding } from 'child_process'
+import { type ExecSyncOptionsWithBufferEncoding, execFileSync, execSync } from 'child_process'
 import { existsSync } from 'fs'
 import { resolve } from 'path'
 
