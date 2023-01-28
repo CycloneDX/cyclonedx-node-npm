@@ -17,11 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { type Builders, type Factories, Enums, Models } from '@cyclonedx/cyclonedx-library'
+import { type Builders, Enums, type Factories, Models } from '@cyclonedx/cyclonedx-library'
 import { type PackageURL } from 'packageurl-js'
 import * as path from 'path'
 
-import { type runFunc, makeNpmRunner } from './npmRunner'
+import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { makeThisTool } from './thisTool'
 import { versionCompare } from './versionCompare'
