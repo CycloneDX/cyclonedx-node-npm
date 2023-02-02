@@ -103,6 +103,35 @@ Options:
   -h, --help                display help for command
 ```
 
+## Github Action usage
+
+Add the following entry to your Github workflow YAML file:
+
+```
+uses: CycloneDX/cyclonedx-node-npm@master
+with:
+  path: '.'
+```
+
+### Example using all optional inputs:
+
+```
+uses: CycloneDX/cyclonedx-node-npm@master
+with:
+  path: "."
+  version: 1.7.2 # optional
+  component_type: application # optional
+  flatten_components: true # optional
+  ignore_npm_errors: true # optional
+  omit: dev # optional
+  output_file: bom.json # optional
+  output_format: JSON # optional
+  output_reproducible: true # optional
+  package_lock_only: true # optional
+  short_purls: true # optional
+  spec_version: 1.4 # optional
+```
+
 ## Demo
 
 For a demo of _cyclonedx-npm_ see the [demo project][demo_readme].
