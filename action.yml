@@ -40,13 +40,18 @@ inputs:
     description: "Which version of CycloneDX spec to use. (1.2/1.3/1.4)"
     default: "1.4"
     required: false
+  version:
+    description: "Version of cyclonedx-npm to be used"
+    default: "1.7.2"
+    required: false
+
   
 runs:
   using: "composite"
   steps:
     - name: Install cyclonedx-npm
       shell: bash
-      run: npm install --global @cyclonedx/cyclonedx-npm
+      run: npm install --global @cyclonedx/cyclonedx-npm@${{ inputs.version }}
     - name: Parse inputs
       shell: bash
       id: vars
