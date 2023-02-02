@@ -1,0 +1,101 @@
+name: 'CycloneDX NPM Generate SBOM'
+description: 'Github action to generate a CycloneDX BOM for Node.js NPM projects'
+inputs:
+  path:
+    description: "Path to NPM project directory"
+    default: "."
+    required: true
+  component_type:
+    description: "Type of the main component"
+    default: "application"
+    required: false
+  flatten_components:
+    description: "Whether to flatten the components."
+    required: false
+  ignore_npm_errors:
+    description: "Whether to ignore errors of NPM. This might be used, if npm install was run with --force or --legacy-peer-deps."
+    required: false
+  omit:
+    description: "Dependency types to omit from the installation tree.(dev/optional/peer)"
+    default: "dev"
+    required: false
+  output_file:
+    description: "Path to the output file."
+    default: "bom.json"
+    required: false
+  output_format:
+    description: "Which output format to use (JSON/XML)."
+    default: "JSON"
+    required: false
+  output_reproducible:
+    description: "Whether to go the extra mile and make the output reproducible. This requires more resources, and might result in loss of time- and random-based-values"
+    required: false
+  package_lock_only:
+    description: "Whether to only use the lock file, ignoring node_modules."
+    required: false
+  short_purls:
+    description: "Omit all qualifiers from PackageURLs."
+    required: false
+  spec_version:
+    description: "Which version of CycloneDX spec to use. (1.2/1.3/1.4)"
+    default: "1.4"
+    required: false
+  
+runs:
+  using: "composite"
+  steps:
+    - name: Install cyclonedx-npm
+      shell: bash
+      run: npm install --global @cyclonedx/cyclonedx-npm
+    - name: Parse inputs
+      shell: bash
+      id: vars
+      run: |
+        params=""
+
+        if [ "${{ inputs.component_type }}" ]; then
+          params="${params} --mc-type ${{ inputs.component_type }}"
+        fi
+        
+        if [ "${{ inputs.omit }}" ]; then
+          params="${params} --omit ${{ inputs.omit }}"
+        fi
+
+        if [ "${{ inputs.output_file }}" ]; then
+          params="${params} --output-file ${{ inputs.output_file }}"
+        fi
+
+        if [ "${{ inputs.output_format }}" ]; then
+          params="${params} --output-format ${{ inputs.output_format }}"
+        fi
+
+        if [ "${{ inputs.spec_version }}" ]; then
+          params="${params} --spec-version ${{ inputs.spec_version }}"
+        fi
+
+        if [ "${{ inputs.ignore_npm_errors }}" ]; then
+          params="${params} --ignore-npm-errors ${{ inputs.ignore_npm_errors }}"
+        fi
+
+        if [ "${{ inputs.package_lock_only }}" ]; then
+          params="${params} --package-lock-only ${{ inputs.package_lock_only }}"
+        fi
+
+        if [ "${{ inputs.flatten_components }}" ]; then
+          params="${params} --flatten-components ${{ inputs.flatten_components }}"
+        fi
+
+        if [ "${{ inputs.short_purls }}" ]; then
+          params="${params} --short-PURLs ${{ inputs.short_purls }}"
+        fi
+
+        if [ "${{ inputs.output_reproducible }}" ]; then
+          params="${params} --output-reproducible ${{ inputs.output_reproducible }}"
+        fi
+
+        params="${params} ${{ inputs.path }}"
+        
+        echo "params=$params" >> $GITHUB_OUTPUT
+    - name: Run cyclonedx-npm
+      shell: bash
+      run: cyclonedx-npm ${{ steps.vars.outputs.params }}
