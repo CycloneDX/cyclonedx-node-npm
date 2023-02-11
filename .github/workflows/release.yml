@@ -25,7 +25,7 @@ on:
 
 env:
   REPORTS_DIR: CI_reports
-  NODE_ACTIVE_LTS: "16"
+  NODE_ACTIVE_LTS: "18"
 
 jobs:
   bump:

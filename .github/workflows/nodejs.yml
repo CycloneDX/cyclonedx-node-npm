@@ -12,7 +12,7 @@ on:
 env:
   DIST_DIR: dist
   REPORTS_DIR: reports
-  NODE_ACTIVE_LTS: '16'  # https://nodejs.org/en/about/releases/
+  NODE_ACTIVE_LTS: '18'  # https://nodejs.org/en/about/releases/
 
 jobs:
   build:
@@ -68,9 +68,10 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '18'      # Current
-          - '16'      # Active LTS
-          - '14'      # Maintenance LTS
+          - '19'      # Current
+          - '18'      # Active LTS
+          - '16'
+          - '14'
           - '14.0.0'  # Lowest supported by this project
         os:
           - ubuntu-latest
@@ -128,9 +129,10 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '18'      # Current
-          - '16'      # Active LTS
-          - '14'      # Maintenance LTS
+          - '19'      # Current
+          - '18'      # Active LTS
+          - '16'
+          - '14'
         os:
           - ubuntu-latest
           - windows-latest
