@@ -4,9 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Dependencies
+  * Utilize _commander_ `^10.0.0` now, was `"^9.4.0` (via [#431])
 * Build
   * Use _TypeScript_ `v4.9.5` now, was `v4.9.4` (via [#482])
 
+[#431]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/431
 [#482]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/482
 
 ## 1.7.2 - 2022-12-19
