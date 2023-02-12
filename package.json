@@ -1,6 +1,6 @@
 {
   "name": "@cyclonedx/cyclonedx-npm",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.",
   "keywords": [
     "CycloneDX",
