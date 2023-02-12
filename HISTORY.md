@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.7.3 - 2023-02-12
+
+Maintenance release
+
 * Dependencies
   * Utilize _commander_ `^10.0.0` now, was `"^9.4.0` (via [#431])
 * Build
