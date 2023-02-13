@@ -82,7 +82,7 @@ export class BomBuilder {
     this.console = console_
   }
 
-  buildFromProjectDir (projectDir: string, process: NodeJS.Process): Models.Bom {
+  buildFromProjectDir (projectDir: null | string, process: NodeJS.Process): Models.Bom {
     return this.buildFromNpmLs(
       this.fetchNpmLs(projectDir, process)
     )
@@ -113,7 +113,7 @@ export class BomBuilder {
     return npmVersion
   }
 
-  private fetchNpmLs (projectDir: string, process_: NodeJS.Process): any {
+  private fetchNpmLs (projectDir: null | string, process_: NodeJS.Process): any {
     const npmRunner = makeNpmRunner(process_, this.console)
 
     const npmVersion = this.getNpmVersion(npmRunner, process_)
@@ -130,7 +130,9 @@ export class BomBuilder {
         : '--depth=255'
     ]
 
-    if (this.packageLockOnly) {
+    if (projectDir === null) {
+      args.push('--global')
+    } else if (this.packageLockOnly) {
       if (npmVersion[0] >= 7) {
         args.push('--package-lock-only')
       } else {
@@ -165,7 +167,7 @@ export class BomBuilder {
     let npmLsReturns: Buffer
     try {
       npmLsReturns = npmRunner(args, {
-        cwd: projectDir,
+        cwd: projectDir ?? undefined,
         env: process_.env,
         encoding: 'buffer',
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective

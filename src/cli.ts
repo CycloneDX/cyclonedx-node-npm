@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { Builders, Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
-import { Argument, Command, Option } from 'commander'
+import { type AddHelpTextContext, Argument, Command, Option } from 'commander'
 import { existsSync, openSync, writeSync } from 'fs'
 import { dirname, resolve } from 'path'
 
@@ -40,6 +40,7 @@ const OutputStdOut = '-'
 interface CommandOptions {
   ignoreNpmErrors: boolean
   packageLockOnly: boolean
+  global: boolean
   omit: Omittable[]
   specVersion: Spec.Version
   flattenComponents: boolean
@@ -57,6 +58,12 @@ function makeCommand (process: NodeJS.Process): Command {
   ).usage(
     // Need to add the `[--]` manually, to indicate how to stop a variadic option.
     '[options] [--] [<package-manifest>]'
+  ).addHelpText(
+    'after',
+    (context: AddHelpTextContext): string =>
+      '\nExample call:\n' +
+      `  $ ${context.command.name()} --omit ${Omittable.Dev} --omit ${Omittable.Peer} -- ./my-project/package.json\n` +
+      `  $ ${context.command.name()} --global\n`
   ).addOption(
     new Option(
       '--ignore-npm-errors',
@@ -68,6 +75,12 @@ function makeCommand (process: NodeJS.Process): Command {
       '--package-lock-only',
       'Whether to only use the lock file, ignoring "node_modules".\n' +
       'This means the output will be based only on the few details in and the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.'
+    ).default(false)
+  ).addOption(
+    new Option(
+      '--global',
+      'Operates in "global" mode.\n' +
+      '[TODO: add more description]'
     ).default(false)
   ).addOption(
     new Option(
@@ -180,28 +193,34 @@ export function run (process: NodeJS.Process): void {
   const options: CommandOptions = program.opts()
   myConsole.debug('DEBUG | options: %j', options)
 
-  const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
-  if (!existsSync(packageFile)) {
-    throw new Error(`missing project's manifest file: ${packageFile}`)
-  }
-  myConsole.debug('DEBUG | packageFile: %s', packageFile)
-  const projectDir = dirname(packageFile)
-  myConsole.info('INFO  | projectDir: %s', projectDir)
-
-  if (existsSync(resolve(projectDir, 'npm-shrinkwrap.json'))) {
-    myConsole.debug('DEBUG | detected a npm shrinkwrap file')
-  } else if (existsSync(resolve(projectDir, 'package-lock.json'))) {
-    myConsole.debug('DEBUG | detected a package lock file')
-  } else if (!options.packageLockOnly && existsSync(resolve(projectDir, 'node_modules'))) {
-    myConsole.debug('DEBUG | detected a node_modules dir')
-    // npm7 and later also might put a `node_modules/.package-lock.json` file
+  let projectDir: null | string
+  if (options.global) {
+    projectDir = null
+    myConsole.info('INFO  | operate in "global" mode')
   } else {
-    myConsole.log('LOG   | No evidence: no package lock file nor npm shrinkwrap file')
-    if (!options.packageLockOnly) {
-      myConsole.log('LOG   | No evidence: no node_modules dir')
+    const _packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
+    if (!existsSync(_packageFile)) {
+      throw new Error(`missing project's manifest file: ${_packageFile}`)
     }
-    myConsole.info('INFO  | ? Did you forget to run `npm install` on your project accordingly ?')
-    throw new Error('missing evidence')
+    myConsole.debug('DEBUG | packageFile: %s', _packageFile)
+    projectDir = dirname(_packageFile)
+    myConsole.info('INFO  | projectDir: %s', projectDir)
+
+    if (existsSync(resolve(projectDir, 'npm-shrinkwrap.json'))) {
+      myConsole.debug('DEBUG | detected a npm shrinkwrap file')
+    } else if (existsSync(resolve(projectDir, 'package-lock.json'))) {
+      myConsole.debug('DEBUG | detected a package lock file')
+    } else if (!options.packageLockOnly && existsSync(resolve(projectDir, 'node_modules'))) {
+      myConsole.debug('DEBUG | detected a node_modules dir')
+      // npm7 and later also might put a `node_modules/.package-lock.json` file
+    } else {
+      myConsole.log('LOG   | No evidence: no package lock file nor npm shrinkwrap file')
+      if (!options.packageLockOnly) {
+        myConsole.log('LOG   | No evidence: no node_modules dir')
+      }
+      myConsole.info('INFO  | ? Did you forget to run `npm install` on your project accordingly ?')
+      throw new Error('missing evidence')
+    }
   }
 
   const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
