@@ -22,6 +22,11 @@ on:
           - alpha
         default: rc
         required: false
+      prerelease:
+        description: "This a pre-release"
+        type: boolean
+        default: false
+        required: false
 
 env:
   REPORTS_DIR: CI_reports
@@ -76,6 +81,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
+      - determine npmjs tag
       - name: Checkout code
         # see https://github.com/actions/checkout
         uses: actions/checkout@v3
@@ -89,12 +95,16 @@ jobs:
       - name: install build tools
         run: npm ci --ignore-scripts
       # no explicit npm build. if a build is required, it should be configured as prepublish/prepublishOnly script of npm.
-      - name: publish to NPMJS
-        run: |
-          npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
-          npm publish --access public
+      - name: login to NPMJS
+        run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
         env:
           NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: publish to NPMJS as "latest"
+        if: ${{ ! github.event.inputs.prerelease }}
+        run: npm publish --access public --tag 'latest'
+      - name: publish to NPMJS as "unstable-prerelease"
+        if: ${{ github.event.inputs.prerelease }}
+        run: npm publish --access public --tag 'unstable-prerelease'
 
   release-GH:
     needs:
@@ -115,4 +125,4 @@ jobs:
         with:
           tag_name: ${{ needs.bump.outputs.version }}
           name:     ${{ needs.bump.outputs.version_plain }}
-          prerelease: ${{ startsWith(github.event.inputs.newversion, 'pre') || contains(github.event.inputs.newversion, 'rc') || contains(github.event.inputs.newversion, 'beta') || contains(github.event.inputs.newversion, 'alpha')}}
+          prerelease: ${{ github.event.inputs.prerelease }}
