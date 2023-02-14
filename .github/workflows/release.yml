@@ -99,10 +99,10 @@ jobs:
         env:
           NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: publish to NPMJS as "latest"
-        if: ${{ ! github.event.inputs.prerelease }}
+        if: ${{ github.event.inputs.prerelease != 'true' }}
         run: npm publish --access public --tag 'latest'
       - name: publish to NPMJS as "unstable-prerelease"
-        if: ${{ github.event.inputs.prerelease }}
+        if: ${{ github.event.inputs.prerelease == 'true' }}
         run: npm publish --access public --tag 'unstable-prerelease'
 
   release-GH:
