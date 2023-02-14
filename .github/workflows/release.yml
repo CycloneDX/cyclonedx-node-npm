@@ -81,7 +81,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - determine npmjs tag
       - name: Checkout code
         # see https://github.com/actions/checkout
         uses: actions/checkout@v3
