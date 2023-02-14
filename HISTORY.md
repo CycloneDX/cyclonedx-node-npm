@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
-## `1.7.4` - 2023-02-14
+## 1.7.4 - 2023-02-14
 
 Maintenance release
 
