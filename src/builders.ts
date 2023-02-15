@@ -18,8 +18,10 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { type Builders, Enums, type Factories, Models } from '@cyclonedx/cyclonedx-library'
+import { existsSync } from 'fs'
 import { type PackageURL } from 'packageurl-js'
 import * as path from 'path'
+import { resolve } from 'path'
 
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
@@ -494,10 +496,30 @@ export class BomBuilder {
 
   private * makeTools (): Generator<Models.Tool> {
     /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-    const packageJson = require('../package.json')
-    const self = this.toolBuilder.makeTool(packageJson)
-    if (self !== undefined) {
-      yield self
+    const tool = this.toolBuilder.makeTool(require('../package.json'))
+    if (tool !== undefined) {
+      yield tool
+    }
+
+    const additionals: string[][] = [
+      '@cyclonedx/cyclonedx-library'
+    ].map(s => s.split('/'))
+    const resolvePaths = require.resolve.paths('foo') ?? []
+    /* eslint-disable no-labels */
+    additionalsLoop:
+    for (const additional of additionals) {
+      for (const resolvePath of resolvePaths) {
+        const packageJsonPath = resolve(resolvePath, ...additional, 'package.json')
+        if (existsSync(packageJsonPath)) {
+          /* eslint-disable-next-line @typescript-eslint/no-var-requires */
+          const tool = this.toolBuilder.makeTool(require(packageJsonPath))
+          if (tool !== undefined) {
+            yield tool
+          }
+          continue additionalsLoop
+          /* eslint-enable no-labels */
+        }
+      }
     }
   }
 }
