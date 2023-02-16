@@ -494,31 +494,34 @@ export class BomBuilder {
     return `urn:uuid:${b[0]}${b[1]}-${b[2]}-${b[3]}-${b[4]}-${b[5]}${b[6]}${b[7]}`
   }
 
-  private * makeTools (): Generator<Models.Tool> {
+  private * makeTools (excludeLibs: boolean = false): Generator<Models.Tool> {
     /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-    const tool = this.toolBuilder.makeTool(require('../package.json'))
-    if (tool !== undefined) {
-      yield tool
+    const packageJsonPaths = ['../package.json']
+
+    if (!excludeLibs) {
+      const libs = [
+        '@cyclonedx/cyclonedx-library'
+      ].map(s => s.split('/', 2))
+      const resolvePaths = require.resolve.paths('__some_none-native_package__') ?? []
+      /* eslint-disable no-labels */
+      libsLoop:
+      for (const lib of libs) {
+        for (const resolvePath of resolvePaths) {
+          const packageJsonPath = resolve(resolvePath, ...lib, 'package.json')
+          if (existsSync(packageJsonPath)) {
+            packageJsonPaths.push(packageJsonPath)
+            continue libsLoop
+          }
+        }
+      }
+      /* eslint-enable no-labels */
     }
 
-    const additionals: string[][] = [
-      '@cyclonedx/cyclonedx-library'
-    ].map(s => s.split('/'))
-    const resolvePaths = require.resolve.paths('foo') ?? []
-    /* eslint-disable no-labels */
-    additionalsLoop:
-    for (const additional of additionals) {
-      for (const resolvePath of resolvePaths) {
-        const packageJsonPath = resolve(resolvePath, ...additional, 'package.json')
-        if (existsSync(packageJsonPath)) {
-          /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-          const tool = this.toolBuilder.makeTool(require(packageJsonPath))
-          if (tool !== undefined) {
-            yield tool
-          }
-          continue additionalsLoop
-          /* eslint-enable no-labels */
-        }
+    for (const packageJsonPath of packageJsonPaths) {
+      /* eslint-disable-next-line @typescript-eslint/no-var-requires */
+      const tool = this.toolBuilder.makeTool(require(packageJsonPath))
+      if (tool !== undefined) {
+        yield tool
       }
     }
   }
