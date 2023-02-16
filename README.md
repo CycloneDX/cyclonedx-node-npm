@@ -111,7 +111,7 @@ For a demo of _cyclonedx-npm_ see the [demo project][demo_readme].
 
 This tool utilizes the [CycloneDX library][cyclonedx-library] to generate the actual data structures.
 
-This tool does **not** expose any additional _public_ api or classes - all code is intended to be internal and might change without any notice during version upgrades.
+This tool does **not** expose any additional _public_ API or classes - all code is intended to be internal and might change without any notice during version upgrades.
 
 ## Contributing
 
