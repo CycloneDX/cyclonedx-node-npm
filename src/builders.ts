@@ -501,12 +501,12 @@ export class BomBuilder {
     const libs = [
       '@cyclonedx/cyclonedx-library'
     ].map(s => s.split('/', 2))
-    const resolvePaths = require.resolve.paths('__some_none-native_package__') ?? []
+    const nodeModulePaths = require.resolve.paths('__some_none-native_package__') ?? []
     /* eslint-disable no-labels */
     libsLoop:
     for (const lib of libs) {
-      for (const resolvePath of resolvePaths) {
-        const packageJsonPath = resolve(resolvePath, ...lib, 'package.json')
+      for (const nodeModulePath of nodeModulePaths) {
+        const packageJsonPath = resolve(nodeModulePath, ...lib, 'package.json')
         if (existsSync(packageJsonPath)) {
           packageJsonPaths.push(packageJsonPath)
           continue libsLoop
