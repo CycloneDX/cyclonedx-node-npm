@@ -276,6 +276,16 @@ describe('cli.run()', () => {
           `${toolIndent}"vendor": "@cyclonedx",\n` +
           `${toolIndent}"name": "cyclonedx-npm",\n` +
           `${toolIndent}"version": "thisVersion-testing",\n`
+        ).replace(
+          // replace metadata.tools.version
+          new RegExp(
+            `${toolIndent}"vendor": "@cyclonedx",\n` +
+          `${toolIndent}"name": "cyclonedx-library",\n` +
+          `${toolIndent}"version": "[^"]+",\n`
+          ),
+          `${toolIndent}"vendor": "@cyclonedx",\n` +
+          `${toolIndent}"name": "cyclonedx-library",\n` +
+          `${toolIndent}"version": "libVersion-testing",\n`
         )
 
         if (!existsSync(expectedOutSnap)) {
@@ -344,14 +354,25 @@ describe('cli.run()', () => {
       stderr.close()
     }
 
+    const toolIndent = '        '
     const actualOutput = readFileSync(outFile, 'utf8').replace(
       // replace metadata.tools.version
-      `"vendor": "@cyclonedx",
-        "name": "cyclonedx-npm",
-        "version": ${JSON.stringify(thisVersion)},`,
-      `"vendor": "@cyclonedx",
-        "name": "cyclonedx-npm",
-        "version": "thisVersion-testing",`
+      `${toolIndent}"vendor": "@cyclonedx",\n` +
+      `${toolIndent}"name": "cyclonedx-npm",\n` +
+      `${toolIndent}"version": ${JSON.stringify(thisVersion)},\n`,
+      `${toolIndent}"vendor": "@cyclonedx",\n` +
+      `${toolIndent}"name": "cyclonedx-npm",\n` +
+      `${toolIndent}"version": "thisVersion-testing",\n`
+    ).replace(
+      // replace metadata.tools.version
+      new RegExp(
+        `${toolIndent}"vendor": "@cyclonedx",\n` +
+        `${toolIndent}"name": "cyclonedx-library",\n` +
+        `${toolIndent}"version": "[^"]+",\n`
+      ),
+      `${toolIndent}"vendor": "@cyclonedx",\n` +
+      `${toolIndent}"name": "cyclonedx-library",\n` +
+      `${toolIndent}"version": "libVersion-testing",\n`
     )
 
     if (!existsSync(expectedOutSnap)) {

@@ -494,28 +494,26 @@ export class BomBuilder {
     return `urn:uuid:${b[0]}${b[1]}-${b[2]}-${b[3]}-${b[4]}-${b[5]}${b[6]}${b[7]}`
   }
 
-  private * makeTools (excludeLibs: boolean = false): Generator<Models.Tool> {
+  private * makeTools (): Generator<Models.Tool> {
     /* eslint-disable-next-line @typescript-eslint/no-var-requires */
     const packageJsonPaths = ['../package.json']
 
-    if (!excludeLibs) {
-      const libs = [
-        '@cyclonedx/cyclonedx-library'
-      ].map(s => s.split('/', 2))
-      const resolvePaths = require.resolve.paths('__some_none-native_package__') ?? []
-      /* eslint-disable no-labels */
-      libsLoop:
-      for (const lib of libs) {
-        for (const resolvePath of resolvePaths) {
-          const packageJsonPath = resolve(resolvePath, ...lib, 'package.json')
-          if (existsSync(packageJsonPath)) {
-            packageJsonPaths.push(packageJsonPath)
-            continue libsLoop
-          }
+    const libs = [
+      '@cyclonedx/cyclonedx-library'
+    ].map(s => s.split('/', 2))
+    const resolvePaths = require.resolve.paths('__some_none-native_package__') ?? []
+    /* eslint-disable no-labels */
+    libsLoop:
+    for (const lib of libs) {
+      for (const resolvePath of resolvePaths) {
+        const packageJsonPath = resolve(resolvePath, ...lib, 'package.json')
+        if (existsSync(packageJsonPath)) {
+          packageJsonPaths.push(packageJsonPath)
+          continue libsLoop
         }
       }
-      /* eslint-enable no-labels */
     }
+    /* eslint-enable no-labels */
 
     for (const packageJsonPath of packageJsonPaths) {
       /* eslint-disable-next-line @typescript-eslint/no-var-requires */

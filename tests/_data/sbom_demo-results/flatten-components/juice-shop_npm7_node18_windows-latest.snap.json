@@ -7,6 +7,28 @@
     "tools": [
       {
         "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      },
+      {
+        "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
         "version": "thisVersion-testing",
         "externalReferences": [
