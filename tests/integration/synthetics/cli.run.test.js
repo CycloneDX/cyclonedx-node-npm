@@ -24,6 +24,8 @@ const {
   openSync, closeSync, existsSync, writeFileSync, readFileSync
 } = require('fs')
 
+const { describe, expect, test } = require('@jest/globals')
+
 const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
 const { version: thisVersion } = require('../../../package.json')
 
@@ -267,26 +269,7 @@ describe('cli.run()', () => {
           stderr.close()
         }
 
-        const toolIndent = '        '
-        const actualOutput = readFileSync(outFile, 'utf8').replace(
-          // replace metadata.tools.version
-          `${toolIndent}"vendor": "@cyclonedx",\n` +
-          `${toolIndent}"name": "cyclonedx-npm",\n` +
-          `${toolIndent}"version": ${JSON.stringify(thisVersion)},\n`,
-          `${toolIndent}"vendor": "@cyclonedx",\n` +
-          `${toolIndent}"name": "cyclonedx-npm",\n` +
-          `${toolIndent}"version": "thisVersion-testing",\n`
-        ).replace(
-          // replace metadata.tools.version
-          new RegExp(
-            `${toolIndent}"vendor": "@cyclonedx",\n` +
-          `${toolIndent}"name": "cyclonedx-library",\n` +
-          `${toolIndent}"version": "[^"]+",\n`
-          ),
-          `${toolIndent}"vendor": "@cyclonedx",\n` +
-          `${toolIndent}"name": "cyclonedx-library",\n` +
-          `${toolIndent}"version": "libVersion-testing",\n`
-        )
+        const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
 
         if (!existsSync(expectedOutSnap)) {
           writeFileSync(expectedOutSnap, actualOutput, 'utf8')
@@ -354,26 +337,7 @@ describe('cli.run()', () => {
       stderr.close()
     }
 
-    const toolIndent = '        '
-    const actualOutput = readFileSync(outFile, 'utf8').replace(
-      // replace metadata.tools.version
-      `${toolIndent}"vendor": "@cyclonedx",\n` +
-      `${toolIndent}"name": "cyclonedx-npm",\n` +
-      `${toolIndent}"version": ${JSON.stringify(thisVersion)},\n`,
-      `${toolIndent}"vendor": "@cyclonedx",\n` +
-      `${toolIndent}"name": "cyclonedx-npm",\n` +
-      `${toolIndent}"version": "thisVersion-testing",\n`
-    ).replace(
-      // replace metadata.tools.version
-      new RegExp(
-        `${toolIndent}"vendor": "@cyclonedx",\n` +
-        `${toolIndent}"name": "cyclonedx-library",\n` +
-        `${toolIndent}"version": "[^"]+",\n`
-      ),
-      `${toolIndent}"vendor": "@cyclonedx",\n` +
-      `${toolIndent}"name": "cyclonedx-library",\n` +
-      `${toolIndent}"version": "libVersion-testing",\n`
-    )
+    const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
 
     if (!existsSync(expectedOutSnap)) {
       writeFileSync(expectedOutSnap, actualOutput, 'utf8')
@@ -453,3 +417,71 @@ describe('cli.run()', () => {
     })
   })
 })
+
+/**
+ * @param {string} format
+ * @param {*} data
+ * @returns {string}
+ */
+function makeReproducible (format, data) {
+  switch (format.toLowerCase()) {
+    case 'xml':
+      return makeXmlReproducible(data)
+    case 'json':
+      return makeJsonReproducible(data)
+    default:
+      throw new RangeError(`unexpected format: ${format}`)
+  }
+}
+
+/**
+ * @param {string} json
+ * @returns {string}
+ */
+function makeJsonReproducible (json) {
+  return json
+    .replace(
+      // replace metadata.tools.version
+      '        "vendor": "@cyclonedx",\n' +
+      '        "name": "cyclonedx-npm",\n' +
+      `        "version": ${JSON.stringify(thisVersion)},\n`,
+      '        "vendor": "@cyclonedx",\n' +
+      '        "name": "cyclonedx-npm",\n' +
+      '        "version": "thisVersion-testing",\n'
+    ).replace(
+      // replace metadata.tools.version
+      new RegExp(
+        '        "vendor": "@cyclonedx",\n' +
+        '        "name": "cyclonedx-library",\n' +
+        '        "version": ".+?",\n'
+      ),
+      '        "vendor": "@cyclonedx",\n' +
+      '        "name": "cyclonedx-library",\n' +
+      '        "version": "libVersion-testing",\n'
+    )
+}
+
+/**
+ * @param {string} xml
+ * @returns {string}
+ *
+ * eslint-disable-next-line no-unused-vars
+ */
+function makeXmlReproducible (xml) {
+  return xml
+    .replace(
+      '        <vendor>@cyclonedx</vendor>' +
+      '        <name>cyclonedx-npm</name>' +
+      `        <version>${thisVersion}</version>`,
+      '        <vendor>@cyclonedx</vendor>' +
+      '        <name>cyclonedx-library</name>' +
+      '        <version>thisVersion-testing</version>'
+    ).replace(new RegExp(
+      '        <vendor>@cyclonedx</vendor>' +
+        '        <name>cyclonedx-npm</name>' +
+        '        <version>.+?</version>'),
+    '        <vendor>@cyclonedx</vendor>' +
+      '        <name>cyclonedx-library</name>' +
+      '        <version>libVersion-testing</version>'
+    )
+}
