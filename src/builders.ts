@@ -21,7 +21,6 @@ import { type Builders, Enums, type Factories, Models } from '@cyclonedx/cyclone
 import { existsSync } from 'fs'
 import { type PackageURL } from 'packageurl-js'
 import * as path from 'path'
-import { resolve } from 'path'
 
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
@@ -506,7 +505,7 @@ export class BomBuilder {
     libsLoop:
     for (const lib of libs) {
       for (const nodeModulePath of nodeModulePaths) {
-        const packageJsonPath = resolve(nodeModulePath, ...lib, 'package.json')
+        const packageJsonPath = path.resolve(nodeModulePath, ...lib, 'package.json')
         if (existsSync(packageJsonPath)) {
           packageJsonPaths.push(packageJsonPath)
           continue libsLoop
