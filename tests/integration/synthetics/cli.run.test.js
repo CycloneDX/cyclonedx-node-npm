@@ -471,21 +471,21 @@ function makeXmlReproducible (xml) {
   return xml
     .replace(
       // replace metadata.tools.version
-      '        <vendor>@cyclonedx</vendor>' +
-      '        <name>cyclonedx-npm</name>' +
+      '        <vendor>@cyclonedx</vendor>\n' +
+      '        <name>cyclonedx-npm</name>\n' +
       `        <version>${thisVersion}</version>`,
-      '        <vendor>@cyclonedx</vendor>' +
-      '        <name>cyclonedx-npm</name>' +
+      '        <vendor>@cyclonedx</vendor>\n' +
+      '        <name>cyclonedx-npm</name>\n' +
       '        <version>thisVersion-testing</version>'
     ).replace(
       // replace metadata.tools.version
       new RegExp(
-        '        <vendor>@cyclonedx</vendor>' +
-        '        <name>cyclonedx-library</name>' +
+        '        <vendor>@cyclonedx</vendor>\n' +
+        '        <name>cyclonedx-library</name>\n' +
         '        <version>.+?</version>'
       ),
-      '        <vendor>@cyclonedx</vendor>' +
-      '        <name>cyclonedx-library</name>' +
+      '        <vendor>@cyclonedx</vendor>\n' +
+      '        <name>cyclonedx-library</name>\n' +
       '        <version>libVersion-testing</version>'
     )
 }
