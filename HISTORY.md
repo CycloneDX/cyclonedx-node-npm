@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.8.0 - 2023-02-16
+
 * Added
   * SBOM result might have additional items in `metadata.tools` populated ([#505] via [#506])
 
@@ -64,7 +66,7 @@ Maintenance release
 Maintenance release
 
 * Docs
-  * Enhanced documentation regarding NodeJS/NPM internals, package-dedupe and results (via [#331]) 
+  * Enhanced documentation regarding NodeJS/NPM internals, package-dedupe and results (via [#331])
 * Misc
   * Added test for flattened results (via [#312])
 * Build
@@ -79,7 +81,7 @@ Maintenance release
 * Added
   * When CLI option `--flatten-components=true` is set, then the property [`cdx:npm:package:bundled`](https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md) might be added ([#311] via [#310])
 * Misc
-  * Added demos for flattened results (via [#310]) 
+  * Added demos for flattened results (via [#310])
 
 [#310]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/310
 [#311]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/311
@@ -95,7 +97,7 @@ Maintenance release
 ## 1.4.1 - 2022-11-06
 
 * Fixed
-  * Components' "sha512" hash is properly detected and populated in the SBOM result ([#302] via [#303]) 
+  * Components' "sha512" hash is properly detected and populated in the SBOM result ([#302] via [#303])
 
 [#302]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/302
 [#303]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/303
