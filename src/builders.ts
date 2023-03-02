@@ -19,6 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { type Builders, Enums, type Factories, Models } from '@cyclonedx/cyclonedx-library'
 import { existsSync } from 'fs'
+import normalizePackageData from 'normalize-package-data'
 import { type PackageURL } from 'packageurl-js'
 import * as path from 'path'
 
@@ -304,11 +305,7 @@ export class BomBuilder {
 
       let dep = allComponents.get(depData.path)
       if (dep === undefined) {
-        const _dep = this.makeComponent(
-          this.packageLockOnly
-            ? depData
-            : this.enhancedPackageData(depData)
-        )
+        const _dep = this.makeComponent(depData)
         if (_dep === false) {
           // shall be skipped
           continue // for-loop
@@ -332,11 +329,15 @@ export class BomBuilder {
    * they fail to load package details or miss details.
    * So here is a poly-fill that loads ALL the package's data.
    */
-  private enhancedPackageData (data: { path: string }): any {
+  private enhancedPackageData <T>(data: T & { path: string }): T {
+    if (!path.isAbsolute(data.path)) {
+      return data
+    }
+    const packageJsonPath = path.join(data.path, 'package.json')
     try {
       return Object.assign(
         /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-        require(`${data.path}/package.json`),
+        require(packageJsonPath),
         data
       )
     } catch {
@@ -369,11 +370,19 @@ export class BomBuilder {
       return false
     }
 
-    const component = this.componentBuilder.makeComponent(data, type)
+    // work with a deep copy, because `normalizePackageData()` might modify the data
+    let _dataC = structuredClonePolyfill(data)
+    if (!this.packageLockOnly) {
+      _dataC = this.enhancedPackageData(_dataC)
+    }
+    normalizePackageData(_dataC /* add debug for warnings? */)
+
+    const component = this.componentBuilder.makeComponent(_dataC, type)
     if (component === undefined) {
       this.console.debug('DEBUG | skip broken component: %j %j', data.name, data._id)
       return undefined
     }
+    _dataC = undefined // delete
 
     // region properties
 
@@ -516,7 +525,9 @@ export class BomBuilder {
 
     for (const packageJsonPath of packageJsonPaths) {
       /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-      const tool = this.toolBuilder.makeTool(require(packageJsonPath))
+      const packageData = require(packageJsonPath)
+      normalizePackageData(packageData /* add debug for warnings? */)
+      const tool = this.toolBuilder.makeTool(packageData)
       if (tool !== undefined) {
         yield tool
       }
@@ -573,3 +584,7 @@ export class TreeBuilder {
     }
   }
 }
+
+/* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */
+const structuredClonePolyfill: <T>(value: T) => T = structuredClone ||
+function (value) { return JSON.parse(JSON.stringify(value)) }
