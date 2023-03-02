@@ -382,7 +382,6 @@ export class BomBuilder {
       this.console.debug('DEBUG | skip broken component: %j %j', data.name, data._id)
       return undefined
     }
-    _dataC = undefined // delete
 
     // region properties
 
@@ -401,7 +400,7 @@ export class BomBuilder {
         new Models.Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
       )
     }
-    if (data.private === true) {
+    if (data.private === true || _dataC.private === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
       )
