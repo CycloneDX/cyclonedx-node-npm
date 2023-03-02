@@ -585,5 +585,5 @@ export class TreeBuilder {
 }
 
 /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */
-const structuredClonePolyfill: <T>(value: T) => T = structuredClone ||
+const structuredClonePolyfill: <T>(value: T) => T = structuredClone ??
 function (value) { return JSON.parse(JSON.stringify(value)) }
