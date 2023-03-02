@@ -45,8 +45,12 @@
           <url>https://registry.npmjs.org/@types/node/-/node-18.14.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node</url>
+          <url>git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
         </reference>
         <reference type="website">

@@ -71,9 +71,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/gajus/bundle-dependencies",
+          "url": "https://github.com/gajus/bundle-dependencies/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/gajus/bundle-dependencies.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/gajus/bundle-dependencies#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -97,13 +107,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-regex@2.0.0",
+      "purl": "pkg:npm/ansi-regex@2.0.0?vcs_url=git+https://github.com/sindresorhus/ansi-regex.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/ansi-regex/issues",
           "type": "issue-tracker",
@@ -145,13 +150,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/builtin-modules@1.1.1",
+      "purl": "pkg:npm/builtin-modules@1.1.1?vcs_url=git+https://github.com/sindresorhus/builtin-modules.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/builtin-modules/-/builtin-modules-1.1.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/builtin-modules/issues",
           "type": "issue-tracker",
@@ -193,13 +193,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/camelcase@2.1.0",
+      "purl": "pkg:npm/camelcase@2.1.0?vcs_url=git+https://github.com/sindresorhus/camelcase.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/camelcase/-/camelcase-2.1.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/camelcase/issues",
           "type": "issue-tracker",
@@ -241,13 +236,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/cliui@3.1.0",
+      "purl": "pkg:npm/cliui@3.1.0?vcs_url=git+ssh://git@github.com/bcoe/cliui.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/cliui/-/cliui-3.1.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/bcoe/cliui/issues",
           "type": "issue-tracker",
@@ -289,13 +279,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/code-point-at@1.0.0",
+      "purl": "pkg:npm/code-point-at@1.0.0?vcs_url=git+https://github.com/sindresorhus/code-point-at.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/code-point-at/-/code-point-at-1.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/code-point-at/issues",
           "type": "issue-tracker",
@@ -337,13 +322,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/decamelize@1.1.2",
+      "purl": "pkg:npm/decamelize@1.1.2?vcs_url=git+https://github.com/sindresorhus/decamelize.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/decamelize/-/decamelize-1.1.2.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/decamelize/issues",
           "type": "issue-tracker",
@@ -384,13 +364,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/error-ex@1.3.0",
+      "purl": "pkg:npm/error-ex@1.3.0?vcs_url=git+https://github.com/qix-/node-error-ex.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/error-ex/-/error-ex-1.3.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/qix-/node-error-ex/issues",
           "type": "issue-tracker",
@@ -432,13 +407,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/escape-string-regexp@1.0.5",
+      "purl": "pkg:npm/escape-string-regexp@1.0.5?vcs_url=git+https://github.com/sindresorhus/escape-string-regexp.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/escape-string-regexp/issues",
           "type": "issue-tracker",
@@ -480,13 +450,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/find-up@1.1.0",
+      "purl": "pkg:npm/find-up@1.1.0?vcs_url=git+https://github.com/sindresorhus/find-up.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/find-up/-/find-up-1.1.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/find-up/issues",
           "type": "issue-tracker",
@@ -527,13 +492,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/graceful-fs@4.1.3",
+      "purl": "pkg:npm/graceful-fs@4.1.3?vcs_url=git+https://github.com/isaacs/node-graceful-fs.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.3.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/isaacs/node-graceful-fs/issues",
           "type": "issue-tracker",
@@ -575,13 +535,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/hosted-git-info@2.1.4",
+      "purl": "pkg:npm/hosted-git-info@2.1.4?vcs_url=git+https://github.com/npm/hosted-git-info.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.1.4.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/npm/hosted-git-info/issues",
           "type": "issue-tracker",
@@ -623,13 +578,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/invert-kv@1.0.0",
+      "purl": "pkg:npm/invert-kv@1.0.0?vcs_url=git+https://github.com/sindresorhus/invert-kv.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/invert-kv/-/invert-kv-1.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/invert-kv/issues",
           "type": "issue-tracker",
@@ -671,13 +621,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-arrayish@0.2.1",
+      "purl": "pkg:npm/is-arrayish@0.2.1?vcs_url=git+https://github.com/qix-/node-is-arrayish.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/qix-/node-is-arrayish/issues",
           "type": "issue-tracker",
@@ -719,13 +664,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-builtin-module@1.0.0",
+      "purl": "pkg:npm/is-builtin-module@1.0.0?vcs_url=git+https://github.com/sindresorhus/is-builtin-module.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/is-builtin-module/-/is-builtin-module-1.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/is-builtin-module/issues",
           "type": "issue-tracker",
@@ -767,13 +707,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-fullwidth-code-point@1.0.0",
+      "purl": "pkg:npm/is-fullwidth-code-point@1.0.0?vcs_url=git+https://github.com/sindresorhus/is-fullwidth-code-point.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/is-fullwidth-code-point/issues",
           "type": "issue-tracker",
@@ -815,13 +750,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-utf8@0.2.1",
+      "purl": "pkg:npm/is-utf8@0.2.1?vcs_url=git+https://github.com/wayfind/is-utf8.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/is-utf8/-/is-utf8-0.2.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/wayfind/is-utf8/issues",
           "type": "issue-tracker",
@@ -863,13 +793,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/lcid@1.0.0",
+      "purl": "pkg:npm/lcid@1.0.0?vcs_url=git+https://github.com/sindresorhus/lcid.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/lcid/-/lcid-1.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/lcid/issues",
           "type": "issue-tracker",
@@ -911,13 +836,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/load-json-file@1.1.0",
+      "purl": "pkg:npm/load-json-file@1.1.0?vcs_url=git+https://github.com/sindresorhus/load-json-file.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/load-json-file/-/load-json-file-1.1.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/load-json-file/issues",
           "type": "issue-tracker",
@@ -959,13 +879,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/lodash.assign@4.0.3",
+      "purl": "pkg:npm/lodash.assign@4.0.3?vcs_url=git+https://github.com/lodash/lodash.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/lodash.assign/-/lodash.assign-4.0.3.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/lodash/lodash/issues",
           "type": "issue-tracker",
@@ -1007,13 +922,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/lodash.keys@4.0.3",
+      "purl": "pkg:npm/lodash.keys@4.0.3?vcs_url=git+https://github.com/lodash/lodash.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/lodash.keys/-/lodash.keys-4.0.3.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/lodash/lodash/issues",
           "type": "issue-tracker",
@@ -1055,13 +965,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/lodash.rest@4.0.1",
+      "purl": "pkg:npm/lodash.rest@4.0.1?vcs_url=git+https://github.com/lodash/lodash.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/lodash.rest/-/lodash.rest-4.0.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/lodash/lodash/issues",
           "type": "issue-tracker",
@@ -1103,13 +1008,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/normalize-package-data@2.3.5",
+      "purl": "pkg:npm/normalize-package-data@2.3.5?vcs_url=git://github.com/npm/normalize-package-data.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.3.5.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/npm/normalize-package-data/issues",
           "type": "issue-tracker",
@@ -1151,13 +1051,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/number-is-nan@1.0.0",
+      "purl": "pkg:npm/number-is-nan@1.0.0?vcs_url=git+https://github.com/sindresorhus/number-is-nan.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/number-is-nan/-/number-is-nan-1.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/number-is-nan/issues",
           "type": "issue-tracker",
@@ -1199,13 +1094,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/object-assign@4.0.1",
+      "purl": "pkg:npm/object-assign@4.0.1?vcs_url=git+https://github.com/sindresorhus/object-assign.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/object-assign/-/object-assign-4.0.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/object-assign/issues",
           "type": "issue-tracker",
@@ -1247,13 +1137,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/os-locale@1.4.0",
+      "purl": "pkg:npm/os-locale@1.4.0?vcs_url=git+https://github.com/sindresorhus/os-locale.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/os-locale/-/os-locale-1.4.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/os-locale/issues",
           "type": "issue-tracker",
@@ -1295,13 +1180,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/parse-json@2.2.0",
+      "purl": "pkg:npm/parse-json@2.2.0?vcs_url=git+https://github.com/sindresorhus/parse-json.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/parse-json/-/parse-json-2.2.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/parse-json/issues",
           "type": "issue-tracker",
@@ -1343,13 +1223,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-exists@2.1.0",
+      "purl": "pkg:npm/path-exists@2.1.0?vcs_url=git+https://github.com/sindresorhus/path-exists.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/path-exists/-/path-exists-2.1.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/path-exists/issues",
           "type": "issue-tracker",
@@ -1391,13 +1266,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-type@1.1.0",
+      "purl": "pkg:npm/path-type@1.1.0?vcs_url=git+https://github.com/sindresorhus/path-type.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/path-type/-/path-type-1.1.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/path-type/issues",
           "type": "issue-tracker",
@@ -1439,13 +1309,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/pify@2.3.0",
+      "purl": "pkg:npm/pify@2.3.0?vcs_url=git+https://github.com/sindresorhus/pify.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/pify/-/pify-2.3.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/pify/issues",
           "type": "issue-tracker",
@@ -1487,13 +1352,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/pinkie-promise@2.0.0",
+      "purl": "pkg:npm/pinkie-promise@2.0.0?vcs_url=git+https://github.com/floatdrop/pinkie-promise.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/floatdrop/pinkie-promise/issues",
           "type": "issue-tracker",
@@ -1535,13 +1395,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/pinkie@2.0.4",
+      "purl": "pkg:npm/pinkie@2.0.4?vcs_url=git+https://github.com/floatdrop/pinkie.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/floatdrop/pinkie/issues",
           "type": "issue-tracker",
@@ -1583,13 +1438,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/pkg-conf@1.1.1",
+      "purl": "pkg:npm/pkg-conf@1.1.1?vcs_url=git+https://github.com/sindresorhus/pkg-conf.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/pkg-conf/-/pkg-conf-1.1.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/pkg-conf/issues",
           "type": "issue-tracker",
@@ -1631,13 +1481,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/read-pkg-up@1.0.1",
+      "purl": "pkg:npm/read-pkg-up@1.0.1?vcs_url=git+https://github.com/sindresorhus/read-pkg-up.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-1.0.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/read-pkg-up/issues",
           "type": "issue-tracker",
@@ -1679,13 +1524,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/read-pkg@1.1.0",
+      "purl": "pkg:npm/read-pkg@1.1.0?vcs_url=git+https://github.com/sindresorhus/read-pkg.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/read-pkg/-/read-pkg-1.1.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/read-pkg/issues",
           "type": "issue-tracker",
@@ -1727,13 +1567,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/require-main-filename@1.0.1",
+      "purl": "pkg:npm/require-main-filename@1.0.1?vcs_url=git+ssh://git@github.com/yargs/require-main-filename.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/require-main-filename/-/require-main-filename-1.0.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/yargs/require-main-filename/issues",
           "type": "issue-tracker",
@@ -1774,13 +1609,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/semver@5.1.0",
+      "purl": "pkg:npm/semver@5.1.0?vcs_url=git+https://github.com/npm/node-semver.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/semver/-/semver-5.1.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/npm/node-semver/issues",
           "type": "issue-tracker",
@@ -1822,13 +1652,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-correct@1.0.2",
+      "purl": "pkg:npm/spdx-correct@1.0.2?vcs_url=git+https://github.com/kemitchell/spdx-correct.js.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/spdx-correct/-/spdx-correct-1.0.2.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/kemitchell/spdx-correct.js/issues",
           "type": "issue-tracker",
@@ -1870,13 +1695,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-exceptions@1.0.4",
+      "purl": "pkg:npm/spdx-exceptions@1.0.4?vcs_url=git+https://github.com/kemitchell/spdx-exceptions.json.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-1.0.4.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/kemitchell/spdx-exceptions.json/issues",
           "type": "issue-tracker",
@@ -1916,13 +1736,8 @@
           "expression": "(MIT AND CC-BY-3.0)"
         }
       ],
-      "purl": "pkg:npm/spdx-expression-parse@1.0.2",
+      "purl": "pkg:npm/spdx-expression-parse@1.0.2?vcs_url=git+https://github.com/kemitchell/spdx-expression-parse.js.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-1.0.2.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/kemitchell/spdx-expression-parse.js/issues",
           "type": "issue-tracker",
@@ -1964,13 +1779,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-license-ids@1.2.0",
+      "purl": "pkg:npm/spdx-license-ids@1.2.0?vcs_url=git+https://github.com/shinnn/spdx-license-ids.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-1.2.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/shinnn/spdx-license-ids/issues",
           "type": "issue-tracker",
@@ -2012,13 +1822,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/string-width@1.0.1",
+      "purl": "pkg:npm/string-width@1.0.1?vcs_url=git+https://github.com/sindresorhus/string-width.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/string-width/-/string-width-1.0.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/string-width/issues",
           "type": "issue-tracker",
@@ -2060,13 +1865,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/strip-ansi@3.0.1",
+      "purl": "pkg:npm/strip-ansi@3.0.1?vcs_url=git+https://github.com/chalk/strip-ansi.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/chalk/strip-ansi/issues",
           "type": "issue-tracker",
@@ -2108,13 +1908,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/strip-bom@2.0.0",
+      "purl": "pkg:npm/strip-bom@2.0.0?vcs_url=git+https://github.com/sindresorhus/strip-bom.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/strip-bom/-/strip-bom-2.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/sindresorhus/strip-bom/issues",
           "type": "issue-tracker",
@@ -2156,13 +1951,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/symbol@0.2.1",
+      "purl": "pkg:npm/symbol@0.2.1?vcs_url=git://github.com/seanmonstar/symbol.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/symbol/-/symbol-0.2.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/seanmonstar/symbol/issues",
           "type": "issue-tracker",
@@ -2204,13 +1994,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/validate-npm-package-license@3.0.1",
+      "purl": "pkg:npm/validate-npm-package-license@3.0.1?vcs_url=git+https://github.com/kemitchell/validate-npm-package-license.js.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.1.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/kemitchell/validate-npm-package-license.js/issues",
           "type": "issue-tracker",
@@ -2252,13 +2037,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/window-size@0.2.0",
+      "purl": "pkg:npm/window-size@0.2.0?vcs_url=git+https://github.com/jonschlinkert/window-size.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/window-size/-/window-size-0.2.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/jonschlinkert/window-size/issues",
           "type": "issue-tracker",
@@ -2300,13 +2080,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/wrap-ansi@1.0.0",
+      "purl": "pkg:npm/wrap-ansi@1.0.0?vcs_url=git+https://github.com/chalk/wrap-ansi.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-1.0.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/chalk/wrap-ansi/issues",
           "type": "issue-tracker",
@@ -2348,13 +2123,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/y18n@3.2.0",
+      "purl": "pkg:npm/y18n@3.2.0?vcs_url=git+ssh://git@github.com/bcoe/y18n.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/y18n/-/y18n-3.2.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/bcoe/y18n/issues",
           "type": "issue-tracker",
@@ -2396,13 +2166,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/yargs-parser@2.1.0",
+      "purl": "pkg:npm/yargs-parser@2.1.0?vcs_url=git+ssh://git@github.com/yargs/yargs-parser.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-2.1.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/yargs/yargs-parser/issues",
           "type": "issue-tracker",
@@ -2443,13 +2208,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/yargs@4.1.0",
+      "purl": "pkg:npm/yargs@4.1.0?vcs_url=git+ssh://git@github.com/bcoe/yargs.git",
       "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/yargs/-/yargs-4.1.0.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
         {
           "url": "https://github.com/bcoe/yargs/issues",
           "type": "issue-tracker",

@@ -41,9 +41,17 @@
       </licenses>
       <purl>pkg:npm/my-local-a@0.1.0?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -77,9 +85,17 @@
       </licenses>
       <purl>pkg:npm/my-local-c@0.23.42?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>

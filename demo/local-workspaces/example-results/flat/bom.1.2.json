@@ -49,9 +49,19 @@
       "purl": "pkg:npm/my-local-a@0.1.0?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a",
       "externalReferences": [
         {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -86,9 +96,19 @@
       "purl": "pkg:npm/my-local-c@0.23.42?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local",
       "externalReferences": [
         {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     }
