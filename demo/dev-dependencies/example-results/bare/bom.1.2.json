@@ -61,7 +61,12 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
         },

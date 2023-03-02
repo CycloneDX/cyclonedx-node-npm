@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Changed
+  * Detected node packages' metadata are now [normalized](https://www.npmjs.com/package/normalize-package-data), before translation to SBOM components happens. ([#536] via [#537])  
+    This might increase the quality of SBOM results.
+
+[#536]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/536
+[#537]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/537
+
 ## 1.8.0 - 2023-02-16
 
 * Added
