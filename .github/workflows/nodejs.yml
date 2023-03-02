@@ -72,7 +72,6 @@ jobs:
           - '18'      # Active LTS
           - '16'
           - '14'
-          - '14.0.0'  # Lowest supported by this project
         os:
           - ubuntu-latest
           - windows-latest
