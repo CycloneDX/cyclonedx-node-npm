@@ -55,7 +55,7 @@
       "name": "juice-shop",
       "version": "14.1.1",
       "bom-ref": "juice-shop@14.1.1",
-      "author": "Björn Kimminich <bjoern.kimminich@owasp.org> (https://kimminich.de)",
+      "author": "Björn Kimminich",
       "description": "Probably the most modern and sophisticated insecure web application",
       "licenses": [
         {
@@ -64,7 +64,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/juice-shop@14.1.1?vcs_url=https://github.com/juice-shop/juice-shop.git",
+      "purl": "pkg:npm/juice-shop@14.1.1?vcs_url=git+https://github.com/juice-shop/juice-shop.git",
       "externalReferences": [
         {
           "url": "https://github.com/juice-shop/juice-shop/issues",
@@ -72,7 +72,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/juice-shop/juice-shop.git",
+          "url": "git+https://github.com/juice-shop/juice-shop.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
