@@ -5,12 +5,12 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>1.11.0</version>
+        <version>1.12.0</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.8.0</version>
+        <version>1.9.0</version>
       </tool>
     </tools>
     <component type="application" bom-ref="demo-bundled-deps@0.0.0">
@@ -69,7 +69,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ansi-regex@2.0.0?vcs_url=git+https://github.com/sindresorhus/ansi-regex.git</purl>
+      <purl>pkg:npm/ansi-regex@2.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/ansi-regex.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/ansi-regex/issues</url>
@@ -95,7 +95,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/builtin-modules@1.1.1?vcs_url=git+https://github.com/sindresorhus/builtin-modules.git</purl>
+      <purl>pkg:npm/builtin-modules@1.1.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/builtin-modules.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/builtin-modules/issues</url>
@@ -121,7 +121,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/camelcase@2.1.0?vcs_url=git+https://github.com/sindresorhus/camelcase.git</purl>
+      <purl>pkg:npm/camelcase@2.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/camelcase.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/camelcase/issues</url>
@@ -147,7 +147,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/cliui@3.1.0?vcs_url=git+ssh://git@github.com/bcoe/cliui.git</purl>
+      <purl>pkg:npm/cliui@3.1.0?vcs_url=git%2Bssh%3A//git%40github.com/bcoe/cliui.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/bcoe/cliui/issues</url>
@@ -173,7 +173,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/code-point-at@1.0.0?vcs_url=git+https://github.com/sindresorhus/code-point-at.git</purl>
+      <purl>pkg:npm/code-point-at@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/code-point-at.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/code-point-at/issues</url>
@@ -199,7 +199,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/decamelize@1.1.2?vcs_url=git+https://github.com/sindresorhus/decamelize.git</purl>
+      <purl>pkg:npm/decamelize@1.1.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/decamelize.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/decamelize/issues</url>
@@ -224,7 +224,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/error-ex@1.3.0?vcs_url=git+https://github.com/qix-/node-error-ex.git</purl>
+      <purl>pkg:npm/error-ex@1.3.0?vcs_url=git%2Bhttps%3A//github.com/qix-/node-error-ex.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/qix-/node-error-ex/issues</url>
@@ -250,7 +250,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/escape-string-regexp@1.0.5?vcs_url=git+https://github.com/sindresorhus/escape-string-regexp.git</purl>
+      <purl>pkg:npm/escape-string-regexp@1.0.5?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/escape-string-regexp.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/escape-string-regexp/issues</url>
@@ -276,7 +276,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/find-up@1.1.0?vcs_url=git+https://github.com/sindresorhus/find-up.git</purl>
+      <purl>pkg:npm/find-up@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/find-up.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/find-up/issues</url>
@@ -301,7 +301,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/graceful-fs@4.1.3?vcs_url=git+https://github.com/isaacs/node-graceful-fs.git</purl>
+      <purl>pkg:npm/graceful-fs@4.1.3?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-graceful-fs.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-graceful-fs/issues</url>
@@ -327,7 +327,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/hosted-git-info@2.1.4?vcs_url=git+https://github.com/npm/hosted-git-info.git</purl>
+      <purl>pkg:npm/hosted-git-info@2.1.4?vcs_url=git%2Bhttps%3A//github.com/npm/hosted-git-info.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/hosted-git-info/issues</url>
@@ -353,7 +353,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/invert-kv@1.0.0?vcs_url=git+https://github.com/sindresorhus/invert-kv.git</purl>
+      <purl>pkg:npm/invert-kv@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/invert-kv.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/invert-kv/issues</url>
@@ -379,7 +379,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-arrayish@0.2.1?vcs_url=git+https://github.com/qix-/node-is-arrayish.git</purl>
+      <purl>pkg:npm/is-arrayish@0.2.1?vcs_url=git%2Bhttps%3A//github.com/qix-/node-is-arrayish.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/qix-/node-is-arrayish/issues</url>
@@ -405,7 +405,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-builtin-module@1.0.0?vcs_url=git+https://github.com/sindresorhus/is-builtin-module.git</purl>
+      <purl>pkg:npm/is-builtin-module@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-builtin-module.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/is-builtin-module/issues</url>
@@ -431,7 +431,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-fullwidth-code-point@1.0.0?vcs_url=git+https://github.com/sindresorhus/is-fullwidth-code-point.git</purl>
+      <purl>pkg:npm/is-fullwidth-code-point@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-fullwidth-code-point.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/is-fullwidth-code-point/issues</url>
@@ -457,7 +457,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-utf8@0.2.1?vcs_url=git+https://github.com/wayfind/is-utf8.git</purl>
+      <purl>pkg:npm/is-utf8@0.2.1?vcs_url=git%2Bhttps%3A//github.com/wayfind/is-utf8.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/wayfind/is-utf8/issues</url>
@@ -483,7 +483,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lcid@1.0.0?vcs_url=git+https://github.com/sindresorhus/lcid.git</purl>
+      <purl>pkg:npm/lcid@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/lcid.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/lcid/issues</url>
@@ -509,7 +509,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/load-json-file@1.1.0?vcs_url=git+https://github.com/sindresorhus/load-json-file.git</purl>
+      <purl>pkg:npm/load-json-file@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/load-json-file.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/load-json-file/issues</url>
@@ -535,7 +535,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lodash.assign@4.0.3?vcs_url=git+https://github.com/lodash/lodash.git</purl>
+      <purl>pkg:npm/lodash.assign@4.0.3?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/lodash/lodash/issues</url>
@@ -561,7 +561,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lodash.keys@4.0.3?vcs_url=git+https://github.com/lodash/lodash.git</purl>
+      <purl>pkg:npm/lodash.keys@4.0.3?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/lodash/lodash/issues</url>
@@ -587,7 +587,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lodash.rest@4.0.1?vcs_url=git+https://github.com/lodash/lodash.git</purl>
+      <purl>pkg:npm/lodash.rest@4.0.1?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/lodash/lodash/issues</url>
@@ -613,7 +613,7 @@
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/normalize-package-data@2.3.5?vcs_url=git://github.com/npm/normalize-package-data.git</purl>
+      <purl>pkg:npm/normalize-package-data@2.3.5?vcs_url=git%3A//github.com/npm/normalize-package-data.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/normalize-package-data/issues</url>
@@ -639,7 +639,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/number-is-nan@1.0.0?vcs_url=git+https://github.com/sindresorhus/number-is-nan.git</purl>
+      <purl>pkg:npm/number-is-nan@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/number-is-nan.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/number-is-nan/issues</url>
@@ -665,7 +665,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/object-assign@4.0.1?vcs_url=git+https://github.com/sindresorhus/object-assign.git</purl>
+      <purl>pkg:npm/object-assign@4.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/object-assign.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/object-assign/issues</url>
@@ -691,7 +691,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/os-locale@1.4.0?vcs_url=git+https://github.com/sindresorhus/os-locale.git</purl>
+      <purl>pkg:npm/os-locale@1.4.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/os-locale.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/os-locale/issues</url>
@@ -717,7 +717,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/parse-json@2.2.0?vcs_url=git+https://github.com/sindresorhus/parse-json.git</purl>
+      <purl>pkg:npm/parse-json@2.2.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/parse-json.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/parse-json/issues</url>
@@ -743,7 +743,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/path-exists@2.1.0?vcs_url=git+https://github.com/sindresorhus/path-exists.git</purl>
+      <purl>pkg:npm/path-exists@2.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/path-exists.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/path-exists/issues</url>
@@ -769,7 +769,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/path-type@1.1.0?vcs_url=git+https://github.com/sindresorhus/path-type.git</purl>
+      <purl>pkg:npm/path-type@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/path-type.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/path-type/issues</url>
@@ -795,7 +795,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/pify@2.3.0?vcs_url=git+https://github.com/sindresorhus/pify.git</purl>
+      <purl>pkg:npm/pify@2.3.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/pify.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/pify/issues</url>
@@ -821,7 +821,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/pinkie-promise@2.0.0?vcs_url=git+https://github.com/floatdrop/pinkie-promise.git</purl>
+      <purl>pkg:npm/pinkie-promise@2.0.0?vcs_url=git%2Bhttps%3A//github.com/floatdrop/pinkie-promise.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/floatdrop/pinkie-promise/issues</url>
@@ -847,7 +847,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/pinkie@2.0.4?vcs_url=git+https://github.com/floatdrop/pinkie.git</purl>
+      <purl>pkg:npm/pinkie@2.0.4?vcs_url=git%2Bhttps%3A//github.com/floatdrop/pinkie.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/floatdrop/pinkie/issues</url>
@@ -873,7 +873,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/pkg-conf@1.1.1?vcs_url=git+https://github.com/sindresorhus/pkg-conf.git</purl>
+      <purl>pkg:npm/pkg-conf@1.1.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/pkg-conf.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/pkg-conf/issues</url>
@@ -899,7 +899,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/read-pkg-up@1.0.1?vcs_url=git+https://github.com/sindresorhus/read-pkg-up.git</purl>
+      <purl>pkg:npm/read-pkg-up@1.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/read-pkg-up.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/read-pkg-up/issues</url>
@@ -925,7 +925,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/read-pkg@1.1.0?vcs_url=git+https://github.com/sindresorhus/read-pkg.git</purl>
+      <purl>pkg:npm/read-pkg@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/read-pkg.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/read-pkg/issues</url>
@@ -951,7 +951,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/require-main-filename@1.0.1?vcs_url=git+ssh://git@github.com/yargs/require-main-filename.git</purl>
+      <purl>pkg:npm/require-main-filename@1.0.1?vcs_url=git%2Bssh%3A//git%40github.com/yargs/require-main-filename.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/yargs/require-main-filename/issues</url>
@@ -976,7 +976,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/semver@5.1.0?vcs_url=git+https://github.com/npm/node-semver.git</purl>
+      <purl>pkg:npm/semver@5.1.0?vcs_url=git%2Bhttps%3A//github.com/npm/node-semver.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-semver/issues</url>
@@ -1002,7 +1002,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-correct@1.0.2?vcs_url=git+https://github.com/kemitchell/spdx-correct.js.git</purl>
+      <purl>pkg:npm/spdx-correct@1.0.2?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-correct.js.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/kemitchell/spdx-correct.js/issues</url>
@@ -1028,7 +1028,7 @@
           <id>CC-BY-3.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-exceptions@1.0.4?vcs_url=git+https://github.com/kemitchell/spdx-exceptions.json.git</purl>
+      <purl>pkg:npm/spdx-exceptions@1.0.4?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-exceptions.json.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/kemitchell/spdx-exceptions.json/issues</url>
@@ -1052,7 +1052,7 @@
       <licenses>
         <expression>(MIT AND CC-BY-3.0)</expression>
       </licenses>
-      <purl>pkg:npm/spdx-expression-parse@1.0.2?vcs_url=git+https://github.com/kemitchell/spdx-expression-parse.js.git</purl>
+      <purl>pkg:npm/spdx-expression-parse@1.0.2?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-expression-parse.js.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/kemitchell/spdx-expression-parse.js/issues</url>
@@ -1078,7 +1078,7 @@
           <id>Unlicense</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-license-ids@1.2.0?vcs_url=git+https://github.com/shinnn/spdx-license-ids.git</purl>
+      <purl>pkg:npm/spdx-license-ids@1.2.0?vcs_url=git%2Bhttps%3A//github.com/shinnn/spdx-license-ids.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/shinnn/spdx-license-ids/issues</url>
@@ -1104,7 +1104,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/string-width@1.0.1?vcs_url=git+https://github.com/sindresorhus/string-width.git</purl>
+      <purl>pkg:npm/string-width@1.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/string-width/issues</url>
@@ -1130,7 +1130,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/strip-ansi@3.0.1?vcs_url=git+https://github.com/chalk/strip-ansi.git</purl>
+      <purl>pkg:npm/strip-ansi@3.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/strip-ansi.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/strip-ansi/issues</url>
@@ -1156,7 +1156,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/strip-bom@2.0.0?vcs_url=git+https://github.com/sindresorhus/strip-bom.git</purl>
+      <purl>pkg:npm/strip-bom@2.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/strip-bom.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/strip-bom/issues</url>
@@ -1182,7 +1182,7 @@
           <name>MPLv2.0</name>
         </license>
       </licenses>
-      <purl>pkg:npm/symbol@0.2.1?vcs_url=git://github.com/seanmonstar/symbol.git</purl>
+      <purl>pkg:npm/symbol@0.2.1?vcs_url=git%3A//github.com/seanmonstar/symbol.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/seanmonstar/symbol/issues</url>
@@ -1208,7 +1208,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/validate-npm-package-license@3.0.1?vcs_url=git+https://github.com/kemitchell/validate-npm-package-license.js.git</purl>
+      <purl>pkg:npm/validate-npm-package-license@3.0.1?vcs_url=git%2Bhttps%3A//github.com/kemitchell/validate-npm-package-license.js.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/kemitchell/validate-npm-package-license.js/issues</url>
@@ -1234,7 +1234,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/window-size@0.2.0?vcs_url=git+https://github.com/jonschlinkert/window-size.git</purl>
+      <purl>pkg:npm/window-size@0.2.0?vcs_url=git%2Bhttps%3A//github.com/jonschlinkert/window-size.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jonschlinkert/window-size/issues</url>
@@ -1260,7 +1260,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/wrap-ansi@1.0.0?vcs_url=git+https://github.com/chalk/wrap-ansi.git</purl>
+      <purl>pkg:npm/wrap-ansi@1.0.0?vcs_url=git%2Bhttps%3A//github.com/chalk/wrap-ansi.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/wrap-ansi/issues</url>
@@ -1286,7 +1286,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/y18n@3.2.0?vcs_url=git+ssh://git@github.com/bcoe/y18n.git</purl>
+      <purl>pkg:npm/y18n@3.2.0?vcs_url=git%2Bssh%3A//git%40github.com/bcoe/y18n.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/bcoe/y18n/issues</url>
@@ -1312,7 +1312,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/yargs-parser@2.1.0?vcs_url=git+ssh://git@github.com/yargs/yargs-parser.git</purl>
+      <purl>pkg:npm/yargs-parser@2.1.0?vcs_url=git%2Bssh%3A//git%40github.com/yargs/yargs-parser.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/yargs/yargs-parser/issues</url>
@@ -1337,7 +1337,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/yargs@4.1.0?vcs_url=git+ssh://git@github.com/bcoe/yargs.git</purl>
+      <purl>pkg:npm/yargs@4.1.0?vcs_url=git%2Bssh%3A//git%40github.com/bcoe/yargs.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/bcoe/yargs/issues</url>

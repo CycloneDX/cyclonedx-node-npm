@@ -5,7 +5,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>1.11.0</version>
+        <version>1.12.0</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
@@ -24,7 +24,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.8.0</version>
+        <version>1.9.0</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
@@ -67,7 +67,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-a@0.1.0?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a</purl>
+      <purl>pkg:npm/my-local-a@0.1.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
@@ -111,7 +111,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-c@0.23.42?vcs_url=git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local</purl>
+      <purl>pkg:npm/my-local-c@0.23.42?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>

@@ -64,7 +64,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/juice-shop@14.1.1?vcs_url=git+https://github.com/juice-shop/juice-shop.git",
+      "purl": "pkg:npm/juice-shop@14.1.1?vcs_url=git%2Bhttps%3A//github.com/juice-shop/juice-shop.git",
       "externalReferences": [
         {
           "url": "https://github.com/juice-shop/juice-shop/issues",
