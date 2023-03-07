@@ -5,12 +5,12 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>1.11.0</version>
+        <version>1.12.0</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.8.0</version>
+        <version>1.9.0</version>
       </tool>
     </tools>
     <component type="application" bom-ref="juice-shop@14.1.1">
@@ -23,7 +23,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/juice-shop@14.1.1?vcs_url=git+https://github.com/juice-shop/juice-shop.git</purl>
+      <purl>pkg:npm/juice-shop@14.1.1?vcs_url=git%2Bhttps%3A//github.com/juice-shop/juice-shop.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/juice-shop/juice-shop/issues</url>
