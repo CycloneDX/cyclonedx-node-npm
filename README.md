@@ -107,6 +107,15 @@ Options:
 
 For a demo of _cyclonedx-npm_ see the [demo project][demo_readme].
 
+## How it works
+
+This tool utilizes `npm` to collect evidences of installed packages/modules.
+Read more in the [dedicated docs](https://github.com/CycloneDX/cyclonedx-node-npm/tree/main/docs/how.md).
+
+This tool does not do artificial deduplication.
+Therefore, if a component is installed multiple times, it appears multiple times in the SBOM result.
+Read more on the topic in the [dedicated docs "Component Deduplication"](https://github.com/CycloneDX/cyclonedx-node-npm/tree/main/docs/component_deduplication.md).
+
 ## Internals
 
 This tool utilizes the [CycloneDX library][cyclonedx-library] to generate the actual data structures.
