@@ -1,0 +1,10 @@
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
+
+## copied from https://github.com/CycloneDX/.github/blob/master/FUNDING.yml
+custom:
+  - "https://owasp.org/donate/?reponame=www-project-cyclonedx&title=OWASP+CycloneDX"
+
+## project extras
+github:
+  - jkowalleck
+
