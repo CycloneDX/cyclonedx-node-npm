@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Docs
+  * added section "How it works" to the README (via [#563])
+
+[#563]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/563
+
 ## 1.9.0 - 2023-03-03
 
 * Changed

@@ -7,3 +7,5 @@ All logic and analysis is done by `npm` itself, the output is just interpreted a
 
 Sometimes `npm-ls` got hiccups - caused by individual broken project installation or bugs with `npm`.
 Then, this tool may also read `package.json` files inside the `node_module` directory as an additional information source.
+
+Expected transformations, assumptions and results are [described here](result.md).
