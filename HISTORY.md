@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.9.1 - 2023-03-15
+
 * Docs
   * added section "How it works" to the README (via [#563])
 
