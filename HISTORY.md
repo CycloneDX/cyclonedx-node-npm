@@ -7,6 +7,9 @@ All notable changes to this project will be documented in this file.
 * Fixed
   * No longer omit components' version's buildID ([#551] via [#597])  
     Only affects NPM>=7. NPM6 omits this information in the first place, still.
+* Misc
+  * Utilize SerialNumber generator from [`@cyclonedx/cyclonedx-library@^1.13`](https://github.com/CycloneDX/cyclonedx-javascript-library/releases/tag/v1.13.0) (via [#])  
+    The previously used code was donated to that library.
 
 [#551]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/551
 [#597]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/597
