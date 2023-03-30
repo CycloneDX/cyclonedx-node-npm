@@ -35,6 +35,7 @@ jobs:
           - juice-shop
           - local-dependencies
           - local-workspaces
+          - package-with-build-id
         npm-version:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
           ## see also: https://github.com/npm/cli/releases

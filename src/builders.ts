@@ -376,6 +376,12 @@ export class BomBuilder {
       _dataC = this.enhancedPackageData(_dataC)
     }
     normalizePackageData(_dataC /* add debug for warnings? */)
+    // region fix normalizations
+    if (typeof data.version === 'string') {
+      // allow non-SemVer strings
+      _dataC.version = data.version.trim()
+    }
+    // endregion fix normalizations
 
     const component = this.componentBuilder.makeComponent(_dataC, type)
     if (component === undefined) {

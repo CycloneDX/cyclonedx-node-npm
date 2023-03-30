@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0-123+456",
+  "name": "demo-package-with-build-id",
+  "description": "demo: package-with-build-id -- show how buildID in the version looks like",
+  "private": true,
+  "homepage": "https://github.com/CycloneDX/cyclonedx-node-npm/issues/551",
+  "_id": "demo-package-with-build-id@1.0.0-123+456",
+  "extraneous": false,
+  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\package-with-build-id\\project",
+  "_dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {}
+}
