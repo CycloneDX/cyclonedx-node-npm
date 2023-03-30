@@ -5,7 +5,10 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Fixed
-  * SBOM results no longer have buildIDs cut from component's version. 
+  * SBOM results no longer have buildIDs cut from component's version ([#551] via [#597])
+
+[#551]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/551
+[#597]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/597
 
 ## 1.9.1 - 2023-03-15
 
