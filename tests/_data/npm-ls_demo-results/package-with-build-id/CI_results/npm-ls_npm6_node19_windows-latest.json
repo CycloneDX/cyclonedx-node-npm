@@ -1,0 +1,21 @@
+{
+  "name": "demo-package-with-build-id",
+  "description": "demo: package-with-build-id -- show how buildID in the version looks like",
+  "private": true,
+  "version": "1.0.0-123",
+  "homepage": "https://github.com/CycloneDX/cyclonedx-node-npm/issues/551",
+  "readme": "ERROR: No README data found!",
+  "_id": "demo-package-with-build-id@1.0.0-123",
+  "_shrinkwrap": {
+    "name": "demo-package-with-build-id",
+    "version": "1.0.0-123+456",
+    "lockfileVersion": 1
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "_dependencies": {},
+  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\package-with-build-id\\project",
+  "error": null,
+  "extraneous": false
+}
