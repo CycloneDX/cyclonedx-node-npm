@@ -28,6 +28,8 @@ on:
         default: false
         required: false
 
+permissions: write-all
+
 env:
   REPORTS_DIR: CI_reports
   NODE_ACTIVE_LTS: "18"
