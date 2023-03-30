@@ -5,7 +5,8 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Fixed
-  * No longer omit components' version's buildID ([#551] via [#597])
+  * No longer omit components' version's buildID ([#551] via [#597])  
+    Only affects NPM>=7. NPM6 omits this information in the first place, still.
 
 [#551]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/551
 [#597]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/597
