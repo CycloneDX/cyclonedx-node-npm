@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { type Builders, Enums, type Factories, Models } from '@cyclonedx/cyclonedx-library'
+import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
 import { existsSync } from 'fs'
 import normalizePackageData from 'normalize-package-data'
 import { type PackageURL } from 'packageurl-js'
@@ -225,7 +225,7 @@ export class BomBuilder {
     }
 
     if (!this.reproducible) {
-      bom.serialNumber = this.makeRandomSerialNumber()
+      bom.serialNumber = Utils.BomUtility.randomSerialNumber()
       bom.metadata.timestamp = new Date()
     }
 
@@ -489,22 +489,6 @@ export class BomBuilder {
         property.value = relativePath(rootPath, property.value).replace(dirSep, '/')
       }
     }
-  }
-
-  private makeRandomSerialNumber (): string {
-    const b = [
-      Math.round(Math.random() * 0xFFFF),
-      Math.round(Math.random() * 0xFFFF),
-      Math.round(Math.random() * 0xFFFF),
-      // UUID version 4
-      Math.round(Math.random() * 0x0FFF) | 0x4000,
-      // UUID version 4 variant 1
-      Math.round(Math.random() * 0x3FFF) | 0x8000,
-      Math.round(Math.random() * 0xFFFF),
-      Math.round(Math.random() * 0xFFFF),
-      Math.round(Math.random() * 0xFFFF)
-    ].map(n => n.toString(16).padStart(4, '0'))
-    return `urn:uuid:${b[0]}${b[1]}-${b[2]}-${b[3]}-${b[4]}-${b[5]}${b[6]}${b[7]}`
   }
 
   private * makeTools (): Generator<Models.Tool> {
