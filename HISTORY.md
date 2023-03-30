@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Fixed
+  * SBOM results no longer have buildIDs cut from component's version. 
+
 ## 1.9.1 - 2023-03-15
 
 * Docs
