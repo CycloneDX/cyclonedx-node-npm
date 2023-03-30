@@ -1,5 +1,5 @@
-[![shield_gh-workflow-test]][link_gh-workflow-test]
 [![shield_npm-version]][link_npm]
+[![shield_gh-workflow-test]][link_gh-workflow-test]
 [![shield_license]][license_file]  
 [![shield_website]][link_website]
 [![shield_slack]][link_slack]
