@@ -105,11 +105,15 @@ Options:
 
 ### npm executable
 
-By default, this tool will use global `npm`. This can  be changed by setting environmental variable `npm_execpath` to path of `npm-cli.js` executable, for example:
+By default, this tool will use the global - or the currently running `npm` executable. This can be changed by setting environmental variable `npm_execpath` to path of `npm-cli.js` executable, for example:
 
-```shell
+```bash
 npm_execpath=node_modules/npm/bin/npm-cli.js cyclonedx-npm ...
 ```
+
+#### background
+As soon as `npm` spawns a sub-process - for `npx`, `npm exec`, `npm script` - it will set variable "npm_execpath" to the proper value.
+Node.js internally also honors this variable.
 
 ## Demo
 
