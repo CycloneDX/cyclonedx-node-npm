@@ -103,6 +103,14 @@ Options:
   -h, --help                display help for command
 ```
 
+### npm executable
+
+By default, this tool will use global `npm`. This can  be changed by setting environmental variable `npm_execpath` to path of `npm-cli.js` executable, for example:
+
+```shell
+npm_execpath=node_modules/npm/bin/npm-cli.js cyclonedx-npm ...
+```
+
 ## Demo
 
 For a demo of _cyclonedx-npm_ see the [demo project][demo_readme].
