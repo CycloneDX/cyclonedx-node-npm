@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Docs
+  * added section "npm executable" to the README (via [#647])
+
 ## 1.9.2 - 2023-03-30
 
 * Fixed
