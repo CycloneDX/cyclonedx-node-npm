@@ -5,8 +5,8 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Added
-  * OptionalDependencies have the `component.scope=optional` populated in SBOM results ([#645] via [#657])  
-    DevDependencies that are also required by OptionalDependencies do not have this populated, as they are mandatory for development (meaning `component.scope=required`).
+  * SBOM result might have `component.scope` populated for OptionalDependencies ([#645] via [#657])  
+    DevDependencies that are also required by OptionalDependencies do not have this populated, as they are mandatory for development (meaning `component.scope=required`, which is the default).
 * Fixed
   * DevDependencies that are also required by OptionalDependencies correctly have the property "cdx:npm:package:development" populated in SBOM results ([#645] via [#657])
   * DevDependencies that are also required by OptionalDependencies are correctly omitted from SBOM results, when the CLI flag for omitting both is given ([#645] via [#657])
