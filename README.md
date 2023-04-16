@@ -112,6 +112,9 @@ For a demo of _cyclonedx-npm_ see the [demo project][demo_readme].
 This tool utilizes `npm` to collect evidences of installed packages/modules.
 Read more in the [dedicated docs](https://github.com/CycloneDX/cyclonedx-node-npm/tree/main/docs/how.md).
 
+The appropriate `npm` executable is detected automatically, yet can be overridden with the environment variable `npm_execpath`.  
+Auto detect: If called by a `npm`/`npx` context, then the current `npm` executable is utilized, otherwise it is managed by SHELL and PATH.
+
 This tool does not do artificial deduplication.
 Therefore, if a component is installed multiple times, it appears multiple times in the SBOM result.
 Read more on the topic in the [dedicated docs "Component Deduplication"](https://github.com/CycloneDX/cyclonedx-node-npm/tree/main/docs/component_deduplication.md).

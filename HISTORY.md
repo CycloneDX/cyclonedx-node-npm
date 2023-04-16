@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Docs
+  * Describe internal `npm` executable detection in README (via [#647])
+
+[#647]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/647
+
 ## 1.9.2 - 2023-03-30
 
 * Fixed
