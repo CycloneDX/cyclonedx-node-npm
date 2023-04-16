@@ -370,6 +370,13 @@ export class BomBuilder {
       return false
     }
 
+    // attention: `data.devOptional` are not to be skipped with devs, since they are still required by optionals.
+    const isDevOptional = data.devOptional === true
+    if (isDevOptional && this.omitDependencyTypes.has('dev') && this.omitDependencyTypes.has('optional')) {
+      this.console.debug('DEBUG | omit devOptional component: %j %j', data.name, data._id)
+      return false
+    }
+
     // work with a deep copy, because `normalizePackageData()` might modify the data
     let _dataC = structuredClonePolyfill(data)
     if (!this.packageLockOnly) {
@@ -396,7 +403,7 @@ export class BomBuilder {
         new Models.Property(PropertyNames.PackageInstallPath, data.path)
       )
     }
-    if (isDev) {
+    if (isDev || isDevOptional) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
       )
