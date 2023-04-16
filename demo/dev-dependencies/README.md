@@ -10,9 +10,13 @@ and see how they behave different from
 
 ## remarks
 
-* The `dev` or  `devOptional` is `true` for devDependencies.
-* The `dev` and `devOptional` is absent for non-devDependencies.
+* The `optional` is `true` for optionalDependencies.
+* The `optional` is absent for non-optionalDependencies.
+* The `dev` is `true` for devDependencies.
+* The `dev` is absent for non-devDependencies.
+* The `devOptional` is `true` for devDependencies that are also transitive dependencies from optionalDependencies.
 * npm6: `_development` instead of `dev`.
+* npm6: `_optional` instead of `optional`.
 
 ## output
 
@@ -25,7 +29,6 @@ Output of `npm ls --json -a -l` look like this:
   "name": "demo-dev-dependencies",
   "description": "demo: demo-dev-dependencies -- showcase how workspaces look like",
   "optionalDependencies": {
-    // required to force `uuid` to be a "devOptional" combination 
     "uuidv4": "^6.2.13"
   },
   "devDependencies": {
@@ -42,11 +45,29 @@ Output of `npm ls --json -a -l` look like this:
       "path": ".../demo/dev-dependencies/project/node_modules/@types/node",
       // other properties
     },
+    "@types/uuid": {
+      // ...
+    },
     "uuid": {
       "name": "uuid",
       "devOptional": true,
       "path": ".../demo/dev-dependencies/project/node_modules/uuid",
       // other properties
+    },
+    "uuidv4": {
+      "name": "uuidv4",
+      "optional": true,
+      "path": ".../demo/dev-dependencies/project/node_modules/uuidv4",
+      // other properties
+      "dependencies": {
+        "uuid": {
+          "name": "uuid",
+          "devOptional": true,
+          "path": ".../demo/dev-dependencies/project/node_modules/uuid",
+          // other properties
+        },
+        // ...
+      }
     }
   }
 }

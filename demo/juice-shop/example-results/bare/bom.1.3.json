@@ -8,12 +8,12 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "1.12.0"
+        "version": "1.13.3"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.9.0"
+        "version": "1.9.2"
       }
     ],
     "component": {
@@ -375,6 +375,7 @@
       "bom-ref": "@gar/promisify@1.1.3",
       "author": "Gar",
       "description": "Promisify an entire class or object",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -3935,6 +3936,7 @@
       "bom-ref": "@npmcli/fs@1.1.1",
       "author": "GitHub Inc.",
       "description": "filesystem utilities for the npm cli",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -3970,6 +3972,7 @@
       "version": "1.1.2",
       "bom-ref": "@npmcli/move-file@1.1.2",
       "description": "move a file (fork of move-file)",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -4019,6 +4022,7 @@
           "version": "1.0.4",
           "bom-ref": "@npmcli/move-file@1.1.2|mkdirp@1.0.4",
           "description": "Recursively mkdir, like `mkdir -p`",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -5379,6 +5383,7 @@
       "bom-ref": "agentkeepalive@4.2.1",
       "author": "fengmk2",
       "description": "Missing keepalive http.Agent",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -5429,6 +5434,7 @@
           "bom-ref": "agentkeepalive@4.2.1|debug@4.3.4",
           "author": "Josh Junon",
           "description": "Lightweight debugging utility for Node.js and the browser",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -5479,6 +5485,7 @@
           "bom-ref": "agentkeepalive@4.2.1|depd@1.1.2",
           "author": "Douglas Christopher Wilson",
           "description": "Deprecate all the things",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -5528,6 +5535,7 @@
           "version": "2.1.2",
           "bom-ref": "agentkeepalive@4.2.1|ms@2.1.2",
           "description": "Tiny millisecond conversion utility",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -5580,6 +5588,7 @@
       "bom-ref": "aggregate-error@3.1.0",
       "author": "Sindre Sorhus",
       "description": "Create an error from multiple errors",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -9321,6 +9330,7 @@
       "version": "15.3.0",
       "bom-ref": "cacache@15.3.0",
       "description": "Fast, fault-tolerant, cross-platform, disk-based, data-agnostic, content-addressable cache.",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -9370,6 +9380,7 @@
           "version": "1.0.4",
           "bom-ref": "cacache@15.3.0|mkdirp@1.0.4",
           "description": "Recursively mkdir, like `mkdir -p`",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -10932,6 +10943,7 @@
       "bom-ref": "clean-stack@2.2.0",
       "author": "Sindre Sorhus",
       "description": "Clean up error stack traces",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -16028,6 +16040,7 @@
       "bom-ref": "encoding@0.1.13",
       "author": "Andris Reinman",
       "description": "Convert encodings, uses iconv-lite",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -16078,6 +16091,7 @@
           "bom-ref": "encoding@0.1.13|iconv-lite@0.6.3",
           "author": "Alexander Shtuchkin",
           "description": "Convert character encodings in pure javascript.",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -16380,6 +16394,7 @@
       "bom-ref": "env-paths@2.2.1",
       "author": "Sindre Sorhus",
       "description": "Get paths for storing things like data, config, cache, etc",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -17672,6 +17687,7 @@
       "bom-ref": "expand-template@2.0.3",
       "author": "LM",
       "description": "Expand placeholders in a template string",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -21625,6 +21641,7 @@
       "bom-ref": "github-from-package@0.0.0",
       "author": "James Halliday",
       "description": "return the github url from a package.json file",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -25908,6 +25925,7 @@
       "bom-ref": "humanize-ms@1.2.1",
       "author": "dead-horse",
       "description": "transform humanize time to ms",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -26259,6 +26277,7 @@
       "version": "2.4.5",
       "bom-ref": "iltorb@2.4.5",
       "description": "Brotli compression/decompression with native bindings",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -26309,6 +26328,7 @@
       "bom-ref": "imurmurhash@0.1.4",
       "author": "Jens Taylor",
       "description": "An incremental implementation of MurmurHash3",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -26359,6 +26379,7 @@
       "bom-ref": "indent-string@4.0.0",
       "author": "Sindre Sorhus",
       "description": "Indent each line in a string",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -26409,6 +26430,7 @@
       "bom-ref": "infer-owner@1.0.4",
       "author": "Isaac Z. Schlueter",
       "description": "Infer the owner of a path based on the owner of its nearest existing parent",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -28107,6 +28129,7 @@
       "bom-ref": "is-lambda@1.0.1",
       "author": "Thomas Watson Steen",
       "description": "Detect if your code is running on an AWS Lambda server",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -32169,6 +32192,7 @@
       "bom-ref": "make-fetch-happen@9.1.0",
       "author": "Kat Marchán",
       "description": "Opinionated, caching, retrying fetch client",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -32220,6 +32244,7 @@
           "bom-ref": "make-fetch-happen@9.1.0|@tootallnate/once@1.1.2",
           "author": "Nathan Rajlich",
           "description": "Creates a Promise that waits for a single event",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -32270,6 +32295,7 @@
           "bom-ref": "make-fetch-happen@9.1.0|debug@4.3.4",
           "author": "Josh Junon",
           "description": "Lightweight debugging utility for Node.js and the browser",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -32320,6 +32346,7 @@
           "bom-ref": "make-fetch-happen@9.1.0|http-cache-semantics@4.1.1",
           "author": "Kornel Lesiński",
           "description": "Parses Cache-Control and other headers. Helps building correct HTTP caches and proxies",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -32370,6 +32397,7 @@
           "bom-ref": "make-fetch-happen@9.1.0|http-proxy-agent@4.0.1",
           "author": "Nathan Rajlich",
           "description": "An HTTP(s) proxy `http.Agent` implementation for HTTP",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -32419,6 +32447,7 @@
           "version": "2.1.2",
           "bom-ref": "make-fetch-happen@9.1.0|ms@2.1.2",
           "description": "Tiny millisecond conversion utility",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -33469,6 +33498,7 @@
       "bom-ref": "minipass-collect@1.0.2",
       "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that collects all the data into a single chunk",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -33503,6 +33533,7 @@
       "version": "1.4.1",
       "bom-ref": "minipass-fetch@1.4.1",
       "description": "An implementation of window.fetch in Node.js using Minipass streams",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -33553,6 +33584,7 @@
       "bom-ref": "minipass-flush@1.0.5",
       "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that calls a flush function before emitting 'end'",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -33603,6 +33635,7 @@
       "bom-ref": "minipass-pipeline@1.2.4",
       "author": "Isaac Z. Schlueter",
       "description": "create a pipeline of streams using Minipass",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -33638,6 +33671,7 @@
       "bom-ref": "minipass-sized@1.0.3",
       "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that raises an error if you get a different number of bytes than expected",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -33838,6 +33872,7 @@
       "bom-ref": "mkdirp-classic@0.5.3",
       "author": "Mathias Buus",
       "description": "Mirror of mkdirp 0.5.2",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -34335,6 +34370,7 @@
       "version": "2.17.0",
       "bom-ref": "nan@2.17.0",
       "description": "Native Abstractions for Node.js: C++ header for Node 0.8 -> 18 compatibility",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -34435,6 +34471,7 @@
       "bom-ref": "napi-build-utils@1.0.2",
       "author": "Jim Schlight",
       "description": "A set of utilities to assist developers of tools that build N-API native add-ons",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -34734,6 +34771,7 @@
       "bom-ref": "node-abi@2.30.1",
       "author": "Lukas Geiger",
       "description": "Get the Node ABI for a given target and runtime, and vice versa.",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -34783,6 +34821,7 @@
           "version": "5.7.1",
           "bom-ref": "node-abi@2.30.1|semver@5.7.1",
           "description": "The semantic version parser used by npm.",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -34934,6 +34973,7 @@
       "bom-ref": "node-gyp@8.4.1",
       "author": "Nathan Rajlich",
       "description": "Node.js native addon build tool",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -34984,6 +35024,7 @@
           "bom-ref": "node-gyp@8.4.1|ansi-regex@5.0.1",
           "author": "Sindre Sorhus",
           "description": "Regular expression for matching ANSI escape codes",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -35034,6 +35075,7 @@
           "bom-ref": "node-gyp@8.4.1|are-we-there-yet@3.0.1",
           "author": "GitHub Inc.",
           "description": "Keep track of the overall completion of many disparate processes",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -35084,6 +35126,7 @@
           "bom-ref": "node-gyp@8.4.1|gauge@4.0.4",
           "author": "GitHub Inc.",
           "description": "A terminal based horizontal gauge",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -35134,6 +35177,7 @@
           "bom-ref": "node-gyp@8.4.1|is-fullwidth-code-point@3.0.0",
           "author": "Sindre Sorhus",
           "description": "Check if the character represented by a given Unicode code point is fullwidth",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -35184,6 +35228,7 @@
           "bom-ref": "node-gyp@8.4.1|nopt@5.0.0",
           "author": "Isaac Z. Schlueter",
           "description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -35234,6 +35279,7 @@
           "bom-ref": "node-gyp@8.4.1|npmlog@6.0.2",
           "author": "GitHub Inc.",
           "description": "logger for npm",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -35283,6 +35329,7 @@
           "version": "3.6.1",
           "bom-ref": "node-gyp@8.4.1|readable-stream@3.6.1",
           "description": "Streams3, a user-land copy of the stream library from Node.js",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -35333,6 +35380,7 @@
           "bom-ref": "node-gyp@8.4.1|string-width@4.2.3",
           "author": "Sindre Sorhus",
           "description": "Get the visual width of a string - the number of columns required to display it",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -35383,6 +35431,7 @@
           "bom-ref": "node-gyp@8.4.1|strip-ansi@6.0.1",
           "author": "Sindre Sorhus",
           "description": "Strip ANSI escape codes from a string",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -35985,6 +36034,7 @@
       "version": "0.1.1",
       "bom-ref": "noop-logger@0.1.1",
       "description": "A logger that does exactly nothing.",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -38291,6 +38341,7 @@
       "bom-ref": "p-map@4.0.0",
       "author": "Sindre Sorhus",
       "description": "Map over promises concurrently",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -39630,6 +39681,7 @@
       "bom-ref": "prebuild-install@5.3.6",
       "author": "Mathias Buus",
       "description": "A command line tool to easily install prebuilt binaries for multiple version of node/iojs on a specific platform",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -39930,6 +39982,7 @@
       "bom-ref": "promise-inflight@1.0.1",
       "author": "Rebecca Turner",
       "description": "One promise for multiple requests in flight to avoid async duplication",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -39980,6 +40033,7 @@
       "bom-ref": "promise-retry@2.0.1",
       "author": "IndigoUnited",
       "description": "Retries a function that returns a promise, leveraging the power of the retry module.",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -40030,6 +40084,7 @@
           "bom-ref": "promise-retry@2.0.1|err-code@2.0.3",
           "author": "IndigoUnited",
           "description": "Create an error with a code",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -40080,6 +40135,7 @@
           "bom-ref": "promise-retry@2.0.1|retry@0.12.0",
           "author": "Tim Koschützki",
           "description": "Abstraction for exponential and custom retry strategies for failed operations.",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -45283,6 +45339,7 @@
       "bom-ref": "simple-concat@1.0.1",
       "author": "Feross Aboukhadijeh",
       "description": "Super-minimalist version of `concat-stream`. Less than 15 lines!",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -45333,6 +45390,7 @@
       "bom-ref": "simple-get@3.1.1",
       "author": "Feross Aboukhadijeh",
       "description": "Simplest way to make http get requests. Supports HTTPS, redirects, gzip/deflate, streams in < 100 lines.",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -45383,6 +45441,7 @@
           "bom-ref": "simple-get@3.1.1|decompress-response@4.2.1",
           "author": "Sindre Sorhus",
           "description": "Decompress a HTTP response if needed",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -45433,6 +45492,7 @@
           "bom-ref": "simple-get@3.1.1|mimic-response@2.1.0",
           "author": "Sindre Sorhus",
           "description": "Mimic a Node.js HTTP response stream",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -45637,6 +45697,7 @@
       "bom-ref": "smart-buffer@4.2.0",
       "author": "Josh Glazebrook",
       "description": "smart-buffer is a Buffer wrapper that adds automatic read & write offset tracking, string operations, data insertions, and more.",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -46796,6 +46857,7 @@
       "bom-ref": "socks-proxy-agent@6.2.1",
       "author": "Nathan Rajlich",
       "description": "A SOCKS proxy `http.Agent` implementation for HTTP and HTTPS",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -46846,6 +46908,7 @@
           "bom-ref": "socks-proxy-agent@6.2.1|debug@4.3.4",
           "author": "Josh Junon",
           "description": "Lightweight debugging utility for Node.js and the browser",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -46895,6 +46958,7 @@
           "version": "2.1.2",
           "bom-ref": "socks-proxy-agent@6.2.1|ms@2.1.2",
           "description": "Tiny millisecond conversion utility",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -46947,6 +47011,7 @@
       "bom-ref": "socks@2.7.1",
       "author": "Josh Glazebrook",
       "description": "Fully featured SOCKS proxy client supporting SOCKSv4, SOCKSv4a, and SOCKSv5. Includes Bind and Associate functionality.",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -46996,6 +47061,7 @@
           "version": "2.0.0",
           "bom-ref": "socks@2.7.1|ip@2.0.0",
           "author": "Fedor Indutny",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -47849,6 +47915,7 @@
       "bom-ref": "ssri@8.0.1",
       "author": "Kat Marchán",
       "description": "Standard Subresource Integrity library -- parses, serializes, generates, and verifies integrity metadata according to the SRI spec.",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -49353,6 +49420,7 @@
       "bom-ref": "tar-fs@2.1.1",
       "author": "Mathias Buus",
       "description": "filesystem bindings for tar-stream",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -49402,6 +49470,7 @@
           "version": "4.1.0",
           "bom-ref": "tar-fs@2.1.1|bl@4.1.0",
           "description": "Buffer List: collect buffers and access with a standard readable Buffer interface, streamable too!",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -49452,6 +49521,7 @@
           "bom-ref": "tar-fs@2.1.1|chownr@1.1.4",
           "author": "Isaac Z. Schlueter",
           "description": "like `chown -R`",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -49501,6 +49571,7 @@
           "version": "3.6.1",
           "bom-ref": "tar-fs@2.1.1|readable-stream@3.6.1",
           "description": "Streams3, a user-land copy of the stream library from Node.js",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -49551,6 +49622,7 @@
           "bom-ref": "tar-fs@2.1.1|tar-stream@2.2.0",
           "author": "Mathias Buus",
           "description": "tar-stream is a streaming tar parser and generator and nothing else. It is streams2 and operates purely using streams which means you can easily extract/parse tarballs without ever hitting the file system.",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -51596,6 +51668,7 @@
       "bom-ref": "uglify-js@3.17.4",
       "author": "Mihai Bazon",
       "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -51997,6 +52070,7 @@
       "bom-ref": "unique-filename@1.1.1",
       "author": "Rebecca Turner",
       "description": "Generate a unique filename for use in temporary directories or caches.",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -52047,6 +52121,7 @@
       "bom-ref": "unique-slug@2.0.2",
       "author": "Rebecca Turner",
       "description": "Generate a unique character string suitible for use in files and URLs.",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -54008,6 +54083,7 @@
       "bom-ref": "which-pm-runs@1.1.0",
       "author": "Zoltan Kochan",
       "description": "Detects what package manager executes the process",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
