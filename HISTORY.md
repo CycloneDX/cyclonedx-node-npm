@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.10.0 - 2023-04-17
+
 * Added
   * SBOM result might have `component.scope=optional` populated for OptionalDependencies ([#645] via [#657])  
 * Fixed
