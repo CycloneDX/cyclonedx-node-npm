@@ -114,6 +114,7 @@
       "group": "@types",
       "version": "8.3.4",
       "bom-ref": "@types/uuid@8.3.4",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -144,6 +145,7 @@
       "name": "uuid",
       "version": "8.3.2",
       "bom-ref": "uuid@8.3.2",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",

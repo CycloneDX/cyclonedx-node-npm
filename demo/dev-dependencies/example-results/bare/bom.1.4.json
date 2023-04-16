@@ -138,6 +138,7 @@
       "version": "8.3.4",
       "bom-ref": "@types/uuid@8.3.4",
       "description": "TypeScript definitions for uuid",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -191,6 +192,7 @@
       "version": "8.3.2",
       "bom-ref": "uuid@8.3.2",
       "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
