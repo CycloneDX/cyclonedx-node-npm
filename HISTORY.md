@@ -4,10 +4,17 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Added
+  * SBOM result might have `component.scope=optional` populated for OptionalDependencies ([#645] via [#657])  
+* Fixed
+  * DevDependencies that are also required by OptionalDependencies correctly have the property [`cdx:npm:package:development`](https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md) populated in SBOM results ([#645] via [#657])
+  * DevDependencies that are also required by OptionalDependencies are correctly omitted from SBOM results, when the CLI switch for omitting "dev" and "optional" are set ([#645] via [#657])
 * Docs
   * Describe internal `npm` executable detection in README (via [#647])
 
+[#645]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/645
 [#647]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/647
+[#657]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/657
 
 ## 1.9.2 - 2023-03-30
 

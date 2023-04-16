@@ -364,9 +364,23 @@ export class BomBuilder {
 
   private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | false | undefined {
     // older npm-ls versions (v6) hide properties behind a `_`
+    const isOptional = (data.optional ?? data._optional) === true
+    if (isOptional && this.omitDependencyTypes.has('optional')) {
+      this.console.debug('DEBUG | omit optional component: %j %j', data.name, data._id)
+      return false
+    }
+
+    // older npm-ls versions (v6) hide properties behind a `_`
     const isDev = (data.dev ?? data._development) === true
     if (isDev && this.omitDependencyTypes.has('dev')) {
       this.console.debug('DEBUG | omit dev component: %j %j', data.name, data._id)
+      return false
+    }
+
+    // attention: `data.devOptional` are not to be skipped with devs, since they are still required by optionals.
+    const isDevOptional = data.devOptional === true
+    if (isDevOptional && this.omitDependencyTypes.has('dev') && this.omitDependencyTypes.has('optional')) {
+      this.console.debug('DEBUG | omit devOptional component: %j %j', data.name, data._id)
       return false
     }
 
@@ -389,6 +403,10 @@ export class BomBuilder {
       return undefined
     }
 
+    if (isOptional || isDevOptional) {
+      component.scope = Enums.ComponentScope.Optional
+    }
+
     // region properties
 
     if (typeof data.path === 'string') {
@@ -396,7 +414,7 @@ export class BomBuilder {
         new Models.Property(PropertyNames.PackageInstallPath, data.path)
       )
     }
-    if (isDev) {
+    if (isDev || isDevOptional) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
       )

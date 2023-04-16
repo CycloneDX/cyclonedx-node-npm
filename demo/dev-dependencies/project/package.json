@@ -4,7 +4,12 @@
   "private": true,
   "version": "0.0.0",
   "license": "Apache-2.0",
+  "optionalDependencies": {
+    "uuidv4": "^6.2.13"
+  },
   "devDependencies": {
-    "@types/node": ">=16"
+    "@types/node": ">=16",
+    "@types/uuid": "^8",
+    "uuid": "^8"
   }
 }

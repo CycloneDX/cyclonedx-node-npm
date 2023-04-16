@@ -5,7 +5,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>1.12.0</version>
+        <version>1.13.3</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
@@ -24,7 +24,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.9.0</version>
+        <version>1.9.2</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
@@ -301,6 +301,7 @@
       <name>promisify</name>
       <version>1.1.3</version>
       <description>Promisify an entire class or object</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">9364f2d49715a238c9170ae0fd384a8b6ba327b5cd2d868518d07f6d64fdc0647ea123091cc6b9c3e094abaa7fa55aca78d36003ba42a847234a71d5a2a25017</hash>
       </hashes>
@@ -2881,6 +2882,7 @@
       <name>fs</name>
       <version>1.1.1</version>
       <description>filesystem utilities for the npm cli</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">f0a1b9443d0654fe32744cd19ff23804d0eec43b6a55b39d9bcebbe53e3d3881bf34685a2b4a633d7ed970396f2986c0fae96f54adf3b5f705e2e05d3b1b896d</hash>
       </hashes>
@@ -2905,6 +2907,7 @@
       <name>move-file</name>
       <version>1.1.2</version>
       <description>move a file (fork of move-file)</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">d5251ffc28361b3183c9a7f5e5a47d4adf535a56fe5ef6d95d6a43c7c60ab3b30bccc1ff0427a8a6ffb2f6fcebce091fca4086b963a54aede66618f6f8541cae</hash>
       </hashes>
@@ -2940,6 +2943,7 @@
           <name>mkdirp</name>
           <version>1.0.4</version>
           <description>Recursively mkdir, like `mkdir -p`</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">bd5a95650c9fdd62f1d9285dd2a27dc6ebea800c8a3cb022a884c4b6a5b4a08523ce8dcf78f0dde9f5bd885cf7d1e7fb62ca7fa225aa6e1b33786596d93e86cf</hash>
           </hashes>
@@ -3922,6 +3926,7 @@
       <name>agentkeepalive</name>
       <version>4.2.1</version>
       <description>Missing keepalive http.Agent</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">667e1cc36344a9dfbd7e249558cb1c9e3c90d5af187e8739a016a32dea39c3e6011e00d4704058da14b86294f3ea23797ffdb342292d72e33ab52f31d69f5da4</hash>
       </hashes>
@@ -3958,6 +3963,7 @@
           <name>debug</name>
           <version>4.3.4</version>
           <description>Lightweight debugging utility for Node.js and the browser</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">3d15851ee494dde0ed4093ef9cd63b25c91eb758f4b793ae3ac1733cfcec7a40f9d9997ca947c520f122b305ea22f1d61951ce817fbb1bfbc234d85e870c5f91</hash>
           </hashes>
@@ -3994,6 +4000,7 @@
           <name>depd</name>
           <version>1.1.2</version>
           <description>Deprecate all the things</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">ede98f4e5e83a68e894573978cb471724f8594b457e7ce3b70b2849f4d0f2c081cde0da14d9660afe7b8736bfa4294a62de14fde7e72528edfb7a6af04aff98d</hash>
           </hashes>
@@ -4029,6 +4036,7 @@
           <name>ms</name>
           <version>2.1.2</version>
           <description>Tiny millisecond conversion utility</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">b0690fc7e56332d980e8c5f6ee80381411442c50996784b85ea7863970afebcb53fa36f7be4fd1c9a2963f43d32b25ad98b48cd1bf9a7544c4bdbb353c4687db</hash>
           </hashes>
@@ -4067,6 +4075,7 @@
       <name>aggregate-error</name>
       <version>3.1.0</version>
       <description>Create an error from multiple errors</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">e08ed3774d6ab96fd1a6871f35ac85745564d6a4aea21d04ec9adb449d7a9c7d351e128543cf0836af5277e9ddef6cea4724a5afd0660c0f3194427abc932b60</hash>
       </hashes>
@@ -6759,6 +6768,7 @@
       <name>cacache</name>
       <version>15.3.0</version>
       <description>Fast, fault-tolerant, cross-platform, disk-based, data-agnostic, content-addressable cache.</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">555758cd7127f9c9db5e91605ace614d3ece49c7a01d598b849211f147ea9378850fa03a8f98925f52ae0537cd12fe2d749584d8fcc0e88545b5c2c2edf37dc1</hash>
       </hashes>
@@ -6794,6 +6804,7 @@
           <name>mkdirp</name>
           <version>1.0.4</version>
           <description>Recursively mkdir, like `mkdir -p`</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">bd5a95650c9fdd62f1d9285dd2a27dc6ebea800c8a3cb022a884c4b6a5b4a08523ce8dcf78f0dde9f5bd885cf7d1e7fb62ca7fa225aa6e1b33786596d93e86cf</hash>
           </hashes>
@@ -7922,6 +7933,7 @@
       <name>clean-stack</name>
       <version>2.2.0</version>
       <description>Clean up error stack traces</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">e1d882f4769313e29100c5a10e1ac63840a0599c687af31ce5396439b32a352b1553ad8f6335d9fd23138f3c8600517562eb20c46712593117061a7408fc10d4</hash>
       </hashes>
@@ -11594,6 +11606,7 @@
       <name>encoding</name>
       <version>0.1.13</version>
       <description>Convert encodings, uses iconv-lite</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">11305aba8c354f7e58fd664c922a3d8e2334679c631c7989e179a364eab597f757cf796bdac467f3b9c9cb6d11ba9a928751769b71c73d2a7c4a120f409ac9dc</hash>
       </hashes>
@@ -11630,6 +11643,7 @@
           <name>iconv-lite</name>
           <version>0.6.3</version>
           <description>Convert character encodings in pure javascript.</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">e1f0a4efdc2c84c773329dab1f4eaa5ab244e22a25a8b842507f8e8ae22053ef91074fbde0d9432fcd5ab4eec65f9e6e50ab9ea34b711cdb6f13223a0fb59d33</hash>
           </hashes>
@@ -11848,6 +11862,7 @@
       <name>env-paths</name>
       <version>2.2.1</version>
       <description>Get paths for storing things like data, config, cache, etc</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">fa1d6590b2a164c4d88e8835544a49346ecd64959cb9cd830e4feab2a49345108e5e22e3790d5dd7fb9dad41a1a8cc5480097028d67471fdaea9a9f918bb92d8</hash>
       </hashes>
@@ -12778,6 +12793,7 @@
       <name>expand-template</name>
       <version>2.0.3</version>
       <description>Expand placeholders in a template string</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">5d87ee28cbe3e0edf97ffa4e5cb39b9dd211bf243effee8084e0e1f8e2968fd4bde3df291c79ff20cb331fe82dd1f04245630d7e4d594a9e71dc089f9a7236be</hash>
       </hashes>
@@ -15625,6 +15641,7 @@
       <name>github-from-package</name>
       <version>0.0.0</version>
       <description>return the github url from a package.json file</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">4b21f2dd3d6fd8d5179f6f4eb1677198ae91c070febe48f7bfc7a7f00381675c0143f842010e5b0104c3d36916e16f6d529ff7421e89f2bf44be7b62c8298e3b</hash>
       </hashes>
@@ -18716,6 +18733,7 @@
       <name>humanize-ms</name>
       <version>1.2.1</version>
       <description>transform humanize time to ms</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">165ef4bd8b6c0056ff0b4e8f4d2f5d641a3b8a16aef93bbf0cd0a4fcec8785e6b4ed2f9a78c5a914591469745af1f23e49c65b108f1d7d2c7063b83167d48055</hash>
       </hashes>
@@ -18969,6 +18987,7 @@
       <name>iltorb</name>
       <version>2.4.5</version>
       <description>Brotli compression/decompression with native bindings</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">10c08c9772e79cd499252e50af1c9998c4da002e3e4c990ce70a03fb16e99bd441fa61580abec2d391851374c4182b154125479a35fedec7f9022c2cca53489d</hash>
       </hashes>
@@ -19005,6 +19024,7 @@
       <name>imurmurhash</name>
       <version>0.1.4</version>
       <description>An incremental implementation of MurmurHash3</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">2665cc67ac2ebc398b88712697dca4cea3ba97015ba1fd061b822470668435d0910c398c5679f2eece47b0880709b6aad30d8cc8f843aa48535204b62d4d8f1c</hash>
       </hashes>
@@ -19041,6 +19061,7 @@
       <name>indent-string</name>
       <version>4.0.0</version>
       <description>Indent each line in a string</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">11d0c366ee00d8ec882bb2ebff6cc6fb0e6399bba4d435419c4c11110bc1ceca412640846d16bc1b153596085871a1890a745689b8c35e5abbefd5f5ff2e71c2</hash>
       </hashes>
@@ -19077,6 +19098,7 @@
       <name>infer-owner</name>
       <version>1.0.4</version>
       <description>Infer the owner of a path based on the owner of its nearest existing parent</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">202963f97cfde3e77b8ab1f9a91c9f2689ce75f4f3b836a27c4e993d67f1d0dd3efc04d909bb933eada9ac5979dbabab91077dd16c942888750df050da1333f4</hash>
       </hashes>
@@ -20299,6 +20321,7 @@
       <name>is-lambda</name>
       <version>1.0.1</version>
       <description>Detect if your code is running on an AWS Lambda server</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">cfb08c14636b10dab988507d06aa3ae1793a63db20f9ea6ad66c8871d1da1a76cc4d83b1bf3b04b5d62a414ca507b2f17e4be0aeb8cfdf64fa6307228a8f5421</hash>
       </hashes>
@@ -23225,6 +23248,7 @@
       <name>make-fetch-happen</name>
       <version>9.1.0</version>
       <description>Opinionated, caching, retrying fetch client</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">fb3a29c03cbb0cd9279b03d0a657a6e650195ff7823b34af48d35c48a9b9795c1390e073a24b447d7b1af4bdb727f188461c51b1ac7390f121ac91291361781a</hash>
       </hashes>
@@ -23262,6 +23286,7 @@
           <name>once</name>
           <version>1.1.2</version>
           <description>Creates a Promise that waits for a single event</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">45bcc9be5373991ab97373b4f548a97ae5e7a38b40d4513a8a43a3c592b4b6ec55bf7e35da5eb8979b755b9a63e3eac9abdbe9926fe4c22474eda6579ec28fc7</hash>
           </hashes>
@@ -23298,6 +23323,7 @@
           <name>debug</name>
           <version>4.3.4</version>
           <description>Lightweight debugging utility for Node.js and the browser</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">3d15851ee494dde0ed4093ef9cd63b25c91eb758f4b793ae3ac1733cfcec7a40f9d9997ca947c520f122b305ea22f1d61951ce817fbb1bfbc234d85e870c5f91</hash>
           </hashes>
@@ -23334,6 +23360,7 @@
           <name>http-cache-semantics</name>
           <version>4.1.1</version>
           <description>Parses Cache-Control and other headers. Helps building correct HTTP caches and proxies</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">7abdbde4328f56c57cda3e64c351a3b7e00303f5d81ec6a397cd9c18d406d9eca83e4be05215fe9c32327a5ce12166dbb173f7f441dc23a979b58b36158a985d</hash>
           </hashes>
@@ -23370,6 +23397,7 @@
           <name>http-proxy-agent</name>
           <version>4.0.1</version>
           <description>An HTTP(s) proxy `http.Agent` implementation for HTTP</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">934cdd360a964c603a69e211569bdf5686f87cbe767537da7a1ca583463852f4b24af3aafd8f813b23eb82952b03b1f296abd4f2f2191ac46e5e6b29b245744e</hash>
           </hashes>
@@ -23405,6 +23433,7 @@
           <name>ms</name>
           <version>2.1.2</version>
           <description>Tiny millisecond conversion utility</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">b0690fc7e56332d980e8c5f6ee80381411442c50996784b85ea7863970afebcb53fa36f7be4fd1c9a2963f43d32b25ad98b48cd1bf9a7544c4bdbb353c4687db</hash>
           </hashes>
@@ -24161,6 +24190,7 @@
       <name>minipass-collect</name>
       <version>1.0.2</version>
       <description>A Minipass stream that collects all the data into a single chunk</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">e93ea51f41fc386f642139bf266ead768a086e8806f5ed2d2e0a58ea6a615d29bf03dbbc36ad6bc811be42ca62b9bf4b8d69413ec3d2ded590fc1a2dab815dc4</hash>
       </hashes>
@@ -24184,6 +24214,7 @@
       <name>minipass-fetch</name>
       <version>1.4.1</version>
       <description>An implementation of window.fetch in Node.js using Minipass streams</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">0861f579b94bab6e98d79f80ce4edecb8c61d09fd77c97eb0a8c792c32622aa2364368b038b38aae598868e0e24904bc775f236a517acb62b678f526d0299287</hash>
       </hashes>
@@ -24220,6 +24251,7 @@
       <name>minipass-flush</name>
       <version>1.0.5</version>
       <description>A Minipass stream that calls a flush function before emitting 'end'</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">266412618a4f52a5f92729f5997691c0e75ad6e43c1cfe4a013fe80d22c2cedd41611850534fe10edb01d6e7d97c4133319f5a0159ac070f3e156b085e50a55b</hash>
       </hashes>
@@ -24256,6 +24288,7 @@
       <name>minipass-pipeline</name>
       <version>1.2.4</version>
       <description>create a pipeline of streams using Minipass</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">c6e22aedc20eb74f513d1275f60762e1bf9188dbc31587b9247fa080dbc1a86aa941772bbb73dc466399b8704a58ad53c5ff7e710f8731537877acf8e8b64fec</hash>
       </hashes>
@@ -24280,6 +24313,7 @@
       <name>minipass-sized</name>
       <version>1.0.3</version>
       <description>A Minipass stream that raises an error if you get a different number of bytes than expected</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">31b9104360938813250360e6ff9718fbd49614437ca73cce5e2eab94ce57c6ad18a9b75ae59432f6c53be5aebbdc513d64ad19b1bafa63988feaef6792d7e0da</hash>
       </hashes>
@@ -24424,6 +24458,7 @@
       <name>mkdirp-classic</name>
       <version>0.5.3</version>
       <description>Mirror of mkdirp 0.5.2</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">80a2dc444321b6e651c1101fa8fdd1156f932b826a029541b4e21fb55823b8006902da7184f19a0dc7ef6e136f0f407c883d6852bfedc57df936371a63a36cfc</hash>
       </hashes>
@@ -24781,6 +24816,7 @@
       <name>nan</name>
       <version>2.17.0</version>
       <description>Native Abstractions for Node.js: C++ header for Node 0.8 -&gt; 18 compatibility</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">d994e0b65d2726c3b42900a3129c5c22be43f98bfdd299538ad66df4905f42f5490d2e6c78c97714ebec877fbd0a86165dfff597939a673cc5ea70e6e1c6a069</hash>
       </hashes>
@@ -24853,6 +24889,7 @@
       <name>napi-build-utils</name>
       <version>1.0.2</version>
       <description>A set of utilities to assist developers of tools that build N-API native add-ons</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">38d99152a2bbce3ec3597d03f400ded37c1bc0e059c4d01f176d0f9467c2590703dfefcc6a44a1207accab1f58c0f4dfc43745d732de2fe44666247d90630b76</hash>
       </hashes>
@@ -25068,6 +25105,7 @@
       <name>node-abi</name>
       <version>2.30.1</version>
       <description>Get the Node ABI for a given target and runtime, and vice versa.</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">ff60f4c0e40f81a516cd5495811331fadaca2510b6506e1251ce28089a17c7d5318eda74572dff92def371bc4717cf99fe92b7525a0b5b30484a0ef66eb7f2d7</hash>
       </hashes>
@@ -25103,6 +25141,7 @@
           <name>semver</name>
           <version>5.7.1</version>
           <description>The semantic version parser used by npm.</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">b1ab9a0dffcf65d560acb4cd60746da576b589188a71a79b88a435049769425587da50af7b141d5f9e6c9cf1722bb433a6e76a6c2234a9715f39ab0777234319</hash>
           </hashes>
@@ -25212,6 +25251,7 @@
       <name>node-gyp</name>
       <version>8.4.1</version>
       <description>Node.js native addon build tool</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">a254c946052d01bfe13971b413ddf0643b3962226581b5f14f0400147c8d951b1742763351a17668682e8d96f0fa147c685e191bfad24f9edb58c583d7a8ebf7</hash>
       </hashes>
@@ -25248,6 +25288,7 @@
           <name>ansi-regex</name>
           <version>5.0.1</version>
           <description>Regular expression for matching ANSI escape codes</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">aae2505e54d25062f62c7f52517a3c570b18e2ca1a9e1828e8b3529bce04d4b05c13cb373b4c29762473c91f73fd9649325316bf7eea38e6fda5d26531410a15</hash>
           </hashes>
@@ -25284,6 +25325,7 @@
           <name>are-we-there-yet</name>
           <version>3.0.1</version>
           <description>Keep track of the overall completion of many disparate processes</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">4195b8103986c2562eaf46327ff6f6b86b9c1d031af1a1543fb7aef5d751ef7bef845cade15d159774073dc4cd27c97aa9838177181776705742b1e295f45006</hash>
           </hashes>
@@ -25320,6 +25362,7 @@
           <name>gauge</name>
           <version>4.0.4</version>
           <description>A terminal based horizontal gauge</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">7fd9be0443798e483a6b47d98e57a2763379d551355fe98f150d83274bafd55dfda022c26ec19eeb28db067a7b78aef3ffe180a27f7d6b79c7baa6eebad8723e</hash>
           </hashes>
@@ -25356,6 +25399,7 @@
           <name>is-fullwidth-code-point</name>
           <version>3.0.0</version>
           <description>Check if the character represented by a given Unicode code point is fullwidth</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">cf29a6e7ebbeb02b125b20fda8d69e8d5dc316f84229c94a762cd868952e1c0f3744b8dbee74ae1a775d0871afd2193e298ec130096c59e2b851e83a115e9742</hash>
           </hashes>
@@ -25392,6 +25436,7 @@
           <name>nopt</name>
           <version>5.0.0</version>
           <description>Option parsing for Node, supporting types, shorthands, etc. Used by npm.</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">4db8faeeb7dfa9c79e2e97115eb4fbbca00df02c1f3de20180cec4ea206498a2d5edb10cc291a060b1afd2300252c10269afefbb13f42231289edeae99d320b5</hash>
           </hashes>
@@ -25428,6 +25473,7 @@
           <name>npmlog</name>
           <version>6.0.2</version>
           <description>logger for npm</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">fef06fcf925fafd753fda15677414845ff93fd0d9606c2c437281468552ab2daacc9c99900ffede41bc52532b4be2166494c6250a4d4a655b2e6fb7eaef288c6</hash>
           </hashes>
@@ -25463,6 +25509,7 @@
           <name>readable-stream</name>
           <version>3.6.1</version>
           <description>Streams3, a user-land copy of the stream library from Node.js</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">fab426ad6318180f74c9e9e14d8b0b580b0bb2a542f28b0ec3a3ca1351c36223b481d3de29eff10c7373200227e02f75610ea87a71217d8aaa735f3cdea1db8d</hash>
           </hashes>
@@ -25499,6 +25546,7 @@
           <name>string-width</name>
           <version>4.2.3</version>
           <description>Get the visual width of a string - the number of columns required to display it</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">c0ac90450a63274b08a7ad84ad265d1ac8cc256b1aa79a1136284786ee86ec954effd8c807a5327af2feb57b8eaab9e0f23fdcc4a4d6c96530bd24eb8a2673fe</hash>
           </hashes>
@@ -25535,6 +25583,7 @@
           <name>strip-ansi</name>
           <version>6.0.1</version>
           <description>Strip ANSI escape codes from a string</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">637f153d21dcaa416b0a916743dbee4979aabaebf9a1738aa46793e9a1abaf7a3719cf409556ba2417d448e0a76f1186645fbfd28a08ecaacfb944b3b54754e4</hash>
           </hashes>
@@ -25969,6 +26018,7 @@
       <name>noop-logger</name>
       <version>0.1.1</version>
       <description>A logger that does exactly nothing.</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">ea433c08b5efb96e5cad3c6c02dbdad982eb46b0da89322421e3d6b3d9a82c7a9b1564fde16a4d163c12ff975f2df1028398bf9649b0ddaa2a562771b76dd311</hash>
       </hashes>
@@ -27631,6 +27681,7 @@
       <name>p-map</name>
       <version>4.0.0</version>
       <description>Map over promises concurrently</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">fdb8ceaa68044c1601e41a0478655e6bc766bc76f69bd18bcb513d5b8df27b27cfe9040264614d6be5d171e244b8307aceaafe80aa4802694b79b329ca4c3f31</hash>
       </hashes>
@@ -28594,6 +28645,7 @@
       <name>prebuild-install</name>
       <version>5.3.6</version>
       <description>A command line tool to easily install prebuilt binaries for multiple version of node/iojs on a specific platform</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">b3c01a8bcfbe4101a2e2c49bb3f335424bbad8f14ae3d266d426e05e4946cf89e61ef783ab4c3326483b35ae506e73b5b8d1fc2bb8aac76110fe65743191263a</hash>
       </hashes>
@@ -28810,6 +28862,7 @@
       <name>promise-inflight</name>
       <version>1.0.1</version>
       <description>One promise for multiple requests in flight to avoid async duplication</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">eb358fc8438569004961c18c1c1293289deee9306c9cc14e21949ae9c7b57bf66baec3a59c74476da6cc8cb88160aa7e9f8e17f5e508e9550f6ae9025c7b86e2</hash>
       </hashes>
@@ -28846,6 +28899,7 @@
       <name>promise-retry</name>
       <version>2.0.1</version>
       <description>Retries a function that returns a promise, leveraging the power of the retry module.</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">cbe58a165051f011979ec3652071463d99b20dfdc314ca0b85a7e5027c99815eab1bac6ef89c1eb13a3643d47a5f0626b66c001429009377b7e6311da1e87fde</hash>
       </hashes>
@@ -28882,6 +28936,7 @@
           <name>err-code</name>
           <version>2.0.3</version>
           <description>Create an error with a code</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">d9b9a546934a0714ff09198f3a5c88490a4d8fea92798bdcca6fee4f4271d9b30e94a2ed4b2d5998bb95c5210a2b2a2bfcde7286fa7f6621b5a04dc311831214</hash>
           </hashes>
@@ -28918,6 +28973,7 @@
           <name>retry</name>
           <version>0.12.0</version>
           <description>Abstraction for exponential and custom retry strategies for failed operations.</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">f4b9224f08d487aad3e79e43b44f6b4d7f81281c8f7eb333100b67944b5d130af73647dfc228a1a9ed9b5800e0f8e4118edf6097a20276607f6450c2180b52a3</hash>
           </hashes>
@@ -32667,6 +32723,7 @@
       <name>simple-concat</name>
       <version>1.0.1</version>
       <description>Super-minimalist version of `concat-stream`. Less than 15 lines!</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">71216d00fb518658efebd20ad214d5650f8e7c4f6778f8bfaed266c395231de57256ba04a895cfd6c173b4a532d6a53ec6fcf7bbfb1f6092daf78edbee700dd9</hash>
       </hashes>
@@ -32703,6 +32760,7 @@
       <name>simple-get</name>
       <version>3.1.1</version>
       <description>Simplest way to make http get requests. Supports HTTPS, redirects, gzip/deflate, streams in &lt; 100 lines.</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">090e4b4ca19f0a9bc4d4ad27daeb3e92e30f6e4fead042a5f36b386a1795f685e3144cfa5bf63ba1015526e53a406efb8514f81a16f945446d785e6f9d68eea4</hash>
       </hashes>
@@ -32739,6 +32797,7 @@
           <name>decompress-response</name>
           <version>4.2.1</version>
           <description>Decompress a HTTP response if needed</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">8ce4a77b6a9bc84fbfafc1b5554f86ffcd8b06cd85b382c0b1388b48738238c65097638a67a8bc8b82321de9937beff22173ad4dc4503333dc832868165a8f93</hash>
           </hashes>
@@ -32775,6 +32834,7 @@
           <name>mimic-response</name>
           <version>2.1.0</version>
           <description>Mimic a Node.js HTTP response stream</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">c17aa3493f922eded1d34f72482825581085a635328260887c3efdd3f9156e21a65207d81ae075e0f8937790f0571495e0d7181e3ccc9288f92e3419c1340b10</hash>
           </hashes>
@@ -32923,6 +32983,7 @@
       <name>smart-buffer</name>
       <version>4.2.0</version>
       <description>smart-buffer is a Buffer wrapper that adds automatic read &amp; write offset tracking, string operations, data insertions, and more.</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">f7884ad0787cacfa90976c577371ec681a0e5ca576d0c4e83e4717bf06c84962c4b3eeb8b01ab9905827da42431dbd4faf2f72acfd1dc6b088f5145c8bb4572a</hash>
       </hashes>
@@ -33760,6 +33821,7 @@
       <name>socks-proxy-agent</name>
       <version>6.2.1</version>
       <description>A SOCKS proxy `http.Agent` implementation for HTTP and HTTPS</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">6ba296f46fba0779d6675c81f06ee92702f78202f2d6e4f32808026fbb6d6e5c2a773f5f306254b93cb7b85cc43f8f0502cf452c82e59b30e513624985541a5d</hash>
       </hashes>
@@ -33796,6 +33858,7 @@
           <name>debug</name>
           <version>4.3.4</version>
           <description>Lightweight debugging utility for Node.js and the browser</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">3d15851ee494dde0ed4093ef9cd63b25c91eb758f4b793ae3ac1733cfcec7a40f9d9997ca947c520f122b305ea22f1d61951ce817fbb1bfbc234d85e870c5f91</hash>
           </hashes>
@@ -33831,6 +33894,7 @@
           <name>ms</name>
           <version>2.1.2</version>
           <description>Tiny millisecond conversion utility</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">b0690fc7e56332d980e8c5f6ee80381411442c50996784b85ea7863970afebcb53fa36f7be4fd1c9a2963f43d32b25ad98b48cd1bf9a7544c4bdbb353c4687db</hash>
           </hashes>
@@ -33869,6 +33933,7 @@
       <name>socks</name>
       <version>2.7.1</version>
       <description>Fully featured SOCKS proxy client supporting SOCKSv4, SOCKSv4a, and SOCKSv5. Includes Bind and Associate functionality.</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">ee6694672d4deeea3af965445faa6c012c6d36529a3553251902a41bfeb79c40dd2ce58d6e250ca0b2bb5f8b98a0b850b2d6aeef698b81f116717730b1a1db61</hash>
       </hashes>
@@ -33904,6 +33969,7 @@
           <author>Fedor Indutny</author>
           <name>ip</name>
           <version>2.0.0</version>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">58a6be5ee2c6d40d51d145a1976fb55d04a2f9f65632c60a7df3194d362c8996940fc936c83023e5ab62993503d93664c8290d11e604e4d845666ba9386b6361</hash>
           </hashes>
@@ -34519,6 +34585,7 @@
       <name>ssri</name>
       <version>8.0.1</version>
       <description>Standard Subresource Integrity library -- parses, serializes, generates, and verifies integrity metadata according to the SRI spec.</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">f7ba92873cb5022cb1bcf34890b5a81ae6bbc68433ccf8d0d07007e01d2b58aa3b499e944ae3dcad488016bc2cd141fc46b6d69a0ab72cc4ce6e13c81db6c179</hash>
       </hashes>
@@ -35603,6 +35670,7 @@
       <name>tar-fs</name>
       <version>2.1.1</version>
       <description>filesystem bindings for tar-stream</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">574af663db1c99b0d12c235ec7ffa1633be9ff3c988ef15b1cf36055329f42f56b6fa82e884fdfc4ff976e50cd474d75bada296e47b1da7338747355e860ec9e</hash>
       </hashes>
@@ -35638,6 +35706,7 @@
           <name>bl</name>
           <version>4.1.0</version>
           <description>Buffer List: collect buffers and access with a standard readable Buffer interface, streamable too!</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">d56d3b70cf604ba0dc2e97ab65f1528fe6d62ed68f1923875a13e21b35e6bd525b44b746f36b07fca9fc12d5b556a595039e0029fda1e64e416e721bc05de1eb</hash>
           </hashes>
@@ -35674,6 +35743,7 @@
           <name>chownr</name>
           <version>1.1.4</version>
           <description>like `chown -R`</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">8c9d1bab36b296626d567360cd37923acf033dabe96d8804aff6f460bf3fd863b7c4912122716684a3149c42508d9ba62bb297185854cbcf4faec25695a90156</hash>
           </hashes>
@@ -35709,6 +35779,7 @@
           <name>readable-stream</name>
           <version>3.6.1</version>
           <description>Streams3, a user-land copy of the stream library from Node.js</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">fab426ad6318180f74c9e9e14d8b0b580b0bb2a542f28b0ec3a3ca1351c36223b481d3de29eff10c7373200227e02f75610ea87a71217d8aaa735f3cdea1db8d</hash>
           </hashes>
@@ -35745,6 +35816,7 @@
           <name>tar-stream</name>
           <version>2.2.0</version>
           <description>tar-stream is a streaming tar parser and generator and nothing else. It is streams2 and operates purely using streams which means you can easily extract/parse tarballs without ever hitting the file system.</description>
+          <scope>optional</scope>
           <hashes>
             <hash alg="SHA-512">ba37aa6dc780060c0c6711099e4d870d8d83967519fbda0471bd4acd355f6078a8d1413a746ef59fad1df03d88e2a36f95e5abad7a668e9b7bbd9785d4b9cc65</hash>
           </hashes>
@@ -37218,6 +37290,7 @@
       <name>uglify-js</name>
       <version>3.17.4</version>
       <description>JavaScript parser, mangler/compressor and beautifier toolkit</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">4fdabcd93248f5efc2d5303162f7dbd7ac4ed76d2d315159ac60377fdfcfe38db80cdbbaca92b5d37cb418f1556b5ef2a2dc12c995b98985e08d81e41ab256fe</hash>
       </hashes>
@@ -37507,6 +37580,7 @@
       <name>unique-filename</name>
       <version>1.1.1</version>
       <description>Generate a unique filename for use in temporary directories or caches.</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">566a748c8a76967df95135eeaf2be3ce48c6751c9ff5bda54d7b9261488f9b345c977143b58a80c0e9d3264027803f525a19e82730db4cac1a3ab67e493b7135</hash>
       </hashes>
@@ -37543,6 +37617,7 @@
       <name>unique-slug</name>
       <version>2.0.2</version>
       <description>Generate a unique character string suitible for use in files and URLs.</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">ce85abf4e6dac402c3dc338f7e33d2ab1b787e766259b9711c881e5aa5bcc7b52a0f312d1c440bce38b672e258405094e8a9a826290e600665ad31c779b8f1db</hash>
       </hashes>
@@ -38956,6 +39031,7 @@
       <name>which-pm-runs</name>
       <version>1.1.0</version>
       <description>Detects what package manager executes the process</description>
+      <scope>optional</scope>
       <hashes>
         <hash alg="SHA-512">9f56eb0aea829717c57eafd16f420283d822499a824bea4bb5c71d6a0e82d87cae7c1ae1ddf04e8b2f676fa82044cbd63951f91ab749b248f98864d937177b48</hash>
       </hashes>

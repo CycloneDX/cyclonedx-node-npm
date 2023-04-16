@@ -263,6 +263,7 @@
       "group": "@gar",
       "version": "1.1.3",
       "bom-ref": "@gar/promisify@1.1.3",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -2145,6 +2146,7 @@
       "group": "@npmcli",
       "version": "1.1.1",
       "bom-ref": "@npmcli/fs@1.1.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -2172,6 +2174,7 @@
       "group": "@npmcli",
       "version": "1.1.2",
       "bom-ref": "@npmcli/move-file@1.1.2",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -2868,6 +2871,7 @@
       "name": "agentkeepalive",
       "version": "4.2.1",
       "bom-ref": "agentkeepalive@4.2.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -2894,6 +2898,7 @@
           "name": "debug",
           "version": "4.3.4",
           "bom-ref": "agentkeepalive@4.2.1|debug@4.3.4",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -2920,6 +2925,7 @@
           "name": "depd",
           "version": "1.1.2",
           "bom-ref": "agentkeepalive@4.2.1|depd@1.1.2",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -2946,6 +2952,7 @@
           "name": "ms",
           "version": "2.1.2",
           "bom-ref": "agentkeepalive@4.2.1|ms@2.1.2",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -2974,6 +2981,7 @@
       "name": "aggregate-error",
       "version": "3.1.0",
       "bom-ref": "aggregate-error@3.1.0",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -4938,6 +4946,7 @@
       "name": "cacache",
       "version": "15.3.0",
       "bom-ref": "cacache@15.3.0",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -5756,6 +5765,7 @@
       "name": "clean-stack",
       "version": "2.2.0",
       "bom-ref": "clean-stack@2.2.0",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -8432,6 +8442,7 @@
       "name": "encoding",
       "version": "0.1.13",
       "bom-ref": "encoding@0.1.13",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -8458,6 +8469,7 @@
           "name": "iconv-lite",
           "version": "0.6.3",
           "bom-ref": "encoding@0.1.13|iconv-lite@0.6.3",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -8618,6 +8630,7 @@
       "name": "env-paths",
       "version": "2.2.1",
       "bom-ref": "env-paths@2.2.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -9300,6 +9313,7 @@
       "name": "expand-template",
       "version": "2.0.3",
       "bom-ref": "expand-template@2.0.3",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -11340,6 +11354,7 @@
       "name": "github-from-package",
       "version": "0.0.0",
       "bom-ref": "github-from-package@0.0.0",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -13426,6 +13441,7 @@
       "name": "humanize-ms",
       "version": "1.2.1",
       "bom-ref": "humanize-ms@1.2.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -13610,6 +13626,7 @@
       "name": "iltorb",
       "version": "2.4.5",
       "bom-ref": "iltorb@2.4.5",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -13636,6 +13653,7 @@
       "name": "imurmurhash",
       "version": "0.1.4",
       "bom-ref": "imurmurhash@0.1.4",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -13662,6 +13680,7 @@
       "name": "indent-string",
       "version": "4.0.0",
       "bom-ref": "indent-string@4.0.0",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -13688,6 +13707,7 @@
       "name": "infer-owner",
       "version": "1.0.4",
       "bom-ref": "infer-owner@1.0.4",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -14520,6 +14540,7 @@
       "name": "is-lambda",
       "version": "1.0.1",
       "bom-ref": "is-lambda@1.0.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -16612,6 +16633,7 @@
       "name": "make-fetch-happen",
       "version": "9.1.0",
       "bom-ref": "make-fetch-happen@9.1.0",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -16639,6 +16661,7 @@
           "group": "@tootallnate",
           "version": "1.1.2",
           "bom-ref": "make-fetch-happen@9.1.0|@tootallnate/once@1.1.2",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -16665,6 +16688,7 @@
           "name": "debug",
           "version": "4.3.4",
           "bom-ref": "make-fetch-happen@9.1.0|debug@4.3.4",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -16691,6 +16715,7 @@
           "name": "http-cache-semantics",
           "version": "4.1.0",
           "bom-ref": "make-fetch-happen@9.1.0|http-cache-semantics@4.1.0",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -16717,6 +16742,7 @@
           "name": "http-proxy-agent",
           "version": "4.0.1",
           "bom-ref": "make-fetch-happen@9.1.0|http-proxy-agent@4.0.1",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -16743,6 +16769,7 @@
           "name": "ms",
           "version": "2.1.2",
           "bom-ref": "make-fetch-happen@9.1.0|ms@2.1.2",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -17293,6 +17320,7 @@
       "name": "minipass-collect",
       "version": "1.0.2",
       "bom-ref": "minipass-collect@1.0.2",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -17319,6 +17347,7 @@
       "name": "minipass-fetch",
       "version": "1.4.1",
       "bom-ref": "minipass-fetch@1.4.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -17345,6 +17374,7 @@
       "name": "minipass-flush",
       "version": "1.0.5",
       "bom-ref": "minipass-flush@1.0.5",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -17371,6 +17401,7 @@
       "name": "minipass-pipeline",
       "version": "1.2.4",
       "bom-ref": "minipass-pipeline@1.2.4",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -17397,6 +17428,7 @@
       "name": "minipass-sized",
       "version": "1.0.3",
       "bom-ref": "minipass-sized@1.0.3",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -17501,6 +17533,7 @@
       "name": "mkdirp-classic",
       "version": "0.5.3",
       "bom-ref": "mkdirp-classic@0.5.3",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -17791,6 +17824,7 @@
       "name": "nan",
       "version": "2.17.0",
       "bom-ref": "nan@2.17.0",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -17843,6 +17877,7 @@
       "name": "napi-build-utils",
       "version": "1.0.2",
       "bom-ref": "napi-build-utils@1.0.2",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -18001,6 +18036,7 @@
       "name": "node-abi",
       "version": "2.30.1",
       "bom-ref": "node-abi@2.30.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -18027,6 +18063,7 @@
           "name": "semver",
           "version": "5.7.1",
           "bom-ref": "node-abi@2.30.1|semver@5.7.1",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -18107,6 +18144,7 @@
       "name": "node-gyp",
       "version": "8.4.1",
       "bom-ref": "node-gyp@8.4.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -18133,6 +18171,7 @@
           "name": "ansi-regex",
           "version": "5.0.1",
           "bom-ref": "node-gyp@8.4.1|ansi-regex@5.0.1",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -18159,6 +18198,7 @@
           "name": "are-we-there-yet",
           "version": "3.0.1",
           "bom-ref": "node-gyp@8.4.1|are-we-there-yet@3.0.1",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -18185,6 +18225,7 @@
           "name": "gauge",
           "version": "4.0.4",
           "bom-ref": "node-gyp@8.4.1|gauge@4.0.4",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -18211,6 +18252,7 @@
           "name": "is-fullwidth-code-point",
           "version": "3.0.0",
           "bom-ref": "node-gyp@8.4.1|is-fullwidth-code-point@3.0.0",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -18237,6 +18279,7 @@
           "name": "nopt",
           "version": "5.0.0",
           "bom-ref": "node-gyp@8.4.1|nopt@5.0.0",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -18263,6 +18306,7 @@
           "name": "npmlog",
           "version": "6.0.2",
           "bom-ref": "node-gyp@8.4.1|npmlog@6.0.2",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -18289,6 +18333,7 @@
           "name": "readable-stream",
           "version": "3.6.0",
           "bom-ref": "node-gyp@8.4.1|readable-stream@3.6.0",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -18315,6 +18360,7 @@
           "name": "string-width",
           "version": "4.2.3",
           "bom-ref": "node-gyp@8.4.1|string-width@4.2.3",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -18341,6 +18387,7 @@
           "name": "strip-ansi",
           "version": "6.0.1",
           "bom-ref": "node-gyp@8.4.1|strip-ansi@6.0.1",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -18683,6 +18730,7 @@
       "name": "noop-logger",
       "version": "0.1.1",
       "bom-ref": "noop-logger@0.1.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -19887,6 +19935,7 @@
       "name": "p-map",
       "version": "4.0.0",
       "bom-ref": "p-map@4.0.0",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -20589,6 +20638,7 @@
       "name": "prebuild-install",
       "version": "5.3.6",
       "bom-ref": "prebuild-install@5.3.6",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -20745,6 +20795,7 @@
       "name": "promise-inflight",
       "version": "1.0.1",
       "bom-ref": "promise-inflight@1.0.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -20771,6 +20822,7 @@
       "name": "promise-retry",
       "version": "2.0.1",
       "bom-ref": "promise-retry@2.0.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -20797,6 +20849,7 @@
           "name": "err-code",
           "version": "2.0.3",
           "bom-ref": "promise-retry@2.0.1|err-code@2.0.3",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -20823,6 +20876,7 @@
           "name": "retry",
           "version": "0.12.0",
           "bom-ref": "promise-retry@2.0.1|retry@0.12.0",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -23551,6 +23605,7 @@
       "name": "simple-concat",
       "version": "1.0.1",
       "bom-ref": "simple-concat@1.0.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -23577,6 +23632,7 @@
       "name": "simple-get",
       "version": "3.1.1",
       "bom-ref": "simple-get@3.1.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -23603,6 +23659,7 @@
           "name": "decompress-response",
           "version": "4.2.1",
           "bom-ref": "simple-get@3.1.1|decompress-response@4.2.1",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -23629,6 +23686,7 @@
           "name": "mimic-response",
           "version": "2.1.0",
           "bom-ref": "simple-get@3.1.1|mimic-response@2.1.0",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -23737,6 +23795,7 @@
       "name": "smart-buffer",
       "version": "4.2.0",
       "bom-ref": "smart-buffer@4.2.0",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -24349,6 +24408,7 @@
       "name": "socks-proxy-agent",
       "version": "6.2.1",
       "bom-ref": "socks-proxy-agent@6.2.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -24375,6 +24435,7 @@
           "name": "debug",
           "version": "4.3.4",
           "bom-ref": "socks-proxy-agent@6.2.1|debug@4.3.4",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -24401,6 +24462,7 @@
           "name": "ms",
           "version": "2.1.2",
           "bom-ref": "socks-proxy-agent@6.2.1|ms@2.1.2",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -24429,6 +24491,7 @@
       "name": "socks",
       "version": "2.7.1",
       "bom-ref": "socks@2.7.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -24455,6 +24518,7 @@
           "name": "ip",
           "version": "2.0.0",
           "bom-ref": "socks@2.7.1|ip@2.0.0",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -24901,6 +24965,7 @@
       "name": "ssri",
       "version": "8.0.1",
       "bom-ref": "ssri@8.0.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -25661,6 +25726,7 @@
       "name": "tar-fs",
       "version": "2.1.1",
       "bom-ref": "tar-fs@2.1.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -25687,6 +25753,7 @@
           "name": "bl",
           "version": "4.1.0",
           "bom-ref": "tar-fs@2.1.1|bl@4.1.0",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -25713,6 +25780,7 @@
           "name": "chownr",
           "version": "1.1.4",
           "bom-ref": "tar-fs@2.1.1|chownr@1.1.4",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -25739,6 +25807,7 @@
           "name": "readable-stream",
           "version": "3.6.0",
           "bom-ref": "tar-fs@2.1.1|readable-stream@3.6.0",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -25765,6 +25834,7 @@
           "name": "tar-stream",
           "version": "2.2.0",
           "bom-ref": "tar-fs@2.1.1|tar-stream@2.2.0",
+          "scope": "optional",
           "hashes": [
             {
               "alg": "SHA-512",
@@ -26759,6 +26829,7 @@
       "name": "uglify-js",
       "version": "3.17.4",
       "bom-ref": "uglify-js@3.17.4",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -26969,6 +27040,7 @@
       "name": "unique-filename",
       "version": "1.1.1",
       "bom-ref": "unique-filename@1.1.1",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -26995,6 +27067,7 @@
       "name": "unique-slug",
       "version": "2.0.2",
       "bom-ref": "unique-slug@2.0.2",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
@@ -28019,6 +28092,7 @@
       "name": "which-pm-runs",
       "version": "1.1.0",
       "bom-ref": "which-pm-runs@1.1.0",
+      "scope": "optional",
       "hashes": [
         {
           "alg": "SHA-512",
