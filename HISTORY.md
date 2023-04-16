@@ -11,7 +11,10 @@ All notable changes to this project will be documented in this file.
   * DevDependencies that are also required by OptionalDependencies are correctly omitted from SBOM results, when the CLI switch for omitting "dev" and "optional" are set ([#645] via [#657])
 * Docs
   * Describe internal `npm` executable detection in README (via [#647])
+* Build
+  * Use _TypeScript_ `v5.0.4` now, was `v4.9.5` (via [#638])
 
+[#638]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/638
 [#645]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/645
 [#647]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/647
 [#657]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/657
