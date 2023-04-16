@@ -364,6 +364,13 @@ export class BomBuilder {
 
   private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | false | undefined {
     // older npm-ls versions (v6) hide properties behind a `_`
+    const isOptional = (data.optional ?? data._optional) === true
+    if (isOptional && this.omitDependencyTypes.has('optional')) {
+      this.console.debug('DEBUG | omit optional component: %j %j', data.name, data._id)
+      return false
+    }
+
+    // older npm-ls versions (v6) hide properties behind a `_`
     const isDev = (data.dev ?? data._development) === true
     if (isDev && this.omitDependencyTypes.has('dev')) {
       this.console.debug('DEBUG | omit dev component: %j %j', data.name, data._id)
@@ -394,6 +401,11 @@ export class BomBuilder {
     if (component === undefined) {
       this.console.debug('DEBUG | skip broken component: %j %j', data.name, data._id)
       return undefined
+    }
+
+    // attention: `isDevOptional` does not cause a component to be optional, since it is still required for development
+    if (isOptional) {
+      component.scope = Enums.ComponentScope.Optional
     }
 
     // region properties
