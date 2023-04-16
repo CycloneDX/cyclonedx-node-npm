@@ -403,8 +403,7 @@ export class BomBuilder {
       return undefined
     }
 
-    // attention: `isDevOptional` does not cause a component to be optional, since it is still required for development
-    if (isOptional) {
+    if (isOptional || isDevOptional) {
       component.scope = Enums.ComponentScope.Optional
     }
 
