@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { Builders, Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
+import { Builders, Enums, Factories, Serialize, Spec, Validation } from '@cyclonedx/cyclonedx-library'
 import { Argument, Command, Option } from 'commander'
 import { existsSync, openSync, writeSync } from 'fs'
 import { dirname, resolve } from 'path'
@@ -47,6 +47,7 @@ interface CommandOptions {
   outputReproducible: boolean
   outputFormat: OutputFormat
   outputFile: string
+  noValidate: boolean
   mcType: Enums.ComponentType
 }
 
@@ -139,6 +140,11 @@ function makeCommand (process: NodeJS.Process): Command {
     )
   ).addOption(
     new Option(
+      '--no-validate',
+      'Disable validation of resulting output.'
+    ).default(false)
+  ).addOption(
+    new Option(
       '--mc-type <type>',
       'Type of the main component.'
     ).choices(
@@ -168,7 +174,7 @@ function makeCommand (process: NodeJS.Process): Command {
   )
 }
 
-export function run (process: NodeJS.Process): void {
+export async function run (process: NodeJS.Process): Promise<void> {
   process.title = 'cyclonedx-node-npm'
 
   // all output shall be bound to stdError - stdOut is for result output only
@@ -232,13 +238,41 @@ export function run (process: NodeJS.Process): void {
   }
 
   let serializer: Serialize.Types.Serializer
+  let validator: Validation.Validator
   switch (options.outputFormat) {
     case OutputFormat.XML:
       serializer = new Serialize.XmlSerializer(new Serialize.XML.Normalize.Factory(spec))
+      validator = new Validation.XmlValidator(spec.version)
       break
     case OutputFormat.JSON:
       serializer = new Serialize.JsonSerializer(new Serialize.JSON.Normalize.Factory(spec))
+      validator = new Validation.JsonValidator(spec.version)
       break
+  }
+
+  myConsole.log('LOG   | serialize BOM')
+  const serialized = serializer.serialize(bom, {
+    sortLists: options.outputReproducible,
+    space: 2
+  })
+
+  if (!options.noValidate) {
+    myConsole.log('LOG   | try validate BOM result ...')
+    try {
+      await validator.validate(serialized)
+    } catch (err) {
+      if (err instanceof Validation.MissingOptionalDependencyError) {
+        myConsole.warn('WARN  | skipped validate BOM result:', err.message)
+      } else {
+        if (err instanceof Validation.ValidationError) {
+          myConsole.error('ERROR | BOM result invalid:', err.message)
+          myConsole.info('INFO  | BOM result invalid. details: ', err.details)
+        } else {
+          myConsole.error('ERROR | unexpected error')
+        }
+        throw err
+      }
+    }
   }
 
   // TODO use instead ? : https://www.npmjs.com/package/debug ?
@@ -247,9 +281,6 @@ export function run (process: NodeJS.Process): void {
     options.outputFile === OutputStdOut
       ? process.stdout.fd
       : openSync(resolve(process.cwd(), options.outputFile), 'w'),
-    serializer.serialize(bom, {
-      sortLists: options.outputReproducible,
-      space: 2
-    })
+    serialized
   )
 }
