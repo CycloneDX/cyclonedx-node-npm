@@ -262,15 +262,19 @@ export async function run (process: NodeJS.Process): Promise<void> {
       await validator.validate(serialized)
     } catch (err) {
       if (err instanceof Validation.MissingOptionalDependencyError) {
-        myConsole.warn('WARN  | skipped validate BOM result:', err.message)
+        myConsole.info('INFO  | skipped validate BOM:', err.message)
       } else {
         if (err instanceof Validation.ValidationError) {
-          myConsole.error('ERROR | BOM result invalid:', err.message)
+          myConsole.error('ERROR | Failed to generate valid BOM:', err.message)
           myConsole.info('INFO  | BOM result invalid. details: ', err.details)
+          myConsole.warn(
+            'WARN  | Please report the issue and provide the npm lock file of the current project to:\n' +
+            '      | https://github.com/CycloneDX/cyclonedx-node-npm/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D')
+          return
         } else {
           myConsole.error('ERROR | unexpected error')
+          throw err
         }
-        throw err
       }
     }
   }
