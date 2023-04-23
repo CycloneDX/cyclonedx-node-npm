@@ -97,6 +97,7 @@ Options:
   --output-file <file>      Path to the output file.
                             Set to "-" to write to STDOUT.
                             (default: write to STDOUT)
+  --no-validate             Disable validation of resulting BOM.
   --mc-type <type>          Type of the main component.
                             (choices: "application", "firmware", "library", default: "application")
   -V, --version             output the version number

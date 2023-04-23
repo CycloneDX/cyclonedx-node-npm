@@ -141,7 +141,7 @@ function makeCommand (process: NodeJS.Process): Command {
   ).addOption(
     new Option(
       '--no-validate',
-      'Disable validation of resulting output.'
+      'Disable validation of resulting BOM.'
     ).default(false)
   ).addOption(
     new Option(
