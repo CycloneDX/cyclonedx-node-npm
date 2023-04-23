@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Added
+  * SBOM results might be validated ([#] via [#])  
+    requires optional dependnecies - see (LINK HERE)[TODO]
+    @TODO
+
 ## 1.10.0 - 2023-04-17
 
 * Added
