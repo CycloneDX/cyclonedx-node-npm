@@ -53,7 +53,7 @@ describe('cli.run()', () => {
     test.each([
       ['no-lockfile', /missing evidence/i],
       ['no-manifest', /missing .*manifest file/i]
-    ])('%s', (folderName, expectedError) => {
+    ])('%s', async (folderName, expectedError) => {
       const logFileBase = join(tmpRootRun, folderName)
 
       const outFile = `${logFileBase}.out`
@@ -80,12 +80,12 @@ describe('cli.run()', () => {
       }
 
       try {
-        expect(() => {
+        await expect(
           cli.run(mockProcess)
-        }).toThrow(expectedError)
+        ).rejects.toBe(expectedError)
       } finally {
-        closeSync(stdout.fd)
         stderr.close()
+        closeSync(stdout.fd)
       }
     })
   })
@@ -94,7 +94,7 @@ describe('cli.run()', () => {
     const tmpRootRun = join(tmpRoot, 'with-broken')
     mkdirSync(tmpRootRun)
 
-    test('error on non-existing binary', () => {
+    test('error on non-existing binary', async () => {
       const logFileBase = join(tmpRootRun, 'non-existing')
 
       const outFile = `${logFileBase}.out`
@@ -120,16 +120,16 @@ describe('cli.run()', () => {
       }
 
       try {
-        expect(() => {
+        await expect(
           cli.run(mockProcess)
-        }).toThrow(/^unexpected npm execpath/i)
+        ).rejects.toThrow(/^unexpected npm execpath/i)
       } finally {
-        closeSync(stdout.fd)
         stderr.close()
+        closeSync(stdout.fd)
       }
     })
 
-    test('error on non-zero exit', () => {
+    test('error on non-zero exit', async () => {
       const logFileBase = join(tmpRootRun, 'error-exit-nonzero')
 
       const expectedExitCode = 1 + Math.floor(254 * Math.random())
@@ -160,16 +160,16 @@ describe('cli.run()', () => {
       }
 
       try {
-        expect(() => {
+        await expect(
           cli.run(mockProcess)
-        }).toThrow(`npm-ls exited with errors: ${expectedExitCode} noSignal`)
+        ).rejects.toThrow(`npm-ls exited with errors: ${expectedExitCode} noSignal`)
       } finally {
-        closeSync(stdout.fd)
         stderr.close()
+        closeSync(stdout.fd)
       }
     })
 
-    test('error on broken json response', () => {
+    test('error on broken json response', async () => {
       const logFileBase = join(tmpRootRun, 'error-json-broken')
 
       const outFile = `${logFileBase}.out`
@@ -197,12 +197,12 @@ describe('cli.run()', () => {
       }
 
       try {
-        expect(() => {
+        await expect(
           cli.run(mockProcess)
-        }).toThrow(/failed to parse npm-ls response/i)
+        ).rejects.toThrow(/failed to parse npm-ls response/i)
       } finally {
-        closeSync(stdout.fd)
         stderr.close()
+        closeSync(stdout.fd)
       }
     })
   })
@@ -219,7 +219,7 @@ describe('cli.run()', () => {
     describe.each(useCases)('$subject', (ud) => {
       mkdirSync(join(tmpRootRun, ud.subject))
 
-      test.each(demoCases)('$subject npm$npm node$node $os', (dd) => {
+      test.each(demoCases)('$subject npm$npm node$node $os', async (dd) => {
         const expectedOutSnap = resolve(demoResultsRoot, ud.subject, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
         const logFileBase = join(tmpRootRun, ud.subject, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
 
@@ -263,10 +263,10 @@ describe('cli.run()', () => {
         }
 
         try {
-          cli.run(mockProcess)
+          await cli.run(mockProcess)
         } finally {
-          closeSync(stdout.fd)
           stderr.close()
+          closeSync(stdout.fd)
         }
 
         const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
@@ -283,7 +283,7 @@ describe('cli.run()', () => {
     })
   })
 
-  test('suppressed error on non-zero exit', () => {
+  test('suppressed error on non-zero exit', async () => {
     const dd = { subject: 'dev-dependencies', npm: '8', node: '16', os: 'ubuntu-latest' }
 
     mkdirSync(join(tmpRoot, 'suppressed-error-on-non-zero-exit'))
@@ -331,10 +331,10 @@ describe('cli.run()', () => {
     }
 
     try {
-      cli.run(mockProcess)
+      await cli.run(mockProcess)
     } finally {
-      closeSync(stdout.fd)
       stderr.close()
+      closeSync(stdout.fd)
     }
 
     const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
@@ -378,7 +378,7 @@ describe('cli.run()', () => {
       ['package-lock-only npm 7', `7.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm7ArgsGeneral, '--package-lock-only']],
       ['package-lock-only npm 8', `8.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm8ArgsGeneral, '--package-lock-only']]
       // endregion
-    ])('%s', (purpose, npmVersion, cdxArgs, expectedArgs) => {
+    ])('%s', async (purpose, npmVersion, cdxArgs, expectedArgs) => {
       const logFileBase = join(tmpRootRun, purpose.replace(/\W/g, '_'))
 
       const outFile = `${logFileBase}.out`
@@ -409,10 +409,10 @@ describe('cli.run()', () => {
       }
 
       try {
-        cli.run(mockProcess)
+        await cli.run(mockProcess)
       } finally {
-        closeSync(stdout.fd)
         stderr.close()
+        closeSync(stdout.fd)
       }
     })
   })

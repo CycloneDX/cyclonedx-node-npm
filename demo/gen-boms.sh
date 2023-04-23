@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -ex
 
 ## purpose: generate example results from the demos
 
