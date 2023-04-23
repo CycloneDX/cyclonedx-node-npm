@@ -82,7 +82,7 @@ describe('cli.run()', () => {
       try {
         await expect(
           cli.run(mockProcess)
-        ).rejects.toBe(expectedError)
+        ).rejects.toThrow(expectedError)
       } finally {
         stderr.close()
         closeSync(stdout.fd)
