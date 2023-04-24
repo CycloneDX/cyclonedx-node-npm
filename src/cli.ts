@@ -174,7 +174,13 @@ function makeCommand (process: NodeJS.Process): Command {
   )
 }
 
-export async function run (process: NodeJS.Process): Promise<void> {
+const ExitCode: Readonly<Record<string, number>> = Object.freeze({
+  SUCCESS: 0,
+  FAILURE: 1,
+  INVALID: 2
+})
+
+export async function run (process: NodeJS.Process): Promise<number> {
   process.title = 'cyclonedx-node-npm'
 
   // all output shall be bound to stdError - stdOut is for result output only
@@ -238,7 +244,7 @@ export async function run (process: NodeJS.Process): Promise<void> {
   }
 
   let serializer: Serialize.Types.Serializer
-  let validator: Validation.Validator
+  let validator: Validation.Types.Validator
   switch (options.outputFormat) {
     case OutputFormat.XML:
       serializer = new Serialize.XmlSerializer(new Serialize.XML.Normalize.Factory(spec))
@@ -259,22 +265,21 @@ export async function run (process: NodeJS.Process): Promise<void> {
   if (!options.noValidate) {
     myConsole.log('LOG   | try validate BOM result ...')
     try {
-      await validator.validate(serialized)
+      const validationErrors = await validator.validate(serialized)
+      if (validationErrors !== null) {
+        myConsole.debug('DEBUG | BOM result invalid. details: ', validationErrors)
+        myConsole.error('ERROR | Failed to generate valid BOM.')
+        myConsole.warn(
+          'WARN  | Please report the issue and provide the npm lock file of the current project to:\n' +
+          '      | https://github.com/CycloneDX/cyclonedx-node-npm/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D')
+        return ExitCode.FAILURE
+      }
     } catch (err) {
       if (err instanceof Validation.MissingOptionalDependencyError) {
         myConsole.info('INFO  | skipped validate BOM:', err.message)
       } else {
-        if (err instanceof Validation.ValidationError) {
-          myConsole.error('ERROR | Failed to generate valid BOM:', err.message)
-          myConsole.info('INFO  | BOM result invalid. details: ', err.details)
-          myConsole.warn(
-            'WARN  | Please report the issue and provide the npm lock file of the current project to:\n' +
-            '      | https://github.com/CycloneDX/cyclonedx-node-npm/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D')
-          return
-        } else {
-          myConsole.error('ERROR | unexpected error')
-          throw err
-        }
+        myConsole.error('ERROR | unexpected error')
+        throw err
       }
     }
   }
@@ -287,4 +292,6 @@ export async function run (process: NodeJS.Process): Promise<void> {
       : openSync(resolve(process.cwd(), options.outputFile), 'w'),
     serialized
   )
+
+  return ExitCode.SUCCESS
 }
