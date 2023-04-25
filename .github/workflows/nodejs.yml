@@ -92,6 +92,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: setup subject
+        shell: bash
         run: |
           set -ex
           npm ci --ignore-scripts --loglevel=silly
