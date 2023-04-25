@@ -158,8 +158,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: setup subject
+        shell: bash
         run: |
-          |
           set -ex
           npm ci --ignore-scripts --omit=dev --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
