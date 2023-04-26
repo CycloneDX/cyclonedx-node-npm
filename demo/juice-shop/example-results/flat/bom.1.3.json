@@ -8,7 +8,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "1.14.0-rc.1"
+        "version": "1.14.0"
       },
       {
         "vendor": "@cyclonedx",
