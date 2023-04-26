@@ -47,7 +47,7 @@ interface CommandOptions {
   outputReproducible: boolean
   outputFormat: OutputFormat
   outputFile: string
-  noValidate: boolean
+  validate: boolean
   mcType: Enums.ComponentType
 }
 
@@ -140,9 +140,15 @@ function makeCommand (process: NodeJS.Process): Command {
     )
   ).addOption(
     new Option(
+      '--validate',
+      'Validate resulting BOM before outputting. ' +
+      'Validation is skipped, if dependencies are missing or not met.'
+    ).default(true)
+  ).addOption(
+    new Option(
       '--no-validate',
       'Disable validation of resulting BOM.'
-    ).default(false)
+    )
   ).addOption(
     new Option(
       '--mc-type <type>',
@@ -262,7 +268,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
     space: 2
   })
 
-  if (!options.noValidate) {
+  if (options.validate) {
     myConsole.log('LOG   | try validate BOM result ...')
     try {
       const validationErrors = await validator.validate(serialized)

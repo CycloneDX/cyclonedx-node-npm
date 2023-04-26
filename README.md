@@ -69,7 +69,7 @@ Usage: cyclonedx-npm [options] [--] [<package-manifest>]
 Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.
 
 Arguments:
-  <package-manifest>        Path to project's manifest file. 
+  <package-manifest>        Path to project's manifest file.
                             (default: "package.json" file in current working directory)
 
 Options:
@@ -84,8 +84,9 @@ Options:
                             (choices: "dev", "optional", "peer", default: "dev" if the NODE_ENV environment variable is set to "production", otherwise empty)
   --flatten-components      Whether to flatten the components.
                             This means the actual nesting of node packages is not represented in the SBOM result.
+                            (default: false)
   --short-PURLs             Omit all qualifiers from PackageURLs.
-                            This causes information loss in trade of shorter PURLs, which might improve digesting these strings. 
+                            This causes information loss in trade of shorter PURLs, which might improve digesting these strings.
                             (default: false)
   --spec-version <version>  Which version of CycloneDX spec to use.
                             (choices: "1.2", "1.3", "1.4", default: "1.4")
@@ -97,6 +98,8 @@ Options:
   --output-file <file>      Path to the output file.
                             Set to "-" to write to STDOUT.
                             (default: write to STDOUT)
+  --validate                Validate resulting BOM before outputting. Validation is skipped, if dependencies are missing or not met.
+                            (default: true)
   --no-validate             Disable validation of resulting BOM.
   --mc-type <type>          Type of the main component.
                             (choices: "application", "firmware", "library", default: "application")
