@@ -19,7 +19,7 @@ Steps to reproduce the behavior:
    <!-- upload the complete output to this issue, or a pastebin of you choice and put the link here. -->
 4. Expected result:
    <!-- run the original call again
-   with parameters `--no-validate --output-file=-`, 
+   with parameters `--no-validate --output-reproducible --output-file=-`, 
    then upload the output this issue, or to a pastebin of you choice and put the link here. -->
 
 ## Environment
