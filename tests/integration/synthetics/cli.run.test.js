@@ -241,9 +241,10 @@ describe('cli.run()', () => {
             process.argv[0],
             'dummy_process',
             '--output-reproducible',
+            '--validate',
             // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-            // just use json with the latest most feature-rich version.
             '--spec-version', '1.4',
+            // just use json with the latest most feature-rich version.
             '--output-format', 'JSON',
             // prevent file interaction in this synthetic scenario - they would not exist anyway
             '--package-lock-only',
@@ -310,8 +311,9 @@ describe('cli.run()', () => {
         process.argv[0],
         'dummy_process',
         '--ignore-npm-errors',
-        // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
         '--output-reproducible',
+        '--validate',
+        // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
         '--spec-version', '1.4',
         '--output-format', 'JSON',
         // prevent file interaction in this synthetic scenario - they would not exist anyway
