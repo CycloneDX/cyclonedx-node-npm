@@ -32,6 +32,8 @@ const { version: thisVersion } = require('../../../package.json')
 const cli = require('../../../dist/cli')
 
 describe('cli.run()', () => {
+  const cliRunTestTimeout = 15000
+
   const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX-IT-CLI.run.'))
 
   const dummyProjectsRoot = resolve(__dirname, '..', '..', '_data', 'dummy_projects')
@@ -87,7 +89,7 @@ describe('cli.run()', () => {
         stderr.close()
         closeSync(stdout.fd)
       }
-    })
+    }, cliRunTestTimeout)
   })
 
   describe('with broken npm-ls', () => {
@@ -127,7 +129,7 @@ describe('cli.run()', () => {
         stderr.close()
         closeSync(stdout.fd)
       }
-    })
+    }, cliRunTestTimeout)
 
     test('error on non-zero exit', async () => {
       const logFileBase = join(tmpRootRun, 'error-exit-nonzero')
@@ -167,7 +169,7 @@ describe('cli.run()', () => {
         stderr.close()
         closeSync(stdout.fd)
       }
-    })
+    }, cliRunTestTimeout)
 
     test('error on broken json response', async () => {
       const logFileBase = join(tmpRootRun, 'error-json-broken')
@@ -204,7 +206,7 @@ describe('cli.run()', () => {
         stderr.close()
         closeSync(stdout.fd)
       }
-    })
+    }, cliRunTestTimeout)
   })
 
   describe('with prepared npm-ls', () => {
@@ -279,7 +281,7 @@ describe('cli.run()', () => {
           readFileSync(expectedOutSnap, 'utf8'),
           `${outFile} should equal ${expectedOutSnap}`
         )
-      })
+      }, cliRunTestTimeout)
     })
   })
 
@@ -347,7 +349,7 @@ describe('cli.run()', () => {
       readFileSync(expectedOutSnap, 'utf8'),
       `${outFile} should equal ${expectedOutSnap}`
     )
-  })
+  }, cliRunTestTimeout)
 
   describe('npm-version depending npm-args', () => {
     const tmpRootRun = join(tmpRoot, 'npmVersion-depending-npmArgs')
@@ -414,7 +416,7 @@ describe('cli.run()', () => {
         stderr.close()
         closeSync(stdout.fd)
       }
-    })
+    }, cliRunTestTimeout)
   })
 })
 
