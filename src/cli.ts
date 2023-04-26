@@ -142,7 +142,7 @@ function makeCommand (process: NodeJS.Process): Command {
     new Option(
       '--validate',
       'Validate resulting BOM before outputting. ' +
-      'Validation is skipped, if dependencies are missing or not met.'
+      'Validation is skipped, if requirements not met. See the README.'
     ).default(true)
   ).addOption(
     new Option(

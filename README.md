@@ -98,7 +98,7 @@ Options:
   --output-file <file>      Path to the output file.
                             Set to "-" to write to STDOUT.
                             (default: write to STDOUT)
-  --validate                Validate resulting BOM before outputting. Validation is skipped, if dependencies are missing or not met.
+  --validate                Validate resulting BOM before outputting. Validation is skipped, if requirements not met.
                             (default: true)
   --no-validate             Disable validation of resulting BOM.
   --mc-type <type>          Type of the main component.
