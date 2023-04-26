@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { Builders, Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
+import { Builders, Enums, Factories, Serialize, Spec, Validation } from '@cyclonedx/cyclonedx-library'
 import { Argument, Command, Option } from 'commander'
 import { existsSync, openSync, writeSync } from 'fs'
 import { dirname, resolve } from 'path'
@@ -47,6 +47,7 @@ interface CommandOptions {
   outputReproducible: boolean
   outputFormat: OutputFormat
   outputFile: string
+  validate: boolean
   mcType: Enums.ComponentType
 }
 
@@ -139,6 +140,17 @@ function makeCommand (process: NodeJS.Process): Command {
     )
   ).addOption(
     new Option(
+      '--validate',
+      'Validate resulting BOM before outputting. ' +
+      'Validation is skipped, if requirements not met. See the README.'
+    ).default(true)
+  ).addOption(
+    new Option(
+      '--no-validate',
+      'Disable validation of resulting BOM.'
+    )
+  ).addOption(
+    new Option(
       '--mc-type <type>',
       'Type of the main component.'
     ).choices(
@@ -168,7 +180,13 @@ function makeCommand (process: NodeJS.Process): Command {
   )
 }
 
-export function run (process: NodeJS.Process): void {
+const ExitCode: Readonly<Record<string, number>> = Object.freeze({
+  SUCCESS: 0,
+  FAILURE: 1,
+  INVALID: 2
+})
+
+export async function run (process: NodeJS.Process): Promise<number> {
   process.title = 'cyclonedx-node-npm'
 
   // all output shall be bound to stdError - stdOut is for result output only
@@ -232,13 +250,44 @@ export function run (process: NodeJS.Process): void {
   }
 
   let serializer: Serialize.Types.Serializer
+  let validator: Validation.Types.Validator
   switch (options.outputFormat) {
     case OutputFormat.XML:
       serializer = new Serialize.XmlSerializer(new Serialize.XML.Normalize.Factory(spec))
+      validator = new Validation.XmlValidator(spec.version)
       break
     case OutputFormat.JSON:
       serializer = new Serialize.JsonSerializer(new Serialize.JSON.Normalize.Factory(spec))
+      validator = new Validation.JsonValidator(spec.version)
       break
+  }
+
+  myConsole.log('LOG   | serialize BOM')
+  const serialized = serializer.serialize(bom, {
+    sortLists: options.outputReproducible,
+    space: 2
+  })
+
+  if (options.validate) {
+    myConsole.log('LOG   | try validate BOM result ...')
+    try {
+      const validationErrors = await validator.validate(serialized)
+      if (validationErrors !== null) {
+        myConsole.debug('DEBUG | BOM result invalid. details: ', validationErrors)
+        myConsole.error('ERROR | Failed to generate valid BOM.')
+        myConsole.warn(
+          'WARN  | Please report the issue and provide the npm lock file of the current project to:\n' +
+          '      | https://github.com/CycloneDX/cyclonedx-node-npm/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D')
+        return ExitCode.FAILURE
+      }
+    } catch (err) {
+      if (err instanceof Validation.MissingOptionalDependencyError) {
+        myConsole.info('INFO  | skipped validate BOM:', err.message)
+      } else {
+        myConsole.error('ERROR | unexpected error')
+        throw err
+      }
+    }
   }
 
   // TODO use instead ? : https://www.npmjs.com/package/debug ?
@@ -247,9 +296,8 @@ export function run (process: NodeJS.Process): void {
     options.outputFile === OutputStdOut
       ? process.stdout.fd
       : openSync(resolve(process.cwd(), options.outputFile), 'w'),
-    serializer.serialize(bom, {
-      sortLists: options.outputReproducible,
-      space: 2
-    })
+    serialized
   )
+
+  return ExitCode.SUCCESS
 }

@@ -34,7 +34,7 @@ jobs:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           cache: 'npm'
       - name: setup subject
-        run: npm ci --ignore-scripts
+        run: npm ci --ignore-scripts --loglevel=silly
       - name: build
         run: npm run build
       - name: artifact build result
@@ -59,7 +59,7 @@ jobs:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           cache: 'npm'
       - name: install subject
-        run: npm ci
+        run: npm ci --loglevel=silly
       - name: run tests
         run: npm run test:standard
   test-jest:
@@ -92,7 +92,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: setup subject
-        run: npm ci --ignore-scripts
+        shell: bash
+        run: |
+          set -ex
+          npm ci --ignore-scripts --loglevel=silly
+          ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
+          npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3
@@ -153,7 +158,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: setup subject
-        run: npm i --ignore-scripts
+        shell: bash
+        run: |
+          set -ex
+          npm ci --ignore-scripts --omit=dev --loglevel=silly
+          ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
+          npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3

@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -ex
 
 ## purpose: generate example results from the demos
 
@@ -26,6 +26,7 @@ do
       node -- "$BIN_CDX_N" \
       --spec-version "$spec" \
       --output-reproducible \
+      --validate \
       --output-format "$format" \
       --output-file "$result_dir/bare/bom.$spec.$format" \
       "$package"
@@ -36,6 +37,7 @@ do
       --flatten-components \
       --spec-version "$spec" \
       --output-reproducible \
+      --validate \
       --output-format "$format" \
       --output-file "$result_dir/flat/bom.$spec.$format" \
       "$package"
