@@ -32,7 +32,7 @@ permissions: write-all
 
 env:
   REPORTS_DIR: CI_reports
-  NODE_ACTIVE_LTS: "18"
+  NODE_ACTIVE_LTS: "20"  # https://nodejs.org/en/about/releases/
 
 jobs:
   bump:

@@ -46,7 +46,7 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '19'     # Current
+          - '20'     # Current
           - '18'     # Active LTS
           - '16'
           - '14'
