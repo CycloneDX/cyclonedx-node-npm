@@ -122,7 +122,8 @@ Read more on the topic in the [dedicated docs "Component Deduplication"](https:/
 
 ## Internals
 
-This tool utilizes the [CycloneDX library][cyclonedx-library] to generate the actual data structures.
+This tool utilizes the [CycloneDX library][cyclonedx-library] to generate the actual data structures, and serialize and validate them.  
+Validation requires [transitive optional dependencies](https://github.com/CycloneDX/cyclonedx-javascript-library/blob/main/README.md#optional-dependencies).
 
 This tool does **not** expose any additional _public_ API or classes - all code is intended to be internal and might change without any notice during version upgrades.
 

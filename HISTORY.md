@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Added
-  * SBOM results might be validated ([#] via [#])  
-    requires optional dependnecies - see (LINK HERE)[TODO]
-    @TODO
+  * SBOM results might be validated (via [#660])  
+    This feature is enabled per default and can be disabled via CLI switch `--no-validate`.  
+    Validation is skipped, if dependencies are missing or not met.
+    Requires [transitive optional dependencies](https://github.com/CycloneDX/cyclonedx-javascript-library/blob/main/README.md#optional-dependencies)  
+
+[#660]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/660
 
 ## 1.10.0 - 2023-04-17
 
