@@ -30,13 +30,13 @@ jobs:
       fail-fast: false # gather all the results !
       matrix:
         subject:
-          - bundled-dependencies
-          - dev-dependencies
-          - juice-shop
-          - local-dependencies
-          - local-workspaces
+          # - bundled-dependencies
+          # - dev-dependencies
+          # - juice-shop
+          # - local-dependencies
+          # - local-workspaces
           - package-integrity
-          - package-with-build-id
+          # - package-with-build-id
         npm-version:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
           ## see also: https://github.com/npm/cli/releases
