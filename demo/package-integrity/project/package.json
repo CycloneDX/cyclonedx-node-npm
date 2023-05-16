@@ -1,0 +1,10 @@
+{
+  "name": "demo-package-integrity",
+  "description": "demo: package-integrity -- packages with different integrity information.",
+  "private": true,
+  "dependencies": {
+    "buffer": "^5.4.3",
+    "ignore": "^5.1.4",
+    "base64-js": "1.0.1"
+  }
+}
