@@ -343,7 +343,7 @@ describe('cli.run()', () => {
 
     const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
 
-    if (!existsSync(expectedOutSnap)) {
+    if (process.env.CNPM_TEST_UPDATE_SNAPSHOTS) {
       writeFileSync(expectedOutSnap, actualOutput, 'utf8')
     }
 
