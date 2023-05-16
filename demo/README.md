@@ -8,6 +8,7 @@ Each project demonstrates an individual use case:
 * [use of local dependencies](local-dependencies)
 * [use of workspaces](local-workspaces)
 * [the Juice Shop](juice-shop)
+* [package-integrity](package-integrity)
 * [package with buildID in version](package-with-build-id)
 
 Each dir contains of a `project` folder that holds the npm package
