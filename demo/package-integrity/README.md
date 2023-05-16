@@ -4,12 +4,12 @@ Install packages with different integrity information based on shipped lock file
 
 See [the docs](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json#package)
 for "ingetrity":
-> A sha512 or sha1 [Standard Subresource Integrity](https://w3c.github.io/webappsec/specs/subresourceintegrity/) string for the artifact that was unpacked in this location.
+> A _sha512_ or _sha1_ [Standard Subresource Integrity](https://w3c.github.io/webappsec/specs/subresourceintegrity/) string for the artifact that was unpacked in this location.
 
 ## remarks
 
 `base64-js` has a _sha1_ integrity in the shipped lock file.
-others have sha512 integrity in the lock file.
+others have _sha512_ integrity in the lock file.
 
 ## output
 
