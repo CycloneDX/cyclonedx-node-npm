@@ -32,6 +32,7 @@ const { version: thisVersion } = require('../../../package.json')
 const cli = require('../../../dist/cli')
 
 describe('cli.run()', () => {
+  const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
   const cliRunTestTimeout = 15000
 
   const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX-IT-CLI.run.'))
@@ -274,7 +275,7 @@ describe('cli.run()', () => {
 
         const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
 
-        if (!existsSync(expectedOutSnap)) {
+        if (!existsSync(expectedOutSnap) || UPDATE_SNAPSHOTS) {
           writeFileSync(expectedOutSnap, actualOutput, 'utf8')
         }
 
@@ -343,7 +344,7 @@ describe('cli.run()', () => {
 
     const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
 
-    if (!existsSync(expectedOutSnap)) {
+    if (!existsSync(expectedOutSnap) || UPDATE_SNAPSHOTS) {
       writeFileSync(expectedOutSnap, actualOutput, 'utf8')
     }
 

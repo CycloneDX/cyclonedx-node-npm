@@ -5,12 +5,12 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>1.14.0</version>
+        <version>2.0.0-rc.0</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.10.0</version>
+        <version>1.11.0</version>
       </tool>
     </tools>
     <component type="application" bom-ref="juice-shop@14.1.1">
@@ -28895,9 +28895,7 @@
         <hash alg="SHA-512">cbfe7631ccbb6b0de0466ec8adc183171fdb0a4e00851876788f65b8739033cea766cab0891924ab619e9075c1043f9298f89d73c8b63eab58665fa9589f0e7a</hash>
       </hashes>
       <licenses>
-        <license>
-          <name>WTFPL OR ISC</name>
-        </license>
+        <expression>WTFPL OR ISC</expression>
       </licenses>
       <purl>pkg:npm/sanitize-filename@1.6.3</purl>
       <externalReferences>

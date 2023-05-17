@@ -5,12 +5,12 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>1.14.0</version>
+        <version>2.0.0-rc.0</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.10.0</version>
+        <version>1.11.0</version>
       </tool>
     </tools>
     <component type="application" bom-ref="demo-dev-dependencies@0.0.0">

@@ -79,12 +79,6 @@
   "components": [
     {
       "type": "library",
-      "name": "DummyComponent.InterferedDependency.my-noname",
-      "bom-ref": "DummyComponent.InterferedDependency.my-noname",
-      "description": "This is a dummy component \"InterferedDependency.my-noname\" that fills the gap where the actual built failed."
-    },
-    {
-      "type": "library",
       "name": "my-local-a",
       "version": "0.0.0",
       "bom-ref": "my-local-a@0.0.0",
@@ -149,6 +143,12 @@
           "value": "true"
         }
       ]
+    },
+    {
+      "type": "library",
+      "name": "DummyComponent.InterferedDependency.my-noname",
+      "bom-ref": "DummyComponent.InterferedDependency.my-noname",
+      "description": "This is a dummy component \"InterferedDependency.my-noname\" that fills the gap where the actual built failed."
     }
   ],
   "dependencies": [
