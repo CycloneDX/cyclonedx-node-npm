@@ -8,16 +8,22 @@ Based on [OWASP Software Component Verification Standard for Software Bill of Ma
 (SCVS SBOM) criteria, this tool is now capable of producing SBOM documents almost passing Level-2 (only signing needs to be done externally).  
 Affective changes based on these SCVS SBOM criteria:
 * 2.15 — SPDX license expression detection fixed (via [#726])
+* 2.18 — SHA-1 integrity hash detection added ([#699] via [#735])
 
 Details
 * Changes
   * SPDX license expression detection improved (via [#726])  
     Previously, some expressions were not properly detected, so they were marked as named-license in the SBOM results.
     They should be marked as expression, now.
+* Added
+  * Added detection for package integrity with SHA-1 ([#699] via [#735])
 * Misc
   * Raised dependency `@cyclonedx/cyclonedx-library@^2.0.0`, was `@^1.14.0` (via [#726])
 
+[#699]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/699
 [#726]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/726
+[#735]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/735
+
 
 ## 1.11.0 - 2023-04-27
 

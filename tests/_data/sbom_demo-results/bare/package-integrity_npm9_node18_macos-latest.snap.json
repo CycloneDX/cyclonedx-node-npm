@@ -1,0 +1,269 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-npm",
+        "version": "thisVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "demo-package-integrity",
+      "bom-ref": "-/demo-package-integrity@-",
+      "description": "demo: package-integrity -- packages with different integrity information.",
+      "purl": "pkg:npm/demo-package-integrity",
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": ""
+        },
+        {
+          "name": "cdx:npm:package:private",
+          "value": "true"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "base64-js",
+      "version": "1.0.1",
+      "bom-ref": "base64-js@1.0.1",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "6926d1b194fbc737b8eed513756de2fcda7ea408"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/base64-js@1.0.1",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/base64-js/-/base64-js-1.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/base64-js"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "buffer",
+      "version": "5.4.3",
+      "bom-ref": "buffer@5.4.3",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "cef8fae53905788b778ba6a3e5b22f243ce38d0406b38a3fb0da1ece0d45d6461aa7d36eda3714769c334522531cc3331b41fb6d9927e2b350a489a1bb1597d8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/buffer@5.4.3",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/buffer/-/buffer-5.4.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/buffer"
+        }
+      ],
+      "components": [
+        {
+          "type": "library",
+          "name": "base64-js",
+          "version": "1.3.1",
+          "bom-ref": "buffer@5.4.3|base64-js@1.3.1",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "98b4388b640ed72b6f19615699c9e028efff257010b9e66fc042ad8e04053388c82b4914fb2b4c7e994bf23fa7e66b2939f8c7c28020fbdca16fb0700079b7ea"
+            }
+          ],
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/base64-js@1.3.1",
+          "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/base64-js/-/base64-js-1.3.1.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/buffer/node_modules/base64-js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ieee754",
+      "version": "1.1.13",
+      "bom-ref": "ieee754@1.1.13",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e2f7fb2362d857f1da59ead2a375e694c929e5e67cde2fbf08396e5e2fc8193b3f3b5b1e8c13614ed9f1ce64597ef394aa3ee5663a8791e4efa604850e55994e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ieee754@1.1.13",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ieee754/-/ieee754-1.1.13.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/ieee754"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ignore",
+      "version": "5.1.4",
+      "bom-ref": "ignore@5.1.4",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3336d449a8644d6d6eec9a4a2a363b2c20117757d4e56dab2ddc6533891d91acae0b06489a392996e17d08cd5a2dec18260b8f0ea7b02da9b5f18e8053af40f0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ignore@5.1.4",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ignore/-/ignore-5.1.4.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/ignore"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "-/demo-package-integrity@-",
+      "dependsOn": [
+        "base64-js@1.0.1",
+        "buffer@5.4.3",
+        "ignore@5.1.4"
+      ]
+    },
+    {
+      "ref": "base64-js@1.0.1"
+    },
+    {
+      "ref": "buffer@5.4.3",
+      "dependsOn": [
+        "buffer@5.4.3|base64-js@1.3.1",
+        "ieee754@1.1.13"
+      ]
+    },
+    {
+      "ref": "buffer@5.4.3|base64-js@1.3.1"
+    },
+    {
+      "ref": "ieee754@1.1.13"
+    },
+    {
+      "ref": "ignore@5.1.4"
+    }
+  ]
+}

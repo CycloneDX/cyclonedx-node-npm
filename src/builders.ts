@@ -346,14 +346,28 @@ export class BomBuilder {
   }
 
   /**
-   * base64 over 512 bit => 86 chars + 2 chars padding.
-   * base64 alphabet: `A-Za-a+/` and `=` for padding
-   * examples:
-   * - sha512-EYuhVinaPQ2QMvF+SXUOxKpwmMp5rZxHQVHhuMfwhdSIjkwX+F8f+R/b0gyvZXc7eGu5qJJgOOmtR2likwgcFg==
-   * - sha512-DXUS22Y57/LAFSg3x7Vi6RNAuLpTXwxB9S2nIA7msBb/Zt8p7XqMwdpdc1IU7CkOQUPgAqR5fWvxuKCbneKGmA==
-   * - sha512-5BejraMXMC+2UjefDvrH0Fo/eLwZRV6859SXRg+FgbhA0R0l6lDqDGAQYhKbXhPN2ofk2kY5sgGyLNL907UXpA==
+   * See {@link https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json#packages package lock docs} for "integrity"
+   * > integrity: A sha512 or sha1 [Standard Subresource Integrity](https://w3c.github.io/webappsec/specs/subresourceintegrity/)
+   * > string for the artifact that was unpacked in this location.
    */
-  private readonly hashRE_sha512_base64 = /^sha512-([a-z0-9+/]{86}==)$/i
+  private readonly integrityRE: ReadonlyMap<Enums.HashAlgorithm, RegExp> = new Map([
+    /* base64 alphabet: `A-Za-z0-9+/` and `=` for padding
+     * SHA-1 => base64 over 160 bit => 27 chars + 1 chars padding.
+     * examples:
+     * - sha1-aSbRsZT7xze47tUTdW3i/Np+pAg=
+     * - sha1-Kq5sNclPz7QV2+lfQIuc6R7oRu0=
+     * - sha1-XV8g50dxuFICXD7bZslGLuuRPQM=
+     */
+    [Enums.HashAlgorithm['SHA-1'], /^sha1-([a-z0-9+/]{27}=)$/i],
+    /* base64 alphabet: `A-Za-z0-9+/` and `=` for padding
+     * SHA-512 => base64 over 512 bit => 86 chars + 2 chars padding.
+     * examples:
+     * - sha512-zvj65TkFeIt3i6aj5bIvJDzjjQQGs4o/sNoezg1F1kYap9Nu2jcUdpwzRSJTHMMzG0H7bZkn4rNQpImhuxWX2A==
+     * - sha512-DXUS22Y57/LAFSg3x7Vi6RNAuLpTXwxB9S2nIA7msBb/Zt8p7XqMwdpdc1IU7CkOQUPgAqR5fWvxuKCbneKGmA==
+     * - sha512-5BejraMXMC+2UjefDvrH0Fo/eLwZRV6859SXRg+FgbhA0R0l6lDqDGAQYhKbXhPN2ofk2kY5sgGyLNL907UXpA==
+     */
+    [Enums.HashAlgorithm['SHA-512'], /^sha512-([a-z0-9+/]{86}==)$/i]
+  ])
 
   /**
    * Ignore pattern for `resolved`.
@@ -453,12 +467,16 @@ export class BomBuilder {
     // older npm-ls versions (v6) hide properties behind a `_`
     const integrity = data.integrity ?? data._integrity
     if (typeof integrity === 'string') {
-      const hashSha512Match = this.hashRE_sha512_base64.exec(integrity) ?? []
-      if (hashSha512Match?.length === 2) {
-        component.hashes.set(
-          Enums.HashAlgorithm['SHA-512'],
-          Buffer.from(hashSha512Match[1], 'base64').toString('hex')
-        )
+      for (const [hashAlgorithm, hashRE] of this.integrityRE) {
+        const hashMatchBase64 = hashRE.exec(integrity) ?? []
+        if (hashMatchBase64?.length === 2) {
+          component.hashes.set(
+            hashAlgorithm,
+            Buffer.from(hashMatchBase64[1], 'base64').toString('hex')
+          )
+          // there is only one hash in "integrity"
+          break
+        }
       }
     }
 
