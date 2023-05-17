@@ -12,11 +12,8 @@
 
 Create [CycloneDX] Software Bill of Materials (SBOM) from _[npm]_ projects.
 
-<!--
 Based on [OWASP Software Component Verification Standard for Software Bill of Materials](https://scvs.owasp.org/scvs/v2-software-bill-of-materials/)'s
 criteria, this tool is capable of producing SBOM documents almost passing Level-2 (only signing needs to be done externally).
-!! NOT YET !! 2.15 depends on https://github.com/CycloneDX/cyclonedx-javascript-library/issues/271
--->
 
 The resulting SBOM documents follow [official specifications and standards](https://github.com/CycloneDX/specification), 
 and might have properties following [`cdx:npm` Namespace Taxonomy](https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md)
