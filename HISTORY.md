@@ -4,10 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.12.0 - 2023-05-17
+
 Based on [OWASP Software Component Verification Standard for Software Bill of Materials](https://scvs.owasp.org/scvs/v2-software-bill-of-materials/)
 (SCVS SBOM) criteria, this tool is now capable of producing SBOM documents almost passing Level-2 (only signing needs to be done externally).  
 Affective changes based on these SCVS SBOM criteria:
-* 2.15 — SPDX license expression detection fixed (via [#726])
+* 2.15 — SPDX license expression detection improved (via [#726])
 * 2.18 — SHA-1 integrity hash detection added ([#699] via [#735])
 
 Details
@@ -23,7 +25,6 @@ Details
 [#699]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/699
 [#726]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/726
 [#735]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/735
-
 
 ## 1.11.0 - 2023-04-27
 
