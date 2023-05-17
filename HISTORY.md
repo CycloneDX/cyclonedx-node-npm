@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^2.0.0`, was `@^1.14.0` (via [#726])
+
+[#726]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/726
+
 ## 1.11.0 - 2023-04-27
 
 * Added
