@@ -12,7 +12,7 @@ Affective changes based on these SCVS SBOM criteria:
 Details
 * Changes
   * SPDX license expression detection improved (via [#726])  
-    Previously, some expressions were not properly detected, so they were marked as named-license in the results.
+    Previously, some expressions were not properly detected, so they were marked as named-license in the SBOM results.
     They should be marked as expression, now.
 * Misc
   * Raised dependency `@cyclonedx/cyclonedx-library@^2.0.0`, was `@^1.14.0` (via [#726])
