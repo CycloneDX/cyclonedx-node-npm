@@ -21,7 +21,7 @@ const { resolve, join } = require('path')
 const {
   mkdtempSync, mkdirSync,
   createWriteStream,
-  openSync, closeSync, writeFileSync, readFileSync
+  openSync, closeSync, existsSync, writeFileSync, readFileSync
 } = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
@@ -275,7 +275,7 @@ describe('cli.run()', () => {
 
         const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
 
-        if (UPDATE_SNAPSHOTS) {
+        if (!existsSync(expectedOutSnap) || UPDATE_SNAPSHOTS) {
           writeFileSync(expectedOutSnap, actualOutput, 'utf8')
         }
 
@@ -344,7 +344,7 @@ describe('cli.run()', () => {
 
     const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
 
-    if (UPDATE_SNAPSHOTS) {
+    if (!existsSync(expectedOutSnap) || UPDATE_SNAPSHOTS) {
       writeFileSync(expectedOutSnap, actualOutput, 'utf8')
     }
 
