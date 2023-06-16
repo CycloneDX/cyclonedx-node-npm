@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.12.1 - 2023-06-16
+
 * Build
   * Use _TypeScript_ `v5.1.3` now, was `v5.0.4` (via [#764])
   * Disabled TypeScript compilerOption `esModuleInterop` (via [#736])
