@@ -84,7 +84,7 @@ Details
 ## 1.9.0 - 2023-03-03
 
 * Changed
-  * Detected node packages' metadata are now [normalized](https://www.npmjs.com/package/normalize-package-data), before translation to SBOM components happens. ([#536] via [#537])  
+  * Detected node packages' metadata are now [normalized](https://www.npmjs.com/package/normalize-package-data), before translation to SBOM components happens ([#536] via [#537])  
     This might increase the quality of SBOM results.
 
 [#536]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/536
