@@ -5,10 +5,12 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Build
+  * Use _TypeScript_ `v5.1.3` now, was `v5.0.4` (via [#764])
   * Disabled TypeScript compilerOption `esModuleInterop` (via [#736])
   * Disabled TypeScript compilerOption `allowSyntheticDefaultImports` (via [#736])
 
 [#736]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/736
+[#764]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/764
 
 ## 1.12.0 - 2023-05-17
 
