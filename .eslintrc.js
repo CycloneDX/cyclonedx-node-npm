@@ -23,11 +23,6 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 module.exports = {
   root: true,
-  /** @see https://github.com/standard/ts-standard */
-  extends: 'standard-with-typescript',
-  parserOptions: {
-    project: './tsconfig.json'
-  },
   plugins: [
     /* see https://github.com/lydell/eslint-plugin-simple-import-sort#readme */
     'simple-import-sort',
@@ -40,15 +35,29 @@ module.exports = {
   },
   overrides: [
     {
-      files: [
-        '*.spec.*',
-        '*.test.*'
-      ],
+      files: ['*.spec.*', '*.test.*'],
       env: {
         jest: true,
         commonjs: true,
         node: true
       }
+    },
+    {
+      files: ['*.ts'],
+      extends: [
+        /** @see https://github.com/standard/ts-standard */
+        'standard-with-typescript'
+      ],
+      parserOptions: {
+        project: './tsconfig.json'
+      }
+    },
+    {
+      files: ['*.js', '*.mjs', '*.cjs'],
+      extends: [
+        /* see https://www.npmjs.com/package/eslint-config-standard */
+        'standard'
+      ]
     },
     {
       files: ['bin/*.js'],
