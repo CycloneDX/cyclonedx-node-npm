@@ -1,0 +1,1742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.5" version="1">
+  <metadata>
+    <tools>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>4.0.0</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-npm</name>
+        <version>1.12.1</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="demo-bundled-deps@0.0.0">
+      <name>demo-bundled-deps</name>
+      <version>0.0.0</version>
+      <description>demo: demo-bundled-deps -- showcase how bundled deps look like</description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/demo-bundled-deps@0.0.0</purl>
+      <properties>
+        <property name="cdx:npm:package:path"/>
+        <property name="cdx:npm:package:private">true</property>
+      </properties>
+    </component>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="bundle-dependencies@1.0.2">
+      <author>Gajus Kuizinas</author>
+      <name>bundle-dependencies</name>
+      <version>1.0.2</version>
+      <description>Generates bundledDependencies package.json value using values of the dependencies property.</description>
+      <hashes>
+        <hash alg="SHA-512">7ccf50f6125c5f56589f28ef7874e9b4566aa4b2833b681dc5186e07c30d498110bc2ea42260c31f6d37f09fed1df72e5742511948fc9fc6b10d8d009c59177c</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/bundle-dependencies@1.0.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/gajus/bundle-dependencies/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/gajus/bundle-dependencies.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/gajus/bundle-dependencies#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:path">node_modules/bundle-dependencies</property>
+      </properties>
+      <components>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|ansi-regex@2.0.0">
+          <author>Sindre Sorhus</author>
+          <name>ansi-regex</name>
+          <version>2.0.0</version>
+          <description>Regular expression for matching ANSI escape codes</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/ansi-regex@2.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/ansi-regex.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/ansi-regex/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/ansi-regex.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/ansi-regex</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/ansi-regex</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|builtin-modules@1.1.1">
+          <author>Sindre Sorhus</author>
+          <name>builtin-modules</name>
+          <version>1.1.1</version>
+          <description>List of the Node.js builtin modules</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/builtin-modules@1.1.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/builtin-modules.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/builtin-modules/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/builtin-modules.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/builtin-modules#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/builtin-modules</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|camelcase@2.1.0">
+          <author>Sindre Sorhus</author>
+          <name>camelcase</name>
+          <version>2.1.0</version>
+          <description>Convert a dash/dot/underscore/space separated string to camelCase: foo-bar → fooBar</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/camelcase@2.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/camelcase.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/camelcase/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/camelcase.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/camelcase#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/camelcase</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|cliui@3.1.0">
+          <author>Ben Coe</author>
+          <name>cliui</name>
+          <version>3.1.0</version>
+          <description>easily create complex multi-column command-line-interfaces</description>
+          <licenses>
+            <license>
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/cliui@3.1.0?vcs_url=git%2Bssh%3A//git%40github.com/bcoe/cliui.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/bcoe/cliui/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+ssh://git@github.com/bcoe/cliui.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/bcoe/cliui</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/cliui</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|code-point-at@1.0.0">
+          <author>Sindre Sorhus</author>
+          <name>code-point-at</name>
+          <version>1.0.0</version>
+          <description>ES2015 String#codePointAt() ponyfill</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/code-point-at@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/code-point-at.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/code-point-at/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/code-point-at.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/code-point-at</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/code-point-at</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|decamelize@1.1.2">
+          <author>Sindre Sorhus</author>
+          <name>decamelize</name>
+          <version>1.1.2</version>
+          <description>Convert a camelized string into a lowercased one with a custom separator: unicornRainbow → unicorn_rainbow</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/decamelize@1.1.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/decamelize.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/decamelize/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/decamelize.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/decamelize</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/decamelize</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|error-ex@1.3.0">
+          <name>error-ex</name>
+          <version>1.3.0</version>
+          <description>Easy error subclassing and stack customization</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/error-ex@1.3.0?vcs_url=git%2Bhttps%3A//github.com/qix-/node-error-ex.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/qix-/node-error-ex/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/qix-/node-error-ex.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/qix-/node-error-ex#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/error-ex</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|escape-string-regexp@1.0.5">
+          <author>Sindre Sorhus</author>
+          <name>escape-string-regexp</name>
+          <version>1.0.5</version>
+          <description>Escape RegExp special characters</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/escape-string-regexp@1.0.5?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/escape-string-regexp.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/escape-string-regexp/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/escape-string-regexp.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/escape-string-regexp</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/escape-string-regexp</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|find-up@1.1.0">
+          <author>Sindre Sorhus</author>
+          <name>find-up</name>
+          <version>1.1.0</version>
+          <description>Find a file by walking up parent directories</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/find-up@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/find-up.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/find-up/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/find-up.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/find-up</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/find-up</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3">
+          <name>graceful-fs</name>
+          <version>4.1.3</version>
+          <description>A drop-in replacement for fs, making various improvements.</description>
+          <licenses>
+            <license>
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/graceful-fs@4.1.3?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-graceful-fs.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/isaacs/node-graceful-fs/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/isaacs/node-graceful-fs.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/isaacs/node-graceful-fs#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/graceful-fs</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|hosted-git-info@2.1.4">
+          <author>Rebecca Turner</author>
+          <name>hosted-git-info</name>
+          <version>2.1.4</version>
+          <description>Provides metadata and conversions from repository urls for Github, Bitbucket and Gitlab</description>
+          <licenses>
+            <license>
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/hosted-git-info@2.1.4?vcs_url=git%2Bhttps%3A//github.com/npm/hosted-git-info.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/npm/hosted-git-info/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/npm/hosted-git-info.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/npm/hosted-git-info</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/hosted-git-info</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|invert-kv@1.0.0">
+          <author>Sindre Sorhus</author>
+          <name>invert-kv</name>
+          <version>1.0.0</version>
+          <description>Invert the key/value of an object. Example: {foo: 'bar'} → {bar: 'foo'}</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/invert-kv@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/invert-kv.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/invert-kv/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/invert-kv.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/invert-kv</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/invert-kv</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|is-arrayish@0.2.1">
+          <author>Qix</author>
+          <name>is-arrayish</name>
+          <version>0.2.1</version>
+          <description>Determines if an object can be used as an array</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/is-arrayish@0.2.1?vcs_url=git%2Bhttps%3A//github.com/qix-/node-is-arrayish.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/qix-/node-is-arrayish/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/qix-/node-is-arrayish.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/qix-/node-is-arrayish#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/is-arrayish</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|is-builtin-module@1.0.0">
+          <author>Sindre Sorhus</author>
+          <name>is-builtin-module</name>
+          <version>1.0.0</version>
+          <description>Check if a string matches the name of a Node.js builtin module</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/is-builtin-module@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-builtin-module.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/is-builtin-module/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/is-builtin-module.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/is-builtin-module</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/is-builtin-module</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0">
+          <author>Sindre Sorhus</author>
+          <name>is-fullwidth-code-point</name>
+          <version>1.0.0</version>
+          <description>Check if the character represented by a given Unicode code point is fullwidth</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/is-fullwidth-code-point@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-fullwidth-code-point.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/is-fullwidth-code-point/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/is-fullwidth-code-point.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/is-fullwidth-code-point</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/is-fullwidth-code-point</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|is-utf8@0.2.1">
+          <author>wayfind</author>
+          <name>is-utf8</name>
+          <version>0.2.1</version>
+          <description>Detect if a buffer is utf8 encoded.</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/is-utf8@0.2.1?vcs_url=git%2Bhttps%3A//github.com/wayfind/is-utf8.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/wayfind/is-utf8/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/wayfind/is-utf8.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/wayfind/is-utf8#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/is-utf8</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|lcid@1.0.0">
+          <author>Sindre Sorhus</author>
+          <name>lcid</name>
+          <version>1.0.0</version>
+          <description>Mapping between standard locale identifiers and Windows locale identifiers (LCID)</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/lcid@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/lcid.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/lcid/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/lcid.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/lcid</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/lcid</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|load-json-file@1.1.0">
+          <author>Sindre Sorhus</author>
+          <name>load-json-file</name>
+          <version>1.1.0</version>
+          <description>Read and parse a JSON file</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/load-json-file@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/load-json-file.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/load-json-file/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/load-json-file.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/load-json-file</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/load-json-file</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|lodash.assign@4.0.3">
+          <author>John-David Dalton</author>
+          <name>lodash.assign</name>
+          <version>4.0.3</version>
+          <description>The lodash method `_.assign` exported as a module.</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/lodash.assign@4.0.3?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/lodash/lodash/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/lodash/lodash.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://lodash.com/</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/lodash.assign</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|lodash.keys@4.0.3">
+          <author>John-David Dalton</author>
+          <name>lodash.keys</name>
+          <version>4.0.3</version>
+          <description>The lodash method `_.keys` exported as a module.</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/lodash.keys@4.0.3?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/lodash/lodash/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/lodash/lodash.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://lodash.com/</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/lodash.keys</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|lodash.rest@4.0.1">
+          <author>John-David Dalton</author>
+          <name>lodash.rest</name>
+          <version>4.0.1</version>
+          <description>The lodash method `_.rest` exported as a module.</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/lodash.rest@4.0.1?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/lodash/lodash/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/lodash/lodash.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://lodash.com/</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/lodash.rest</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|normalize-package-data@2.3.5">
+          <author>Meryn Stol</author>
+          <name>normalize-package-data</name>
+          <version>2.3.5</version>
+          <description>Normalizes data that can be found in package.json files.</description>
+          <licenses>
+            <license>
+              <id>BSD-2-Clause</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/normalize-package-data@2.3.5?vcs_url=git%3A//github.com/npm/normalize-package-data.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/npm/normalize-package-data/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git://github.com/npm/normalize-package-data.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/npm/normalize-package-data#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/normalize-package-data</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0">
+          <author>Sindre Sorhus</author>
+          <name>number-is-nan</name>
+          <version>1.0.0</version>
+          <description>ES6 Number.isNaN() ponyfill</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/number-is-nan@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/number-is-nan.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/number-is-nan/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/number-is-nan.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/number-is-nan#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/number-is-nan</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|object-assign@4.0.1">
+          <author>Sindre Sorhus</author>
+          <name>object-assign</name>
+          <version>4.0.1</version>
+          <description>ES6 Object.assign() ponyfill</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/object-assign@4.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/object-assign.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/object-assign/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/object-assign.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/object-assign#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/object-assign</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|os-locale@1.4.0">
+          <author>Sindre Sorhus</author>
+          <name>os-locale</name>
+          <version>1.4.0</version>
+          <description>Get the system locale</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/os-locale@1.4.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/os-locale.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/os-locale/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/os-locale.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/os-locale</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/os-locale</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|parse-json@2.2.0">
+          <author>Sindre Sorhus</author>
+          <name>parse-json</name>
+          <version>2.2.0</version>
+          <description>Parse JSON with more helpful errors</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/parse-json@2.2.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/parse-json.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/parse-json/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/parse-json.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/parse-json</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/parse-json</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|path-exists@2.1.0">
+          <author>Sindre Sorhus</author>
+          <name>path-exists</name>
+          <version>2.1.0</version>
+          <description>Check if a path exists</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/path-exists@2.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/path-exists.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/path-exists/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/path-exists.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/path-exists</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/path-exists</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|path-type@1.1.0">
+          <author>Sindre Sorhus</author>
+          <name>path-type</name>
+          <version>1.1.0</version>
+          <description>Check if a path is a file, directory, or symlink</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/path-type@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/path-type.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/path-type/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/path-type.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/path-type</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/path-type</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|pify@2.3.0">
+          <author>Sindre Sorhus</author>
+          <name>pify</name>
+          <version>2.3.0</version>
+          <description>Promisify a callback-style function</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/pify@2.3.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/pify.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/pify/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/pify.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/pify</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/pify</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0">
+          <author>Vsevolod Strukchinsky</author>
+          <name>pinkie-promise</name>
+          <version>2.0.0</version>
+          <description>ES2015 Promise ponyfill</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/pinkie-promise@2.0.0?vcs_url=git%2Bhttps%3A//github.com/floatdrop/pinkie-promise.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/floatdrop/pinkie-promise/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/floatdrop/pinkie-promise.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/floatdrop/pinkie-promise</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/pinkie-promise</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|pinkie@2.0.4">
+          <author>Vsevolod Strukchinsky</author>
+          <name>pinkie</name>
+          <version>2.0.4</version>
+          <description>Itty bitty little widdle twinkie pinkie ES2015 Promise implementation</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/pinkie@2.0.4?vcs_url=git%2Bhttps%3A//github.com/floatdrop/pinkie.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/floatdrop/pinkie/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/floatdrop/pinkie.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/floatdrop/pinkie</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/pinkie</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|pkg-conf@1.1.1">
+          <author>Sindre Sorhus</author>
+          <name>pkg-conf</name>
+          <version>1.1.1</version>
+          <description>Get namespaced config from the closest package.json</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/pkg-conf@1.1.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/pkg-conf.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/pkg-conf/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/pkg-conf.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/pkg-conf#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/pkg-conf</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|read-pkg-up@1.0.1">
+          <author>Sindre Sorhus</author>
+          <name>read-pkg-up</name>
+          <version>1.0.1</version>
+          <description>Read the closest package.json file</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/read-pkg-up@1.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/read-pkg-up.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/read-pkg-up/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/read-pkg-up.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/read-pkg-up</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/read-pkg-up</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|read-pkg@1.1.0">
+          <author>Sindre Sorhus</author>
+          <name>read-pkg</name>
+          <version>1.1.0</version>
+          <description>Read a package.json file</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/read-pkg@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/read-pkg.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/read-pkg/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/read-pkg.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/read-pkg</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/read-pkg</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|require-main-filename@1.0.1">
+          <author>Ben Coe</author>
+          <name>require-main-filename</name>
+          <version>1.0.1</version>
+          <description>shim for require.main.filename() that works in as many environments as possible</description>
+          <licenses>
+            <license>
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/require-main-filename@1.0.1?vcs_url=git%2Bssh%3A//git%40github.com/yargs/require-main-filename.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/yargs/require-main-filename/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+ssh://git@github.com/yargs/require-main-filename.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/yargs/require-main-filename#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/require-main-filename</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|semver@5.1.0">
+          <name>semver</name>
+          <version>5.1.0</version>
+          <description>The semantic version parser used by npm.</description>
+          <licenses>
+            <license>
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/semver@5.1.0?vcs_url=git%2Bhttps%3A//github.com/npm/node-semver.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/npm/node-semver/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/npm/node-semver.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/npm/node-semver#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/semver</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-correct@1.0.2">
+          <author>Kyle E. Mitchell</author>
+          <name>spdx-correct</name>
+          <version>1.0.2</version>
+          <description>correct invalid SPDX identifiers</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/spdx-correct@1.0.2?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-correct.js.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/kemitchell/spdx-correct.js/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/kemitchell/spdx-correct.js.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/kemitchell/spdx-correct.js#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/spdx-correct</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-exceptions@1.0.4">
+          <author>The Linux Foundation</author>
+          <name>spdx-exceptions</name>
+          <version>1.0.4</version>
+          <description>list of SPDX standard license exceptions</description>
+          <licenses>
+            <license>
+              <id>CC-BY-3.0</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/spdx-exceptions@1.0.4?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-exceptions.json.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/kemitchell/spdx-exceptions.json/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/kemitchell/spdx-exceptions.json.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/kemitchell/spdx-exceptions.json#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/spdx-exceptions</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2">
+          <author>Kyle E. Mitchell</author>
+          <name>spdx-expression-parse</name>
+          <version>1.0.2</version>
+          <description>parse SPDX license expressions</description>
+          <licenses>
+            <expression>(MIT AND CC-BY-3.0)</expression>
+          </licenses>
+          <purl>pkg:npm/spdx-expression-parse@1.0.2?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-expression-parse.js.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/kemitchell/spdx-expression-parse.js/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/kemitchell/spdx-expression-parse.js.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/kemitchell/spdx-expression-parse.js#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/spdx-expression-parse</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0">
+          <author>Shinnosuke Watanabe</author>
+          <name>spdx-license-ids</name>
+          <version>1.2.0</version>
+          <description>A list of SPDX license identifiers</description>
+          <licenses>
+            <license>
+              <id>Unlicense</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/spdx-license-ids@1.2.0?vcs_url=git%2Bhttps%3A//github.com/shinnn/spdx-license-ids.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/shinnn/spdx-license-ids/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/shinnn/spdx-license-ids.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/shinnn/spdx-license-ids#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/spdx-license-ids</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|string-width@1.0.1">
+          <author>Sindre Sorhus</author>
+          <name>string-width</name>
+          <version>1.0.1</version>
+          <description>Get the visual width of a string - the number of columns required to display it</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/string-width@1.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/string-width/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/string-width.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/string-width</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/string-width</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1">
+          <author>Sindre Sorhus</author>
+          <name>strip-ansi</name>
+          <version>3.0.1</version>
+          <description>Strip ANSI escape codes</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/strip-ansi@3.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/strip-ansi.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/chalk/strip-ansi/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/chalk/strip-ansi.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/chalk/strip-ansi</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/strip-ansi</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|strip-bom@2.0.0">
+          <author>Sindre Sorhus</author>
+          <name>strip-bom</name>
+          <version>2.0.0</version>
+          <description>Strip UTF-8 byte order mark (BOM) from a string/buffer</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/strip-bom@2.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/strip-bom.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/strip-bom/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/sindresorhus/strip-bom.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/strip-bom</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/strip-bom</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|symbol@0.2.1">
+          <author>Sean McArthur</author>
+          <name>symbol</name>
+          <version>0.2.1</version>
+          <description>ES6 Symbols in your ES5.</description>
+          <licenses>
+            <license>
+              <name>MPLv2.0</name>
+            </license>
+          </licenses>
+          <purl>pkg:npm/symbol@0.2.1?vcs_url=git%3A//github.com/seanmonstar/symbol.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/seanmonstar/symbol/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git://github.com/seanmonstar/symbol.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/seanmonstar/symbol#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/symbol</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1">
+          <author>Kyle E. Mitchell</author>
+          <name>validate-npm-package-license</name>
+          <version>3.0.1</version>
+          <description>Give me a string and I'll tell you if it's a valid npm package license string</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/validate-npm-package-license@3.0.1?vcs_url=git%2Bhttps%3A//github.com/kemitchell/validate-npm-package-license.js.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/kemitchell/validate-npm-package-license.js/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/kemitchell/validate-npm-package-license.js.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/kemitchell/validate-npm-package-license.js#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/validate-npm-package-license</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|window-size@0.2.0">
+          <author>Jon Schlinkert</author>
+          <name>window-size</name>
+          <version>0.2.0</version>
+          <description>Reliable way to to get the height and width of the terminal/console in a node.js environment.</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/window-size@0.2.0?vcs_url=git%2Bhttps%3A//github.com/jonschlinkert/window-size.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/jonschlinkert/window-size/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/jonschlinkert/window-size.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/jonschlinkert/window-size</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/window-size</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|wrap-ansi@1.0.0">
+          <author>Sindre Sorhus</author>
+          <name>wrap-ansi</name>
+          <version>1.0.0</version>
+          <description>Wordwrap a string with ANSI escape codes</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/wrap-ansi@1.0.0?vcs_url=git%2Bhttps%3A//github.com/chalk/wrap-ansi.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/chalk/wrap-ansi/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/chalk/wrap-ansi.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/chalk/wrap-ansi#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/wrap-ansi</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|y18n@3.2.0">
+          <author>Ben Coe</author>
+          <name>y18n</name>
+          <version>3.2.0</version>
+          <description>the bare-bones internationalization library used by yargs</description>
+          <licenses>
+            <license>
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/y18n@3.2.0?vcs_url=git%2Bssh%3A//git%40github.com/bcoe/y18n.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/bcoe/y18n/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+ssh://git@github.com/bcoe/y18n.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/bcoe/y18n</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/y18n</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|yargs-parser@2.1.0">
+          <author>Ben Coe</author>
+          <name>yargs-parser</name>
+          <version>2.1.0</version>
+          <description>the mighty option parser used by yargs</description>
+          <licenses>
+            <license>
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/yargs-parser@2.1.0?vcs_url=git%2Bssh%3A//git%40github.com/yargs/yargs-parser.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/yargs/yargs-parser/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+ssh://git@github.com/yargs/yargs-parser.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/yargs/yargs-parser#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/yargs-parser</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|yargs@4.1.0">
+          <name>yargs</name>
+          <version>4.1.0</version>
+          <description>Light-weight option parsing with an argv hash. No optstrings attached.</description>
+          <licenses>
+            <license>
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/yargs@4.1.0?vcs_url=git%2Bssh%3A//git%40github.com/bcoe/yargs.git</purl>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/bcoe/yargs/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+ssh://git@github.com/bcoe/yargs.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>http://yargs.js.org/</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/yargs</property>
+          </properties>
+        </component>
+      </components>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="bundle-dependencies@1.0.2">
+      <dependency ref="bundle-dependencies@1.0.2|yargs@4.1.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|ansi-regex@2.0.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|builtin-modules@1.1.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|camelcase@2.1.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|cliui@3.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|wrap-ansi@1.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|code-point-at@1.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|decamelize@1.1.2">
+      <dependency ref="bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|error-ex@1.3.0">
+      <dependency ref="bundle-dependencies@1.0.2|is-arrayish@0.2.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"/>
+    <dependency ref="bundle-dependencies@1.0.2|find-up@1.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|path-exists@2.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
+    <dependency ref="bundle-dependencies@1.0.2|hosted-git-info@2.1.4"/>
+    <dependency ref="bundle-dependencies@1.0.2|invert-kv@1.0.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|is-arrayish@0.2.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|is-builtin-module@1.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|builtin-modules@1.1.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|is-utf8@0.2.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|lcid@1.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|invert-kv@1.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|load-json-file@1.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
+      <dependency ref="bundle-dependencies@1.0.2|parse-json@2.2.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|pify@2.3.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|strip-bom@2.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|lodash.assign@4.0.3">
+      <dependency ref="bundle-dependencies@1.0.2|lodash.keys@4.0.3"/>
+      <dependency ref="bundle-dependencies@1.0.2|lodash.rest@4.0.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|lodash.keys@4.0.3"/>
+    <dependency ref="bundle-dependencies@1.0.2|lodash.rest@4.0.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|normalize-package-data@2.3.5">
+      <dependency ref="bundle-dependencies@1.0.2|hosted-git-info@2.1.4"/>
+      <dependency ref="bundle-dependencies@1.0.2|is-builtin-module@1.0.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|semver@5.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|object-assign@4.0.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|os-locale@1.4.0">
+      <dependency ref="bundle-dependencies@1.0.2|lcid@1.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|parse-json@2.2.0">
+      <dependency ref="bundle-dependencies@1.0.2|error-ex@1.3.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|path-exists@2.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|path-type@1.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
+      <dependency ref="bundle-dependencies@1.0.2|pify@2.3.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|pify@2.3.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|pinkie@2.0.4"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|pinkie@2.0.4"/>
+    <dependency ref="bundle-dependencies@1.0.2|pkg-conf@1.1.1">
+      <dependency ref="bundle-dependencies@1.0.2|find-up@1.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|object-assign@4.0.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|read-pkg@1.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|symbol@0.2.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|read-pkg-up@1.0.1">
+      <dependency ref="bundle-dependencies@1.0.2|find-up@1.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|read-pkg@1.1.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|read-pkg@1.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|load-json-file@1.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|normalize-package-data@2.3.5"/>
+      <dependency ref="bundle-dependencies@1.0.2|path-type@1.1.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|require-main-filename@1.0.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|semver@5.1.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|spdx-correct@1.0.2">
+      <dependency ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"/>
+    <dependency ref="bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2">
+      <dependency ref="bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"/>
+      <dependency ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1">
+      <dependency ref="bundle-dependencies@1.0.2|code-point-at@1.0.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1">
+      <dependency ref="bundle-dependencies@1.0.2|ansi-regex@2.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|strip-bom@2.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|is-utf8@0.2.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|symbol@0.2.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1">
+      <dependency ref="bundle-dependencies@1.0.2|spdx-correct@1.0.2"/>
+      <dependency ref="bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|window-size@0.2.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|wrap-ansi@1.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|y18n@3.2.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|yargs-parser@2.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|camelcase@2.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|lodash.assign@4.0.3"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|yargs@4.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|camelcase@2.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|cliui@3.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|decamelize@1.1.2"/>
+      <dependency ref="bundle-dependencies@1.0.2|os-locale@1.4.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|pkg-conf@1.1.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|read-pkg-up@1.0.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|require-main-filename@1.0.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|window-size@0.2.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|y18n@3.2.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|yargs-parser@2.1.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0">
+      <dependency ref="bundle-dependencies@1.0.2"/>
+    </dependency>
+  </dependencies>
+</bom>

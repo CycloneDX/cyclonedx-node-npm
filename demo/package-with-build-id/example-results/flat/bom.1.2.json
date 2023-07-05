@@ -8,12 +8,12 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "2.0.0"
+        "version": "4.0.0"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.11.0"
+        "version": "1.12.1"
       }
     ],
     "component": {

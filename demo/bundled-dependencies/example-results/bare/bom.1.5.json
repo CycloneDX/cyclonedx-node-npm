@@ -1,0 +1,2559 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "4.0.0",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-npm",
+        "version": "1.12.1",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "demo-bundled-deps",
+      "version": "0.0.0",
+      "bom-ref": "demo-bundled-deps@0.0.0",
+      "description": "demo: demo-bundled-deps -- showcase how bundled deps look like",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/demo-bundled-deps@0.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": ""
+        },
+        {
+          "name": "cdx:npm:package:private",
+          "value": "true"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "bundle-dependencies",
+      "version": "1.0.2",
+      "bom-ref": "bundle-dependencies@1.0.2",
+      "author": "Gajus Kuizinas",
+      "description": "Generates bundledDependencies package.json value using values of the dependencies property.",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7ccf50f6125c5f56589f28ef7874e9b4566aa4b2833b681dc5186e07c30d498110bc2ea42260c31f6d37f09fed1df72e5742511948fc9fc6b10d8d009c59177c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:npm/bundle-dependencies@1.0.2",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
+        {
+          "url": "https://github.com/gajus/bundle-dependencies/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/gajus/bundle-dependencies.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/gajus/bundle-dependencies#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies"
+        }
+      ],
+      "components": [
+        {
+          "type": "library",
+          "name": "ansi-regex",
+          "version": "2.0.0",
+          "bom-ref": "bundle-dependencies@1.0.2|ansi-regex@2.0.0",
+          "author": "Sindre Sorhus",
+          "description": "Regular expression for matching ANSI escape codes",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/ansi-regex@2.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/ansi-regex.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/ansi-regex/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/ansi-regex.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/ansi-regex",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/ansi-regex"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "builtin-modules",
+          "version": "1.1.1",
+          "bom-ref": "bundle-dependencies@1.0.2|builtin-modules@1.1.1",
+          "author": "Sindre Sorhus",
+          "description": "List of the Node.js builtin modules",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/builtin-modules@1.1.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/builtin-modules.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/builtin-modules/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/builtin-modules.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/builtin-modules#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/builtin-modules"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "camelcase",
+          "version": "2.1.0",
+          "bom-ref": "bundle-dependencies@1.0.2|camelcase@2.1.0",
+          "author": "Sindre Sorhus",
+          "description": "Convert a dash/dot/underscore/space separated string to camelCase: foo-bar → fooBar",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/camelcase@2.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/camelcase.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/camelcase/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/camelcase.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/camelcase#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/camelcase"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "cliui",
+          "version": "3.1.0",
+          "bom-ref": "bundle-dependencies@1.0.2|cliui@3.1.0",
+          "author": "Ben Coe",
+          "description": "easily create complex multi-column command-line-interfaces",
+          "licenses": [
+            {
+              "license": {
+                "id": "ISC"
+              }
+            }
+          ],
+          "purl": "pkg:npm/cliui@3.1.0?vcs_url=git%2Bssh%3A//git%40github.com/bcoe/cliui.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/bcoe/cliui/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+ssh://git@github.com/bcoe/cliui.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/bcoe/cliui",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/cliui"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "code-point-at",
+          "version": "1.0.0",
+          "bom-ref": "bundle-dependencies@1.0.2|code-point-at@1.0.0",
+          "author": "Sindre Sorhus",
+          "description": "ES2015 String#codePointAt() ponyfill",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/code-point-at@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/code-point-at.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/code-point-at/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/code-point-at.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/code-point-at",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/code-point-at"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "decamelize",
+          "version": "1.1.2",
+          "bom-ref": "bundle-dependencies@1.0.2|decamelize@1.1.2",
+          "author": "Sindre Sorhus",
+          "description": "Convert a camelized string into a lowercased one with a custom separator: unicornRainbow → unicorn_rainbow",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/decamelize@1.1.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/decamelize.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/decamelize/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/decamelize.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/decamelize",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/decamelize"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "error-ex",
+          "version": "1.3.0",
+          "bom-ref": "bundle-dependencies@1.0.2|error-ex@1.3.0",
+          "description": "Easy error subclassing and stack customization",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/error-ex@1.3.0?vcs_url=git%2Bhttps%3A//github.com/qix-/node-error-ex.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/qix-/node-error-ex/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/qix-/node-error-ex.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/qix-/node-error-ex#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/error-ex"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "escape-string-regexp",
+          "version": "1.0.5",
+          "bom-ref": "bundle-dependencies@1.0.2|escape-string-regexp@1.0.5",
+          "author": "Sindre Sorhus",
+          "description": "Escape RegExp special characters",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/escape-string-regexp@1.0.5?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/escape-string-regexp.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/escape-string-regexp/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/escape-string-regexp.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/escape-string-regexp",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/escape-string-regexp"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "find-up",
+          "version": "1.1.0",
+          "bom-ref": "bundle-dependencies@1.0.2|find-up@1.1.0",
+          "author": "Sindre Sorhus",
+          "description": "Find a file by walking up parent directories",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/find-up@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/find-up.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/find-up/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/find-up.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/find-up",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/find-up"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "graceful-fs",
+          "version": "4.1.3",
+          "bom-ref": "bundle-dependencies@1.0.2|graceful-fs@4.1.3",
+          "description": "A drop-in replacement for fs, making various improvements.",
+          "licenses": [
+            {
+              "license": {
+                "id": "ISC"
+              }
+            }
+          ],
+          "purl": "pkg:npm/graceful-fs@4.1.3?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-graceful-fs.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/isaacs/node-graceful-fs/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/isaacs/node-graceful-fs.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/isaacs/node-graceful-fs#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/graceful-fs"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "hosted-git-info",
+          "version": "2.1.4",
+          "bom-ref": "bundle-dependencies@1.0.2|hosted-git-info@2.1.4",
+          "author": "Rebecca Turner",
+          "description": "Provides metadata and conversions from repository urls for Github, Bitbucket and Gitlab",
+          "licenses": [
+            {
+              "license": {
+                "id": "ISC"
+              }
+            }
+          ],
+          "purl": "pkg:npm/hosted-git-info@2.1.4?vcs_url=git%2Bhttps%3A//github.com/npm/hosted-git-info.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/npm/hosted-git-info/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/npm/hosted-git-info.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/npm/hosted-git-info",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/hosted-git-info"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "invert-kv",
+          "version": "1.0.0",
+          "bom-ref": "bundle-dependencies@1.0.2|invert-kv@1.0.0",
+          "author": "Sindre Sorhus",
+          "description": "Invert the key/value of an object. Example: {foo: 'bar'} → {bar: 'foo'}",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/invert-kv@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/invert-kv.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/invert-kv/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/invert-kv.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/invert-kv",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/invert-kv"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "is-arrayish",
+          "version": "0.2.1",
+          "bom-ref": "bundle-dependencies@1.0.2|is-arrayish@0.2.1",
+          "author": "Qix",
+          "description": "Determines if an object can be used as an array",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/is-arrayish@0.2.1?vcs_url=git%2Bhttps%3A//github.com/qix-/node-is-arrayish.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/qix-/node-is-arrayish/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/qix-/node-is-arrayish.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/qix-/node-is-arrayish#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/is-arrayish"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "is-builtin-module",
+          "version": "1.0.0",
+          "bom-ref": "bundle-dependencies@1.0.2|is-builtin-module@1.0.0",
+          "author": "Sindre Sorhus",
+          "description": "Check if a string matches the name of a Node.js builtin module",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/is-builtin-module@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-builtin-module.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/is-builtin-module/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/is-builtin-module.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/is-builtin-module",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/is-builtin-module"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "is-fullwidth-code-point",
+          "version": "1.0.0",
+          "bom-ref": "bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0",
+          "author": "Sindre Sorhus",
+          "description": "Check if the character represented by a given Unicode code point is fullwidth",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/is-fullwidth-code-point@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-fullwidth-code-point.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/is-fullwidth-code-point/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/is-fullwidth-code-point.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/is-fullwidth-code-point",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/is-fullwidth-code-point"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "is-utf8",
+          "version": "0.2.1",
+          "bom-ref": "bundle-dependencies@1.0.2|is-utf8@0.2.1",
+          "author": "wayfind",
+          "description": "Detect if a buffer is utf8 encoded.",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/is-utf8@0.2.1?vcs_url=git%2Bhttps%3A//github.com/wayfind/is-utf8.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/wayfind/is-utf8/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/wayfind/is-utf8.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/wayfind/is-utf8#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/is-utf8"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "lcid",
+          "version": "1.0.0",
+          "bom-ref": "bundle-dependencies@1.0.2|lcid@1.0.0",
+          "author": "Sindre Sorhus",
+          "description": "Mapping between standard locale identifiers and Windows locale identifiers (LCID)",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/lcid@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/lcid.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/lcid/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/lcid.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/lcid",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/lcid"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "load-json-file",
+          "version": "1.1.0",
+          "bom-ref": "bundle-dependencies@1.0.2|load-json-file@1.1.0",
+          "author": "Sindre Sorhus",
+          "description": "Read and parse a JSON file",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/load-json-file@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/load-json-file.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/load-json-file/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/load-json-file.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/load-json-file",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/load-json-file"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "lodash.assign",
+          "version": "4.0.3",
+          "bom-ref": "bundle-dependencies@1.0.2|lodash.assign@4.0.3",
+          "author": "John-David Dalton",
+          "description": "The lodash method `_.assign` exported as a module.",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/lodash.assign@4.0.3?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/lodash/lodash/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/lodash/lodash.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://lodash.com/",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/lodash.assign"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "lodash.keys",
+          "version": "4.0.3",
+          "bom-ref": "bundle-dependencies@1.0.2|lodash.keys@4.0.3",
+          "author": "John-David Dalton",
+          "description": "The lodash method `_.keys` exported as a module.",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/lodash.keys@4.0.3?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/lodash/lodash/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/lodash/lodash.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://lodash.com/",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/lodash.keys"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "lodash.rest",
+          "version": "4.0.1",
+          "bom-ref": "bundle-dependencies@1.0.2|lodash.rest@4.0.1",
+          "author": "John-David Dalton",
+          "description": "The lodash method `_.rest` exported as a module.",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/lodash.rest@4.0.1?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/lodash/lodash/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/lodash/lodash.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://lodash.com/",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/lodash.rest"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "normalize-package-data",
+          "version": "2.3.5",
+          "bom-ref": "bundle-dependencies@1.0.2|normalize-package-data@2.3.5",
+          "author": "Meryn Stol",
+          "description": "Normalizes data that can be found in package.json files.",
+          "licenses": [
+            {
+              "license": {
+                "id": "BSD-2-Clause"
+              }
+            }
+          ],
+          "purl": "pkg:npm/normalize-package-data@2.3.5?vcs_url=git%3A//github.com/npm/normalize-package-data.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/npm/normalize-package-data/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git://github.com/npm/normalize-package-data.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/npm/normalize-package-data#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/normalize-package-data"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "number-is-nan",
+          "version": "1.0.0",
+          "bom-ref": "bundle-dependencies@1.0.2|number-is-nan@1.0.0",
+          "author": "Sindre Sorhus",
+          "description": "ES6 Number.isNaN() ponyfill",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/number-is-nan@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/number-is-nan.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/number-is-nan/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/number-is-nan.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/number-is-nan#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/number-is-nan"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "object-assign",
+          "version": "4.0.1",
+          "bom-ref": "bundle-dependencies@1.0.2|object-assign@4.0.1",
+          "author": "Sindre Sorhus",
+          "description": "ES6 Object.assign() ponyfill",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/object-assign@4.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/object-assign.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/object-assign/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/object-assign.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/object-assign#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/object-assign"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "os-locale",
+          "version": "1.4.0",
+          "bom-ref": "bundle-dependencies@1.0.2|os-locale@1.4.0",
+          "author": "Sindre Sorhus",
+          "description": "Get the system locale",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/os-locale@1.4.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/os-locale.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/os-locale/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/os-locale.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/os-locale",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/os-locale"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "parse-json",
+          "version": "2.2.0",
+          "bom-ref": "bundle-dependencies@1.0.2|parse-json@2.2.0",
+          "author": "Sindre Sorhus",
+          "description": "Parse JSON with more helpful errors",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/parse-json@2.2.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/parse-json.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/parse-json/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/parse-json.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/parse-json",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/parse-json"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "path-exists",
+          "version": "2.1.0",
+          "bom-ref": "bundle-dependencies@1.0.2|path-exists@2.1.0",
+          "author": "Sindre Sorhus",
+          "description": "Check if a path exists",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/path-exists@2.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/path-exists.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/path-exists/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/path-exists.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/path-exists",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/path-exists"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "path-type",
+          "version": "1.1.0",
+          "bom-ref": "bundle-dependencies@1.0.2|path-type@1.1.0",
+          "author": "Sindre Sorhus",
+          "description": "Check if a path is a file, directory, or symlink",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/path-type@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/path-type.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/path-type/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/path-type.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/path-type",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/path-type"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "pify",
+          "version": "2.3.0",
+          "bom-ref": "bundle-dependencies@1.0.2|pify@2.3.0",
+          "author": "Sindre Sorhus",
+          "description": "Promisify a callback-style function",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/pify@2.3.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/pify.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/pify/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/pify.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/pify",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/pify"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "pinkie-promise",
+          "version": "2.0.0",
+          "bom-ref": "bundle-dependencies@1.0.2|pinkie-promise@2.0.0",
+          "author": "Vsevolod Strukchinsky",
+          "description": "ES2015 Promise ponyfill",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/pinkie-promise@2.0.0?vcs_url=git%2Bhttps%3A//github.com/floatdrop/pinkie-promise.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/floatdrop/pinkie-promise/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/floatdrop/pinkie-promise.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/floatdrop/pinkie-promise",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/pinkie-promise"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "pinkie",
+          "version": "2.0.4",
+          "bom-ref": "bundle-dependencies@1.0.2|pinkie@2.0.4",
+          "author": "Vsevolod Strukchinsky",
+          "description": "Itty bitty little widdle twinkie pinkie ES2015 Promise implementation",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/pinkie@2.0.4?vcs_url=git%2Bhttps%3A//github.com/floatdrop/pinkie.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/floatdrop/pinkie/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/floatdrop/pinkie.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/floatdrop/pinkie",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/pinkie"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "pkg-conf",
+          "version": "1.1.1",
+          "bom-ref": "bundle-dependencies@1.0.2|pkg-conf@1.1.1",
+          "author": "Sindre Sorhus",
+          "description": "Get namespaced config from the closest package.json",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/pkg-conf@1.1.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/pkg-conf.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/pkg-conf/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/pkg-conf.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/pkg-conf#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/pkg-conf"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "read-pkg-up",
+          "version": "1.0.1",
+          "bom-ref": "bundle-dependencies@1.0.2|read-pkg-up@1.0.1",
+          "author": "Sindre Sorhus",
+          "description": "Read the closest package.json file",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/read-pkg-up@1.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/read-pkg-up.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/read-pkg-up/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/read-pkg-up.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/read-pkg-up",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/read-pkg-up"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "read-pkg",
+          "version": "1.1.0",
+          "bom-ref": "bundle-dependencies@1.0.2|read-pkg@1.1.0",
+          "author": "Sindre Sorhus",
+          "description": "Read a package.json file",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/read-pkg@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/read-pkg.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/read-pkg/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/read-pkg.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/read-pkg",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/read-pkg"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "require-main-filename",
+          "version": "1.0.1",
+          "bom-ref": "bundle-dependencies@1.0.2|require-main-filename@1.0.1",
+          "author": "Ben Coe",
+          "description": "shim for require.main.filename() that works in as many environments as possible",
+          "licenses": [
+            {
+              "license": {
+                "id": "ISC"
+              }
+            }
+          ],
+          "purl": "pkg:npm/require-main-filename@1.0.1?vcs_url=git%2Bssh%3A//git%40github.com/yargs/require-main-filename.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/yargs/require-main-filename/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+ssh://git@github.com/yargs/require-main-filename.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/yargs/require-main-filename#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/require-main-filename"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "semver",
+          "version": "5.1.0",
+          "bom-ref": "bundle-dependencies@1.0.2|semver@5.1.0",
+          "description": "The semantic version parser used by npm.",
+          "licenses": [
+            {
+              "license": {
+                "id": "ISC"
+              }
+            }
+          ],
+          "purl": "pkg:npm/semver@5.1.0?vcs_url=git%2Bhttps%3A//github.com/npm/node-semver.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/npm/node-semver/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/npm/node-semver.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/npm/node-semver#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/semver"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "spdx-correct",
+          "version": "1.0.2",
+          "bom-ref": "bundle-dependencies@1.0.2|spdx-correct@1.0.2",
+          "author": "Kyle E. Mitchell",
+          "description": "correct invalid SPDX identifiers",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "purl": "pkg:npm/spdx-correct@1.0.2?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-correct.js.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/kemitchell/spdx-correct.js/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/kemitchell/spdx-correct.js.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/kemitchell/spdx-correct.js#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/spdx-correct"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "spdx-exceptions",
+          "version": "1.0.4",
+          "bom-ref": "bundle-dependencies@1.0.2|spdx-exceptions@1.0.4",
+          "author": "The Linux Foundation",
+          "description": "list of SPDX standard license exceptions",
+          "licenses": [
+            {
+              "license": {
+                "id": "CC-BY-3.0"
+              }
+            }
+          ],
+          "purl": "pkg:npm/spdx-exceptions@1.0.4?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-exceptions.json.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/kemitchell/spdx-exceptions.json/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/kemitchell/spdx-exceptions.json.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/kemitchell/spdx-exceptions.json#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/spdx-exceptions"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "spdx-expression-parse",
+          "version": "1.0.2",
+          "bom-ref": "bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2",
+          "author": "Kyle E. Mitchell",
+          "description": "parse SPDX license expressions",
+          "licenses": [
+            {
+              "expression": "(MIT AND CC-BY-3.0)"
+            }
+          ],
+          "purl": "pkg:npm/spdx-expression-parse@1.0.2?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-expression-parse.js.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/kemitchell/spdx-expression-parse.js/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/kemitchell/spdx-expression-parse.js.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/kemitchell/spdx-expression-parse.js#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/spdx-expression-parse"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "spdx-license-ids",
+          "version": "1.2.0",
+          "bom-ref": "bundle-dependencies@1.0.2|spdx-license-ids@1.2.0",
+          "author": "Shinnosuke Watanabe",
+          "description": "A list of SPDX license identifiers",
+          "licenses": [
+            {
+              "license": {
+                "id": "Unlicense"
+              }
+            }
+          ],
+          "purl": "pkg:npm/spdx-license-ids@1.2.0?vcs_url=git%2Bhttps%3A//github.com/shinnn/spdx-license-ids.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/shinnn/spdx-license-ids/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/shinnn/spdx-license-ids.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/shinnn/spdx-license-ids#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/spdx-license-ids"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "string-width",
+          "version": "1.0.1",
+          "bom-ref": "bundle-dependencies@1.0.2|string-width@1.0.1",
+          "author": "Sindre Sorhus",
+          "description": "Get the visual width of a string - the number of columns required to display it",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/string-width@1.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/string-width/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/string-width.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/string-width",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/string-width"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "strip-ansi",
+          "version": "3.0.1",
+          "bom-ref": "bundle-dependencies@1.0.2|strip-ansi@3.0.1",
+          "author": "Sindre Sorhus",
+          "description": "Strip ANSI escape codes",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/strip-ansi@3.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/strip-ansi.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/chalk/strip-ansi/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/chalk/strip-ansi.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/chalk/strip-ansi",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/strip-ansi"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "strip-bom",
+          "version": "2.0.0",
+          "bom-ref": "bundle-dependencies@1.0.2|strip-bom@2.0.0",
+          "author": "Sindre Sorhus",
+          "description": "Strip UTF-8 byte order mark (BOM) from a string/buffer",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/strip-bom@2.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/strip-bom.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/sindresorhus/strip-bom/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/strip-bom.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/strip-bom",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/strip-bom"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "symbol",
+          "version": "0.2.1",
+          "bom-ref": "bundle-dependencies@1.0.2|symbol@0.2.1",
+          "author": "Sean McArthur",
+          "description": "ES6 Symbols in your ES5.",
+          "licenses": [
+            {
+              "license": {
+                "name": "MPLv2.0"
+              }
+            }
+          ],
+          "purl": "pkg:npm/symbol@0.2.1?vcs_url=git%3A//github.com/seanmonstar/symbol.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/seanmonstar/symbol/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git://github.com/seanmonstar/symbol.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/seanmonstar/symbol#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/symbol"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "validate-npm-package-license",
+          "version": "3.0.1",
+          "bom-ref": "bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1",
+          "author": "Kyle E. Mitchell",
+          "description": "Give me a string and I'll tell you if it's a valid npm package license string",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "purl": "pkg:npm/validate-npm-package-license@3.0.1?vcs_url=git%2Bhttps%3A//github.com/kemitchell/validate-npm-package-license.js.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/kemitchell/validate-npm-package-license.js/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/kemitchell/validate-npm-package-license.js.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/kemitchell/validate-npm-package-license.js#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/validate-npm-package-license"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "window-size",
+          "version": "0.2.0",
+          "bom-ref": "bundle-dependencies@1.0.2|window-size@0.2.0",
+          "author": "Jon Schlinkert",
+          "description": "Reliable way to to get the height and width of the terminal/console in a node.js environment.",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/window-size@0.2.0?vcs_url=git%2Bhttps%3A//github.com/jonschlinkert/window-size.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/jonschlinkert/window-size/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/jonschlinkert/window-size.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/jonschlinkert/window-size",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/window-size"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "wrap-ansi",
+          "version": "1.0.0",
+          "bom-ref": "bundle-dependencies@1.0.2|wrap-ansi@1.0.0",
+          "author": "Sindre Sorhus",
+          "description": "Wordwrap a string with ANSI escape codes",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/wrap-ansi@1.0.0?vcs_url=git%2Bhttps%3A//github.com/chalk/wrap-ansi.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/chalk/wrap-ansi/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/chalk/wrap-ansi.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/chalk/wrap-ansi#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/wrap-ansi"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "y18n",
+          "version": "3.2.0",
+          "bom-ref": "bundle-dependencies@1.0.2|y18n@3.2.0",
+          "author": "Ben Coe",
+          "description": "the bare-bones internationalization library used by yargs",
+          "licenses": [
+            {
+              "license": {
+                "id": "ISC"
+              }
+            }
+          ],
+          "purl": "pkg:npm/y18n@3.2.0?vcs_url=git%2Bssh%3A//git%40github.com/bcoe/y18n.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/bcoe/y18n/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+ssh://git@github.com/bcoe/y18n.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/bcoe/y18n",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/y18n"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "yargs-parser",
+          "version": "2.1.0",
+          "bom-ref": "bundle-dependencies@1.0.2|yargs-parser@2.1.0",
+          "author": "Ben Coe",
+          "description": "the mighty option parser used by yargs",
+          "licenses": [
+            {
+              "license": {
+                "id": "ISC"
+              }
+            }
+          ],
+          "purl": "pkg:npm/yargs-parser@2.1.0?vcs_url=git%2Bssh%3A//git%40github.com/yargs/yargs-parser.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/yargs/yargs-parser/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+ssh://git@github.com/yargs/yargs-parser.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/yargs/yargs-parser#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/yargs-parser"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "yargs",
+          "version": "4.1.0",
+          "bom-ref": "bundle-dependencies@1.0.2|yargs@4.1.0",
+          "description": "Light-weight option parsing with an argv hash. No optstrings attached.",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
+          "purl": "pkg:npm/yargs@4.1.0?vcs_url=git%2Bssh%3A//git%40github.com/bcoe/yargs.git",
+          "externalReferences": [
+            {
+              "url": "https://github.com/bcoe/yargs/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+ssh://git@github.com/bcoe/yargs.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "http://yargs.js.org/",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/bundle-dependencies/node_modules/yargs"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "bundle-dependencies@1.0.2",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|yargs@4.1.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|ansi-regex@2.0.0"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|builtin-modules@1.1.1"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|camelcase@2.1.0"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|cliui@3.1.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|string-width@1.0.1",
+        "bundle-dependencies@1.0.2|strip-ansi@3.0.1",
+        "bundle-dependencies@1.0.2|wrap-ansi@1.0.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|code-point-at@1.0.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|number-is-nan@1.0.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|decamelize@1.1.2",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|error-ex@1.3.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|is-arrayish@0.2.1"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|find-up@1.1.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|path-exists@2.1.0",
+        "bundle-dependencies@1.0.2|pinkie-promise@2.0.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|graceful-fs@4.1.3"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|hosted-git-info@2.1.4"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|invert-kv@1.0.0"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|is-arrayish@0.2.1"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|is-builtin-module@1.0.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|builtin-modules@1.1.1"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|number-is-nan@1.0.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|is-utf8@0.2.1"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|lcid@1.0.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|invert-kv@1.0.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|load-json-file@1.1.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|graceful-fs@4.1.3",
+        "bundle-dependencies@1.0.2|parse-json@2.2.0",
+        "bundle-dependencies@1.0.2|pify@2.3.0",
+        "bundle-dependencies@1.0.2|pinkie-promise@2.0.0",
+        "bundle-dependencies@1.0.2|strip-bom@2.0.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|lodash.assign@4.0.3",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|lodash.keys@4.0.3",
+        "bundle-dependencies@1.0.2|lodash.rest@4.0.1"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|lodash.keys@4.0.3"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|lodash.rest@4.0.1"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|normalize-package-data@2.3.5",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|hosted-git-info@2.1.4",
+        "bundle-dependencies@1.0.2|is-builtin-module@1.0.0",
+        "bundle-dependencies@1.0.2|semver@5.1.0",
+        "bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|number-is-nan@1.0.0"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|object-assign@4.0.1"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|os-locale@1.4.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|lcid@1.0.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|parse-json@2.2.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|error-ex@1.3.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|path-exists@2.1.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|pinkie-promise@2.0.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|path-type@1.1.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|graceful-fs@4.1.3",
+        "bundle-dependencies@1.0.2|pify@2.3.0",
+        "bundle-dependencies@1.0.2|pinkie-promise@2.0.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|pify@2.3.0"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|pinkie-promise@2.0.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|pinkie@2.0.4"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|pinkie@2.0.4"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|pkg-conf@1.1.1",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|find-up@1.1.0",
+        "bundle-dependencies@1.0.2|object-assign@4.0.1",
+        "bundle-dependencies@1.0.2|read-pkg@1.1.0",
+        "bundle-dependencies@1.0.2|symbol@0.2.1"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|read-pkg-up@1.0.1",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|find-up@1.1.0",
+        "bundle-dependencies@1.0.2|read-pkg@1.1.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|read-pkg@1.1.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|load-json-file@1.1.0",
+        "bundle-dependencies@1.0.2|normalize-package-data@2.3.5",
+        "bundle-dependencies@1.0.2|path-type@1.1.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|require-main-filename@1.0.1"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|semver@5.1.0"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|spdx-correct@1.0.2",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|spdx-exceptions@1.0.4",
+        "bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|string-width@1.0.1",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|code-point-at@1.0.0",
+        "bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0",
+        "bundle-dependencies@1.0.2|strip-ansi@3.0.1"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|strip-ansi@3.0.1",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|ansi-regex@2.0.0"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|strip-bom@2.0.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|is-utf8@0.2.1"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|symbol@0.2.1"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|spdx-correct@1.0.2",
+        "bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|window-size@0.2.0"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|wrap-ansi@1.0.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|string-width@1.0.1"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|y18n@3.2.0"
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|yargs-parser@2.1.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|camelcase@2.1.0",
+        "bundle-dependencies@1.0.2|lodash.assign@4.0.3"
+      ]
+    },
+    {
+      "ref": "bundle-dependencies@1.0.2|yargs@4.1.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2|camelcase@2.1.0",
+        "bundle-dependencies@1.0.2|cliui@3.1.0",
+        "bundle-dependencies@1.0.2|decamelize@1.1.2",
+        "bundle-dependencies@1.0.2|os-locale@1.4.0",
+        "bundle-dependencies@1.0.2|pkg-conf@1.1.1",
+        "bundle-dependencies@1.0.2|read-pkg-up@1.0.1",
+        "bundle-dependencies@1.0.2|require-main-filename@1.0.1",
+        "bundle-dependencies@1.0.2|string-width@1.0.1",
+        "bundle-dependencies@1.0.2|window-size@0.2.0",
+        "bundle-dependencies@1.0.2|y18n@3.2.0",
+        "bundle-dependencies@1.0.2|yargs-parser@2.1.0"
+      ]
+    },
+    {
+      "ref": "demo-bundled-deps@0.0.0",
+      "dependsOn": [
+        "bundle-dependencies@1.0.2"
+      ]
+    }
+  ]
+}
