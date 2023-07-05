@@ -76,7 +76,7 @@ function makeCommand (process: NodeJS.Process): Command {
       'Dependency types to omit from the installation tree.' +
       '(can be set multiple times)'
     ).choices(
-      Object.values(Omittable)
+      Object.values(Omittable).sort()
     ).default(
       process.env.NODE_ENV === 'production'
         ? [Omittable.Dev]
@@ -100,7 +100,7 @@ function makeCommand (process: NodeJS.Process): Command {
       '--spec-version <version>',
       'Which version of CycloneDX spec to use.'
     ).choices(
-      Object.keys(Spec.SpecVersionDict)
+      Object.keys(Spec.SpecVersionDict).sort()
     ).default(
       Spec.Version.v1dot4
     )
@@ -118,7 +118,7 @@ function makeCommand (process: NodeJS.Process): Command {
         '--output-format <format>',
         'Which output format to use.'
       ).choices(
-        Object.values(OutputFormat)
+        Object.values(OutputFormat).sort()
       ).default(
         // the context is node/JavaScript - which should prefer JSON
         OutputFormat.JSON
@@ -159,7 +159,7 @@ function makeCommand (process: NodeJS.Process): Command {
         Enums.ComponentType.Application,
         Enums.ComponentType.Firmware,
         Enums.ComponentType.Library
-      ]
+      ].sort()
     ).default(
       Enums.ComponentType.Application
     )
