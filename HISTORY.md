@@ -7,14 +7,15 @@ All notable changes to this project will be documented in this file.
 Added support for [_CycloneDX_ Specification-1.5](https://github.com/CycloneDX/specification/releases/tag/1.5).
 
 * Changed
-  * This tool supports _CycloneDX_ Specification-1.5 now ([#828] via [#])
+  * This tool supports _CycloneDX_ Specification-1.5 now ([#828] via [#843])
 * Added
-  * CLI switch `--spec-version` now supports value `1.5` to reflect _CycloneDX_ Specification-1.5 ([#828] via [#])  
+  * CLI switch `--spec-version` now supports value `1.5` to reflect _CycloneDX_ Specification-1.5 ([#828] via [#843])  
     Default value for that option is unchanged - still `1.4`.
 * Misc
-  * Raised dependency `@cyclonedx/cyclonedx-library@^3||^4`, was `@^2.0.0` ([#828] via [#])
+  * Raised dependency `@cyclonedx/cyclonedx-library@^3||^4`, was `@^2.0.0` ([#828] via [#843])
 
 [#828]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/828
+[#843]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/843
 
 ## 1.12.1 - 2023-06-16
 
