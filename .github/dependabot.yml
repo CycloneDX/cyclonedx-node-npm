@@ -15,6 +15,50 @@ updates:
       prefix: 'chore'  ## prefix maximum string length of 15
       include: 'scope'
     open-pull-requests-limit: 999
+    groups:
+      cyclonedx:
+        patterns:
+          - '@cyclonedx/*'
+      spdx:
+        patterns:
+          - 'spdx-*'
+          - '@types/spdx-*'
+      ajv:
+        patterns:
+          - 'ajv'
+          - 'ajv-*'
+      typescript:
+        patterns:
+          - 'typescript'
+          - '@types/node'
+          - 'typedoc'
+          - 'typedoc-*'
+          - '@microsoft/tsdoc'
+          - '@microsoft/tsdoc-*'
+          - 'ts-loader'
+          - 'tslib'
+      eslint:
+        patterns:
+          - 'eslint'
+          - '@eslint/*'
+          - '@types/eslint'
+          - 'eslint-*'
+          - '@types/eslint-*'
+          - '@eslint-community/*'
+          - '@typescript-eslint/*'
+      jest:
+        patterns:
+          - 'jest'
+          - '@types/jest'
+          - '@jest/*'
+          - 'jest-'
+          - 'babel-jest'
+      babel:
+        patterns:
+          - 'babel'
+          - '@babel/'
+          - 'babel-*'
+          - '@types/babel*'
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
