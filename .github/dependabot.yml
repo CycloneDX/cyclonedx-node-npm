@@ -41,22 +41,23 @@ updates:
         patterns:
           - 'eslint'
           - '@eslint/*'
-          - '@types/eslint'
           - 'eslint-*'
-          - '@types/eslint-*'
           - '@eslint-community/*'
           - '@typescript-eslint/*'
+          - '@types/eslint'
+          - '@types/eslint*'
       jest:
         patterns:
           - 'jest'
-          - '@types/jest'
           - '@jest/*'
-          - 'jest-'
+          - 'jest-*'
           - 'babel-jest'
+          - '@types/jest'
+          - '@types/jest*'
       babel:
         patterns:
           - 'babel'
-          - '@babel/'
+          - '@babel/*'
           - 'babel-*'
           - '@types/babel*'
   - package-ecosystem: 'github-actions'
