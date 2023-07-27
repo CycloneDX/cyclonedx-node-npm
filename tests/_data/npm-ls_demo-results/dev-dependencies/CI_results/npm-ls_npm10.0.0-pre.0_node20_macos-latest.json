@@ -1,0 +1,117 @@
+{
+  "version": "0.0.0",
+  "name": "demo-dev-dependencies",
+  "description": "demo: demo-dev-dependencies -- showcase how devDependencies look like",
+  "private": true,
+  "license": "Apache-2.0",
+  "optionalDependencies": {
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "@types/node": ">=16",
+    "@types/uuid": "^8",
+    "uuid": "^8"
+  },
+  "_id": "demo-dev-dependencies@0.0.0",
+  "extraneous": false,
+  "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/dev-dependencies/project",
+  "_dependencies": {
+    "uuidv4": "^6.2.13"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@types/node": {
+      "version": "20.4.5",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-20.4.5.tgz",
+      "overridden": false,
+      "name": "@types/node",
+      "integrity": "sha512-rt40Nk13II9JwQBdeYqmbn2Q6IVTA5uPhvSO+JVqdXw/6/4glI6oR9ezty/A9Hg5u7JH4OmYmuQ+XvjKm0Datg==",
+      "dev": true,
+      "_id": "@types/node@20.4.5",
+      "extraneous": false,
+      "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/dev-dependencies/project/node_modules/@types/node",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
+    },
+    "@types/uuid": {
+      "version": "8.3.4",
+      "resolved": "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz",
+      "overridden": false,
+      "name": "@types/uuid",
+      "integrity": "sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==",
+      "devOptional": true,
+      "_id": "@types/uuid@8.3.4",
+      "extraneous": false,
+      "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/dev-dependencies/project/node_modules/@types/uuid",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
+    },
+    "uuid": {
+      "version": "8.3.2",
+      "resolved": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
+      "overridden": false,
+      "name": "uuid",
+      "integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==",
+      "devOptional": true,
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "_id": "uuid@8.3.2",
+      "extraneous": false,
+      "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/dev-dependencies/project/node_modules/uuid",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
+    },
+    "uuidv4": {
+      "version": "6.2.13",
+      "resolved": "https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz",
+      "overridden": false,
+      "name": "uuidv4",
+      "integrity": "sha512-AXyzMjazYB3ovL3q051VLH06Ixj//Knx7QnUSi1T//Ie3io6CpsPu9nVMOx5MoLWh6xV0B9J0hIaxungxXUbPQ==",
+      "optional": true,
+      "_id": "uuidv4@6.2.13",
+      "extraneous": false,
+      "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/dev-dependencies/project/node_modules/uuidv4",
+      "_dependencies": {
+        "@types/uuid": "8.3.4",
+        "uuid": "8.3.2"
+      },
+      "devDependencies": {},
+      "peerDependencies": {},
+      "dependencies": {
+        "@types/uuid": {
+          "version": "8.3.4",
+          "name": "@types/uuid",
+          "resolved": "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz",
+          "integrity": "sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==",
+          "devOptional": true,
+          "_id": "@types/uuid@8.3.4",
+          "extraneous": false,
+          "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/dev-dependencies/project/node_modules/@types/uuid",
+          "_dependencies": {},
+          "devDependencies": {},
+          "peerDependencies": {}
+        },
+        "uuid": {
+          "version": "8.3.2",
+          "name": "uuid",
+          "resolved": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
+          "integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==",
+          "devOptional": true,
+          "bin": {
+            "uuid": "dist/bin/uuid"
+          },
+          "_id": "uuid@8.3.2",
+          "extraneous": false,
+          "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/dev-dependencies/project/node_modules/uuid",
+          "_dependencies": {},
+          "devDependencies": {},
+          "peerDependencies": {}
+        }
+      }
+    }
+  }
+}
