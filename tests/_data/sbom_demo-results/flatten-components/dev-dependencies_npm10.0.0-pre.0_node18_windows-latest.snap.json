@@ -1,0 +1,229 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-npm",
+        "version": "thisVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "demo-dev-dependencies",
+      "version": "0.0.0",
+      "bom-ref": "demo-dev-dependencies@0.0.0",
+      "description": "demo: demo-dev-dependencies -- showcase how devDependencies look like",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/demo-dev-dependencies@0.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": ""
+        },
+        {
+          "name": "cdx:npm:package:private",
+          "value": "true"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "node",
+      "group": "@types",
+      "version": "20.4.5",
+      "bom-ref": "@types/node@20.4.5",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "aede34364d77208f49c1005d798aa66e7d90e88553039b8f86f48ef8956a757c3febfe20948ea847d7b3b72fc0f47839bbb247e0e9989ae43e5ef8ca9b40dab6"
+        }
+      ],
+      "purl": "pkg:npm/%40types/node@20.4.5",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@types/node/-/node-20.4.5.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:development",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@types\\node"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "uuid",
+      "group": "@types",
+      "version": "8.3.4",
+      "bom-ref": "@types/uuid@8.3.4",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "73f23c6516f9d63fa960602ee42ac5311c6a67691ee32da0ac404ee4052381291293ea93d846be39d584973fce88c7f930da67d9bd7b92e541c192d0257ce287"
+        }
+      ],
+      "purl": "pkg:npm/%40types/uuid@8.3.4",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:development",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@types\\uuid"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "uuid",
+      "version": "8.3.2",
+      "bom-ref": "uuid@8.3.2",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f8d62cd9078c5b2f865853849bdc679fa1c20e9d25ed0043ee697cccb52627ef77439345d0da1c12b9f09139175453625f7fdfa42e9a7d2f0385bfe0cfb47b7a"
+        }
+      ],
+      "purl": "pkg:npm/uuid@8.3.2",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:development",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/uuid"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "uuidv4",
+      "version": "6.2.13",
+      "bom-ref": "uuidv4@6.2.13",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "017cb33236b3601de8bcbdead39d552c7d3a2318fffca9f1ed09d44a2d53fff21ede2a3a0a9b0fbbd9d530ec793282d687ac55d01f49d2121ac6e9e0c5751b3d"
+        }
+      ],
+      "purl": "pkg:npm/uuidv4@6.2.13",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/uuidv4"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "@types/node@20.4.5"
+    },
+    {
+      "ref": "@types/uuid@8.3.4"
+    },
+    {
+      "ref": "demo-dev-dependencies@0.0.0",
+      "dependsOn": [
+        "@types/node@20.4.5",
+        "@types/uuid@8.3.4",
+        "uuid@8.3.2",
+        "uuidv4@6.2.13"
+      ]
+    },
+    {
+      "ref": "uuid@8.3.2"
+    },
+    {
+      "ref": "uuidv4@6.2.13",
+      "dependsOn": [
+        "@types/uuid@8.3.4",
+        "uuid@8.3.2"
+      ]
+    }
+  ]
+}
