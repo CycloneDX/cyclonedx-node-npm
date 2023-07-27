@@ -30,20 +30,21 @@ jobs:
       fail-fast: false # gather all the results !
       matrix:
         subject:
-          # - bundled-dependencies
-          # - dev-dependencies
-          # - juice-shop
-          # - local-dependencies
-          # - local-workspaces
+          - bundled-dependencies
+          - dev-dependencies
+          - juice-shop
+          - local-dependencies
+          - local-workspaces
           - package-integrity
-          # - package-with-build-id
+          - package-with-build-id
         npm-version:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
           ## see also: https://github.com/npm/cli/releases
-          - '9'      # Current
-          - '8'      # Latest
-          - '7'      # Legacy
-          - '6'      # Legacy
+          - '10.0.0-pre.0' # https://github.com/npm/cli/releases/tag/v10.0.0-pre.0
+          # - '9'      # Current
+          # - '8'      # Latest
+          # - '7'      # Legacy
+          # - '6'      # Legacy
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
@@ -56,8 +57,13 @@ jobs:
           - windows-latest
           - macos-latest
         exclude:
+          - # npm10 requires node ^18.17.0 || >=20.5.0
+            npm-version: '10.0.0-pre.0'
+            node-version: '16'
+          - # npm10 requires node ^18.17.0 || >=20.5.0
+            npm-version: '10.0.0-pre.0'
+            node-version: '14'
           - # npm9 upgrade/install failed on node14
-            # !! REVISIT THIS !!
             npm-version: '9'
             node-version: '14'
           - # juice-shop might not be node14 compatible
@@ -85,6 +91,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          check-latest: true
       - name: up-/down-grade npm to ${{ matrix.npm-version }}
         run: npm i -g 'npm@${{ matrix.npm-version }}'
       - name: report versions
