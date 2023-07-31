@@ -3,7 +3,7 @@
 Install packages with different integrity information based on shipped lock file.
 
 See [the docs](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json#package)
-for "ingetrity":
+for "integrity":
 > A _sha512_ or _sha1_ [Standard Subresource Integrity](https://w3c.github.io/webappsec/specs/subresourceintegrity/) string for the artifact that was unpacked in this location.
 
 ## remarks
