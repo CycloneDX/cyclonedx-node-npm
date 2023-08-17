@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^3||^4||^5`, was `@^3||^4` (via [#1042])
+  * Raised dependency `normalize-package-data@`^3||^4||^5||^6`, was `@^3||^4||^5` (via [#1043])
+
+[#1042]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1042
+[#1043]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1043
+
 ## 1.13.0 - 2023-07-07
 
 Added support for [_CycloneDX_ Specification-1.5](https://github.com/CycloneDX/specification/releases/tag/1.5).
