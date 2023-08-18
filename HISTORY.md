@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 
 * Misc
   * Raised dependency `@cyclonedx/cyclonedx-library@^3||^4||^5`, was `@^3||^4` (via [#1042])
-  * Raised dependency `normalize-package-data@`^3||^4||^5||^6`, was `@^3||^4||^5` (via [#1043])
+  * Raised dependency `normalize-package-data@^3||^4||^5||^6`, was `@^3||^4||^5` (via [#1043])
 
 [#1042]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1042
 [#1043]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1043
