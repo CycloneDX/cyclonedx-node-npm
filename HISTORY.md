@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.13.2 - 2023-08-27
+
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^3||^4||^5||^6`, was `@^3||^4||^5` (via [#])
+
+[#]: 
+
 ## 1.13.1 - 2023-08-18
 
 * Misc
