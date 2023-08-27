@@ -7,9 +7,9 @@ All notable changes to this project will be documented in this file.
 ## 1.13.2 - 2023-08-27
 
 * Misc
-  * Raised dependency `@cyclonedx/cyclonedx-library@^3||^4||^5||^6`, was `@^3||^4||^5` (via [#])
+  * Raised dependency `@cyclonedx/cyclonedx-library@^3||^4||^5||^6`, was `@^3||^4||^5` (via [#1096])
 
-[#]: 
+[#1096]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1096
 
 ## 1.13.1 - 2023-08-18
 
