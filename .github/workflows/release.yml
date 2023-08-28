@@ -23,7 +23,7 @@ on:
         default: rc
         required: false
       prerelease:
-        description: "This a pre-release"
+        description: "This is a pre-release"
         type: boolean
         default: false
         required: false
@@ -32,6 +32,8 @@ permissions: write-all
 
 env:
   REPORTS_DIR: CI_reports
+  PACKED_DIR: CI_packed
+  PACKED_ARTIFACT: packed
   NODE_ACTIVE_LTS: "20"  # https://nodejs.org/en/about/releases/
 
 jobs:
@@ -82,6 +84,8 @@ jobs:
     name: publish NPMJS
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      NPMJS_RELEASE_TAG: ${{ github.event.inputs.prerelease == 'true' && 'unstable-prerelease' || 'latest' }}
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
@@ -94,18 +98,25 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
       - name: install build tools
-        run: npm ci --ignore-scripts
+        run: npm i --ignore-scripts
       # no explicit npm build. if a build is required, it should be configured as prepublish/prepublishOnly script of npm.
       - name: login to NPMJS
         run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
         env:
           NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: publish to NPMJS as "latest"
-        if: ${{ github.event.inputs.prerelease != 'true' }}
-        run: npm publish --access public --tag 'latest'
-      - name: publish to NPMJS as "unstable-prerelease"
-        if: ${{ github.event.inputs.prerelease == 'true' }}
-        run: npm publish --access public --tag 'unstable-prerelease'
+      - name: publish to NPMJS as "${{ env.NPMJS_RELEASE_TAG }}"
+        run: npm publish --access public --tag "$NPMJS_RELEASE_TAG"
+      - name: pack release result
+        run: |
+          mkdir -p "$PACKED_DIR"
+          npm pack --pack-destination "$PACKED_DIR"
+      - name: artifact release result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.PACKED_ARTIFACT }}
+          path: ${{ env.PACKED_DIR }}/
+          if-no-files-found: error
 
   release-GH:
     needs:
@@ -117,6 +128,12 @@ jobs:
     env:
       ASSETS_DIR: release_assets
     steps:
+      - name: fetch release result
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ env.PACKED_ARTIFACT }}
+          path: ${{ env.ASSETS_DIR }}
       - name: Create Release
         id: release
         # see https://github.com/softprops/action-gh-release
@@ -124,6 +141,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ needs.bump.outputs.version }}
-          name:     ${{ needs.bump.outputs.version_plain }}
+          tag_name:   ${{ needs.bump.outputs.version }}
+          name:       ${{ needs.bump.outputs.version_plain }}
           prerelease: ${{ github.event.inputs.prerelease }}
+          files:      ${{ env.ASSETS_DIR }}/*
