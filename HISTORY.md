@@ -6,10 +6,13 @@ All notable changes to this project will be documented in this file.
 
 ## 1.13.2 - 2023-08-28
 
+* Build
+  * Use _TypeScript_ `v5.2.2` now, was `v5.1.6` (via [#1098])
 * Misc
   * Raised dependency `@cyclonedx/cyclonedx-library@^3||^4||^5||^6`, was `@^3||^4||^5` (via [#1096])
 
 [#1096]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1096
+[#1098]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1098
 
 ## 1.13.1 - 2023-08-18
 
