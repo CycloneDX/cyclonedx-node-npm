@@ -1,0 +1,97 @@
+{
+  "name": "demo-package-integrity",
+  "description": "demo: package-integrity -- packages with different integrity information.",
+  "private": true,
+  "extraneous": false,
+  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/package-integrity/project",
+  "_dependencies": {
+    "buffer": "^5.4.3",
+    "ignore": "^5.1.4",
+    "base64-js": "1.0.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {},
+  "dependencies": {
+    "base64-js": {
+      "version": "1.0.1",
+      "resolved": "https://registry.npmjs.org/base64-js/-/base64-js-1.0.1.tgz",
+      "overridden": false,
+      "name": "base64-js",
+      "integrity": "sha1-aSbRsZT7xze47tUTdW3i/Np+pAg=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.4"
+      },
+      "_id": "base64-js@1.0.1",
+      "extraneous": false,
+      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/package-integrity/project/node_modules/base64-js",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
+    },
+    "buffer": {
+      "version": "5.4.3",
+      "resolved": "https://registry.npmjs.org/buffer/-/buffer-5.4.3.tgz",
+      "overridden": false,
+      "name": "buffer",
+      "integrity": "sha512-zvj65TkFeIt3i6aj5bIvJDzjjQQGs4o/sNoezg1F1kYap9Nu2jcUdpwzRSJTHMMzG0H7bZkn4rNQpImhuxWX2A==",
+      "license": "MIT",
+      "_id": "buffer@5.4.3",
+      "extraneous": false,
+      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/package-integrity/project/node_modules/buffer",
+      "_dependencies": {
+        "base64-js": "^1.0.2",
+        "ieee754": "^1.1.4"
+      },
+      "devDependencies": {},
+      "peerDependencies": {},
+      "dependencies": {
+        "base64-js": {
+          "version": "1.3.1",
+          "resolved": "https://registry.npmjs.org/base64-js/-/base64-js-1.3.1.tgz",
+          "overridden": false,
+          "name": "base64-js",
+          "integrity": "sha512-mLQ4i2QO1ytvGWFWmcngKO//JXAQueZvwEKtjgQFM4jIK0kU+ytMfplL8j+n5mspOfjHwoAg+9yhb7BwAHm36g==",
+          "license": "MIT",
+          "_id": "base64-js@1.3.1",
+          "extraneous": false,
+          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/package-integrity/project/node_modules/buffer/node_modules/base64-js",
+          "_dependencies": {},
+          "devDependencies": {},
+          "peerDependencies": {}
+        },
+        "ieee754": {
+          "version": "1.1.13",
+          "resolved": "https://registry.npmjs.org/ieee754/-/ieee754-1.1.13.tgz",
+          "overridden": false,
+          "name": "ieee754",
+          "integrity": "sha512-4vf7I2LYV/HaWerSo3XmlMkp5eZ83i+/CDluXi/IGTs/O1sejBNhTtnxzmRZfvOUqj7lZjqHkeTvpgSFDlWZTg==",
+          "license": "BSD-3-Clause",
+          "_id": "ieee754@1.1.13",
+          "extraneous": false,
+          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/package-integrity/project/node_modules/ieee754",
+          "_dependencies": {},
+          "devDependencies": {},
+          "peerDependencies": {}
+        }
+      }
+    },
+    "ignore": {
+      "version": "5.1.4",
+      "resolved": "https://registry.npmjs.org/ignore/-/ignore-5.1.4.tgz",
+      "overridden": false,
+      "name": "ignore",
+      "integrity": "sha512-MzbUSahkTW1u7JpKKjY7LCARd1fU5W2rLdxlM4kdkayuCwZImjkpluF9CM1aLewYJguPDqewLam18Y6AU69A8A==",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 4"
+      },
+      "_id": "ignore@5.1.4",
+      "extraneous": false,
+      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/package-integrity/project/node_modules/ignore",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
+    }
+  }
+}
