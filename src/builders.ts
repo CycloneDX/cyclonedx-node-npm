@@ -228,7 +228,12 @@ export class BomBuilder {
 
     bom.metadata.component = rootComponent
 
-    bom.metadata.tools.add(new Models.Tool({ name: 'npm', version: npmVersion }))
+    bom.metadata.tools.add(new Models.Tool({
+      name: 'npm',
+      version: npmVersion // use the self-proclaimed `version`
+      // omit `vendor` and `externalReferences`, because we cannot be sure about the used tool's actual origin
+      // omit `hashes`, because unfortunately there is no agreed process of generating them
+    }))
     for (const tool of this.makeTools()) {
       bom.metadata.tools.add(tool)
     }
