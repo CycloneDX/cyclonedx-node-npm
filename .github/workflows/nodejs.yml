@@ -84,7 +84,7 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
