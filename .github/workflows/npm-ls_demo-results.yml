@@ -4,17 +4,6 @@
 name: npm-ls demo results
 
 on:
-  #push:
-  #  branches: [ 'main', 'master', '1.0-dev' ]
-  #  paths:
-  #    - '!**'
-  #    - 'demos/*/project/*'
-  #    - '.github/workflows/npm-ls_demo-results.yml' # this file
-  #pull_request:
-  #  paths:
-  #    - '!**'
-  #    - 'demos/*/project/**'
-  #    - '.github/workflows/npm-ls_demo-results.yml' # this file
   workflow_dispatch:
 
 env:
@@ -40,7 +29,7 @@ jobs:
         npm-version:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
           ## see also: https://github.com/npm/cli/releases
-          - '10.0.0-pre.0' # https://github.com/npm/cli/releases/tag/v10.0.0-pre.0
+          - '10' # https://github.com/npm/cli/releases/tag/v10.0.0-pre.0
           # - '9'      # Current
           # - '8'      # Latest
           # - '7'      # Legacy
@@ -58,10 +47,10 @@ jobs:
           - macos-latest
         exclude:
           - # npm10 requires node ^18.17.0 || >=20.5.0
-            npm-version: '10.0.0-pre.0'
+            npm-version: '10'
             node-version: '16'
           - # npm10 requires node ^18.17.0 || >=20.5.0
-            npm-version: '10.0.0-pre.0'
+            npm-version: '10'
             node-version: '14'
           - # npm9 upgrade/install failed on node14
             npm-version: '9'
