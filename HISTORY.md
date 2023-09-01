@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.13.3 - 2023-09-01
+
 * Docs
   * Tell about support for `npm` version 10 ([#973] via [#974]) 
 * Tests
