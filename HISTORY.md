@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Docs
+  * Tell about support for `npm` version 10 ([#973] via [#974]) 
+* Tests
+  * Added tests for `npm@10` ([#973] via [#974])
+
+[#973]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/973
+[#974]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/974
+
 ## 1.13.2 - 2023-08-28
 
 * Build
