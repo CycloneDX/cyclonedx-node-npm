@@ -90,7 +90,7 @@ export class BomBuilder {
   }
 
   private versionTuple (value: string): number[] {
-    return value.toString().split('.').map(v => Number(v))
+    return value.split('.').map(v => Number(v))
   }
 
   private getNpmVersion (npmRunner: runFunc, process_: NodeJS.Process): string {
@@ -101,7 +101,7 @@ export class BomBuilder {
         env: process_.env,
         encoding: 'buffer',
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
-      }).toString()
+      }).toString().trim()
     } catch (runError: any) {
       this.console.group('DEBUG | npm-ls: STDOUT')
       this.console.debug('%s', runError.stdout)

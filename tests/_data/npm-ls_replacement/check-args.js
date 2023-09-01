@@ -22,7 +22,7 @@ const assert = require('assert')
 const { resolve } = require('path')
 
 if (process.argv[2] === '--version') {
-  process.stdout.write(process.env.CT_VERSION)
+  process.stdout.write(`${process.env.CT_VERSION}\n`)
   process.exit(0)
 }
 
