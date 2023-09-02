@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 if (process.argv[2] === '--version') {
-  process.stdout.write(process.env.CT_VERSION)
+  process.stdout.write(`${process.env.CT_VERSION}\n`)
   process.exit(0)
 }
 

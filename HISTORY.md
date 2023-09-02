@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Added
+  * SBOM result might have additional items in `metadata.tools` populated ([#1100] vial [#1101]) 
+
+[#1100]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1100
+[#1101]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1101
+
 ## 1.13.3 - 2023-09-01
 
 * Docs

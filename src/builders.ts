@@ -85,19 +85,23 @@ export class BomBuilder {
 
   buildFromProjectDir (projectDir: string, process: NodeJS.Process): Models.Bom {
     return this.buildFromNpmLs(
-      this.fetchNpmLs(projectDir, process)
+      ...this.fetchNpmLs(projectDir, process)
     )
   }
 
-  private getNpmVersion (npmRunner: runFunc, process_: NodeJS.Process): number[] {
-    let npmVersion: number[]
+  private versionTuple (value: string): number[] {
+    return value.split('.').map(v => Number(v))
+  }
+
+  private getNpmVersion (npmRunner: runFunc, process_: NodeJS.Process): string {
+    let version: string
     this.console.info('INFO  | detect NPM version ...')
     try {
-      npmVersion = npmRunner(['--version'], {
+      version = npmRunner(['--version'], {
         env: process_.env,
         encoding: 'buffer',
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
-      }).toString().split('.').map(v => Number(v))
+      }).toString().trim()
     } catch (runError: any) {
       this.console.group('DEBUG | npm-ls: STDOUT')
       this.console.debug('%s', runError.stdout)
@@ -110,14 +114,15 @@ export class BomBuilder {
       this.console.groupEnd()
       throw runError
     }
-    this.console.debug('DEBUG | detected NPM version %j', npmVersion)
-    return npmVersion
+    this.console.debug('DEBUG | detected NPM version %j', version)
+    return version
   }
 
-  private fetchNpmLs (projectDir: string, process_: NodeJS.Process): any {
+  private fetchNpmLs (projectDir: string, process_: NodeJS.Process): [any, string | undefined] {
     const npmRunner = makeNpmRunner(process_, this.console)
 
-    const npmVersion = this.getNpmVersion(npmRunner, process_)
+    const npmVersionR = this.getNpmVersion(npmRunner, process_)
+    const npmVersionT = this.versionTuple(npmVersionR)
 
     const args: string[] = [
       'ls',
@@ -126,20 +131,20 @@ export class BomBuilder {
       // get all the needed content
       '--long',
       // depth = infinity
-      npmVersion[0] >= 7
+      npmVersionT[0] >= 7
         ? '--all'
         : '--depth=255'
     ]
 
     if (this.packageLockOnly) {
-      if (npmVersion[0] >= 7) {
+      if (npmVersionT[0] >= 7) {
         args.push('--package-lock-only')
       } else {
         this.console.warn('WARN  | your NPM does not support "--package-lock-only", internally skipped this option')
       }
     }
 
-    if (versionCompare(npmVersion, [8, 7]) >= 0) {
+    if (versionCompare(npmVersionT, [8, 7]) >= 0) {
       // since NPM v8.7 -- https://github.com/npm/cli/pull/4744
       for (const odt of this.omitDependencyTypes) {
         args.push(`--omit=${odt}`)
@@ -191,14 +196,17 @@ export class BomBuilder {
     }
     // this.console.debug('stdout: %s', npmLsReturns)
     try {
-      return JSON.parse(npmLsReturns.toString())
+      return [
+        JSON.parse(npmLsReturns.toString()),
+        npmVersionR
+      ]
     } catch (jsonParseError) {
       /* @ts-expect-error TS2554 */
       throw new Error('failed to parse npm-ls response', { cause: jsonParseError })
     }
   }
 
-  buildFromNpmLs (data: any): Models.Bom {
+  buildFromNpmLs (data: any, npmVersion?: string): Models.Bom {
     // TODO use instead ? : https://www.npmjs.com/package/debug ?
     this.console.info('INFO  | build BOM ...')
 
@@ -220,6 +228,12 @@ export class BomBuilder {
 
     bom.metadata.component = rootComponent
 
+    bom.metadata.tools.add(new Models.Tool({
+      name: 'npm',
+      version: npmVersion // use the self-proclaimed `version`
+      // omit `vendor` and `externalReferences`, because we cannot be sure about the used tool's actual origin
+      // omit `hashes`, because unfortunately there is no agreed process of generating them
+    }))
     for (const tool of this.makeTools()) {
       bom.metadata.tools.add(tool)
     }

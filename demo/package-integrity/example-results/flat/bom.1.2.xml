@@ -3,14 +3,18 @@
   <metadata>
     <tools>
       <tool>
+        <name>npm</name>
+        <version>9.4.2</version>
+      </tool>
+      <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>4.0.0</version>
+        <version>6.0.0</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.12.1</version>
+        <version>1.13.3</version>
       </tool>
     </tools>
     <component type="application" bom-ref="-/demo-package-integrity@-">

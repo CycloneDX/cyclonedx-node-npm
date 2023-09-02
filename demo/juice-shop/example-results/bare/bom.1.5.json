@@ -6,9 +6,13 @@
   "metadata": {
     "tools": [
       {
+        "name": "npm",
+        "version": "9.4.2"
+      },
+      {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "4.0.0",
+        "version": "6.0.0",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
@@ -30,7 +34,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.12.1",
+        "version": "1.13.3",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",

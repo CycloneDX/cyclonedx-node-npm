@@ -6,6 +6,10 @@
   "metadata": {
     "tools": [
       {
+        "name": "npm",
+        "version": "7.99.0"
+      },
+      {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
         "version": "libVersion-testing",
