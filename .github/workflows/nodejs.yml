@@ -134,24 +134,30 @@ jobs:
           name: reports-jest_node${{ matrix.node-version }}-${{ matrix.os }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
-  dogfooding-direct:
+  dogfooding:
     needs: [ 'build' ]
-    name: dogfooding/direct (node${{ matrix.node-version }} ${{ matrix.os }})
-    runs-on: ${{ matrix.os }}
+    name: dogfooding npm ${{ matrix.npm-version }}
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        node-version:
-          ## action based on https://github.com/actions/node-versions/releases
-          ## see also: https://nodejs.org/en/about/releases/
-          - '20'      # Current
-          - '18'      # Active LTS
-          - '16'
-          - '14'
-        os:
-          - ubuntu-latest
-          - windows-latest
-          - macos-latest
+        include:
+          - npm-version: 'latest'
+          - npm-version: '^10'
+            ## "node": "^18.17.0 || >=20.5.0"
+            node-version: '^20.5'
+          - npm-version: '^9'
+            ## "node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+            node-version: '^18'
+          - npm-version: '^8'
+            ## "node": "^12.13.0 || ^14.15.0 || >=16"
+            node-version: '^16'
+          - npm-version: '^7'
+            ## "node": ">=10"
+            node-version: '^14'
+          - npm-version: '^6'
+            ## "node": "6 >=6.2.0 || 8 || >=9.3.0"
+            node-version: '^14'
     timeout-minutes: 10
     steps:
       - name: Checkout
@@ -162,8 +168,12 @@ jobs:
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ matrix.node-version || env.NODE_ACTIVE_LTS }}
           # cache: 'npm'
+      - name: setup npm ${{ matrix.npm-version }}
+        run: |
+          npm i -g npm@${{ matrix.npm-version }}
+          npm --version
       - name: setup subject
         shell: bash
         run: |
@@ -189,6 +199,6 @@ jobs:
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3
         with:
-          name: dogfooding-direct_node${{ matrix.node-version }}-${{ matrix.os }}
+          name: dogfooding-direct_npm${{ matrix.npm-version }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
