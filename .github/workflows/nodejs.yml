@@ -158,6 +158,8 @@ jobs:
           - npm-version: '^6'
             ## "node": "6 >=6.2.0 || 8 || >=9.3.0"
             node-version: '^14'
+    env:
+      npm_config_engine_strict: true
     timeout-minutes: 10
     steps:
       - name: Checkout
