@@ -100,7 +100,7 @@ jobs:
         run: |
           set -ex
           ## dont install all the dev-packages, especially since some are not runnable on node 14.0.0
-          npm i --ignore-scripts --omit=dev --only=prod --loglevel=silly
+          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
           ## install the needed dev-deps
@@ -151,13 +151,15 @@ jobs:
             node-version: '^18'
           - npm-version: '^8'
             ## "node": "^12.13.0 || ^14.15.0 || >=16"
-            node-version: '^16'
+            # node-version: '^16' ## cannot pin due to https://github.com/npm/cli/issues/6743
           - npm-version: '^7'
             ## "node": ">=10"
-            node-version: '^14'
+            # node-version: '^14'  ## cannot pin due to https://github.com/npm/cli/issues/6743
           - npm-version: '^6'
             ## "node": "6 >=6.2.0 || 8 || >=9.3.0"
-            node-version: '^14'
+            # node-version: '^14'  ## cannot pin due to https://github.com/npm/cli/issues/6743
+    env:
+      npm_config_engine_strict: true
     timeout-minutes: 10
     steps:
       - name: Checkout
@@ -178,7 +180,7 @@ jobs:
         shell: bash
         run: |
           set -ex
-          npm i --ignore-scripts --omit=dev --only=prod  --loglevel=silly
+          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
       - name: fetch build artifact
