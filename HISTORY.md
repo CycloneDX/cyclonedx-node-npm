@@ -7,8 +7,8 @@ All notable changes to this project will be documented in this file.
 ## 1.14.1 - 2023-09-18
 
 * Fixed
-  * explicit allow engine `npm@10` (via [#1107])
-    This is a bugfix for an existing feature (see [#974]).
+  * explicit allow engine `npm@10` (via [#1107])  
+    This is a bugfix for an existing feature (see [#973]).
 * Tests
   * added regression test for all supped npm versions (via [#1108]) 
 
