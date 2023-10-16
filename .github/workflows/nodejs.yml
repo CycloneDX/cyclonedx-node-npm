@@ -18,9 +18,10 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  DIST_DIR: dist
-  REPORTS_DIR: reports
   NODE_ACTIVE_LTS: '20'  # https://nodejs.org/en/about/releases/
+  DIST_DIR: dist
+  REPORTS_DIR: "CI_reports"
+  TESTS_REPORTS_ARTIFACT: tests-reports
 
 jobs:
   build:
@@ -48,6 +49,7 @@ jobs:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
           if-no-files-found: error
+
   test-standards:
     name: test standards
     timeout-minutes: 30
@@ -66,6 +68,7 @@ jobs:
         run: npm i --loglevel=silly
       - name: run tests
         run: npm run test:standard
+
   test-jest:
     needs: [ 'build' ]
     name: jest (node${{ matrix.node-version }} ${{ matrix.os }})
@@ -118,6 +121,10 @@ jobs:
           --verbose
           --runInBand
           --logHeapUsage
+          --coverage
+          --coverageDirectory='${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}/coverage'
+        env:
+          JEST_JUNIT_OUTPUT_DIR: ${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}
       - name: artifact test logs
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
@@ -127,13 +134,14 @@ jobs:
           path: tests/_log
           if-no-files-found: error
       - name: artifact test reports
-        if: ${{ failure() }}
+        if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3
         with:
-          name: reports-jest_node${{ matrix.node-version }}-${{ matrix.os }}
+          name: ${{ env.TESTS_REPORTS_ARTIFACT }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
+
   dogfooding:
     needs: [ 'build' ]
     name: dogfooding npm ${{ matrix.npm-version }}
@@ -204,3 +212,27 @@ jobs:
           name: dogfooding-direct_npm${{ matrix.npm-version }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
+
+  report-coverage:
+    name: Publish test coverage
+    needs:
+      - test-jest
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: fetch test artifacts
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ env.TESTS_REPORTS_ARTIFACT }}
+          path: ${{ env.REPORTS_DIR }}
+      - name: Run codacy-coverage-reporter
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        if: ${{ env.CODACY_PROJECT_TOKEN != '' }} ## see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-secrets
+        # see https://github.com/codacy/codacy-coverage-reporter-action
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ env.CODACY_PROJECT_TOKEN }}
+          coverage-reports: ${{ env.REPORTS_DIR }}/*/coverage/clover.xml
+
