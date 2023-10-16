@@ -42,7 +42,7 @@ module.exports = {
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: [
     'src/**',
-    'dist/**'
+    'dist/**' // running tests on build results, so need to have this vector
   ],
 
   // The directory where Jest should output its coverage files
@@ -54,7 +54,7 @@ module.exports = {
   ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: 'v8',
+  coverageProvider: 'babel', // we use compiled data with a map - we need to use babel here.
 
   // A list of reporter names that Jest uses when writing coverage reports
   coverageReporters: [
