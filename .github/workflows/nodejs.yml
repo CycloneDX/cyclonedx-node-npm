@@ -122,10 +122,9 @@ jobs:
           --runInBand
           --logHeapUsage
           --coverage
-          --coverageDirectory='$JEST_COVERAGE_OUTPUT_DIR'
+          --coverageDirectory='${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}/coverage'
         env:
-          JEST_COVERAGE_OUTPUT_DIR: ${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}/coverage
-          JEST_JUNIT_OUTPUT_DIR:    ${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}
+          JEST_JUNIT_OUTPUT_DIR: ${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}
       - name: artifact test logs
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
