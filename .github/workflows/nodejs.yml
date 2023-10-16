@@ -134,7 +134,7 @@ jobs:
           path: tests/_log
           if-no-files-found: error
       - name: artifact test reports
-        if: ${{ failure() }}
+        if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3
         with:
