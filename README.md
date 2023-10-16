@@ -1,3 +1,5 @@
+# cyclonedx-npm
+
 [![shield_npm-version]][link_npm]
 [![shield_gh-workflow-test]][link_gh-workflow-test]
 [![shield_coverage]][link_codacy]
@@ -9,8 +11,6 @@
 [![shield_twitter-follow]][link_twitter]
 
 ----
-
-# cyclonedx-npm
 
 Create [CycloneDX] Software Bill of Materials (SBOM) from _[npm]_ projects.
 
