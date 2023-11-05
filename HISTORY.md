@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Fixed
+  * SBOM results might have the `externalReferences[].hashes` populated ([#1118] via [#])  
+    The hashes might have wrongly appeared as `components[].hashes` before.
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^6.1.0`, was `@^3||^4||^5||^6` (via [#])
+
+[#1118]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1118
+[#]: 
+
 ## 1.14.1 - 2023-09-18
 
 * Fixed

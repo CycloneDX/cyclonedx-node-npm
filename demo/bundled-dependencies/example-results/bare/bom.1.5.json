@@ -12,7 +12,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.0.0",
+        "version": "6.1.0",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
@@ -34,7 +34,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.13.3",
+        "version": "1.14.1",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -88,12 +88,6 @@
       "bom-ref": "bundle-dependencies@1.0.2",
       "author": "Gajus Kuizinas",
       "description": "Generates bundledDependencies package.json value using values of the dependencies property.",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "7ccf50f6125c5f56589f28ef7874e9b4566aa4b2833b681dc5186e07c30d498110bc2ea42260c31f6d37f09fed1df72e5742511948fc9fc6b10d8d009c59177c"
-        }
-      ],
       "licenses": [
         {
           "license": {
@@ -106,7 +100,13 @@
         {
           "url": "https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz",
           "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "7ccf50f6125c5f56589f28ef7874e9b4566aa4b2833b681dc5186e07c30d498110bc2ea42260c31f6d37f09fed1df72e5742511948fc9fc6b10d8d009c59177c"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
         },
         {
           "url": "https://github.com/gajus/bundle-dependencies/issues",

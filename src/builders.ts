@@ -469,29 +469,32 @@ export class BomBuilder {
     // older npm-ls versions (v6) hide properties behind a `_`
     const resolved = data.resolved ?? data._resolved
     if (typeof resolved === 'string' && !this.resolvedRE_ignore.test(resolved)) {
+      const hashes = new Models.HashDictionary()
+      // older npm-ls versions (v6) hide properties behind a `_`
+      const integrity = data.integrity ?? data._integrity
+      if (typeof integrity === 'string') {
+        for (const [hashAlgorithm, hashRE] of this.integrityRE) {
+          const hashMatchBase64 = hashRE.exec(integrity) ?? []
+          if (hashMatchBase64?.length === 2) {
+            hashes.set(
+              hashAlgorithm,
+              Buffer.from(hashMatchBase64[1], 'base64').toString('hex')
+            )
+            break // there is only one hash in "integrity"
+          }
+        }
+      }
       component.externalReferences.add(
         new Models.ExternalReference(
           resolved,
           Enums.ExternalReferenceType.Distribution,
-          { comment: 'as detected from npm-ls property "resolved"' }
+          {
+            hashes,
+            comment: 'as detected from npm-ls property "resolved"' +
+              (hashes.size > 0 ? ' and property "integrity"' : '')
+          }
         )
       )
-    }
-
-    // older npm-ls versions (v6) hide properties behind a `_`
-    const integrity = data.integrity ?? data._integrity
-    if (typeof integrity === 'string') {
-      for (const [hashAlgorithm, hashRE] of this.integrityRE) {
-        const hashMatchBase64 = hashRE.exec(integrity) ?? []
-        if (hashMatchBase64?.length === 2) {
-          component.hashes.set(
-            hashAlgorithm,
-            Buffer.from(hashMatchBase64[1], 'base64').toString('hex')
-          )
-          // there is only one hash in "integrity"
-          break
-        }
-      }
     }
 
     // even private packages may have a PURL for identification

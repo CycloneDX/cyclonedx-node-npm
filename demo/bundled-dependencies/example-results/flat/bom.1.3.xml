@@ -9,12 +9,12 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>6.0.0</version>
+        <version>6.1.0</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.13.3</version>
+        <version>1.14.1</version>
       </tool>
     </tools>
     <component type="application" bom-ref="demo-bundled-deps@0.0.0">
@@ -39,9 +39,6 @@
       <name>bundle-dependencies</name>
       <version>1.0.2</version>
       <description>Generates bundledDependencies package.json value using values of the dependencies property.</description>
-      <hashes>
-        <hash alg="SHA-512">7ccf50f6125c5f56589f28ef7874e9b4566aa4b2833b681dc5186e07c30d498110bc2ea42260c31f6d37f09fed1df72e5742511948fc9fc6b10d8d009c59177c</hash>
-      </hashes>
       <licenses>
         <license>
           <id>BSD-3-Clause</id>
@@ -51,7 +48,10 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+          <hashes>
+            <hash alg="SHA-512">7ccf50f6125c5f56589f28ef7874e9b4566aa4b2833b681dc5186e07c30d498110bc2ea42260c31f6d37f09fed1df72e5742511948fc9fc6b10d8d009c59177c</hash>
+          </hashes>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/gajus/bundle-dependencies/issues</url>
