@@ -87,18 +87,18 @@
       "group": "@types",
       "version": "20.5.7",
       "bom-ref": "@types/node@20.5.7",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "74fedfdcb759232b199e6bcfdc03496134b083ec0b2e5f29ed1aa7895955ee3fa85d25c06edf61d16201166272e629d66685fdc1937a797c7e61777d461dd104"
-        }
-      ],
       "purl": "pkg:npm/%40types/node@20.5.7",
       "externalReferences": [
         {
           "url": "https://registry.npmjs.org/@types/node/-/node-20.5.7.tgz",
           "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "74fedfdcb759232b199e6bcfdc03496134b083ec0b2e5f29ed1aa7895955ee3fa85d25c06edf61d16201166272e629d66685fdc1937a797c7e61777d461dd104"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
         }
       ],
       "properties": [
@@ -119,18 +119,18 @@
       "version": "8.3.4",
       "bom-ref": "@types/uuid@8.3.4",
       "scope": "optional",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "73f23c6516f9d63fa960602ee42ac5311c6a67691ee32da0ac404ee4052381291293ea93d846be39d584973fce88c7f930da67d9bd7b92e541c192d0257ce287"
-        }
-      ],
       "purl": "pkg:npm/%40types/uuid@8.3.4",
       "externalReferences": [
         {
           "url": "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz",
           "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "73f23c6516f9d63fa960602ee42ac5311c6a67691ee32da0ac404ee4052381291293ea93d846be39d584973fce88c7f930da67d9bd7b92e541c192d0257ce287"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
         }
       ],
       "properties": [
@@ -150,18 +150,18 @@
       "version": "8.3.2",
       "bom-ref": "uuid@8.3.2",
       "scope": "optional",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "f8d62cd9078c5b2f865853849bdc679fa1c20e9d25ed0043ee697cccb52627ef77439345d0da1c12b9f09139175453625f7fdfa42e9a7d2f0385bfe0cfb47b7a"
-        }
-      ],
       "purl": "pkg:npm/uuid@8.3.2",
       "externalReferences": [
         {
           "url": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
           "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "f8d62cd9078c5b2f865853849bdc679fa1c20e9d25ed0043ee697cccb52627ef77439345d0da1c12b9f09139175453625f7fdfa42e9a7d2f0385bfe0cfb47b7a"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
         }
       ],
       "properties": [
@@ -181,18 +181,18 @@
       "version": "6.2.13",
       "bom-ref": "uuidv4@6.2.13",
       "scope": "optional",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "017cb33236b3601de8bcbdead39d552c7d3a2318fffca9f1ed09d44a2d53fff21ede2a3a0a9b0fbbd9d530ec793282d687ac55d01f49d2121ac6e9e0c5751b3d"
-        }
-      ],
       "purl": "pkg:npm/uuidv4@6.2.13",
       "externalReferences": [
         {
           "url": "https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz",
           "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "017cb33236b3601de8bcbdead39d552c7d3a2318fffca9f1ed09d44a2d53fff21ede2a3a0a9b0fbbd9d530ec793282d687ac55d01f49d2121ac6e9e0c5751b3d"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
         }
       ],
       "properties": [

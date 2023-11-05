@@ -12,7 +12,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.0.0",
+        "version": "6.1.0",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
@@ -34,7 +34,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.13.3",
+        "version": "1.14.1",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -88,12 +88,6 @@
       "version": "18.15.11",
       "bom-ref": "@types/node@18.15.11",
       "description": "TypeScript definitions for Node.js",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "1392b0ab69f849b33340e9fac279818ee2bda2eaa5511adc64355f6e8f5fb430d316dde793b64a2b818c3b3a18827a5024a731c10c3e946681bef94ca34a8dfd"
-        }
-      ],
       "licenses": [
         {
           "license": {
@@ -106,7 +100,13 @@
         {
           "url": "https://registry.npmjs.org/@types/node/-/node-18.15.11.tgz",
           "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "1392b0ab69f849b33340e9fac279818ee2bda2eaa5511adc64355f6e8f5fb430d316dde793b64a2b818c3b3a18827a5024a731c10c3e946681bef94ca34a8dfd"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
         },
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -143,12 +143,6 @@
       "bom-ref": "@types/uuid@8.3.4",
       "description": "TypeScript definitions for uuid",
       "scope": "optional",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "73f23c6516f9d63fa960602ee42ac5311c6a67691ee32da0ac404ee4052381291293ea93d846be39d584973fce88c7f930da67d9bd7b92e541c192d0257ce287"
-        }
-      ],
       "licenses": [
         {
           "license": {
@@ -161,7 +155,13 @@
         {
           "url": "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz",
           "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "73f23c6516f9d63fa960602ee42ac5311c6a67691ee32da0ac404ee4052381291293ea93d846be39d584973fce88c7f930da67d9bd7b92e541c192d0257ce287"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
         },
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -197,12 +197,6 @@
       "bom-ref": "uuid@8.3.2",
       "description": "RFC4122 (v1, v4, and v5) UUIDs",
       "scope": "optional",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "f8d62cd9078c5b2f865853849bdc679fa1c20e9d25ed0043ee697cccb52627ef77439345d0da1c12b9f09139175453625f7fdfa42e9a7d2f0385bfe0cfb47b7a"
-        }
-      ],
       "licenses": [
         {
           "license": {
@@ -215,7 +209,13 @@
         {
           "url": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
           "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "f8d62cd9078c5b2f865853849bdc679fa1c20e9d25ed0043ee697cccb52627ef77439345d0da1c12b9f09139175453625f7fdfa42e9a7d2f0385bfe0cfb47b7a"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
         },
         {
           "url": "https://github.com/uuidjs/uuid/issues",
@@ -251,12 +251,6 @@
       "bom-ref": "uuidv4@6.2.13",
       "description": "uuidv4 creates v4 UUIDs.",
       "scope": "optional",
-      "hashes": [
-        {
-          "alg": "SHA-512",
-          "content": "017cb33236b3601de8bcbdead39d552c7d3a2318fffca9f1ed09d44a2d53fff21ede2a3a0a9b0fbbd9d530ec793282d687ac55d01f49d2121ac6e9e0c5751b3d"
-        }
-      ],
       "licenses": [
         {
           "license": {
@@ -269,7 +263,13 @@
         {
           "url": "https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz",
           "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "017cb33236b3601de8bcbdead39d552c7d3a2318fffca9f1ed09d44a2d53fff21ede2a3a0a9b0fbbd9d530ec793282d687ac55d01f49d2121ac6e9e0c5751b3d"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
         },
         {
           "url": "https://github.com/thenativeweb/uuidv4/issues",

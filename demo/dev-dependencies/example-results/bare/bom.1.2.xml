@@ -9,12 +9,12 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>6.0.0</version>
+        <version>6.1.0</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.13.3</version>
+        <version>1.14.1</version>
       </tool>
     </tools>
     <component type="application" bom-ref="demo-dev-dependencies@0.0.0">
@@ -35,9 +35,6 @@
       <name>node</name>
       <version>18.15.11</version>
       <description>TypeScript definitions for Node.js</description>
-      <hashes>
-        <hash alg="SHA-512">1392b0ab69f849b33340e9fac279818ee2bda2eaa5511adc64355f6e8f5fb430d316dde793b64a2b818c3b3a18827a5024a731c10c3e946681bef94ca34a8dfd</hash>
-      </hashes>
       <licenses>
         <license>
           <id>MIT</id>
@@ -47,7 +44,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/@types/node/-/node-18.15.11.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
@@ -69,9 +66,6 @@
       <version>8.3.4</version>
       <description>TypeScript definitions for uuid</description>
       <scope>optional</scope>
-      <hashes>
-        <hash alg="SHA-512">73f23c6516f9d63fa960602ee42ac5311c6a67691ee32da0ac404ee4052381291293ea93d846be39d584973fce88c7f930da67d9bd7b92e541c192d0257ce287</hash>
-      </hashes>
       <licenses>
         <license>
           <id>MIT</id>
@@ -81,7 +75,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
@@ -102,9 +96,6 @@
       <version>8.3.2</version>
       <description>RFC4122 (v1, v4, and v5) UUIDs</description>
       <scope>optional</scope>
-      <hashes>
-        <hash alg="SHA-512">f8d62cd9078c5b2f865853849bdc679fa1c20e9d25ed0043ee697cccb52627ef77439345d0da1c12b9f09139175453625f7fdfa42e9a7d2f0385bfe0cfb47b7a</hash>
-      </hashes>
       <licenses>
         <license>
           <id>MIT</id>
@@ -114,7 +105,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/uuidjs/uuid/issues</url>
@@ -135,9 +126,6 @@
       <version>6.2.13</version>
       <description>uuidv4 creates v4 UUIDs.</description>
       <scope>optional</scope>
-      <hashes>
-        <hash alg="SHA-512">017cb33236b3601de8bcbdead39d552c7d3a2318fffca9f1ed09d44a2d53fff21ede2a3a0a9b0fbbd9d530ec793282d687ac55d01f49d2121ac6e9e0c5751b3d</hash>
-      </hashes>
       <licenses>
         <license>
           <id>MIT</id>
@@ -147,7 +135,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/thenativeweb/uuidv4/issues</url>
