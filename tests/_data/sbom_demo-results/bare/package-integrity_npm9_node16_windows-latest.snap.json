@@ -125,8 +125,8 @@
           "type": "distribution",
           "hashes": [
             {
-              "alg": "SHA-512",
-              "content": "cef8fae53905788b778ba6a3e5b22f243ce38d0406b38a3fb0da1ece0d45d6461aa7d36eda3714769c334522531cc3331b41fb6d9927e2b350a489a1bb1597d8"
+              "alg": "SHA-384",
+              "content": "e61d498b4e0d47671b8e26354a16f2d7a48f077044b42496c5519dc0f5fe00e7b07982b54808f22cb81b278997000554"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -158,8 +158,8 @@
               "type": "distribution",
               "hashes": [
                 {
-                  "alg": "SHA-512",
-                  "content": "98b4388b640ed72b6f19615699c9e028efff257010b9e66fc042ad8e04053388c82b4914fb2b4c7e994bf23fa7e66b2939f8c7c28020fbdca16fb0700079b7ea"
+                  "alg": "SHA-1",
+                  "content": "58ece8cb75dd07e71ed08c736abc5fac4dbf8df1"
                 }
               ],
               "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -193,8 +193,8 @@
           "type": "distribution",
           "hashes": [
             {
-              "alg": "SHA-512",
-              "content": "e2f7fb2362d857f1da59ead2a375e694c929e5e67cde2fbf08396e5e2fc8193b3f3b5b1e8c13614ed9f1ce64597ef394aa3ee5663a8791e4efa604850e55994e"
+              "alg": "SHA-256",
+              "content": "603e6b4c40da1551bbaabe8aa8a4b35f62f132b0b60e99906a59f0ad04d47ae2"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
