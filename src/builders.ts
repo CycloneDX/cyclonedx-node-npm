@@ -365,6 +365,17 @@ export class BomBuilder {
    * > string for the artifact that was unpacked in this location.
    */
   private readonly integrityRE: ReadonlyMap<Enums.HashAlgorithm, RegExp> = new Map([
+    // !!! this list is pre-sorted, starting with most-common usage.
+
+    /* base64 alphabet: `A-Za-z0-9+/` and `=` for padding
+     * SHA-512 => base64 over 512 bit => 86 chars + 2 chars padding.
+     * examples:
+     * - sha512-zvj65TkFeIt3i6aj5bIvJDzjjQQGs4o/sNoezg1F1kYap9Nu2jcUdpwzRSJTHMMzG0H7bZkn4rNQpImhuxWX2A==
+     * - sha512-DXUS22Y57/LAFSg3x7Vi6RNAuLpTXwxB9S2nIA7msBb/Zt8p7XqMwdpdc1IU7CkOQUPgAqR5fWvxuKCbneKGmA==
+     * - sha512-5BejraMXMC+2UjefDvrH0Fo/eLwZRV6859SXRg+FgbhA0R0l6lDqDGAQYhKbXhPN2ofk2kY5sgGyLNL907UXpA==
+     */
+    [Enums.HashAlgorithm['SHA-512'], /^sha512-([a-z0-9+/]{86}==)$/i],
+
     /* base64 alphabet: `A-Za-z0-9+/` and `=` for padding
      * SHA-1 => base64 over 160 bit => 27 chars + 1 chars padding.
      * examples:
@@ -373,14 +384,24 @@ export class BomBuilder {
      * - sha1-XV8g50dxuFICXD7bZslGLuuRPQM=
      */
     [Enums.HashAlgorithm['SHA-1'], /^sha1-([a-z0-9+/]{27}=)$/i],
+
     /* base64 alphabet: `A-Za-z0-9+/` and `=` for padding
-     * SHA-512 => base64 over 512 bit => 86 chars + 2 chars padding.
+     * SHA-256 => base64 over 256 bit => 43 chars + 1 chars padding.
      * examples:
-     * - sha512-zvj65TkFeIt3i6aj5bIvJDzjjQQGs4o/sNoezg1F1kYap9Nu2jcUdpwzRSJTHMMzG0H7bZkn4rNQpImhuxWX2A==
-     * - sha512-DXUS22Y57/LAFSg3x7Vi6RNAuLpTXwxB9S2nIA7msBb/Zt8p7XqMwdpdc1IU7CkOQUPgAqR5fWvxuKCbneKGmA==
-     * - sha512-5BejraMXMC+2UjefDvrH0Fo/eLwZRV6859SXRg+FgbhA0R0l6lDqDGAQYhKbXhPN2ofk2kY5sgGyLNL907UXpA==
+     * - sha256-jxzgcB+8dLn7Cjjyg7stGWMftZf6rbdvgoE85TOzmT4=
+     * - sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+     * - sha256-+8Gp+Fjqnhd5FpZL2Iw9N7kaHoRBJ2XimVB3fyZcS3U=
      */
-    [Enums.HashAlgorithm['SHA-512'], /^sha512-([a-z0-9+/]{86}==)$/i]
+    [Enums.HashAlgorithm['SHA-256'], /^sha256-([a-z0-9+/]{43}=)$/i],
+
+    /* base64 alphabet: `A-Za-z0-9+/` and `=` for padding
+     * SHA-384 => base64 over 384 bit => 64 chars + 0 chars padding.
+     * example:
+     * - sha384-aDkxLz2zQ0dwcNPAsr7NQXs1cVTUh5TQHXjPtGF+1auBmne2gy9lQt0Yu3OBMe9+
+     * - sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
+     * - sha384-/b2OdaZ/KfcBpOBAOF4uI5hjA+oQI5IRr5B/y7g1eLPkF8txzmRu/QgZ3YwIjeG9
+     */
+    [Enums.HashAlgorithm['SHA-384'], /^sha384-([a-z0-9+/]{64})$/i]
   ])
 
   /**

@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 * Fixed
   * SBOM results might have the `externalReferences[].hashes` populated ([#1118] via [#1120])  
     The hashes might have wrongly appeared as `components[].hashes` before.
+  * Components' distribution integrity hash of "sha256" is properly detected and populated in the SBOM result (via [#])
+  * Components' distribution integrity hash of "sha384" is properly detected and populated in the SBOM result (via [#])
 * Misc
   * Raised dependency `@cyclonedx/cyclonedx-library@^6.1.0`, was `@^3||^4||^5||^6` (via [#1120])
 
