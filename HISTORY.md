@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## : - 2023-11-06
+
 * Fixed
   * SBOM results might have the `externalReferences[].hashes` populated ([#1118] via [#1120])  
     The hashes might have wrongly appeared as `components[].hashes` before.
