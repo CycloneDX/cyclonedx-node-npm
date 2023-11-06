@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
-## : - 2023-11-06
+## 1.14.2 - 2023-11-06
 
 * Fixed
   * SBOM results might have the `externalReferences[].hashes` populated ([#1118] via [#1120])  
