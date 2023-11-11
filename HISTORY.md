@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Fixed
+  * Added direct dependency `packageurl-js` as such (via [#1122])
+
+[#1122]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1122
+
 ## 1.14.2 - 2023-11-06
 
 * Fixed
