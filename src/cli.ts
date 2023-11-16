@@ -93,7 +93,7 @@ function makeCommand (process: NodeJS.Process): Command {
     new Option(
       '--short-PURLs',
       'Omit all qualifiers from PackageURLs.\n' +
-      'This causes information loss in trade of shorter PURLs, which might improve digesting these strings.'
+      'This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.'
     ).default(false)
   ).addOption(
     new Option(
