@@ -91,7 +91,7 @@ Options:
                             This means the actual nesting of node packages is not represented in the SBOM result.
                             (default: false)
   --short-PURLs             Omit all qualifiers from PackageURLs.
-                            This causes information loss in trade of shorter PURLs, which might improve digesting these strings.
+                            This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.
                             (default: false)
   --spec-version <version>  Which version of CycloneDX spec to use.
                             (choices: "1.2", "1.3", "1.4", "1.5", default: "1.4")
