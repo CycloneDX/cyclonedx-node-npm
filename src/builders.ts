@@ -547,10 +547,12 @@ export class BomBuilder {
     if (typeof rootPath !== 'string' || rootPath === '') {
       return
     }
+    /* eslint-disable @typescript-eslint/unbound-method */
     // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
     const [relativePath, dirSep] = rootPath[0] === '/'
       ? [path.posix.relative, '/']
       : [path.win32.relative, '\\']
+    /* eslint-enable @typescript-eslint/unbound-method */
     for (const component of components) {
       for (const property of component.properties) {
         if (property.name !== PropertyNames.PackageInstallPath) {
