@@ -9,11 +9,14 @@ All notable changes to this project will be documented in this file.
 * Docs
   * Fixed typos (via [#1123])
 * Style
-  * Applied latest code standards (via [#1124]) 
+  * Applied latest code standards (via [#1124])
+* Build
+  * Use _TypeScript_ `v5.3.2` now, was `v5.2.2` (via [#1125])
 
 [#1122]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1122
 [#1123]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1123
 [#1124]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1124
+[#1125]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1125
 
 ## 1.14.2 - 2023-11-06
 
