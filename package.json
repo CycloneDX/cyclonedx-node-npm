@@ -58,7 +58,7 @@
     "xmlbuilder2": "^3.0.2"
   },
   "devDependencies": {
-    "@types/node": "ts5.2",
+    "@types/node": "ts5.3",
     "@types/normalize-package-data": "^2.4.1",
     "eslint": "8.54.0",
     "eslint-config-standard": "17.1.0",
