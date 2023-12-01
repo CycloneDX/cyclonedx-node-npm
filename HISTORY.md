@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.14.3 - 2023-12-01
+
 * Fixed
   * Added direct dependency `packageurl-js` as such (via [#1122])
 * Docs
