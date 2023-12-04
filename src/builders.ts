@@ -17,11 +17,12 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
 import { existsSync } from 'node:fs'
+import * as path from 'node:path'
+
+import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
 import * as normalizePackageData from 'normalize-package-data'
 import { type PackageURL } from 'packageurl-js'
-import * as path from 'node:path'
 
 import { type Logger } from './logger'
 import { makeNpmRunner, type runFunc } from './npmRunner'
@@ -104,11 +105,11 @@ export class BomBuilder {
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
       }).toString().trim()
     } catch (runError: any) {
-      const {stdout, message, stderr} = runError;
+      const { stdout, message, stderr } = runError
 
-      this.logger.debug({stdout}, 'npm-ls:')
-      this.logger.warn({message}, 'npm-ls:')
-      this.logger.error({stderr}, 'npm-ls:')
+      this.logger.debug({ stdout }, 'npm-ls:')
+      this.logger.warn({ message }, 'npm-ls:')
+      this.logger.error({ stderr }, 'npm-ls:')
 
       throw runError
     }
@@ -174,10 +175,10 @@ export class BomBuilder {
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
       })
     } catch (runError: any) {
-      const {message, stderr} = runError;
+      const { message, stderr } = runError
 
-      this.logger.warn({message}, 'npm-ls:')
-      this.logger.error({stderr}, 'npm-ls:')
+      this.logger.warn({ message }, 'npm-ls:')
+      this.logger.error({ stderr }, 'npm-ls:')
 
       if (!this.ignoreNpmErrors) {
         throw new Error(`npm-ls exited with errors: ${
@@ -440,7 +441,6 @@ export class BomBuilder {
 
     const component = this.componentBuilder.makeComponent(_dataC, type)
     if (component === undefined) {
-
       this.logger.debug(`skip broken component: ${data.name} ${data._id}`)
       return undefined
     }

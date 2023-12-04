@@ -17,11 +17,12 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { stderr } from 'node:process';
+import { stderr } from 'node:process'
+
 import { type BaseLogger, type Level, type LevelWithSilent, pino } from 'pino'
 
 const logLevels: Level[] = ['debug', 'error', 'fatal', 'warn', 'info', 'trace'] as const
-export const verbosityLevels: LevelWithSilent[] = [...logLevels, 'silent'] as const;
+export const verbosityLevels: LevelWithSilent[] = [...logLevels, 'silent'] as const
 
 // all output shall be bound to stdError - stdOut is for result output only
 const streams = logLevels.map((level) => ({ level, stream: stderr }))
@@ -29,15 +30,14 @@ const streams = logLevels.map((level) => ({ level, stream: stderr }))
 export type Logger = BaseLogger
 export type VerbosityLevel = LevelWithSilent
 
-export const createLogger = (verbosityLevel: VerbosityLevel): Logger =>  pino({
+export const createLogger = (verbosityLevel: VerbosityLevel): Logger => pino({
   name: 'cyclonedx-node-npm',
   level: verbosityLevel,
   transport: {
     target: 'pino-pretty',
     options: {
       colorize: true,
-      ignore: 'pid,name,hostname',
+      ignore: 'pid,name,hostname'
     }
   }
 }, pino.multistream(streams))
-

@@ -24,8 +24,7 @@ import { Builders, Enums, Factories, Serialize, Spec, Validation } from '@cyclon
 import { Argument, Command, Option } from 'commander'
 
 import { BomBuilder, TreeBuilder } from './builders'
-import { createLogger, VerbosityLevel, verbosityLevels } from "./logger";
-
+import { createLogger, type VerbosityLevel, verbosityLevels } from './logger'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -213,7 +212,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
   }
   logger.debug(packageFile, 'packageFile:')
   const projectDir = dirname(packageFile)
-  logger.info( `projectDir: "${projectDir}"`)
+  logger.info(`projectDir: "${projectDir}"`)
 
   if (existsSync(resolve(projectDir, 'npm-shrinkwrap.json'))) {
     logger.debug('detected a npm shrinkwrap file')
