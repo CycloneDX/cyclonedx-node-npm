@@ -18,11 +18,12 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
-import { existsSync } from 'fs'
+import { existsSync } from 'node:fs'
 import * as normalizePackageData from 'normalize-package-data'
 import { type PackageURL } from 'packageurl-js'
-import * as path from 'path'
+import * as path from 'node:path'
 
+import { type Logger } from './logger'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
@@ -57,7 +58,7 @@ export class BomBuilder {
   flattenComponents: boolean
   shortPURLs: boolean
 
-  console: Console
+  logger: Logger
 
   constructor (
     toolBuilder: BomBuilder['toolBuilder'],
@@ -65,7 +66,7 @@ export class BomBuilder {
     treeBuilder: BomBuilder['treeBuilder'],
     purlFactory: BomBuilder['purlFactory'],
     options: BomBuilderOptions,
-    console_: BomBuilder['console']
+    logger_: BomBuilder['logger']
   ) {
     this.toolBuilder = toolBuilder
     this.componentBuilder = componentBuilder
@@ -80,7 +81,7 @@ export class BomBuilder {
     this.flattenComponents = options.flattenComponents ?? false
     this.shortPURLs = options.shortPURLs ?? false
 
-    this.console = console_
+    this.logger = logger_
   }
 
   buildFromProjectDir (projectDir: string, process: NodeJS.Process): Models.Bom {
@@ -95,7 +96,7 @@ export class BomBuilder {
 
   private getNpmVersion (npmRunner: runFunc, process_: NodeJS.Process): string {
     let version: string
-    this.console.info('INFO  | detect NPM version ...')
+    this.logger.info('detect NPM version ...')
     try {
       version = npmRunner(['--version'], {
         env: process_.env,
@@ -103,23 +104,20 @@ export class BomBuilder {
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
       }).toString().trim()
     } catch (runError: any) {
-      this.console.group('DEBUG | npm-ls: STDOUT')
-      this.console.debug('%s', runError.stdout)
-      this.console.groupEnd()
-      this.console.group('WARN  | npm-ls: MESSAGE')
-      this.console.warn('%s', runError.message)
-      this.console.groupEnd()
-      this.console.group('ERROR | npm-ls: STDERR')
-      this.console.error('%s', runError.stderr)
-      this.console.groupEnd()
+      const {stdout, message, stderr} = runError;
+
+      this.logger.debug({stdout}, 'npm-ls:')
+      this.logger.warn({message}, 'npm-ls:')
+      this.logger.error({stderr}, 'npm-ls:')
+
       throw runError
     }
-    this.console.debug('DEBUG | detected NPM version %j', version)
+    this.logger.debug(`detected NPM version "${version}"`)
     return version
   }
 
   private fetchNpmLs (projectDir: string, process_: NodeJS.Process): [any, string | undefined] {
-    const npmRunner = makeNpmRunner(process_, this.console)
+    const npmRunner = makeNpmRunner(process_, this.logger)
 
     const npmVersionR = this.getNpmVersion(npmRunner, process_)
     const npmVersionT = this.versionTuple(npmVersionR)
@@ -140,7 +138,7 @@ export class BomBuilder {
       if (npmVersionT[0] >= 7) {
         args.push('--package-lock-only')
       } else {
-        this.console.warn('WARN  | your NPM does not support "--package-lock-only", internally skipped this option')
+        this.logger.warn('your NPM does not support "--package-lock-only", internally skipped this option')
       }
     }
 
@@ -154,20 +152,19 @@ export class BomBuilder {
       for (const odt of this.omitDependencyTypes) {
         switch (odt) {
           case 'dev':
-            this.console.warn('WARN  | your NPM does not support "--omit=%s", internally using "--production" to mitigate', odt)
+            this.logger.warn(`your NPM does not support "--omit=${odt}", internally using "--production" to mitigate`)
             args.push('--production')
             break
           case 'peer':
           case 'optional':
-            this.console.warn('WARN  | your NPM does not support "--omit=%s", internally skipped this option', odt)
+            this.logger.warn(`your NPM does not support "--omit=${odt}", internally skipped this option`)
             break
         }
       }
     }
 
-    // TODO use instead ? : https://www.npmjs.com/package/debug ?
-    this.console.info('INFO  | gather dependency tree ...')
-    this.console.debug('DEBUG | npm-ls: run npm with %j in %j', args, projectDir)
+    this.logger.info('gather dependency tree ...')
+    this.logger.debug(`npm-ls: run npm with ${JSON.stringify(args)} in "${projectDir}"`)
     let npmLsReturns: Buffer
     try {
       npmLsReturns = npmRunner(args, {
@@ -177,24 +174,20 @@ export class BomBuilder {
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
       })
     } catch (runError: any) {
-      // this.console.group('DEBUG | npm-ls: STDOUT')
-      // this.console.debug('%s', runError.stdout)
-      // this.console.groupEnd()
-      this.console.group('WARN  | npm-ls: MESSAGE')
-      this.console.warn('%s', runError.message)
-      this.console.groupEnd()
-      this.console.group('ERROR | npm-ls: STDERR')
-      this.console.error('%s', runError.stderr)
-      this.console.groupEnd()
+      const {message, stderr} = runError;
+
+      this.logger.warn({message}, 'npm-ls:')
+      this.logger.error({stderr}, 'npm-ls:')
+
       if (!this.ignoreNpmErrors) {
         throw new Error(`npm-ls exited with errors: ${
           runError.status as string ?? 'noStatus'} ${
           runError.signal as string ?? 'noSignal'}`)
       }
-      this.console.debug('DEBUG | npm-ls exited with errors that are to be ignored.')
+      this.logger.debug('npm-ls exited with errors that are to be ignored.')
       npmLsReturns = runError.stdout ?? Buffer.alloc(0)
     }
-    // this.console.debug('stdout: %s', npmLsReturns)
+
     try {
       return [
         JSON.parse(npmLsReturns.toString()),
@@ -207,8 +200,7 @@ export class BomBuilder {
   }
 
   buildFromNpmLs (data: any, npmVersion?: string): Models.Bom {
-    // TODO use instead ? : https://www.npmjs.com/package/debug ?
-    this.console.info('INFO  | build BOM ...')
+    this.logger.info('build BOM ...')
 
     // region all components & dependencies
 
@@ -327,7 +319,7 @@ export class BomBuilder {
         dep = _dep ??
           new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
         if (dep instanceof DummyComponent) {
-          this.console.warn('WARN  | InterferedDependency $j', dep.name)
+          this.logger.warn(`InterferedDependency "${dep.name}"`)
         }
 
         allComponents.set(depData.path, dep)
@@ -415,21 +407,21 @@ export class BomBuilder {
     // older npm-ls versions (v6) hide properties behind a `_`
     const isOptional = (data.optional ?? data._optional) === true
     if (isOptional && this.omitDependencyTypes.has('optional')) {
-      this.console.debug('DEBUG | omit optional component: %j %j', data.name, data._id)
+      this.logger.debug(`omit optional component: ${data.name} ${data._id}`)
       return false
     }
 
     // older npm-ls versions (v6) hide properties behind a `_`
     const isDev = (data.dev ?? data._development) === true
     if (isDev && this.omitDependencyTypes.has('dev')) {
-      this.console.debug('DEBUG | omit dev component: %j %j', data.name, data._id)
+      this.logger.debug(`omit dev component: ${data.name} ${data._id}`)
       return false
     }
 
     // attention: `data.devOptional` are not to be skipped with devs, since they are still required by optionals.
     const isDevOptional = data.devOptional === true
     if (isDevOptional && this.omitDependencyTypes.has('dev') && this.omitDependencyTypes.has('optional')) {
-      this.console.debug('DEBUG | omit devOptional component: %j %j', data.name, data._id)
+      this.logger.debug(`omit devOptional component: ${data.name} ${data._id}`)
       return false
     }
 
@@ -448,7 +440,8 @@ export class BomBuilder {
 
     const component = this.componentBuilder.makeComponent(_dataC, type)
     if (component === undefined) {
-      this.console.debug('DEBUG | skip broken component: %j %j', data.name, data._id)
+
+      this.logger.debug(`skip broken component: ${data.name} ${data._id}`)
       return undefined
     }
 
