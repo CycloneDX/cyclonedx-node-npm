@@ -24,7 +24,7 @@ import { Builders, Enums, Factories, Serialize, Spec, Validation } from '@cyclon
 import { Argument, Command, Option } from 'commander'
 
 import { BomBuilder, TreeBuilder } from './builders'
-import { createLogger, type VerbosityLevel, verbosityLevels } from './logger'
+import { createLogger, defaultLogLevel, type VerbosityLevel, verbosityLevels } from './logger'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -66,7 +66,7 @@ function makeCommand (process: NodeJS.Process): Command {
       '--verbosity <verbosity>',
       'Which verbosity level the logger should write to STDERR'
     ).choices(verbosityLevels
-    ).default('warn')
+    ).default(defaultLogLevel)
   ).addOption(
     new Option(
       '--ignore-npm-errors',

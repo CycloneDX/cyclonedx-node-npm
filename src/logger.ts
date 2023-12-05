@@ -41,3 +41,5 @@ export const createLogger = (verbosityLevel: VerbosityLevel): Logger => pino({
     }
   }
 }, pino.multistream(streams))
+
+export const defaultLogLevel: VerbosityLevel = 'warn'
