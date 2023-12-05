@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { stderr } from 'node:process'
 
-import { type BaseLogger, type Level, type LevelWithSilent, pino } from 'pino'
+import { type BaseLogger, type Level, type LevelWithSilent, type LoggerExtras, pino } from 'pino'
 
 const logLevels: Level[] = ['debug', 'error', 'fatal', 'warn', 'info', 'trace'] as const
 export const verbosityLevels: LevelWithSilent[] = [...logLevels, 'silent'] as const
@@ -27,10 +27,15 @@ export const verbosityLevels: LevelWithSilent[] = [...logLevels, 'silent'] as co
 // all output shall be bound to stdError - stdOut is for result output only
 const streams = logLevels.map((level) => ({ level, stream: stderr }))
 
-export type Logger = BaseLogger
+export type Logger = BaseLogger & LoggerExtras<{
+  level: LevelWithSilent
+  name: string
+  transport: { options: { colorize: boolean, ignore: string }, target: string }
+}>
+
 export type VerbosityLevel = LevelWithSilent
 
-export const createLogger = (verbosityLevel: VerbosityLevel): Logger => pino({
+export const createLogger: (verbosityLevel: VerbosityLevel) => Logger = (verbosityLevel: VerbosityLevel) => pino({
   name: 'cyclonedx-node-npm',
   level: verbosityLevel,
   transport: {

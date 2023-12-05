@@ -249,7 +249,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
       flattenComponents: options.flattenComponents,
       shortPURLs: options.shortPURLs
     },
-    logger
+    logger.child({}, { msgPrefix: 'BomBuilder > ' })
   ).buildFromProjectDir(projectDir, process)
 
   const spec = Spec.SpecVersionDict[options.specVersion]
