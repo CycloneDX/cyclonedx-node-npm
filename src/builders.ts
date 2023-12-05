@@ -107,13 +107,18 @@ export class BomBuilder {
     } catch (runError: any) {
       const { stdout, message, stderr } = runError
 
-      this.logger.debug({ stdout }, 'npm-ls:')
-      this.logger.warn({ message }, 'npm-ls:')
-      this.logger.error({ stderr }, 'npm-ls:')
+      this.logger.debug('npm-ls: STDOUT')
+      this.logger.debug('%s', stdout)
+
+      this.logger.warn('npm-ls: MESSAGE')
+      this.logger.warn('%s', message)
+
+      this.logger.error('npm-ls: STDERR')
+      this.logger.error('%s', stderr)
 
       throw runError
     }
-    this.logger.debug(`detected NPM version "${version}"`)
+    this.logger.debug('detected NPM version %s"', version)
     return version
   }
 
@@ -153,19 +158,19 @@ export class BomBuilder {
       for (const odt of this.omitDependencyTypes) {
         switch (odt) {
           case 'dev':
-            this.logger.warn(`your NPM does not support "--omit=${odt}", internally using "--production" to mitigate`)
+            this.logger.warn('your NPM does not support "--omit=%s", internally using "--production" to mitigate', odt)
             args.push('--production')
             break
           case 'peer':
           case 'optional':
-            this.logger.warn(`your NPM does not support "--omit=${odt}", internally skipped this option`)
+            this.logger.warn('your NPM does not support "--omit=%s", internally skipped this option', odt)
             break
         }
       }
     }
 
     this.logger.info('gather dependency tree ...')
-    this.logger.debug(`npm-ls: run npm with ${JSON.stringify(args)} in "${projectDir}"`)
+    this.logger.debug('npm-ls: run npm with %j in %j', args, projectDir)
     let npmLsReturns: Buffer
     try {
       npmLsReturns = npmRunner(args, {
@@ -177,8 +182,11 @@ export class BomBuilder {
     } catch (runError: any) {
       const { message, stderr } = runError
 
-      this.logger.warn({ message }, 'npm-ls:')
-      this.logger.error({ stderr }, 'npm-ls:')
+      this.logger.warn('npm-ls: MESSAGE')
+      this.logger.warn('%s', message)
+
+      this.logger.error('npm-ls: STDERR')
+      this.logger.error('%s', stderr)
 
       if (!this.ignoreNpmErrors) {
         throw new Error(`npm-ls exited with errors: ${
@@ -320,7 +328,7 @@ export class BomBuilder {
         dep = _dep ??
           new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
         if (dep instanceof DummyComponent) {
-          this.logger.warn(`InterferedDependency "${dep.name}"`)
+          this.logger.warn('InterferedDependency $j', dep.name)
         }
 
         allComponents.set(depData.path, dep)
@@ -408,21 +416,21 @@ export class BomBuilder {
     // older npm-ls versions (v6) hide properties behind a `_`
     const isOptional = (data.optional ?? data._optional) === true
     if (isOptional && this.omitDependencyTypes.has('optional')) {
-      this.logger.debug(`omit optional component: ${data.name} ${data._id}`)
+      this.logger.debug('omit optional component: %j %j', data.name, data._id)
       return false
     }
 
     // older npm-ls versions (v6) hide properties behind a `_`
     const isDev = (data.dev ?? data._development) === true
     if (isDev && this.omitDependencyTypes.has('dev')) {
-      this.logger.debug(`omit dev component: ${data.name} ${data._id}`)
+      this.logger.debug('omit dev component: %j %j', data.name, data._id)
       return false
     }
 
     // attention: `data.devOptional` are not to be skipped with devs, since they are still required by optionals.
     const isDevOptional = data.devOptional === true
     if (isDevOptional && this.omitDependencyTypes.has('dev') && this.omitDependencyTypes.has('optional')) {
-      this.logger.debug(`omit devOptional component: ${data.name} ${data._id}`)
+      this.logger.debug('omit devOptional component: %j %j', data.name, data._id)
       return false
     }
 
@@ -441,7 +449,7 @@ export class BomBuilder {
 
     const component = this.componentBuilder.makeComponent(_dataC, type)
     if (component === undefined) {
-      this.logger.debug(`skip broken component: ${data.name} ${data._id}`)
+      this.logger.debug('skip broken component: %j %j', data.name, data._id)
       return undefined
     }
 

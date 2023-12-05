@@ -204,15 +204,15 @@ export async function run (process: NodeJS.Process): Promise<number> {
   const options: CommandOptions = program.opts()
   const logger = createLogger(options.verbosity)
 
-  logger.debug({ options })
+  logger.debug('options: %j', options)
 
   const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
   if (!existsSync(packageFile)) {
     throw new Error(`missing project's manifest file: ${packageFile}`)
   }
-  logger.debug(packageFile, 'packageFile:')
+  logger.debug('packageFile: %s', packageFile)
   const projectDir = dirname(packageFile)
-  logger.info(`projectDir: "${projectDir}"`)
+  logger.info('projectDir: %s', projectDir)
 
   if (existsSync(resolve(projectDir, 'npm-shrinkwrap.json'))) {
     logger.debug('detected a npm shrinkwrap file')

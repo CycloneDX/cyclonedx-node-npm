@@ -81,10 +81,10 @@ export function makeNpmRunner (process_: NodeJS.Process, logger_: Logger): runFu
 
   if (jsMatcher.test(execPath)) {
     const nodeExecPath = process_.execPath
-    logger_.debug(`makeNpmRunner caused execFileSync "${nodeExecPath}" with  "-- ${execPath}"`)
+    logger_.debug('makeNpmRunner caused execFileSync "%s" with  "-- %s"', nodeExecPath, execPath)
     return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
   }
 
-  logger_.debug(`makeNpmRunner caused execFileSync "${execPath}"`)
+  logger_.debug('makeNpmRunner caused execFileSync "%s"', execPath)
   return (args, options) => execFileSync(execPath, args, options)
 }
