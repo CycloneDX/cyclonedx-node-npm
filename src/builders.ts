@@ -118,7 +118,7 @@ export class BomBuilder {
 
       throw runError
     }
-    this.logger.debug('detected NPM version %s"', version)
+    this.logger.debug('detected NPM version %j', version)
     return version
   }
 
