@@ -89,7 +89,6 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
-        dep-constraints: ['']
         include:
           - # as long as npm cannot auto-resolve engine-constraints, we need to help here
             node-version: '14'
