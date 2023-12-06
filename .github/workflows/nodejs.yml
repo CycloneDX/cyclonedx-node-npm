@@ -116,7 +116,7 @@ jobs:
             ;;
           esac
           ## !! dont install all the dev-packages, especially since some are not runnable on node 14.0.0
-          if [[ -n '$dep-constraints' ]]
+          if [[ -n "$dep_constraints" ]]
           then
             npm add --ignore-scripts --omit=dev --only=prod --production --loglevel=silly --save $dep_constraints
           fi
