@@ -112,7 +112,8 @@ jobs:
         run: |
           set -ex
           ## dont install all the dev-packages, especially since some are not runnable on node 14.0.0
-          if [[ -n '${{ matrix.dep-constraints }}' ]]:
+          if [[ -n '${{ matrix.dep-constraints }}' ]]
+          then
             npm add --ignore-scripts --omit=dev --only=prod --production --loglevel=silly --save '${{ matrix.dep-constraints }}'
           fi
           npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
