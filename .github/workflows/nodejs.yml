@@ -112,7 +112,10 @@ jobs:
         run: |
           set -ex
           ## dont install all the dev-packages, especially since some are not runnable on node 14.0.0
-          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly --no-save ${{ matrix.dep-constraints }}
+          if [[ -n '${{ matrix.dep-constraints }}' ]]:
+            npm i --no-save '${{ matrix.dep-constraints }}'
+          fi
+          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
           ## install the needed dev-deps
