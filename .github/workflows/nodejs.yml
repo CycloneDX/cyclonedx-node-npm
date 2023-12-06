@@ -87,6 +87,7 @@ jobs:
           - '14.0.0'  # lowest supported
         dev-requirements:
           - 'jest jest-junit imurmurhash fast-glob'
+          - 'lol'
         os:
           - ubuntu-latest
           - windows-latest
