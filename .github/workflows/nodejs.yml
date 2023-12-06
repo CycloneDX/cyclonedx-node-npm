@@ -85,7 +85,7 @@ jobs:
           - '16'
           - '14'
           - '14.0.0'  # lowest supported
-        dev-constraints:
+        dev-requirements:
           - jest jest-junit imurmurhash fast-glob
         os:
           - ubuntu-latest
@@ -98,7 +98,7 @@ jobs:
           - # as long as npm cannot auto-resolve engine-constraints, we need to help here
             node-version: '14.0.0'
             dep-constraints: 'normalize-package-data@^3'
-            dev-constraints: 'jest@^26 jest-junit imurmurhash fast-glob'
+            dev-requirements: 'jest@^26 jest-junit imurmurhash fast-glob'
     timeout-minutes: 15
     steps:
       - name: Checkout
@@ -123,7 +123,7 @@ jobs:
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
           ## install the needed dev-deps
-          npm i --ignore-scripts --loglevel=silly --no-save ${{ matrix.dev-constraints }}
+          npm i --ignore-scripts --loglevel=silly --no-save ${{ matrix.dev-requirements }}
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3
