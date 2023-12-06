@@ -104,11 +104,12 @@ jobs:
         shell: bash
         run: |
           set -ex
+          dep_constraints=''
           dev_requirements='jest jest-junit imurmurhash fast-glob'
           # as long as npm cannot auto-resolve engine-constraints, we need to help here
           case '${{ matrix.node-version }}' in
             '14')
-              dep-constraints='normalize-package-data@^5'
+              dep_constraints='normalize-package-data@^5'
             ;;
             '14.0.0')
             dep_constraints='normalize-package-data@^3'
