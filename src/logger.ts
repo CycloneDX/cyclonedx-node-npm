@@ -22,7 +22,6 @@ import { type BaseLogger, type Level, type LevelWithSilent, type LoggerExtras, p
 const logLevels: Level[] = ['debug', 'error', 'fatal', 'warn', 'info', 'trace'] as const
 export const verbosityLevels: LevelWithSilent[] = [...logLevels, 'silent'] as const
 
-
 export type Logger = BaseLogger & LoggerExtras<{
   level: LevelWithSilent
   name: string
@@ -38,7 +37,7 @@ export const createLogger: (verbosityLevel: VerbosityLevel) => Logger = (verbosi
     target: 'pino-pretty',
     options: {
       colorize: true,
-      translateTime: "SYS:yyyy-mm-dd HH:MM:ss.l",
+      translateTime: 'SYS:yyyy-mm-dd HH:MM:ss.l',
       ignore: 'pid,name,hostname',
       destination: 2
     }

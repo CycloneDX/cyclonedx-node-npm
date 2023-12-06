@@ -76,7 +76,7 @@
   },
   "type": "commonjs",
   "engines": {
-    "node": ">=14",
+    "node": ">=14.17.0",
     "npm": "6 - 10"
   },
   "directories": {
