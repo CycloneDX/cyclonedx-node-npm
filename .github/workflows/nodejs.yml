@@ -85,10 +85,17 @@ jobs:
           - '16'
           - '14'
           - '14.0.0'
+        include:
+          - node-version: '14'
+            dep-constraints: 'normalize-package-data@^5'
+          - node-version: '14.0.0'
+            dep-constraints: 'normalize-package-data@^3'
         os:
           - ubuntu-latest
           - windows-latest
           - macos-latest
+        dep-constraints: ['']
+        dev-constraints: ['']
     timeout-minutes: 15
     steps:
       - name: Checkout
@@ -105,11 +112,11 @@ jobs:
         run: |
           set -ex
           ## dont install all the dev-packages, especially since some are not runnable on node 14.0.0
-          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
+          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly ${{ matrix.dep-constraints }}
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
           ## install the needed dev-deps
-          npm i --no-save jest jest-junit imurmurhash fast-glob
+          npm i --no-save jest jest-junit imurmurhash fast-glob  ${{ matrix.dev-constraints }}
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3
