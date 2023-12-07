@@ -241,6 +241,7 @@ describe('cli.run()', () => {
           argv: [
             process.argv[0],
             'dummy_process',
+            '-vvv',
             '--output-reproducible',
             '--validate',
             // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
@@ -311,6 +312,7 @@ describe('cli.run()', () => {
       argv: [
         process.argv[0],
         'dummy_process',
+        '-vvv',
         '--ignore-npm-errors',
         '--output-reproducible',
         '--validate',
