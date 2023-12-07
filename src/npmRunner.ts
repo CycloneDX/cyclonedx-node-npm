@@ -17,9 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'child_process'
-import { existsSync } from 'fs'
-import { resolve } from 'path'
+import { execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'node:child_process'
+import { existsSync } from 'node:fs'
+import { resolve } from 'node:path'
+
+import { type Logger } from './logger'
 
 /** !attention: args might not be shell-save. */
 export type runFunc = (args: string[], options: ExecSyncOptionsWithBufferEncoding) => Buffer
@@ -45,7 +47,7 @@ const jsMatcher = /\.[cm]?js$/
 /**
  * @throws {Error} when npm path unexpected
  */
-function getExecPath (process_: NodeJS.Process, console_: Console): string | undefined {
+function getExecPath (process_: NodeJS.Process, logger_: Logger): string | undefined {
   // `npm_execpath` will be whichever cli script has called this application by npm.
   // This can be `npm`, `npx`, or `undefined` if called by `node` directly.
   const execPath = process_.env.npm_execpath ?? ''
@@ -55,7 +57,7 @@ function getExecPath (process_: NodeJS.Process, console_: Console): string | und
 
   if (npxMatcher.test(execPath)) {
     // `npm` must be used for executing `ls`.
-    console_.debug('DEBUG | command: npx-cli.js usage detected, checking for npm-cli.js ...')
+    logger_.debug('command: npx-cli.js usage detected, checking for npm-cli.js ...')
     // Typically `npm-cli.js` is alongside `npx-cli.js`, as such we attempt to use this and validate it exists.
     // Replace the script in the path, and normalise it with resolve (eliminates any extraneous path separators).
     const npmPath = resolve(execPath.replace(npxMatcher, '$1npm-cli.js'))
@@ -69,20 +71,20 @@ function getExecPath (process_: NodeJS.Process, console_: Console): string | und
   throw new Error(`unexpected NPM execPath: ${execPath}`)
 }
 
-export function makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
-  const execPath = getExecPath(process_, console_)
+export function makeNpmRunner (process_: NodeJS.Process, logger_: Logger): runFunc {
+  const execPath = getExecPath(process_, logger_)
   if (execPath === undefined) {
-    console_.debug('DEBUG | makeNpmRunner caused execSync "npm"')
+    logger_.debug('makeNpmRunner caused execSync "npm"')
     // not shell-save - but this is okay four our use case - since we have complete control over `args` in the caller.
     return (args, options) => execSync('npm ' + args.join(' '), options)
   }
 
   if (jsMatcher.test(execPath)) {
     const nodeExecPath = process_.execPath
-    console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with  "-- %s"', nodeExecPath, execPath)
+    logger_.debug('makeNpmRunner caused execFileSync "%s" with  "-- %s"', nodeExecPath, execPath)
     return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
   }
 
-  console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s"', execPath)
+  logger_.debug('makeNpmRunner caused execFileSync "%s"', execPath)
   return (args, options) => execFileSync(execPath, args, options)
 }

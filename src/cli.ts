@@ -17,12 +17,14 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { existsSync, openSync, writeSync } from 'node:fs'
+import { dirname, resolve } from 'node:path'
+
 import { Builders, Enums, Factories, Serialize, Spec, Validation } from '@cyclonedx/cyclonedx-library'
 import { Argument, Command, Option } from 'commander'
-import { existsSync, openSync, writeSync } from 'fs'
-import { dirname, resolve } from 'path'
 
 import { BomBuilder, TreeBuilder } from './builders'
+import { createLogger, defaultLogLevel, type VerbosityLevel, verbosityLevels } from './logger'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -38,6 +40,7 @@ enum Omittable {
 const OutputStdOut = '-'
 
 interface CommandOptions {
+  verbosity: VerbosityLevel
   ignoreNpmErrors: boolean
   packageLockOnly: boolean
   omit: Omittable[]
@@ -58,6 +61,12 @@ function makeCommand (process: NodeJS.Process): Command {
   ).usage(
     // Need to add the `[--]` manually, to indicate how to stop a variadic option.
     '[options] [--] [<package-manifest>]'
+  ).addOption(
+    new Option(
+      '--verbosity <verbosity>',
+      'Which verbosity level the logger should write to STDERR'
+    ).choices(verbosityLevels
+    ).default(defaultLogLevel)
   ).addOption(
     new Option(
       '--ignore-npm-errors',
@@ -189,36 +198,35 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
 export async function run (process: NodeJS.Process): Promise<number> {
   process.title = 'cyclonedx-node-npm'
 
-  // all output shall be bound to stdError - stdOut is for result output only
-  const myConsole = new console.Console(process.stderr, process.stderr)
-
   const program = makeCommand(process)
   program.parse(process.argv)
 
   const options: CommandOptions = program.opts()
-  myConsole.debug('DEBUG | options: %j', options)
+  const logger = createLogger(options.verbosity)
+
+  logger.debug('options: %j', options)
 
   const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
   if (!existsSync(packageFile)) {
     throw new Error(`missing project's manifest file: ${packageFile}`)
   }
-  myConsole.debug('DEBUG | packageFile: %s', packageFile)
+  logger.debug('packageFile: %s', packageFile)
   const projectDir = dirname(packageFile)
-  myConsole.info('INFO  | projectDir: %s', projectDir)
+  logger.info('projectDir: %s', projectDir)
 
   if (existsSync(resolve(projectDir, 'npm-shrinkwrap.json'))) {
-    myConsole.debug('DEBUG | detected a npm shrinkwrap file')
+    logger.debug('detected a npm shrinkwrap file')
   } else if (existsSync(resolve(projectDir, 'package-lock.json'))) {
-    myConsole.debug('DEBUG | detected a package lock file')
+    logger.debug('detected a package lock file')
   } else if (!options.packageLockOnly && existsSync(resolve(projectDir, 'node_modules'))) {
-    myConsole.debug('DEBUG | detected a node_modules dir')
+    logger.debug('detected a node_modules dir')
     // npm7 and later also might put a `node_modules/.package-lock.json` file
   } else {
-    myConsole.log('LOG   | No evidence: no package lock file nor npm shrinkwrap file')
+    logger.trace('No evidence: no package lock file nor npm shrinkwrap file')
     if (!options.packageLockOnly) {
-      myConsole.log('LOG   | No evidence: no node_modules dir')
+      logger.trace('No evidence: no node_modules dir')
     }
-    myConsole.info('INFO  | ? Did you forget to run `npm install` on your project accordingly ?')
+    logger.info('Did you forget to run `npm install` on your project accordingly ?')
     throw new Error('missing evidence')
   }
 
@@ -241,7 +249,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
       flattenComponents: options.flattenComponents,
       shortPURLs: options.shortPURLs
     },
-    myConsole
+    logger.child({}, { msgPrefix: 'BomBuilder > ' })
   ).buildFromProjectDir(projectDir, process)
 
   const spec = Spec.SpecVersionDict[options.specVersion]
@@ -262,36 +270,33 @@ export async function run (process: NodeJS.Process): Promise<number> {
       break
   }
 
-  myConsole.log('LOG   | serialize BOM')
+  logger.trace('serialize BOM')
   const serialized = serializer.serialize(bom, {
     sortLists: options.outputReproducible,
     space: 2
   })
 
   if (options.validate) {
-    myConsole.log('LOG   | try validate BOM result ...')
+    logger.trace('try validate BOM result ...')
     try {
       const validationErrors = await validator.validate(serialized)
       if (validationErrors !== null) {
-        myConsole.debug('DEBUG | BOM result invalid. details: ', validationErrors)
-        myConsole.error('ERROR | Failed to generate valid BOM.')
-        myConsole.warn(
-          'WARN  | Please report the issue and provide the npm lock file of the current project to:\n' +
-          '      | https://github.com/CycloneDX/cyclonedx-node-npm/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D')
+        logger.debug('BOM result invalid. details: ', validationErrors)
+        logger.error('Failed to generate valid BOM.')
+        logger.warn('Please report the issue and provide the npm lock file of the current project to: https://github.com/CycloneDX/cyclonedx-node-npm/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D')
         return ExitCode.FAILURE
       }
     } catch (err) {
       if (err instanceof Validation.MissingOptionalDependencyError) {
-        myConsole.info('INFO  | skipped validate BOM:', err.message)
+        logger.info('skipped validate BOM:', err.message)
       } else {
-        myConsole.error('ERROR | unexpected error')
+        logger.error('unexpected error')
         throw err
       }
     }
   }
 
-  // TODO use instead ? : https://www.npmjs.com/package/debug ?
-  myConsole.log('LOG   | writing BOM to', options.outputFile)
+  logger.trace('writing BOM to', options.outputFile)
   writeSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd
