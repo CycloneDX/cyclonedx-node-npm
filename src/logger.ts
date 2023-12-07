@@ -33,11 +33,11 @@ export type VerbosityLevel = LevelWithSilent
 export const createLogger: (verbosityLevel: VerbosityLevel) => Logger = (verbosityLevel: VerbosityLevel) => pino({
   name: 'cyclonedx-node-npm',
   level: verbosityLevel,
+  timestamp: false,
   transport: {
     target: 'pino-pretty',
     options: {
       colorize: true,
-      translateTime: 'SYS:yyyy-mm-dd HH:MM:ss.l',
       ignore: 'pid,name,hostname',
       destination: 2
     }
