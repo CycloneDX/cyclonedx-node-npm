@@ -165,7 +165,6 @@ export class BomBuilder {
       }
     }
 
-    // TODO use instead ? : https://www.npmjs.com/package/debug ?
     this.console.info('INFO  | gather dependency tree ...')
     this.console.debug('DEBUG | npm-ls: run npm with %j in %j', args, projectDir)
     let npmLsReturns: Buffer
@@ -207,7 +206,6 @@ export class BomBuilder {
   }
 
   buildFromNpmLs (data: any, npmVersion?: string): Models.Bom {
-    // TODO use instead ? : https://www.npmjs.com/package/debug ?
     this.console.info('INFO  | build BOM ...')
 
     // region all components & dependencies

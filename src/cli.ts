@@ -299,7 +299,6 @@ export async function run (process: NodeJS.Process): Promise<number> {
     }
   }
 
-  // TODO use instead ? : https://www.npmjs.com/package/debug ?
   myConsole.log('LOG   | writing BOM to', options.outputFile)
   writeSync(
     options.outputFile === OutputStdOut
