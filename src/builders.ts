@@ -307,11 +307,13 @@ export class BomBuilder {
     for (const [depName, depData] of Object.entries(data.dependencies ?? {}) as any) {
       if (depData === null || typeof depData !== 'object') {
         // cannot build
+        this.console.debug('DEBUG | skip malformed component %j in %j', depName, depData)
         continue // for-loop
       }
       if (typeof depData.path !== 'string') {
         // might be an optional dependency that was not installed
         // skip, as it was not installed anyway
+        this.console.debug('DEBUG | skip missing component %j in %j', depName, depData.path)
         continue // for-loop
       }
 
@@ -320,14 +322,17 @@ export class BomBuilder {
         const _dep = this.makeComponent(depData)
         if (_dep === false) {
           // shall be skipped
+          this.console.debug('DEBUG | skip impossible component %j in %j', depName, depData.path)
           continue // for-loop
         }
         dep = _dep ??
           new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
         if (dep instanceof DummyComponent) {
-          this.console.warn('WARN  | InterferedDependency $j', dep.name)
+          this.console.warn('WARN  | InterferedDependency %j in %j', depName, depData.path)
+        } else {
+          this.console.debug('DEBUG | add component %j in %j: %j', depName, depData.path, dep)
         }
-
+        this.console.info('INFO  | add component for %j in %j', depName, depData.path)
         allComponents.set(depData.path, dep)
       }
       directDepRefs.add(dep.bomRef)

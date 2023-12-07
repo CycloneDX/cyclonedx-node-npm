@@ -281,7 +281,9 @@ export async function run (process: NodeJS.Process): Promise<number> {
     myConsole.log('LOG   | try validate BOM result ...')
     try {
       const validationErrors = await validator.validate(serialized)
-      if (validationErrors !== null) {
+      if (validationErrors === null) {
+        myConsole.info('INFO  | BOM result appears valid')
+      } else {
         myConsole.debug('DEBUG | BOM result invalid. details: ', validationErrors)
         myConsole.error('ERROR | Failed to generate valid BOM.')
         myConsole.warn(
@@ -300,12 +302,15 @@ export async function run (process: NodeJS.Process): Promise<number> {
   }
 
   myConsole.log('LOG   | writing BOM to', options.outputFile)
-  writeSync(
+  const written = writeSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd
       : openSync(resolve(process.cwd(), options.outputFile), 'w'),
     serialized
   )
+  myConsole.info('INFO  | wrote %d bytes to %s', written, options.outputFile)
 
-  return ExitCode.SUCCESS
+  return written > 0
+    ? ExitCode.SUCCESS
+    : ExitCode.FAILURE
 }

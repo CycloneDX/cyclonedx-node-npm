@@ -11,6 +11,8 @@ All notable changes to this project will be documented in this file.
 * Added
   * CLI switch `-v, --verbose` to increase output verbosity ([#158] via [#1131])  
     May be used multiple times, like `-vvv`.
+  * More logs on info-level (via [#1131])
+  * More logs on debug-level (via [#1131])
 
 [#158]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/158
 [#1131]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1131
