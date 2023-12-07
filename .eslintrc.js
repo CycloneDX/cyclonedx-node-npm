@@ -50,6 +50,12 @@ module.exports = {
       ],
       parserOptions: {
         project: './tsconfig.json'
+      },
+      rules: {
+        /* @see https://typescript-eslint.io/rules/unbound-method/ */
+        '@typescript-eslint/unbound-method': ['error', {
+          ignoreStatic: true
+        }]
       }
     },
     {
