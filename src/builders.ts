@@ -330,7 +330,7 @@ export class BomBuilder {
         if (dep instanceof DummyComponent) {
           this.console.warn('WARN  | InterferedDependency %j in %j', depName, depData.path)
         } else {
-          this.console.debug('DEBUG | add component %j in %j: %j', depName, depData.path, dep)
+          this.console.debug('DEBUG | built component %j in %j: %j', depName, depData.path, dep)
         }
         this.console.info('INFO  | add component for %j in %j', depName, depData.path)
         allComponents.set(depData.path, dep)
