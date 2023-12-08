@@ -108,6 +108,8 @@ Options:
   --no-validate             Disable validation of resulting BOM.
   --mc-type <type>          Type of the main component.
                             (choices: "application", "firmware", "library", default: "application")
+  -v, --verbose             Increase the verbosity of messages.
+                            Use multiple times to increase the verbosity even more.
   -V, --version             output the version number
   -h, --help                display help for command
 ```

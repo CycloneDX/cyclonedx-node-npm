@@ -24,6 +24,7 @@ import { dirname, resolve } from 'path'
 
 import { loadJsonFile } from './_helpers'
 import { BomBuilder, TreeBuilder } from './builders'
+import { makeConsoleLogger } from './logger'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -50,6 +51,7 @@ interface CommandOptions {
   outputFile: string
   validate: boolean
   mcType: Enums.ComponentType
+  verbose: number
 }
 
 function makeCommand (process: NodeJS.Process): Command {
@@ -164,6 +166,15 @@ function makeCommand (process: NodeJS.Process): Command {
     ).default(
       Enums.ComponentType.Application
     )
+  ).addOption(
+    new Option(
+      '-v, --verbose',
+      'Increase the verbosity of messages. Use multiple times to increase the verbosity even more.'
+    ).argParser<number>(
+      function (_: any, previous: number): number {
+        return previous + 1
+      }
+    ).default(0)
   ).addArgument(
     new Argument(
       '[<package-manifest>]',
@@ -189,13 +200,11 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
 export async function run (process: NodeJS.Process): Promise<number> {
   process.title = 'cyclonedx-node-npm'
 
-  // all output shall be bound to stdError - stdOut is for result output only
-  const myConsole = new console.Console(process.stderr, process.stderr)
-
   const program = makeCommand(process)
   program.parse(process.argv)
 
   const options: CommandOptions = program.opts()
+  const myConsole = makeConsoleLogger(options.verbose)
   myConsole.debug('DEBUG | options: %j', options)
 
   const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
@@ -272,7 +281,9 @@ export async function run (process: NodeJS.Process): Promise<number> {
     myConsole.log('LOG   | try validate BOM result ...')
     try {
       const validationErrors = await validator.validate(serialized)
-      if (validationErrors !== null) {
+      if (validationErrors === null) {
+        myConsole.info('INFO  | BOM result appears valid')
+      } else {
         myConsole.debug('DEBUG | BOM result invalid. details: ', validationErrors)
         myConsole.error('ERROR | Failed to generate valid BOM.')
         myConsole.warn(
@@ -290,14 +301,16 @@ export async function run (process: NodeJS.Process): Promise<number> {
     }
   }
 
-  // TODO use instead ? : https://www.npmjs.com/package/debug ?
   myConsole.log('LOG   | writing BOM to', options.outputFile)
-  writeSync(
+  const written = writeSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd
       : openSync(resolve(process.cwd(), options.outputFile), 'w'),
     serialized
   )
+  myConsole.info('INFO  | wrote %d bytes to %s', written, options.outputFile)
 
-  return ExitCode.SUCCESS
+  return written > 0
+    ? ExitCode.SUCCESS
+    : ExitCode.FAILURE
 }
