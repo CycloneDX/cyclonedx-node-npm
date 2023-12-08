@@ -569,7 +569,7 @@ export class BomBuilder {
 
   private * makeTools (): Generator<Models.Tool> {
     /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-    const packageJsonPaths = ['../package.json']
+    const packageJsonPaths = [path.resolve(module.path, '..', 'package.json')]
 
     const libs = [
       '@cyclonedx/cyclonedx-library'
