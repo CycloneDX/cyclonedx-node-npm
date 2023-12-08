@@ -23,6 +23,7 @@ import * as normalizePackageData from 'normalize-package-data'
 import { type PackageURL } from 'packageurl-js'
 import * as path from 'path'
 
+import { loadJsonFile } from './_helpers'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
@@ -353,8 +354,7 @@ export class BomBuilder {
     const packageJsonPath = path.join(data.path, 'package.json')
     try {
       return Object.assign(
-        /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-        require(packageJsonPath),
+        loadJsonFile(packageJsonPath),
         data
       )
     } catch {
@@ -571,8 +571,7 @@ export class BomBuilder {
   }
 
   private * makeTools (): Generator<Models.Tool> {
-    /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-    const packageJsonPaths = ['../package.json']
+    const packageJsonPaths = [path.resolve(module.path, '..', 'package.json')]
 
     const libs = [
       '@cyclonedx/cyclonedx-library'
@@ -592,8 +591,7 @@ export class BomBuilder {
     /* eslint-enable no-labels */
 
     for (const packageJsonPath of packageJsonPaths) {
-      /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-      const packageData = require(packageJsonPath)
+      const packageData = loadJsonFile(packageJsonPath)
       normalizePackageData(packageData /* add debug for warnings? */)
       const tool = this.toolBuilder.makeTool(packageData)
       if (tool !== undefined) {
