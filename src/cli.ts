@@ -22,6 +22,7 @@ import { Argument, Command, Option } from 'commander'
 import { existsSync, openSync, writeSync } from 'fs'
 import { dirname, resolve } from 'path'
 
+import { loadJsonFile } from './_helpers'
 import { BomBuilder, TreeBuilder } from './builders'
 
 enum OutputFormat {
@@ -174,7 +175,7 @@ function makeCommand (process: NodeJS.Process): Command {
   ).version(
     // that is supposed to be the last option in the list on the help page.
     /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-    require('../package.json').version as string
+    loadJsonFile('../package.json').version as string
   ).allowExcessArguments(
     false
   )

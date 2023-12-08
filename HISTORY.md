@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Changed
+  * Hardened JSON imports (via [#]) 
+
+
 ## 1.14.3 - 2023-12-01
 
 * Fixed
