@@ -174,7 +174,6 @@ function makeCommand (process: NodeJS.Process): Command {
     )
   ).version(
     // that is supposed to be the last option in the list on the help page.
-    /* eslint-disable-next-line @typescript-eslint/no-var-requires */
     loadJsonFile(resolve(module.path, '..', 'package.json')).version as string
   ).allowExcessArguments(
     false

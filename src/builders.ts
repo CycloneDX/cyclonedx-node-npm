@@ -568,7 +568,6 @@ export class BomBuilder {
   }
 
   private * makeTools (): Generator<Models.Tool> {
-    /* eslint-disable-next-line @typescript-eslint/no-var-requires */
     const packageJsonPaths = [path.resolve(module.path, '..', 'package.json')]
 
     const libs = [
@@ -589,7 +588,6 @@ export class BomBuilder {
     /* eslint-enable no-labels */
 
     for (const packageJsonPath of packageJsonPaths) {
-      /* eslint-disable-next-line @typescript-eslint/no-var-requires */
       const packageData = loadJsonFile(packageJsonPath)
       normalizePackageData(packageData /* add debug for warnings? */)
       const tool = this.toolBuilder.makeTool(packageData)
