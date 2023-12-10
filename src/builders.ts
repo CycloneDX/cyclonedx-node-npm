@@ -354,7 +354,7 @@ export class BomBuilder {
     const packageJsonPath = path.join(data.path, 'package.json')
     try {
       return Object.assign(
-        loadJsonFile(packageJsonPath),
+        loadJsonFile(packageJsonPath) ?? {},
         data
       )
     } catch {
@@ -591,7 +591,7 @@ export class BomBuilder {
     /* eslint-enable no-labels */
 
     for (const packageJsonPath of packageJsonPaths) {
-      const packageData = loadJsonFile(packageJsonPath)
+      const packageData: object = loadJsonFile(packageJsonPath) ?? {}
       normalizePackageData(packageData /* add debug for warnings? */)
       const tool = this.toolBuilder.makeTool(packageData)
       if (tool !== undefined) {
