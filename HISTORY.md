@@ -14,10 +14,13 @@ All notable changes to this project will be documented in this file.
     May be used multiple times, like `-vvv`.
   * More logs on info-level (via [#1131])
   * More logs on debug-level (via [#1131])
+* Build
+  * Use _TypeScript_ `v5.3.3` now, was `v5.3.2` (via [#1133])
 
 [#158]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/158
 [#1131]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1131
 [#1132]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1132
+[#1133]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1133
 
 ## 1.14.3 - 2023-12-01
 
