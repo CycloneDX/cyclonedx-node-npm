@@ -4,9 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.15.0 - 2023-12-10
+
 * Changed
   * Log output is less verbose, can be re-enabled via CLI switch `--verbose` ([#158] via [#1131])  
-    Warnings and errors are still displayed as before.  
+    Warnings and errors are still displayed as before!  
     This is considered a non-breaking change, since only informational logs and debug information is affected.
   * Hardened JSON imports (via [#1132], [#1135])
 * Added
