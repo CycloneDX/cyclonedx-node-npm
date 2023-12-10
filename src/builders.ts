@@ -634,14 +634,17 @@ export class TreeBuilder {
       // nothing to compare ...
       return
     }
-    for (const a of tree.keys()) {
+    for (const [a, aTree] of tree) {
       for (const [b, bTree] of tree) {
         if (a === b) {
           continue
         }
         if (b.startsWith(a)) {
-          (tree.get(a) as PTree).set(b.slice(a.length), bTree)
+          aTree.set(b.slice(a.length), bTree)
           tree.delete(b)
+        } else if (a.startsWith(b)) {
+          bTree.set(a.slice(b.length), aTree)
+          tree.delete(a)
         }
       }
     }
