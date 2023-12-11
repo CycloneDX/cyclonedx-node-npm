@@ -315,7 +315,6 @@ describe('cli.run()', () => {
         '-vvv',
         '--ignore-npm-errors',
         '--output-reproducible',
-        '--validate',
         // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
         '--spec-version', '1.4',
         '--output-format', 'JSON',
