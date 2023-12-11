@@ -49,7 +49,7 @@ interface CommandOptions {
   outputReproducible: boolean
   outputFormat: OutputFormat
   outputFile: string
-  validate: boolean
+  validate: boolean | undefined
   mcType: Enums.ComponentType
   verbose: number
 }
@@ -146,7 +146,7 @@ function makeCommand (process: NodeJS.Process): Command {
       '--validate',
       'Validate resulting BOM before outputting. ' +
       'Validation is skipped, if requirements not met. See the README.'
-    ).default(true)
+    ).default(undefined)
   ).addOption(
     new Option(
       '--no-validate',
@@ -277,7 +277,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
     space: 2
   })
 
-  if (options.validate) {
+  if (options.validate !== false) {
     myConsole.log('LOG   | try validate BOM result ...')
     try {
       const validationErrors = await validator.validate(serialized)
@@ -293,7 +293,12 @@ export async function run (process: NodeJS.Process): Promise<number> {
       }
     } catch (err) {
       if (err instanceof Validation.MissingOptionalDependencyError) {
-        myConsole.info('INFO  | skipped validate BOM:', err.message)
+        if (options.validate) {
+          // if explicitly requested to validate, then warn about skip
+          myConsole.warn('WARN  | skipped validate BOM:', err.message)
+        } else {
+          myConsole.info('INFO  | skipped validate BOM:', err.message)
+        }
       } else {
         myConsole.error('ERROR | unexpected error')
         throw err
