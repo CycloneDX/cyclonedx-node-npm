@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 * Change
   * If BOM result validation was explicitly requested but skipped, then a warning is shown ([#1137] via [#1138])
+  * Log messages that explain fatal errors were are  (via [#1138])
 
 [#1137]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1137
 [#1138]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1138

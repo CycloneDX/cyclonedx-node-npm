@@ -96,7 +96,7 @@ export class BomBuilder {
 
   private getNpmVersion (npmRunner: runFunc, process_: NodeJS.Process): string {
     let version: string
-    this.console.info('INFO  | detect NPM version ...')
+    this.console.info('INFO  | detecting NPM version ...')
     try {
       version = npmRunner(['--version'], {
         env: process_.env,
@@ -166,7 +166,7 @@ export class BomBuilder {
       }
     }
 
-    this.console.info('INFO  | gather dependency tree ...')
+    this.console.info('INFO  | gathering dependency tree ...')
     this.console.debug('DEBUG | npm-ls: run npm with %j in %j', args, projectDir)
     let npmLsReturns: Buffer
     try {
@@ -207,7 +207,7 @@ export class BomBuilder {
   }
 
   buildFromNpmLs (data: any, npmVersion?: string): Models.Bom {
-    this.console.info('INFO  | build BOM ...')
+    this.console.info('INFO  | building BOM ...')
 
     // region all components & dependencies
 
