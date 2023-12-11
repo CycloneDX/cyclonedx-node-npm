@@ -28,14 +28,6 @@
   },
   "funding": [
     {
-      "type": "tidelift",
-      "url": "https://tidelift.com/subscription/pkg/npm-.cyclonedx-cyclonedx-npm"
-    },
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/jkowalleck"
-    },
-    {
       "type": "individual",
       "url": "https://owasp.org/donate/?reponame=www-project-cyclonedx&title=OWASP+CycloneDX"
     }
