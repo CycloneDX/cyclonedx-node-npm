@@ -217,7 +217,8 @@ jobs:
           path: ${{ env.DIST_DIR }}
       - name: dogfooding
         run: >
-          node -- bin/cyclonedx-npm-cli.js 
+          node -- bin/cyclonedx-npm-cli.js
+          -vvv
           --ignore-npm-errors
           --omit=dev
           --validate

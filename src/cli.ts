@@ -49,7 +49,7 @@ interface CommandOptions {
   outputReproducible: boolean
   outputFormat: OutputFormat
   outputFile: string
-  validate: boolean
+  validate: boolean | undefined
   mcType: Enums.ComponentType
   verbose: number
 }
@@ -146,7 +146,7 @@ function makeCommand (process: NodeJS.Process): Command {
       '--validate',
       'Validate resulting BOM before outputting. ' +
       'Validation is skipped, if requirements not met. See the README.'
-    ).default(true)
+    ).default(undefined)
   ).addOption(
     new Option(
       '--no-validate',
@@ -211,28 +211,29 @@ export async function run (process: NodeJS.Process): Promise<number> {
   if (!existsSync(packageFile)) {
     throw new Error(`missing project's manifest file: ${packageFile}`)
   }
-  myConsole.debug('DEBUG | packageFile: %s', packageFile)
+  myConsole.debug('DEBUG | packageFile:', packageFile)
   const projectDir = dirname(packageFile)
-  myConsole.info('INFO  | projectDir: %s', projectDir)
+  myConsole.info('INFO  | projectDir:', projectDir)
 
   if (existsSync(resolve(projectDir, 'npm-shrinkwrap.json'))) {
-    myConsole.debug('DEBUG | detected a npm shrinkwrap file')
+    myConsole.info('INFO  | detected a npm shrinkwrap file')
   } else if (existsSync(resolve(projectDir, 'package-lock.json'))) {
-    myConsole.debug('DEBUG | detected a package lock file')
+    myConsole.info('INFO  | detected a package lock file')
   } else if (!options.packageLockOnly && existsSync(resolve(projectDir, 'node_modules'))) {
-    myConsole.debug('DEBUG | detected a node_modules dir')
+    myConsole.info('INFO  | detected a `node_modules` dir')
     // npm7 and later also might put a `node_modules/.package-lock.json` file
   } else {
-    myConsole.log('LOG   | No evidence: no package lock file nor npm shrinkwrap file')
+    myConsole.warn('WARN  | ? Did you forget to run `npm install` on your project accordingly ?')
+    myConsole.error('ERROR | No evidence: no package lock file nor npm shrinkwrap file')
     if (!options.packageLockOnly) {
-      myConsole.log('LOG   | No evidence: no node_modules dir')
+      myConsole.error('ERROR | No evidence: no `node_modules` dir')
     }
-    myConsole.info('INFO  | ? Did you forget to run `npm install` on your project accordingly ?')
     throw new Error('missing evidence')
   }
 
   const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
 
+  myConsole.log('LOG   | gathering BOM data ...')
   const bom = new BomBuilder(
     new Builders.FromNodePackageJson.ToolBuilder(extRefFactory),
     new Builders.FromNodePackageJson.ComponentBuilder(
@@ -271,14 +272,14 @@ export async function run (process: NodeJS.Process): Promise<number> {
       break
   }
 
-  myConsole.log('LOG   | serialize BOM')
+  myConsole.log('LOG   | serializing BOM ...')
   const serialized = serializer.serialize(bom, {
     sortLists: options.outputReproducible,
     space: 2
   })
 
-  if (options.validate) {
-    myConsole.log('LOG   | try validate BOM result ...')
+  if (options.validate ?? true) {
+    myConsole.log('LOG   | try validating BOM result ...')
     try {
       const validationErrors = await validator.validate(serialized)
       if (validationErrors === null) {
@@ -293,7 +294,13 @@ export async function run (process: NodeJS.Process): Promise<number> {
       }
     } catch (err) {
       if (err instanceof Validation.MissingOptionalDependencyError) {
-        myConsole.info('INFO  | skipped validate BOM:', err.message)
+        if (options.validate === true) {
+          // if explicitly requested to validate, then warn about skip
+          myConsole.warn('WARN  | skipped validating BOM:', err.message)
+          // @TODO breaking change: forward error, do not skip/continue
+        } else {
+          myConsole.info('INFO  | skipped validating BOM:', err.message)
+        }
       } else {
         myConsole.error('ERROR | unexpected error')
         throw err
