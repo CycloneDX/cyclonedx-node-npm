@@ -28,6 +28,10 @@
   },
   "funding": [
     {
+      "type": "tidelift",
+      "url": "https://tidelift.com/subscription/pkg/npm-.cyclonedx-cyclonedx-npm"
+    },
+    {
       "type": "github",
       "url": "https://github.com/sponsors/jkowalleck"
     },
