@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Change
+  * If result validation was explicitly requested but skipped, then show a warning ([#1137] via [#])
+
+[#1137]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1137
+[#]:
+
 ## 1.15.0 - 2023-12-10
 
 * Changed
