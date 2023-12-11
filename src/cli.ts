@@ -233,6 +233,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
 
   const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
 
+  myConsole.log('LOG   | gathering BOM data ...')
   const bom = new BomBuilder(
     new Builders.FromNodePackageJson.ToolBuilder(extRefFactory),
     new Builders.FromNodePackageJson.ComponentBuilder(
@@ -271,7 +272,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
       break
   }
 
-  myConsole.log('LOG   | serialize BOM')
+  myConsole.log('LOG   | serialize BOM ...')
   const serialized = serializer.serialize(bom, {
     sortLists: options.outputReproducible,
     space: 2
