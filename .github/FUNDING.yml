@@ -7,4 +7,4 @@ custom:
 ## project extras
 github:
   - jkowalleck
-
+tidelift: 'npm/@cyclonedx%2Fcyclonedx-npm'
