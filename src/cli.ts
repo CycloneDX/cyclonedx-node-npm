@@ -277,7 +277,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
     space: 2
   })
 
-  if (options.validate !== false) {
+  if (options.validate ?? true) {
     myConsole.log('LOG   | try validate BOM result ...')
     try {
       const validationErrors = await validator.validate(serialized)
@@ -293,9 +293,10 @@ export async function run (process: NodeJS.Process): Promise<number> {
       }
     } catch (err) {
       if (err instanceof Validation.MissingOptionalDependencyError) {
-        if (options.validate) {
+        if (options.validate === true) {
           // if explicitly requested to validate, then warn about skip
           myConsole.warn('WARN  | skipped validate BOM:', err.message)
+          // @TODO breaking change: forward error, do not skip/continue
         } else {
           myConsole.info('INFO  | skipped validate BOM:', err.message)
         }
