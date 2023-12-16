@@ -246,6 +246,10 @@ export class BomBuilder {
 
     // region components
 
+    /* eslint "@typescript-eslint/no-unsafe-argument": "off"
+        --------
+        this rule would cause eslint to run into issues with max recursion depth
+        see https://github.com/typescript-eslint/typescript-eslint/issues/7298 */
     bom.components = this.nestComponents(
       // remove rootComponent - so the elements that are nested below it are just returned.
       new Map(Array.from(allComponents.entries()).filter(([, c]) => c !== rootComponent)),
