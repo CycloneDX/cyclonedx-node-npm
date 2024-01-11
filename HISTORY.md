@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.16.1 - 2024-01-11
+
 * Fixed
   * Writing large results to buffered streams no longer drops data, but retries until success (via [#1145])
 * Docs
