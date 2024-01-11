@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Fixed
-  * Writing large results to streams no longer drops data, but retries (via [#1145])
+  * Writing large results to buffered streams no longer drops data, but retries until success (via [#1145])
 * Docs
   * Showcase programmatic CLI usage ([#1142] via [#1145])
 
