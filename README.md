@@ -136,7 +136,17 @@ This tool utilizes the [CycloneDX library][cyclonedx-library] to generate the ac
 Validation requires [transitive optional dependencies](https://github.com/CycloneDX/cyclonedx-javascript-library/blob/main/README.md#optional-dependencies).
 
 This tool does **not** expose any additional _public_ API or classes - all code is intended to be internal and might change without any notice during version upgrades.
-
+However, the CLI is stable - you may call it programmatically like:
+```javascript
+const { execFileSync } = require('child_process')
+const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
+const sbom = JSON.parse(execFileSync(process.execPath, [
+    '../path/to/this/module/bin/cyclonedx-npm-cli.js',
+    '--output-format', 'JSON',
+    '--output-file', '-'
+    // additional CLI args
+], { stdio: ['ignore', 'pipe', 'ignore'], encoding: 'buffer', maxBuffer: BUFFER_MAX_LENGTH }))
+```
 ## Contributing
 
 Feel free to open issues, bugreports or pull requests.  

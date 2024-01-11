@@ -21,7 +21,7 @@ console.warn(`
 There is no public API. Instead, there is a well-thought, stable CLI.
 Call it programmatically like so:
     const { execFileSync } = require('child_process')
-    const BUFFER_MAX_LENGTH = require('buffer').constants.MAX_LENGTH
+    const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
     const sbom = JSON.parse(execFileSync(process.execPath, [
       '../path/to/this/package/bin/cyclonedx-npm-cli.js',
       '--output-format', 'JSON',
