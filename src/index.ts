@@ -17,5 +17,17 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-// not publishing anything at the moment
-export { }
+console.warn(`
+There is no public API. Instead, there is a well-thought, stable CLI.
+Call it programmatically like so:
+    const { execFileSync } = require('child_process')
+    const BUFFER_MAX_LENGTH = require('buffer').constants.MAX_LENGTH
+    const sbom = JSON.parse(execFileSync(process.execPath, [
+      '../path/to/this/module/bin/cyclonedx-npm-cli.js',
+      '--output-format', 'JSON',
+      '--output-file', '-'
+      // additional CLI args
+    ], { stdio: ['ignore', 'pipe', 'ignore'], encoding: 'buffer', maxBuffer: BUFFER_MAX_LENGTH }))
+`)
+
+export {/* See above! */}
