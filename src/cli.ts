@@ -19,10 +19,10 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { Builders, Enums, Factories, Serialize, Spec, Validation } from '@cyclonedx/cyclonedx-library'
 import { Argument, Command, Option } from 'commander'
-import { existsSync, openSync, writeSync } from 'fs'
+import { existsSync, openSync } from 'fs'
 import { dirname, resolve } from 'path'
 
-import { loadJsonFile } from './_helpers'
+import { loadJsonFile, writeAllSync } from './_helpers'
 import { BomBuilder, TreeBuilder } from './builders'
 import { makeConsoleLogger } from './logger'
 
@@ -309,7 +309,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
   }
 
   myConsole.log('LOG   | writing BOM to', options.outputFile)
-  const written = writeSync(
+  const written = await writeAllSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd
       : openSync(resolve(process.cwd(), options.outputFile), 'w'),

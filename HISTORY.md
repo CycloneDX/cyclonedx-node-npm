@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Fixed
+  * Writing large results to buffered streams no longer drops data, but retries until success (via [#1145])
+* Docs
+  * Showcase programmatic CLI usage ([#1142] via [#1145])
+
+[#1142]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1142
+[#1145]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1145
+
 ## 1.16.0 - 2023-12-11
 
 * Change
