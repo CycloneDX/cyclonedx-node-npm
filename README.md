@@ -141,7 +141,7 @@ However, the CLI is stable - you may call it programmatically like:
 const { execFileSync } = require('child_process')
 const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
 const sbom = JSON.parse(execFileSync(process.execPath, [
-    '../path/to/this/module/bin/cyclonedx-npm-cli.js',
+    '../path/to/this/package/bin/cyclonedx-npm-cli.js',
     '--output-format', 'JSON',
     '--output-file', '-'
     // additional CLI args
