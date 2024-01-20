@@ -528,10 +528,11 @@ export class BomBuilder {
     // even private packages may have a PURL for identification
     component.purl = this.makePurl(component)
 
-    /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions -- since empty-string handling is needed */
+    /* eslint-disable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing
+       -- since empty-string handling is needed */
     component.bomRef.value = (typeof data._id === 'string' ? data._id : undefined) ||
-      /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing -- since empty-string handling is needed */
       `${component.group || '-'}/${component.name}@${component.version || '-'}`
+    /* eslint-enable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing */
 
     return component
   }
