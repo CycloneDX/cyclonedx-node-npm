@@ -6,8 +6,11 @@ All notable changes to this project will be documented in this file.
 
 * Style
   * Applied latest code standards (via [#1149])
+* Misc
+  * Raised dependency `commander@^10||^11||^12`, was `@^10.0.0` (via [#1150])
 
 [#1149]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1149
+[#1150]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1150
 
 ## 1.16.1 - 2024-01-11
 
