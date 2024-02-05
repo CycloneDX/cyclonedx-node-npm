@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Style
+  * Applied latest code standards (via [#1149])
+
+[#1149]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1149
+
 ## 1.16.1 - 2024-01-11
 
 * Fixed
