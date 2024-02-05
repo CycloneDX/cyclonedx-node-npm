@@ -23,7 +23,7 @@ import * as normalizePackageData from 'normalize-package-data'
 import { type PackageURL } from 'packageurl-js'
 import * as path from 'path'
 
-import { loadJsonFile } from './_helpers'
+import { isString, loadJsonFile } from './_helpers'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
@@ -246,10 +246,6 @@ export class BomBuilder {
 
     // region components
 
-    /* eslint "@typescript-eslint/no-unsafe-argument": "off"
-        --------
-        this rule would cause eslint to run into issues with max recursion depth
-        see https://github.com/typescript-eslint/typescript-eslint/issues/7298 */
     bom.components = this.nestComponents(
       // remove rootComponent - so the elements that are nested below it are just returned.
       new Map(Array.from(allComponents.entries()).filter(([, c]) => c !== rootComponent)),
@@ -309,36 +305,38 @@ export class BomBuilder {
      * but only the most top-level has a complete set with all `dependencies` *and* `resolved`.
      * This detail might cause implementation changes: run over the top level first, then go into nested dependencies.
      */
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument */
     for (const [depName, depData] of Object.entries(data.dependencies ?? {}) as any) {
       if (depData === null || typeof depData !== 'object') {
         // cannot build
         this.console.debug('DEBUG | skip malformed component %j in %j', depName, depData)
         continue // for-loop
       }
-      if (typeof depData.path !== 'string') {
+      const depPath = depData.path
+      if (!isString(depPath)) {
         // might be an optional dependency that was not installed
         // skip, as it was not installed anyway
-        this.console.debug('DEBUG | skip missing component %j in %j', depName, depData.path)
+        this.console.debug('DEBUG | skip missing component %j in %j', depName, depPath)
         continue // for-loop
       }
 
-      let dep = allComponents.get(depData.path)
+      let dep = allComponents.get(depPath)
       if (dep === undefined) {
         const _dep = this.makeComponent(depData)
         if (_dep === false) {
           // shall be skipped
-          this.console.debug('DEBUG | skip impossible component %j in %j', depName, depData.path)
+          this.console.debug('DEBUG | skip impossible component %j in %j', depName, depPath)
           continue // for-loop
         }
         dep = _dep ??
-          new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName as string}`)
+          new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName}`)
         if (dep instanceof DummyComponent) {
-          this.console.warn('WARN  | InterferedDependency %j in %j', depName, depData.path)
+          this.console.warn('WARN  | InterferedDependency %j in %j', depName, depPath)
         } else {
-          this.console.debug('DEBUG | built component %j in %j: %j', depName, depData.path, dep)
+          this.console.debug('DEBUG | built component %j in %j: %j', depName, depPath, dep)
         }
-        this.console.info('INFO  | add component for %j in %j', depName, depData.path)
-        allComponents.set(depData.path, dep)
+        this.console.info('INFO  | add component for %j in %j', depName, depPath)
+        allComponents.set(depPath, dep)
       }
       directDepRefs.add(dep.bomRef)
 
@@ -445,15 +443,19 @@ export class BomBuilder {
     if (!this.packageLockOnly) {
       _dataC = this.enhancedPackageData(_dataC)
     }
-    normalizePackageData(_dataC /* add debug for warnings? */)
+    normalizePackageData(_dataC as normalizePackageData.Input
+      /* add debug for warnings? */)
     // region fix normalizations
-    if (typeof data.version === 'string') {
+    if (isString(data.version)) {
       // allow non-SemVer strings
       _dataC.version = data.version.trim()
     }
     // endregion fix normalizations
 
-    const component = this.componentBuilder.makeComponent(_dataC, type)
+    const component = this.componentBuilder.makeComponent(
+      _dataC as normalizePackageData.Package,
+      type
+    )
     if (component === undefined) {
       this.console.debug('DEBUG | skip broken component: %j %j', data.name, data._id)
       return undefined
@@ -465,9 +467,9 @@ export class BomBuilder {
 
     // region properties
 
-    if (typeof data.path === 'string') {
+    if (isString(data.path)) {
       component.properties.add(
-        new Models.Property(PropertyNames.PackageInstallPath, data.path)
+        new Models.Property(PropertyNames.PackageInstallPath, data.path as string)
       )
     }
     if (isDev || isDevOptional) {
@@ -496,11 +498,11 @@ export class BomBuilder {
 
     // older npm-ls versions (v6) hide properties behind a `_`
     const resolved = data.resolved ?? data._resolved
-    if (typeof resolved === 'string' && !this.resolvedRE_ignore.test(resolved)) {
+    if (isString(resolved) && !this.resolvedRE_ignore.test(resolved)) {
       const hashes = new Models.HashDictionary()
       // older npm-ls versions (v6) hide properties behind a `_`
       const integrity = data.integrity ?? data._integrity
-      if (typeof integrity === 'string') {
+      if (isString(integrity)) {
         for (const [hashAlgorithm, hashRE] of this.integrityRE) {
           const hashMatchBase64 = hashRE.exec(integrity) ?? []
           if (hashMatchBase64?.length === 2) {
@@ -530,7 +532,7 @@ export class BomBuilder {
 
     /* eslint-disable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing
        -- since empty-string handling is needed */
-    component.bomRef.value = (typeof data._id === 'string' ? data._id : undefined) ||
+    component.bomRef.value = (isString(data._id) ? data._id : undefined) ||
       `${component.group || '-'}/${component.name}@${component.version || '-'}`
     /* eslint-enable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing */
 
@@ -552,7 +554,7 @@ export class BomBuilder {
   }
 
   private finalizePathProperties (rootPath: any, components: IterableIterator<Models.Component>): void {
-    if (typeof rootPath !== 'string' || rootPath === '') {
+    if (!isString(rootPath) || rootPath === '') {
       return
     }
     /* eslint-disable @typescript-eslint/unbound-method */
