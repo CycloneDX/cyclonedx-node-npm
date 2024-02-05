@@ -42,3 +42,7 @@ export async function writeAllSync (fd: number, data: string): Promise<number> {
   }
   return w
 }
+
+export function isString (v: any): v is string {
+  return typeof v === 'string'
+}
