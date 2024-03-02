@@ -59,7 +59,6 @@
     "eslint": "8.57.0",
     "eslint-config-standard": "17.1.0",
     "eslint-config-standard-with-typescript": "43.0.1",
-    "@typescript-eslint/eslint-plugin": "7.1.0",
     "eslint-plugin-header": "3.1.1",
     "eslint-plugin-simple-import-sort": "12.0.0",
     "fast-glob": "^3.2.11",
