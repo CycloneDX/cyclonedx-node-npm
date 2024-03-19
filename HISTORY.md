@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.16.2 - 2024-03-19
+
 * Style
   * Applied latest code standards (via [#1149])
 * Build
