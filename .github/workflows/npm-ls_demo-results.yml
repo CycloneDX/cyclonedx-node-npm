@@ -100,7 +100,7 @@ jobs:
         working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
       - name: Artifact RESULTS
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.RESULTS_ARTIFACT }}
           path: ${{ env.DEMO_ROOT_DIR}}/*/${{ env.RESULTS_DIR }}
