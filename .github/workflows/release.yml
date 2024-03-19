@@ -137,7 +137,7 @@ jobs:
       - name: Create Release
         id: release
         # see https://github.com/softprops/action-gh-release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
