@@ -83,7 +83,7 @@
   "bin": {
     "cyclonedx-npm": "./bin/cyclonedx-npm-cli.js"
   },
-  "main": "./dist/index.js",
+  "main": "./dist/cli.js",
   "exports": "./dist/index.js",
   "scripts": {
     "prepublish": "npm run build",

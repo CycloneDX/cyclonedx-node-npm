@@ -30,4 +30,7 @@ Call it programmatically like so:
     ], { stdio: ['ignore', 'pipe', 'ignore'], encoding: 'buffer', maxBuffer: BUFFER_MAX_LENGTH }))
 `)
 
-export {/* See above! */}
+export {/*
+Intentionally, here are no exports.
+See above!
+*/}
