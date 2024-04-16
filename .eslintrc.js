@@ -18,20 +18,34 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 /**
- * @see {@link https://eslint.org/}
+ * @see https://eslint.org/
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
   root: true,
+  env: {
+    commonjs: true,
+    node: true
+  },
   plugins: [
     /* see https://github.com/lydell/eslint-plugin-simple-import-sort#readme */
     'simple-import-sort',
     /* see https://github.com/Stuk/eslint-plugin-header#readme */
     'header'
   ],
-  env: {
-    commonjs: true,
-    node: true
+  rules: {
+    // region sort imports/exports
+    /** disable other sorters in favour of `simple-import-sort` **/
+    'import/order': 'off',
+    'sort-imports': 'off',
+    /** @see https://github.com/lydell/eslint-plugin-simple-import-sort/ */
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    // endregion sort imports/exports
+    // region license-header
+    /* see https://github.com/Stuk/eslint-plugin-header#readme */
+    'header/header': ['error', '.license-header.js']
+    // endregion license-header
   },
   overrides: [
     {
@@ -74,19 +88,5 @@ module.exports = {
         // endregion license-header
       }
     }
-  ],
-  rules: {
-    // region sort imports/exports
-    /** disable other sorters in favour of `simple-import-sort` **/
-    'import/order': 0,
-    'sort-imports': 0,
-    /** @see https://github.com/lydell/eslint-plugin-simple-import-sort/ */
-    'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
-    // endregion sort imports/exports
-    // region license-header
-    /* see https://github.com/Stuk/eslint-plugin-header#readme */
-    'header/header': ['error', '.license-header.js']
-    // endregion license-header
-  }
+  ]
 }
