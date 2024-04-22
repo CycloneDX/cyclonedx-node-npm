@@ -121,7 +121,7 @@ function makeCommand (process: NodeJS.Process): Command {
         '--output-format <format>',
         'Which output format to use.'
       ).choices(
-        Object.values(OutputFormat).sort()
+        [OutputFormat.JSON, OutputFormat.XML]
       ).default(
         // the context is node/JavaScript - which should prefer JSON
         OutputFormat.JSON
