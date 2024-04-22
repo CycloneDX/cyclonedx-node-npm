@@ -4,9 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
-* Explicitly support CycloneDX 1.6 (via [#])
+Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/specification/releases/tag/1.6).
 
-[#]:
+* Changed
+  * This tool explicitly supports _CycloneDX_ Specification-1.6 now (via [#1175])
+* Added
+  * CLI switch `--spec-version` now supports value `1.6` to reflect _CycloneDX_ Specification-1.6 (via [#1175])  
+    Default value for that option is unchanged - still `1.4`.
+
+[#1175]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1175
 
 ## 1.16.2 - 2024-03-19
 
