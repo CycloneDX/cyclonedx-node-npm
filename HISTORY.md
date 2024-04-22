@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Explicitly support CycloneDX 1.6 (via [#])
+
+[#]:
+
 ## 1.16.2 - 2024-03-19
 
 * Style
