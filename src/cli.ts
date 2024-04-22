@@ -76,7 +76,7 @@ function makeCommand (process: NodeJS.Process): Command {
   ).addOption(
     new Option(
       '--omit <type...>',
-      'Dependency types to omit from the installation tree.' +
+      'Dependency types to omit from the installation tree. ' +
       '(can be set multiple times)'
     ).choices(
       Object.values(Omittable).sort()
@@ -121,7 +121,7 @@ function makeCommand (process: NodeJS.Process): Command {
         '--output-format <format>',
         'Which output format to use.'
       ).choices(
-        Object.values(OutputFormat).sort()
+        [OutputFormat.JSON, OutputFormat.XML]
       ).default(
         // the context is node/JavaScript - which should prefer JSON
         OutputFormat.JSON

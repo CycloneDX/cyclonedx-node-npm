@@ -24,6 +24,7 @@ const {
   openSync, closeSync, existsSync, writeFileSync, readFileSync
 } = require('fs')
 
+const { Spec } = require('@cyclonedx/cyclonedx-library')
 const { describe, expect, test } = require('@jest/globals')
 
 const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
@@ -31,7 +32,7 @@ const { version: thisVersion } = require('../../../package.json')
 
 const cli = require('../../../dist/cli')
 
-const latestCdxSpecVersion = '1.5'
+const latestCdxSpecVersion = Spec.Version.v1dot6
 
 describe('cli.run()', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
@@ -247,7 +248,7 @@ describe('cli.run()', () => {
             '--output-reproducible',
             '--validate',
             // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-            '--spec-version', latestCdxSpecVersion,
+            '--spec-version', `${latestCdxSpecVersion}`,
             // just use json with the latest most feature-rich version.
             '--output-format', 'JSON',
             // prevent file interaction in this synthetic scenario - they would not exist anyway
@@ -318,7 +319,7 @@ describe('cli.run()', () => {
         '--ignore-npm-errors',
         '--output-reproducible',
         // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-        '--spec-version', latestCdxSpecVersion,
+        '--spec-version', `${latestCdxSpecVersion}`,
         '--output-format', 'JSON',
         // prevent file interaction in this synthetic scenario - they would not exist anyway
         '--package-lock-only',

@@ -19,28 +19,28 @@ do
 
   for format in 'json' 'xml'
   do
-    for spec in '1.5' '1.4' '1.3' '1.2'
+    for spec in '1.6' '1.5' '1.4' '1.3' '1.2'
     do
       echo ">>> $result_dir $spec $format bare"
       mkdir -p "$result_dir/bare"
       node -- "$BIN_CDX_N" \
-      --spec-version "$spec" \
-      --output-reproducible \
-      --validate \
-      --output-format "$format" \
-      --output-file "$result_dir/bare/bom.$spec.$format" \
-      "$package"
+        --spec-version "$spec" \
+        --output-reproducible \
+        --validate \
+        --output-format "$format" \
+        --output-file "$result_dir/bare/bom.$spec.$format" \
+        "$package"
 
       echo ">>> $result_dir $spec $format flat"
       mkdir -p "$result_dir/flat"
       node -- "$BIN_CDX_N" \
-      --flatten-components \
-      --spec-version "$spec" \
-      --output-reproducible \
-      --validate \
-      --output-format "$format" \
-      --output-file "$result_dir/flat/bom.$spec.$format" \
-      "$package"
+        --flatten-components \
+        --spec-version "$spec" \
+        --output-reproducible \
+        --validate \
+        --output-format "$format" \
+        --output-file "$result_dir/flat/bom.$spec.$format" \
+        "$package"
     done
   done
 done
