@@ -94,7 +94,7 @@ Options:
                             This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.
                             (default: false)
   --spec-version <version>  Which version of CycloneDX spec to use.
-                            (choices: "1.2", "1.3", "1.4", "1.5", default: "1.4")
+                            (choices: "1.2", "1.3", "1.4", "1.5", "1.6", default: "1.4")
   --output-reproducible     Whether to go the extra mile and make the output reproducible.
                             This requires more resources, and might result in loss of time- and random-based-values.
                             (env: BOM_REPRODUCIBLE)
@@ -103,8 +103,8 @@ Options:
   --output-file <file>      Path to the output file.
                             Set to "-" to write to STDOUT.
                             (default: write to STDOUT)
-  --validate                Validate resulting BOM before outputting. Validation is skipped, if requirements not met.
-                            (default: true)
+  --validate                Validate resulting BOM before outputting.
+                            Validation is skipped, if requirements not met. See the README.
   --no-validate             Disable validation of resulting BOM.
   --mc-type <type>          Type of the main component.
                             (choices: "application", "firmware", "library", default: "application")
