@@ -12,12 +12,12 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.1.0"
+        "version": "6.5.1"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.14.1"
+        "version": "1.16.2"
       }
     ],
     "component": {
@@ -26,7 +26,7 @@
       "version": "1.0.0-123+456",
       "bom-ref": "demo-package-with-build-id@1.0.0-123+456",
       "description": "demo: package-with-build-id -- show how buildID in the version looks like",
-      "purl": "pkg:npm/demo-package-with-build-id@1.0.0-123%2B456",
+      "purl": "pkg:npm/demo-package-with-build-id@1.0.0-123+456",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues/551",

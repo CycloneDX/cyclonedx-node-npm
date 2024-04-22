@@ -12,7 +12,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.1.0",
+        "version": "6.5.1",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
@@ -34,7 +34,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.14.1",
+        "version": "1.16.2",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
