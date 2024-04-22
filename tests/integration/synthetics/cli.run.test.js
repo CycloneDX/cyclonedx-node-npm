@@ -24,7 +24,7 @@ const {
   openSync, closeSync, existsSync, writeFileSync, readFileSync
 } = require('fs')
 
-const {Spec} = require('@cyclonedx/cyclonedx-library')
+const { Spec } = require('@cyclonedx/cyclonedx-library')
 const { describe, expect, test } = require('@jest/globals')
 
 const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
@@ -32,7 +32,7 @@ const { version: thisVersion } = require('../../../package.json')
 
 const cli = require('../../../dist/cli')
 
-const latestCdxSpecVersion = Spec.Spec1dot6
+const latestCdxSpecVersion = Spec.Version.v1dot6
 
 describe('cli.run()', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
