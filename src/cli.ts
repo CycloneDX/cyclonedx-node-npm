@@ -76,7 +76,7 @@ function makeCommand (process: NodeJS.Process): Command {
   ).addOption(
     new Option(
       '--omit <type...>',
-      'Dependency types to omit from the installation tree.' +
+      'Dependency types to omit from the installation tree. ' +
       '(can be set multiple times)'
     ).choices(
       Object.values(Omittable).sort()
