@@ -22,6 +22,7 @@ env:
   DIST_DIR: dist
   REPORTS_DIR: "CI_reports"
   TESTS_REPORTS_ARTIFACT: tests-reports
+  CNPM_TEST_UPDATE_SNAPSHOTS: ''  # set to a string that nodeJS would not evaluate to TRUE - which can only be an empty string
 
 jobs:
   build:
