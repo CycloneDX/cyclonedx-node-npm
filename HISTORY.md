@@ -15,8 +15,11 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 * Added
   * CLI switch `--spec-version` now supports value `1.6` to reflect _CycloneDX_ Specification-1.6 (via [#1175])  
     Default value for that option is unchanged - still `1.4`.
+* Build
+  * Use _TypeScript_ `v5.4.5` now, was `v5.4.2` (via [#1167])
 
 [#1175]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1175
+[#1167]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1167
 
 ## 1.16.2 - 2024-03-19
 
