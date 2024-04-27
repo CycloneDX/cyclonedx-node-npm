@@ -112,7 +112,7 @@ jobs:
           npm pack --pack-destination "$PACKED_DIR"
       - name: artifact release result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.PACKED_ARTIFACT }}
           path: ${{ env.PACKED_DIR }}/
