@@ -89,7 +89,7 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
-          - macos-latest
+          - macos-13 # macos-latest has issues with node14
     timeout-minutes: 15
     steps:
       - name: Checkout
