@@ -13,7 +13,7 @@ env:
 
 jobs:
   demo-results:
-    name: ${{ matrix.subject }} npm${{ matrix.npm-version }} node${{ matrix.node-version }} ${{ matrix.os }}
+    name: '${{ matrix.subject }} npm${{ matrix.npm-version }} node${{ matrix.node-version }} ${{ matrix.os }}'
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false # gather all the results !
@@ -73,7 +73,7 @@ jobs:
         run: |
           mkdir -p '${{ env.RESULTS_DIR }}'
           echo 'OUT_FILE_PREFIX=${{ env.RESULTS_DIR }}/npm-ls_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}' >> $GITHUB_ENV
-        working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
+        working-directory: '${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}'
         shell: bash # don't want to write tht code twice, windows and unix-like
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
@@ -97,11 +97,11 @@ jobs:
           ls --json --all --long
           2> ${{ env.OUT_FILE_PREFIX }}.err.log
           1> ${{ env.OUT_FILE_PREFIX }}.json
-        working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
+        working-directory: '${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}'
       - name: Artifact RESULTS
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.RESULTS_ARTIFACT }}
-          path: ${{ env.DEMO_ROOT_DIR}}/*/${{ env.RESULTS_DIR }}
+          name: '${{ env.RESULTS_ARTIFACT }}_${{ matrix.subject }}_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}'
+          path: '${{ env.DEMO_ROOT_DIR}}/*/${{ env.RESULTS_DIR }}'
           if-no-files-found: error
