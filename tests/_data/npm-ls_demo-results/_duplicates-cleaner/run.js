@@ -63,7 +63,7 @@ for (const filesByOs of files) {
       const fileHash = await hashFile(filePath)
       if (fileHashes.has(fileHash)) {
         console.info('DELETE:', fileHash, filePath)
-        // unlinkSync(file)
+        unlinkSync(filePath)
       }
       console.info('KEEP:', fileHash, filePath)
     }
