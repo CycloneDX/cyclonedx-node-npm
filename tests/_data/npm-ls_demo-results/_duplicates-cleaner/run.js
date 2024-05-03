@@ -27,7 +27,7 @@ import { fileURLToPath } from 'node:url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const dirDemoRes = dirname(__dirname)
 
-const fnamePattern = /npm-ls_npm(?<npm>\d+)_node(?<node>\d+)_(?<os>.+)\.json/
+const fnamePattern = /^npm-ls_npm(?<npm>\d+)_node(?<node>\d+)_(?<os>.+)\.json$/
 
 /** @type {Object.<string, Object.<string, string[]>>} */
 const files = {}
