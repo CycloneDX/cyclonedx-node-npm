@@ -80,8 +80,8 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '21'      # Current
-          - '20'      # LTS
+          - '22'      # Current
+          - '20'      # active LTS
           - '18'
           - '16'
           - '14'
