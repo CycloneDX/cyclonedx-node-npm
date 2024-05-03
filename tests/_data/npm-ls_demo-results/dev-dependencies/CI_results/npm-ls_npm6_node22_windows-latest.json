@@ -1,0 +1,839 @@
+{
+  "name": "demo-dev-dependencies",
+  "description": "demo: demo-dev-dependencies -- showcase how devDependencies look like",
+  "private": true,
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "optionalDependencies": {
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "@types/node": ">=16",
+    "@types/uuid": "^8",
+    "uuid": "^8"
+  },
+  "readme": "ERROR: No README data found!",
+  "dependencies": {
+    "@types/node": {
+      "_from": "@types/node@>=16",
+      "_id": "@types/node@20.12.8",
+      "_integrity": "sha512-NU0rJLJnshZWdE/097cdCBbyW1h4hEg0xpovcoAQYHl8dnEyp/NAOiE45pvc+Bd1Dt+2r94v2eGFpQJ4R7g+2w==",
+      "_location": "/@types/node",
+      "_phantomChildren": {},
+      "_requested": {
+        "type": "version",
+        "registry": true,
+        "raw": "@types/node@20.12.8",
+        "name": "@types/node",
+        "escapedName": "@types%2fnode",
+        "scope": "@types",
+        "rawSpec": "20.12.8",
+        "saveSpec": null,
+        "fetchSpec": "20.12.8"
+      },
+      "_requiredBy": [
+        "#DEV:/"
+      ],
+      "_resolved": "https://registry.npmjs.org/@types/node/-/node-20.12.8.tgz",
+      "_shasum": "35897bf2bfe3469847ab04634636de09552e8256",
+      "_spec": "20.12.8",
+      "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project",
+      "bugs": {
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+      },
+      "contributors": [
+        {
+          "name": "Microsoft TypeScript",
+          "url": "https://github.com/Microsoft"
+        },
+        {
+          "name": "Alberto Schiabel",
+          "url": "https://github.com/jkomyno"
+        },
+        {
+          "name": "Alvis HT Tang",
+          "url": "https://github.com/alvis"
+        },
+        {
+          "name": "Andrew Makarov",
+          "url": "https://github.com/r3nya"
+        },
+        {
+          "name": "Benjamin Toueg",
+          "url": "https://github.com/btoueg"
+        },
+        {
+          "name": "Chigozirim C.",
+          "url": "https://github.com/smac89"
+        },
+        {
+          "name": "David Junger",
+          "url": "https://github.com/touffy"
+        },
+        {
+          "name": "Deividas Bakanas",
+          "url": "https://github.com/DeividasBakanas"
+        },
+        {
+          "name": "Eugene Y. Q. Shen",
+          "url": "https://github.com/eyqs"
+        },
+        {
+          "name": "Hannes Magnusson",
+          "url": "https://github.com/Hannes-Magnusson-CK"
+        },
+        {
+          "name": "Huw",
+          "url": "https://github.com/hoo29"
+        },
+        {
+          "name": "Kelvin Jin",
+          "url": "https://github.com/kjin"
+        },
+        {
+          "name": "Klaus Meinhardt",
+          "url": "https://github.com/ajafff"
+        },
+        {
+          "name": "Lishude",
+          "url": "https://github.com/islishude"
+        },
+        {
+          "name": "Mariusz Wiktorczyk",
+          "url": "https://github.com/mwiktorczyk"
+        },
+        {
+          "name": "Mohsen Azimi",
+          "url": "https://github.com/mohsen1"
+        },
+        {
+          "name": "Nikita Galkin",
+          "url": "https://github.com/galkin"
+        },
+        {
+          "name": "Parambir Singh",
+          "url": "https://github.com/parambirs"
+        },
+        {
+          "name": "Sebastian Silbermann",
+          "url": "https://github.com/eps1lon"
+        },
+        {
+          "name": "Thomas den Hollander",
+          "url": "https://github.com/ThomasdenH"
+        },
+        {
+          "name": "Wilco Bakker",
+          "url": "https://github.com/WilcoBakker"
+        },
+        {
+          "name": "wwwy3y3",
+          "url": "https://github.com/wwwy3y3"
+        },
+        {
+          "name": "Samuel Ainsworth",
+          "url": "https://github.com/samuela"
+        },
+        {
+          "name": "Kyle Uehlein",
+          "url": "https://github.com/kuehlein"
+        },
+        {
+          "name": "Thanik Bhongbhibhat",
+          "url": "https://github.com/bhongy"
+        },
+        {
+          "name": "Marcin Kopacz",
+          "url": "https://github.com/chyzwar"
+        },
+        {
+          "name": "Trivikram Kamat",
+          "url": "https://github.com/trivikr"
+        },
+        {
+          "name": "Junxiao Shi",
+          "url": "https://github.com/yoursunny"
+        },
+        {
+          "name": "Ilia Baryshnikov",
+          "url": "https://github.com/qwelias"
+        },
+        {
+          "name": "ExE Boss",
+          "url": "https://github.com/ExE-Boss"
+        },
+        {
+          "name": "Piotr Błażejewicz",
+          "url": "https://github.com/peterblazejewicz"
+        },
+        {
+          "name": "Anna Henningsen",
+          "url": "https://github.com/addaleax"
+        },
+        {
+          "name": "Victor Perin",
+          "url": "https://github.com/victorperin"
+        },
+        {
+          "name": "Yongsheng Zhang",
+          "url": "https://github.com/ZYSzys"
+        },
+        {
+          "name": "NodeJS Contributors",
+          "url": "https://github.com/NodeJS"
+        },
+        {
+          "name": "Linus Unnebäck",
+          "url": "https://github.com/LinusU"
+        },
+        {
+          "name": "wafuwafu13",
+          "url": "https://github.com/wafuwafu13"
+        },
+        {
+          "name": "Matteo Collina",
+          "url": "https://github.com/mcollina"
+        },
+        {
+          "name": "Dmitry Semigradsky",
+          "url": "https://github.com/Semigradsky"
+        }
+      ],
+      "dependencies": {
+        "undici-types": {
+          "_from": "undici-types@~5.26.4",
+          "_id": "undici-types@5.26.5",
+          "_integrity": "sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==",
+          "_location": "/undici-types",
+          "_phantomChildren": {},
+          "_requested": {
+            "type": "version",
+            "registry": true,
+            "raw": "undici-types@5.26.5",
+            "name": "undici-types",
+            "escapedName": "undici-types",
+            "rawSpec": "5.26.5",
+            "saveSpec": "[Circular]",
+            "fetchSpec": "5.26.5"
+          },
+          "_requiredBy": [
+            "/@types/node"
+          ],
+          "_resolved": "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz",
+          "_shasum": "bcd539893d00b56e964fd2657a4866b221a65617",
+          "_spec": "5.26.5",
+          "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project",
+          "bugs": {
+            "url": "https://github.com/nodejs/undici/issues"
+          },
+          "contributors": [
+            {
+              "name": "Daniele Belardi",
+              "url": "https://github.com/dnlup"
+            },
+            {
+              "name": "Ethan Arrowood",
+              "url": "https://github.com/ethan-arrowood"
+            },
+            {
+              "name": "Matteo Collina",
+              "url": "https://github.com/mcollina"
+            },
+            {
+              "name": "Matthew Aitken",
+              "url": "https://github.com/KhafraDev"
+            },
+            {
+              "name": "Robert Nagy",
+              "url": "https://github.com/ronag"
+            },
+            {
+              "name": "Szymon Marczak",
+              "url": "https://github.com/szmarczak"
+            },
+            {
+              "name": "Tomas Della Vedova",
+              "url": "https://github.com/delvedor"
+            }
+          ],
+          "deprecated": false,
+          "description": "A stand-alone types package for Undici",
+          "files": [
+            "*.d.ts"
+          ],
+          "homepage": "https://undici.nodejs.org",
+          "license": "MIT",
+          "name": "undici-types",
+          "repository": {
+            "type": "git",
+            "url": "git+https://github.com/nodejs/undici.git"
+          },
+          "types": "index.d.ts",
+          "version": "5.26.5",
+          "readme": "# undici-types\n\nThis package is a dual-publish of the [undici](https://www.npmjs.com/package/undici) library types. The `undici` package **still contains types**. This package is for users who _only_ need undici types (such as for `@types/node`). It is published alongside every release of `undici`, so you can always use the same version.\n\n- [GitHub nodejs/undici](https://github.com/nodejs/undici)\n- [Undici Documentation](https://undici.nodejs.org/#/)\n",
+          "readmeFilename": "README.md",
+          "_development": true,
+          "_args": [
+            [
+              "undici-types@5.26.5",
+              "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project"
+            ]
+          ],
+          "dependencies": {},
+          "devDependencies": {},
+          "optionalDependencies": {},
+          "_dependencies": {},
+          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project\\node_modules\\undici-types",
+          "error": "[Circular]",
+          "extraneous": false
+        }
+      },
+      "deprecated": false,
+      "description": "TypeScript definitions for node",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node",
+      "license": "MIT",
+      "main": "",
+      "name": "@types/node",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/node"
+      },
+      "scripts": {},
+      "typeScriptVersion": "4.7",
+      "types": "index.d.ts",
+      "typesPublisherContentHash": "5ff1c25113c701fc2321b0b620459a659788987291b6c00cde19caf71688f6ae",
+      "version": "20.12.8",
+      "readme": "# Installation\r\n> `npm install --save @types/node`\r\n\r\n# Summary\r\nThis package contains type definitions for node (https://nodejs.org/).\r\n\r\n# Details\r\nFiles were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node.\r\n\r\n### Additional Details\r\n * Last updated: Wed, 01 May 2024 18:36:06 GMT\r\n * Dependencies: [undici-types](https://npmjs.com/package/undici-types)\r\n\r\n# Credits\r\nThese definitions were written by [Microsoft TypeScript](https://github.com/Microsoft), [Alberto Schiabel](https://github.com/jkomyno), [Alvis HT Tang](https://github.com/alvis), [Andrew Makarov](https://github.com/r3nya), [Benjamin Toueg](https://github.com/btoueg), [Chigozirim C.](https://github.com/smac89), [David Junger](https://github.com/touffy), [Deividas Bakanas](https://github.com/DeividasBakanas), [Eugene Y. Q. Shen](https://github.com/eyqs), [Hannes Magnusson](https://github.com/Hannes-Magnusson-CK), [Huw](https://github.com/hoo29), [Kelvin Jin](https://github.com/kjin), [Klaus Meinhardt](https://github.com/ajafff), [Lishude](https://github.com/islishude), [Mariusz Wiktorczyk](https://github.com/mwiktorczyk), [Mohsen Azimi](https://github.com/mohsen1), [Nikita Galkin](https://github.com/galkin), [Parambir Singh](https://github.com/parambirs), [Sebastian Silbermann](https://github.com/eps1lon), [Thomas den Hollander](https://github.com/ThomasdenH), [Wilco Bakker](https://github.com/WilcoBakker), [wwwy3y3](https://github.com/wwwy3y3), [Samuel Ainsworth](https://github.com/samuela), [Kyle Uehlein](https://github.com/kuehlein), [Thanik Bhongbhibhat](https://github.com/bhongy), [Marcin Kopacz](https://github.com/chyzwar), [Trivikram Kamat](https://github.com/trivikr), [Junxiao Shi](https://github.com/yoursunny), [Ilia Baryshnikov](https://github.com/qwelias), [ExE Boss](https://github.com/ExE-Boss), [Piotr Błażejewicz](https://github.com/peterblazejewicz), [Anna Henningsen](https://github.com/addaleax), [Victor Perin](https://github.com/victorperin), [Yongsheng Zhang](https://github.com/ZYSzys), [NodeJS Contributors](https://github.com/NodeJS), [Linus Unnebäck](https://github.com/LinusU), [wafuwafu13](https://github.com/wafuwafu13), [Matteo Collina](https://github.com/mcollina), and [Dmitry Semigradsky](https://github.com/Semigradsky).\r\n",
+      "readmeFilename": "README.md",
+      "_development": true,
+      "_args": [
+        [
+          "@types/node@20.12.8",
+          "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project"
+        ]
+      ],
+      "devDependencies": {},
+      "optionalDependencies": {},
+      "_dependencies": {
+        "undici-types": "~5.26.4"
+      },
+      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project\\node_modules\\@types\\node",
+      "error": "[Circular]",
+      "extraneous": false
+    },
+    "@types/uuid": {
+      "_from": "@types/uuid@8.3.4",
+      "_id": "@types/uuid@8.3.4",
+      "_integrity": "sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==",
+      "_location": "/@types/uuid",
+      "_phantomChildren": {},
+      "_requested": {
+        "type": "version",
+        "registry": true,
+        "raw": "@types/uuid@8.3.4",
+        "name": "@types/uuid",
+        "escapedName": "@types%2fuuid",
+        "scope": "@types",
+        "rawSpec": "8.3.4",
+        "saveSpec": "[Circular]",
+        "fetchSpec": "8.3.4"
+      },
+      "_requiredBy": [
+        "#DEV:/",
+        "/uuidv4"
+      ],
+      "_resolved": "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz",
+      "_shasum": "bd86a43617df0594787d38b735f55c805becf1bc",
+      "_spec": "8.3.4",
+      "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project",
+      "bugs": {
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+      },
+      "contributors": [
+        {
+          "name": "Oliver Hoffmann",
+          "url": "https://github.com/iamolivinius"
+        },
+        {
+          "name": "Felipe Ochoa",
+          "url": "https://github.com/felipeochoa"
+        },
+        {
+          "name": "Chris Barth",
+          "url": "https://github.com/cjbarth"
+        },
+        {
+          "name": "Linus Unnebäck",
+          "url": "https://github.com/LinusU"
+        },
+        {
+          "name": "Christoph Tavan",
+          "url": "https://github.com/ctavan"
+        }
+      ],
+      "dependencies": {},
+      "deprecated": false,
+      "description": "TypeScript definitions for uuid",
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "types": {
+            "import": "./index.d.mts",
+            "default": "./index.d.ts"
+          }
+        }
+      },
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/uuid",
+      "license": "MIT",
+      "main": "",
+      "name": "@types/uuid",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/uuid"
+      },
+      "scripts": {},
+      "typeScriptVersion": "3.8",
+      "types": "index.d.ts",
+      "typesPublisherContentHash": "7bd9cd358e9e4357393eb0163c44f44dc265ab936b456743af6ed3d0d0ac644f",
+      "version": "8.3.4",
+      "readme": "# Installation\r\n> `npm install --save @types/uuid`\r\n\r\n# Summary\r\nThis package contains type definitions for uuid (https://github.com/uuidjs/uuid).\r\n\r\n# Details\r\nFiles were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/uuid.\r\n\r\n### Additional Details\r\n * Last updated: Thu, 06 Jan 2022 07:31:27 GMT\r\n * Dependencies: none\r\n * Global values: none\r\n\r\n# Credits\r\nThese definitions were written by [Oliver Hoffmann](https://github.com/iamolivinius), [Felipe Ochoa](https://github.com/felipeochoa), [Chris Barth](https://github.com/cjbarth), [Linus Unnebäck](https://github.com/LinusU), and [Christoph Tavan](https://github.com/ctavan).\r\n",
+      "readmeFilename": "README.md",
+      "_args": [
+        [
+          "@types/uuid@8.3.4",
+          "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project"
+        ]
+      ],
+      "devDependencies": {},
+      "optionalDependencies": {},
+      "_dependencies": {},
+      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project\\node_modules\\@types\\uuid",
+      "error": "[Circular]",
+      "extraneous": false
+    },
+    "uuid": {
+      "_from": "uuid@8.3.2",
+      "_id": "uuid@8.3.2",
+      "_integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==",
+      "_location": "/uuid",
+      "_phantomChildren": {},
+      "_requested": {
+        "type": "version",
+        "registry": true,
+        "raw": "uuid@8.3.2",
+        "name": "uuid",
+        "escapedName": "uuid",
+        "rawSpec": "8.3.2",
+        "saveSpec": "[Circular]",
+        "fetchSpec": "8.3.2"
+      },
+      "_requiredBy": [
+        "#DEV:/",
+        "/uuidv4"
+      ],
+      "_resolved": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
+      "_shasum": "80d5b5ced271bb9af6c445f21a1a04c606cefbe2",
+      "_spec": "8.3.2",
+      "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "deprecated": false,
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "devDependencies": {
+        "@babel/cli": "7.11.6",
+        "@babel/core": "7.11.6",
+        "@babel/preset-env": "7.11.5",
+        "@commitlint/cli": "11.0.0",
+        "@commitlint/config-conventional": "11.0.0",
+        "@rollup/plugin-node-resolve": "9.0.0",
+        "babel-eslint": "10.1.0",
+        "bundlewatch": "0.3.1",
+        "eslint": "7.10.0",
+        "eslint-config-prettier": "6.12.0",
+        "eslint-config-standard": "14.1.1",
+        "eslint-plugin-import": "2.22.1",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-prettier": "3.1.4",
+        "eslint-plugin-promise": "4.2.1",
+        "eslint-plugin-standard": "4.0.1",
+        "husky": "4.3.0",
+        "jest": "25.5.4",
+        "lint-staged": "10.4.0",
+        "npm-run-all": "4.1.5",
+        "optional-dev-dependency": "2.0.1",
+        "prettier": "2.1.2",
+        "random-seed": "0.3.0",
+        "rollup": "2.28.2",
+        "rollup-plugin-terser": "7.0.2",
+        "runmd": "1.3.2",
+        "standard-version": "9.0.0"
+      },
+      "exports": {
+        ".": {
+          "node": {
+            "module": "./dist/esm-node/index.js",
+            "require": "./dist/index.js",
+            "import": "./wrapper.mjs"
+          },
+          "default": "./dist/esm-browser/index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "files": [
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "LICENSE.md",
+        "README.md",
+        "dist",
+        "wrapper.mjs"
+      ],
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "main": "./dist/index.js",
+      "module": "./dist/esm-node/index.js",
+      "name": "uuid",
+      "optionalDevDependencies": {
+        "@wdio/browserstack-service": "6.4.0",
+        "@wdio/cli": "6.4.0",
+        "@wdio/jasmine-framework": "6.4.0",
+        "@wdio/local-runner": "6.4.0",
+        "@wdio/spec-reporter": "6.4.0",
+        "@wdio/static-server-service": "6.4.0",
+        "@wdio/sync": "6.4.0"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "scripts": {
+        "build": "./scripts/build.sh",
+        "bundlewatch": "npm run pretest:browser && bundlewatch --config bundlewatch.config.json",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "npm run docs && git diff --quiet README.md",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "examples:browser:rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:browser:webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:node:commonjs:test": "cd examples/node-commonjs && npm install && npm test",
+        "examples:node:esmodules:test": "cd examples/node-esmodules && npm install && npm test",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "prepack": "npm run build",
+        "pretest": "[ -n $CI ] || npm run build",
+        "pretest:benchmark": "npm run build",
+        "pretest:browser": "optional-dev-dependency && npm run build && npm-run-all --parallel examples:browser:**",
+        "pretest:node": "npm run build",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "release": "standard-version --no-verify",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "test:benchmark": "cd examples/benchmark && npm install && npm test",
+        "test:browser": "wdio run ./wdio.conf.js",
+        "test:node": "npm-run-all --parallel examples:node:**",
+        "test:pack": "./scripts/testpack.sh"
+      },
+      "sideEffects": false,
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md"
+        }
+      },
+      "version": "8.3.2",
+      "readme": "<!--\n  -- This file is auto-generated from README_js.md. Changes should be made there.\n  -->\n\n# uuid [![CI](https://github.com/uuidjs/uuid/workflows/CI/badge.svg)](https://github.com/uuidjs/uuid/actions?query=workflow%3ACI) [![Browser](https://github.com/uuidjs/uuid/workflows/Browser/badge.svg)](https://github.com/uuidjs/uuid/actions?query=workflow%3ABrowser)\n\nFor the creation of [RFC4122](http://www.ietf.org/rfc/rfc4122.txt) UUIDs\n\n- **Complete** - Support for RFC4122 version 1, 3, 4, and 5 UUIDs\n- **Cross-platform** - Support for ...\n  - CommonJS, [ECMAScript Modules](#ecmascript-modules) and [CDN builds](#cdn-builds)\n  - Node 8, 10, 12, 14\n  - Chrome, Safari, Firefox, Edge, IE 11 browsers\n  - Webpack and rollup.js module bundlers\n  - [React Native / Expo](#react-native--expo)\n- **Secure** - Cryptographically-strong random values\n- **Small** - Zero-dependency, small footprint, plays nice with \"tree shaking\" packagers\n- **CLI** - Includes the [`uuid` command line](#command-line) utility\n\n**Upgrading from `uuid@3.x`?** Your code is probably okay, but check out [Upgrading From `uuid@3.x`](#upgrading-from-uuid3x) for details.\n\n## Quickstart\n\nTo create a random UUID...\n\n**1. Install**\n\n```shell\nnpm install uuid\n```\n\n**2. Create a UUID** (ES6 module syntax)\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'\n```\n\n... or using CommonJS syntax:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nFor timestamp UUIDs, namespace UUIDs, and other options read on ...\n\n## API Summary\n\n|  |  |  |\n| --- | --- | --- |\n| [`uuid.NIL`](#uuidnil) | The nil UUID string (all zeros) | New in `uuid@8.3` |\n| [`uuid.parse()`](#uuidparsestr) | Convert UUID string to array of bytes | New in `uuid@8.3` |\n| [`uuid.stringify()`](#uuidstringifyarr-offset) | Convert array of bytes to UUID string | New in `uuid@8.3` |\n| [`uuid.v1()`](#uuidv1options-buffer-offset) | Create a version 1 (timestamp) UUID |  |\n| [`uuid.v3()`](#uuidv3name-namespace-buffer-offset) | Create a version 3 (namespace w/ MD5) UUID |  |\n| [`uuid.v4()`](#uuidv4options-buffer-offset) | Create a version 4 (random) UUID |  |\n| [`uuid.v5()`](#uuidv5name-namespace-buffer-offset) | Create a version 5 (namespace w/ SHA-1) UUID |  |\n| [`uuid.validate()`](#uuidvalidatestr) | Test a string to see if it is a valid UUID | New in `uuid@8.3` |\n| [`uuid.version()`](#uuidversionstr) | Detect RFC version of a UUID | New in `uuid@8.3` |\n\n## API\n\n### uuid.NIL\n\nThe nil UUID string (all zeros).\n\nExample:\n\n```javascript\nimport { NIL as NIL_UUID } from 'uuid';\n\nNIL_UUID; // ⇨ '00000000-0000-0000-0000-000000000000'\n```\n\n### uuid.parse(str)\n\nConvert UUID string to array of bytes\n\n|           |                                          |\n| --------- | ---------------------------------------- |\n| `str`     | A valid UUID `String`                    |\n| _returns_ | `Uint8Array[16]`                         |\n| _throws_  | `TypeError` if `str` is not a valid UUID |\n\nNote: Ordering of values in the byte arrays used by `parse()` and `stringify()` follows the left &Rarr; right order of hex-pairs in UUID strings. As shown in the example below.\n\nExample:\n\n```javascript\nimport { parse as uuidParse } from 'uuid';\n\n// Parse a UUID\nconst bytes = uuidParse('6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b');\n\n// Convert to hex strings to show byte order (for documentation purposes)\n[...bytes].map((v) => v.toString(16).padStart(2, '0')); // ⇨ \n  // [\n  //   '6e', 'c0', 'bd', '7f',\n  //   '11', 'c0', '43', 'da',\n  //   '97', '5e', '2a', '8a',\n  //   'd9', 'eb', 'ae', '0b'\n  // ]\n```\n\n### uuid.stringify(arr[, offset])\n\nConvert array of bytes to UUID string\n\n|                |                                                                              |\n| -------------- | ---------------------------------------------------------------------------- |\n| `arr`          | `Array`-like collection of 16 values (starting from `offset`) between 0-255. |\n| [`offset` = 0] | `Number` Starting index in the Array                                         |\n| _returns_      | `String`                                                                     |\n| _throws_       | `TypeError` if a valid UUID string cannot be generated                       |\n\nNote: Ordering of values in the byte arrays used by `parse()` and `stringify()` follows the left &Rarr; right order of hex-pairs in UUID strings. As shown in the example below.\n\nExample:\n\n```javascript\nimport { stringify as uuidStringify } from 'uuid';\n\nconst uuidBytes = [\n  0x6e,\n  0xc0,\n  0xbd,\n  0x7f,\n  0x11,\n  0xc0,\n  0x43,\n  0xda,\n  0x97,\n  0x5e,\n  0x2a,\n  0x8a,\n  0xd9,\n  0xeb,\n  0xae,\n  0x0b,\n];\n\nuuidStringify(uuidBytes); // ⇨ '6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'\n```\n\n### uuid.v1([options[, buffer[, offset]]])\n\nCreate an RFC version 1 (timestamp) UUID\n\n|  |  |\n| --- | --- |\n| [`options`] | `Object` with one or more of the following properties: |\n| [`options.node` ] | RFC \"node\" field as an `Array[6]` of byte values (per 4.1.6) |\n| [`options.clockseq`] | RFC \"clock sequence\" as a `Number` between 0 - 0x3fff |\n| [`options.msecs`] | RFC \"timestamp\" field (`Number` of milliseconds, unix epoch) |\n| [`options.nsecs`] | RFC \"timestamp\" field (`Number` of nanseconds to add to `msecs`, should be 0-10,000) |\n| [`options.random`] | `Array` of 16 random bytes (0-255) |\n| [`options.rng`] | Alternative to `options.random`, a `Function` that returns an `Array` of 16 random bytes (0-255) |\n| [`buffer`] | `Array \\| Buffer` If specified, uuid will be written here in byte-form, starting at `offset` |\n| [`offset` = 0] | `Number` Index to start writing UUID bytes in `buffer` |\n| _returns_ | UUID `String` if no `buffer` is specified, otherwise returns `buffer` |\n| _throws_ | `Error` if more than 10M UUIDs/sec are requested |\n\nNote: The default [node id](https://tools.ietf.org/html/rfc4122#section-4.1.6) (the last 12 digits in the UUID) is generated once, randomly, on process startup, and then remains unchanged for the duration of the process.\n\nNote: `options.random` and `options.rng` are only meaningful on the very first call to `v1()`, where they may be passed to initialize the internal `node` and `clockseq` fields.\n\nExample:\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\n\nuuidv1(); // ⇨ '2c5ea4c0-4067-11e9-8bad-9b1deb4d3b7d'\n```\n\nExample using `options`:\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\n\nconst v1options = {\n  node: [0x01, 0x23, 0x45, 0x67, 0x89, 0xab],\n  clockseq: 0x1234,\n  msecs: new Date('2011-11-01').getTime(),\n  nsecs: 5678,\n};\nuuidv1(v1options); // ⇨ '710b962e-041c-11e1-9234-0123456789ab'\n```\n\n### uuid.v3(name, namespace[, buffer[, offset]])\n\nCreate an RFC version 3 (namespace w/ MD5) UUID\n\nAPI is identical to `v5()`, but uses \"v3\" instead.\n\n&#x26a0;&#xfe0f; Note: Per the RFC, \"_If backward compatibility is not an issue, SHA-1 [Version 5] is preferred_.\"\n\n### uuid.v4([options[, buffer[, offset]]])\n\nCreate an RFC version 4 (random) UUID\n\n|  |  |\n| --- | --- |\n| [`options`] | `Object` with one or more of the following properties: |\n| [`options.random`] | `Array` of 16 random bytes (0-255) |\n| [`options.rng`] | Alternative to `options.random`, a `Function` that returns an `Array` of 16 random bytes (0-255) |\n| [`buffer`] | `Array \\| Buffer` If specified, uuid will be written here in byte-form, starting at `offset` |\n| [`offset` = 0] | `Number` Index to start writing UUID bytes in `buffer` |\n| _returns_ | UUID `String` if no `buffer` is specified, otherwise returns `buffer` |\n\nExample:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\n\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nExample using predefined `random` values:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\n\nconst v4options = {\n  random: [\n    0x10,\n    0x91,\n    0x56,\n    0xbe,\n    0xc4,\n    0xfb,\n    0xc1,\n    0xea,\n    0x71,\n    0xb4,\n    0xef,\n    0xe1,\n    0x67,\n    0x1c,\n    0x58,\n    0x36,\n  ],\n};\nuuidv4(v4options); // ⇨ '109156be-c4fb-41ea-b1b4-efe1671c5836'\n```\n\n### uuid.v5(name, namespace[, buffer[, offset]])\n\nCreate an RFC version 5 (namespace w/ SHA-1) UUID\n\n|  |  |\n| --- | --- |\n| `name` | `String \\| Array` |\n| `namespace` | `String \\| Array[16]` Namespace UUID |\n| [`buffer`] | `Array \\| Buffer` If specified, uuid will be written here in byte-form, starting at `offset` |\n| [`offset` = 0] | `Number` Index to start writing UUID bytes in `buffer` |\n| _returns_ | UUID `String` if no `buffer` is specified, otherwise returns `buffer` |\n\nNote: The RFC `DNS` and `URL` namespaces are available as `v5.DNS` and `v5.URL`.\n\nExample with custom namespace:\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\n// Define a custom namespace.  Readers, create your own using something like\n// https://www.uuidgenerator.net/\nconst MY_NAMESPACE = '1b671a64-40d5-491e-99b0-da01ff1f3341';\n\nuuidv5('Hello, World!', MY_NAMESPACE); // ⇨ '630eb68f-e0fa-5ecc-887a-7c7a62614681'\n```\n\nExample with RFC `URL` namespace:\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\nuuidv5('https://www.w3.org/', uuidv5.URL); // ⇨ 'c106a26a-21bb-5538-8bf2-57095d1976c1'\n```\n\n### uuid.validate(str)\n\nTest a string to see if it is a valid UUID\n\n|           |                                                     |\n| --------- | --------------------------------------------------- |\n| `str`     | `String` to validate                                |\n| _returns_ | `true` if string is a valid UUID, `false` otherwise |\n\nExample:\n\n```javascript\nimport { validate as uuidValidate } from 'uuid';\n\nuuidValidate('not a UUID'); // ⇨ false\nuuidValidate('6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'); // ⇨ true\n```\n\nUsing `validate` and `version` together it is possible to do per-version validation, e.g. validate for only v4 UUIds.\n\n```javascript\nimport { version as uuidVersion } from 'uuid';\nimport { validate as uuidValidate } from 'uuid';\n\nfunction uuidValidateV4(uuid) {\n  return uuidValidate(uuid) && uuidVersion(uuid) === 4;\n}\n\nconst v1Uuid = 'd9428888-122b-11e1-b85c-61cd3cbb3210';\nconst v4Uuid = '109156be-c4fb-41ea-b1b4-efe1671c5836';\n\nuuidValidateV4(v4Uuid); // ⇨ true\nuuidValidateV4(v1Uuid); // ⇨ false\n```\n\n### uuid.version(str)\n\nDetect RFC version of a UUID\n\n|           |                                          |\n| --------- | ---------------------------------------- |\n| `str`     | A valid UUID `String`                    |\n| _returns_ | `Number` The RFC version of the UUID     |\n| _throws_  | `TypeError` if `str` is not a valid UUID |\n\nExample:\n\n```javascript\nimport { version as uuidVersion } from 'uuid';\n\nuuidVersion('45637ec4-c85f-11ea-87d0-0242ac130003'); // ⇨ 1\nuuidVersion('6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'); // ⇨ 4\n```\n\n## Command Line\n\nUUIDs can be generated from the command line using `uuid`.\n\n```shell\n$ uuid\nddeb27fb-d9a0-4624-be4d-4615062daed4\n```\n\nThe default is to generate version 4 UUIDS, however the other versions are supported. Type `uuid --help` for details:\n\n```shell\n$ uuid --help\n\nUsage:\n  uuid\n  uuid v1\n  uuid v3 <name> <namespace uuid>\n  uuid v4\n  uuid v5 <name> <namespace uuid>\n  uuid --help\n\nNote: <namespace uuid> may be \"URL\" or \"DNS\" to use the corresponding UUIDs\ndefined by RFC4122\n```\n\n## ECMAScript Modules\n\nThis library comes with [ECMAScript Modules](https://www.ecma-international.org/ecma-262/6.0/#sec-modules) (ESM) support for Node.js versions that support it ([example](./examples/node-esmodules/)) as well as bundlers like [rollup.js](https://rollupjs.org/guide/en/#tree-shaking) ([example](./examples/browser-rollup/)) and [webpack](https://webpack.js.org/guides/tree-shaking/) ([example](./examples/browser-webpack/)) (targeting both, Node.js and browser environments).\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nTo run the examples you must first create a dist build of this library in the module root:\n\n```shell\nnpm run build\n```\n\n## CDN Builds\n\n### ECMAScript Modules\n\nTo load this module directly into modern browsers that [support loading ECMAScript Modules](https://caniuse.com/#feat=es6-module) you can make use of [jspm](https://jspm.org/):\n\n```html\n<script type=\"module\">\n  import { v4 as uuidv4 } from 'https://jspm.dev/uuid';\n  console.log(uuidv4()); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n</script>\n```\n\n### UMD\n\nTo load this module directly into older browsers you can use the [UMD (Universal Module Definition)](https://github.com/umdjs/umd) builds from any of the following CDNs:\n\n**Using [UNPKG](https://unpkg.com/uuid@latest/dist/umd/)**:\n\n```html\n<script src=\"https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n```\n\n**Using [jsDelivr](https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/)**:\n\n```html\n<script src=\"https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n```\n\n**Using [cdnjs](https://cdnjs.com/libraries/uuid)**:\n\n```html\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js\"></script>\n```\n\nThese CDNs all provide the same [`uuidv4()`](#uuidv4options-buffer-offset) method:\n\n```html\n<script>\n  uuidv4(); // ⇨ '55af1e37-0734-46d8-b070-a1e42e4fc392'\n</script>\n```\n\nMethods for the other algorithms ([`uuidv1()`](#uuidv1options-buffer-offset), [`uuidv3()`](#uuidv3name-namespace-buffer-offset) and [`uuidv5()`](#uuidv5name-namespace-buffer-offset)) are available from the files `uuidv1.min.js`, `uuidv3.min.js` and `uuidv5.min.js` respectively.\n\n## \"getRandomValues() not supported\"\n\nThis error occurs in environments where the standard [`crypto.getRandomValues()`](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues) API is not supported. This issue can be resolved by adding an appropriate polyfill:\n\n### React Native / Expo\n\n1. Install [`react-native-get-random-values`](https://github.com/LinusU/react-native-get-random-values#readme)\n1. Import it _before_ `uuid`. Since `uuid` might also appear as a transitive dependency of some other imports it's safest to just import `react-native-get-random-values` as the very first thing in your entry point:\n\n```javascript\nimport 'react-native-get-random-values';\nimport { v4 as uuidv4 } from 'uuid';\n```\n\nNote: If you are using Expo, you must be using at least `react-native-get-random-values@1.5.0` and `expo@39.0.0`.\n\n### Web Workers / Service Workers (Edge <= 18)\n\n[In Edge <= 18, Web Crypto is not supported in Web Workers or Service Workers](https://caniuse.com/#feat=cryptography) and we are not aware of a polyfill (let us know if you find one, please).\n\n## Upgrading From `uuid@7.x`\n\n### Only Named Exports Supported When Using with Node.js ESM\n\n`uuid@7.x` did not come with native ECMAScript Module (ESM) support for Node.js. Importing it in Node.js ESM consequently imported the CommonJS source with a default export. This library now comes with true Node.js ESM support and only provides named exports.\n\nInstead of doing:\n\n```javascript\nimport uuid from 'uuid';\nuuid.v4();\n```\n\nyou will now have to use the named exports:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n### Deep Requires No Longer Supported\n\nDeep requires like `require('uuid/v4')` [which have been deprecated in `uuid@7.x`](#deep-requires-now-deprecated) are no longer supported.\n\n## Upgrading From `uuid@3.x`\n\n\"_Wait... what happened to `uuid@4.x` - `uuid@6.x`?!?_\"\n\nIn order to avoid confusion with RFC [version 4](#uuidv4options-buffer-offset) and [version 5](#uuidv5name-namespace-buffer-offset) UUIDs, and a possible [version 6](http://gh.peabody.io/uuidv6/), releases 4 thru 6 of this module have been skipped.\n\n### Deep Requires Now Deprecated\n\n`uuid@3.x` encouraged the use of deep requires to minimize the bundle size of browser builds:\n\n```javascript\nconst uuidv4 = require('uuid/v4'); // <== NOW DEPRECATED!\nuuidv4();\n```\n\nAs of `uuid@7.x` this library now provides ECMAScript modules builds, which allow packagers like Webpack and Rollup to do \"tree-shaking\" to remove dead code. Instead, use the `import` syntax:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n... or for CommonJS:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4();\n```\n\n### Default Export Removed\n\n`uuid@3.x` was exporting the Version 4 UUID method as a default export:\n\n```javascript\nconst uuid = require('uuid'); // <== REMOVED!\n```\n\nThis usage pattern was already discouraged in `uuid@3.x` and has been removed in `uuid@7.x`.\n\n----\nMarkdown generated from [README_js.md](README_js.md) by [![RunMD Logo](http://i.imgur.com/h0FVyzU.png)](https://github.com/broofa/runmd)",
+      "readmeFilename": "README.md",
+      "_args": [
+        [
+          "uuid@8.3.2",
+          "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project"
+        ]
+      ],
+      "dependencies": {},
+      "optionalDependencies": {},
+      "_dependencies": {},
+      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project\\node_modules\\uuid",
+      "error": "[Circular]",
+      "extraneous": false
+    },
+    "uuidv4": {
+      "_from": "uuidv4@^6.2.13",
+      "_id": "uuidv4@6.2.13",
+      "_integrity": "sha512-AXyzMjazYB3ovL3q051VLH06Ixj//Knx7QnUSi1T//Ie3io6CpsPu9nVMOx5MoLWh6xV0B9J0hIaxungxXUbPQ==",
+      "_location": "/uuidv4",
+      "_phantomChildren": {},
+      "_requested": {
+        "type": "version",
+        "registry": true,
+        "raw": "uuidv4@6.2.13",
+        "name": "uuidv4",
+        "escapedName": "uuidv4",
+        "rawSpec": "6.2.13",
+        "saveSpec": "[Circular]",
+        "fetchSpec": "6.2.13"
+      },
+      "_requiredBy": [
+        "/"
+      ],
+      "_resolved": "https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz",
+      "_shasum": "8f95ec5ef22d1f92c8e5d4c70b735d1c89572cb7",
+      "_spec": "6.2.13",
+      "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project",
+      "bugs": {
+        "url": "https://github.com/thenativeweb/uuidv4/issues"
+      },
+      "contributors": [
+        {
+          "name": "Golo Roden",
+          "email": "golo.roden@thenativeweb.io"
+        },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        },
+        {
+          "name": "Jan-Hendrik Grundhöfer",
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io"
+        },
+        {
+          "name": "Sven Eppler",
+          "email": "sven.eppler@sodgeit.de"
+        },
+        {
+          "name": "Hannes Leutloff",
+          "email": "hannes.leutloff@thenativeweb.io"
+        }
+      ],
+      "dependencies": {
+        "@types/uuid": {
+          "_from": "@types/uuid@8.3.4",
+          "_id": "@types/uuid@8.3.4",
+          "_integrity": "sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==",
+          "_location": "/@types/uuid",
+          "_phantomChildren": "[Circular]",
+          "_requested": {
+            "type": "version",
+            "registry": true,
+            "raw": "@types/uuid@8.3.4",
+            "name": "@types/uuid",
+            "escapedName": "@types%2fuuid",
+            "scope": "@types",
+            "rawSpec": "8.3.4",
+            "saveSpec": "[Circular]",
+            "fetchSpec": "8.3.4"
+          },
+          "_requiredBy": "[Circular]",
+          "_resolved": "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz",
+          "_shasum": "bd86a43617df0594787d38b735f55c805becf1bc",
+          "_spec": "8.3.4",
+          "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project",
+          "bugs": "[Circular]",
+          "contributors": "[Circular]",
+          "dependencies": {},
+          "deprecated": false,
+          "description": "TypeScript definitions for uuid",
+          "exports": "[Circular]",
+          "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/uuid",
+          "license": "MIT",
+          "main": "",
+          "name": "@types/uuid",
+          "repository": "[Circular]",
+          "scripts": "[Circular]",
+          "typeScriptVersion": "3.8",
+          "types": "index.d.ts",
+          "typesPublisherContentHash": "7bd9cd358e9e4357393eb0163c44f44dc265ab936b456743af6ed3d0d0ac644f",
+          "version": "8.3.4",
+          "readme": "# Installation\r\n> `npm install --save @types/uuid`\r\n\r\n# Summary\r\nThis package contains type definitions for uuid (https://github.com/uuidjs/uuid).\r\n\r\n# Details\r\nFiles were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/uuid.\r\n\r\n### Additional Details\r\n * Last updated: Thu, 06 Jan 2022 07:31:27 GMT\r\n * Dependencies: none\r\n * Global values: none\r\n\r\n# Credits\r\nThese definitions were written by [Oliver Hoffmann](https://github.com/iamolivinius), [Felipe Ochoa](https://github.com/felipeochoa), [Chris Barth](https://github.com/cjbarth), [Linus Unnebäck](https://github.com/LinusU), and [Christoph Tavan](https://github.com/ctavan).\r\n",
+          "readmeFilename": "README.md",
+          "_args": "[Circular]",
+          "devDependencies": "[Circular]",
+          "optionalDependencies": "[Circular]",
+          "_dependencies": "[Circular]",
+          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project\\node_modules\\@types\\uuid",
+          "error": "[Circular]",
+          "extraneous": false,
+          "_deduped": "node_modules\\@types\\uuid"
+        },
+        "uuid": {
+          "_from": "uuid@8.3.2",
+          "_id": "uuid@8.3.2",
+          "_integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==",
+          "_location": "/uuid",
+          "_phantomChildren": "[Circular]",
+          "_requested": {
+            "type": "version",
+            "registry": true,
+            "raw": "uuid@8.3.2",
+            "name": "uuid",
+            "escapedName": "uuid",
+            "rawSpec": "8.3.2",
+            "saveSpec": "[Circular]",
+            "fetchSpec": "8.3.2"
+          },
+          "_requiredBy": "[Circular]",
+          "_resolved": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
+          "_shasum": "80d5b5ced271bb9af6c445f21a1a04c606cefbe2",
+          "_spec": "8.3.2",
+          "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project",
+          "bin": "[Circular]",
+          "browser": "[Circular]",
+          "bugs": "[Circular]",
+          "commitlint": "[Circular]",
+          "deprecated": false,
+          "description": "RFC4122 (v1, v4, and v5) UUIDs",
+          "devDependencies": "[Circular]",
+          "exports": "[Circular]",
+          "files": "[Circular]",
+          "homepage": "https://github.com/uuidjs/uuid#readme",
+          "husky": "[Circular]",
+          "keywords": "[Circular]",
+          "license": "MIT",
+          "lint-staged": "[Circular]",
+          "main": "./dist/index.js",
+          "module": "./dist/esm-node/index.js",
+          "name": "uuid",
+          "optionalDevDependencies": "[Circular]",
+          "repository": "[Circular]",
+          "scripts": "[Circular]",
+          "sideEffects": false,
+          "standard-version": "[Circular]",
+          "version": "8.3.2",
+          "readme": "<!--\n  -- This file is auto-generated from README_js.md. Changes should be made there.\n  -->\n\n# uuid [![CI](https://github.com/uuidjs/uuid/workflows/CI/badge.svg)](https://github.com/uuidjs/uuid/actions?query=workflow%3ACI) [![Browser](https://github.com/uuidjs/uuid/workflows/Browser/badge.svg)](https://github.com/uuidjs/uuid/actions?query=workflow%3ABrowser)\n\nFor the creation of [RFC4122](http://www.ietf.org/rfc/rfc4122.txt) UUIDs\n\n- **Complete** - Support for RFC4122 version 1, 3, 4, and 5 UUIDs\n- **Cross-platform** - Support for ...\n  - CommonJS, [ECMAScript Modules](#ecmascript-modules) and [CDN builds](#cdn-builds)\n  - Node 8, 10, 12, 14\n  - Chrome, Safari, Firefox, Edge, IE 11 browsers\n  - Webpack and rollup.js module bundlers\n  - [React Native / Expo](#react-native--expo)\n- **Secure** - Cryptographically-strong random values\n- **Small** - Zero-dependency, small footprint, plays nice with \"tree shaking\" packagers\n- **CLI** - Includes the [`uuid` command line](#command-line) utility\n\n**Upgrading from `uuid@3.x`?** Your code is probably okay, but check out [Upgrading From `uuid@3.x`](#upgrading-from-uuid3x) for details.\n\n## Quickstart\n\nTo create a random UUID...\n\n**1. Install**\n\n```shell\nnpm install uuid\n```\n\n**2. Create a UUID** (ES6 module syntax)\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'\n```\n\n... or using CommonJS syntax:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nFor timestamp UUIDs, namespace UUIDs, and other options read on ...\n\n## API Summary\n\n|  |  |  |\n| --- | --- | --- |\n| [`uuid.NIL`](#uuidnil) | The nil UUID string (all zeros) | New in `uuid@8.3` |\n| [`uuid.parse()`](#uuidparsestr) | Convert UUID string to array of bytes | New in `uuid@8.3` |\n| [`uuid.stringify()`](#uuidstringifyarr-offset) | Convert array of bytes to UUID string | New in `uuid@8.3` |\n| [`uuid.v1()`](#uuidv1options-buffer-offset) | Create a version 1 (timestamp) UUID |  |\n| [`uuid.v3()`](#uuidv3name-namespace-buffer-offset) | Create a version 3 (namespace w/ MD5) UUID |  |\n| [`uuid.v4()`](#uuidv4options-buffer-offset) | Create a version 4 (random) UUID |  |\n| [`uuid.v5()`](#uuidv5name-namespace-buffer-offset) | Create a version 5 (namespace w/ SHA-1) UUID |  |\n| [`uuid.validate()`](#uuidvalidatestr) | Test a string to see if it is a valid UUID | New in `uuid@8.3` |\n| [`uuid.version()`](#uuidversionstr) | Detect RFC version of a UUID | New in `uuid@8.3` |\n\n## API\n\n### uuid.NIL\n\nThe nil UUID string (all zeros).\n\nExample:\n\n```javascript\nimport { NIL as NIL_UUID } from 'uuid';\n\nNIL_UUID; // ⇨ '00000000-0000-0000-0000-000000000000'\n```\n\n### uuid.parse(str)\n\nConvert UUID string to array of bytes\n\n|           |                                          |\n| --------- | ---------------------------------------- |\n| `str`     | A valid UUID `String`                    |\n| _returns_ | `Uint8Array[16]`                         |\n| _throws_  | `TypeError` if `str` is not a valid UUID |\n\nNote: Ordering of values in the byte arrays used by `parse()` and `stringify()` follows the left &Rarr; right order of hex-pairs in UUID strings. As shown in the example below.\n\nExample:\n\n```javascript\nimport { parse as uuidParse } from 'uuid';\n\n// Parse a UUID\nconst bytes = uuidParse('6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b');\n\n// Convert to hex strings to show byte order (for documentation purposes)\n[...bytes].map((v) => v.toString(16).padStart(2, '0')); // ⇨ \n  // [\n  //   '6e', 'c0', 'bd', '7f',\n  //   '11', 'c0', '43', 'da',\n  //   '97', '5e', '2a', '8a',\n  //   'd9', 'eb', 'ae', '0b'\n  // ]\n```\n\n### uuid.stringify(arr[, offset])\n\nConvert array of bytes to UUID string\n\n|                |                                                                              |\n| -------------- | ---------------------------------------------------------------------------- |\n| `arr`          | `Array`-like collection of 16 values (starting from `offset`) between 0-255. |\n| [`offset` = 0] | `Number` Starting index in the Array                                         |\n| _returns_      | `String`                                                                     |\n| _throws_       | `TypeError` if a valid UUID string cannot be generated                       |\n\nNote: Ordering of values in the byte arrays used by `parse()` and `stringify()` follows the left &Rarr; right order of hex-pairs in UUID strings. As shown in the example below.\n\nExample:\n\n```javascript\nimport { stringify as uuidStringify } from 'uuid';\n\nconst uuidBytes = [\n  0x6e,\n  0xc0,\n  0xbd,\n  0x7f,\n  0x11,\n  0xc0,\n  0x43,\n  0xda,\n  0x97,\n  0x5e,\n  0x2a,\n  0x8a,\n  0xd9,\n  0xeb,\n  0xae,\n  0x0b,\n];\n\nuuidStringify(uuidBytes); // ⇨ '6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'\n```\n\n### uuid.v1([options[, buffer[, offset]]])\n\nCreate an RFC version 1 (timestamp) UUID\n\n|  |  |\n| --- | --- |\n| [`options`] | `Object` with one or more of the following properties: |\n| [`options.node` ] | RFC \"node\" field as an `Array[6]` of byte values (per 4.1.6) |\n| [`options.clockseq`] | RFC \"clock sequence\" as a `Number` between 0 - 0x3fff |\n| [`options.msecs`] | RFC \"timestamp\" field (`Number` of milliseconds, unix epoch) |\n| [`options.nsecs`] | RFC \"timestamp\" field (`Number` of nanseconds to add to `msecs`, should be 0-10,000) |\n| [`options.random`] | `Array` of 16 random bytes (0-255) |\n| [`options.rng`] | Alternative to `options.random`, a `Function` that returns an `Array` of 16 random bytes (0-255) |\n| [`buffer`] | `Array \\| Buffer` If specified, uuid will be written here in byte-form, starting at `offset` |\n| [`offset` = 0] | `Number` Index to start writing UUID bytes in `buffer` |\n| _returns_ | UUID `String` if no `buffer` is specified, otherwise returns `buffer` |\n| _throws_ | `Error` if more than 10M UUIDs/sec are requested |\n\nNote: The default [node id](https://tools.ietf.org/html/rfc4122#section-4.1.6) (the last 12 digits in the UUID) is generated once, randomly, on process startup, and then remains unchanged for the duration of the process.\n\nNote: `options.random` and `options.rng` are only meaningful on the very first call to `v1()`, where they may be passed to initialize the internal `node` and `clockseq` fields.\n\nExample:\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\n\nuuidv1(); // ⇨ '2c5ea4c0-4067-11e9-8bad-9b1deb4d3b7d'\n```\n\nExample using `options`:\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\n\nconst v1options = {\n  node: [0x01, 0x23, 0x45, 0x67, 0x89, 0xab],\n  clockseq: 0x1234,\n  msecs: new Date('2011-11-01').getTime(),\n  nsecs: 5678,\n};\nuuidv1(v1options); // ⇨ '710b962e-041c-11e1-9234-0123456789ab'\n```\n\n### uuid.v3(name, namespace[, buffer[, offset]])\n\nCreate an RFC version 3 (namespace w/ MD5) UUID\n\nAPI is identical to `v5()`, but uses \"v3\" instead.\n\n&#x26a0;&#xfe0f; Note: Per the RFC, \"_If backward compatibility is not an issue, SHA-1 [Version 5] is preferred_.\"\n\n### uuid.v4([options[, buffer[, offset]]])\n\nCreate an RFC version 4 (random) UUID\n\n|  |  |\n| --- | --- |\n| [`options`] | `Object` with one or more of the following properties: |\n| [`options.random`] | `Array` of 16 random bytes (0-255) |\n| [`options.rng`] | Alternative to `options.random`, a `Function` that returns an `Array` of 16 random bytes (0-255) |\n| [`buffer`] | `Array \\| Buffer` If specified, uuid will be written here in byte-form, starting at `offset` |\n| [`offset` = 0] | `Number` Index to start writing UUID bytes in `buffer` |\n| _returns_ | UUID `String` if no `buffer` is specified, otherwise returns `buffer` |\n\nExample:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\n\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nExample using predefined `random` values:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\n\nconst v4options = {\n  random: [\n    0x10,\n    0x91,\n    0x56,\n    0xbe,\n    0xc4,\n    0xfb,\n    0xc1,\n    0xea,\n    0x71,\n    0xb4,\n    0xef,\n    0xe1,\n    0x67,\n    0x1c,\n    0x58,\n    0x36,\n  ],\n};\nuuidv4(v4options); // ⇨ '109156be-c4fb-41ea-b1b4-efe1671c5836'\n```\n\n### uuid.v5(name, namespace[, buffer[, offset]])\n\nCreate an RFC version 5 (namespace w/ SHA-1) UUID\n\n|  |  |\n| --- | --- |\n| `name` | `String \\| Array` |\n| `namespace` | `String \\| Array[16]` Namespace UUID |\n| [`buffer`] | `Array \\| Buffer` If specified, uuid will be written here in byte-form, starting at `offset` |\n| [`offset` = 0] | `Number` Index to start writing UUID bytes in `buffer` |\n| _returns_ | UUID `String` if no `buffer` is specified, otherwise returns `buffer` |\n\nNote: The RFC `DNS` and `URL` namespaces are available as `v5.DNS` and `v5.URL`.\n\nExample with custom namespace:\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\n// Define a custom namespace.  Readers, create your own using something like\n// https://www.uuidgenerator.net/\nconst MY_NAMESPACE = '1b671a64-40d5-491e-99b0-da01ff1f3341';\n\nuuidv5('Hello, World!', MY_NAMESPACE); // ⇨ '630eb68f-e0fa-5ecc-887a-7c7a62614681'\n```\n\nExample with RFC `URL` namespace:\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\nuuidv5('https://www.w3.org/', uuidv5.URL); // ⇨ 'c106a26a-21bb-5538-8bf2-57095d1976c1'\n```\n\n### uuid.validate(str)\n\nTest a string to see if it is a valid UUID\n\n|           |                                                     |\n| --------- | --------------------------------------------------- |\n| `str`     | `String` to validate                                |\n| _returns_ | `true` if string is a valid UUID, `false` otherwise |\n\nExample:\n\n```javascript\nimport { validate as uuidValidate } from 'uuid';\n\nuuidValidate('not a UUID'); // ⇨ false\nuuidValidate('6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'); // ⇨ true\n```\n\nUsing `validate` and `version` together it is possible to do per-version validation, e.g. validate for only v4 UUIds.\n\n```javascript\nimport { version as uuidVersion } from 'uuid';\nimport { validate as uuidValidate } from 'uuid';\n\nfunction uuidValidateV4(uuid) {\n  return uuidValidate(uuid) && uuidVersion(uuid) === 4;\n}\n\nconst v1Uuid = 'd9428888-122b-11e1-b85c-61cd3cbb3210';\nconst v4Uuid = '109156be-c4fb-41ea-b1b4-efe1671c5836';\n\nuuidValidateV4(v4Uuid); // ⇨ true\nuuidValidateV4(v1Uuid); // ⇨ false\n```\n\n### uuid.version(str)\n\nDetect RFC version of a UUID\n\n|           |                                          |\n| --------- | ---------------------------------------- |\n| `str`     | A valid UUID `String`                    |\n| _returns_ | `Number` The RFC version of the UUID     |\n| _throws_  | `TypeError` if `str` is not a valid UUID |\n\nExample:\n\n```javascript\nimport { version as uuidVersion } from 'uuid';\n\nuuidVersion('45637ec4-c85f-11ea-87d0-0242ac130003'); // ⇨ 1\nuuidVersion('6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'); // ⇨ 4\n```\n\n## Command Line\n\nUUIDs can be generated from the command line using `uuid`.\n\n```shell\n$ uuid\nddeb27fb-d9a0-4624-be4d-4615062daed4\n```\n\nThe default is to generate version 4 UUIDS, however the other versions are supported. Type `uuid --help` for details:\n\n```shell\n$ uuid --help\n\nUsage:\n  uuid\n  uuid v1\n  uuid v3 <name> <namespace uuid>\n  uuid v4\n  uuid v5 <name> <namespace uuid>\n  uuid --help\n\nNote: <namespace uuid> may be \"URL\" or \"DNS\" to use the corresponding UUIDs\ndefined by RFC4122\n```\n\n## ECMAScript Modules\n\nThis library comes with [ECMAScript Modules](https://www.ecma-international.org/ecma-262/6.0/#sec-modules) (ESM) support for Node.js versions that support it ([example](./examples/node-esmodules/)) as well as bundlers like [rollup.js](https://rollupjs.org/guide/en/#tree-shaking) ([example](./examples/browser-rollup/)) and [webpack](https://webpack.js.org/guides/tree-shaking/) ([example](./examples/browser-webpack/)) (targeting both, Node.js and browser environments).\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nTo run the examples you must first create a dist build of this library in the module root:\n\n```shell\nnpm run build\n```\n\n## CDN Builds\n\n### ECMAScript Modules\n\nTo load this module directly into modern browsers that [support loading ECMAScript Modules](https://caniuse.com/#feat=es6-module) you can make use of [jspm](https://jspm.org/):\n\n```html\n<script type=\"module\">\n  import { v4 as uuidv4 } from 'https://jspm.dev/uuid';\n  console.log(uuidv4()); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n</script>\n```\n\n### UMD\n\nTo load this module directly into older browsers you can use the [UMD (Universal Module Definition)](https://github.com/umdjs/umd) builds from any of the following CDNs:\n\n**Using [UNPKG](https://unpkg.com/uuid@latest/dist/umd/)**:\n\n```html\n<script src=\"https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n```\n\n**Using [jsDelivr](https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/)**:\n\n```html\n<script src=\"https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n```\n\n**Using [cdnjs](https://cdnjs.com/libraries/uuid)**:\n\n```html\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js\"></script>\n```\n\nThese CDNs all provide the same [`uuidv4()`](#uuidv4options-buffer-offset) method:\n\n```html\n<script>\n  uuidv4(); // ⇨ '55af1e37-0734-46d8-b070-a1e42e4fc392'\n</script>\n```\n\nMethods for the other algorithms ([`uuidv1()`](#uuidv1options-buffer-offset), [`uuidv3()`](#uuidv3name-namespace-buffer-offset) and [`uuidv5()`](#uuidv5name-namespace-buffer-offset)) are available from the files `uuidv1.min.js`, `uuidv3.min.js` and `uuidv5.min.js` respectively.\n\n## \"getRandomValues() not supported\"\n\nThis error occurs in environments where the standard [`crypto.getRandomValues()`](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues) API is not supported. This issue can be resolved by adding an appropriate polyfill:\n\n### React Native / Expo\n\n1. Install [`react-native-get-random-values`](https://github.com/LinusU/react-native-get-random-values#readme)\n1. Import it _before_ `uuid`. Since `uuid` might also appear as a transitive dependency of some other imports it's safest to just import `react-native-get-random-values` as the very first thing in your entry point:\n\n```javascript\nimport 'react-native-get-random-values';\nimport { v4 as uuidv4 } from 'uuid';\n```\n\nNote: If you are using Expo, you must be using at least `react-native-get-random-values@1.5.0` and `expo@39.0.0`.\n\n### Web Workers / Service Workers (Edge <= 18)\n\n[In Edge <= 18, Web Crypto is not supported in Web Workers or Service Workers](https://caniuse.com/#feat=cryptography) and we are not aware of a polyfill (let us know if you find one, please).\n\n## Upgrading From `uuid@7.x`\n\n### Only Named Exports Supported When Using with Node.js ESM\n\n`uuid@7.x` did not come with native ECMAScript Module (ESM) support for Node.js. Importing it in Node.js ESM consequently imported the CommonJS source with a default export. This library now comes with true Node.js ESM support and only provides named exports.\n\nInstead of doing:\n\n```javascript\nimport uuid from 'uuid';\nuuid.v4();\n```\n\nyou will now have to use the named exports:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n### Deep Requires No Longer Supported\n\nDeep requires like `require('uuid/v4')` [which have been deprecated in `uuid@7.x`](#deep-requires-now-deprecated) are no longer supported.\n\n## Upgrading From `uuid@3.x`\n\n\"_Wait... what happened to `uuid@4.x` - `uuid@6.x`?!?_\"\n\nIn order to avoid confusion with RFC [version 4](#uuidv4options-buffer-offset) and [version 5](#uuidv5name-namespace-buffer-offset) UUIDs, and a possible [version 6](http://gh.peabody.io/uuidv6/), releases 4 thru 6 of this module have been skipped.\n\n### Deep Requires Now Deprecated\n\n`uuid@3.x` encouraged the use of deep requires to minimize the bundle size of browser builds:\n\n```javascript\nconst uuidv4 = require('uuid/v4'); // <== NOW DEPRECATED!\nuuidv4();\n```\n\nAs of `uuid@7.x` this library now provides ECMAScript modules builds, which allow packagers like Webpack and Rollup to do \"tree-shaking\" to remove dead code. Instead, use the `import` syntax:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n... or for CommonJS:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4();\n```\n\n### Default Export Removed\n\n`uuid@3.x` was exporting the Version 4 UUID method as a default export:\n\n```javascript\nconst uuid = require('uuid'); // <== REMOVED!\n```\n\nThis usage pattern was already discouraged in `uuid@3.x` and has been removed in `uuid@7.x`.\n\n----\nMarkdown generated from [README_js.md](README_js.md) by [![RunMD Logo](http://i.imgur.com/h0FVyzU.png)](https://github.com/broofa/runmd)",
+          "readmeFilename": "README.md",
+          "_args": "[Circular]",
+          "dependencies": {},
+          "optionalDependencies": "[Circular]",
+          "_dependencies": "[Circular]",
+          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project\\node_modules\\uuid",
+          "error": "[Circular]",
+          "extraneous": false,
+          "_deduped": "node_modules\\uuid"
+        }
+      },
+      "deprecated": false,
+      "description": "uuidv4 creates v4 UUIDs.",
+      "devDependencies": {
+        "assertthat": "6.4.0",
+        "roboter": "12.7.1",
+        "semantic-release-configuration": "2.0.7"
+      },
+      "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+      "keywords": [
+        "guid",
+        "uuid"
+      ],
+      "license": "MIT",
+      "main": "build/lib/uuidv4.js",
+      "name": "uuidv4",
+      "private": false,
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "scripts": {},
+      "types": "build/lib/uuidv4.d.ts",
+      "version": "6.2.13",
+      "readme": "# uuidv4\n\nuuidv4 creates v4 UUIDs.\n\n## Status\n\n| Category         | Status                                                                                              |\n| ---------------- | --------------------------------------------------------------------------------------------------- |\n| Version          | [![npm](https://img.shields.io/npm/v/uuidv4)](https://www.npmjs.com/package/uuidv4)                 |\n| Dependencies     | ![David](https://img.shields.io/david/thenativeweb/uuidv4)                                          |\n| Dev dependencies | ![David](https://img.shields.io/david/dev/thenativeweb/uuidv4)                                      |\n| Build            | ![GitHub Actions](https://github.com/thenativeweb/uuidv4/workflows/Release/badge.svg?branch=main) |\n| License          | ![GitHub](https://img.shields.io/github/license/thenativeweb/uuidv4)                                |\n\n## Please note\n\nThis module will be deprecated in the future in favour of module [uuid](https://www.npmjs.com/package/uuid). Most of the functionality of this module is already included in `uuid` since version `8.3.0`, so most of the functions of this module have already been marked as deprecated.\n\n## Installation\n\n```shell\n$ npm install uuidv4\n```\n\n## Quick start\n\nFirst you need to integrate uuidv4 into your project by using the `require` function:\n\n```javascript\nconst { uuid } = require('uuidv4');\n```\n\nIf you use TypeScript, use the following code instead:\n\n```typescript\nimport { uuid } from 'uuidv4';\n```\n\nThen you can create UUIDs. To do so simply call the `uuid` function:\n\n```javascript\nconsole.log(uuid());\n// => '11bf5b37-e0b8-42e0-8dcf-dc8c4aefc000'\n```\n\n### Verifying a UUID\n\nTo verify whether a given value is a UUID, use the `isUuid` function:\n\n```javascript\nimport { isUuid } from 'uuidv4';\n\nconsole.log(isUuid('75442486-0878-440c-9db1-a7006c25a39f'));\n// => true\n```\n\n_Please note that the `isUuid` function returns `true` for both, `v4` and `v5` UUIDs. In addition, `isUuid` returns `true` for `empty()`._\n\n#### Using a regular expression\n\nIf you want to perform the verification on your own using a regular expression, use the `regex` property, and access its `v4` or `v5` property, depending on what you need:\n\n```javascript\nimport { regex } from 'uuidv4';\n\nconsole.log(regex.v4);\nconsole.log(regex.v5);\n```\n\n_Please note that the regular expressions also consider `empty()` to be a valid UUID._\n\n#### Using a JSON schema\n\nIf you want to perform the verification on your own using a JSON schema, use the `jsonSchema` property, and access its `v4` or `v5` property, depending on what you need:\n\n```javascript\nimport { jsonSchema } from 'uuidv4';\n\nconsole.log(jsonSchema.v4);\nconsole.log(jsonSchema.v5);\n```\n\n_Please note that the JSON schemas also consider `empty()` to be a valid UUID._\n\n### Getting a UUID from a string\n\nFrom time to time you need an identifier that looks like a UUID, but is actually inferred from a string. For that, use the `fromString` function, which returns a UUID `v5`:\n\n```javascript\nimport { fromString } from 'uuidv4';\n\nconsole.log(fromString('the native web'));\n// => 'cdb63720-9628-5ef6-bbca-2e5ce6094f3c'\n```\n\nBy default, the `fromString` function uses a pre-configured namespace. If you want to use your own namespace, provide a UUID as second parameter:\n\n```javascript\nimport { fromString } from 'uuidv4';\n\nconsole.log(fromString('the native web', '004aadf4-8e1a-4450-905b-6039179f52da'));\n// => 'b1c4a89e-4905-5e3c-b57f-dc92627d011e'\n```\n\n### Getting the empty UUID\n\nIf you need a UUID that consists only of zeros, use the `empty` function:\n\n```javascript\nimport { empty } from 'uuidv4';\n\nconsole.log(empty());\n// => '00000000-0000-0000-0000-000000000000'\n```\n\n## Running quality assurance\n\nTo run quality assurance for this module use [roboter](https://www.npmjs.com/package/roboter):\n\n```shell\n$ npx roboter\n```\n",
+      "readmeFilename": "README.md",
+      "_optional": true,
+      "_args": [
+        [
+          "uuidv4@6.2.13",
+          "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project"
+        ]
+      ],
+      "optionalDependencies": {},
+      "_dependencies": {
+        "@types/uuid": "8.3.4",
+        "uuid": "8.3.2"
+      },
+      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project\\node_modules\\uuidv4",
+      "error": "[Circular]",
+      "extraneous": false
+    }
+  },
+  "_id": "demo-dev-dependencies@0.0.0",
+  "_shrinkwrap": {
+    "name": "demo-dev-dependencies",
+    "version": "0.0.0",
+    "lockfileVersion": 1,
+    "requires": true,
+    "dependencies": {
+      "@types/node": {
+        "version": "20.12.8",
+        "resolved": "https://registry.npmjs.org/@types/node/-/node-20.12.8.tgz",
+        "integrity": "sha512-NU0rJLJnshZWdE/097cdCBbyW1h4hEg0xpovcoAQYHl8dnEyp/NAOiE45pvc+Bd1Dt+2r94v2eGFpQJ4R7g+2w==",
+        "dev": true,
+        "requires": {
+          "undici-types": "~5.26.4"
+        }
+      },
+      "@types/uuid": {
+        "version": "8.3.4",
+        "resolved": "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz",
+        "integrity": "sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw=="
+      },
+      "undici-types": {
+        "version": "5.26.5",
+        "resolved": "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz",
+        "integrity": "sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==",
+        "dev": true
+      },
+      "uuid": {
+        "version": "8.3.2",
+        "resolved": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
+        "integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg=="
+      },
+      "uuidv4": {
+        "version": "6.2.13",
+        "resolved": "https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz",
+        "integrity": "sha512-AXyzMjazYB3ovL3q051VLH06Ixj//Knx7QnUSi1T//Ie3io6CpsPu9nVMOx5MoLWh6xV0B9J0hIaxungxXUbPQ==",
+        "optional": true,
+        "requires": {
+          "@types/uuid": "8.3.4",
+          "uuid": "8.3.2"
+        }
+      }
+    }
+  },
+  "_dependencies": {
+    "uuidv4": "^6.2.13"
+  },
+  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project",
+  "error": "[Circular]",
+  "extraneous": false
+}

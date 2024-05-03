@@ -1,0 +1,61 @@
+{
+  "version": "0.0.0",
+  "name": "demo-local-deps",
+  "description": "demo: demo-local-deps -- showcase how local dependencies look like",
+  "private": true,
+  "license": "Apache-2.0",
+  "_id": "demo-local-deps@0.0.0",
+  "extraneous": false,
+  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project",
+  "_dependencies": {
+    "my-local-a": "file:packages/my-local-a",
+    "my-noname": "file:packages/my-noname"
+  },
+  "devDependencies": {},
+  "peerDependencies": {},
+  "dependencies": {
+    "my-local-a": {
+      "version": "0.0.0",
+      "resolved": "file:../packages/my-local-a",
+      "overridden": false,
+      "name": "my-local-a",
+      "license": "Apache-2.0",
+      "_id": "my-local-a@0.0.0",
+      "extraneous": false,
+      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/node_modules/my-local-a",
+      "_dependencies": {
+        "my-local-b-off": "file:../my-local-b"
+      },
+      "devDependencies": {},
+      "peerDependencies": {},
+      "dependencies": {
+        "my-local-b-off": {
+          "version": "0.0.0",
+          "resolved": "file:../packages/my-local-b",
+          "overridden": false,
+          "name": "my-local-b",
+          "license": "Apache-2.0",
+          "_id": "my-local-b@0.0.0",
+          "extraneous": false,
+          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/node_modules/my-local-b-off",
+          "_dependencies": {},
+          "devDependencies": {},
+          "peerDependencies": {}
+        }
+      }
+    },
+    "my-noname": {
+      "version": "0.0.0",
+      "resolved": "file:../packages/my-noname",
+      "overridden": false,
+      "name": "my-noname",
+      "license": "Apache-2.0",
+      "_id": "my-noname@0.0.0",
+      "extraneous": false,
+      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/node_modules/my-noname",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
+    }
+  }
+}
