@@ -292,7 +292,7 @@ describe('cli.run()', () => {
   })
 
   test('suppressed error on non-zero exit', async () => {
-    const dd = { subject: 'dev-dependencies', npm: '8', node: '16', os: 'ubuntu-latest' }
+    const dd = { subject: 'dev-dependencies', npm: '8', node: '14', os: 'ubuntu-latest' }
 
     mkdirSync(join(tmpRoot, 'suppressed-error-on-non-zero-exit'))
     const expectedOutSnap = resolve(demoResultsRoot, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
