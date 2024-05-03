@@ -65,6 +65,7 @@ for (const filesByOs of Object.values(files)) {
         console.info('DELETE:', fileHash, filePath)
         unlinkSync(filePath)
       }
+      fileHashes.add(fileHash)
       console.info('KEEP:', fileHash, filePath)
     }
   }
