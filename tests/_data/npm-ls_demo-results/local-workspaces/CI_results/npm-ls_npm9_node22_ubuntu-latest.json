@@ -1,0 +1,103 @@
+{
+  "version": "0.0.0",
+  "name": "demo-workspaces",
+  "description": "demo: demo-workspaces -- showcase how workspaces look like",
+  "private": true,
+  "license": "Apache-2.0",
+  "workspaces": [
+    "workspaces/*"
+  ],
+  "_id": "demo-workspaces@0.0.0",
+  "extraneous": false,
+  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project",
+  "_dependencies": {
+    "my-local-a": "*"
+  },
+  "devDependencies": {},
+  "peerDependencies": {},
+  "dependencies": {
+    "my-local-a": {
+      "version": "0.1.0",
+      "resolved": "file:../workspaces/my-local-a",
+      "overridden": false,
+      "name": "my-local-a",
+      "license": "Apache-2.0",
+      "_id": "my-local-a@0.1.0",
+      "extraneous": false,
+      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-a",
+      "_dependencies": {
+        "my-local-b-off": "*"
+      },
+      "devDependencies": {},
+      "peerDependencies": {},
+      "dependencies": {
+        "my-local-b-off": {
+          "version": "0.0.0",
+          "name": "my-local-b-off",
+          "license": "Apache-2.0",
+          "_id": "my-local-b-off@0.0.0",
+          "extraneous": false,
+          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-b-off",
+          "_dependencies": {},
+          "devDependencies": {},
+          "peerDependencies": {}
+        }
+      }
+    },
+    "my-local-b-off": {
+      "version": "0.0.0",
+      "resolved": "file:../workspaces/my-local-b",
+      "overridden": false,
+      "name": "my-local-b-off",
+      "license": "Apache-2.0",
+      "_id": "my-local-b-off@0.0.0",
+      "extraneous": false,
+      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-b-off",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
+    },
+    "my-local-c": {
+      "version": "0.23.42",
+      "resolved": "file:../workspaces/my-local",
+      "overridden": false,
+      "name": "my-local-c",
+      "license": "Apache-2.0",
+      "_id": "my-local-c@0.23.42",
+      "extraneous": false,
+      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-c",
+      "_dependencies": {
+        "my-local-a": "*",
+        "my-local-b-off": "*"
+      },
+      "devDependencies": {},
+      "peerDependencies": {},
+      "dependencies": {
+        "my-local-a": {
+          "version": "0.1.0",
+          "name": "my-local-a",
+          "license": "Apache-2.0",
+          "_id": "my-local-a@0.1.0",
+          "extraneous": false,
+          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-a",
+          "_dependencies": {
+            "my-local-b-off": "*"
+          },
+          "devDependencies": {},
+          "peerDependencies": {}
+        },
+        "my-local-b-off": {
+          "version": "0.0.0",
+          "name": "my-local-b-off",
+          "license": "Apache-2.0",
+          "_id": "my-local-b-off@0.0.0",
+          "extraneous": false,
+          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-b-off",
+          "_dependencies": {},
+          "devDependencies": {},
+          "peerDependencies": {}
+        }
+      }
+    }
+  }
+}

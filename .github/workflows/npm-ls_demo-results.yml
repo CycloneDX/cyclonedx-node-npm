@@ -19,13 +19,13 @@ jobs:
       fail-fast: false # gather all the results !
       matrix:
         subject:
-          # - bundled-dependencies
-          # - dev-dependencies
-          # - juice-shop
-          # - local-dependencies
-          # - local-workspaces
+          - bundled-dependencies
+          - dev-dependencies
+          - juice-shop
+          - local-dependencies
+          - local-workspaces
           - package-integrity
-          # - package-with-build-id
+          - package-with-build-id
         npm-version:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
           ## see also: https://github.com/npm/cli/releases
@@ -37,10 +37,11 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '20'     # Current
-          - '18'     # Active LTS
-          - '16'
-          - '14'
+          - '22'     # Current
+          #- '20'     # Active LTS
+          #- '18'
+          #- '16'
+          #- '14'
         os:
           - ubuntu-latest
           - windows-latest
@@ -55,10 +56,13 @@ jobs:
           - # npm9 upgrade/install failed on node14
             npm-version: '9'
             node-version: '14'
-          - # juice-shop might not be node14 compatible
+          - # our specific version of juice-shop might not be node22 compatible
+            subject: juice-shop
+            node-version: '22'
+          - # our specific version of juice-shop might not be node14 compatible
             subject: juice-shop
             node-version: '14'
-          - # juice-shop might not be npm6 compatible
+          - # our specific version of juice-shop might not be npm6 compatible
             subject: juice-shop
             npm-version: '6'
           - # workspaces are a feature of NPM since 7.0
@@ -105,3 +109,25 @@ jobs:
           name: '${{ env.RESULTS_ARTIFACT }}_${{ matrix.subject }}_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}'
           path: '${{ env.DEMO_ROOT_DIR}}/*/${{ env.RESULTS_DIR }}'
           if-no-files-found: error
+          retention-days: 3
+
+  combine-results:
+    name: combine results
+    needs: [ 'demo-results' ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: fetch and combine RESULTS
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          pattern: '${{ env.RESULTS_ARTIFACT }}_*'
+          merge-multiple: true
+          path: '${{ env.DEMO_ROOT_DIR}}'
+      - name: Artifact RESULTS
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: '${{ env.RESULTS_ARTIFACT }}-combined'
+          path: '${{ env.DEMO_ROOT_DIR}}'
+          if-no-files-found: error
+          retention-days: 3
