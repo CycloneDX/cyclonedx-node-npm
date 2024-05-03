@@ -17,38 +17,38 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-"use strict";
+'use strict'
 
-import {dirname, join} from 'node:path';
-import {fileURLToPath} from 'node:url';
-import {readdirSync, statSync, createReadStream, unlinkSync} from 'node:fs';
-import {createHash} from 'node:crypto';
+import { createHash } from 'node:crypto'
+import { createReadStream, readdirSync, unlinkSync } from 'node:fs'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const dir_demo_res = dirname(__dirname)
+const dirDemoRes = dirname(__dirname)
 
-const FNAME_pattern = /npm-ls_npm(?<npm>\d+)_node(?<node>\d+)_(?<os>.+)\.json/
+const fnamePattern = /npm-ls_npm(?<npm>\d+)_node(?<node>\d+)_(?<os>.+)\.json/
 
 /** @type {Object.<string, Object.<string, string[]>>} */
 const files = {}
 
 // /CI_results/npm-ls_npm6_node14_macos-latest.json
-for (const dir_demo_res_e of readdirSync(dir_demo_res)) {
-  const dir_results = join(dir_demo_res, dir_demo_res_e, 'CI_results')
+for (const dirDemoResE of readdirSync(dirDemoRes)) {
+  const dirResults = join(dirDemoRes, dirDemoResE, 'CI_results')
   try {
-    for (const dir_results_e of readdirSync(dir_results)) {
-      const fname_match = FNAME_pattern.exec(dir_results_e)
-      if (!fname_match) {
+    for (const dirResultsE of readdirSync(dirResults)) {
+      const fnameMatch = fnamePattern.exec(dirResultsE)
+      if (!fnameMatch) {
         continue
       }
-      if (!Object.hasOwn(files, fname_match.groups.npm)) {
-        files[fname_match.groups.npm] = {}
+      if (!Object.hasOwn(files, fnameMatch.groups.npm)) {
+        files[fnameMatch.groups.npm] = {}
       }
-      if (!Object.hasOwn(files[fname_match.groups.npm], fname_match.groups.os)) {
-        files[fname_match.groups.npm][fname_match.groups.os] = []
+      if (!Object.hasOwn(files[fnameMatch.groups.npm], fnameMatch.groups.os)) {
+        files[fnameMatch.groups.npm][fnameMatch.groups.os] = []
       }
-      files[fname_match.groups.npm][fname_match.groups.os].push(
-        join(dir_results, dir_results_e)
+      files[fnameMatch.groups.npm][fnameMatch.groups.os].push(
+        join(dirResults, dirResultsE)
       )
     }
   } catch (e) {
@@ -56,33 +56,32 @@ for (const dir_demo_res_e of readdirSync(dir_demo_res)) {
   }
 }
 
-for (const [npm, npm_files] of Object.entries(files)) {
-  for (const [os, npm_os_files] of Object.entries(npm_files)) {
-    const npm_os_file_hashes = new Set()
-    for (const npm_os_file of npm_os_files) {
-      const npm_os_file_hash = await fileHash(npm_os_file)
-      if (npm_os_file_hashes.has(npm_os_file_hash)) {
-        console.info('DELETE:', npm_os_file_hash, npm_os_file)
-        unlinkSync(npm_os_file)
+for (const filesByOs of files) {
+  for (const filePaths of filesByOs) {
+    const fileHashes = new Set()
+    for (const filePath of filePaths) {
+      const fileHash = await hashFile(filePath)
+      if (fileHashes.has(fileHash)) {
+        console.info('DELETE:', fileHash, filePath)
+        // unlinkSync(file)
       }
-      console.info('KEEP:', npm_os_file_hash, npm_os_file)
+      console.info('KEEP:', fileHash, filePath)
     }
   }
 }
-
 
 /**
  * @param {string} fp
  * @return {Promise<string>}
  */
-function fileHash(fp) {
+function hashFile (fp) {
   return new Promise((resolve, reject) => {
-    const hash = createHash('md5');
+    const hash = createHash('md5')
     createReadStream(fp)
       .once('error', reject)
       .once('end', () => {
-        resolve(hash.end().read().toString('hex'));
+        resolve(hash.end().read().toString('hex'))
       })
-      .pipe(hash);
+      .pipe(hash)
   })
 }
