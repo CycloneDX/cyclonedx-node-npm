@@ -109,3 +109,25 @@ jobs:
           name: '${{ env.RESULTS_ARTIFACT }}_${{ matrix.subject }}_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}'
           path: '${{ env.DEMO_ROOT_DIR}}/*/${{ env.RESULTS_DIR }}'
           if-no-files-found: error
+          retention-days: 3
+
+  combine-results:
+    name: combine results
+    needs: [ 'demo-results' ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: fetch and combine RESULTS
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          pattern: '${{ env.RESULTS_ARTIFACT }}_*'
+          merge-multiple: true
+          path: '${{ env.DEMO_ROOT_DIR}}'
+      - name: Artifact RESULTS
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: '${{ env.RESULTS_ARTIFACT }}-combined'
+          path: '${{ env.DEMO_ROOT_DIR}}'
+          if-no-files-found: error
+          retention-days: 3
