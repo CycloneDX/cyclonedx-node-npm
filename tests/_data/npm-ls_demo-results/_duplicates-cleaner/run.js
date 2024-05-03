@@ -19,10 +19,10 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 "use strict";
 
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { readdirSync, statSync, createReadStream, unlinkSync } from 'node:fs';
-import { createHash } from 'node:crypto';
+import {dirname, join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {readdirSync, statSync, createReadStream, unlinkSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const dir_demo_res = dirname(__dirname)
@@ -61,11 +61,11 @@ for (const [npm, npm_files] of Object.entries(files)) {
     const npm_os_file_hashes = new Set()
     for (const npm_os_file of npm_os_files) {
       const npm_os_file_hash = await fileHash(npm_os_file)
-        if (npm_os_file_hashes.has(npm_os_file_hash)) {
-          console.info('DELETE:', npm_os_file_hash, npm_os_file)
-          unlinkSync(npm_os_file)
-        }
-        console.info('KEEP:', npm_os_file_hash, npm_os_file)
+      if (npm_os_file_hashes.has(npm_os_file_hash)) {
+        console.info('DELETE:', npm_os_file_hash, npm_os_file)
+        unlinkSync(npm_os_file)
+      }
+      console.info('KEEP:', npm_os_file_hash, npm_os_file)
     }
   }
 }
