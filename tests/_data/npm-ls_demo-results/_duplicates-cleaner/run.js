@@ -57,13 +57,13 @@ for (const dirDemoResE of readdirSync(dirDemoRes)) {
 }
 
 for (const filesByOs of Object.values(files)) {
-  for (const filePaths of filesByOs) {
+  for (const filePaths of Object.values(filesByOs)) {
     const fileHashes = new Set()
-    for (const filePath of Object.values(filePaths)) {
+    for (const filePath of filePaths) {
       const fileHash = await hashFile(filePath)
       if (fileHashes.has(fileHash)) {
         console.info('DELETE:', fileHash, filePath)
-        unlinkSync(filePath)
+        // unlinkSync(filePath)
       }
       console.info('KEEP:', fileHash, filePath)
     }
