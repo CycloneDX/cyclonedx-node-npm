@@ -9,7 +9,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>6.5.1</version>
+        <version>6.6.1</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
@@ -28,7 +28,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.16.2</version>
+        <version>1.17.0</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
@@ -50,7 +50,7 @@
       <version>0.0.0</version>
       <description>demo: demo-dev-dependencies -- showcase how devDependencies look like</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>Apache-2.0</id>
         </license>
       </licenses>
@@ -68,7 +68,7 @@
       <version>20.11.30</version>
       <description>TypeScript definitions for node</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -106,7 +106,7 @@
       <description>TypeScript definitions for uuid</description>
       <scope>optional</scope>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -142,7 +142,7 @@
       <version>5.26.5</version>
       <description>A stand-alone types package for Undici</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -179,7 +179,7 @@
       <description>RFC4122 (v1, v4, and v5) UUIDs</description>
       <scope>optional</scope>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -216,7 +216,7 @@
       <description>uuidv4 creates v4 UUIDs.</description>
       <scope>optional</scope>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>

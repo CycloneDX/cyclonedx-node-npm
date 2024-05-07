@@ -9,7 +9,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>6.5.1</version>
+        <version>6.6.1</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
@@ -28,7 +28,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.16.2</version>
+        <version>1.17.0</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
@@ -50,7 +50,7 @@
       <version>0.0.0</version>
       <description>demo: demo-bundled-deps -- showcase how bundled deps look like</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>Apache-2.0</id>
         </license>
       </licenses>
@@ -68,7 +68,7 @@
       <version>1.0.2</version>
       <description>Generates bundledDependencies package.json value using values of the dependencies property.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
@@ -104,7 +104,7 @@
       <version>2.0.0</version>
       <description>Regular expression for matching ANSI escape codes</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -134,7 +134,7 @@
       <version>1.1.1</version>
       <description>List of the Node.js builtin modules</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -164,7 +164,7 @@
       <version>2.1.0</version>
       <description>Convert a dash/dot/underscore/space separated string to camelCase: foo-bar → fooBar</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -194,7 +194,7 @@
       <version>3.1.0</version>
       <description>easily create complex multi-column command-line-interfaces</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
@@ -224,7 +224,7 @@
       <version>1.0.0</version>
       <description>ES2015 String#codePointAt() ponyfill</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -254,7 +254,7 @@
       <version>1.1.2</version>
       <description>Convert a camelized string into a lowercased one with a custom separator: unicornRainbow → unicorn_rainbow</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -283,7 +283,7 @@
       <version>1.3.0</version>
       <description>Easy error subclassing and stack customization</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -313,7 +313,7 @@
       <version>1.0.5</version>
       <description>Escape RegExp special characters</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -343,7 +343,7 @@
       <version>1.1.0</version>
       <description>Find a file by walking up parent directories</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -372,7 +372,7 @@
       <version>4.1.3</version>
       <description>A drop-in replacement for fs, making various improvements.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
@@ -402,7 +402,7 @@
       <version>2.1.4</version>
       <description>Provides metadata and conversions from repository urls for Github, Bitbucket and Gitlab</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
@@ -432,7 +432,7 @@
       <version>1.0.0</version>
       <description>Invert the key/value of an object. Example: {foo: 'bar'} → {bar: 'foo'}</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -462,7 +462,7 @@
       <version>0.2.1</version>
       <description>Determines if an object can be used as an array</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -492,7 +492,7 @@
       <version>1.0.0</version>
       <description>Check if a string matches the name of a Node.js builtin module</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -522,7 +522,7 @@
       <version>1.0.0</version>
       <description>Check if the character represented by a given Unicode code point is fullwidth</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -552,7 +552,7 @@
       <version>0.2.1</version>
       <description>Detect if a buffer is utf8 encoded.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -582,7 +582,7 @@
       <version>1.0.0</version>
       <description>Mapping between standard locale identifiers and Windows locale identifiers (LCID)</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -612,7 +612,7 @@
       <version>1.1.0</version>
       <description>Read and parse a JSON file</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -642,7 +642,7 @@
       <version>4.0.3</version>
       <description>The lodash method `_.assign` exported as a module.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -672,7 +672,7 @@
       <version>4.0.3</version>
       <description>The lodash method `_.keys` exported as a module.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -702,7 +702,7 @@
       <version>4.0.1</version>
       <description>The lodash method `_.rest` exported as a module.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -732,7 +732,7 @@
       <version>2.3.5</version>
       <description>Normalizes data that can be found in package.json files.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
@@ -762,7 +762,7 @@
       <version>1.0.0</version>
       <description>ES6 Number.isNaN() ponyfill</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -792,7 +792,7 @@
       <version>4.0.1</version>
       <description>ES6 Object.assign() ponyfill</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -822,7 +822,7 @@
       <version>1.4.0</version>
       <description>Get the system locale</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -852,7 +852,7 @@
       <version>2.2.0</version>
       <description>Parse JSON with more helpful errors</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -882,7 +882,7 @@
       <version>2.1.0</version>
       <description>Check if a path exists</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -912,7 +912,7 @@
       <version>1.1.0</version>
       <description>Check if a path is a file, directory, or symlink</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -942,7 +942,7 @@
       <version>2.3.0</version>
       <description>Promisify a callback-style function</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -972,7 +972,7 @@
       <version>2.0.0</version>
       <description>ES2015 Promise ponyfill</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1002,7 +1002,7 @@
       <version>2.0.4</version>
       <description>Itty bitty little widdle twinkie pinkie ES2015 Promise implementation</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1032,7 +1032,7 @@
       <version>1.1.1</version>
       <description>Get namespaced config from the closest package.json</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1062,7 +1062,7 @@
       <version>1.0.1</version>
       <description>Read the closest package.json file</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1092,7 +1092,7 @@
       <version>1.1.0</version>
       <description>Read a package.json file</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1122,7 +1122,7 @@
       <version>1.0.1</version>
       <description>shim for require.main.filename() that works in as many environments as possible</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
@@ -1151,7 +1151,7 @@
       <version>5.1.0</version>
       <description>The semantic version parser used by npm.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
@@ -1181,7 +1181,7 @@
       <version>1.0.2</version>
       <description>correct invalid SPDX identifiers</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>Apache-2.0</id>
         </license>
       </licenses>
@@ -1211,7 +1211,7 @@
       <version>1.0.4</version>
       <description>list of SPDX standard license exceptions</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>CC-BY-3.0</id>
         </license>
       </licenses>
@@ -1241,7 +1241,7 @@
       <version>1.0.2</version>
       <description>parse SPDX license expressions</description>
       <licenses>
-        <expression>(MIT AND CC-BY-3.0)</expression>
+        <expression acknowledgement="declared">(MIT AND CC-BY-3.0)</expression>
       </licenses>
       <purl>pkg:npm/spdx-expression-parse@1.0.2?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-expression-parse.js.git</purl>
       <externalReferences>
@@ -1269,7 +1269,7 @@
       <version>1.2.0</version>
       <description>A list of SPDX license identifiers</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>Unlicense</id>
         </license>
       </licenses>
@@ -1299,7 +1299,7 @@
       <version>1.0.1</version>
       <description>Get the visual width of a string - the number of columns required to display it</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1329,7 +1329,7 @@
       <version>3.0.1</version>
       <description>Strip ANSI escape codes</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1359,7 +1359,7 @@
       <version>2.0.0</version>
       <description>Strip UTF-8 byte order mark (BOM) from a string/buffer</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1389,7 +1389,7 @@
       <version>0.2.1</version>
       <description>ES6 Symbols in your ES5.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <name>MPLv2.0</name>
         </license>
       </licenses>
@@ -1419,7 +1419,7 @@
       <version>3.0.1</version>
       <description>Give me a string and I'll tell you if it's a valid npm package license string</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>Apache-2.0</id>
         </license>
       </licenses>
@@ -1449,7 +1449,7 @@
       <version>0.2.0</version>
       <description>Reliable way to to get the height and width of the terminal/console in a node.js environment.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1479,7 +1479,7 @@
       <version>1.0.0</version>
       <description>Wordwrap a string with ANSI escape codes</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1509,7 +1509,7 @@
       <version>3.2.0</version>
       <description>the bare-bones internationalization library used by yargs</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
@@ -1539,7 +1539,7 @@
       <version>2.1.0</version>
       <description>the mighty option parser used by yargs</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
@@ -1568,7 +1568,7 @@
       <version>4.1.0</version>
       <description>Light-weight option parsing with an argv hash. No optstrings attached.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
