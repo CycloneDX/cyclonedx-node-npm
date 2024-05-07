@@ -7,9 +7,10 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Added
-  * Detected licenses acknowledgement is populated ([#1171] via [#])
+  * Detected licenses acknowledgement is populated ([#1171] via [#1183])
 
 [#1171]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1171
+[#1183]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1183
 
 ## 1.17.0 - 2024-04-23
 
