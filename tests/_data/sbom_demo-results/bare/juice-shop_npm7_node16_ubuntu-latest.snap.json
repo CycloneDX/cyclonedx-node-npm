@@ -64,7 +64,8 @@
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],

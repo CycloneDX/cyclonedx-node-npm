@@ -81,7 +81,8 @@
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -114,7 +115,8 @@
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -147,7 +149,8 @@
           "licenses": [
             {
               "license": {
-                "id": "MIT"
+                "id": "MIT",
+                "acknowledgement": "declared"
               }
             }
           ],
@@ -182,7 +185,8 @@
       "licenses": [
         {
           "license": {
-            "id": "BSD-3-Clause"
+            "id": "BSD-3-Clause",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -215,7 +219,8 @@
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
