@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Added
+  * Detected licenses acknowledgement is populated ([#1171] via [#])
+
+[#1171]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1171
+
 ## 1.17.0 - 2024-04-23
 
 Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/specification/releases/tag/1.6).
