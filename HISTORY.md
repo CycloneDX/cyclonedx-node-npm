@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
 
 * Added
   * Licenses acknowledgement might be populated ([#1171] via [#1183])
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^6.6.0`, was `@^6.5.0` (via [#1183])
 
 [#1171]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1171
 [#1183]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1183
