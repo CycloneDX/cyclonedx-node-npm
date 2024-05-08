@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 1.18.0 - 2024-05-08
+
 * Added
   * Licenses acknowledgement might be populated ([#1171] via [#1183])
 * Misc
