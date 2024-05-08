@@ -461,6 +461,10 @@ export class BomBuilder {
       return undefined
     }
 
+    component.licenses.forEach(l => {
+      l.acknowledgement = Enums.LicenseAcknowledgement.Declared
+    })
+
     if (isOptional || isDevOptional) {
       component.scope = Enums.ComponentScope.Optional
     }

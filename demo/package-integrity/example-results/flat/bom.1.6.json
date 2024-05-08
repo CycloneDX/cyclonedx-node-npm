@@ -12,7 +12,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.5.1",
+        "version": "6.6.1",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
@@ -34,7 +34,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.16.2",
+        "version": "1.17.0",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -83,7 +83,8 @@
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -133,7 +134,8 @@
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -183,7 +185,8 @@
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -233,7 +236,8 @@
       "licenses": [
         {
           "license": {
-            "id": "BSD-3-Clause"
+            "id": "BSD-3-Clause",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -283,7 +287,8 @@
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],

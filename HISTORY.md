@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Added
+  * Licenses acknowledgement might be populated ([#1171] via [#1183])
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^6.6.0`, was `@^6.5.0` (via [#1183])
+
+[#1171]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1171
+[#1183]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1183
+
 ## 1.17.0 - 2024-04-23
 
 Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/specification/releases/tag/1.6).
