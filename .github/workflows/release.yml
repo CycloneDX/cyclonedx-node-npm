@@ -105,7 +105,11 @@ jobs:
         env:
           NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: publish to NPMJS as "${{ env.NPMJS_RELEASE_TAG }}"
-        run: npm publish --access public --tag "$NPMJS_RELEASE_TAG"
+        run: >
+          npm publish
+          --provenance
+          --access public
+          --tag "$NPMJS_RELEASE_TAG"
       - name: pack release result
         run: |
           mkdir -p "$PACKED_DIR"
