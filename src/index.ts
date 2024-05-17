@@ -29,7 +29,7 @@ Call it programmatically like so:
         // additional CLI args
       ], {
         stdio: ['ignore', 'pipe', 'ignore'],
-        shell: process.platform === 'win32'
+        shell: process.platform === 'win32',
         encoding: 'buffer',
         maxBuffer: BUFFER_MAX_LENGTH
       }))
