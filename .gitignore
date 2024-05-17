@@ -4,10 +4,8 @@
 /packed/
 /CI_packed/
 
-/dist/
-
-/pack/
 /build/
+/dist/
 /release_assets/
 
 *.cache
