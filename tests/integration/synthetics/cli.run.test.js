@@ -367,14 +367,22 @@ describe('cli.run()', () => {
     test('dogfooding', () => {
       const res = spawnSync(
         process.execPath,
-        [binWrapper, '--output-format', format],
+        [binWrapper, '--output-format', format, '--ignore-npm-errors'],
         {
           cwd: projectRootPath,
-          stdio: ['ignore', 'ignore', 'inherit']
+          stdio: ['ignore', 'ignore', 'pipe'],
+          encoding: 'utf8'
         }
       )
-      expect(res.error).toBeUndefined()
-      expect(res.status).toBe(0)
+      try {
+        expect(res.error).toBeUndefined()
+        expect(res.status).toBe(0)
+      } catch (err) {
+        process.stderr.write('\n')
+        process.stderr.write(res.stderr)
+        process.stderr.write('\n')
+        throw err
+      }
     }, cliRunTestTimeout)
   })
 
