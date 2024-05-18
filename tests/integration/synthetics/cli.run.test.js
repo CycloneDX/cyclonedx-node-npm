@@ -21,7 +21,6 @@ const { resolve, join } = require('path')
 const {
   closeSync,
   createWriteStream,
-  existsSync,
   mkdtempSync,
   mkdirSync,
   openSync,
@@ -295,7 +294,7 @@ describe('cli.run()', () => {
 
           const actualOutput = makeReproducible(format, readFileSync(outFile, 'utf8'))
 
-          if (!existsSync(expectedOutSnap) || UPDATE_SNAPSHOTS) {
+          if (UPDATE_SNAPSHOTS) {
             writeFileSync(expectedOutSnap, actualOutput, 'utf8')
           }
 
@@ -364,7 +363,7 @@ describe('cli.run()', () => {
 
       const actualOutput = makeReproducible(format, readFileSync(outFile, 'utf8'))
 
-      if (!existsSync(expectedOutSnap) || UPDATE_SNAPSHOTS) {
+      if (UPDATE_SNAPSHOTS) {
         writeFileSync(expectedOutSnap, actualOutput, 'utf8')
       }
 
