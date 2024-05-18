@@ -96,6 +96,7 @@
     "setup-tests": "echo 'noting yet'",
     "test": "run-p --aggregate-output -lc test:*",
     "test:jest": "jest",
+    "test:lint": "tsc --noEmit",
     "test:standard": "eslint .",
     "dogfooding:npx": "npx .",
     "dogfooding:npm-exec": "npm exec .",
