@@ -90,7 +90,7 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-13 # macos-latest has issues with node14
-        includes:
+        include:
           - node-version: 22
             os: ubuntu-latest
             omit-optional: true
