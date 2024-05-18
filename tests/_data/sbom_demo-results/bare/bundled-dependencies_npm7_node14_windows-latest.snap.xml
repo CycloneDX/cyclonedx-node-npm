@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+  <metadata>
+    <tools>
+      <tool>
+        <name>npm</name>
+        <version>7.99.0</version>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>libVersion-testing</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-npm</name>
+        <version>thisVersion-testing</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="demo-bundled-deps@0.0.0">
+      <name>demo-bundled-deps</name>
+      <version>0.0.0</version>
+      <description>demo: demo-bundled-deps -- showcase how bundled deps look like</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/demo-bundled-deps@0.0.0</purl>
+      <properties>
+        <property name="cdx:npm:package:path"/>
+        <property name="cdx:npm:package:private">true</property>
+      </properties>
+    </component>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="bundle-dependencies@1.0.2">
+      <name>bundle-dependencies</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/bundle-dependencies@1.0.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+          <hashes>
+            <hash alg="SHA-512">7ccf50f6125c5f56589f28ef7874e9b4566aa4b2833b681dc5186e07c30d498110bc2ea42260c31f6d37f09fed1df72e5742511948fc9fc6b10d8d009c59177c</hash>
+          </hashes>
+        </reference>
+      </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:path">node_modules/bundle-dependencies</property>
+      </properties>
+      <components>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|ansi-regex@2.0.0">
+          <name>ansi-regex</name>
+          <version>2.0.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/ansi-regex@2.0.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\ansi-regex</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|builtin-modules@1.1.1">
+          <name>builtin-modules</name>
+          <version>1.1.1</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/builtin-modules@1.1.1</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\builtin-modules</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|camelcase@2.1.0">
+          <name>camelcase</name>
+          <version>2.1.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/camelcase@2.1.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\camelcase</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|cliui@3.1.0">
+          <name>cliui</name>
+          <version>3.1.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/cliui@3.1.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\cliui</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|code-point-at@1.0.0">
+          <name>code-point-at</name>
+          <version>1.0.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/code-point-at@1.0.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\code-point-at</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|decamelize@1.1.2">
+          <name>decamelize</name>
+          <version>1.1.2</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/decamelize@1.1.2</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\decamelize</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|error-ex@1.3.0">
+          <name>error-ex</name>
+          <version>1.3.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/error-ex@1.3.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\error-ex</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|escape-string-regexp@1.0.5">
+          <name>escape-string-regexp</name>
+          <version>1.0.5</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/escape-string-regexp@1.0.5</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\escape-string-regexp</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|find-up@1.1.0">
+          <name>find-up</name>
+          <version>1.1.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/find-up@1.1.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\find-up</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3">
+          <name>graceful-fs</name>
+          <version>4.1.3</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/graceful-fs@4.1.3</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\graceful-fs</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|hosted-git-info@2.1.4">
+          <name>hosted-git-info</name>
+          <version>2.1.4</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/hosted-git-info@2.1.4</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\hosted-git-info</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|invert-kv@1.0.0">
+          <name>invert-kv</name>
+          <version>1.0.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/invert-kv@1.0.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\invert-kv</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|is-arrayish@0.2.1">
+          <name>is-arrayish</name>
+          <version>0.2.1</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/is-arrayish@0.2.1</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\is-arrayish</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|is-builtin-module@1.0.0">
+          <name>is-builtin-module</name>
+          <version>1.0.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/is-builtin-module@1.0.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\is-builtin-module</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0">
+          <name>is-fullwidth-code-point</name>
+          <version>1.0.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/is-fullwidth-code-point@1.0.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\is-fullwidth-code-point</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|is-utf8@0.2.1">
+          <name>is-utf8</name>
+          <version>0.2.1</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/is-utf8@0.2.1</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\is-utf8</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|lcid@1.0.0">
+          <name>lcid</name>
+          <version>1.0.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/lcid@1.0.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\lcid</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|load-json-file@1.1.0">
+          <name>load-json-file</name>
+          <version>1.1.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/load-json-file@1.1.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\load-json-file</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|lodash.assign@4.0.3">
+          <name>lodash.assign</name>
+          <version>4.0.3</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/lodash.assign@4.0.3</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\lodash.assign</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|lodash.keys@4.0.3">
+          <name>lodash.keys</name>
+          <version>4.0.3</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/lodash.keys@4.0.3</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\lodash.keys</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|lodash.rest@4.0.1">
+          <name>lodash.rest</name>
+          <version>4.0.1</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/lodash.rest@4.0.1</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\lodash.rest</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|normalize-package-data@2.3.5">
+          <name>normalize-package-data</name>
+          <version>2.3.5</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>BSD-2-Clause</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/normalize-package-data@2.3.5</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\normalize-package-data</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0">
+          <name>number-is-nan</name>
+          <version>1.0.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/number-is-nan@1.0.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\number-is-nan</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|object-assign@4.0.1">
+          <name>object-assign</name>
+          <version>4.0.1</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/object-assign@4.0.1</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\object-assign</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|os-locale@1.4.0">
+          <name>os-locale</name>
+          <version>1.4.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/os-locale@1.4.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\os-locale</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|parse-json@2.2.0">
+          <name>parse-json</name>
+          <version>2.2.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/parse-json@2.2.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\parse-json</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|path-exists@2.1.0">
+          <name>path-exists</name>
+          <version>2.1.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/path-exists@2.1.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\path-exists</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|path-type@1.1.0">
+          <name>path-type</name>
+          <version>1.1.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/path-type@1.1.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\path-type</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|pify@2.3.0">
+          <name>pify</name>
+          <version>2.3.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/pify@2.3.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\pify</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0">
+          <name>pinkie-promise</name>
+          <version>2.0.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/pinkie-promise@2.0.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\pinkie-promise</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|pinkie@2.0.4">
+          <name>pinkie</name>
+          <version>2.0.4</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/pinkie@2.0.4</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\pinkie</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|pkg-conf@1.1.1">
+          <name>pkg-conf</name>
+          <version>1.1.1</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/pkg-conf@1.1.1</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\pkg-conf</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|read-pkg-up@1.0.1">
+          <name>read-pkg-up</name>
+          <version>1.0.1</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/read-pkg-up@1.0.1</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\read-pkg-up</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|read-pkg@1.1.0">
+          <name>read-pkg</name>
+          <version>1.1.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/read-pkg@1.1.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\read-pkg</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|require-main-filename@1.0.1">
+          <name>require-main-filename</name>
+          <version>1.0.1</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/require-main-filename@1.0.1</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\require-main-filename</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|semver@5.1.0">
+          <name>semver</name>
+          <version>5.1.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/semver@5.1.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\semver</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-correct@1.0.2">
+          <name>spdx-correct</name>
+          <version>1.0.2</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/spdx-correct@1.0.2</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\spdx-correct</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-exceptions@1.0.4">
+          <name>spdx-exceptions</name>
+          <version>1.0.4</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>CC-BY-3.0</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/spdx-exceptions@1.0.4</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\spdx-exceptions</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2">
+          <name>spdx-expression-parse</name>
+          <version>1.0.2</version>
+          <licenses>
+            <expression acknowledgement="declared">(MIT AND CC-BY-3.0)</expression>
+          </licenses>
+          <purl>pkg:npm/spdx-expression-parse@1.0.2</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\spdx-expression-parse</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0">
+          <name>spdx-license-ids</name>
+          <version>1.2.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>Unlicense</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/spdx-license-ids@1.2.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\spdx-license-ids</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|string-width@1.0.1">
+          <name>string-width</name>
+          <version>1.0.1</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/string-width@1.0.1</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\string-width</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1">
+          <name>strip-ansi</name>
+          <version>3.0.1</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/strip-ansi@3.0.1</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\strip-ansi</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|strip-bom@2.0.0">
+          <name>strip-bom</name>
+          <version>2.0.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/strip-bom@2.0.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\strip-bom</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|symbol@0.2.1">
+          <name>symbol</name>
+          <version>0.2.1</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <name>MPLv2.0</name>
+            </license>
+          </licenses>
+          <purl>pkg:npm/symbol@0.2.1</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\symbol</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1">
+          <name>validate-npm-package-license</name>
+          <version>3.0.1</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/validate-npm-package-license@3.0.1</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\validate-npm-package-license</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|window-size@0.2.0">
+          <name>window-size</name>
+          <version>0.2.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/window-size@0.2.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\window-size</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|wrap-ansi@1.0.0">
+          <name>wrap-ansi</name>
+          <version>1.0.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/wrap-ansi@1.0.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\wrap-ansi</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|y18n@3.2.0">
+          <name>y18n</name>
+          <version>3.2.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/y18n@3.2.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\y18n</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|yargs-parser@2.1.0">
+          <name>yargs-parser</name>
+          <version>2.1.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/yargs-parser@2.1.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\yargs-parser</property>
+          </properties>
+        </component>
+        <component type="library" bom-ref="bundle-dependencies@1.0.2|yargs@4.1.0">
+          <name>yargs</name>
+          <version>4.1.0</version>
+          <licenses>
+            <license acknowledgement="declared">
+              <id>MIT</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/yargs@4.1.0</purl>
+          <properties>
+            <property name="cdx:npm:package:bundled">true</property>
+            <property name="cdx:npm:package:path">node_modules/bundle-dependencies\node_modules\yargs</property>
+          </properties>
+        </component>
+      </components>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="bundle-dependencies@1.0.2">
+      <dependency ref="bundle-dependencies@1.0.2|yargs@4.1.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|ansi-regex@2.0.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|builtin-modules@1.1.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|camelcase@2.1.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|cliui@3.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|wrap-ansi@1.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|code-point-at@1.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|decamelize@1.1.2">
+      <dependency ref="bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|error-ex@1.3.0">
+      <dependency ref="bundle-dependencies@1.0.2|is-arrayish@0.2.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"/>
+    <dependency ref="bundle-dependencies@1.0.2|find-up@1.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|path-exists@2.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
+    <dependency ref="bundle-dependencies@1.0.2|hosted-git-info@2.1.4"/>
+    <dependency ref="bundle-dependencies@1.0.2|invert-kv@1.0.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|is-arrayish@0.2.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|is-builtin-module@1.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|builtin-modules@1.1.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|is-utf8@0.2.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|lcid@1.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|invert-kv@1.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|load-json-file@1.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
+      <dependency ref="bundle-dependencies@1.0.2|parse-json@2.2.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|pify@2.3.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|strip-bom@2.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|lodash.assign@4.0.3">
+      <dependency ref="bundle-dependencies@1.0.2|lodash.keys@4.0.3"/>
+      <dependency ref="bundle-dependencies@1.0.2|lodash.rest@4.0.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|lodash.keys@4.0.3"/>
+    <dependency ref="bundle-dependencies@1.0.2|lodash.rest@4.0.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|normalize-package-data@2.3.5">
+      <dependency ref="bundle-dependencies@1.0.2|hosted-git-info@2.1.4"/>
+      <dependency ref="bundle-dependencies@1.0.2|is-builtin-module@1.0.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|semver@5.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|object-assign@4.0.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|os-locale@1.4.0">
+      <dependency ref="bundle-dependencies@1.0.2|lcid@1.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|parse-json@2.2.0">
+      <dependency ref="bundle-dependencies@1.0.2|error-ex@1.3.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|path-exists@2.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|path-type@1.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
+      <dependency ref="bundle-dependencies@1.0.2|pify@2.3.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|pify@2.3.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|pinkie@2.0.4"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|pinkie@2.0.4"/>
+    <dependency ref="bundle-dependencies@1.0.2|pkg-conf@1.1.1">
+      <dependency ref="bundle-dependencies@1.0.2|find-up@1.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|object-assign@4.0.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|read-pkg@1.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|symbol@0.2.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|read-pkg-up@1.0.1">
+      <dependency ref="bundle-dependencies@1.0.2|find-up@1.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|read-pkg@1.1.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|read-pkg@1.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|load-json-file@1.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|normalize-package-data@2.3.5"/>
+      <dependency ref="bundle-dependencies@1.0.2|path-type@1.1.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|require-main-filename@1.0.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|semver@5.1.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|spdx-correct@1.0.2">
+      <dependency ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"/>
+    <dependency ref="bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2">
+      <dependency ref="bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"/>
+      <dependency ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1">
+      <dependency ref="bundle-dependencies@1.0.2|code-point-at@1.0.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1">
+      <dependency ref="bundle-dependencies@1.0.2|ansi-regex@2.0.0"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|strip-bom@2.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|is-utf8@0.2.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|symbol@0.2.1"/>
+    <dependency ref="bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1">
+      <dependency ref="bundle-dependencies@1.0.2|spdx-correct@1.0.2"/>
+      <dependency ref="bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|window-size@0.2.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|wrap-ansi@1.0.0">
+      <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|y18n@3.2.0"/>
+    <dependency ref="bundle-dependencies@1.0.2|yargs-parser@2.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|camelcase@2.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|lodash.assign@4.0.3"/>
+    </dependency>
+    <dependency ref="bundle-dependencies@1.0.2|yargs@4.1.0">
+      <dependency ref="bundle-dependencies@1.0.2|camelcase@2.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|cliui@3.1.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|decamelize@1.1.2"/>
+      <dependency ref="bundle-dependencies@1.0.2|os-locale@1.4.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|pkg-conf@1.1.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|read-pkg-up@1.0.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|require-main-filename@1.0.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1"/>
+      <dependency ref="bundle-dependencies@1.0.2|window-size@0.2.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|y18n@3.2.0"/>
+      <dependency ref="bundle-dependencies@1.0.2|yargs-parser@2.1.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0">
+      <dependency ref="bundle-dependencies@1.0.2"/>
+    </dependency>
+  </dependencies>
+</bom>
