@@ -55,7 +55,7 @@ interface CommandOptions {
 }
 
 function makeCommand (process: NodeJS.Process): Command {
-  const cmd =  new Command()
+  const cmd = new Command()
   cmd.description('Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.')
   cmd.usage(
     // Need to add the `[--]` manually, to indicate how to stop a variadic option.
