@@ -55,25 +55,27 @@ interface CommandOptions {
 }
 
 function makeCommand (process: NodeJS.Process): Command {
-  return new Command(
-  ).description(
-    'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
-  ).usage(
+  const cmd =  new Command()
+  cmd.description('Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.')
+  cmd.usage(
     // Need to add the `[--]` manually, to indicate how to stop a variadic option.
     '[options] [--] [<package-manifest>]'
-  ).addOption(
+  )
+  cmd.addOption(
     new Option(
       '--ignore-npm-errors',
       'Whether to ignore errors of NPM.\n' +
       'This might be used, if "npm install" was run with "--force" or "--legacy-peer-deps".'
     ).default(false)
-  ).addOption(
+  )
+  cmd.addOption(
     new Option(
       '--package-lock-only',
       'Whether to only use the lock file, ignoring "node_modules".\n' +
       'This means the output will be based only on the few details in and the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.'
     ).default(false)
-  ).addOption(
+  )
+  cmd.addOption(
     new Option(
       '--omit <type...>',
       'Dependency types to omit from the installation tree. ' +
@@ -86,19 +88,22 @@ function makeCommand (process: NodeJS.Process): Command {
         : [],
       `"${Omittable.Dev}" if the NODE_ENV environment variable is set to "production", otherwise empty`
     )
-  ).addOption(
+  )
+  cmd.addOption(
     new Option(
       '--flatten-components',
       'Whether to flatten the components.\n' +
       'This means the actual nesting of node packages is not represented in the SBOM result.'
     ).default(false)
-  ).addOption(
+  )
+  cmd.addOption(
     new Option(
       '--short-PURLs',
       'Omit all qualifiers from PackageURLs.\n' +
       'This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.'
     ).default(false)
-  ).addOption(
+  )
+  cmd.addOption(
     new Option(
       '--spec-version <version>',
       'Which version of CycloneDX spec to use.'
@@ -107,7 +112,8 @@ function makeCommand (process: NodeJS.Process): Command {
     ).default(
       Spec.Version.v1dot4
     )
-  ).addOption(
+  )
+  cmd.addOption(
     new Option(
       '--output-reproducible',
       'Whether to go the extra mile and make the output reproducible.\n' +
@@ -115,7 +121,8 @@ function makeCommand (process: NodeJS.Process): Command {
     ).env(
       'BOM_REPRODUCIBLE'
     )
-  ).addOption(
+  )
+  cmd.addOption(
     (function () {
       const o = new Option(
         '--output-format <format>',
@@ -132,7 +139,8 @@ function makeCommand (process: NodeJS.Process): Command {
       o.parseArg = (v, p) => oldParseArg(v.toUpperCase(), p)
       return o
     })()
-  ).addOption(
+  )
+  cmd.addOption(
     new Option(
       '--output-file <file>',
       'Path to the output file.\n' +
@@ -141,18 +149,21 @@ function makeCommand (process: NodeJS.Process): Command {
       OutputStdOut,
       'write to STDOUT'
     )
-  ).addOption(
+  )
+  cmd.addOption(
     new Option(
       '--validate',
       'Validate resulting BOM before outputting. ' +
       'Validation is skipped, if requirements not met. See the README.'
     ).default(undefined)
-  ).addOption(
+  )
+  cmd.addOption(
     new Option(
       '--no-validate',
       'Disable validation of resulting BOM.'
     )
-  ).addOption(
+  )
+  cmd.addOption(
     new Option(
       '--mc-type <type>',
       'Type of the main component.'
@@ -166,7 +177,8 @@ function makeCommand (process: NodeJS.Process): Command {
     ).default(
       Enums.ComponentType.Application
     )
-  ).addOption(
+  )
+  cmd.addOption(
     new Option(
       '-v, --verbose',
       'Increase the verbosity of messages. Use multiple times to increase the verbosity even more.'
@@ -175,7 +187,8 @@ function makeCommand (process: NodeJS.Process): Command {
         return previous + 1
       }
     ).default(0)
-  ).addArgument(
+  )
+  cmd.addArgument(
     new Argument(
       '[<package-manifest>]',
       "Path to project's manifest file."
@@ -183,12 +196,13 @@ function makeCommand (process: NodeJS.Process): Command {
       'package.json',
       '"package.json" file in current working directory'
     )
-  ).version(
+  )
+  cmd.version(
     // that is supposed to be the last option in the list on the help page.
     loadJsonFile(resolve(module.path, '..', 'package.json')).version as string
-  ).allowExcessArguments(
-    false
   )
+  cmd.allowExcessArguments(false)
+  return cmd
 }
 
 const ExitCode: Readonly<Record<string, number>> = Object.freeze({
