@@ -243,12 +243,12 @@ describe('cli.run()', () => {
           const errFile = `${logFileBase}.err`
           const stderr = createWriteStream(errFile) // not perfect, but works
 
+          /** @type {NodeJS.Process} */
           const mockProcess = {
+            ...process,
             stdout,
             stderr,
             cwd: () => dummyProjectsRoot,
-            execPath: process.execPath,
-            argv0: process.argv0,
             argv: [
               process.argv[0],
               'dummy_process',

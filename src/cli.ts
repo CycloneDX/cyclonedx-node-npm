@@ -218,7 +218,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
   program.parse(process.argv)
 
   const options: CommandOptions = program.opts()
-  const myConsole = makeConsoleLogger(options.verbose)
+  const myConsole = makeConsoleLogger(process, options.verbose)
   myConsole.debug('DEBUG | options: %j', options)
 
   const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
