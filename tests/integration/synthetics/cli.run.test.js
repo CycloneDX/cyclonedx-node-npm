@@ -256,7 +256,7 @@ describe('cli.run()', () => {
           const mockProcess = {
             stdout,
             stderr,
-            cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
+            cwd: () => dummyProjectsRoot,
             execPath: process.execPath,
             argv0: process.argv0,
             argv: [
@@ -326,7 +326,7 @@ describe('cli.run()', () => {
       const mockProcess = {
         stdout,
         stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
+        cwd: () => dummyProjectsRoot,
         execPath: process.execPath,
         argv0: process.argv0,
         argv: [
@@ -430,7 +430,7 @@ describe('cli.run()', () => {
       const mockProcess = {
         stdout,
         stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
+        cwd: () => dummyProjectsRoot,
         execPath: process.execPath,
         argv0: process.argv0,
         argv: [
