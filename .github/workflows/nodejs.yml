@@ -111,10 +111,10 @@ jobs:
           set -ex
           dep_constraints=''
           dev_requirements='jest jest-junit imurmurhash fast-glob'
-          omit='--omit=dev'
+          omit=''
           if [[ -n '${{ matrix.omit-optional }}' ]] 
           then
-            omit="$omit --omit=optional"
+            omit='--omit=optional'
           fi
           # as long as npm cannot auto-resolve engine-constraints, we need to help here
           case '${{ matrix.node-version }}' in
@@ -129,9 +129,9 @@ jobs:
           ## !! dont install all the dev-packages, especially since some are not runnable on node 14.0.0
           if [[ -n "$dep_constraints" ]]
           then
-            npm add --ignore-scripts $omit --only=prod --production --loglevel=silly --save $dep_constraints
+            npm add --ignore-scripts $omit --omit=dev --only=prod --production --loglevel=silly --save $dep_constraints
           fi
-          npm i --ignore-scripts $omit --only=prod --production --loglevel=silly
+          npm i --ignore-scripts $omit --omit=dev --only=prod --production --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
           ## install the needed dev-deps
