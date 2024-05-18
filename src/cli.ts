@@ -62,25 +62,25 @@ function makeCommand (process: NodeJS.Process): Command {
     '[options] [--] [<package-manifest>]'
   )
   cmd.addOption(
-    new Option(
+    (new Option(
       '--ignore-npm-errors',
       'Whether to ignore errors of NPM.\n' +
       'This might be used, if "npm install" was run with "--force" or "--legacy-peer-deps".'
-    ).default(false)
+    )).default(false)
   )
   cmd.addOption(
-    new Option(
+    (new Option(
       '--package-lock-only',
       'Whether to only use the lock file, ignoring "node_modules".\n' +
       'This means the output will be based only on the few details in and the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.'
-    ).default(false)
+    )).default(false)
   )
   cmd.addOption(
-    new Option(
+    (new Option(
       '--omit <type...>',
       'Dependency types to omit from the installation tree. ' +
       '(can be set multiple times)'
-    ).choices(
+    )).choices(
       Object.values(Omittable).sort()
     ).default(
       process.env.NODE_ENV === 'production'
@@ -90,44 +90,44 @@ function makeCommand (process: NodeJS.Process): Command {
     )
   )
   cmd.addOption(
-    new Option(
+    (new Option(
       '--flatten-components',
       'Whether to flatten the components.\n' +
       'This means the actual nesting of node packages is not represented in the SBOM result.'
-    ).default(false)
+    )).default(false)
   )
   cmd.addOption(
-    new Option(
+    (new Option(
       '--short-PURLs',
       'Omit all qualifiers from PackageURLs.\n' +
       'This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.'
-    ).default(false)
+    )).default(false)
   )
   cmd.addOption(
-    new Option(
+    (new Option(
       '--spec-version <version>',
       'Which version of CycloneDX spec to use.'
-    ).choices(
+    )).choices(
       Object.keys(Spec.SpecVersionDict).sort()
     ).default(
       Spec.Version.v1dot4
     )
   )
   cmd.addOption(
-    new Option(
+    (new Option(
       '--output-reproducible',
       'Whether to go the extra mile and make the output reproducible.\n' +
       'This requires more resources, and might result in loss of time- and random-based-values.'
-    ).env(
+    )).env(
       'BOM_REPRODUCIBLE'
     )
   )
   cmd.addOption(
     (function () {
-      const o = new Option(
+      const o = (new Option(
         '--output-format <format>',
         'Which output format to use.'
-      ).choices(
+      )).choices(
         [OutputFormat.JSON, OutputFormat.XML]
       ).default(
         // the context is node/JavaScript - which should prefer JSON
@@ -141,21 +141,21 @@ function makeCommand (process: NodeJS.Process): Command {
     })()
   )
   cmd.addOption(
-    new Option(
+    (new Option(
       '--output-file <file>',
       'Path to the output file.\n' +
       `Set to "${OutputStdOut}" to write to STDOUT.`
-    ).default(
+    )).default(
       OutputStdOut,
       'write to STDOUT'
     )
   )
   cmd.addOption(
-    new Option(
+    (new Option(
       '--validate',
       'Validate resulting BOM before outputting. ' +
       'Validation is skipped, if requirements not met. See the README.'
-    ).default(undefined)
+    )).default(undefined)
   )
   cmd.addOption(
     new Option(
@@ -164,10 +164,10 @@ function makeCommand (process: NodeJS.Process): Command {
     )
   )
   cmd.addOption(
-    new Option(
+    (new Option(
       '--mc-type <type>',
       'Type of the main component.'
-    ).choices(
+    )).choices(
       // Object.values(Enums.ComponentType) -- use all possible
       [ // for the NPM context only the following make sense:
         Enums.ComponentType.Application,
@@ -179,20 +179,20 @@ function makeCommand (process: NodeJS.Process): Command {
     )
   )
   cmd.addOption(
-    new Option(
+    (new Option(
       '-v, --verbose',
       'Increase the verbosity of messages. Use multiple times to increase the verbosity even more.'
-    ).argParser<number>(
+    )).argParser<number>(
       function (_: any, previous: number): number {
         return previous + 1
       }
     ).default(0)
   )
   cmd.addArgument(
-    new Argument(
+    (new Argument(
       '[<package-manifest>]',
       "Path to project's manifest file."
-    ).default(
+    )).default(
       'package.json',
       '"package.json" file in current working directory'
     )
