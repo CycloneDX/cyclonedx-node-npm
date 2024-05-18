@@ -18,16 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { resolve, join } = require('path')
-const {
-  closeSync,
-  createWriteStream,
-  mkdtempSync,
-  mkdirSync,
-  openSync,
-  readFileSync,
-  unlinkSync,
-  writeFileSync
-} = require('fs')
+const { closeSync, createWriteStream, mkdtempSync, mkdirSync, openSync, readFileSync, rmSync, writeFileSync } = require('fs')
 const { spawnSync } = require('child_process')
 
 const { Spec: { Version: SpecVersion } } = require('@cyclonedx/cyclonedx-library')
@@ -51,7 +42,7 @@ describe('cli.run()', () => {
 
   const tmpRoot = mkdtempSync(join(projectTestRootPath, '_log', 'CDX-IT-CLI.run.'))
   process.once('exit', () => {
-    unlinkSync(tmpRoot, { recursive: true })
+    rmSync(tmpRoot, { recursive: true, force: true })
   })
 
   const dummyProjectsRoot = resolve(projectTestRootPath, '_data', 'dummy_projects')
