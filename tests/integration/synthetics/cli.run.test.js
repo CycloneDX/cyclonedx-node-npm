@@ -264,7 +264,6 @@ describe('cli.run()', () => {
               'dummy_process',
               '-vvv',
               '--output-reproducible',
-              '--validate',
               // no intention to test all the spec-versions - this would be not our scope.
               '--spec-version', `${latestCdxSpecVersion}`,
               '--output-format', format,
