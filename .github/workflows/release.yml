@@ -52,7 +52,7 @@ jobs:
       - name: Configure Git
         # needed for push back of changes
         run: |
-          set -ex
+          set -eux
           git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --local user.name "${GITHUB_ACTOR}"
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
@@ -65,8 +65,6 @@ jobs:
         id: bump
         run: |
           set -eux
-          git config user.name 'release bot'
-          git config user.email 'release@bot.local'
           COMMIT_SIG="Signed-off-by: $(git config user.name) <$(git config user.email)>"
           VERSION="$(npm version "$NPMV_NEWVERSION" --message "$NPMV_MESSAGE"$'\n\n'"$COMMIT_SIG" --preid "$NPMV_PREID")"
           echo "::debug::new version = $VERSION"
