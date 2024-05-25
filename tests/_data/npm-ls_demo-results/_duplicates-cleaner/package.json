@@ -3,5 +3,5 @@
   "description": "find duplicates and remove them",
   "license": "Apache-2.0",
   "type": "module",
-  "main": "run.js"
+  "main": "remove-duplicates.js"
 }
