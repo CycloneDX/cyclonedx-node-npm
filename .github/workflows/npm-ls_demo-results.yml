@@ -47,7 +47,14 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
+        include:
+          - # macos-latest no longer supports node14, but macos-13 does
+            os: macos-13
+            node-version: '14'
         exclude:
+          - # macos-latest no longer supports node14
+            os: macos-latest
+            node-version: '14'
           - # npm10 requires node ^18.17.0 || >=20.5.0
             npm-version: '10'
             node-version: '16'
