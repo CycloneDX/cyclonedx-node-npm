@@ -49,7 +49,7 @@ jobs:
           - macos-latest
           - macos-13
         exclude:
-          - os: macos-13  # must be part of matrix, is then removed, and added back in for certain combinations
+          # - os: macos-13  # must be part of matrix, is then removed, and added back in for certain combinations
           - # macos-latest no longer supports node14
             os: macos-latest
             node-version: '14'
@@ -124,6 +124,7 @@ jobs:
   combine-results:
     name: combine results
     needs: [ 'demo-results' ]
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     steps:
       - name: fetch and combine RESULTS
