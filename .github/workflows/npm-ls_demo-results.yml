@@ -47,11 +47,9 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
-        include:
-          - # macos-latest no longer supports node14, but macos-13 does
-            os: macos-13
-            node-version: '14'
+          - macos-13
         exclude:
+          - os: macos-13  # must be part of matrix, is then removed, and added back in for certain combinations
           - # macos-latest no longer supports node14
             os: macos-latest
             node-version: '14'
@@ -76,6 +74,10 @@ jobs:
           - # workspaces are a feature of NPM since 7.0
             subject: local-workspaces
             npm-version: '6'
+        include:
+          - # macos-latest no longer supports node14, but macos-13 does
+            os: macos-13
+            node-version: '14'
     timeout-minutes: 10 # this is a large matrix, just don't waste time!
     steps:
       - name: Checkout
