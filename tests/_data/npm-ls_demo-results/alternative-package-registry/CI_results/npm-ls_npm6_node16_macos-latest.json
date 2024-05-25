@@ -1,0 +1,96 @@
+{
+  "private": true,
+  "name": "demo-alternative-package-registry",
+  "version": "0.0.0",
+  "description": "demo: alternative-package-registry -- showcase how alternative package registries affect the result",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@act/act": {
+      "_from": "@act/act@npm:@jsr/act__act@^0.1.3",
+      "_id": "@jsr/act__act@0.1.3",
+      "_integrity": "sha512-pjeRDJ6t1Gzf/HBL1jXqqGR/t/4qsTanKphMggHIl4l17pMh1F6jVjzAx+pE1r6KNxpBsakEkW8hCV5WtAqRRA==",
+      "_jsr_revision": 11,
+      "_location": "/@act/act",
+      "_phantomChildren": {},
+      "_requested": {
+        "type": "alias",
+        "registry": true,
+        "raw": "@act/act@npm:@jsr/act__act@0.1.3",
+        "name": "@act/act",
+        "escapedName": "@act%2fact",
+        "scope": "@act",
+        "rawSpec": "npm:@jsr/act__act@0.1.3",
+        "saveSpec": null,
+        "fetchSpec": "[Circular]",
+        "subSpec": {
+          "type": "version",
+          "registry": true,
+          "raw": "@jsr/act__act@0.1.3",
+          "name": "@jsr/act__act",
+          "escapedName": "@jsr%2fact__act",
+          "scope": "@jsr",
+          "rawSpec": "0.1.3",
+          "saveSpec": "[Circular]",
+          "fetchSpec": "0.1.3"
+        }
+      },
+      "_requiredBy": [
+        "/"
+      ],
+      "_resolved": "https://npm.jsr.io/~/11/@jsr/act__act/0.1.3.tgz",
+      "_shasum": "F5B3A8B0D6C782BFF02574BE3C66E38956BDE2E3",
+      "_spec": "npm:@jsr/act__act@0.1.3",
+      "_where": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/alternative-package-registry/project",
+      "dependencies": {},
+      "deprecated": false,
+      "description": "A JavaScript and TypeScript library to make sure you **act first and think later**!",
+      "exports": {
+        ".": {
+          "types": "./_dist/main.d.ts",
+          "default": "./main.js"
+        }
+      },
+      "homepage": "https://jsr.io/@act/act",
+      "name": "@jsr/act__act",
+      "type": "module",
+      "version": "0.1.3",
+      "readme": "# Act (`@act/act`)\n\nA JavaScript and TypeScript library to make sure you **act first and think later**!\n\nThis is compatible with Node.js, Deno and Bun via [`jsr.io`](httos://jsr.io).\n\n> Did you get the code? by @dev-marcal\n\n## Usage\n\n```sh\n# run deno form jsr\ndeno run jsr:@act/act\n```\n\n## 🚀 Act First, Think Later 🚀\n\n**Get ready to embark on a journey of self-discovery Wtf**\n\nThe call to action **\"Act first, think later\"** encourages you to take bold steps, make impactful decisions, and embrace the process of continuous growth.\n\nThis project is your **guide to navigating life's exciting and sometimes messy terrain**. We'll equip you with actionable strategies and self-reflection techniques to:\n\n- 💪 **Unleash your potential**\n- 🧠 **Sharpen your mind**\n- 💪 **Conquer your fears**\n- 🧠 **Build your confidence**\n- 💪 **Live authentically**\n\nJoin us on this **continuous path of empowerment**. Explore our **resources** and **tools** to discover the **act-think-grow** approach in action.\n\n**Get ready to:**\n\n- 👋 Ignite your inner explorer 💪\n- 🧠 Cultivate lifelong curiosity 🧠\n- 💪 Overcome your self-doubts 💪\n- 🧠 Embrace the limitless possibilities 🤩\n\n**Act with confidence and think thoughtfully. Let's embark on a transformative adventure!**\n",
+      "readmeFilename": "README.md",
+      "_args": [
+        [
+          "@act/act@npm:@jsr/act__act@0.1.3",
+          "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/alternative-package-registry/project"
+        ]
+      ],
+      "devDependencies": {},
+      "optionalDependencies": {},
+      "_dependencies": {},
+      "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/alternative-package-registry/project/node_modules/@act/act",
+      "error": "[Circular]",
+      "extraneous": false
+    }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "demo-alternative-package-registry@0.0.0",
+  "_shrinkwrap": {
+    "name": "demo-alternative-package-registry",
+    "version": "0.0.0",
+    "lockfileVersion": 1,
+    "requires": true,
+    "dependencies": {
+      "@act/act": {
+        "version": "npm:@jsr/act__act@0.1.3",
+        "resolved": "https://npm.jsr.io/~/11/@jsr/act__act/0.1.3.tgz",
+        "integrity": "sha512-pjeRDJ6t1Gzf/HBL1jXqqGR/t/4qsTanKphMggHIl4l17pMh1F6jVjzAx+pE1r6KNxpBsakEkW8hCV5WtAqRRA=="
+      }
+    }
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "_dependencies": {
+    "@act/act": "npm:@jsr/act__act@^0.1.3"
+  },
+  "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/alternative-package-registry/project",
+  "error": "[Circular]",
+  "extraneous": false
+}
