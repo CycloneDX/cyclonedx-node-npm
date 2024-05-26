@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "demo-alternative-package-registry",
+  "version": "0.0.0",
+  "description": "demo: alternative-package-registry -- showcase how alternative package registries affect the result",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@act/act": "npm:@jsr/act__act@^0.1.3"
+  }
+}

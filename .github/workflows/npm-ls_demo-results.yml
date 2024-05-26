@@ -19,13 +19,14 @@ jobs:
       fail-fast: false # gather all the results !
       matrix:
         subject:
-          - bundled-dependencies
-          - dev-dependencies
-          - juice-shop
-          - local-dependencies
-          - local-workspaces
-          - package-integrity
-          - package-with-build-id
+          - alternative-package-registry
+          # - bundled-dependencies
+          # - dev-dependencies
+          # - juice-shop
+          # - local-dependencies
+          # - local-workspaces
+          # - package-integrity
+          # - package-with-build-id
         npm-version:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
           ## see also: https://github.com/npm/cli/releases
@@ -38,15 +39,18 @@ jobs:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
           - '22'     # Current
-          #- '20'     # Active LTS
-          #- '18'
-          #- '16'
-          #- '14'
+          - '20'     # Active LTS
+          - '18'
+          - '16'
+          - '14'
         os:
           - ubuntu-latest
           - windows-latest
           - macos-latest
         exclude:
+          - # macos-latest no longer supports node14
+            os: macos-latest
+            node-version: '14'
           - # npm10 requires node ^18.17.0 || >=20.5.0
             npm-version: '10'
             node-version: '16'
@@ -114,6 +118,7 @@ jobs:
   combine-results:
     name: combine results
     needs: [ 'demo-results' ]
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     steps:
       - name: fetch and combine RESULTS
