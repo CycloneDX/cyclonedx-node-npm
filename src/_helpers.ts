@@ -46,3 +46,22 @@ export async function writeAllSync (fd: number, data: string): Promise<number> {
 export function isString (v: any): v is string {
   return typeof v === 'string'
 }
+
+export function tryRemoveSecretsFromUrl (url: string): string {
+  try {
+    const u = new URL(url)
+    u.password = ''
+    return u.toString()
+  } catch {
+    return url
+  }
+}
+
+export function trySanitizeUrl (url: string): string {
+  /* @TODO normalize/sanitize git-urls & remove secrets from them
+    - https://github.com/CycloneDX/cyclonedx-javascript-library.git#v6.4.2
+    - git@github.com:CycloneDX/cyclonedx-javascript-library.git#v6.6.0
+    maybe use package 'hosted-git-info'
+  */
+  return tryRemoveSecretsFromUrl(url)
+}

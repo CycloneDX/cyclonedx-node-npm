@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Changed
+  * Try to sanitize distribution URLs (via [#1187])
+
+[#1187]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1187
+
 ## 1.18.0 - 2024-05-08
 
 * Added
