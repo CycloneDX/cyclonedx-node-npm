@@ -23,7 +23,7 @@ import * as normalizePackageData from 'normalize-package-data'
 import { type PackageURL } from 'packageurl-js'
 import * as path from 'path'
 
-import { isString, loadJsonFile } from './_helpers'
+import { isString, loadJsonFile, trySanitizeUrl } from './_helpers'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
@@ -520,7 +520,7 @@ export class BomBuilder {
       }
       component.externalReferences.add(
         new Models.ExternalReference(
-          resolved,
+          trySanitizeUrl(resolved),
           Enums.ExternalReferenceType.Distribution,
           {
             hashes,
