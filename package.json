@@ -81,7 +81,7 @@
     "example": "demo"
   },
   "bin": {
-    "cyclonedx-npm": "./bin/cyclonedx-npm-cli.js"
+    "cyclonedx-npm": "bin/cyclonedx-npm-cli.js"
   },
   "main": "./dist/cli.js",
   "exports": "./dist/index.js",
