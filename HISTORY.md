@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file.
 * Changed
   * Try to sanitize distribution URLs (via [#1187])
 * Added
-  * Mode debug output when it comes to package manifest loading (via [#1189]) 
+  * More debug output when it comes to package manifest loading (via [#1189]) 
 
 [#1187]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1187
 [#1189]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1189
