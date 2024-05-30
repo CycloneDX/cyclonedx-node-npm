@@ -351,6 +351,7 @@ export class BomBuilder {
    */
   private enhancedPackageData <T>(data: T & { path: string }): T {
     if (!path.isAbsolute(data.path)) {
+      this.console.debug('DEBUG | skip loading package manifest in %j', data.path)
       return data
     }
     const packageJsonPath = path.join(data.path, 'package.json')
@@ -359,7 +360,8 @@ export class BomBuilder {
         loadJsonFile(packageJsonPath) ?? {},
         data
       )
-    } catch {
+    } catch (err) {
+      this.console.debug('DEBUG | failed loading package manifest %j: %s', packageJsonPath, err)
       return data
     }
   }
