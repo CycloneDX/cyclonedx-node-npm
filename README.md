@@ -42,7 +42,7 @@ There are multiple methods for installing this tool:
   npx --package @cyclonedx/cyclonedx-npm --call exit
   ```
 
-* As a development dependency of the current projects:
+* As a development dependency of the current project:
 
   ```shell
   npm install --save-dev @cyclonedx/cyclonedx-npm
