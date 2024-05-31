@@ -168,7 +168,7 @@ See the [LICENSE][license_file] file for the full license.
 [shield_gh-workflow-test]: https://img.shields.io/github/actions/workflow/status/CycloneDX/cyclonedx-node-npm/nodejs.yml?branch=main&logo=GitHub&logoColor=white "tests"
 [shield_ossf-best-practices]: https://img.shields.io/cii/level/6614?label=OpenSSF%20best%20practices "OpenSSF best practices"
 [shield_coverage]: https://img.shields.io/codacy/coverage/16b034e5463543008e1cc0e2a3ed7005?logo=Codacy&logoColor=white "test coverage"
-[shield_npm-version]: https://img.shields.io/npm/v/@cyclonedx/cyclonedx-npm?logo=npm&logoColor=white "npm"
+[shield_npm-version]: https://img.shields.io/npm/v/%40cyclonedx%2fcyclonedx-npm/latest?label=npm&logo=npm&logoColor=white "npm"
 [shield_license]: https://img.shields.io/github/license/CycloneDX/cyclonedx-node-npm?logo=open%20source%20initiative&logoColor=white "license"
 [shield_website]: https://img.shields.io/badge/https://-cyclonedx.org-blue.svg "homepage"
 [shield_slack]: https://img.shields.io/badge/slack-join-blue?logo=Slack&logoColor=white "slack join"
