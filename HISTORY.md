@@ -14,7 +14,7 @@ All notable changes to this project will be documented in this file.
   * More debug output when it comes to package manifest loading (via [#1189]) 
 * Misc
   * Added direct dependency `hosted-git-info@^4||^5||^6||^7` (via [#1191])  
-    This is also a transitive dependency of the already existing direct dependency `normalize-package-data`.
+    This is also a transitive dependency via already existing direct dependency `normalize-package-data`.
 
 [#1187]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1187
 [#1189]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1189
