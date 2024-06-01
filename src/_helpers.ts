@@ -18,6 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { readFileSync, writeSync } from 'fs'
+import * as GitHost from 'hosted-git-info'
 
 export function loadJsonFile (path: string): any {
   return JSON.parse(readFileSync(path, 'utf8'))
@@ -57,11 +58,17 @@ export function tryRemoveSecretsFromUrl (url: string): string {
   }
 }
 
+export function trySanitizeGitUrl (gitUrl: string): string {
+  const gitInfo = GitHost.fromUrl(gitUrl)
+  if (gitInfo === undefined) {
+    return gitUrl
+  }
+  gitInfo.auth = undefined
+  return gitInfo.toString()
+}
+
 export function trySanitizeUrl (url: string): string {
-  /* @TODO normalize/sanitize git-urls & remove secrets from them
-    - https://github.com/CycloneDX/cyclonedx-javascript-library.git#v6.4.2
-    - git@github.com:CycloneDX/cyclonedx-javascript-library.git#v6.6.0
-    maybe use package 'hosted-git-info'
-  */
-  return tryRemoveSecretsFromUrl(url)
+  return tryRemoveSecretsFromUrl(
+    trySanitizeGitUrl(
+      url))
 }
