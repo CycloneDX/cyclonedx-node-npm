@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 1.19.0 - 2024-06-01
+
 * Changed
   * Try to sanitize distribution URLs (via [#1187], [#1191])
 * Added
