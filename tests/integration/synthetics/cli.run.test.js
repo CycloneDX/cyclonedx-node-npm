@@ -26,7 +26,7 @@ const { describe, expect, test } = require('@jest/globals')
 const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
 const { version: thisVersion } = require('../../../package.json')
 
-const projectRootPath = join(__dirname, '..', '..', '..')
+// const projectRootPath = join(__dirname, '..', '..', '..')
 const projectTestRootPath = join(__dirname, '..', '..')
 
 // const binWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
