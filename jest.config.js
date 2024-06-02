@@ -41,6 +41,7 @@ module.exports = {
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: [
+    'bin/**',
     'src/**',
     'dist/**' // running tests on build results, so need to have this vector
   ],
