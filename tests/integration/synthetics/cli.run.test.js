@@ -248,7 +248,6 @@ describe('cli.run()', () => {
     const expectedExitCode = 1 + Math.floor(254 * Math.random())
 
     const { res, outFile, errFile } = runCLI([
-      'dummy_process',
       '-vvv',
       '--ignore-npm-errors',
       '--output-reproducible',
