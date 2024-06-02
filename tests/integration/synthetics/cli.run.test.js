@@ -217,7 +217,7 @@ describe('cli.run()', () => {
         })
 
         try {
-          await res
+          expect(res).resolves.toBe(0)
         } catch (err) {
           process.stderr.write(readFileSync(errFile))
           throw err
@@ -271,7 +271,7 @@ describe('cli.run()', () => {
     })
 
     try {
-      await res
+      expect(res).resolves.toBe(0)
     } catch (err) {
       process.stderr.write(readFileSync(errFile))
       throw err
@@ -333,7 +333,7 @@ describe('cli.run()', () => {
       })
 
       try {
-        await res
+        expect(res).resolves.toBe(0)
       } catch (err) {
         process.stderr.write(readFileSync(errFile))
         throw err
