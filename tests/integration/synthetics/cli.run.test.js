@@ -17,6 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+const { spawnSync } = require('child_process')
 const { resolve, join } = require('path')
 const { mkdtempSync, mkdirSync, createWriteStream, openSync, writeFileSync, readFileSync } = require('fs')
 
@@ -26,10 +27,10 @@ const { describe, expect, test } = require('@jest/globals')
 const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
 const { version: thisVersion } = require('../../../package.json')
 
-// const projectRootPath = join(__dirname, '..', '..', '..')
+const projectRootPath = join(__dirname, '..', '..', '..')
 const projectTestRootPath = join(__dirname, '..', '..')
 
-// const binWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
+const binWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
 
 const cli = require('../../../dist/cli')
 
@@ -339,6 +340,27 @@ describe('cli.run()', () => {
       }
     }, cliRunTestTimeout)
   })
+
+  test.each(['JSON', 'XML'])('dogfooding %s', (format) => {
+    const res = spawnSync(
+      process.execPath,
+      [binWrapper, '--output-format', format, '--ignore-npm-errors'],
+      {
+        cwd: projectRootPath,
+        stdio: ['ignore', 'ignore', 'pipe'],
+        encoding: 'utf8'
+      }
+    )
+    try {
+      expect(res.error).toBeUndefined()
+      expect(res.status).toBe(0)
+    } catch (err) {
+      process.stderr.write('\n')
+      process.stderr.write(res.stderr)
+      process.stderr.write('\n')
+      throw err
+    }
+  }, cliRunTestTimeout)
 })
 
 /**
