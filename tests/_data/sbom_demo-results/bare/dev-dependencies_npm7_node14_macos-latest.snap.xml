@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+  <metadata>
+    <tools>
+      <tool>
+        <name>npm</name>
+        <version>7.99.0</version>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>libVersion-testing</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-npm</name>
+        <version>thisVersion-testing</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="demo-dev-dependencies@0.0.0">
+      <name>demo-dev-dependencies</name>
+      <version>0.0.0</version>
+      <description>demo: demo-dev-dependencies -- showcase how devDependencies look like</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/demo-dev-dependencies@0.0.0</purl>
+      <properties>
+        <property name="cdx:npm:package:path"/>
+        <property name="cdx:npm:package:private">true</property>
+      </properties>
+    </component>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="@types/node@18.15.11">
+      <group>@types</group>
+      <name>node</name>
+      <version>18.15.11</version>
+      <purl>pkg:npm/%40types/node@18.15.11</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@types/node/-/node-18.15.11.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+          <hashes>
+            <hash alg="SHA-512">1392b0ab69f849b33340e9fac279818ee2bda2eaa5511adc64355f6e8f5fb430d316dde793b64a2b818c3b3a18827a5024a731c10c3e946681bef94ca34a8dfd</hash>
+          </hashes>
+        </reference>
+      </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:development">true</property>
+        <property name="cdx:npm:package:path">node_modules/@types/node</property>
+      </properties>
+    </component>
+    <component type="library" bom-ref="@types/uuid@8.3.4">
+      <group>@types</group>
+      <name>uuid</name>
+      <version>8.3.4</version>
+      <scope>optional</scope>
+      <purl>pkg:npm/%40types/uuid@8.3.4</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+          <hashes>
+            <hash alg="SHA-512">73f23c6516f9d63fa960602ee42ac5311c6a67691ee32da0ac404ee4052381291293ea93d846be39d584973fce88c7f930da67d9bd7b92e541c192d0257ce287</hash>
+          </hashes>
+        </reference>
+      </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:development">true</property>
+        <property name="cdx:npm:package:path">node_modules/@types/uuid</property>
+      </properties>
+    </component>
+    <component type="library" bom-ref="uuid@8.3.2">
+      <name>uuid</name>
+      <version>8.3.2</version>
+      <scope>optional</scope>
+      <purl>pkg:npm/uuid@8.3.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+          <hashes>
+            <hash alg="SHA-512">f8d62cd9078c5b2f865853849bdc679fa1c20e9d25ed0043ee697cccb52627ef77439345d0da1c12b9f09139175453625f7fdfa42e9a7d2f0385bfe0cfb47b7a</hash>
+          </hashes>
+        </reference>
+      </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:development">true</property>
+        <property name="cdx:npm:package:path">node_modules/uuid</property>
+      </properties>
+    </component>
+    <component type="library" bom-ref="uuidv4@6.2.13">
+      <name>uuidv4</name>
+      <version>6.2.13</version>
+      <scope>optional</scope>
+      <purl>pkg:npm/uuidv4@6.2.13</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+          <hashes>
+            <hash alg="SHA-512">017cb33236b3601de8bcbdead39d552c7d3a2318fffca9f1ed09d44a2d53fff21ede2a3a0a9b0fbbd9d530ec793282d687ac55d01f49d2121ac6e9e0c5751b3d</hash>
+          </hashes>
+        </reference>
+      </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:path">node_modules/uuidv4</property>
+      </properties>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="@types/node@18.15.11"/>
+    <dependency ref="@types/uuid@8.3.4"/>
+    <dependency ref="demo-dev-dependencies@0.0.0">
+      <dependency ref="@types/node@18.15.11"/>
+      <dependency ref="@types/uuid@8.3.4"/>
+      <dependency ref="uuid@8.3.2"/>
+      <dependency ref="uuidv4@6.2.13"/>
+    </dependency>
+    <dependency ref="uuid@8.3.2"/>
+    <dependency ref="uuidv4@6.2.13">
+      <dependency ref="@types/uuid@8.3.4"/>
+      <dependency ref="uuid@8.3.2"/>
+    </dependency>
+  </dependencies>
+</bom>

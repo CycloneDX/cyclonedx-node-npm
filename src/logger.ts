@@ -21,7 +21,7 @@ function noop (): void {
   // do nothing
 }
 
-export function makeConsoleLogger (level: number): Console {
+export function makeConsoleLogger (process: NodeJS.Process, level: number): Console {
   // all output shall be bound to stdError - stdOut is for result output only
   const myConsole = new console.Console(process.stderr, process.stderr)
 

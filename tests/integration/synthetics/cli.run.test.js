@@ -18,13 +18,10 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { resolve, join } = require('path')
-const {
-  mkdtempSync, mkdirSync,
-  createWriteStream,
-  openSync, closeSync, existsSync, writeFileSync, readFileSync
-} = require('fs')
+const { closeSync, createWriteStream, mkdtempSync, mkdirSync, openSync, readFileSync, rmSync, writeFileSync } = require('fs')
+const { spawnSync } = require('child_process')
 
-const { Spec } = require('@cyclonedx/cyclonedx-library')
+const { Spec: { Version: SpecVersion } } = require('@cyclonedx/cyclonedx-library')
 const { describe, expect, test } = require('@jest/globals')
 
 const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
@@ -32,17 +29,25 @@ const { version: thisVersion } = require('../../../package.json')
 
 const cli = require('../../../dist/cli')
 
-const latestCdxSpecVersion = Spec.Version.v1dot6
+const projectRootPath = join(__dirname, '..', '..', '..')
+const projectTestRootPath = join(__dirname, '..', '..')
+
+const binWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
+
+const latestCdxSpecVersion = SpecVersion.v1dot6
 
 describe('cli.run()', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
-  const cliRunTestTimeout = 15000
+  const cliRunTestTimeout = 60000
 
-  const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX-IT-CLI.run.'))
+  const tmpRoot = mkdtempSync(join(projectTestRootPath, '_log', 'CDX-IT-CLI.run.'))
+  process.once('exit', () => {
+    rmSync(tmpRoot, { recursive: true, force: true })
+  })
 
-  const dummyProjectsRoot = resolve(__dirname, '..', '..', '_data', 'dummy_projects')
-  const demoResultsRoot = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results')
-  const npmLsReplacementPath = resolve(__dirname, '..', '..', '_data', 'npm-ls_replacement')
+  const dummyProjectsRoot = resolve(projectTestRootPath, '_data', 'dummy_projects')
+  const demoResultsRoot = resolve(projectTestRootPath, '_data', 'sbom_demo-results')
+  const npmLsReplacementPath = resolve(projectTestRootPath, '_data', 'npm-ls_replacement')
 
   const npmLsReplacement = {
     brokenJson: resolve(npmLsReplacementPath, 'broken-json.js'),
@@ -213,150 +218,173 @@ describe('cli.run()', () => {
     }, cliRunTestTimeout)
   })
 
-  describe('with prepared npm-ls', () => {
-    const tmpRootRun = join(tmpRoot, 'with-prepared')
-    mkdirSync(tmpRootRun)
+  describe.each(['JSON', 'XML'])('format: %s', format => {
+    mkdirSync(join(tmpRoot, `format-${format}`))
 
-    const useCases = [
-      { subject: 'bare', args: [] },
-      { subject: 'flatten-components', args: ['--flatten-components'] }
-    ]
-    const demoCases = indexNpmLsDemoData()
-    describe.each(useCases)('$subject', (ud) => {
-      mkdirSync(join(tmpRootRun, ud.subject))
+    describe('with prepared npm-ls', () => {
+      const tmpRootRun = join(tmpRoot, `format-${format}`, 'with-prepared')
+      mkdirSync(tmpRootRun)
 
-      test.each(demoCases)('$subject npm$npm node$node $os', async (dd) => {
-        const expectedOutSnap = resolve(demoResultsRoot, ud.subject, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
-        const logFileBase = join(tmpRootRun, ud.subject, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
+      const useCases = [
+        { subject: 'bare', args: [] },
+        { subject: 'flatten-components', args: ['--flatten-components'] }
+      ]
+      const demoCases = indexNpmLsDemoData()
+      describe.each(useCases)('$subject', (ud) => {
+        mkdirSync(join(tmpRootRun, ud.subject))
 
-        const outFile = `${logFileBase}.out`
-        const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
+        test.each(demoCases)('$subject npm$npm node$node $os', async (dd) => {
+          const expectedOutSnap = resolve(demoResultsRoot, ud.subject, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.${format.toLowerCase()}`)
+          const logFileBase = join(tmpRootRun, ud.subject, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
 
-        const errFile = `${logFileBase}.err`
-        const stderr = createWriteStream(errFile) // not perfect, but works
+          const outFile = `${logFileBase}.out`
+          const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
 
-        const mockProcess = {
-          stdout,
-          stderr,
-          cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
-          execPath: process.execPath,
-          argv0: process.argv0,
-          argv: [
-            process.argv[0],
-            'dummy_process',
-            '-vvv',
-            '--output-reproducible',
-            '--validate',
-            // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-            '--spec-version', `${latestCdxSpecVersion}`,
-            // just use json with the latest most feature-rich version.
-            '--output-format', 'JSON',
-            // prevent file interaction in this synthetic scenario - they would not exist anyway
-            '--package-lock-only',
-            // case-specific args
-            ...ud.args,
-            '--',
-            // just some dummy project
-            join('with-lockfile', 'package.json')
-          ],
-          env: {
-            ...process.env,
-            CT_VERSION: `${dd.npm}.99.0`,
-            CT_SUBJECT: dd.subject,
-            CT_NPM: dd.npm,
-            CT_NODE: dd.node,
-            CT_OS: dd.os,
-            npm_execpath: npmLsReplacement.demoResults
+          const errFile = `${logFileBase}.err`
+          const stderr = createWriteStream(errFile) // not perfect, but works
+
+          /** @type {NodeJS.Process} */
+          const mockProcess = {
+            ...process,
+            stdout,
+            stderr,
+            cwd: () => dummyProjectsRoot,
+            argv: [
+              process.argv[0],
+              'dummy_process',
+              '-vvv',
+              '--output-reproducible',
+              // no intention to test all the spec-versions - this would be not our scope.
+              '--spec-version', `${latestCdxSpecVersion}`,
+              '--output-format', format,
+              // prevent file interaction in this synthetic scenario - they would not exist anyway
+              '--package-lock-only',
+              // case-specific args
+              ...ud.args,
+              '--',
+              // just some dummy project
+              join('with-lockfile', 'package.json')
+            ],
+            env: {
+              ...process.env,
+              CT_VERSION: `${dd.npm}.99.0`,
+              CT_SUBJECT: dd.subject,
+              CT_NPM: dd.npm,
+              CT_NODE: dd.node,
+              CT_OS: dd.os,
+              npm_execpath: npmLsReplacement.demoResults
+            }
           }
-        }
 
-        try {
-          await cli.run(mockProcess)
-        } finally {
-          stderr.close()
-          closeSync(stdout.fd)
-        }
+          try {
+            await cli.run(mockProcess)
+          } finally {
+            stderr.close()
+            closeSync(stdout.fd)
+          }
 
-        const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
+          const actualOutput = makeReproducible(format, readFileSync(outFile, 'utf8'))
 
-        if (!existsSync(expectedOutSnap) || UPDATE_SNAPSHOTS) {
-          writeFileSync(expectedOutSnap, actualOutput, 'utf8')
-        }
+          if (UPDATE_SNAPSHOTS) {
+            writeFileSync(expectedOutSnap, actualOutput, 'utf8')
+          }
 
-        expect(actualOutput).toEqual(
-          readFileSync(expectedOutSnap, 'utf8'),
-          `${outFile} should equal ${expectedOutSnap}`
-        )
-      }, cliRunTestTimeout)
+          expect(actualOutput).toEqual(
+            readFileSync(expectedOutSnap, 'utf8'),
+            `${outFile} should equal ${expectedOutSnap}`
+          )
+        }, cliRunTestTimeout)
+      })
     })
-  })
 
-  test('suppressed error on non-zero exit', async () => {
-    const dd = { subject: 'dev-dependencies', npm: '8', node: '14', os: 'ubuntu-latest' }
+    test('suppressed error on non-zero exit', async () => {
+      const dd = { subject: 'dev-dependencies', npm: '8', node: '14', os: 'ubuntu-latest' }
 
-    mkdirSync(join(tmpRoot, 'suppressed-error-on-non-zero-exit'))
-    const expectedOutSnap = resolve(demoResultsRoot, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
-    const logFileBase = join(tmpRoot, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
+      mkdirSync(join(tmpRoot, `format-${format}`, 'suppressed-error-on-non-zero-exit'))
+      const expectedOutSnap = resolve(demoResultsRoot, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.${format.toLowerCase()}`)
+      const logFileBase = join(tmpRoot, `format-${format}`, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
 
-    const expectedExitCode = 1 + Math.floor(254 * Math.random())
+      const expectedExitCode = 1 + Math.floor(254 * Math.random())
 
-    const outFile = `${logFileBase}.out`
-    const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
+      const outFile = `${logFileBase}.out`
+      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
 
-    const errFile = `${logFileBase}.err`
-    const stderr = createWriteStream(errFile) // not perfect, but works
+      const errFile = `${logFileBase}.err`
+      const stderr = createWriteStream(errFile) // not perfect, but works
 
-    const mockProcess = {
-      stdout,
-      stderr,
-      cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
-      execPath: process.execPath,
-      argv0: process.argv0,
-      argv: [
-        process.argv[0],
-        'dummy_process',
-        '-vvv',
-        '--ignore-npm-errors',
-        '--output-reproducible',
-        // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-        '--spec-version', `${latestCdxSpecVersion}`,
-        '--output-format', 'JSON',
-        // prevent file interaction in this synthetic scenario - they would not exist anyway
-        '--package-lock-only',
-        '--',
-        join('with-lockfile', 'package.json')
-      ],
-      env: {
-        ...process.env,
-        CT_VERSION: `${dd.npm}.99.0`,
-        // non-zero exit code
-        CT_EXIT_CODE: expectedExitCode,
-        CT_SUBJECT: dd.subject,
-        CT_NPM: dd.npm,
-        CT_NODE: dd.node,
-        CT_OS: dd.os,
-        npm_execpath: npmLsReplacement.demoResults
+      const mockProcess = {
+        stdout,
+        stderr,
+        cwd: () => dummyProjectsRoot,
+        execPath: process.execPath,
+        argv0: process.argv0,
+        argv: [
+          process.argv[0],
+          'dummy_process',
+          '-vvv',
+          '--ignore-npm-errors',
+          '--output-reproducible',
+          // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
+          '--spec-version', `${latestCdxSpecVersion}`,
+          '--output-format', format,
+          // prevent file interaction in this synthetic scenario - they would not exist anyway
+          '--package-lock-only',
+          '--',
+          join('with-lockfile', 'package.json')
+        ],
+        env: {
+          ...process.env,
+          CT_VERSION: `${dd.npm}.99.0`,
+          // non-zero exit code
+          CT_EXIT_CODE: expectedExitCode,
+          CT_SUBJECT: dd.subject,
+          CT_NPM: dd.npm,
+          CT_NODE: dd.node,
+          CT_OS: dd.os,
+          npm_execpath: npmLsReplacement.demoResults
+        }
       }
-    }
 
-    try {
-      await cli.run(mockProcess)
-    } finally {
-      stderr.close()
-      closeSync(stdout.fd)
-    }
+      try {
+        await cli.run(mockProcess)
+      } finally {
+        stderr.close()
+        closeSync(stdout.fd)
+      }
 
-    const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
+      const actualOutput = makeReproducible(format, readFileSync(outFile, 'utf8'))
 
-    if (!existsSync(expectedOutSnap) || UPDATE_SNAPSHOTS) {
-      writeFileSync(expectedOutSnap, actualOutput, 'utf8')
-    }
+      if (UPDATE_SNAPSHOTS) {
+        writeFileSync(expectedOutSnap, actualOutput, 'utf8')
+      }
 
-    expect(actualOutput).toEqual(
-      readFileSync(expectedOutSnap, 'utf8'),
-      `${outFile} should equal ${expectedOutSnap}`
-    )
-  }, cliRunTestTimeout)
+      expect(actualOutput).toEqual(
+        readFileSync(expectedOutSnap, 'utf8'),
+        `${outFile} should equal ${expectedOutSnap}`
+      )
+    }, cliRunTestTimeout)
+
+    test('dogfooding', () => {
+      const res = spawnSync(
+        process.execPath,
+        [binWrapper, '--output-format', format, '--ignore-npm-errors'],
+        {
+          cwd: projectRootPath,
+          stdio: ['ignore', 'ignore', 'pipe'],
+          encoding: 'utf8'
+        }
+      )
+      try {
+        expect(res.error).toBeUndefined()
+        expect(res.status).toBe(0)
+      } catch (err) {
+        process.stderr.write('\n')
+        process.stderr.write(res.stderr)
+        process.stderr.write('\n')
+        throw err
+      }
+    }, cliRunTestTimeout)
+  })
 
   describe('npm-version depending npm-args', () => {
     const tmpRootRun = join(tmpRoot, 'npmVersion-depending-npmArgs')
@@ -399,7 +427,7 @@ describe('cli.run()', () => {
       const mockProcess = {
         stdout,
         stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
+        cwd: () => dummyProjectsRoot,
         execPath: process.execPath,
         argv0: process.argv0,
         argv: [
@@ -428,15 +456,15 @@ describe('cli.run()', () => {
 })
 
 /**
- * @param {string} format
+ * @param {'JSON'|'XML'} format
  * @param {*} data
  * @returns {string}
  */
 function makeReproducible (format, data) {
-  switch (format.toLowerCase()) {
-    case 'xml':
+  switch (format) {
+    case 'XML':
       return makeXmlReproducible(data)
-    case 'json':
+    case 'JSON':
       return makeJsonReproducible(data)
     default:
       throw new RangeError(`unexpected format: ${format}`)

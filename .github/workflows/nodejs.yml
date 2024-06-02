@@ -73,7 +73,7 @@ jobs:
 
   test-jest:
     needs: [ 'build' ]
-    name: jest (node${{ matrix.node-version }} ${{ matrix.os }})
+    name: jest (node${{ matrix.node-version }} ${{ matrix.os }} ${{ matrix.omit-optional && 'omit-optional'}})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -91,6 +91,10 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-13 # macos-latest has issues with node14
+        include:
+          - node-version: 22
+            os: ubuntu-latest
+            omit-optional: true
     timeout-minutes: 15
     steps:
       - name: Checkout
@@ -108,6 +112,11 @@ jobs:
           set -ex
           dep_constraints=''
           dev_requirements='jest jest-junit imurmurhash fast-glob'
+          omit=''
+          if [[ -n '${{ matrix.omit-optional }}' ]] 
+          then
+            omit='--omit=optional'
+          fi
           # as long as npm cannot auto-resolve engine-constraints, we need to help here
           case '${{ matrix.node-version }}' in
             '14')
@@ -121,13 +130,13 @@ jobs:
           ## !! dont install all the dev-packages, especially since some are not runnable on node 14.0.0
           if [[ -n "$dep_constraints" ]]
           then
-            npm add --ignore-scripts --omit=dev --only=prod --production --loglevel=silly --save $dep_constraints
+            npm add --ignore-scripts $omit --omit=dev --only=prod --production --loglevel=silly --save $dep_constraints
           fi
-          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
+          npm i --ignore-scripts $omit --omit=dev --only=prod --production --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
           ## install the needed dev-deps
-          npm i --ignore-scripts --loglevel=silly --no-save $dev_requirements
+          npm i --ignore-scripts --loglevel=silly $omit --no-save $dev_requirements
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4

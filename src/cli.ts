@@ -55,30 +55,32 @@ interface CommandOptions {
 }
 
 function makeCommand (process: NodeJS.Process): Command {
-  return new Command(
-  ).description(
-    'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
-  ).usage(
+  const cmd = new Command()
+  cmd.description('Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.')
+  cmd.usage(
     // Need to add the `[--]` manually, to indicate how to stop a variadic option.
     '[options] [--] [<package-manifest>]'
-  ).addOption(
-    new Option(
+  )
+  cmd.addOption(
+    (new Option(
       '--ignore-npm-errors',
       'Whether to ignore errors of NPM.\n' +
       'This might be used, if "npm install" was run with "--force" or "--legacy-peer-deps".'
-    ).default(false)
-  ).addOption(
-    new Option(
+    )).default(false)
+  )
+  cmd.addOption(
+    (new Option(
       '--package-lock-only',
       'Whether to only use the lock file, ignoring "node_modules".\n' +
       'This means the output will be based only on the few details in and the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.'
-    ).default(false)
-  ).addOption(
-    new Option(
+    )).default(false)
+  )
+  cmd.addOption(
+    (new Option(
       '--omit <type...>',
       'Dependency types to omit from the installation tree. ' +
       '(can be set multiple times)'
-    ).choices(
+    )).choices(
       Object.values(Omittable).sort()
     ).default(
       process.env.NODE_ENV === 'production'
@@ -86,41 +88,46 @@ function makeCommand (process: NodeJS.Process): Command {
         : [],
       `"${Omittable.Dev}" if the NODE_ENV environment variable is set to "production", otherwise empty`
     )
-  ).addOption(
-    new Option(
+  )
+  cmd.addOption(
+    (new Option(
       '--flatten-components',
       'Whether to flatten the components.\n' +
       'This means the actual nesting of node packages is not represented in the SBOM result.'
-    ).default(false)
-  ).addOption(
-    new Option(
+    )).default(false)
+  )
+  cmd.addOption(
+    (new Option(
       '--short-PURLs',
       'Omit all qualifiers from PackageURLs.\n' +
       'This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.'
-    ).default(false)
-  ).addOption(
-    new Option(
+    )).default(false)
+  )
+  cmd.addOption(
+    (new Option(
       '--spec-version <version>',
       'Which version of CycloneDX spec to use.'
-    ).choices(
+    )).choices(
       Object.keys(Spec.SpecVersionDict).sort()
     ).default(
       Spec.Version.v1dot4
     )
-  ).addOption(
-    new Option(
+  )
+  cmd.addOption(
+    (new Option(
       '--output-reproducible',
       'Whether to go the extra mile and make the output reproducible.\n' +
       'This requires more resources, and might result in loss of time- and random-based-values.'
-    ).env(
+    )).env(
       'BOM_REPRODUCIBLE'
     )
-  ).addOption(
+  )
+  cmd.addOption(
     (function () {
-      const o = new Option(
+      const o = (new Option(
         '--output-format <format>',
         'Which output format to use.'
-      ).choices(
+      )).choices(
         [OutputFormat.JSON, OutputFormat.XML]
       ).default(
         // the context is node/JavaScript - which should prefer JSON
@@ -132,31 +139,35 @@ function makeCommand (process: NodeJS.Process): Command {
       o.parseArg = (v, p) => oldParseArg(v.toUpperCase(), p)
       return o
     })()
-  ).addOption(
-    new Option(
+  )
+  cmd.addOption(
+    (new Option(
       '--output-file <file>',
       'Path to the output file.\n' +
       `Set to "${OutputStdOut}" to write to STDOUT.`
-    ).default(
+    )).default(
       OutputStdOut,
       'write to STDOUT'
     )
-  ).addOption(
-    new Option(
+  )
+  cmd.addOption(
+    (new Option(
       '--validate',
       'Validate resulting BOM before outputting. ' +
       'Validation is skipped, if requirements not met. See the README.'
-    ).default(undefined)
-  ).addOption(
+    )).default(undefined)
+  )
+  cmd.addOption(
     new Option(
       '--no-validate',
       'Disable validation of resulting BOM.'
     )
-  ).addOption(
-    new Option(
+  )
+  cmd.addOption(
+    (new Option(
       '--mc-type <type>',
       'Type of the main component.'
-    ).choices(
+    )).choices(
       // Object.values(Enums.ComponentType) -- use all possible
       [ // for the NPM context only the following make sense:
         Enums.ComponentType.Application,
@@ -166,29 +177,32 @@ function makeCommand (process: NodeJS.Process): Command {
     ).default(
       Enums.ComponentType.Application
     )
-  ).addOption(
-    new Option(
+  )
+  cmd.addOption(
+    (new Option(
       '-v, --verbose',
       'Increase the verbosity of messages. Use multiple times to increase the verbosity even more.'
-    ).argParser<number>(
+    )).argParser<number>(
       function (_: any, previous: number): number {
         return previous + 1
       }
     ).default(0)
-  ).addArgument(
-    new Argument(
+  )
+  cmd.addArgument(
+    (new Argument(
       '[<package-manifest>]',
       "Path to project's manifest file."
-    ).default(
+    )).default(
       'package.json',
       '"package.json" file in current working directory'
     )
-  ).version(
+  )
+  cmd.version(
     // that is supposed to be the last option in the list on the help page.
     loadJsonFile(resolve(module.path, '..', 'package.json')).version as string
-  ).allowExcessArguments(
-    false
   )
+  cmd.allowExcessArguments(false)
+  return cmd
 }
 
 const ExitCode: Readonly<Record<string, number>> = Object.freeze({
@@ -204,7 +218,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
   program.parse(process.argv)
 
   const options: CommandOptions = program.opts()
-  const myConsole = makeConsoleLogger(options.verbose)
+  const myConsole = makeConsoleLogger(process, options.verbose)
   myConsole.debug('DEBUG | options: %j', options)
 
   const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
