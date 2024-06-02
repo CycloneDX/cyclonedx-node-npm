@@ -18,17 +18,18 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { resolve, join } = require('path')
-const {
-  mkdtempSync, mkdirSync,
-  createWriteStream,
-  openSync, closeSync, existsSync, writeFileSync, readFileSync
-} = require('fs')
+const { mkdtempSync, mkdirSync, createWriteStream, openSync, writeFileSync, readFileSync } = require('fs')
 
 const { Spec } = require('@cyclonedx/cyclonedx-library')
 const { describe, expect, test } = require('@jest/globals')
 
 const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
 const { version: thisVersion } = require('../../../package.json')
+
+const projectRootPath = join(__dirname, '..', '..', '..')
+const projectTestRootPath = join(__dirname, '..', '..')
+
+// const binWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
 
 const cli = require('../../../dist/cli')
 
@@ -38,11 +39,11 @@ describe('cli.run()', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
   const cliRunTestTimeout = 15000
 
-  const tmpRoot = mkdtempSync(join(__dirname, '..', '..', '_log', 'CDX-IT-CLI.run.'))
+  const tmpRoot = mkdtempSync(join(projectTestRootPath, '_log', 'CDX-IT-CLI.run.'))
 
-  const dummyProjectsRoot = resolve(__dirname, '..', '..', '_data', 'dummy_projects')
-  const demoResultsRoot = resolve(__dirname, '..', '..', '_data', 'sbom_demo-results')
-  const npmLsReplacementPath = resolve(__dirname, '..', '..', '_data', 'npm-ls_replacement')
+  const dummyProjectsRoot = resolve(projectTestRootPath, '_data', 'dummy_projects')
+  const demoResultsRoot = resolve(projectTestRootPath, '_data', 'sbom_demo-results')
+  const npmLsReplacementPath = resolve(projectTestRootPath, '_data', 'npm-ls_replacement')
 
   const npmLsReplacement = {
     brokenJson: resolve(npmLsReplacementPath, 'broken-json.js'),
@@ -50,6 +51,46 @@ describe('cli.run()', () => {
     demoResults: resolve(npmLsReplacementPath, 'demo-results.js'),
     justExit: resolve(npmLsReplacementPath, 'just-exit.js'),
     nonExistingBinary: resolve(npmLsReplacementPath, 'aNonExistingBinary')
+  }
+
+  /**
+   * @param {string[]} args
+   * @param {string} logFileBase
+   * @param {string} cwd
+   * @param {Object.<string, string>} env
+   * @return {{res: Promise.<number>, outFile:string, errFile:string}}
+   */
+  function runCLI (args, logFileBase, cwd, env) {
+    const outFile = `${logFileBase}.out`
+    const outFD = openSync(outFile, 'w')
+    const stdout = createWriteStream(null, { fd: outFD })
+
+    const errFile = `${logFileBase}.err`
+    const errFD = openSync(errFile, 'w')
+    const stderr = createWriteStream(null, { fd: errFD })
+
+    /** @type Partial<NodeJS.Process> */
+    const mockProcess = {
+      stdout,
+      stderr,
+      cwd: () => cwd,
+      execPath: process.execPath,
+      argv0: process.argv0,
+      argv: [
+        process.argv[0],
+        'dummy_process',
+        ...args
+      ],
+      env: {
+        ...process.env,
+        ...env
+      }
+    }
+
+    /** @type Promise.<number> */
+    const res = cli.run(mockProcess)
+
+    return { res, outFile, errFile }
   }
 
   describe('broken project', () => {
@@ -61,37 +102,15 @@ describe('cli.run()', () => {
       ['no-manifest', /missing .*manifest file/i]
     ])('%s', async (folderName, expectedError) => {
       const logFileBase = join(tmpRootRun, folderName)
+      const cwd = resolve(dummyProjectsRoot, folderName)
 
-      const outFile = `${logFileBase}.out`
-      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
-
-      const errFile = `${logFileBase}.err`
-      const stderr = createWriteStream(errFile) // not perfect, but works
-
-      const mockProcess = {
-        stdout,
-        stderr,
-        cwd: () => resolve(dummyProjectsRoot, folderName),
-        execPath: process.execPath,
-        argv0: process.argv0,
-        argv: [
-          process.argv[0],
-          'dummy_process'
-        ],
-        env: {
-          ...process.env,
-          // use original npm-ls
-          npm_execpath: undefined
-        }
-      }
+      const { res, errFile } = runCLI([], logFileBase, cwd, { npm_execpath: undefined })
 
       try {
-        await expect(
-          cli.run(mockProcess)
-        ).rejects.toThrow(expectedError)
-      } finally {
-        stderr.close()
-        closeSync(stdout.fd)
+        await expect(res).rejects.toThrow(expectedError)
+      } catch (err) {
+        process.stderr.write(readFileSync(errFile))
+        throw err
       }
     }, cliRunTestTimeout)
   })
@@ -102,113 +121,56 @@ describe('cli.run()', () => {
 
     test('error on non-existing binary', async () => {
       const logFileBase = join(tmpRootRun, 'non-existing')
+      const cwd = resolve(dummyProjectsRoot, 'with-lockfile')
 
-      const outFile = `${logFileBase}.out`
-      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
-
-      const errFile = `${logFileBase}.err`
-      const stderr = createWriteStream(errFile) // not perfect, but works
-
-      const mockProcess = {
-        stdout,
-        stderr,
-        cwd: () => resolve(dummyProjectsRoot, 'with-lockfile'),
-        execPath: process.execPath,
-        argv0: process.argv0,
-        argv: [
-          process.argv[0],
-          'dummy_process'
-        ],
-        env: {
-          ...process.env,
-          npm_execpath: npmLsReplacement.nonExistingBinary
-        }
-      }
+      const { res, errFile } = runCLI([], logFileBase, cwd, {
+        npm_execpath: npmLsReplacement.nonExistingBinary
+      })
 
       try {
-        await expect(
-          cli.run(mockProcess)
-        ).rejects.toThrow(/^unexpected npm execpath/i)
-      } finally {
-        stderr.close()
-        closeSync(stdout.fd)
+        await expect(res).rejects.toThrow(/^unexpected npm execpath/i)
+      } catch (err) {
+        process.stderr.write(readFileSync(errFile))
+        throw err
       }
     }, cliRunTestTimeout)
 
     test('error on non-zero exit', async () => {
       const logFileBase = join(tmpRootRun, 'error-exit-nonzero')
+      const cwd = resolve(dummyProjectsRoot, 'with-lockfile')
 
       const expectedExitCode = 1 + Math.floor(254 * Math.random())
 
-      const outFile = `${logFileBase}.out`
-      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
-
-      const errFile = `${logFileBase}.err`
-      const stderr = createWriteStream(errFile) // not perfect, but works
-
-      const mockProcess = {
-        stdout,
-        stderr,
-        cwd: () => resolve(dummyProjectsRoot, 'with-lockfile'),
-        execPath: process.execPath,
-        argv0: process.argv0,
-        argv: [
-          process.argv[0],
-          'dummy_process'
-        ],
-        env: {
-          ...process.env,
-          CT_VERSION: '8.99.0',
-          // non-zero exit code
-          CT_EXIT_CODE: `${expectedExitCode}`,
-          npm_execpath: npmLsReplacement.justExit
-        }
-      }
+      const { res, errFile } = runCLI([], logFileBase, cwd, {
+        CT_VERSION: '8.99.0',
+        // non-zero exit code
+        CT_EXIT_CODE: `${expectedExitCode}`,
+        npm_execpath: npmLsReplacement.justExit
+      })
 
       try {
-        await expect(
-          cli.run(mockProcess)
-        ).rejects.toThrow(`npm-ls exited with errors: ${expectedExitCode} noSignal`)
-      } finally {
-        stderr.close()
-        closeSync(stdout.fd)
+        await expect(res).rejects.toThrow(`npm-ls exited with errors: ${expectedExitCode} noSignal`)
+      } catch (err) {
+        process.stderr.write(readFileSync(errFile))
+        throw err
       }
     }, cliRunTestTimeout)
 
     test('error on broken json response', async () => {
       const logFileBase = join(tmpRootRun, 'error-json-broken')
+      const cwd = resolve(dummyProjectsRoot, 'with-lockfile')
 
-      const outFile = `${logFileBase}.out`
-      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
-
-      const errFile = `${logFileBase}.err`
-      const stderr = createWriteStream(errFile) // not perfect, but works
-
-      const mockProcess = {
-        stdout,
-        stderr,
-        cwd: () => resolve(dummyProjectsRoot, 'with-lockfile'),
-        execPath: process.execPath,
-        argv0: process.argv0,
-        argv: [
-          process.argv[0],
-          'dummy_process'
-        ],
-        env: {
-          ...process.env,
-          CT_VERSION: '8.99.0',
-          // abuse the npm-ls replacement, as it can be caused to crash under control.
-          npm_execpath: npmLsReplacement.brokenJson
-        }
-      }
+      const { res, errFile } = runCLI([], logFileBase, cwd, {
+        CT_VERSION: '8.99.0',
+        // abuse the npm-ls replacement, as it can be caused to crash under control.
+        npm_execpath: npmLsReplacement.brokenJson
+      })
 
       try {
-        await expect(
-          cli.run(mockProcess)
-        ).rejects.toThrow(/failed to parse npm-ls response/i)
-      } finally {
-        stderr.close()
-        closeSync(stdout.fd)
+        await expect(res).rejects.toThrow(/failed to parse npm-ls response/i)
+      } catch (err) {
+        process.stderr.write(readFileSync(errFile))
+        throw err
       }
     }, cliRunTestTimeout)
   })
@@ -228,58 +190,42 @@ describe('cli.run()', () => {
       test.each(demoCases)('$subject npm$npm node$node $os', async (dd) => {
         const expectedOutSnap = resolve(demoResultsRoot, ud.subject, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
         const logFileBase = join(tmpRootRun, ud.subject, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
+        const cwd = resolve(projectTestRootPath, '_data', 'dummy_projects')
 
-        const outFile = `${logFileBase}.out`
-        const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
-
-        const errFile = `${logFileBase}.err`
-        const stderr = createWriteStream(errFile) // not perfect, but works
-
-        const mockProcess = {
-          stdout,
-          stderr,
-          cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
-          execPath: process.execPath,
-          argv0: process.argv0,
-          argv: [
-            process.argv[0],
-            'dummy_process',
-            '-vvv',
-            '--output-reproducible',
-            '--validate',
-            // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-            '--spec-version', `${latestCdxSpecVersion}`,
-            // just use json with the latest most feature-rich version.
-            '--output-format', 'JSON',
-            // prevent file interaction in this synthetic scenario - they would not exist anyway
-            '--package-lock-only',
-            // case-specific args
-            ...ud.args,
-            '--',
-            // just some dummy project
-            join('with-lockfile', 'package.json')
-          ],
-          env: {
-            ...process.env,
-            CT_VERSION: `${dd.npm}.99.0`,
-            CT_SUBJECT: dd.subject,
-            CT_NPM: dd.npm,
-            CT_NODE: dd.node,
-            CT_OS: dd.os,
-            npm_execpath: npmLsReplacement.demoResults
-          }
-        }
+        const { res, outFile, errFile } = runCLI([
+          '-vvv',
+          '--output-reproducible',
+          '--validate',
+          // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
+          '--spec-version', `${latestCdxSpecVersion}`,
+          // just use json with the latest most feature-rich version.
+          '--output-format', 'JSON',
+          // prevent file interaction in this synthetic scenario - they would not exist anyway
+          '--package-lock-only',
+          // case-specific args
+          ...ud.args,
+          '--',
+          // just some dummy project
+          join('with-lockfile', 'package.json')
+        ], logFileBase, cwd, {
+          CT_VERSION: `${dd.npm}.99.0`,
+          CT_SUBJECT: dd.subject,
+          CT_NPM: dd.npm,
+          CT_NODE: dd.node,
+          CT_OS: dd.os,
+          npm_execpath: npmLsReplacement.demoResults
+        })
 
         try {
-          await cli.run(mockProcess)
-        } finally {
-          stderr.close()
-          closeSync(stdout.fd)
+          await res
+        } catch (err) {
+          process.stderr.write(readFileSync(errFile))
+          throw err
         }
 
         const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
 
-        if (!existsSync(expectedOutSnap) || UPDATE_SNAPSHOTS) {
+        if (UPDATE_SNAPSHOTS) {
           writeFileSync(expectedOutSnap, actualOutput, 'utf8')
         }
 
@@ -297,58 +243,43 @@ describe('cli.run()', () => {
     mkdirSync(join(tmpRoot, 'suppressed-error-on-non-zero-exit'))
     const expectedOutSnap = resolve(demoResultsRoot, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
     const logFileBase = join(tmpRoot, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
+    const cwd = resolve(projectTestRootPath, '_data', 'dummy_projects')
 
     const expectedExitCode = 1 + Math.floor(254 * Math.random())
 
-    const outFile = `${logFileBase}.out`
-    const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
-
-    const errFile = `${logFileBase}.err`
-    const stderr = createWriteStream(errFile) // not perfect, but works
-
-    const mockProcess = {
-      stdout,
-      stderr,
-      cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
-      execPath: process.execPath,
-      argv0: process.argv0,
-      argv: [
-        process.argv[0],
-        'dummy_process',
-        '-vvv',
-        '--ignore-npm-errors',
-        '--output-reproducible',
-        // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-        '--spec-version', `${latestCdxSpecVersion}`,
-        '--output-format', 'JSON',
-        // prevent file interaction in this synthetic scenario - they would not exist anyway
-        '--package-lock-only',
-        '--',
-        join('with-lockfile', 'package.json')
-      ],
-      env: {
-        ...process.env,
-        CT_VERSION: `${dd.npm}.99.0`,
-        // non-zero exit code
-        CT_EXIT_CODE: expectedExitCode,
-        CT_SUBJECT: dd.subject,
-        CT_NPM: dd.npm,
-        CT_NODE: dd.node,
-        CT_OS: dd.os,
-        npm_execpath: npmLsReplacement.demoResults
-      }
-    }
+    const { res, outFile, errFile } = runCLI([
+      'dummy_process',
+      '-vvv',
+      '--ignore-npm-errors',
+      '--output-reproducible',
+      // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
+      '--spec-version', `${latestCdxSpecVersion}`,
+      '--output-format', 'JSON',
+      // prevent file interaction in this synthetic scenario - they would not exist anyway
+      '--package-lock-only',
+      '--',
+      join('with-lockfile', 'package.json')
+    ], logFileBase, cwd, {
+      CT_VERSION: `${dd.npm}.99.0`,
+      // non-zero exit code
+      CT_EXIT_CODE: expectedExitCode,
+      CT_SUBJECT: dd.subject,
+      CT_NPM: dd.npm,
+      CT_NODE: dd.node,
+      CT_OS: dd.os,
+      npm_execpath: npmLsReplacement.demoResults
+    })
 
     try {
-      await cli.run(mockProcess)
-    } finally {
-      stderr.close()
-      closeSync(stdout.fd)
+      await res
+    } catch (err) {
+      process.stderr.write(readFileSync(errFile))
+      throw err
     }
 
     const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
 
-    if (!existsSync(expectedOutSnap) || UPDATE_SNAPSHOTS) {
+    if (UPDATE_SNAPSHOTS) {
       writeFileSync(expectedOutSnap, actualOutput, 'utf8')
     }
 
@@ -389,39 +320,23 @@ describe('cli.run()', () => {
       // endregion
     ])('%s', async (purpose, npmVersion, cdxArgs, expectedArgs) => {
       const logFileBase = join(tmpRootRun, purpose.replace(/\W/g, '_'))
+      const cwd = resolve(projectTestRootPath, '_data', 'dummy_projects')
 
-      const outFile = `${logFileBase}.out`
-      const stdout = { fd: openSync(outFile, 'w') } // not perfect, but works
-
-      const errFile = `${logFileBase}.err`
-      const stderr = createWriteStream(errFile) // not perfect, but works
-
-      const mockProcess = {
-        stdout,
-        stderr,
-        cwd: () => resolve(__dirname, '..', '..', '_data', 'dummy_projects'),
-        execPath: process.execPath,
-        argv0: process.argv0,
-        argv: [
-          process.argv[0],
-          'dummy_process',
-          ...cdxArgs,
-          '--',
-          join('with-lockfile', 'package.json')
-        ],
-        env: {
-          ...process.env,
-          CT_VERSION: npmVersion,
-          CT_EXPECTED_ARGS: expectedArgs.join(' '),
-          npm_execpath: npmLsReplacement.checkArgs
-        }
-      }
+      const { res, errFile } = runCLI([
+        ...cdxArgs,
+        '--',
+        join('with-lockfile', 'package.json')
+      ], logFileBase, cwd, {
+        CT_VERSION: npmVersion,
+        CT_EXPECTED_ARGS: expectedArgs.join(' '),
+        npm_execpath: npmLsReplacement.checkArgs
+      })
 
       try {
-        await cli.run(mockProcess)
-      } finally {
-        stderr.close()
-        closeSync(stdout.fd)
+        await res
+      } catch (err) {
+        process.stderr.write(readFileSync(errFile))
+        throw err
       }
     }, cliRunTestTimeout)
   })
