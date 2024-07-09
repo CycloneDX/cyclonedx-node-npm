@@ -38,7 +38,7 @@ const demoRootPath = path.resolve(projectRootPath, 'demo');
     path.join(demoRootPath, 'package-integrity', 'project'),
     path.join(demoRootPath, 'package-with-build-id', 'project')
     /* endregion demos */
-  ]
+  ].filter(i => i !== undefined)
 
   console.warn(`
   WILL SETUP TEST BEDS
