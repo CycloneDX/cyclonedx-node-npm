@@ -4,7 +4,7 @@
     <tools>
       <tool>
         <name>npm</name>
-        <version>9.4.2</version>
+        <version>npmVersion-testing</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>

@@ -7,7 +7,7 @@
     "tools": [
       {
         "name": "npm",
-        "version": "9.4.2"
+        "version": "npmVersion-testing"
       },
       {
         "vendor": "@cyclonedx",
