@@ -71,6 +71,13 @@ function makeReproducible (format, data) {
 function makeJsonReproducible (json) {
   return json
     .replace(
+      new RegExp(
+        '        "name": "npm",\n' +
+        '        "version": ".+?"'
+      ),
+      '        "name": "npm",\n' +
+      '        "version": "npmVersion-testing"'
+    ).replace(
       // replace metadata.tools.version
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "cyclonedx-npm",\n' +
@@ -101,6 +108,14 @@ function makeXmlReproducible (xml) {
   return xml
     .replace(
       // replace metadata.tools.version
+      new RegExp(
+        '        <name>npm</name>\n' +
+        '        <version>.+?</version>'
+      ),
+      '        <name>npm</name>\n' +
+      '        <version>npmVersion-testing</version>'
+    ).replace(
+      // replace metadata.tools.version
       '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>cyclonedx-npm</name>\n' +
       `        <version>${thisVersion}</version>`,
@@ -117,6 +132,13 @@ function makeXmlReproducible (xml) {
       '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>cyclonedx-library</name>\n' +
       '        <version>libVersion-testing</version>'
+    ).replace(
+      new RegExp(
+        '         <name>npm</name>\n' +
+        '        <version>.+?</version>'
+      ),
+      '         <name>npm</name>\n' +
+      '        <version>npmVersion-testing</version>'
     )
 }
 
