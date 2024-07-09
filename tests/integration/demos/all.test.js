@@ -32,7 +32,7 @@ const demoRootPath = resolve(projectRootPath, 'demo')
 const cliWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
 
 describe('integration.demos', () => {
-  const UPDATE_SNAPSHOTS = true // !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
+  const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
   const cliRunTestTimeout = 15000
 
   const tmpRoot = mkdtempSync(join(projectTestRootPath, '_log', 'CDX-IT-Demos-CLI.run.'))
