@@ -13,4 +13,4 @@ Each project demonstrates an individual use case:
 
 Each dir contains of a `project` folder that holds the npm package
 and a `example-results` folder that holds generated boms.
-Bom generation is done by [`gen-boms.sh`](gen-boms.sh)
+Bom generation is done during test runs.
