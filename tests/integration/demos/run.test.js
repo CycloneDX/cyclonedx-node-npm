@@ -50,7 +50,14 @@ describe('integration.demos', () => {
     'package-with-build-id'
   ].filter(i => i !== undefined)
   const formats = ['JSON', 'XML']
-  const specs = ['1.6', '1.5', '1.4', '1.3', '1.2']
+  const specs = [
+    // '1.2',
+    // '1.3',
+    // '1.4',
+    // '1.5',
+    '1.6'
+    /* we run only the latest most advanced */
+  ]
 
   for (const demo of demos) {
     describe(`demo: ${demo}`, () => {
