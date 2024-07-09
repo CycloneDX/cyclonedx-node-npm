@@ -23,7 +23,7 @@ const { mkdtempSync, writeFileSync, readFileSync } = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
 
-const { makeReproducible } = require('../../_helper')
+const { makeReproducible, getNpmVersion } = require('../../_helper')
 
 const projectRootPath = join(__dirname, '..', '..', '..')
 const projectTestRootPath = join(projectRootPath, 'tests')
@@ -43,10 +43,12 @@ describe('integration.demos', () => {
     'dev-dependencies',
     // 'juice-shop',
     'local-dependencies',
-    'local-workspaces',
+    getNpmVersion()[0] >= 7
+      ? 'local-workspaces'
+      : undefined,
     'package-integrity',
     'package-with-build-id'
-  ]
+  ].filter(i => i !== undefined)
   const formats = ['JSON', 'XML']
   const specs = ['1.6', '1.5', '1.4', '1.3', '1.2']
 

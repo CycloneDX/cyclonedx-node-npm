@@ -22,6 +22,7 @@ const { createReadStream } = require('fs')
 const MurmurHash3 = require('imurmurhash')
 
 const { version: thisVersion } = require('../../package.json')
+const { spawnSync } = require('child_process')
 
 /**
  * @type {Map<string, Promise<string>>}
@@ -119,7 +120,19 @@ function makeXmlReproducible (xml) {
     )
 }
 
+/**
+ * @return {number[]}
+ */
+function getNpmVersion () {
+  return spawnSync('npm', ['--version'], {
+    stdio: ['ignore', 'pipe', 'ignore'],
+    encoding: 'utf8',
+    shell: process.platform.startsWith('win')
+  }).stdout.split('.').map(Number)
+}
+
 module.exports = {
   hashFile,
-  makeReproducible
+  makeReproducible,
+  getNpmVersion
 }
