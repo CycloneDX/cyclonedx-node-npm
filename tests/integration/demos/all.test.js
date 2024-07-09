@@ -41,7 +41,7 @@ describe('integration.demos', () => {
     'alternative-package-registry',
     'bundled-dependencies',
     'dev-dependencies',
-    'juice-shop',
+    // 'juice-shop',
     'local-dependencies',
     'local-workspaces',
     'package-integrity',

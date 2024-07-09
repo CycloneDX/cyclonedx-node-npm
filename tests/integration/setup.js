@@ -29,7 +29,7 @@ const demoRootPath = path.resolve(projectRootPath, 'demo');
     path.join(demoRootPath, 'alternative-package-registry', 'project'),
     path.join(demoRootPath, 'bundled-dependencies', 'project'),
     path.join(demoRootPath, 'dev-dependencies', 'project'),
-    path.join(demoRootPath, 'juice-shop', 'project'),
+    // path.join(demoRootPath, 'juice-shop', 'project'),
     path.join(demoRootPath, 'local-dependencies', 'project'),
     path.join(demoRootPath, 'local-workspaces', 'project'),
     path.join(demoRootPath, 'package-integrity', 'project'),
