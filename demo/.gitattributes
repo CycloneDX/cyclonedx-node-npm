@@ -2,3 +2,7 @@
 
 **/results/**             linguist-generated
 **/example-results/**     linguist-generated
+
+# treat as binary, so line endings stay untouched
+*/results/*.json  binary diff=json
+*/results/*.xml   binary diff=xml

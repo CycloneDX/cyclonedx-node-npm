@@ -25,20 +25,25 @@ const projectRootPath = path.resolve(__dirname, '..', '..')
 const demoRootPath = path.resolve(projectRootPath, 'demo');
 
 (function () {
-  const REQUIRES_INSTALL = [
-    /* region demos */
-    path.join(demoRootPath, 'alternative-package-registry', 'project'),
-    path.join(demoRootPath, 'bundled-dependencies', 'project'),
-    path.join(demoRootPath, 'dev-dependencies', 'project'),
-    // path.join(demoRootPath, 'juice-shop', 'project'),
-    path.join(demoRootPath, 'local-dependencies', 'project'),
-    getNpmVersion()[0] >= 7
-      ? path.join(demoRootPath, 'local-workspaces', 'project')
-      : undefined,
-    path.join(demoRootPath, 'package-integrity', 'project'),
-    path.join(demoRootPath, 'package-with-build-id', 'project')
-    /* endregion demos */
-  ].filter(i => i !== undefined)
+  const REQUIRES_INSTALL = []
+
+  const npmVersion = getNpmVersion()
+
+  /* region demos */
+
+  if (npmVersion[0] >= 8) {
+    REQUIRES_INSTALL.push(
+      path.join(demoRootPath, 'alternative-package-registry', 'project'),
+      path.join(demoRootPath, 'bundled-dependencies', 'project'),
+      path.join(demoRootPath, 'dev-dependencies', 'project'),
+      // path.join(demoRootPath, 'juice-shop', 'project'),
+      path.join(demoRootPath, 'local-dependencies', 'project'),
+      path.join(demoRootPath, 'local-workspaces', 'project'),
+      path.join(demoRootPath, 'package-integrity', 'project'),
+      path.join(demoRootPath, 'package-with-build-id', 'project')
+    )
+  }
+  /* endregion demos */
 
   console.warn(`
   WILL SETUP TEST BEDS

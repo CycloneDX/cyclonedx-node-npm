@@ -32,6 +32,8 @@ const demoRootPath = resolve(projectRootPath, 'demo')
 const cliWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
 
 describe('integration.demos', () => {
+  const skipAllTests = getNpmVersion()[0] < 8
+
   const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
   const cliRunTestTimeout = 15000
 
@@ -43,12 +45,10 @@ describe('integration.demos', () => {
     'dev-dependencies',
     // 'juice-shop',
     'local-dependencies',
-    getNpmVersion()[0] >= 7
-      ? 'local-workspaces'
-      : undefined,
+    'local-workspaces',
     'package-integrity',
     'package-with-build-id'
-  ].filter(i => i !== undefined)
+  ]
   const formats = ['JSON', 'XML']
   const specs = [
     // '1.2',
@@ -62,16 +62,19 @@ describe('integration.demos', () => {
   for (const demo of demos) {
     describe(`demo: ${demo}`, () => {
       const projectRootPath = join(demoRootPath, demo, 'project')
-      const resBareDir = join(demoRootPath, demo, 'example-results', 'bare')
-      const resFlatDir = join(demoRootPath, demo, 'example-results', 'flat')
+      const resBareDir = join(demoRootPath, demo, 'results', 'bare')
+      const resFlatDir = join(demoRootPath, demo, 'results', 'flat')
 
       for (const format of formats) {
         describe(`format: ${format}`, () => {
           for (const spec of specs) {
             describe(`spec: ${spec}`, () => {
-              const resFileName = `bom.${spec}.${format.toLowerCase()}`
+              const resFileName = `bom.${spec}.${format.toLowerCase()}`;
 
-              test('bare', () => {
+              (skipAllTests
+                ? test.skip
+                : test
+              )('bare', () => {
                 const expectedFile = join(resBareDir, resFileName)
                 const outFile = join(tmpRoot, `${demo}_bare_${resFileName}`)
                 const res = spawnSync(
@@ -106,9 +109,12 @@ describe('integration.demos', () => {
                   readFileSync(expectedFile, 'utf8'),
                   `${outFile} should equal ${expectedFile}`
                 )
-              }, cliRunTestTimeout)
+              }, cliRunTestTimeout);
 
-              test('flat', () => {
+              (skipAllTests
+                ? test.skip
+                : test
+              )('flat', () => {
                 const expectedFile = join(resFlatDir, resFileName)
                 const outFile = join(tmpRoot, `${demo}_flat_${resFileName}`)
                 const res = spawnSync(
