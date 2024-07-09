@@ -1,3 +1,8 @@
 {
-  "private": true
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CycloneDX/cyclonedx-node-npm.git",
+    "directory": "tests/_data/dummy_projects/with-lockfile"
+  }
 }
