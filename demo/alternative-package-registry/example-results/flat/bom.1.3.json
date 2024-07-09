@@ -12,12 +12,12 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.8.0"
+        "version": "libVersion-testing"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.18.0"
+        "version": "thisVersion-testing"
       }
     ],
     "component": {
