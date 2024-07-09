@@ -35,7 +35,7 @@ describe('integration.demos', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
   const cliRunTestTimeout = 15000
 
-  const tmpRoot = mkdtempSync(join(projectTestRootPath, '_log', 'CDX-IT-Demos-CLI.run.'))
+  const tmpRoot = mkdtempSync(join(projectTestRootPath, '_tmp', 'CDX-IT-Demos-CLI.run.'))
 
   const demos = [
     'alternative-package-registry',
