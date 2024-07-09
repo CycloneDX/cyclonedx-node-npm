@@ -3,5 +3,10 @@
   "description": "demo: with no/empty name",
   "private": true,
   "version": "0.0.0",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "ssh://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/local-dependencies/project/packages/my-noname"
+  }
 }

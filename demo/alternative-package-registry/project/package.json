@@ -4,6 +4,11 @@
   "version": "0.0.0",
   "description": "demo: alternative-package-registry -- showcase how alternative package registries affect the result",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/alternative-package-registry/project"
+  },
   "dependencies": {
     "@act/act": "npm:@jsr/act__act@0.1.3"
   }

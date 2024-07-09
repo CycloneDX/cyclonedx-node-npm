@@ -1,13 +1,13 @@
 {
-  "name": "my-local-c",
   "private": true,
+  "name": "my-local-c",
   "version": "0.23.42",
   "description": "demo: my-local-c",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
-    "directory": "demo/local-workspaces/project/workspaces/my-local"
+    "url": "git+ssh://git@gitlab.example.com/my-packages/demo-workspaces.git",
+    "directory": "workspaces/my-local"
   },
   "dependencies": {
     "my-local-b-off": "*",

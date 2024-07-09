@@ -4,6 +4,11 @@
   "private": true,
   "version": "0.0.0",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "github:CycloneDX/cyclonedx-node-npm",
+    "directory": "demo/local-dependencies/project"
+  },
   "dependencies": {
     "my-local-a": "file:packages/my-local-a",
     "my-noname": "file:packages/my-noname"

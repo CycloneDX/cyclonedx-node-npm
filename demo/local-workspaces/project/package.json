@@ -1,9 +1,10 @@
 {
+  "private": true,
   "name": "demo-workspaces",
   "description": "demo: demo-workspaces -- showcase how workspaces look like",
-  "private": true,
   "version": "0.0.0",
   "license": "Apache-2.0",
+  "repository": "git@gitlab.example.com:my-packages/demo-workspaces.git",
   "workspaces": [
     "workspaces/*"
   ],

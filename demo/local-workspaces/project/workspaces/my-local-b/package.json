@@ -1,7 +1,12 @@
 {
-  "name": "my-local-b-off",
   "private": true,
+  "name": "my-local-b-off",
   "version": "0.0.0",
   "description": "demo: my-local-b-off - a package with a different name than its dir",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.example.com/my-packages/demo-workspaces.git",
+    "directory": "workspaces/my-local-b"
+  }
 }
