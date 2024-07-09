@@ -93,6 +93,9 @@ jobs:
           - macos-13 # macos-latest has issues with node14
     timeout-minutes: 15
     steps:
+      - run: |
+          git config --global core.autocrlf false
+          git config --global core.eol lf
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
