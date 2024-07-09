@@ -34,6 +34,7 @@ const cli = require('../../../dist/cli')
 
 const { makeReproducible } = require('../../_helper')
 
+/* we run only the latest most advanced */
 const latestCdxSpecVersion = Spec.Version.v1dot6
 
 describe('integration.demos.cli.run()', () => {
