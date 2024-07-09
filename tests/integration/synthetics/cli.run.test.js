@@ -25,22 +25,22 @@ const { Spec } = require('@cyclonedx/cyclonedx-library')
 const { describe, expect, test } = require('@jest/globals')
 
 const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
-const { version: thisVersion } = require('../../../package.json')
 
 const projectRootPath = join(__dirname, '..', '..', '..')
 const projectTestRootPath = join(__dirname, '..', '..')
 
-const binWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
-
+const cliWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
 const cli = require('../../../dist/cli')
+
+const { makeReproducible } = require('../../_helper')
 
 const latestCdxSpecVersion = Spec.Version.v1dot6
 
-describe('cli.run()', () => {
+describe('integration.demos.cli.run()', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
   const cliRunTestTimeout = 15000
 
-  const tmpRoot = mkdtempSync(join(projectTestRootPath, '_log', 'CDX-IT-CLI.run.'))
+  const tmpRoot = mkdtempSync(join(projectTestRootPath, '_log', 'CDX-IT-Synthetic-CLI.run.'))
 
   const dummyProjectsRoot = resolve(projectTestRootPath, '_data', 'dummy_projects')
   const demoResultsRoot = resolve(projectTestRootPath, '_data', 'sbom_demo-results')
@@ -344,7 +344,7 @@ describe('cli.run()', () => {
   test.each(['JSON', 'XML'])('dogfooding %s', (format) => {
     const res = spawnSync(
       process.execPath,
-      [binWrapper, '--output-format', format, '--ignore-npm-errors'],
+      ['--', cliWrapper, '--output-format', format, '--ignore-npm-errors'],
       {
         cwd: projectRootPath,
         stdio: ['ignore', 'ignore', 'pipe'],
@@ -362,75 +362,3 @@ describe('cli.run()', () => {
     }
   }, cliRunTestTimeout)
 })
-
-/**
- * @param {string} format
- * @param {*} data
- * @returns {string}
- */
-function makeReproducible (format, data) {
-  switch (format.toLowerCase()) {
-    case 'xml':
-      return makeXmlReproducible(data)
-    case 'json':
-      return makeJsonReproducible(data)
-    default:
-      throw new RangeError(`unexpected format: ${format}`)
-  }
-}
-
-/**
- * @param {string} json
- * @returns {string}
- */
-function makeJsonReproducible (json) {
-  return json
-    .replace(
-      // replace metadata.tools.version
-      '        "vendor": "@cyclonedx",\n' +
-      '        "name": "cyclonedx-npm",\n' +
-      `        "version": ${JSON.stringify(thisVersion)},\n`,
-      '        "vendor": "@cyclonedx",\n' +
-      '        "name": "cyclonedx-npm",\n' +
-      '        "version": "thisVersion-testing",\n'
-    ).replace(
-      // replace metadata.tools.version
-      new RegExp(
-        '        "vendor": "@cyclonedx",\n' +
-        '        "name": "cyclonedx-library",\n' +
-        '        "version": ".+?",\n'
-      ),
-      '        "vendor": "@cyclonedx",\n' +
-      '        "name": "cyclonedx-library",\n' +
-      '        "version": "libVersion-testing",\n'
-    )
-}
-
-/**
- * @param {string} xml
- * @returns {string}
- *
- * eslint-disable-next-line no-unused-vars
- */
-function makeXmlReproducible (xml) {
-  return xml
-    .replace(
-      // replace metadata.tools.version
-      '        <vendor>@cyclonedx</vendor>\n' +
-      '        <name>cyclonedx-npm</name>\n' +
-      `        <version>${thisVersion}</version>`,
-      '        <vendor>@cyclonedx</vendor>\n' +
-      '        <name>cyclonedx-npm</name>\n' +
-      '        <version>thisVersion-testing</version>'
-    ).replace(
-      // replace metadata.tools.version
-      new RegExp(
-        '        <vendor>@cyclonedx</vendor>\n' +
-        '        <name>cyclonedx-library</name>\n' +
-        '        <version>.+?</version>'
-      ),
-      '        <vendor>@cyclonedx</vendor>\n' +
-      '        <name>cyclonedx-library</name>\n' +
-      '        <version>libVersion-testing</version>'
-    )
-}

@@ -94,7 +94,7 @@
     "prebuild": "node -r fs -e 'fs.rmSync(`dist`,{recursive:true,force:true})'",
     "build": "tsc -b ./tsconfig.json",
     "cs-fix": "eslint --fix .",
-    "setup-tests": "echo 'noting yet'",
+    "setup-tests": "node tests/integration/setup.js",
     "test": "run-p --aggregate-output -lc test:*",
     "test:jest": "jest",
     "test:standard": "eslint .",
@@ -106,5 +106,6 @@
     "suiteName": "jest tests",
     "outputDirectory": "reports/jest",
     "outputName": "tests.junit.xml"
-  }
+  },
+  "packageManager": "yarn@3.8.3+sha512.154080e749d50325f4df31bc341cd5ea2dc2c3ca9b2cfb8591c831ddefc8025084d9500223f61f4f73086f6d9faa746cbbf39bb988b41dfc042907687e8e7d7a"
 }

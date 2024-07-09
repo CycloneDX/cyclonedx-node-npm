@@ -21,17 +21,19 @@ const { createReadStream } = require('fs')
 
 const MurmurHash3 = require('imurmurhash')
 
+const { version: thisVersion } = require('../../package.json')
+
 /**
  * @type {Map<string, Promise<string>>}
  */
-const cache = new Map()
+const hfCache = new Map()
 
 /**
  * @param {string} filePath
  * @return {Promise<string>}
  */
 function hashFile (filePath) {
-  let p = cache.get(filePath)
+  let p = hfCache.get(filePath)
   if (p === undefined) {
     p = new Promise((resolve, reject) => {
       const hs = new MurmurHash3('')
@@ -40,11 +42,84 @@ function hashFile (filePath) {
       rs.once('end', () => resolve(hs.result()))
       rs.once('error', e => reject(e))
     })
-    cache.set(filePath, p)
+    hfCache.set(filePath, p)
   }
   return p
 }
 
+/**
+ * @param {string} format
+ * @param {*} data
+ * @returns {string}
+ */
+function makeReproducible (format, data) {
+  switch (format.toLowerCase()) {
+    case 'xml':
+      return makeXmlReproducible(data)
+    case 'json':
+      return makeJsonReproducible(data)
+    default:
+      throw new RangeError(`unexpected format: ${format}`)
+  }
+}
+
+/**
+ * @param {string} json
+ * @returns {string}
+ */
+function makeJsonReproducible (json) {
+  return json
+    .replace(
+      // replace metadata.tools.version
+      '        "vendor": "@cyclonedx",\n' +
+      '        "name": "cyclonedx-npm",\n' +
+      `        "version": ${JSON.stringify(thisVersion)}`,
+      '        "vendor": "@cyclonedx",\n' +
+      '        "name": "cyclonedx-npm",\n' +
+      '        "version": "thisVersion-testing"'
+    ).replace(
+      // replace metadata.tools.version
+      new RegExp(
+        '        "vendor": "@cyclonedx",\n' +
+        '        "name": "cyclonedx-library",\n' +
+        '        "version": ".+?"'
+      ),
+      '        "vendor": "@cyclonedx",\n' +
+      '        "name": "cyclonedx-library",\n' +
+      '        "version": "libVersion-testing"'
+    )
+}
+
+/**
+ * @param {string} xml
+ * @returns {string}
+ *
+ * eslint-disable-next-line no-unused-vars
+ */
+function makeXmlReproducible (xml) {
+  return xml
+    .replace(
+      // replace metadata.tools.version
+      '        <vendor>@cyclonedx</vendor>\n' +
+      '        <name>cyclonedx-npm</name>\n' +
+      `        <version>${thisVersion}</version>`,
+      '        <vendor>@cyclonedx</vendor>\n' +
+      '        <name>cyclonedx-npm</name>\n' +
+      '        <version>thisVersion-testing</version>'
+    ).replace(
+      // replace metadata.tools.version
+      new RegExp(
+        '        <vendor>@cyclonedx</vendor>\n' +
+        '        <name>cyclonedx-library</name>\n' +
+        '        <version>.+?</version>'
+      ),
+      '        <vendor>@cyclonedx</vendor>\n' +
+      '        <name>cyclonedx-library</name>\n' +
+      '        <version>libVersion-testing</version>'
+    )
+}
+
 module.exports = {
-  hashFile
+  hashFile,
+  makeReproducible
 }

@@ -134,6 +134,8 @@ jobs:
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
+      - name: setup-tests
+        run: npm run setup-tests
       - name: test
         run: >
           npm run test:jest -- 
