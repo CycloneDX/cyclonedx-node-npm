@@ -4,5 +4,5 @@
 **/example-results/**     linguist-generated
 
 # treat as binary, so line endings stay untouched
-*/results/*.json  binary diff=json
-*/results/*.xml   binary diff=xml
+*/results/*/*.json  binary -text diff=json
+*/results/*/*.xml   binary -text diff=xml
