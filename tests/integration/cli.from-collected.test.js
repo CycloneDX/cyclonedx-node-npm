@@ -24,20 +24,19 @@ const { mkdtempSync, mkdirSync, createWriteStream, openSync, writeFileSync, read
 const { Spec } = require('@cyclonedx/cyclonedx-library')
 const { describe, expect, test } = require('@jest/globals')
 
-const { index: indexNpmLsDemoData } = require('../../_data/npm-ls_demo-results')
+const { index: indexNpmLsDemoData } = require('../_data/npm-ls_demo-results')
+const cli = require('../../dist/cli')
+const { makeReproducible } = require('../_helper')
 
-const projectRootPath = join(__dirname, '..', '..', '..')
-const projectTestRootPath = join(__dirname, '..', '..')
+const projectRootPath = resolve(__dirname, '..', '..')
+const projectTestRootPath = resolve(__dirname, '..')
 
 const cliWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
-const cli = require('../../../dist/cli')
-
-const { makeReproducible } = require('../../_helper')
 
 /* we run only the latest most advanced */
 const latestCdxSpecVersion = Spec.Version.v1dot6
 
-describe('integration.demos.cli.run()', () => {
+describe('integration.cli.from-collected', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
   const cliRunTestTimeout = 15000
 

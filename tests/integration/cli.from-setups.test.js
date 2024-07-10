@@ -23,9 +23,10 @@ const { mkdtempSync, writeFileSync, readFileSync } = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
 const { Spec } = require('@cyclonedx/cyclonedx-library')
-const { makeReproducible, getNpmVersion } = require('../../_helper')
 
-const projectRootPath = resolve(__dirname, '..', '..', '..')
+const { makeReproducible, getNpmVersion } = require('../_helper')
+
+const projectRootPath = resolve(__dirname, '..', '..')
 const projectTestRootPath = join(projectRootPath, 'tests')
 const demoRootPath = join(projectRootPath, 'demo')
 
@@ -34,10 +35,10 @@ const cliWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
 /* we run only the latest most advanced */
 const latestCdxSpecVersion = Spec.Version.v1dot6
 
-describe('integration.demos', () => {
+describe('integration.cli.from-setups', () => {
   const skipAllTests = getNpmVersion()[0] < 8
 
-  const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
+  const UPDATE_SNAPSHOTS = 1 // !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
   const cliRunTestTimeout = 15000
 
   const tmpRoot = mkdtempSync(join(projectTestRootPath, '_tmp', 'CDX-IT-Demos-CLI.run.'))
@@ -73,9 +74,9 @@ describe('integration.demos', () => {
         '--output-format', format,
         '--output-reproducible',
         '--output-file', outFile,
-        '--validate',
-        join(demoRootPath, demo, 'project')
+        '--validate'
       ], {
+        cwd: join(demoRootPath, demo, 'project'),
         stdio: ['inherit', 'inherit', 'pipe'],
         encoding: 'utf8'
       }
