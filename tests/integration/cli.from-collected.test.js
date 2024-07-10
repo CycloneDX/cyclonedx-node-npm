@@ -40,7 +40,7 @@ describe('integration.cli.from-collected', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
   const cliRunTestTimeout = 15000
 
-  const tmpRoot = mkdtempSync(join(projectTestRootPath, '_tmp', 'CDX-IT-Synthetic-CLI.run.'))
+  const tmpRoot = mkdtempSync(join(projectTestRootPath, '_tmp', 'CDX-IT-cli.from-collected.'))
 
   const dummyProjectsRoot = resolve(projectTestRootPath, '_data', 'dummy_projects')
   const demoResultsRoot = resolve(projectTestRootPath, '_data', 'sbom_demo-results')
