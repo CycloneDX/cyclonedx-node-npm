@@ -26,8 +26,13 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/demo-workspaces@0.0.0?vcs_url=git%40gitlab.example.com%3Amy-packages/demo-workspaces.git</purl>
-      <externalReferences/>
+      <purl>pkg:npm/demo-workspaces@0.0.0?vcs_url=git%2Bssh%3A//git%40gitlab.example.com/my-packages/demo-workspaces.git</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>git+ssh://git@gitlab.example.com/my-packages/demo-workspaces.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+      </externalReferences>
       <properties>
         <property name="cdx:npm:package:path"/>
         <property name="cdx:npm:package:private">true</property>

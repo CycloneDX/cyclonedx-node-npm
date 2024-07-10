@@ -15,7 +15,7 @@ do
 
   rm -rf "$result_dir"
   mkdir -p "$result_dir"
-  # "$npm_execpath" --prefix "$project" install --ignore-scripts
+  "$npm_execpath" --prefix "$project" install --ignore-scripts
 
   for format in 'json' 'xml'
   do
