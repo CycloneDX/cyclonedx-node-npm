@@ -129,7 +129,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\ansi-regex"
+              "value": "node_modules/bundle-dependencies/node_modules/ansi-regex"
             }
           ]
         },
@@ -154,7 +154,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\builtin-modules"
+              "value": "node_modules/bundle-dependencies/node_modules/builtin-modules"
             }
           ]
         },
@@ -179,7 +179,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\camelcase"
+              "value": "node_modules/bundle-dependencies/node_modules/camelcase"
             }
           ]
         },
@@ -204,7 +204,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\cliui"
+              "value": "node_modules/bundle-dependencies/node_modules/cliui"
             }
           ]
         },
@@ -229,7 +229,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\code-point-at"
+              "value": "node_modules/bundle-dependencies/node_modules/code-point-at"
             }
           ]
         },
@@ -254,7 +254,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\decamelize"
+              "value": "node_modules/bundle-dependencies/node_modules/decamelize"
             }
           ]
         },
@@ -279,7 +279,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\error-ex"
+              "value": "node_modules/bundle-dependencies/node_modules/error-ex"
             }
           ]
         },
@@ -304,7 +304,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\escape-string-regexp"
+              "value": "node_modules/bundle-dependencies/node_modules/escape-string-regexp"
             }
           ]
         },
@@ -329,7 +329,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\find-up"
+              "value": "node_modules/bundle-dependencies/node_modules/find-up"
             }
           ]
         },
@@ -354,7 +354,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\graceful-fs"
+              "value": "node_modules/bundle-dependencies/node_modules/graceful-fs"
             }
           ]
         },
@@ -379,7 +379,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\hosted-git-info"
+              "value": "node_modules/bundle-dependencies/node_modules/hosted-git-info"
             }
           ]
         },
@@ -404,7 +404,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\invert-kv"
+              "value": "node_modules/bundle-dependencies/node_modules/invert-kv"
             }
           ]
         },
@@ -429,7 +429,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\is-arrayish"
+              "value": "node_modules/bundle-dependencies/node_modules/is-arrayish"
             }
           ]
         },
@@ -454,7 +454,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\is-builtin-module"
+              "value": "node_modules/bundle-dependencies/node_modules/is-builtin-module"
             }
           ]
         },
@@ -479,7 +479,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\is-fullwidth-code-point"
+              "value": "node_modules/bundle-dependencies/node_modules/is-fullwidth-code-point"
             }
           ]
         },
@@ -504,7 +504,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\is-utf8"
+              "value": "node_modules/bundle-dependencies/node_modules/is-utf8"
             }
           ]
         },
@@ -529,7 +529,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\lcid"
+              "value": "node_modules/bundle-dependencies/node_modules/lcid"
             }
           ]
         },
@@ -554,7 +554,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\load-json-file"
+              "value": "node_modules/bundle-dependencies/node_modules/load-json-file"
             }
           ]
         },
@@ -579,7 +579,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\lodash.assign"
+              "value": "node_modules/bundle-dependencies/node_modules/lodash.assign"
             }
           ]
         },
@@ -604,7 +604,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\lodash.keys"
+              "value": "node_modules/bundle-dependencies/node_modules/lodash.keys"
             }
           ]
         },
@@ -629,7 +629,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\lodash.rest"
+              "value": "node_modules/bundle-dependencies/node_modules/lodash.rest"
             }
           ]
         },
@@ -654,7 +654,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\normalize-package-data"
+              "value": "node_modules/bundle-dependencies/node_modules/normalize-package-data"
             }
           ]
         },
@@ -679,7 +679,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\number-is-nan"
+              "value": "node_modules/bundle-dependencies/node_modules/number-is-nan"
             }
           ]
         },
@@ -704,7 +704,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\object-assign"
+              "value": "node_modules/bundle-dependencies/node_modules/object-assign"
             }
           ]
         },
@@ -729,7 +729,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\os-locale"
+              "value": "node_modules/bundle-dependencies/node_modules/os-locale"
             }
           ]
         },
@@ -754,7 +754,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\parse-json"
+              "value": "node_modules/bundle-dependencies/node_modules/parse-json"
             }
           ]
         },
@@ -779,7 +779,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\path-exists"
+              "value": "node_modules/bundle-dependencies/node_modules/path-exists"
             }
           ]
         },
@@ -804,7 +804,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\path-type"
+              "value": "node_modules/bundle-dependencies/node_modules/path-type"
             }
           ]
         },
@@ -829,7 +829,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\pify"
+              "value": "node_modules/bundle-dependencies/node_modules/pify"
             }
           ]
         },
@@ -854,7 +854,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\pinkie-promise"
+              "value": "node_modules/bundle-dependencies/node_modules/pinkie-promise"
             }
           ]
         },
@@ -879,7 +879,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\pinkie"
+              "value": "node_modules/bundle-dependencies/node_modules/pinkie"
             }
           ]
         },
@@ -904,7 +904,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\pkg-conf"
+              "value": "node_modules/bundle-dependencies/node_modules/pkg-conf"
             }
           ]
         },
@@ -929,7 +929,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\read-pkg-up"
+              "value": "node_modules/bundle-dependencies/node_modules/read-pkg-up"
             }
           ]
         },
@@ -954,7 +954,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\read-pkg"
+              "value": "node_modules/bundle-dependencies/node_modules/read-pkg"
             }
           ]
         },
@@ -979,7 +979,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\require-main-filename"
+              "value": "node_modules/bundle-dependencies/node_modules/require-main-filename"
             }
           ]
         },
@@ -1004,7 +1004,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\semver"
+              "value": "node_modules/bundle-dependencies/node_modules/semver"
             }
           ]
         },
@@ -1029,7 +1029,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\spdx-correct"
+              "value": "node_modules/bundle-dependencies/node_modules/spdx-correct"
             }
           ]
         },
@@ -1054,7 +1054,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\spdx-exceptions"
+              "value": "node_modules/bundle-dependencies/node_modules/spdx-exceptions"
             }
           ]
         },
@@ -1077,7 +1077,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\spdx-expression-parse"
+              "value": "node_modules/bundle-dependencies/node_modules/spdx-expression-parse"
             }
           ]
         },
@@ -1102,7 +1102,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\spdx-license-ids"
+              "value": "node_modules/bundle-dependencies/node_modules/spdx-license-ids"
             }
           ]
         },
@@ -1127,7 +1127,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\string-width"
+              "value": "node_modules/bundle-dependencies/node_modules/string-width"
             }
           ]
         },
@@ -1152,7 +1152,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\strip-ansi"
+              "value": "node_modules/bundle-dependencies/node_modules/strip-ansi"
             }
           ]
         },
@@ -1177,7 +1177,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\strip-bom"
+              "value": "node_modules/bundle-dependencies/node_modules/strip-bom"
             }
           ]
         },
@@ -1202,7 +1202,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\symbol"
+              "value": "node_modules/bundle-dependencies/node_modules/symbol"
             }
           ]
         },
@@ -1227,7 +1227,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\validate-npm-package-license"
+              "value": "node_modules/bundle-dependencies/node_modules/validate-npm-package-license"
             }
           ]
         },
@@ -1252,7 +1252,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\window-size"
+              "value": "node_modules/bundle-dependencies/node_modules/window-size"
             }
           ]
         },
@@ -1277,7 +1277,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\wrap-ansi"
+              "value": "node_modules/bundle-dependencies/node_modules/wrap-ansi"
             }
           ]
         },
@@ -1302,7 +1302,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\y18n"
+              "value": "node_modules/bundle-dependencies/node_modules/y18n"
             }
           ]
         },
@@ -1327,7 +1327,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\yargs-parser"
+              "value": "node_modules/bundle-dependencies/node_modules/yargs-parser"
             }
           ]
         },
@@ -1352,7 +1352,7 @@
             },
             {
               "name": "cdx:npm:package:path",
-              "value": "node_modules/bundle-dependencies\\node_modules\\yargs"
+              "value": "node_modules/bundle-dependencies/node_modules/yargs"
             }
           ]
         }

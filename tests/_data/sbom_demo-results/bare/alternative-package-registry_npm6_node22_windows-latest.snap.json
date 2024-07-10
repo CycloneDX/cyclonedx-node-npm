@@ -111,7 +111,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@act\\act"
+          "value": "node_modules/@act/act"
         }
       ]
     }

@@ -123,7 +123,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@babel\\helper-string-parser"
+          "value": "node_modules/@babel/helper-string-parser"
         }
       ]
     },
@@ -150,7 +150,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@babel\\helper-validator-identifier"
+          "value": "node_modules/@babel/helper-validator-identifier"
         }
       ]
     },
@@ -177,7 +177,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@babel\\parser"
+          "value": "node_modules/@babel/parser"
         }
       ]
     },
@@ -204,7 +204,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@babel\\runtime"
+          "value": "node_modules/@babel/runtime"
         }
       ]
     },
@@ -231,7 +231,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@babel\\types"
+          "value": "node_modules/@babel/types"
         }
       ]
     },
@@ -258,7 +258,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@colors\\colors"
+          "value": "node_modules/@colors/colors"
         }
       ]
     },
@@ -285,7 +285,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@dabh\\diagnostics"
+          "value": "node_modules/@dabh/diagnostics"
         }
       ]
     },
@@ -313,7 +313,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@gar\\promisify"
+          "value": "node_modules/@gar/promisify"
         }
       ]
     },
@@ -340,7 +340,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp"
+          "value": "node_modules/@mapbox/node-pre-gyp"
         }
       ]
     },
@@ -366,7 +366,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp\\node_modules\\ansi-regex"
+          "value": "node_modules/@mapbox/node-pre-gyp/node_modules/ansi-regex"
         }
       ]
     },
@@ -392,7 +392,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp\\node_modules\\are-we-there-yet"
+          "value": "node_modules/@mapbox/node-pre-gyp/node_modules/are-we-there-yet"
         }
       ]
     },
@@ -418,7 +418,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp\\node_modules\\detect-libc"
+          "value": "node_modules/@mapbox/node-pre-gyp/node_modules/detect-libc"
         }
       ]
     },
@@ -444,7 +444,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp\\node_modules\\gauge"
+          "value": "node_modules/@mapbox/node-pre-gyp/node_modules/gauge"
         }
       ]
     },
@@ -470,7 +470,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp\\node_modules\\is-fullwidth-code-point"
+          "value": "node_modules/@mapbox/node-pre-gyp/node_modules/is-fullwidth-code-point"
         }
       ]
     },
@@ -496,7 +496,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp\\node_modules\\make-dir"
+          "value": "node_modules/@mapbox/node-pre-gyp/node_modules/make-dir"
         }
       ]
     },
@@ -522,7 +522,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp\\node_modules\\make-dir\\node_modules\\semver"
+          "value": "node_modules/@mapbox/node-pre-gyp/node_modules/make-dir/node_modules/semver"
         }
       ]
     },
@@ -548,7 +548,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp\\node_modules\\nopt"
+          "value": "node_modules/@mapbox/node-pre-gyp/node_modules/nopt"
         }
       ]
     },
@@ -574,7 +574,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp\\node_modules\\npmlog"
+          "value": "node_modules/@mapbox/node-pre-gyp/node_modules/npmlog"
         }
       ]
     },
@@ -600,7 +600,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp\\node_modules\\readable-stream"
+          "value": "node_modules/@mapbox/node-pre-gyp/node_modules/readable-stream"
         }
       ]
     },
@@ -626,7 +626,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp\\node_modules\\string-width"
+          "value": "node_modules/@mapbox/node-pre-gyp/node_modules/string-width"
         }
       ]
     },
@@ -652,7 +652,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox\\node-pre-gyp\\node_modules\\strip-ansi"
+          "value": "node_modules/@mapbox/node-pre-gyp/node_modules/strip-ansi"
         }
       ]
     },
@@ -679,7 +679,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\core-loader"
+          "value": "node_modules/@nlpjs/core-loader"
         }
       ]
     },
@@ -706,7 +706,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\core"
+          "value": "node_modules/@nlpjs/core"
         }
       ]
     },
@@ -733,7 +733,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\evaluator"
+          "value": "node_modules/@nlpjs/evaluator"
         }
       ]
     },
@@ -760,7 +760,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-all"
+          "value": "node_modules/@nlpjs/lang-all"
         }
       ]
     },
@@ -787,7 +787,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-ar"
+          "value": "node_modules/@nlpjs/lang-ar"
         }
       ]
     },
@@ -814,7 +814,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-bn"
+          "value": "node_modules/@nlpjs/lang-bn"
         }
       ]
     },
@@ -841,7 +841,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-ca"
+          "value": "node_modules/@nlpjs/lang-ca"
         }
       ]
     },
@@ -868,7 +868,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-cs"
+          "value": "node_modules/@nlpjs/lang-cs"
         }
       ]
     },
@@ -895,7 +895,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-da"
+          "value": "node_modules/@nlpjs/lang-da"
         }
       ]
     },
@@ -922,7 +922,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-de"
+          "value": "node_modules/@nlpjs/lang-de"
         }
       ]
     },
@@ -949,7 +949,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-el"
+          "value": "node_modules/@nlpjs/lang-el"
         }
       ]
     },
@@ -976,7 +976,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-en-min"
+          "value": "node_modules/@nlpjs/lang-en-min"
         }
       ]
     },
@@ -1003,7 +1003,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-en"
+          "value": "node_modules/@nlpjs/lang-en"
         }
       ]
     },
@@ -1030,7 +1030,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-es"
+          "value": "node_modules/@nlpjs/lang-es"
         }
       ]
     },
@@ -1057,7 +1057,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-eu"
+          "value": "node_modules/@nlpjs/lang-eu"
         }
       ]
     },
@@ -1084,7 +1084,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-fa"
+          "value": "node_modules/@nlpjs/lang-fa"
         }
       ]
     },
@@ -1111,7 +1111,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-fi"
+          "value": "node_modules/@nlpjs/lang-fi"
         }
       ]
     },
@@ -1138,7 +1138,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-fr"
+          "value": "node_modules/@nlpjs/lang-fr"
         }
       ]
     },
@@ -1165,7 +1165,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-ga"
+          "value": "node_modules/@nlpjs/lang-ga"
         }
       ]
     },
@@ -1192,7 +1192,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-gl"
+          "value": "node_modules/@nlpjs/lang-gl"
         }
       ]
     },
@@ -1219,7 +1219,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-hi"
+          "value": "node_modules/@nlpjs/lang-hi"
         }
       ]
     },
@@ -1246,7 +1246,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-hu"
+          "value": "node_modules/@nlpjs/lang-hu"
         }
       ]
     },
@@ -1273,7 +1273,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-hy"
+          "value": "node_modules/@nlpjs/lang-hy"
         }
       ]
     },
@@ -1300,7 +1300,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-id"
+          "value": "node_modules/@nlpjs/lang-id"
         }
       ]
     },
@@ -1327,7 +1327,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-it"
+          "value": "node_modules/@nlpjs/lang-it"
         }
       ]
     },
@@ -1354,7 +1354,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-ja"
+          "value": "node_modules/@nlpjs/lang-ja"
         }
       ]
     },
@@ -1381,7 +1381,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-ko"
+          "value": "node_modules/@nlpjs/lang-ko"
         }
       ]
     },
@@ -1408,7 +1408,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-lt"
+          "value": "node_modules/@nlpjs/lang-lt"
         }
       ]
     },
@@ -1435,7 +1435,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-ms"
+          "value": "node_modules/@nlpjs/lang-ms"
         }
       ]
     },
@@ -1462,7 +1462,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-ne"
+          "value": "node_modules/@nlpjs/lang-ne"
         }
       ]
     },
@@ -1489,7 +1489,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-nl"
+          "value": "node_modules/@nlpjs/lang-nl"
         }
       ]
     },
@@ -1516,7 +1516,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-no"
+          "value": "node_modules/@nlpjs/lang-no"
         }
       ]
     },
@@ -1543,7 +1543,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-pl"
+          "value": "node_modules/@nlpjs/lang-pl"
         }
       ]
     },
@@ -1570,7 +1570,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-pt"
+          "value": "node_modules/@nlpjs/lang-pt"
         }
       ]
     },
@@ -1597,7 +1597,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-ro"
+          "value": "node_modules/@nlpjs/lang-ro"
         }
       ]
     },
@@ -1624,7 +1624,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-ru"
+          "value": "node_modules/@nlpjs/lang-ru"
         }
       ]
     },
@@ -1651,7 +1651,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-sl"
+          "value": "node_modules/@nlpjs/lang-sl"
         }
       ]
     },
@@ -1678,7 +1678,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-sr"
+          "value": "node_modules/@nlpjs/lang-sr"
         }
       ]
     },
@@ -1705,7 +1705,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-sv"
+          "value": "node_modules/@nlpjs/lang-sv"
         }
       ]
     },
@@ -1732,7 +1732,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-ta"
+          "value": "node_modules/@nlpjs/lang-ta"
         }
       ]
     },
@@ -1759,7 +1759,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-th"
+          "value": "node_modules/@nlpjs/lang-th"
         }
       ]
     },
@@ -1786,7 +1786,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-tl"
+          "value": "node_modules/@nlpjs/lang-tl"
         }
       ]
     },
@@ -1813,7 +1813,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-tr"
+          "value": "node_modules/@nlpjs/lang-tr"
         }
       ]
     },
@@ -1840,7 +1840,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-uk"
+          "value": "node_modules/@nlpjs/lang-uk"
         }
       ]
     },
@@ -1867,7 +1867,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\lang-zh"
+          "value": "node_modules/@nlpjs/lang-zh"
         }
       ]
     },
@@ -1894,7 +1894,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\language-min"
+          "value": "node_modules/@nlpjs/language-min"
         }
       ]
     },
@@ -1921,7 +1921,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\language"
+          "value": "node_modules/@nlpjs/language"
         }
       ]
     },
@@ -1948,7 +1948,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\ner"
+          "value": "node_modules/@nlpjs/ner"
         }
       ]
     },
@@ -1975,7 +1975,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\neural"
+          "value": "node_modules/@nlpjs/neural"
         }
       ]
     },
@@ -2002,7 +2002,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\nlg"
+          "value": "node_modules/@nlpjs/nlg"
         }
       ]
     },
@@ -2029,7 +2029,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\nlp"
+          "value": "node_modules/@nlpjs/nlp"
         }
       ]
     },
@@ -2056,7 +2056,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\nlu"
+          "value": "node_modules/@nlpjs/nlu"
         }
       ]
     },
@@ -2083,7 +2083,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\request"
+          "value": "node_modules/@nlpjs/request"
         }
       ]
     },
@@ -2110,7 +2110,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\sentiment"
+          "value": "node_modules/@nlpjs/sentiment"
         }
       ]
     },
@@ -2137,7 +2137,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\similarity"
+          "value": "node_modules/@nlpjs/similarity"
         }
       ]
     },
@@ -2164,7 +2164,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@nlpjs\\slot"
+          "value": "node_modules/@nlpjs/slot"
         }
       ]
     },
@@ -2192,7 +2192,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@npmcli\\fs"
+          "value": "node_modules/@npmcli/fs"
         }
       ]
     },
@@ -2220,7 +2220,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@npmcli\\move-file"
+          "value": "node_modules/@npmcli/move-file"
         }
       ]
     },
@@ -2247,7 +2247,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@npmcli\\move-file\\node_modules\\mkdirp"
+          "value": "node_modules/@npmcli/move-file/node_modules/mkdirp"
         }
       ]
     },
@@ -2274,7 +2274,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@otplib\\core"
+          "value": "node_modules/@otplib/core"
         }
       ]
     },
@@ -2301,7 +2301,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@otplib\\plugin-crypto"
+          "value": "node_modules/@otplib/plugin-crypto"
         }
       ]
     },
@@ -2328,7 +2328,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@otplib\\plugin-thirty-two"
+          "value": "node_modules/@otplib/plugin-thirty-two"
         }
       ]
     },
@@ -2355,7 +2355,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@otplib\\preset-default"
+          "value": "node_modules/@otplib/preset-default"
         }
       ]
     },
@@ -2382,7 +2382,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@otplib\\preset-v11"
+          "value": "node_modules/@otplib/preset-v11"
         }
       ]
     },
@@ -2409,7 +2409,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@sindresorhus\\is"
+          "value": "node_modules/@sindresorhus/is"
         }
       ]
     },
@@ -2436,7 +2436,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@swc\\helpers"
+          "value": "node_modules/@swc/helpers"
         }
       ]
     },
@@ -2463,7 +2463,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@tokenizer\\token"
+          "value": "node_modules/@tokenizer/token"
         }
       ]
     },
@@ -2490,7 +2490,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@tootallnate\\once"
+          "value": "node_modules/@tootallnate/once"
         }
       ]
     },
@@ -2517,7 +2517,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\component-emitter"
+          "value": "node_modules/@types/component-emitter"
         }
       ]
     },
@@ -2544,7 +2544,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\cookie"
+          "value": "node_modules/@types/cookie"
         }
       ]
     },
@@ -2571,7 +2571,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\cors"
+          "value": "node_modules/@types/cors"
         }
       ]
     },
@@ -2598,7 +2598,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\debug"
+          "value": "node_modules/@types/debug"
         }
       ]
     },
@@ -2625,7 +2625,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\ms"
+          "value": "node_modules/@types/ms"
         }
       ]
     },
@@ -2652,7 +2652,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\node"
+          "value": "node_modules/@types/node"
         }
       ]
     },
@@ -2679,7 +2679,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\strip-bom"
+          "value": "node_modules/@types/strip-bom"
         }
       ]
     },
@@ -2706,7 +2706,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\strip-json-comments"
+          "value": "node_modules/@types/strip-json-comments"
         }
       ]
     },
@@ -2733,7 +2733,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\triple-beam"
+          "value": "node_modules/@types/triple-beam"
         }
       ]
     },
@@ -2760,7 +2760,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\validator"
+          "value": "node_modules/@types/validator"
         }
       ]
     },
@@ -2916,7 +2916,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/agent-base\\node_modules\\debug"
+          "value": "node_modules/agent-base/node_modules/debug"
         }
       ]
     },
@@ -2942,7 +2942,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/agent-base\\node_modules\\ms"
+          "value": "node_modules/agent-base/node_modules/ms"
         }
       ]
     },
@@ -3126,7 +3126,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/anymatch\\node_modules\\normalize-path"
+          "value": "node_modules/anymatch/node_modules/normalize-path"
         }
       ]
     },
@@ -3230,7 +3230,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/archive-type\\node_modules\\file-type"
+          "value": "node_modules/archive-type/node_modules/file-type"
         }
       ]
     },
@@ -3386,7 +3386,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/argparse\\node_modules\\sprintf-js"
+          "value": "node_modules/argparse/node_modules/sprintf-js"
         }
       ]
     },
@@ -4010,7 +4010,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/base\\node_modules\\define-property"
+          "value": "node_modules/base/node_modules/define-property"
         }
       ]
     },
@@ -4452,7 +4452,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/bower-config\\node_modules\\minimist"
+          "value": "node_modules/bower-config/node_modules/minimist"
         }
       ]
     },
@@ -4530,7 +4530,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/braces\\node_modules\\extend-shallow"
+          "value": "node_modules/braces/node_modules/extend-shallow"
         }
       ]
     },
@@ -4556,7 +4556,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/braces\\node_modules\\is-extendable"
+          "value": "node_modules/braces/node_modules/is-extendable"
         }
       ]
     },
@@ -4842,7 +4842,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/busboy\\node_modules\\isarray"
+          "value": "node_modules/busboy/node_modules/isarray"
         }
       ]
     },
@@ -4868,7 +4868,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/busboy\\node_modules\\readable-stream"
+          "value": "node_modules/busboy/node_modules/readable-stream"
         }
       ]
     },
@@ -4894,7 +4894,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/busboy\\node_modules\\string_decoder"
+          "value": "node_modules/busboy/node_modules/string_decoder"
         }
       ]
     },
@@ -5000,7 +5000,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/cacache\\node_modules\\mkdirp"
+          "value": "node_modules/cacache/node_modules/mkdirp"
         }
       ]
     },
@@ -5078,7 +5078,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/cacheable-request\\node_modules\\get-stream"
+          "value": "node_modules/cacheable-request/node_modules/get-stream"
         }
       ]
     },
@@ -5104,7 +5104,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/cacheable-request\\node_modules\\lowercase-keys"
+          "value": "node_modules/cacheable-request/node_modules/lowercase-keys"
         }
       ]
     },
@@ -5312,7 +5312,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/check-dependencies\\node_modules\\semver"
+          "value": "node_modules/check-dependencies/node_modules/semver"
         }
       ]
     },
@@ -5390,7 +5390,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/chokidar\\node_modules\\braces"
+          "value": "node_modules/chokidar/node_modules/braces"
         }
       ]
     },
@@ -5416,7 +5416,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/chokidar\\node_modules\\fill-range"
+          "value": "node_modules/chokidar/node_modules/fill-range"
         }
       ]
     },
@@ -5442,7 +5442,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/chokidar\\node_modules\\is-glob"
+          "value": "node_modules/chokidar/node_modules/is-glob"
         }
       ]
     },
@@ -5468,7 +5468,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/chokidar\\node_modules\\is-number"
+          "value": "node_modules/chokidar/node_modules/is-number"
         }
       ]
     },
@@ -5494,7 +5494,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/chokidar\\node_modules\\normalize-path"
+          "value": "node_modules/chokidar/node_modules/normalize-path"
         }
       ]
     },
@@ -5520,7 +5520,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/chokidar\\node_modules\\to-regex-range"
+          "value": "node_modules/chokidar/node_modules/to-regex-range"
         }
       ]
     },
@@ -5624,7 +5624,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/class-utils\\node_modules\\define-property"
+          "value": "node_modules/class-utils/node_modules/define-property"
         }
       ]
     },
@@ -5650,7 +5650,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/class-utils\\node_modules\\is-accessor-descriptor"
+          "value": "node_modules/class-utils/node_modules/is-accessor-descriptor"
         }
       ]
     },
@@ -5676,7 +5676,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/class-utils\\node_modules\\is-accessor-descriptor\\node_modules\\kind-of"
+          "value": "node_modules/class-utils/node_modules/is-accessor-descriptor/node_modules/kind-of"
         }
       ]
     },
@@ -5702,7 +5702,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/class-utils\\node_modules\\is-data-descriptor"
+          "value": "node_modules/class-utils/node_modules/is-data-descriptor"
         }
       ]
     },
@@ -5728,7 +5728,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/class-utils\\node_modules\\is-data-descriptor\\node_modules\\kind-of"
+          "value": "node_modules/class-utils/node_modules/is-data-descriptor/node_modules/kind-of"
         }
       ]
     },
@@ -5754,7 +5754,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/class-utils\\node_modules\\is-descriptor"
+          "value": "node_modules/class-utils/node_modules/is-descriptor"
         }
       ]
     },
@@ -5780,7 +5780,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/class-utils\\node_modules\\kind-of"
+          "value": "node_modules/class-utils/node_modules/kind-of"
         }
       ]
     },
@@ -5859,7 +5859,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/cliui\\node_modules\\ansi-regex"
+          "value": "node_modules/cliui/node_modules/ansi-regex"
         }
       ]
     },
@@ -5885,7 +5885,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/cliui\\node_modules\\emoji-regex"
+          "value": "node_modules/cliui/node_modules/emoji-regex"
         }
       ]
     },
@@ -5911,7 +5911,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/cliui\\node_modules\\is-fullwidth-code-point"
+          "value": "node_modules/cliui/node_modules/is-fullwidth-code-point"
         }
       ]
     },
@@ -5937,7 +5937,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/cliui\\node_modules\\string-width"
+          "value": "node_modules/cliui/node_modules/string-width"
         }
       ]
     },
@@ -5963,7 +5963,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/cliui\\node_modules\\strip-ansi"
+          "value": "node_modules/cliui/node_modules/strip-ansi"
         }
       ]
     },
@@ -6457,7 +6457,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/compression\\node_modules\\bytes"
+          "value": "node_modules/compression/node_modules/bytes"
         }
       ]
     },
@@ -6561,7 +6561,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/concurrently\\node_modules\\supports-color"
+          "value": "node_modules/concurrently/node_modules/supports-color"
         }
       ]
     },
@@ -6691,7 +6691,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/content-disposition\\node_modules\\safe-buffer"
+          "value": "node_modules/content-disposition/node_modules/safe-buffer"
         }
       ]
     },
@@ -7211,7 +7211,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/decompress-tar\\node_modules\\file-type"
+          "value": "node_modules/decompress-tar/node_modules/file-type"
         }
       ]
     },
@@ -7263,7 +7263,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/decompress-tarbz2\\node_modules\\file-type"
+          "value": "node_modules/decompress-tarbz2/node_modules/file-type"
         }
       ]
     },
@@ -7315,7 +7315,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/decompress-targz\\node_modules\\file-type"
+          "value": "node_modules/decompress-targz/node_modules/file-type"
         }
       ]
     },
@@ -7367,7 +7367,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/decompress-unzip\\node_modules\\file-type"
+          "value": "node_modules/decompress-unzip/node_modules/file-type"
         }
       ]
     },
@@ -7393,7 +7393,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/decompress-unzip\\node_modules\\get-stream"
+          "value": "node_modules/decompress-unzip/node_modules/get-stream"
         }
       ]
     },
@@ -7419,7 +7419,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/decompress-unzip\\node_modules\\pify"
+          "value": "node_modules/decompress-unzip/node_modules/pify"
         }
       ]
     },
@@ -7471,7 +7471,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/decompress\\node_modules\\make-dir"
+          "value": "node_modules/decompress/node_modules/make-dir"
         }
       ]
     },
@@ -7497,7 +7497,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/decompress\\node_modules\\make-dir\\node_modules\\pify"
+          "value": "node_modules/decompress/node_modules/make-dir/node_modules/pify"
         }
       ]
     },
@@ -7523,7 +7523,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/decompress\\node_modules\\pify"
+          "value": "node_modules/decompress/node_modules/pify"
         }
       ]
     },
@@ -7861,7 +7861,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/dicer\\node_modules\\isarray"
+          "value": "node_modules/dicer/node_modules/isarray"
         }
       ]
     },
@@ -7887,7 +7887,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/dicer\\node_modules\\readable-stream"
+          "value": "node_modules/dicer/node_modules/readable-stream"
         }
       ]
     },
@@ -7913,7 +7913,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/dicer\\node_modules\\string_decoder"
+          "value": "node_modules/dicer/node_modules/string_decoder"
         }
       ]
     },
@@ -8173,7 +8173,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/download\\node_modules\\file-type"
+          "value": "node_modules/download/node_modules/file-type"
         }
       ]
     },
@@ -8461,7 +8461,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/encoding\\node_modules\\iconv-lite"
+          "value": "node_modules/encoding/node_modules/iconv-lite"
         }
       ]
     },
@@ -8565,7 +8565,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/engine.io\\node_modules\\debug"
+          "value": "node_modules/engine.io/node_modules/debug"
         }
       ]
     },
@@ -8591,7 +8591,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/engine.io\\node_modules\\ms"
+          "value": "node_modules/engine.io/node_modules/ms"
         }
       ]
     },
@@ -9060,7 +9060,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/expand-brackets\\node_modules\\define-property"
+          "value": "node_modules/expand-brackets/node_modules/define-property"
         }
       ]
     },
@@ -9086,7 +9086,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/expand-brackets\\node_modules\\extend-shallow"
+          "value": "node_modules/expand-brackets/node_modules/extend-shallow"
         }
       ]
     },
@@ -9112,7 +9112,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/expand-brackets\\node_modules\\is-accessor-descriptor"
+          "value": "node_modules/expand-brackets/node_modules/is-accessor-descriptor"
         }
       ]
     },
@@ -9138,7 +9138,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/expand-brackets\\node_modules\\is-accessor-descriptor\\node_modules\\kind-of"
+          "value": "node_modules/expand-brackets/node_modules/is-accessor-descriptor/node_modules/kind-of"
         }
       ]
     },
@@ -9164,7 +9164,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/expand-brackets\\node_modules\\is-data-descriptor"
+          "value": "node_modules/expand-brackets/node_modules/is-data-descriptor"
         }
       ]
     },
@@ -9190,7 +9190,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/expand-brackets\\node_modules\\is-data-descriptor\\node_modules\\kind-of"
+          "value": "node_modules/expand-brackets/node_modules/is-data-descriptor/node_modules/kind-of"
         }
       ]
     },
@@ -9216,7 +9216,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/expand-brackets\\node_modules\\is-descriptor"
+          "value": "node_modules/expand-brackets/node_modules/is-descriptor"
         }
       ]
     },
@@ -9242,7 +9242,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/expand-brackets\\node_modules\\is-extendable"
+          "value": "node_modules/expand-brackets/node_modules/is-extendable"
         }
       ]
     },
@@ -9268,7 +9268,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/expand-brackets\\node_modules\\kind-of"
+          "value": "node_modules/expand-brackets/node_modules/kind-of"
         }
       ]
     },
@@ -9399,7 +9399,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/express-jwt\\node_modules\\jsonwebtoken"
+          "value": "node_modules/express-jwt/node_modules/jsonwebtoken"
         }
       ]
     },
@@ -9425,7 +9425,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/express-jwt\\node_modules\\moment"
+          "value": "node_modules/express-jwt/node_modules/moment"
         }
       ]
     },
@@ -9555,7 +9555,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/express\\node_modules\\body-parser"
+          "value": "node_modules/express/node_modules/body-parser"
         }
       ]
     },
@@ -9581,7 +9581,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/express\\node_modules\\cookie"
+          "value": "node_modules/express/node_modules/cookie"
         }
       ]
     },
@@ -9607,7 +9607,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/express\\node_modules\\raw-body"
+          "value": "node_modules/express/node_modules/raw-body"
         }
       ]
     },
@@ -9633,7 +9633,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/express\\node_modules\\safe-buffer"
+          "value": "node_modules/express/node_modules/safe-buffer"
         }
       ]
     },
@@ -9789,7 +9789,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/extglob\\node_modules\\define-property"
+          "value": "node_modules/extglob/node_modules/define-property"
         }
       ]
     },
@@ -9815,7 +9815,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/extglob\\node_modules\\extend-shallow"
+          "value": "node_modules/extglob/node_modules/extend-shallow"
         }
       ]
     },
@@ -9841,7 +9841,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/extglob\\node_modules\\is-extendable"
+          "value": "node_modules/extglob/node_modules/is-extendable"
         }
       ]
     },
@@ -10075,7 +10075,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/file-js\\node_modules\\brace-expansion"
+          "value": "node_modules/file-js/node_modules/brace-expansion"
         }
       ]
     },
@@ -10101,7 +10101,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/file-js\\node_modules\\minimatch"
+          "value": "node_modules/file-js/node_modules/minimatch"
         }
       ]
     },
@@ -10335,7 +10335,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/fill-range\\node_modules\\extend-shallow"
+          "value": "node_modules/fill-range/node_modules/extend-shallow"
         }
       ]
     },
@@ -10361,7 +10361,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/fill-range\\node_modules\\is-extendable"
+          "value": "node_modules/fill-range/node_modules/is-extendable"
         }
       ]
     },
@@ -11011,7 +11011,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/fstream\\node_modules\\rimraf"
+          "value": "node_modules/fstream/node_modules/rimraf"
         }
       ]
     },
@@ -11376,7 +11376,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/glob-parent\\node_modules\\is-glob"
+          "value": "node_modules/glob-parent/node_modules/is-glob"
         }
       ]
     },
@@ -11428,7 +11428,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/glob\\node_modules\\brace-expansion"
+          "value": "node_modules/glob/node_modules/brace-expansion"
         }
       ]
     },
@@ -11454,7 +11454,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/glob\\node_modules\\minimatch"
+          "value": "node_modules/glob/node_modules/minimatch"
         }
       ]
     },
@@ -11532,7 +11532,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/global-prefix\\node_modules\\which"
+          "value": "node_modules/global-prefix/node_modules/which"
         }
       ]
     },
@@ -11610,7 +11610,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/got\\node_modules\\get-stream"
+          "value": "node_modules/got/node_modules/get-stream"
         }
       ]
     },
@@ -11636,7 +11636,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/got\\node_modules\\pify"
+          "value": "node_modules/got/node_modules/pify"
         }
       ]
     },
@@ -11714,7 +11714,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt-cli\\node_modules\\nopt"
+          "value": "node_modules/grunt-cli/node_modules/nopt"
         }
       ]
     },
@@ -11766,7 +11766,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt-contrib-compress\\node_modules\\ansi-styles"
+          "value": "node_modules/grunt-contrib-compress/node_modules/ansi-styles"
         }
       ]
     },
@@ -11792,7 +11792,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt-contrib-compress\\node_modules\\chalk"
+          "value": "node_modules/grunt-contrib-compress/node_modules/chalk"
         }
       ]
     },
@@ -11818,7 +11818,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt-contrib-compress\\node_modules\\supports-color"
+          "value": "node_modules/grunt-contrib-compress/node_modules/supports-color"
         }
       ]
     },
@@ -11896,7 +11896,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt-legacy-log-utils\\node_modules\\ansi-styles"
+          "value": "node_modules/grunt-legacy-log-utils/node_modules/ansi-styles"
         }
       ]
     },
@@ -11922,7 +11922,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt-legacy-log-utils\\node_modules\\chalk"
+          "value": "node_modules/grunt-legacy-log-utils/node_modules/chalk"
         }
       ]
     },
@@ -11948,7 +11948,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt-legacy-log-utils\\node_modules\\color-convert"
+          "value": "node_modules/grunt-legacy-log-utils/node_modules/color-convert"
         }
       ]
     },
@@ -11974,7 +11974,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt-legacy-log-utils\\node_modules\\color-name"
+          "value": "node_modules/grunt-legacy-log-utils/node_modules/color-name"
         }
       ]
     },
@@ -12000,7 +12000,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt-legacy-log-utils\\node_modules\\has-flag"
+          "value": "node_modules/grunt-legacy-log-utils/node_modules/has-flag"
         }
       ]
     },
@@ -12026,7 +12026,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt-legacy-log-utils\\node_modules\\supports-color"
+          "value": "node_modules/grunt-legacy-log-utils/node_modules/supports-color"
         }
       ]
     },
@@ -12078,7 +12078,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt-legacy-log\\node_modules\\colors"
+          "value": "node_modules/grunt-legacy-log/node_modules/colors"
         }
       ]
     },
@@ -12130,7 +12130,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt-legacy-util\\node_modules\\async"
+          "value": "node_modules/grunt-legacy-util/node_modules/async"
         }
       ]
     },
@@ -12208,7 +12208,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt\\node_modules\\brace-expansion"
+          "value": "node_modules/grunt/node_modules/brace-expansion"
         }
       ]
     },
@@ -12234,7 +12234,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt\\node_modules\\braces"
+          "value": "node_modules/grunt/node_modules/braces"
         }
       ]
     },
@@ -12260,7 +12260,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt\\node_modules\\fill-range"
+          "value": "node_modules/grunt/node_modules/fill-range"
         }
       ]
     },
@@ -12286,7 +12286,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt\\node_modules\\findup-sync"
+          "value": "node_modules/grunt/node_modules/findup-sync"
         }
       ]
     },
@@ -12312,7 +12312,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt\\node_modules\\glob"
+          "value": "node_modules/grunt/node_modules/glob"
         }
       ]
     },
@@ -12338,7 +12338,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt\\node_modules\\iconv-lite"
+          "value": "node_modules/grunt/node_modules/iconv-lite"
         }
       ]
     },
@@ -12364,7 +12364,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt\\node_modules\\is-glob"
+          "value": "node_modules/grunt/node_modules/is-glob"
         }
       ]
     },
@@ -12390,7 +12390,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt\\node_modules\\is-number"
+          "value": "node_modules/grunt/node_modules/is-number"
         }
       ]
     },
@@ -12416,7 +12416,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt\\node_modules\\micromatch"
+          "value": "node_modules/grunt/node_modules/micromatch"
         }
       ]
     },
@@ -12442,7 +12442,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt\\node_modules\\minimatch"
+          "value": "node_modules/grunt/node_modules/minimatch"
         }
       ]
     },
@@ -12468,7 +12468,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/grunt\\node_modules\\to-regex-range"
+          "value": "node_modules/grunt/node_modules/to-regex-range"
         }
       ]
     },
@@ -12520,7 +12520,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/handlebars\\node_modules\\wordwrap"
+          "value": "node_modules/handlebars/node_modules/wordwrap"
         }
       ]
     },
@@ -12910,7 +12910,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/has-values\\node_modules\\kind-of"
+          "value": "node_modules/has-values/node_modules/kind-of"
         }
       ]
     },
@@ -13248,7 +13248,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/htmlparser2\\node_modules\\isarray"
+          "value": "node_modules/htmlparser2/node_modules/isarray"
         }
       ]
     },
@@ -13274,7 +13274,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/htmlparser2\\node_modules\\readable-stream"
+          "value": "node_modules/htmlparser2/node_modules/readable-stream"
         }
       ]
     },
@@ -13300,7 +13300,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/htmlparser2\\node_modules\\string_decoder"
+          "value": "node_modules/htmlparser2/node_modules/string_decoder"
         }
       ]
     },
@@ -13404,7 +13404,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/http-proxy-agent\\node_modules\\debug"
+          "value": "node_modules/http-proxy-agent/node_modules/debug"
         }
       ]
     },
@@ -13430,7 +13430,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/http-proxy-agent\\node_modules\\ms"
+          "value": "node_modules/http-proxy-agent/node_modules/ms"
         }
       ]
     },
@@ -13508,7 +13508,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/https-proxy-agent\\node_modules\\debug"
+          "value": "node_modules/https-proxy-agent/node_modules/debug"
         }
       ]
     },
@@ -13534,7 +13534,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/https-proxy-agent\\node_modules\\ms"
+          "value": "node_modules/https-proxy-agent/node_modules/ms"
         }
       ]
     },
@@ -13691,7 +13691,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/ignore-walk\\node_modules\\brace-expansion"
+          "value": "node_modules/ignore-walk/node_modules/brace-expansion"
         }
       ]
     },
@@ -13717,7 +13717,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/ignore-walk\\node_modules\\minimatch"
+          "value": "node_modules/ignore-walk/node_modules/minimatch"
         }
       ]
     },
@@ -14866,7 +14866,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/is-number\\node_modules\\kind-of"
+          "value": "node_modules/is-number/node_modules/kind-of"
         }
       ]
     },
@@ -16114,7 +16114,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/libxmljs2\\node_modules\\nan"
+          "value": "node_modules/libxmljs2/node_modules/nan"
         }
       ]
     },
@@ -16166,7 +16166,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/liftup\\node_modules\\braces"
+          "value": "node_modules/liftup/node_modules/braces"
         }
       ]
     },
@@ -16192,7 +16192,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/liftup\\node_modules\\fill-range"
+          "value": "node_modules/liftup/node_modules/fill-range"
         }
       ]
     },
@@ -16218,7 +16218,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/liftup\\node_modules\\findup-sync"
+          "value": "node_modules/liftup/node_modules/findup-sync"
         }
       ]
     },
@@ -16244,7 +16244,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/liftup\\node_modules\\is-glob"
+          "value": "node_modules/liftup/node_modules/is-glob"
         }
       ]
     },
@@ -16270,7 +16270,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/liftup\\node_modules\\is-number"
+          "value": "node_modules/liftup/node_modules/is-number"
         }
       ]
     },
@@ -16296,7 +16296,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/liftup\\node_modules\\micromatch"
+          "value": "node_modules/liftup/node_modules/micromatch"
         }
       ]
     },
@@ -16322,7 +16322,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/liftup\\node_modules\\to-regex-range"
+          "value": "node_modules/liftup/node_modules/to-regex-range"
         }
       ]
     },
@@ -16374,7 +16374,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/linebreak\\node_modules\\base64-js"
+          "value": "node_modules/linebreak/node_modules/base64-js"
         }
       ]
     },
@@ -16582,7 +16582,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/logform\\node_modules\\ms"
+          "value": "node_modules/logform/node_modules/ms"
         }
       ]
     },
@@ -16738,7 +16738,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/make-dir\\node_modules\\semver"
+          "value": "node_modules/make-dir/node_modules/semver"
         }
       ]
     },
@@ -16819,7 +16819,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/make-fetch-happen\\node_modules\\@tootallnate\\once"
+          "value": "node_modules/make-fetch-happen/node_modules/@tootallnate/once"
         }
       ]
     },
@@ -16846,7 +16846,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/make-fetch-happen\\node_modules\\debug"
+          "value": "node_modules/make-fetch-happen/node_modules/debug"
         }
       ]
     },
@@ -16873,7 +16873,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/make-fetch-happen\\node_modules\\http-cache-semantics"
+          "value": "node_modules/make-fetch-happen/node_modules/http-cache-semantics"
         }
       ]
     },
@@ -16900,7 +16900,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/make-fetch-happen\\node_modules\\http-proxy-agent"
+          "value": "node_modules/make-fetch-happen/node_modules/http-proxy-agent"
         }
       ]
     },
@@ -16927,7 +16927,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/make-fetch-happen\\node_modules\\ms"
+          "value": "node_modules/make-fetch-happen/node_modules/ms"
         }
       ]
     },
@@ -17239,7 +17239,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/messageformat\\node_modules\\make-plural"
+          "value": "node_modules/messageformat/node_modules/make-plural"
         }
       ]
     },
@@ -17817,7 +17817,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/morgan\\node_modules\\on-finished"
+          "value": "node_modules/morgan/node_modules/on-finished"
         }
       ]
     },
@@ -18053,7 +18053,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/needle\\node_modules\\debug"
+          "value": "node_modules/needle/node_modules/debug"
         }
       ]
     },
@@ -18079,7 +18079,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/needle\\node_modules\\ms"
+          "value": "node_modules/needle/node_modules/ms"
         }
       ]
     },
@@ -18185,7 +18185,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-abi\\node_modules\\semver"
+          "value": "node_modules/node-abi/node_modules/semver"
         }
       ]
     },
@@ -18291,7 +18291,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-gyp\\node_modules\\ansi-regex"
+          "value": "node_modules/node-gyp/node_modules/ansi-regex"
         }
       ]
     },
@@ -18318,7 +18318,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-gyp\\node_modules\\are-we-there-yet"
+          "value": "node_modules/node-gyp/node_modules/are-we-there-yet"
         }
       ]
     },
@@ -18345,7 +18345,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-gyp\\node_modules\\gauge"
+          "value": "node_modules/node-gyp/node_modules/gauge"
         }
       ]
     },
@@ -18372,7 +18372,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-gyp\\node_modules\\is-fullwidth-code-point"
+          "value": "node_modules/node-gyp/node_modules/is-fullwidth-code-point"
         }
       ]
     },
@@ -18399,7 +18399,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-gyp\\node_modules\\nopt"
+          "value": "node_modules/node-gyp/node_modules/nopt"
         }
       ]
     },
@@ -18426,7 +18426,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-gyp\\node_modules\\npmlog"
+          "value": "node_modules/node-gyp/node_modules/npmlog"
         }
       ]
     },
@@ -18453,7 +18453,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-gyp\\node_modules\\readable-stream"
+          "value": "node_modules/node-gyp/node_modules/readable-stream"
         }
       ]
     },
@@ -18480,7 +18480,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-gyp\\node_modules\\string-width"
+          "value": "node_modules/node-gyp/node_modules/string-width"
         }
       ]
     },
@@ -18507,7 +18507,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-gyp\\node_modules\\strip-ansi"
+          "value": "node_modules/node-gyp/node_modules/strip-ansi"
         }
       ]
     },
@@ -18559,7 +18559,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-pre-gyp\\node_modules\\chownr"
+          "value": "node_modules/node-pre-gyp/node_modules/chownr"
         }
       ]
     },
@@ -18585,7 +18585,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-pre-gyp\\node_modules\\fs-minipass"
+          "value": "node_modules/node-pre-gyp/node_modules/fs-minipass"
         }
       ]
     },
@@ -18611,7 +18611,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-pre-gyp\\node_modules\\minipass"
+          "value": "node_modules/node-pre-gyp/node_modules/minipass"
         }
       ]
     },
@@ -18637,7 +18637,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-pre-gyp\\node_modules\\minizlib"
+          "value": "node_modules/node-pre-gyp/node_modules/minizlib"
         }
       ]
     },
@@ -18663,7 +18663,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-pre-gyp\\node_modules\\nopt"
+          "value": "node_modules/node-pre-gyp/node_modules/nopt"
         }
       ]
     },
@@ -18689,7 +18689,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-pre-gyp\\node_modules\\rimraf"
+          "value": "node_modules/node-pre-gyp/node_modules/rimraf"
         }
       ]
     },
@@ -18715,7 +18715,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-pre-gyp\\node_modules\\safe-buffer"
+          "value": "node_modules/node-pre-gyp/node_modules/safe-buffer"
         }
       ]
     },
@@ -18741,7 +18741,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-pre-gyp\\node_modules\\semver"
+          "value": "node_modules/node-pre-gyp/node_modules/semver"
         }
       ]
     },
@@ -18767,7 +18767,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-pre-gyp\\node_modules\\tar"
+          "value": "node_modules/node-pre-gyp/node_modules/tar"
         }
       ]
     },
@@ -18793,7 +18793,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/node-pre-gyp\\node_modules\\yallist"
+          "value": "node_modules/node-pre-gyp/node_modules/yallist"
         }
       ]
     },
@@ -18898,7 +18898,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/normalize-package-data\\node_modules\\semver"
+          "value": "node_modules/normalize-package-data/node_modules/semver"
         }
       ]
     },
@@ -19002,7 +19002,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/notevil\\node_modules\\esprima"
+          "value": "node_modules/notevil/node_modules/esprima"
         }
       ]
     },
@@ -19236,7 +19236,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/object-copy\\node_modules\\define-property"
+          "value": "node_modules/object-copy/node_modules/define-property"
         }
       ]
     },
@@ -19262,7 +19262,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/object-copy\\node_modules\\is-accessor-descriptor"
+          "value": "node_modules/object-copy/node_modules/is-accessor-descriptor"
         }
       ]
     },
@@ -19288,7 +19288,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/object-copy\\node_modules\\is-data-descriptor"
+          "value": "node_modules/object-copy/node_modules/is-data-descriptor"
         }
       ]
     },
@@ -19314,7 +19314,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/object-copy\\node_modules\\is-descriptor"
+          "value": "node_modules/object-copy/node_modules/is-descriptor"
         }
       ]
     },
@@ -19340,7 +19340,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/object-copy\\node_modules\\is-descriptor\\node_modules\\kind-of"
+          "value": "node_modules/object-copy/node_modules/is-descriptor/node_modules/kind-of"
         }
       ]
     },
@@ -19366,7 +19366,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/object-copy\\node_modules\\kind-of"
+          "value": "node_modules/object-copy/node_modules/kind-of"
         }
       ]
     },
@@ -20879,7 +20879,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/promise-retry\\node_modules\\err-code"
+          "value": "node_modules/promise-retry/node_modules/err-code"
         }
       ]
     },
@@ -20906,7 +20906,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/promise-retry\\node_modules\\retry"
+          "value": "node_modules/promise-retry/node_modules/retry"
         }
       ]
     },
@@ -21582,7 +21582,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/read-pkg\\node_modules\\pify"
+          "value": "node_modules/read-pkg/node_modules/pify"
         }
       ]
     },
@@ -21634,7 +21634,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/readable-stream\\node_modules\\isarray"
+          "value": "node_modules/readable-stream/node_modules/isarray"
         }
       ]
     },
@@ -21686,7 +21686,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/readable-web-to-node-stream\\node_modules\\readable-stream"
+          "value": "node_modules/readable-web-to-node-stream/node_modules/readable-stream"
         }
       ]
     },
@@ -21946,7 +21946,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\ansi-regex"
+          "value": "node_modules/replace/node_modules/ansi-regex"
         }
       ]
     },
@@ -21972,7 +21972,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\ansi-styles"
+          "value": "node_modules/replace/node_modules/ansi-styles"
         }
       ]
     },
@@ -21998,7 +21998,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\brace-expansion"
+          "value": "node_modules/replace/node_modules/brace-expansion"
         }
       ]
     },
@@ -22024,7 +22024,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\cliui"
+          "value": "node_modules/replace/node_modules/cliui"
         }
       ]
     },
@@ -22050,7 +22050,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\color-convert"
+          "value": "node_modules/replace/node_modules/color-convert"
         }
       ]
     },
@@ -22076,7 +22076,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\color-name"
+          "value": "node_modules/replace/node_modules/color-name"
         }
       ]
     },
@@ -22102,7 +22102,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\find-up"
+          "value": "node_modules/replace/node_modules/find-up"
         }
       ]
     },
@@ -22128,7 +22128,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\is-fullwidth-code-point"
+          "value": "node_modules/replace/node_modules/is-fullwidth-code-point"
         }
       ]
     },
@@ -22154,7 +22154,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\locate-path"
+          "value": "node_modules/replace/node_modules/locate-path"
         }
       ]
     },
@@ -22180,7 +22180,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\minimatch"
+          "value": "node_modules/replace/node_modules/minimatch"
         }
       ]
     },
@@ -22206,7 +22206,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\p-locate"
+          "value": "node_modules/replace/node_modules/p-locate"
         }
       ]
     },
@@ -22232,7 +22232,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\path-exists"
+          "value": "node_modules/replace/node_modules/path-exists"
         }
       ]
     },
@@ -22258,7 +22258,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\string-width"
+          "value": "node_modules/replace/node_modules/string-width"
         }
       ]
     },
@@ -22284,7 +22284,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\strip-ansi"
+          "value": "node_modules/replace/node_modules/strip-ansi"
         }
       ]
     },
@@ -22310,7 +22310,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\wrap-ansi"
+          "value": "node_modules/replace/node_modules/wrap-ansi"
         }
       ]
     },
@@ -22336,7 +22336,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\yargs-parser"
+          "value": "node_modules/replace/node_modules/yargs-parser"
         }
       ]
     },
@@ -22362,7 +22362,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/replace\\node_modules\\yargs"
+          "value": "node_modules/replace/node_modules/yargs"
         }
       ]
     },
@@ -22414,7 +22414,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/request\\node_modules\\qs"
+          "value": "node_modules/request/node_modules/qs"
         }
       ]
     },
@@ -22752,7 +22752,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/rxjs\\node_modules\\tslib"
+          "value": "node_modules/rxjs/node_modules/tslib"
         }
       ]
     },
@@ -22960,7 +22960,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/sanitize-html\\node_modules\\lodash"
+          "value": "node_modules/sanitize-html/node_modules/lodash"
         }
       ]
     },
@@ -23090,7 +23090,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/send\\node_modules\\ms"
+          "value": "node_modules/send/node_modules/ms"
         }
       ]
     },
@@ -23168,7 +23168,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/sequelize\\node_modules\\debug"
+          "value": "node_modules/sequelize/node_modules/debug"
         }
       ]
     },
@@ -23194,7 +23194,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/sequelize\\node_modules\\ms"
+          "value": "node_modules/sequelize/node_modules/ms"
         }
       ]
     },
@@ -23220,7 +23220,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/sequelize\\node_modules\\uuid"
+          "value": "node_modules/sequelize/node_modules/uuid"
         }
       ]
     },
@@ -23272,7 +23272,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/serve-index\\node_modules\\depd"
+          "value": "node_modules/serve-index/node_modules/depd"
         }
       ]
     },
@@ -23298,7 +23298,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/serve-index\\node_modules\\http-errors"
+          "value": "node_modules/serve-index/node_modules/http-errors"
         }
       ]
     },
@@ -23324,7 +23324,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/serve-index\\node_modules\\inherits"
+          "value": "node_modules/serve-index/node_modules/inherits"
         }
       ]
     },
@@ -23350,7 +23350,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/serve-index\\node_modules\\setprototypeof"
+          "value": "node_modules/serve-index/node_modules/setprototypeof"
         }
       ]
     },
@@ -23376,7 +23376,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/serve-index\\node_modules\\statuses"
+          "value": "node_modules/serve-index/node_modules/statuses"
         }
       ]
     },
@@ -23480,7 +23480,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/set-value\\node_modules\\extend-shallow"
+          "value": "node_modules/set-value/node_modules/extend-shallow"
         }
       ]
     },
@@ -23506,7 +23506,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/set-value\\node_modules\\is-extendable"
+          "value": "node_modules/set-value/node_modules/is-extendable"
         }
       ]
     },
@@ -23691,7 +23691,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/simple-get\\node_modules\\decompress-response"
+          "value": "node_modules/simple-get/node_modules/decompress-response"
         }
       ]
     },
@@ -23718,7 +23718,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/simple-get\\node_modules\\mimic-response"
+          "value": "node_modules/simple-get/node_modules/mimic-response"
         }
       ]
     },
@@ -23770,7 +23770,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/simple-swizzle\\node_modules\\is-arrayish"
+          "value": "node_modules/simple-swizzle/node_modules/is-arrayish"
         }
       ]
     },
@@ -23875,7 +23875,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/snapdragon-node\\node_modules\\define-property"
+          "value": "node_modules/snapdragon-node/node_modules/define-property"
         }
       ]
     },
@@ -23927,7 +23927,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/snapdragon-util\\node_modules\\kind-of"
+          "value": "node_modules/snapdragon-util/node_modules/kind-of"
         }
       ]
     },
@@ -23979,7 +23979,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/snapdragon\\node_modules\\define-property"
+          "value": "node_modules/snapdragon/node_modules/define-property"
         }
       ]
     },
@@ -24005,7 +24005,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/snapdragon\\node_modules\\extend-shallow"
+          "value": "node_modules/snapdragon/node_modules/extend-shallow"
         }
       ]
     },
@@ -24031,7 +24031,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/snapdragon\\node_modules\\is-accessor-descriptor"
+          "value": "node_modules/snapdragon/node_modules/is-accessor-descriptor"
         }
       ]
     },
@@ -24057,7 +24057,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/snapdragon\\node_modules\\is-accessor-descriptor\\node_modules\\kind-of"
+          "value": "node_modules/snapdragon/node_modules/is-accessor-descriptor/node_modules/kind-of"
         }
       ]
     },
@@ -24083,7 +24083,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/snapdragon\\node_modules\\is-data-descriptor"
+          "value": "node_modules/snapdragon/node_modules/is-data-descriptor"
         }
       ]
     },
@@ -24109,7 +24109,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/snapdragon\\node_modules\\is-data-descriptor\\node_modules\\kind-of"
+          "value": "node_modules/snapdragon/node_modules/is-data-descriptor/node_modules/kind-of"
         }
       ]
     },
@@ -24135,7 +24135,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/snapdragon\\node_modules\\is-descriptor"
+          "value": "node_modules/snapdragon/node_modules/is-descriptor"
         }
       ]
     },
@@ -24161,7 +24161,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/snapdragon\\node_modules\\is-extendable"
+          "value": "node_modules/snapdragon/node_modules/is-extendable"
         }
       ]
     },
@@ -24187,7 +24187,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/snapdragon\\node_modules\\kind-of"
+          "value": "node_modules/snapdragon/node_modules/kind-of"
         }
       ]
     },
@@ -24213,7 +24213,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/snapdragon\\node_modules\\source-map"
+          "value": "node_modules/snapdragon/node_modules/source-map"
         }
       ]
     },
@@ -24291,7 +24291,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/socket.io-parser\\node_modules\\debug"
+          "value": "node_modules/socket.io-parser/node_modules/debug"
         }
       ]
     },
@@ -24317,7 +24317,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/socket.io-parser\\node_modules\\ms"
+          "value": "node_modules/socket.io-parser/node_modules/ms"
         }
       ]
     },
@@ -24369,7 +24369,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/socket.io\\node_modules\\debug"
+          "value": "node_modules/socket.io/node_modules/debug"
         }
       ]
     },
@@ -24395,7 +24395,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/socket.io\\node_modules\\ms"
+          "value": "node_modules/socket.io/node_modules/ms"
         }
       ]
     },
@@ -24449,7 +24449,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/socks-proxy-agent\\node_modules\\debug"
+          "value": "node_modules/socks-proxy-agent/node_modules/debug"
         }
       ]
     },
@@ -24476,7 +24476,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/socks-proxy-agent\\node_modules\\ms"
+          "value": "node_modules/socks-proxy-agent/node_modules/ms"
         }
       ]
     },
@@ -24530,7 +24530,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/socks\\node_modules\\ip"
+          "value": "node_modules/socks/node_modules/ip"
         }
       ]
     },
@@ -24582,7 +24582,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/sort-keys-length\\node_modules\\sort-keys"
+          "value": "node_modules/sort-keys-length/node_modules/sort-keys"
         }
       ]
     },
@@ -25051,7 +25051,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/static-extend\\node_modules\\define-property"
+          "value": "node_modules/static-extend/node_modules/define-property"
         }
       ]
     },
@@ -25077,7 +25077,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/static-extend\\node_modules\\is-accessor-descriptor"
+          "value": "node_modules/static-extend/node_modules/is-accessor-descriptor"
         }
       ]
     },
@@ -25103,7 +25103,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/static-extend\\node_modules\\is-accessor-descriptor\\node_modules\\kind-of"
+          "value": "node_modules/static-extend/node_modules/is-accessor-descriptor/node_modules/kind-of"
         }
       ]
     },
@@ -25129,7 +25129,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/static-extend\\node_modules\\is-data-descriptor"
+          "value": "node_modules/static-extend/node_modules/is-data-descriptor"
         }
       ]
     },
@@ -25155,7 +25155,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/static-extend\\node_modules\\is-data-descriptor\\node_modules\\kind-of"
+          "value": "node_modules/static-extend/node_modules/is-data-descriptor/node_modules/kind-of"
         }
       ]
     },
@@ -25181,7 +25181,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/static-extend\\node_modules\\is-descriptor"
+          "value": "node_modules/static-extend/node_modules/is-descriptor"
         }
       ]
     },
@@ -25207,7 +25207,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/static-extend\\node_modules\\kind-of"
+          "value": "node_modules/static-extend/node_modules/kind-of"
         }
       ]
     },
@@ -25781,7 +25781,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/tar-fs\\node_modules\\bl"
+          "value": "node_modules/tar-fs/node_modules/bl"
         }
       ]
     },
@@ -25808,7 +25808,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/tar-fs\\node_modules\\chownr"
+          "value": "node_modules/tar-fs/node_modules/chownr"
         }
       ]
     },
@@ -25835,7 +25835,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/tar-fs\\node_modules\\readable-stream"
+          "value": "node_modules/tar-fs/node_modules/readable-stream"
         }
       ]
     },
@@ -25862,7 +25862,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/tar-fs\\node_modules\\tar-stream"
+          "value": "node_modules/tar-fs/node_modules/tar-stream"
         }
       ]
     },
@@ -25940,7 +25940,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/tar\\node_modules\\minipass"
+          "value": "node_modules/tar/node_modules/minipass"
         }
       ]
     },
@@ -25966,7 +25966,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/tar\\node_modules\\mkdirp"
+          "value": "node_modules/tar/node_modules/mkdirp"
         }
       ]
     },
@@ -26226,7 +26226,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/to-object-path\\node_modules\\kind-of"
+          "value": "node_modules/to-object-path/node_modules/kind-of"
         }
       ]
     },
@@ -26616,7 +26616,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/ts-node-dev\\node_modules\\mkdirp"
+          "value": "node_modules/ts-node-dev/node_modules/mkdirp"
         }
       ]
     },
@@ -26642,7 +26642,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/ts-node-dev\\node_modules\\rimraf"
+          "value": "node_modules/ts-node-dev/node_modules/rimraf"
         }
       ]
     },
@@ -27085,7 +27085,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/union-value\\node_modules\\is-extendable"
+          "value": "node_modules/union-value/node_modules/is-extendable"
         }
       ]
     },
@@ -27269,7 +27269,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/unset-value\\node_modules\\has-value"
+          "value": "node_modules/unset-value/node_modules/has-value"
         }
       ]
     },
@@ -27295,7 +27295,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/unset-value\\node_modules\\has-value\\node_modules\\isobject"
+          "value": "node_modules/unset-value/node_modules/has-value/node_modules/isobject"
         }
       ]
     },
@@ -27321,7 +27321,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/unset-value\\node_modules\\has-values"
+          "value": "node_modules/unset-value/node_modules/has-values"
         }
       ]
     },
@@ -27347,7 +27347,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/unset-value\\node_modules\\isarray"
+          "value": "node_modules/unset-value/node_modules/isarray"
         }
       ]
     },
@@ -27425,7 +27425,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/unzipper\\node_modules\\bluebird"
+          "value": "node_modules/unzipper/node_modules/bluebird"
         }
       ]
     },
@@ -27867,7 +27867,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/verror\\node_modules\\core-util-is"
+          "value": "node_modules/verror/node_modules/core-util-is"
         }
       ]
     },
@@ -27919,7 +27919,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/vm2\\node_modules\\acorn"
+          "value": "node_modules/vm2/node_modules/acorn"
         }
       ]
     },
@@ -28284,7 +28284,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/winston-transport\\node_modules\\readable-stream"
+          "value": "node_modules/winston-transport/node_modules/readable-stream"
         }
       ]
     },
@@ -28336,7 +28336,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/winston\\node_modules\\async"
+          "value": "node_modules/winston/node_modules/async"
         }
       ]
     },
@@ -28362,7 +28362,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/winston\\node_modules\\is-stream"
+          "value": "node_modules/winston/node_modules/is-stream"
         }
       ]
     },
@@ -28388,7 +28388,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/winston\\node_modules\\readable-stream"
+          "value": "node_modules/winston/node_modules/readable-stream"
         }
       ]
     },
@@ -28518,7 +28518,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/wrap-ansi\\node_modules\\ansi-regex"
+          "value": "node_modules/wrap-ansi/node_modules/ansi-regex"
         }
       ]
     },
@@ -28544,7 +28544,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/wrap-ansi\\node_modules\\emoji-regex"
+          "value": "node_modules/wrap-ansi/node_modules/emoji-regex"
         }
       ]
     },
@@ -28570,7 +28570,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/wrap-ansi\\node_modules\\is-fullwidth-code-point"
+          "value": "node_modules/wrap-ansi/node_modules/is-fullwidth-code-point"
         }
       ]
     },
@@ -28596,7 +28596,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/wrap-ansi\\node_modules\\string-width"
+          "value": "node_modules/wrap-ansi/node_modules/string-width"
         }
       ]
     },
@@ -28622,7 +28622,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/wrap-ansi\\node_modules\\strip-ansi"
+          "value": "node_modules/wrap-ansi/node_modules/strip-ansi"
         }
       ]
     },
@@ -28856,7 +28856,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/yargs\\node_modules\\ansi-regex"
+          "value": "node_modules/yargs/node_modules/ansi-regex"
         }
       ]
     },
@@ -28882,7 +28882,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/yargs\\node_modules\\emoji-regex"
+          "value": "node_modules/yargs/node_modules/emoji-regex"
         }
       ]
     },
@@ -28908,7 +28908,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/yargs\\node_modules\\is-fullwidth-code-point"
+          "value": "node_modules/yargs/node_modules/is-fullwidth-code-point"
         }
       ]
     },
@@ -28934,7 +28934,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/yargs\\node_modules\\string-width"
+          "value": "node_modules/yargs/node_modules/string-width"
         }
       ]
     },
@@ -28960,7 +28960,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/yargs\\node_modules\\strip-ansi"
+          "value": "node_modules/yargs/node_modules/strip-ansi"
         }
       ]
     },

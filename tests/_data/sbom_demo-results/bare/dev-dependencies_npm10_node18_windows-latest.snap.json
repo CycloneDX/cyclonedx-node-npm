@@ -109,7 +109,7 @@
         },
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\node"
+          "value": "node_modules/@types/node"
         }
       ]
     },
@@ -141,7 +141,7 @@
         },
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\uuid"
+          "value": "node_modules/@types/uuid"
         }
       ]
     },
