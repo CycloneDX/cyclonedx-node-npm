@@ -5,11 +5,11 @@
   "version": "0.0.0",
   "license": "Apache-2.0",
   "optionalDependencies": {
-    "uuidv4": "6.2.13"
+    "uuidv4": "^6.2.13"
   },
   "devDependencies": {
-    "@types/node": "20.14.10",
-    "@types/uuid": "8.3.4",
-    "uuid": "8.3.2"
+    "@types/node": ">=16",
+    "@types/uuid": "^8",
+    "uuid": "^8"
   }
 }
