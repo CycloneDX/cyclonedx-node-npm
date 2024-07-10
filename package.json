@@ -88,7 +88,7 @@
   "exports": "./dist/index.js",
   "scripts": {
     "prepublish": "npm run build",
-    "prepublishOnly": "run-s -lc build test:jest",
+    "prepublishOnly": "run-s -lc build setup-tests test:jest",
     "lint": "tsc --noEmit",
     "prebuild": "node -r fs -e 'fs.rmSync(`dist`,{recursive:true,force:true})'",
     "build": "tsc -b ./tsconfig.json",
