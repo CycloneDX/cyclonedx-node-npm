@@ -7,7 +7,7 @@
     "tools": [
       {
         "name": "npm",
-        "version": "7.99.0"
+        "version": "npmVersion-testing"
       },
       {
         "vendor": "@cyclonedx",
@@ -109,7 +109,7 @@
         },
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\node"
+          "value": "node_modules/@types/node"
         }
       ]
     },
@@ -141,7 +141,7 @@
         },
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@types\\uuid"
+          "value": "node_modules/@types/uuid"
         }
       ]
     },

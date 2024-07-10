@@ -7,7 +7,7 @@
     "tools": [
       {
         "name": "npm",
-        "version": "7.99.0"
+        "version": "npmVersion-testing"
       },
       {
         "vendor": "@cyclonedx",
@@ -105,7 +105,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@act\\act"
+          "value": "node_modules/@act/act"
         }
       ]
     }

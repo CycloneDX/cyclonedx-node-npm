@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Fixed
+  * CycloneDX property `cdx:npm:package:path`'s value on Windows systems (via [#1203])
+
+[#1203]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1203
+
 ## 1.19.0 - 2024-06-01
 
 * Changed

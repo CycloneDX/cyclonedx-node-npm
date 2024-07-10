@@ -7,7 +7,7 @@
     "tools": [
       {
         "name": "npm",
-        "version": "8.99.0"
+        "version": "npmVersion-testing"
       },
       {
         "vendor": "@cyclonedx",
@@ -171,7 +171,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/buffer\\node_modules\\base64-js"
+          "value": "node_modules/buffer/node_modules/base64-js"
         }
       ]
     },
