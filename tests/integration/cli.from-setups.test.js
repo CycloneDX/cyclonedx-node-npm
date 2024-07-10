@@ -59,7 +59,7 @@ describe('integration.cli.from-setups', () => {
 
   /**
    * @param {string} demo
-   * @param {'bare'|'flat'} oType
+   * @param {string} oType
    * @param {'json'|'xml'} format
    * @param {string[]} [additionalCliArgs]
    */
@@ -116,7 +116,7 @@ describe('integration.cli.from-setups', () => {
             ? test.skip
             : test
           )('flat', () => {
-            runTest(demo, 'flat', format, ['--flatten-components'])
+            runTest(demo, 'flatten-components', format, ['--flatten-components'])
           }, cliRunTestTimeout)
         })
       }
