@@ -23,7 +23,7 @@ import * as normalizePackageData from 'normalize-package-data'
 import { type PackageURL } from 'packageurl-js'
 import * as path from 'path'
 
-import { isString, loadJsonFile, trySanitizeUrl } from './_helpers'
+import { isString, loadJsonFile, tryRemoveSecretsFromUrl, trySanitizeGitUrl } from './_helpers'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
@@ -445,12 +445,14 @@ export class BomBuilder {
     if (!this.packageLockOnly) {
       _dataC = this.enhancedPackageData(_dataC)
     }
-    normalizePackageData(_dataC as normalizePackageData.Input
-      /* add debug for warnings? */)
+    normalizePackageData(_dataC as normalizePackageData.Input /* add debug for warnings? */)
     // region fix normalizations
     if (isString(data.version)) {
       // allow non-SemVer strings
       _dataC.version = data.version.trim()
+    }
+    if (_dataC.repository?.type === 'git') {
+      _dataC.repository.url = trySanitizeGitUrl(_dataC.repository.url as string)
     }
     // endregion fix normalizations
 
@@ -522,7 +524,7 @@ export class BomBuilder {
       }
       component.externalReferences.add(
         new Models.ExternalReference(
-          trySanitizeUrl(resolved),
+          tryRemoveSecretsFromUrl(trySanitizeGitUrl(resolved)),
           Enums.ExternalReferenceType.Distribution,
           {
             hashes,

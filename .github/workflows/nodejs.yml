@@ -111,10 +111,10 @@ jobs:
           # as long as npm cannot auto-resolve engine-constraints, we need to help here
           case '${{ matrix.node-version }}' in
             '14')
-              dep_constraints='normalize-package-data@^5 hosted-git-info@^6'
+              dep_constraints='normalize-package-data@^5'
               ;;
             '14.0.0')
-              dep_constraints='normalize-package-data@^3 hosted-git-info@^4'
+              dep_constraints='normalize-package-data@^3'
               dev_requirements='jest@^26 jest-junit imurmurhash fast-glob'
               ;;
           esac
