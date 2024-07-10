@@ -9,12 +9,12 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>6.10.1</version>
+        <version>6.6.1</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.19.0</version>
+        <version>1.17.0</version>
       </tool>
     </tools>
     <component type="application" bom-ref="demo-workspaces@0.0.0">
@@ -26,8 +26,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/demo-workspaces@0.0.0?vcs_url=git%40gitlab.example.com%3Amy-packages/demo-workspaces.git</purl>
-      <externalReferences/>
+      <purl>pkg:npm/demo-workspaces@0.0.0</purl>
       <properties>
         <property name="cdx:npm:package:path"/>
         <property name="cdx:npm:package:private">true</property>
@@ -44,11 +43,19 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-a@0.1.0?vcs_url=git%2Bhttps%3A//gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local-c</purl>
+      <purl>pkg:npm/my-local-a@0.1.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>git+https://gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local-c</url>
+          <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -65,13 +72,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-b-off@0.0.0?vcs_url=https%3A//gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local-b</purl>
-      <externalReferences>
-        <reference type="vcs">
-          <url>https://gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local-b</url>
-          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
-        </reference>
-      </externalReferences>
+      <purl>pkg:npm/my-local-b-off@0.0.0</purl>
       <properties>
         <property name="cdx:npm:package:path">node_modules/my-local-b-off</property>
         <property name="cdx:npm:package:private">true</property>
@@ -86,11 +87,19 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-c@0.23.42?vcs_url=git%2Bssh%3A//git%40gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local</purl>
+      <purl>pkg:npm/my-local-c@0.23.42?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>git+ssh://git@gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local</url>
+          <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>

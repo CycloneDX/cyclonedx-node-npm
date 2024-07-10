@@ -9,33 +9,19 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>6.10.1</version>
+        <version>6.6.1</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.19.0</version>
+        <version>1.17.0</version>
       </tool>
     </tools>
     <component type="application" bom-ref="-/demo-package-integrity@-">
       <name>demo-package-integrity</name>
       <version/>
       <description>demo: package-integrity -- packages with different integrity information.</description>
-      <purl>pkg:npm/demo-package-integrity?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git</purl>
-      <externalReferences>
-        <reference type="issue-tracker">
-          <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
-          <comment>as detected from PackageJson property "bugs.url"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git</url>
-          <comment>as detected from PackageJson property "repository.url"</comment>
-        </reference>
-        <reference type="website">
-          <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
-          <comment>as detected from PackageJson property "homepage"</comment>
-        </reference>
-      </externalReferences>
+      <purl>pkg:npm/demo-package-integrity</purl>
       <properties>
         <property name="cdx:npm:package:path"/>
         <property name="cdx:npm:package:private">true</property>

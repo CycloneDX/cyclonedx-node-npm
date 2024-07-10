@@ -12,7 +12,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.10.1",
+        "version": "6.6.1",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
@@ -34,7 +34,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.19.0",
+        "version": "1.17.0",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -60,18 +60,8 @@
       "version": "1.0.0-123+456",
       "bom-ref": "demo-package-with-build-id@1.0.0-123+456",
       "description": "demo: package-with-build-id -- show how buildID in the version looks like",
-      "purl": "pkg:npm/demo-package-with-build-id@1.0.0-123+456?vcs_url=git%2Bhttps%3A//gist.github.com/44e29a0bc4a002ec3413d9f5c2c1962f.git",
+      "purl": "pkg:npm/demo-package-with-build-id@1.0.0-123+456",
       "externalReferences": [
-        {
-          "url": "https://gist.github.com/44e29a0bc4a002ec3413d9f5c2c1962f",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://gist.github.com/44e29a0bc4a002ec3413d9f5c2c1962f.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues/551",
           "type": "website",
