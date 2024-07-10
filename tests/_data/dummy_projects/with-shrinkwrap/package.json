@@ -1,8 +1,3 @@
 {
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "github:CycloneDX/cyclonedx-node-npm",
-    "directory": "tests/_data/dummy_projects/with-shrinkwrap"
-  }
+  "private": true
 }
