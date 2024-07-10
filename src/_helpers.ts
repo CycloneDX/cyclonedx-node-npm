@@ -57,6 +57,17 @@ export function tryRemoveSecretsFromUrl (url: string): string {
   }
 }
 
+/* eslint-disable-next-line @typescript-eslint/naming-convention */
+const _urlCanParse_polyfill: (url: string) => boolean = typeof URL.canParse === 'function'
+  ? URL.canParse.bind(URL)
+  : function (url: string): boolean {
+    try {
+      /* eslint-disable-next-line no-new */
+      new URL(url)
+    } catch { return false }
+    return true
+  }
+
 // region trySanitizeGitUrl
 
 const _sshGitUrlRE = /^(?<user>[^@:]+@)(?<host>[^:]+):(?<path>.*)$/
@@ -67,7 +78,7 @@ interface _sshGitUrlRE_groups {
 }
 
 export function trySanitizeGitUrl (gitUrl: string): string {
-  if (URL.canParse(gitUrl)) {
+  if (_urlCanParse_polyfill(gitUrl)) {
     return gitUrl
   }
 

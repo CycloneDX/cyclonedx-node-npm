@@ -77,7 +77,7 @@ describe('integration.cli.from-setups', () => {
         '--validate'
       ], {
         cwd: join(demoRootPath, demo, 'project'),
-        stdio: ['inherit', 'inherit', 'pipe'],
+        stdio: ['ignore', 'inherit', 'pipe'],
         encoding: 'utf8'
       }
     )

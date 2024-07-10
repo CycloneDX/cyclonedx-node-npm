@@ -347,7 +347,7 @@ describe('integration.cli.from-collected', () => {
       ['--', cliWrapper, '--output-format', format, '--ignore-npm-errors'],
       {
         cwd: projectRootPath,
-        stdio: ['ignore', 'ignore', 'pipe'],
+        stdio: ['ignore', 'inherit', 'pipe'],
         encoding: 'utf8'
       }
     )
