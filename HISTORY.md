@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 1.19.1 - 2024-07-10
+
 * Fixed
   * CycloneDX `externalReference`s for `vcs` type ([#1198] via [#1202]) 
   * CycloneDX property `cdx:npm:package:path`'s value on Windows systems (via [#1203])
