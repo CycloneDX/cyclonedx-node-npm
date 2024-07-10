@@ -18,7 +18,6 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { readFileSync, writeSync } from 'fs'
-import * as GitHost from 'hosted-git-info'
 
 export function loadJsonFile (path: string): any {
   return JSON.parse(readFileSync(path, 'utf8'))
@@ -58,17 +57,37 @@ export function tryRemoveSecretsFromUrl (url: string): string {
   }
 }
 
-export function trySanitizeGitUrl (gitUrl: string): string {
-  const gitInfo = GitHost.fromUrl(gitUrl)
-  if (gitInfo === undefined) {
-    return gitUrl
-  }
-  gitInfo.auth = undefined
-  return gitInfo.toString()
+/* eslint-disable-next-line @typescript-eslint/naming-convention */
+const _urlCanParse_polyfill: (url: string) => boolean = typeof URL.canParse === 'function'
+  ? URL.canParse.bind(URL)
+  : (url: string) => {
+      try {
+        /* eslint-disable-next-line no-new */
+        new URL(url)
+      } catch { return false }
+      return true
+    }
+
+// region trySanitizeGitUrl
+
+const _sshGitUrlRE = /^(?<user>[^@:]+@)(?<host>[^:]+):(?<path>.*)$/
+interface _sshGitUrlRE_groups {
+  user?: string
+  host: string
+  path: string
 }
 
-export function trySanitizeUrl (url: string): string {
-  return tryRemoveSecretsFromUrl(
-    trySanitizeGitUrl(
-      url))
+export function trySanitizeGitUrl (gitUrl: string): string {
+  if (_urlCanParse_polyfill(gitUrl)) {
+    return gitUrl
+  }
+
+  const sshGs = _sshGitUrlRE.exec(gitUrl)?.groups as _sshGitUrlRE_groups | undefined
+  if (sshGs !== undefined) {
+    return `git+ssh://${sshGs.user ?? ''}${sshGs.host}/${sshGs.path}`
+  }
+
+  return gitUrl
 }
+
+// endregion trySanitizeGitUrl

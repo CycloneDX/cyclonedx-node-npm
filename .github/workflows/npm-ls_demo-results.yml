@@ -96,7 +96,7 @@ jobs:
           node --version
           npm  --version
       - name: setup demo
-        run: npm i --no-audit --no-fund
+        run: npm i --no-audit --no-fund --ignore-scripts
         working-directory: ${{ env.DEMO_ROOT_DIR }}/${{ matrix.subject }}/project
       - name: npm-ls ls --json --all --long
         # important: the command in use is the same used by the internal builders of this project

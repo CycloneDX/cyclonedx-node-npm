@@ -54,7 +54,21 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/demo-dev-dependencies@0.0.0</purl>
+      <purl>pkg:npm/demo-dev-dependencies@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/dev-dependencies/project</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/dev-dependencies/project</url>
+          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
       <properties>
         <property name="cdx:npm:package:path"/>
         <property name="cdx:npm:package:private">true</property>

@@ -3,5 +3,10 @@
   "description": "demo: my-local-b-off - a package with a different name than its dir",
   "private": true,
   "version": "0.0.0",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/local-dependencies/project/packages/my-local-b"
+  }
 }

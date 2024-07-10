@@ -12,12 +12,12 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.6.1"
+        "version": "6.10.1"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.17.0"
+        "version": "1.19.0"
       }
     ],
     "component": {
@@ -33,7 +33,24 @@
           }
         }
       ],
-      "purl": "pkg:npm/demo-dev-dependencies@0.0.0"
+      "purl": "pkg:npm/demo-dev-dependencies@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/dev-dependencies/project",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/dev-dependencies/project",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
     }
   },
   "components": [
@@ -41,8 +58,8 @@
       "type": "library",
       "name": "node",
       "group": "@types",
-      "version": "20.11.30",
-      "bom-ref": "@types/node@20.11.30",
+      "version": "20.14.10",
+      "bom-ref": "@types/node@20.14.10",
       "description": "TypeScript definitions for node",
       "licenses": [
         {
@@ -51,10 +68,10 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/node@20.11.30#types/node",
+      "purl": "pkg:npm/%40types/node@20.14.10#types/node",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@types/node/-/node-20.11.30.tgz",
+          "url": "https://registry.npmjs.org/@types/node/-/node-20.14.10.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
         },
@@ -230,7 +247,7 @@
   ],
   "dependencies": [
     {
-      "ref": "@types/node@20.11.30",
+      "ref": "@types/node@20.14.10",
       "dependsOn": [
         "undici-types@5.26.5"
       ]
@@ -241,7 +258,7 @@
     {
       "ref": "demo-dev-dependencies@0.0.0",
       "dependsOn": [
-        "@types/node@20.11.30",
+        "@types/node@20.14.10",
         "@types/uuid@8.3.4",
         "uuid@8.3.2",
         "uuidv4@6.2.13"

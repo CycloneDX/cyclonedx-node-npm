@@ -1,7 +1,8 @@
 {
+  "private": true,
   "name": "demo-package-integrity",
   "description": "demo: package-integrity -- packages with different integrity information.",
-  "private": true,
+  "repository": "CycloneDX/cyclonedx-node-npm",
   "dependencies": {
     "buffer": "^5.4.3",
     "ignore": "^5.1.4",

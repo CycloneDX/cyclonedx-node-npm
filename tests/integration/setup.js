@@ -56,7 +56,7 @@ const demoRootPath = path.resolve(projectRootPath, 'demo');
   for (const DIR of REQUIRES_INSTALL) {
     console.log('>>> setup with npm:', DIR)
     const done = spawnSync(
-      'npm', ['install'], {
+      'npm', ['install', '--ignore-scripts'], {
         cwd: DIR,
         stdio: 'inherit',
         shell: true
