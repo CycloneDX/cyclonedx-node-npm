@@ -38,7 +38,7 @@ const latestCdxSpecVersion = Spec.Version.v1dot6
 describe('integration.cli.from-setups', () => {
   const skipAllTests = getNpmVersion()[0] < 8
 
-  const UPDATE_SNAPSHOTS = 1 // !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
+  const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
   const cliRunTestTimeout = 15000
 
   const tmpRoot = mkdtempSync(join(projectTestRootPath, '_tmp', 'CDX-IT-cli.from-setups.'))
