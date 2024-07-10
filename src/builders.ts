@@ -565,9 +565,9 @@ export class BomBuilder {
     }
     /* eslint-disable @typescript-eslint/unbound-method */
     // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
-    const [relativePath, dirSep] = rootPath[0] === '/'
-      ? [path.posix.relative, '/']
-      : [path.win32.relative, '\\']
+    const [relativePath, dirSepRE] = rootPath[0] === '/'
+      ? [path.posix.relative, /\//g]
+      : [path.win32.relative, /\\/g]
     /* eslint-enable @typescript-eslint/unbound-method */
     for (const component of components) {
       for (const property of component.properties) {
@@ -578,7 +578,7 @@ export class BomBuilder {
           component.properties.delete(property)
           continue
         }
-        property.value = relativePath(rootPath, property.value).replace(dirSep, '/')
+        property.value = relativePath(rootPath, property.value).replace(dirSepRE, '/')
       }
     }
   }
