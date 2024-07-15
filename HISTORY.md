@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Dependencies
+  * Raised runtime dependency `@cyclonedx/cyclonedx-library@^6.11.0`, was `@^6.6.0` (via [#1205])  
+    This was done to incorporate non-breaking upstream changes and fixes.
+
+[#1205]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1205
+
 ## 1.19.2 - 2024-07-10
 
 * Fixed

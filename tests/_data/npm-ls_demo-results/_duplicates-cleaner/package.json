@@ -3,5 +3,8 @@
   "description": "find duplicates and remove them",
   "license": "Apache-2.0",
   "type": "module",
-  "main": "remove-duplicates.js"
+  "main": "remove-duplicates.js",
+  "scripts": {
+    "clean": "node -- ./remove-duplicates.js"
+  }
 }
