@@ -19,7 +19,8 @@ jobs:
       fail-fast: false # gather all the results !
       matrix:
         subject:
-          - alternative-package-registry
+          - deps-from-git
+          # - alternative-package-registry
           # - bundled-dependencies
           # - dev-dependencies
           # - juice-shop

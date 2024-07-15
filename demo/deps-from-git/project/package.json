@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "demo-deps-from-git",
+  "description": "demo: dependencies from git",
+  "version": "1.0.0",
+  "dependencies": {
+    "lib0": "git://github.com/CycloneDX/cyclonedx-javascript-library.git#v6.0.0",
+    "lib1": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git#semver:6.1.0",
+    "lib2": "git+ssh://github.com/CycloneDX/cyclonedx-javascript-library.git#v6.2.0",
+    "lib3": "git@github.com:CycloneDX/cyclonedx-javascript-library.git#v6.3.0",
+    "lib4": "github:CycloneDX/cyclonedx-javascript-library.git#v6.4.0",
+    "lib5": "CycloneDX/cyclonedx-javascript-library#v6.5.0"
+  }
+}
