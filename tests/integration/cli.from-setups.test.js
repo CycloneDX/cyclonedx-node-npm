@@ -46,6 +46,7 @@ describe('integration.cli.from-setups', () => {
   const demos = [
     'alternative-package-registry',
     'bundled-dependencies',
+    // 'deps-from-git',
     'dev-dependencies',
     // 'juice-shop',
     'local-dependencies',
