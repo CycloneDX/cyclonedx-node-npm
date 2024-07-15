@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Dependencies
+  * Raised runtime dependency `@cyclonedx/cyclonedx-library@^6.11.0`, was `@^6.6.0` ()  
+    This was done to incorporate non-breaking upstream changes and fixes.
+
 ## 1.19.2 - 2024-07-10
 
 * Fixed
