@@ -212,7 +212,7 @@ jobs:
           set -ex
           npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
-          npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
+          npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2 || true
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
