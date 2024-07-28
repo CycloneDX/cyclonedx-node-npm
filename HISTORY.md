@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Build
+  * Use _TypeScript_ `v5.5.4` now, was `v5.5.3` (via [#1209])
+
+[#1209]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1209
+
 ## 1.19.3 -- 2024-07-15
 
 * Dependencies
