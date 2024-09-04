@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "my-local-e",
+  "version": "0.1.0",
+  "description": "demo: my-local-e - a standalone package that is not dependency of root nor any other workspace",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.example.com/my-packages/demo-workspaces.git",
+    "directory": "workspaces/my-local-e"
+  }
+}
