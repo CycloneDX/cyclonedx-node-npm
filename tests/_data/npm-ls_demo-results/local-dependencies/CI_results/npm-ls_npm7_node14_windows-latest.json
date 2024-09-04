@@ -4,6 +4,11 @@
   "description": "demo: demo-local-deps -- showcase how local dependencies look like",
   "private": true,
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "github:CycloneDX/cyclonedx-node-npm",
+    "directory": "demo/local-dependencies/project"
+  },
   "_id": "demo-local-deps@0.0.0",
   "extraneous": false,
   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",

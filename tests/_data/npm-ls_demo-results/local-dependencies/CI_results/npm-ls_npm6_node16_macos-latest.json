@@ -41,30 +41,30 @@
           "_id": "my-local-b-off@0.0.0",
           "_requested": {
             "type": "directory",
-            "where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+            "where": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project",
             "raw": "my-local-b-off@file:packages/my-local-b",
             "name": "my-local-b-off",
             "escapedName": "my-local-b-off",
             "rawSpec": "file:packages/my-local-b",
-            "saveSpec": "file:packages\\my-local-b",
-            "fetchSpec": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-local-b"
+            "saveSpec": "file:packages/my-local-b",
+            "fetchSpec": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/packages/my-local-b"
           },
           "_spec": "file:packages/my-local-b",
-          "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+          "_where": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project",
           "_args": [
             [
-              "my-local-b-off@file:packages\\my-local-b",
-              "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project"
+              "my-local-b-off@file:packages/my-local-b",
+              "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project"
             ]
           ],
           "dependencies": {},
           "devDependencies": {},
           "optionalDependencies": {},
           "_dependencies": {},
-          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\node_modules\\my-local-b-off",
+          "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/node_modules/my-local-b-off",
           "error": null,
           "extraneous": false,
-          "link": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-local-b"
+          "link": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/packages/my-local-b"
         }
       },
       "bugs": {
@@ -75,20 +75,20 @@
       "_id": "my-local-a@0.0.0",
       "_requested": {
         "type": "directory",
-        "where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+        "where": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project",
         "raw": "my-local-a@file:packages/my-local-a",
         "name": "my-local-a",
         "escapedName": "my-local-a",
         "rawSpec": "file:packages/my-local-a",
-        "saveSpec": "file:packages\\my-local-a",
-        "fetchSpec": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-local-a"
+        "saveSpec": "file:packages/my-local-a",
+        "fetchSpec": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/packages/my-local-a"
       },
       "_spec": "file:packages/my-local-a",
-      "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+      "_where": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project",
       "_args": [
         [
-          "my-local-a@file:packages\\my-local-a",
-          "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project"
+          "my-local-a@file:packages/my-local-a",
+          "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project"
         ]
       ],
       "devDependencies": {},
@@ -96,10 +96,10 @@
       "_dependencies": {
         "my-local-b-off": "file:../my-local-b"
       },
-      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\node_modules\\my-local-a",
+      "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/node_modules/my-local-a",
       "error": "[Circular]",
       "extraneous": false,
-      "link": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-local-a"
+      "link": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/packages/my-local-a"
     },
     "my-noname": {
       "name": "",
@@ -120,30 +120,30 @@
       "_id": "@0.0.0",
       "_requested": {
         "type": "directory",
-        "where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+        "where": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project",
         "raw": "my-noname@file:packages/my-noname",
         "name": "my-noname",
         "escapedName": "my-noname",
         "rawSpec": "file:packages/my-noname",
-        "saveSpec": "file:packages\\my-noname",
-        "fetchSpec": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-noname"
+        "saveSpec": "file:packages/my-noname",
+        "fetchSpec": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/packages/my-noname"
       },
       "_spec": "file:packages/my-noname",
-      "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+      "_where": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project",
       "_args": [
         [
-          "my-noname@file:packages\\my-noname",
-          "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project"
+          "my-noname@file:packages/my-noname",
+          "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project"
         ]
       ],
       "dependencies": {},
       "devDependencies": {},
       "optionalDependencies": {},
       "_dependencies": {},
-      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\node_modules\\my-noname",
+      "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/node_modules/my-noname",
       "error": "[Circular]",
       "extraneous": false,
-      "link": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-noname"
+      "link": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/packages/my-noname"
     }
   },
   "bugs": {
@@ -161,7 +161,7 @@
       "my-local-a": {
         "version": "file:packages/my-local-a",
         "requires": {
-          "my-local-b-off": "file:..\\my-local-b"
+          "my-local-b-off": "file:../my-local-b"
         }
       },
       "my-local-b-off": {
@@ -178,7 +178,7 @@
     "my-local-a": "file:packages/my-local-a",
     "my-noname": "file:packages/my-noname"
   },
-  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+  "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project",
   "error": "[Circular]",
   "extraneous": false
 }
