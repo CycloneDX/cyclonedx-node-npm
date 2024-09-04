@@ -19,13 +19,13 @@ jobs:
       fail-fast: false # gather all the results !
       matrix:
         subject:
-          - deps-from-git
+          # - deps-from-git
           # - alternative-package-registry
           # - bundled-dependencies
           # - dev-dependencies
           # - juice-shop
-          # - local-dependencies
-          # - local-workspaces
+          - local-dependencies
+          - local-workspaces
           # - package-integrity
           # - package-with-build-id
         npm-version:
