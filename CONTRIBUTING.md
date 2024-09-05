@@ -47,5 +47,5 @@ Please sign off your commits, to show that you agree to publish your changes und
 , and to indicate agreement with [Developer Certificate of Origin (DCO)](https://developercertificate.org/).
 
 ```shell
-git commit --signedoff ...
+git commit --signeoff ...
 ```
