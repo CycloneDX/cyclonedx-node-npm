@@ -68,7 +68,24 @@
           }
         }
       ],
-      "purl": "pkg:npm/demo-local-deps@0.0.0",
+      "purl": "pkg:npm/demo-local-deps@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-dependencies/project",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-dependencies/project",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
       "properties": [
         {
           "name": "cdx:npm:package:path",
@@ -139,7 +156,24 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0",
+      "purl": "pkg:npm/my-local-b-off@0.0.0?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-dependencies/project/packages/my-local-b",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-dependencies/project/packages/my-local-b",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
       "properties": [
         {
           "name": "cdx:npm:package:path",

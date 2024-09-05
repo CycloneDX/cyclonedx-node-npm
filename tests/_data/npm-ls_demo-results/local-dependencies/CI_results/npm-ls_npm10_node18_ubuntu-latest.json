@@ -4,6 +4,11 @@
   "description": "demo: demo-local-deps -- showcase how local dependencies look like",
   "private": true,
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "github:CycloneDX/cyclonedx-node-npm",
+    "directory": "demo/local-dependencies/project"
+  },
   "_id": "demo-local-deps@0.0.0",
   "extraneous": false,
   "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project",
@@ -33,9 +38,9 @@
           "version": "0.0.0",
           "resolved": "file:../packages/my-local-b",
           "overridden": false,
-          "name": "my-local-b",
+          "name": "my-local-b-off",
           "license": "Apache-2.0",
-          "_id": "my-local-b@0.0.0",
+          "_id": "my-local-b-off@0.0.0",
           "extraneous": false,
           "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-dependencies/project/node_modules/my-local-b-off",
           "_dependencies": {},

@@ -1,0 +1,3402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.2" version="1">
+  <metadata>
+    <tools>
+      <tool>
+        <name>npm</name>
+        <version>9.4.2</version>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>6.11.0</version>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-npm</name>
+        <version>1.19.3</version>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="demo-deps-from-git@1.0.0">
+      <name>demo-deps-from-git</name>
+      <version>1.0.0</version>
+      <description>demo: dependencies from git</description>
+      <purl>pkg:npm/demo-deps-from-git@1.0.0</purl>
+    </component>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@6.0.0">
+      <author>Jan Kowalleck</author>
+      <group>@cyclonedx</group>
+      <name>cyclonedx-library</name>
+      <version>6.0.0</version>
+      <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.0.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%23c887c803ac56deb5f91b617ef0486ca3fb98473b</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#c887c803ac56deb5f91b617ef0486ca3fb98473b</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@6.1.0">
+      <author>Jan Kowalleck</author>
+      <group>@cyclonedx</group>
+      <name>cyclonedx-library</name>
+      <version>6.1.0</version>
+      <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.1.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%23e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@6.2.0">
+      <author>Jan Kowalleck</author>
+      <group>@cyclonedx</group>
+      <name>cyclonedx-library</name>
+      <version>6.2.0</version>
+      <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.2.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%23d66d36280dde484bcf73a5c2139961663e3ba954</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#d66d36280dde484bcf73a5c2139961663e3ba954</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@6.3.0">
+      <author>Jan Kowalleck</author>
+      <group>@cyclonedx</group>
+      <name>cyclonedx-library</name>
+      <version>6.3.0</version>
+      <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.3.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%237a914980f0508368df54ca193347cec6ffd16415</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#7a914980f0508368df54ca193347cec6ffd16415</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@6.4.0">
+      <author>Jan Kowalleck</author>
+      <group>@cyclonedx</group>
+      <name>cyclonedx-library</name>
+      <version>6.4.0</version>
+      <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.4.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%233367c1638662d57c53caff0824ee94cd7859bee2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#3367c1638662d57c53caff0824ee94cd7859bee2</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@6.5.0">
+      <author>Jan Kowalleck</author>
+      <group>@cyclonedx</group>
+      <name>cyclonedx-library</name>
+      <version>6.5.0</version>
+      <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.5.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%234cea42bf5ec78f17b86dcd308022b6d52e9a98f0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#4cea42bf5ec78f17b86dcd308022b6d52e9a98f0</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="@mapbox/node-pre-gyp@1.0.11">
+      <author>Dane Springmeyer</author>
+      <group>@mapbox</group>
+      <name>node-pre-gyp</name>
+      <version>1.0.11</version>
+      <description>Node.js native addon binary install tool</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40mapbox/node-pre-gyp@1.0.11</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.11.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/mapbox/node-pre-gyp/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/mapbox/node-pre-gyp.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/mapbox/node-pre-gyp#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="@oozcitak/dom@1.15.10">
+      <author>Ozgur Ozcitak</author>
+      <group>@oozcitak</group>
+      <name>dom</name>
+      <version>1.15.10</version>
+      <description>A modern DOM implementation</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40oozcitak/dom@1.15.10</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@oozcitak/dom/-/dom-1.15.10.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>http://github.com/oozcitak/dom/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/oozcitak/dom.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>http://github.com/oozcitak/dom</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="@oozcitak/infra@1.0.8">
+      <author>Ozgur Ozcitak</author>
+      <group>@oozcitak</group>
+      <name>infra</name>
+      <version>1.0.8</version>
+      <description>An implementation of the Infra Living Standard</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40oozcitak/infra@1.0.8</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@oozcitak/infra/-/infra-1.0.8.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>http://github.com/oozcitak/infra/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/oozcitak/infra.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>http://github.com/oozcitak/infra</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="@oozcitak/url@1.0.4">
+      <author>Ozgur Ozcitak</author>
+      <group>@oozcitak</group>
+      <name>url</name>
+      <version>1.0.4</version>
+      <description>An implementation of the URL Living Standard</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40oozcitak/url@1.0.4</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@oozcitak/url/-/url-1.0.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>http://github.com/oozcitak/url/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/oozcitak/url.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>http://github.com/oozcitak/url</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="@oozcitak/util@8.3.8">
+      <author>Ozgur Ozcitak</author>
+      <group>@oozcitak</group>
+      <name>util</name>
+      <version>8.3.8</version>
+      <description>Utility functions</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40oozcitak/util@8.3.8</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@oozcitak/util/-/util-8.3.8.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>http://github.com/oozcitak/util/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/oozcitak/util.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>http://github.com/oozcitak/util</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="abbrev@1.1.1">
+      <author>Isaac Z. Schlueter</author>
+      <name>abbrev</name>
+      <version>1.1.1</version>
+      <description>Like ruby's abbrev module, but in js</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/abbrev@1.1.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/abbrev-js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/isaacs/abbrev-js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/abbrev-js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="agent-base@6.0.2">
+      <author>Nathan Rajlich</author>
+      <name>agent-base</name>
+      <version>6.0.2</version>
+      <description>Turn a function into an `http.Agent` instance</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/agent-base@6.0.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/TooTallNate/node-agent-base/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/TooTallNate/node-agent-base.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/TooTallNate/node-agent-base#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="ajv-formats-draft2019@1.6.1">
+      <author>Carlo Quinonez</author>
+      <name>ajv-formats-draft2019</name>
+      <version>1.6.1</version>
+      <description>Plugin for AJV that adds support for some of string formats adding in the draft2019 JSON Schema.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ajv-formats-draft2019@1.6.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ajv-formats-draft2019/-/ajv-formats-draft2019-1.6.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/luzlab/ajv-formats-draft2019/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/luzlab/ajv-formats-draft2019.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/luzlab/ajv-formats-draft2019#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="ajv-formats@2.1.1">
+      <author>Evgeny Poberezkin</author>
+      <name>ajv-formats</name>
+      <version>2.1.1</version>
+      <description>Format validation for Ajv v7+</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ajv-formats@2.1.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ajv-formats/-/ajv-formats-2.1.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/ajv-validator/ajv-formats/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/ajv-validator/ajv-formats.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/ajv-validator/ajv-formats#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="ajv@8.17.1">
+      <author>Evgeny Poberezkin</author>
+      <name>ajv</name>
+      <version>8.17.1</version>
+      <description>Another JSON Schema Validator</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ajv@8.17.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/ajv-validator/ajv/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/ajv-validator/ajv.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://ajv.js.org</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="ansi-regex@5.0.1">
+      <author>Sindre Sorhus</author>
+      <name>ansi-regex</name>
+      <version>5.0.1</version>
+      <description>Regular expression for matching ANSI escape codes</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ansi-regex@5.0.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/ansi-regex/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/ansi-regex.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/ansi-regex#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="aproba@2.0.0">
+      <author>Rebecca Turner</author>
+      <name>aproba</name>
+      <version>2.0.0</version>
+      <description>A ridiculously light-weight argument validator (now browser friendly)</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/aproba@2.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/aproba/-/aproba-2.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/iarna/aproba/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/iarna/aproba.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/iarna/aproba</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="are-we-there-yet@2.0.0">
+      <author>GitHub Inc.</author>
+      <name>are-we-there-yet</name>
+      <version>2.0.0</version>
+      <description>Keep track of the overall completion of many disparate processes</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/are-we-there-yet@2.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/are-we-there-yet/-/are-we-there-yet-2.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/are-we-there-yet/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/npm/are-we-there-yet.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/are-we-there-yet</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="argparse@1.0.10">
+      <name>argparse</name>
+      <version>1.0.10</version>
+      <description>Very powerful CLI arguments parser. Native port of argparse - python's options parsing library</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/argparse@1.0.10</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodeca/argparse/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/nodeca/argparse.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodeca/argparse#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="balanced-match@1.0.2">
+      <author>Julian Gruber</author>
+      <name>balanced-match</name>
+      <version>1.0.2</version>
+      <description>Match balanced character pairs, like "{" and "}"</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/balanced-match@1.0.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/juliangruber/balanced-match/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/juliangruber/balanced-match.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/juliangruber/balanced-match</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="bindings@1.5.0">
+      <author>Nathan Rajlich</author>
+      <name>bindings</name>
+      <version>1.5.0</version>
+      <description>Helper module for loading your native module's .node file</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/bindings@1.5.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/bindings/-/bindings-1.5.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/TooTallNate/node-bindings/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/TooTallNate/node-bindings.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/TooTallNate/node-bindings</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="brace-expansion@1.1.11">
+      <author>Julian Gruber</author>
+      <name>brace-expansion</name>
+      <version>1.1.11</version>
+      <description>Brace expansion as known from sh/bash</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/brace-expansion@1.1.11</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/juliangruber/brace-expansion/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/juliangruber/brace-expansion.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/juliangruber/brace-expansion</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="chownr@2.0.0">
+      <author>Isaac Z. Schlueter</author>
+      <name>chownr</name>
+      <version>2.0.0</version>
+      <description>like `chown -R`</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/chownr@2.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/chownr/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/isaacs/chownr.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/chownr#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="color-support@1.1.3">
+      <author>Isaac Z. Schlueter</author>
+      <name>color-support</name>
+      <version>1.1.3</version>
+      <description>A module which will endeavor to guess your terminal's level of color support.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/color-support@1.1.3</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/color-support/-/color-support-1.1.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/color-support/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/isaacs/color-support.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/color-support#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="commander@2.20.3">
+      <author>TJ Holowaychuk</author>
+      <name>commander</name>
+      <version>2.20.3</version>
+      <description>the complete solution for node.js command-line programs</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/commander@2.20.3</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/commander/-/commander-2.20.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/tj/commander.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/tj/commander.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/tj/commander.js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="concat-map@0.0.1">
+      <author>James Halliday</author>
+      <name>concat-map</name>
+      <version>0.0.1</version>
+      <description>concatenative mapdashery</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/concat-map@0.0.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/substack/node-concat-map/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/substack/node-concat-map.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/substack/node-concat-map#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="console-control-strings@1.1.0">
+      <author>Rebecca Turner</author>
+      <name>console-control-strings</name>
+      <version>1.1.0</version>
+      <description>A library of cross-platform tested terminal/console command strings for doing things like color and cursor positioning.  This is a subset of both ansi and vt100.  All control codes included work on both Windows &amp; Unix-like OSes, except where noted.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/console-control-strings@1.1.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/console-control-strings/-/console-control-strings-1.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/iarna/console-control-strings/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/iarna/console-control-strings.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/iarna/console-control-strings#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="debug@4.3.5">
+      <author>Josh Junon</author>
+      <name>debug</name>
+      <version>4.3.5</version>
+      <description>Lightweight debugging utility for Node.js and the browser</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/debug@4.3.5</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/debug/-/debug-4.3.5.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/debug-js/debug/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/debug-js/debug.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/debug-js/debug#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="delegates@1.0.0">
+      <name>delegates</name>
+      <version>1.0.0</version>
+      <description>delegate methods and accessors to another property</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/delegates@1.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/delegates/-/delegates-1.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/visionmedia/node-delegates/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/visionmedia/node-delegates.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/visionmedia/node-delegates#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="detect-libc@2.0.3">
+      <author>Lovell Fuller</author>
+      <name>detect-libc</name>
+      <version>2.0.3</version>
+      <description>Node.js module to detect the C standard library (libc) implementation family and version</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/detect-libc@2.0.3</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/lovell/detect-libc/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/lovell/detect-libc.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/lovell/detect-libc#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="discontinuous-range@1.0.0">
+      <author>David Tudury</author>
+      <name>discontinuous-range</name>
+      <version>1.0.0</version>
+      <description>for adding, subtracting, and indexing discontinuous ranges of numbers</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/discontinuous-range@1.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/discontinuous-range/-/discontinuous-range-1.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/dtudury/discontinuous-range/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/dtudury/discontinuous-range.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/dtudury/discontinuous-range</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="emoji-regex@8.0.0">
+      <author>Mathias Bynens</author>
+      <name>emoji-regex</name>
+      <version>8.0.0</version>
+      <description>A regular expression to match all Emoji-only symbols as per the Unicode Standard.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/emoji-regex@8.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/mathiasbynens/emoji-regex.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://mths.be/emoji-regex</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="esprima@4.0.1">
+      <author>Ariya Hidayat</author>
+      <name>esprima</name>
+      <version>4.0.1</version>
+      <description>ECMAScript parsing infrastructure for multipurpose analysis</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>BSD-2-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/esprima@4.0.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/jquery/esprima/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/jquery/esprima.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>http://esprima.org</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="extend@3.0.2">
+      <author>Stefan Thomas</author>
+      <name>extend</name>
+      <version>3.0.2</version>
+      <description>Port of jQuery.extend for node.js and the browser</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/extend@3.0.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/extend/-/extend-3.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/justmoon/node-extend/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/justmoon/node-extend.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/justmoon/node-extend#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="fast-deep-equal@3.1.3">
+      <author>Evgeny Poberezkin</author>
+      <name>fast-deep-equal</name>
+      <version>3.1.3</version>
+      <description>Fast deep equal</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/fast-deep-equal@3.1.3</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/epoberezkin/fast-deep-equal/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/epoberezkin/fast-deep-equal.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/epoberezkin/fast-deep-equal#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="fast-uri@3.0.1">
+      <author>Vincent Le Goff</author>
+      <name>fast-uri</name>
+      <version>3.0.1</version>
+      <description>Dependency free RFC 3986 URI toolbox</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/fast-uri@3.0.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/fast-uri/-/fast-uri-3.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/fastify/fast-uri/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/fastify/fast-uri.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/fastify/fast-uri</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="file-uri-to-path@1.0.0">
+      <author>Nathan Rajlich</author>
+      <name>file-uri-to-path</name>
+      <version>1.0.0</version>
+      <description>Convert a file: URI to a file path</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/file-uri-to-path@1.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/TooTallNate/file-uri-to-path/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/TooTallNate/file-uri-to-path.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/TooTallNate/file-uri-to-path</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="fs-minipass@2.1.0">
+      <author>Isaac Z. Schlueter</author>
+      <name>fs-minipass</name>
+      <version>2.1.0</version>
+      <description>fs read and write streams based on minipass</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/fs-minipass@2.1.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/fs-minipass/-/fs-minipass-2.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/fs-minipass/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/npm/fs-minipass.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/fs-minipass#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <components>
+        <component type="library" bom-ref="fs-minipass@2.1.0|minipass@3.3.6">
+          <author>Isaac Z. Schlueter</author>
+          <name>minipass</name>
+          <version>3.3.6</version>
+          <description>minimal implementation of a PassThrough stream</description>
+          <scope>optional</scope>
+          <licenses>
+            <license>
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/minipass@3.3.6</purl>
+          <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
+              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+            </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/isaacs/minipass/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/isaacs/minipass.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/isaacs/minipass#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
+    </component>
+    <component type="library" bom-ref="fs.realpath@1.0.0">
+      <author>Isaac Z. Schlueter</author>
+      <name>fs.realpath</name>
+      <version>1.0.0</version>
+      <description>Use node's fs.realpath, but fall back to the JS implementation if the native one fails</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/fs.realpath@1.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/fs.realpath/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/isaacs/fs.realpath.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/fs.realpath#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="gauge@3.0.2">
+      <author>Rebecca Turner</author>
+      <name>gauge</name>
+      <version>3.0.2</version>
+      <description>A terminal based horizontal guage</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/gauge@3.0.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/gauge/-/gauge-3.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/gauge/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/iarna/gauge.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/gauge</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="glob@7.2.3">
+      <author>Isaac Z. Schlueter</author>
+      <name>glob</name>
+      <version>7.2.3</version>
+      <description>a little globber</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/glob@7.2.3</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/glob/-/glob-7.2.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/node-glob/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/isaacs/node-glob.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/node-glob#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="has-unicode@2.0.1">
+      <author>Rebecca Turner</author>
+      <name>has-unicode</name>
+      <version>2.0.1</version>
+      <description>Try to guess if your terminal supports unicode</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/has-unicode@2.0.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/has-unicode/-/has-unicode-2.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/iarna/has-unicode/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/iarna/has-unicode.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/iarna/has-unicode</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="https-proxy-agent@5.0.1">
+      <author>Nathan Rajlich</author>
+      <name>https-proxy-agent</name>
+      <version>5.0.1</version>
+      <description>An HTTP(s) proxy `http.Agent` implementation for HTTPS</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/https-proxy-agent@5.0.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/TooTallNate/node-https-proxy-agent/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/TooTallNate/node-https-proxy-agent.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/TooTallNate/node-https-proxy-agent#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="inflight@1.0.6">
+      <author>Isaac Z. Schlueter</author>
+      <name>inflight</name>
+      <version>1.0.6</version>
+      <description>Add callbacks to requests in flight to avoid async duplication</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/inflight@1.0.6</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/inflight/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/npm/inflight.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/inflight</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="inherits@2.0.4">
+      <name>inherits</name>
+      <version>2.0.4</version>
+      <description>Browser-friendly inheritance fully compatible with standard node.js inherits()</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/inherits@2.0.4</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/inherits/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/isaacs/inherits.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/inherits#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="is-fullwidth-code-point@3.0.0">
+      <author>Sindre Sorhus</author>
+      <name>is-fullwidth-code-point</name>
+      <version>3.0.0</version>
+      <description>Check if the character represented by a given Unicode code point is fullwidth</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/is-fullwidth-code-point@3.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/is-fullwidth-code-point/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/is-fullwidth-code-point.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/is-fullwidth-code-point#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="js-yaml@3.14.1">
+      <author>Vladimir Zapparov</author>
+      <name>js-yaml</name>
+      <version>3.14.1</version>
+      <description>YAML 1.2 parser and serializer</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/js-yaml@3.14.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodeca/js-yaml/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/nodeca/js-yaml.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodeca/js-yaml</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="json-schema-traverse@1.0.0">
+      <author>Evgeny Poberezkin</author>
+      <name>json-schema-traverse</name>
+      <version>1.0.0</version>
+      <description>Traverse JSON Schema passing each schema object to callback</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/json-schema-traverse@1.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/epoberezkin/json-schema-traverse/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/epoberezkin/json-schema-traverse.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/epoberezkin/json-schema-traverse#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="libxmljs2@0.32.0">
+      <author>marudor</author>
+      <name>libxmljs2</name>
+      <version>0.32.0</version>
+      <description>libxml bindings for v8 javascript engine</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/libxmljs2@0.32.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/libxmljs2/-/libxmljs2-0.32.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>http://github.com/marudor/libxmljs2/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/marudor/libxmljs2.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/marudor/libxmljs2#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="make-dir@3.1.0">
+      <author>Sindre Sorhus</author>
+      <name>make-dir</name>
+      <version>3.1.0</version>
+      <description>Make a directory and its parents if needed - Think `mkdir -p`</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/make-dir@3.1.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/make-dir/-/make-dir-3.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/make-dir/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/make-dir.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/make-dir#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <components>
+        <component type="library" bom-ref="make-dir@3.1.0|semver@6.3.1">
+          <author>GitHub Inc.</author>
+          <name>semver</name>
+          <version>6.3.1</version>
+          <description>The semantic version parser used by npm.</description>
+          <scope>optional</scope>
+          <licenses>
+            <license>
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/semver@6.3.1</purl>
+          <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/semver/-/semver-6.3.1.tgz</url>
+              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+            </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/npm/node-semver/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/npm/node-semver.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/npm/node-semver#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
+    </component>
+    <component type="library" bom-ref="minimatch@3.1.2">
+      <author>Isaac Z. Schlueter</author>
+      <name>minimatch</name>
+      <version>3.1.2</version>
+      <description>a glob matcher in javascript</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/minimatch@3.1.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/minimatch/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/isaacs/minimatch.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/minimatch#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="minipass@5.0.0">
+      <author>Isaac Z. Schlueter</author>
+      <name>minipass</name>
+      <version>5.0.0</version>
+      <description>minimal implementation of a PassThrough stream</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/minipass@5.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/minipass/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/isaacs/minipass.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/minipass#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="minizlib@2.1.2">
+      <author>Isaac Z. Schlueter</author>
+      <name>minizlib</name>
+      <version>2.1.2</version>
+      <description>A small fast zlib stream built on [minipass](http://npm.im/minipass) and Node.js's zlib binding.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/minizlib@2.1.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/minizlib/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/isaacs/minizlib.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/minizlib#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <components>
+        <component type="library" bom-ref="minizlib@2.1.2|minipass@3.3.6">
+          <author>Isaac Z. Schlueter</author>
+          <name>minipass</name>
+          <version>3.3.6</version>
+          <description>minimal implementation of a PassThrough stream</description>
+          <scope>optional</scope>
+          <licenses>
+            <license>
+              <id>ISC</id>
+            </license>
+          </licenses>
+          <purl>pkg:npm/minipass@3.3.6</purl>
+          <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
+              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+            </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/isaacs/minipass/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/isaacs/minipass.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/isaacs/minipass#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
+    </component>
+    <component type="library" bom-ref="mkdirp@1.0.4">
+      <name>mkdirp</name>
+      <version>1.0.4</version>
+      <description>Recursively mkdir, like `mkdir -p`</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/mkdirp@1.0.4</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/node-mkdirp/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/isaacs/node-mkdirp.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/node-mkdirp#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="moo@0.5.2">
+      <author>Tim Radvan</author>
+      <name>moo</name>
+      <version>0.5.2</version>
+      <description>Optimised tokenizer/lexer generator! 🐄 Much performance. Moo!</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/moo@0.5.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/moo/-/moo-0.5.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/tjvr/moo/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/tjvr/moo.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/tjvr/moo#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="ms@2.1.2">
+      <name>ms</name>
+      <version>2.1.2</version>
+      <description>Tiny millisecond conversion utility</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ms@2.1.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ms/-/ms-2.1.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/zeit/ms/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/zeit/ms.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/zeit/ms#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="nan@2.17.0">
+      <name>nan</name>
+      <version>2.17.0</version>
+      <description>Native Abstractions for Node.js: C++ header for Node 0.8 -&gt; 18 compatibility</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/nan@2.17.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/nan/-/nan-2.17.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodejs/nan/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/nodejs/nan.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodejs/nan#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="nearley@2.20.1">
+      <author>Hardmath123</author>
+      <name>nearley</name>
+      <version>2.20.1</version>
+      <description>Simple, fast, powerful parser toolkit for JavaScript.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/nearley@2.20.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/nearley/-/nearley-2.20.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/hardmath123/nearley/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/hardmath123/nearley.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/hardmath123/nearley#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="node-fetch@2.7.0">
+      <author>David Frank</author>
+      <name>node-fetch</name>
+      <version>2.7.0</version>
+      <description>A light-weight module that brings window.fetch to node.js</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/node-fetch@2.7.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/bitinn/node-fetch/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/bitinn/node-fetch.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/bitinn/node-fetch</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="nopt@5.0.0">
+      <author>Isaac Z. Schlueter</author>
+      <name>nopt</name>
+      <version>5.0.0</version>
+      <description>Option parsing for Node, supporting types, shorthands, etc. Used by npm.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/nopt@5.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/nopt/-/nopt-5.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/nopt/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/npm/nopt.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/nopt#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="npmlog@5.0.1">
+      <author>Isaac Z. Schlueter</author>
+      <name>npmlog</name>
+      <version>5.0.1</version>
+      <description>logger for npm</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/npmlog@5.0.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/npmlog/-/npmlog-5.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/npmlog/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/npm/npmlog.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/npmlog#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="object-assign@4.1.1">
+      <author>Sindre Sorhus</author>
+      <name>object-assign</name>
+      <version>4.1.1</version>
+      <description>ES2015 `Object.assign()` ponyfill</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/object-assign@4.1.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/object-assign/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/object-assign.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/object-assign#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="once@1.4.0">
+      <author>Isaac Z. Schlueter</author>
+      <name>once</name>
+      <version>1.4.0</version>
+      <description>Run a function exactly one time</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/once@1.4.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/once/-/once-1.4.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/once/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/isaacs/once.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/once#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="packageurl-js@1.2.1">
+      <author>the purl authors</author>
+      <name>packageurl-js</name>
+      <version>1.2.1</version>
+      <description>JavaScript library to parse and build "purl" aka. package URLs. This is a microlibrary implementing the purl spec at https://github.com/package-url</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/packageurl-js@1.2.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/packageurl-js/-/packageurl-js-1.2.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/package-url/packageurl-js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/package-url/packageurl-js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/package-url/packageurl-js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="path-is-absolute@1.0.1">
+      <author>Sindre Sorhus</author>
+      <name>path-is-absolute</name>
+      <version>1.0.1</version>
+      <description>Node.js 0.12 path.isAbsolute() ponyfill</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/path-is-absolute@1.0.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/path-is-absolute/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/path-is-absolute.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/path-is-absolute#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="punycode@2.3.1">
+      <author>Mathias Bynens</author>
+      <name>punycode</name>
+      <version>2.3.1</version>
+      <description>A robust Punycode converter that fully complies to RFC 3492 and RFC 5891, and works on nearly all JavaScript platforms.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/punycode@2.3.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/mathiasbynens/punycode.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/mathiasbynens/punycode.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://mths.be/punycode</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="railroad-diagrams@1.0.0">
+      <author>Tab Atkins Jr.</author>
+      <name>railroad-diagrams</name>
+      <version>1.0.0</version>
+      <description>A small JS+SVG library for drawing railroad syntax diagrams.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>CC0-1.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/railroad-diagrams@1.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/tabatkins/railroad-diagrams/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/tabatkins/railroad-diagrams.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/tabatkins/railroad-diagrams</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="randexp@0.4.6">
+      <author>Roly Fentanes</author>
+      <name>randexp</name>
+      <version>0.4.6</version>
+      <description>Create random strings that match a given regular expression.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/randexp@0.4.6</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/randexp/-/randexp-0.4.6.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/fent/randexp.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/fent/randexp.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>http://fent.github.io/randexp.js/</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="readable-stream@3.6.2">
+      <name>readable-stream</name>
+      <version>3.6.2</version>
+      <description>Streams3, a user-land copy of the stream library from Node.js</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/readable-stream@3.6.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodejs/readable-stream/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/nodejs/readable-stream.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodejs/readable-stream#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="require-from-string@2.0.2">
+      <author>Vsevolod Strukchinsky</author>
+      <name>require-from-string</name>
+      <version>2.0.2</version>
+      <description>Require module from string</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/require-from-string@2.0.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/floatdrop/require-from-string/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/floatdrop/require-from-string.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/floatdrop/require-from-string#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="ret@0.1.15">
+      <author>Roly Fentanes</author>
+      <name>ret</name>
+      <version>0.1.15</version>
+      <description>Tokenizes a string that represents a regular expression.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ret@0.1.15</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ret/-/ret-0.1.15.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/fent/ret.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/fent/ret.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/fent/ret.js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="rimraf@3.0.2">
+      <author>Isaac Z. Schlueter</author>
+      <name>rimraf</name>
+      <version>3.0.2</version>
+      <description>A deep deletion module for node (like `rm -rf`)</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/rimraf@3.0.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/rimraf/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/isaacs/rimraf.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/rimraf#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="safe-buffer@5.2.1">
+      <author>Feross Aboukhadijeh</author>
+      <name>safe-buffer</name>
+      <version>5.2.1</version>
+      <description>Safer Node.js Buffer API</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/safe-buffer@5.2.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/feross/safe-buffer/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/feross/safe-buffer.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/feross/safe-buffer</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="schemes@1.4.0">
+      <author>Peter Müller</author>
+      <name>schemes</name>
+      <version>1.4.0</version>
+      <description>IANA Uniform Resource Identifier (URI) Schemes list, including crowd sourced unofficial ones</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/schemes@1.4.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/schemes/-/schemes-1.4.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/Munter/schemes/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/Munter/schemes.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/Munter/schemes</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="semver@7.6.2">
+      <author>GitHub Inc.</author>
+      <name>semver</name>
+      <version>7.6.2</version>
+      <description>The semantic version parser used by npm.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/semver@7.6.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/semver/-/semver-7.6.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/node-semver/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/npm/node-semver.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/node-semver#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="set-blocking@2.0.0">
+      <author>Ben Coe</author>
+      <name>set-blocking</name>
+      <version>2.0.0</version>
+      <description>set blocking stdio and stderr ensuring that terminal output does not truncate</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/set-blocking@2.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/yargs/set-blocking/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/yargs/set-blocking.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/yargs/set-blocking#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="signal-exit@3.0.7">
+      <author>Ben Coe</author>
+      <name>signal-exit</name>
+      <version>3.0.7</version>
+      <description>when you want to fire an event no matter how a process exits.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/signal-exit@3.0.7</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/tapjs/signal-exit/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/tapjs/signal-exit.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/tapjs/signal-exit</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="smtp-address-parser@1.1.0">
+      <author>Gene Hightower</author>
+      <name>smtp-address-parser</name>
+      <version>1.1.0</version>
+      <description>Parse an SMTP (RFC-5321) address</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/smtp-address-parser@1.1.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/smtp-address-parser/-/smtp-address-parser-1.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/gene-hightower/smtp-address-parser/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/gene-hightower/smtp-address-parser.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/gene-hightower/smtp-address-parser#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="spdx-exceptions@2.5.0">
+      <author>The Linux Foundation</author>
+      <name>spdx-exceptions</name>
+      <version>2.5.0</version>
+      <description>list of SPDX standard license exceptions</description>
+      <licenses>
+        <license>
+          <id>CC-BY-3.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/spdx-exceptions@2.5.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.5.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/kemitchell/spdx-exceptions.json/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/kemitchell/spdx-exceptions.json.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/kemitchell/spdx-exceptions.json#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="spdx-expression-parse@3.0.1">
+      <author>Kyle E. Mitchell</author>
+      <name>spdx-expression-parse</name>
+      <version>3.0.1</version>
+      <description>parse SPDX license expressions</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/spdx-expression-parse@3.0.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-3.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/jslicense/spdx-expression-parse.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/jslicense/spdx-expression-parse.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/jslicense/spdx-expression-parse.js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="spdx-license-ids@3.0.18">
+      <author>Shinnosuke Watanabe</author>
+      <name>spdx-license-ids</name>
+      <version>3.0.18</version>
+      <description>A list of SPDX license identifiers</description>
+      <licenses>
+        <license>
+          <id>CC0-1.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/spdx-license-ids@3.0.18</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.18.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/jslicense/spdx-license-ids/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/jslicense/spdx-license-ids.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/jslicense/spdx-license-ids#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="sprintf-js@1.0.3">
+      <author>Alexandru Marasteanu</author>
+      <name>sprintf-js</name>
+      <version>1.0.3</version>
+      <description>JavaScript sprintf implementation</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/sprintf-js@1.0.3</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/alexei/sprintf.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/alexei/sprintf.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/alexei/sprintf.js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="string_decoder@1.3.0">
+      <name>string_decoder</name>
+      <version>1.3.0</version>
+      <description>The string_decoder module from Node core</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/string_decoder@1.3.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodejs/string_decoder/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/nodejs/string_decoder.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodejs/string_decoder</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="string-width@4.2.3">
+      <author>Sindre Sorhus</author>
+      <name>string-width</name>
+      <version>4.2.3</version>
+      <description>Get the visual width of a string - the number of columns required to display it</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/string-width@4.2.3</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/string-width/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/string-width.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/string-width#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="strip-ansi@6.0.1">
+      <author>Sindre Sorhus</author>
+      <name>strip-ansi</name>
+      <version>6.0.1</version>
+      <description>Strip ANSI escape codes from a string</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/strip-ansi@6.0.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/strip-ansi/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/strip-ansi.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/strip-ansi#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="tar@6.2.1">
+      <author>GitHub Inc.</author>
+      <name>tar</name>
+      <version>6.2.1</version>
+      <description>tar for node</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/tar@6.2.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/tar/-/tar-6.2.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/node-tar/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/isaacs/node-tar.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/node-tar#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="tr46@0.0.3">
+      <author>Sebastian Mayr</author>
+      <name>tr46</name>
+      <version>0.0.3</version>
+      <description>An implementation of the Unicode TR46 spec</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/tr46@0.0.3</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/Sebmaster/tr46.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/Sebmaster/tr46.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/Sebmaster/tr46.js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="uri-js@4.4.1">
+      <author>Gary Court</author>
+      <name>uri-js</name>
+      <version>4.4.1</version>
+      <description>An RFC 3986/3987 compliant, scheme extendable URI/IRI parsing/validating/resolving library for JavaScript.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>BSD-2-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/uri-js@4.4.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/uri-js/-/uri-js-4.4.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/garycourt/uri-js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/garycourt/uri-js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/garycourt/uri-js</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="util-deprecate@1.0.2">
+      <author>Nathan Rajlich</author>
+      <name>util-deprecate</name>
+      <version>1.0.2</version>
+      <description>The Node.js `util.deprecate()` function with browser support</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/util-deprecate@1.0.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/TooTallNate/util-deprecate/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/TooTallNate/util-deprecate.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/TooTallNate/util-deprecate</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="webidl-conversions@3.0.1">
+      <author>Domenic Denicola</author>
+      <name>webidl-conversions</name>
+      <version>3.0.1</version>
+      <description>Implements the WebIDL algorithms for converting to and from JavaScript values</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>BSD-2-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/webidl-conversions@3.0.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/jsdom/webidl-conversions/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/jsdom/webidl-conversions.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/jsdom/webidl-conversions#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="whatwg-url@5.0.0">
+      <author>Sebastian Mayr</author>
+      <name>whatwg-url</name>
+      <version>5.0.0</version>
+      <description>An implementation of the WHATWG URL Standard's URL API and parsing machinery</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/whatwg-url@5.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/jsdom/whatwg-url/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/jsdom/whatwg-url.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/jsdom/whatwg-url#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="wide-align@1.1.5">
+      <author>Rebecca Turner</author>
+      <name>wide-align</name>
+      <version>1.1.5</version>
+      <description>A wide-character aware text alignment function for use on the console or with fixed width fonts.</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/wide-align@1.1.5</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/wide-align/-/wide-align-1.1.5.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/iarna/wide-align/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/iarna/wide-align.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/iarna/wide-align#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="wrappy@1.0.2">
+      <author>Isaac Z. Schlueter</author>
+      <name>wrappy</name>
+      <version>1.0.2</version>
+      <description>Callback wrapping utility</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/wrappy@1.0.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/wrappy/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/npm/wrappy.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/wrappy</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="xmlbuilder2@3.1.1">
+      <author>Ozgur Ozcitak</author>
+      <name>xmlbuilder2</name>
+      <version>3.1.1</version>
+      <description>An XML builder for node.js</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/xmlbuilder2@3.1.1</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/xmlbuilder2/-/xmlbuilder2-3.1.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>http://github.com/oozcitak/xmlbuilder2/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/oozcitak/xmlbuilder2.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>http://github.com/oozcitak/xmlbuilder2</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="yallist@4.0.0">
+      <author>Isaac Z. Schlueter</author>
+      <name>yallist</name>
+      <version>4.0.0</version>
+      <description>Yet Another Linked List</description>
+      <scope>optional</scope>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/yallist@4.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/yallist/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/isaacs/yallist.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/yallist#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="@cyclonedx/cyclonedx-library@6.0.0">
+      <dependency ref="ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="ajv-formats@2.1.1"/>
+      <dependency ref="ajv@8.17.1"/>
+      <dependency ref="libxmljs2@0.32.0"/>
+      <dependency ref="packageurl-js@1.2.1"/>
+      <dependency ref="spdx-expression-parse@3.0.1"/>
+      <dependency ref="xmlbuilder2@3.1.1"/>
+    </dependency>
+    <dependency ref="@cyclonedx/cyclonedx-library@6.1.0">
+      <dependency ref="ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="ajv-formats@2.1.1"/>
+      <dependency ref="ajv@8.17.1"/>
+      <dependency ref="libxmljs2@0.32.0"/>
+      <dependency ref="packageurl-js@1.2.1"/>
+      <dependency ref="spdx-expression-parse@3.0.1"/>
+      <dependency ref="xmlbuilder2@3.1.1"/>
+    </dependency>
+    <dependency ref="@cyclonedx/cyclonedx-library@6.2.0">
+      <dependency ref="ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="ajv-formats@2.1.1"/>
+      <dependency ref="ajv@8.17.1"/>
+      <dependency ref="libxmljs2@0.32.0"/>
+      <dependency ref="packageurl-js@1.2.1"/>
+      <dependency ref="spdx-expression-parse@3.0.1"/>
+      <dependency ref="xmlbuilder2@3.1.1"/>
+    </dependency>
+    <dependency ref="@cyclonedx/cyclonedx-library@6.3.0">
+      <dependency ref="ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="ajv-formats@2.1.1"/>
+      <dependency ref="ajv@8.17.1"/>
+      <dependency ref="libxmljs2@0.32.0"/>
+      <dependency ref="packageurl-js@1.2.1"/>
+      <dependency ref="spdx-expression-parse@3.0.1"/>
+      <dependency ref="xmlbuilder2@3.1.1"/>
+    </dependency>
+    <dependency ref="@cyclonedx/cyclonedx-library@6.4.0">
+      <dependency ref="ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="ajv-formats@2.1.1"/>
+      <dependency ref="ajv@8.17.1"/>
+      <dependency ref="libxmljs2@0.32.0"/>
+      <dependency ref="packageurl-js@1.2.1"/>
+      <dependency ref="spdx-expression-parse@3.0.1"/>
+      <dependency ref="xmlbuilder2@3.1.1"/>
+    </dependency>
+    <dependency ref="@cyclonedx/cyclonedx-library@6.5.0">
+      <dependency ref="ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="ajv-formats@2.1.1"/>
+      <dependency ref="ajv@8.17.1"/>
+      <dependency ref="libxmljs2@0.32.0"/>
+      <dependency ref="packageurl-js@1.2.1"/>
+      <dependency ref="spdx-expression-parse@3.0.1"/>
+      <dependency ref="xmlbuilder2@3.1.1"/>
+    </dependency>
+    <dependency ref="@mapbox/node-pre-gyp@1.0.11">
+      <dependency ref="detect-libc@2.0.3"/>
+      <dependency ref="https-proxy-agent@5.0.1"/>
+      <dependency ref="make-dir@3.1.0"/>
+      <dependency ref="node-fetch@2.7.0"/>
+      <dependency ref="nopt@5.0.0"/>
+      <dependency ref="npmlog@5.0.1"/>
+      <dependency ref="rimraf@3.0.2"/>
+      <dependency ref="semver@7.6.2"/>
+      <dependency ref="tar@6.2.1"/>
+    </dependency>
+    <dependency ref="@oozcitak/dom@1.15.10">
+      <dependency ref="@oozcitak/infra@1.0.8"/>
+      <dependency ref="@oozcitak/url@1.0.4"/>
+      <dependency ref="@oozcitak/util@8.3.8"/>
+    </dependency>
+    <dependency ref="@oozcitak/infra@1.0.8">
+      <dependency ref="@oozcitak/util@8.3.8"/>
+    </dependency>
+    <dependency ref="@oozcitak/url@1.0.4">
+      <dependency ref="@oozcitak/infra@1.0.8"/>
+      <dependency ref="@oozcitak/util@8.3.8"/>
+    </dependency>
+    <dependency ref="@oozcitak/util@8.3.8"/>
+    <dependency ref="abbrev@1.1.1"/>
+    <dependency ref="agent-base@6.0.2">
+      <dependency ref="debug@4.3.5"/>
+    </dependency>
+    <dependency ref="ajv-formats-draft2019@1.6.1">
+      <dependency ref="ajv@8.17.1"/>
+      <dependency ref="punycode@2.3.1"/>
+      <dependency ref="schemes@1.4.0"/>
+      <dependency ref="smtp-address-parser@1.1.0"/>
+      <dependency ref="uri-js@4.4.1"/>
+    </dependency>
+    <dependency ref="ajv-formats@2.1.1">
+      <dependency ref="ajv@8.17.1"/>
+    </dependency>
+    <dependency ref="ajv@8.17.1">
+      <dependency ref="fast-deep-equal@3.1.3"/>
+      <dependency ref="fast-uri@3.0.1"/>
+      <dependency ref="json-schema-traverse@1.0.0"/>
+      <dependency ref="require-from-string@2.0.2"/>
+    </dependency>
+    <dependency ref="ansi-regex@5.0.1"/>
+    <dependency ref="aproba@2.0.0"/>
+    <dependency ref="are-we-there-yet@2.0.0">
+      <dependency ref="delegates@1.0.0"/>
+      <dependency ref="readable-stream@3.6.2"/>
+    </dependency>
+    <dependency ref="argparse@1.0.10">
+      <dependency ref="sprintf-js@1.0.3"/>
+    </dependency>
+    <dependency ref="balanced-match@1.0.2"/>
+    <dependency ref="bindings@1.5.0">
+      <dependency ref="file-uri-to-path@1.0.0"/>
+    </dependency>
+    <dependency ref="brace-expansion@1.1.11">
+      <dependency ref="balanced-match@1.0.2"/>
+      <dependency ref="concat-map@0.0.1"/>
+    </dependency>
+    <dependency ref="chownr@2.0.0"/>
+    <dependency ref="color-support@1.1.3"/>
+    <dependency ref="commander@2.20.3"/>
+    <dependency ref="concat-map@0.0.1"/>
+    <dependency ref="console-control-strings@1.1.0"/>
+    <dependency ref="debug@4.3.5">
+      <dependency ref="ms@2.1.2"/>
+    </dependency>
+    <dependency ref="delegates@1.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0">
+      <dependency ref="@cyclonedx/cyclonedx-library@6.0.0"/>
+      <dependency ref="@cyclonedx/cyclonedx-library@6.1.0"/>
+      <dependency ref="@cyclonedx/cyclonedx-library@6.2.0"/>
+      <dependency ref="@cyclonedx/cyclonedx-library@6.3.0"/>
+      <dependency ref="@cyclonedx/cyclonedx-library@6.4.0"/>
+      <dependency ref="@cyclonedx/cyclonedx-library@6.5.0"/>
+    </dependency>
+    <dependency ref="detect-libc@2.0.3"/>
+    <dependency ref="discontinuous-range@1.0.0"/>
+    <dependency ref="emoji-regex@8.0.0"/>
+    <dependency ref="esprima@4.0.1"/>
+    <dependency ref="extend@3.0.2"/>
+    <dependency ref="fast-deep-equal@3.1.3"/>
+    <dependency ref="fast-uri@3.0.1"/>
+    <dependency ref="file-uri-to-path@1.0.0"/>
+    <dependency ref="fs-minipass@2.1.0">
+      <dependency ref="fs-minipass@2.1.0|minipass@3.3.6"/>
+    </dependency>
+    <dependency ref="fs-minipass@2.1.0|minipass@3.3.6">
+      <dependency ref="yallist@4.0.0"/>
+    </dependency>
+    <dependency ref="fs.realpath@1.0.0"/>
+    <dependency ref="gauge@3.0.2">
+      <dependency ref="aproba@2.0.0"/>
+      <dependency ref="color-support@1.1.3"/>
+      <dependency ref="console-control-strings@1.1.0"/>
+      <dependency ref="has-unicode@2.0.1"/>
+      <dependency ref="object-assign@4.1.1"/>
+      <dependency ref="signal-exit@3.0.7"/>
+      <dependency ref="string-width@4.2.3"/>
+      <dependency ref="strip-ansi@6.0.1"/>
+      <dependency ref="wide-align@1.1.5"/>
+    </dependency>
+    <dependency ref="glob@7.2.3">
+      <dependency ref="fs.realpath@1.0.0"/>
+      <dependency ref="inflight@1.0.6"/>
+      <dependency ref="inherits@2.0.4"/>
+      <dependency ref="minimatch@3.1.2"/>
+      <dependency ref="once@1.4.0"/>
+      <dependency ref="path-is-absolute@1.0.1"/>
+    </dependency>
+    <dependency ref="has-unicode@2.0.1"/>
+    <dependency ref="https-proxy-agent@5.0.1">
+      <dependency ref="agent-base@6.0.2"/>
+      <dependency ref="debug@4.3.5"/>
+    </dependency>
+    <dependency ref="inflight@1.0.6">
+      <dependency ref="once@1.4.0"/>
+      <dependency ref="wrappy@1.0.2"/>
+    </dependency>
+    <dependency ref="inherits@2.0.4"/>
+    <dependency ref="is-fullwidth-code-point@3.0.0"/>
+    <dependency ref="js-yaml@3.14.1">
+      <dependency ref="argparse@1.0.10"/>
+      <dependency ref="esprima@4.0.1"/>
+    </dependency>
+    <dependency ref="json-schema-traverse@1.0.0"/>
+    <dependency ref="libxmljs2@0.32.0">
+      <dependency ref="@mapbox/node-pre-gyp@1.0.11"/>
+      <dependency ref="bindings@1.5.0"/>
+      <dependency ref="nan@2.17.0"/>
+    </dependency>
+    <dependency ref="make-dir@3.1.0">
+      <dependency ref="make-dir@3.1.0|semver@6.3.1"/>
+    </dependency>
+    <dependency ref="make-dir@3.1.0|semver@6.3.1"/>
+    <dependency ref="minimatch@3.1.2">
+      <dependency ref="brace-expansion@1.1.11"/>
+    </dependency>
+    <dependency ref="minipass@5.0.0"/>
+    <dependency ref="minizlib@2.1.2">
+      <dependency ref="minizlib@2.1.2|minipass@3.3.6"/>
+      <dependency ref="yallist@4.0.0"/>
+    </dependency>
+    <dependency ref="minizlib@2.1.2|minipass@3.3.6">
+      <dependency ref="yallist@4.0.0"/>
+    </dependency>
+    <dependency ref="mkdirp@1.0.4"/>
+    <dependency ref="moo@0.5.2"/>
+    <dependency ref="ms@2.1.2"/>
+    <dependency ref="nan@2.17.0"/>
+    <dependency ref="nearley@2.20.1">
+      <dependency ref="commander@2.20.3"/>
+      <dependency ref="moo@0.5.2"/>
+      <dependency ref="railroad-diagrams@1.0.0"/>
+      <dependency ref="randexp@0.4.6"/>
+    </dependency>
+    <dependency ref="node-fetch@2.7.0">
+      <dependency ref="whatwg-url@5.0.0"/>
+    </dependency>
+    <dependency ref="nopt@5.0.0">
+      <dependency ref="abbrev@1.1.1"/>
+    </dependency>
+    <dependency ref="npmlog@5.0.1">
+      <dependency ref="are-we-there-yet@2.0.0"/>
+      <dependency ref="console-control-strings@1.1.0"/>
+      <dependency ref="gauge@3.0.2"/>
+      <dependency ref="set-blocking@2.0.0"/>
+    </dependency>
+    <dependency ref="object-assign@4.1.1"/>
+    <dependency ref="once@1.4.0">
+      <dependency ref="wrappy@1.0.2"/>
+    </dependency>
+    <dependency ref="packageurl-js@1.2.1"/>
+    <dependency ref="path-is-absolute@1.0.1"/>
+    <dependency ref="punycode@2.3.1"/>
+    <dependency ref="railroad-diagrams@1.0.0"/>
+    <dependency ref="randexp@0.4.6">
+      <dependency ref="discontinuous-range@1.0.0"/>
+      <dependency ref="ret@0.1.15"/>
+    </dependency>
+    <dependency ref="readable-stream@3.6.2">
+      <dependency ref="inherits@2.0.4"/>
+      <dependency ref="string_decoder@1.3.0"/>
+      <dependency ref="util-deprecate@1.0.2"/>
+    </dependency>
+    <dependency ref="require-from-string@2.0.2"/>
+    <dependency ref="ret@0.1.15"/>
+    <dependency ref="rimraf@3.0.2">
+      <dependency ref="glob@7.2.3"/>
+    </dependency>
+    <dependency ref="safe-buffer@5.2.1"/>
+    <dependency ref="schemes@1.4.0">
+      <dependency ref="extend@3.0.2"/>
+    </dependency>
+    <dependency ref="semver@7.6.2"/>
+    <dependency ref="set-blocking@2.0.0"/>
+    <dependency ref="signal-exit@3.0.7"/>
+    <dependency ref="smtp-address-parser@1.1.0">
+      <dependency ref="nearley@2.20.1"/>
+    </dependency>
+    <dependency ref="spdx-exceptions@2.5.0"/>
+    <dependency ref="spdx-expression-parse@3.0.1">
+      <dependency ref="spdx-exceptions@2.5.0"/>
+      <dependency ref="spdx-license-ids@3.0.18"/>
+    </dependency>
+    <dependency ref="spdx-license-ids@3.0.18"/>
+    <dependency ref="sprintf-js@1.0.3"/>
+    <dependency ref="string_decoder@1.3.0">
+      <dependency ref="safe-buffer@5.2.1"/>
+    </dependency>
+    <dependency ref="string-width@4.2.3">
+      <dependency ref="emoji-regex@8.0.0"/>
+      <dependency ref="is-fullwidth-code-point@3.0.0"/>
+      <dependency ref="strip-ansi@6.0.1"/>
+    </dependency>
+    <dependency ref="strip-ansi@6.0.1">
+      <dependency ref="ansi-regex@5.0.1"/>
+    </dependency>
+    <dependency ref="tar@6.2.1">
+      <dependency ref="chownr@2.0.0"/>
+      <dependency ref="fs-minipass@2.1.0"/>
+      <dependency ref="minipass@5.0.0"/>
+      <dependency ref="minizlib@2.1.2"/>
+      <dependency ref="mkdirp@1.0.4"/>
+      <dependency ref="yallist@4.0.0"/>
+    </dependency>
+    <dependency ref="tr46@0.0.3"/>
+    <dependency ref="uri-js@4.4.1">
+      <dependency ref="punycode@2.3.1"/>
+    </dependency>
+    <dependency ref="util-deprecate@1.0.2"/>
+    <dependency ref="webidl-conversions@3.0.1"/>
+    <dependency ref="whatwg-url@5.0.0">
+      <dependency ref="tr46@0.0.3"/>
+      <dependency ref="webidl-conversions@3.0.1"/>
+    </dependency>
+    <dependency ref="wide-align@1.1.5">
+      <dependency ref="string-width@4.2.3"/>
+    </dependency>
+    <dependency ref="wrappy@1.0.2"/>
+    <dependency ref="xmlbuilder2@3.1.1">
+      <dependency ref="@oozcitak/dom@1.15.10"/>
+      <dependency ref="@oozcitak/infra@1.0.8"/>
+      <dependency ref="@oozcitak/util@8.3.8"/>
+      <dependency ref="js-yaml@3.14.1"/>
+    </dependency>
+    <dependency ref="yallist@4.0.0"/>
+  </dependencies>
+</bom>

@@ -1,0 +1,12 @@
+{
+  "name": "my-local-e",
+  "description": "demo: my-local-e - a standalone package that is not dependency of root nor any other package",
+  "private": true,
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/local-deps/project/packages/my-local-e"
+  }
+}

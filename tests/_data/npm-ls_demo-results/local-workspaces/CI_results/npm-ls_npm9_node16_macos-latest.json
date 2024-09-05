@@ -1,9 +1,10 @@
 {
   "version": "0.0.0",
   "name": "demo-workspaces",
-  "description": "demo: demo-workspaces -- showcase how workspaces look like",
   "private": true,
+  "description": "demo: demo-workspaces -- showcase how workspaces look like",
   "license": "Apache-2.0",
+  "repository": "git@gitlab.example.com:my-packages/demo-workspaces.git",
   "workspaces": [
     "workspaces/*"
   ],
@@ -98,6 +99,19 @@
           "peerDependencies": {}
         }
       }
+    },
+    "my-local-e": {
+      "version": "0.1.0",
+      "resolved": "file:../workspaces/my-local-e",
+      "overridden": false,
+      "name": "my-local-e",
+      "license": "Apache-2.0",
+      "_id": "my-local-e@0.1.0",
+      "extraneous": false,
+      "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-e",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
     }
   }
 }

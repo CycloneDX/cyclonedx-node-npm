@@ -1,0 +1,184 @@
+{
+  "name": "demo-local-deps",
+  "description": "demo: demo-local-deps -- showcase how local dependencies look like",
+  "private": true,
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/local-dependencies/project"
+  },
+  "dependencies": {
+    "my-local-a": {
+      "name": "my-local-a",
+      "description": "demo: my-local-a",
+      "private": true,
+      "version": "0.0.0",
+      "license": "Apache-2.0",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+        "directory": "demo/local-deps/project/packages/my-local-a"
+      },
+      "dependencies": {
+        "my-local-b-off": {
+          "name": "my-local-b-off",
+          "description": "demo: my-local-b-off - a package with a different name than its dir",
+          "private": true,
+          "version": "0.0.0",
+          "license": "Apache-2.0",
+          "repository": {
+            "type": "git",
+            "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-node-npm.git",
+            "directory": "demo/local-dependencies/project/packages/my-local-b"
+          },
+          "bugs": {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues"
+          },
+          "readme": "ERROR: No README data found!",
+          "homepage": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+          "_id": "my-local-b-off@0.0.0",
+          "_requested": {
+            "type": "directory",
+            "where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+            "raw": "my-local-b-off@file:packages/my-local-b",
+            "name": "my-local-b-off",
+            "escapedName": "my-local-b-off",
+            "rawSpec": "file:packages/my-local-b",
+            "saveSpec": "file:packages\\my-local-b",
+            "fetchSpec": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-local-b"
+          },
+          "_spec": "file:packages/my-local-b",
+          "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+          "_args": [
+            [
+              "my-local-b-off@file:packages\\my-local-b",
+              "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project"
+            ]
+          ],
+          "dependencies": {},
+          "devDependencies": {},
+          "optionalDependencies": {},
+          "_dependencies": {},
+          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\node_modules\\my-local-b-off",
+          "error": null,
+          "extraneous": false,
+          "link": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-local-b"
+        }
+      },
+      "bugs": {
+        "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues"
+      },
+      "readme": "ERROR: No README data found!",
+      "homepage": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+      "_id": "my-local-a@0.0.0",
+      "_requested": {
+        "type": "directory",
+        "where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+        "raw": "my-local-a@file:packages/my-local-a",
+        "name": "my-local-a",
+        "escapedName": "my-local-a",
+        "rawSpec": "file:packages/my-local-a",
+        "saveSpec": "file:packages\\my-local-a",
+        "fetchSpec": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-local-a"
+      },
+      "_spec": "file:packages/my-local-a",
+      "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+      "_args": [
+        [
+          "my-local-a@file:packages\\my-local-a",
+          "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project"
+        ]
+      ],
+      "devDependencies": {},
+      "optionalDependencies": {},
+      "_dependencies": {
+        "my-local-b-off": "file:../my-local-b"
+      },
+      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\node_modules\\my-local-a",
+      "error": "[Circular]",
+      "extraneous": false,
+      "link": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-local-a"
+    },
+    "my-noname": {
+      "name": "",
+      "description": "demo: with no/empty name",
+      "private": true,
+      "version": "0.0.0",
+      "license": "Apache-2.0",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-node-npm.git",
+        "directory": "demo/local-dependencies/project/packages/my-noname"
+      },
+      "bugs": {
+        "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues"
+      },
+      "readme": "ERROR: No README data found!",
+      "homepage": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+      "_id": "@0.0.0",
+      "_requested": {
+        "type": "directory",
+        "where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+        "raw": "my-noname@file:packages/my-noname",
+        "name": "my-noname",
+        "escapedName": "my-noname",
+        "rawSpec": "file:packages/my-noname",
+        "saveSpec": "file:packages\\my-noname",
+        "fetchSpec": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-noname"
+      },
+      "_spec": "file:packages/my-noname",
+      "_where": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+      "_args": [
+        [
+          "my-noname@file:packages\\my-noname",
+          "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project"
+        ]
+      ],
+      "dependencies": {},
+      "devDependencies": {},
+      "optionalDependencies": {},
+      "_dependencies": {},
+      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\node_modules\\my-noname",
+      "error": "[Circular]",
+      "extraneous": false,
+      "link": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-noname"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+  "_id": "demo-local-deps@0.0.0",
+  "_shrinkwrap": {
+    "name": "demo-local-deps",
+    "version": "0.0.0",
+    "lockfileVersion": 1,
+    "requires": true,
+    "dependencies": {
+      "my-local-a": {
+        "version": "file:packages/my-local-a",
+        "requires": {
+          "my-local-b-off": "file:..\\my-local-b"
+        }
+      },
+      "my-local-b-off": {
+        "version": "file:packages/my-local-b"
+      },
+      "my-noname": {
+        "version": "file:packages/my-noname"
+      }
+    }
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "_dependencies": {
+    "my-local-a": "file:packages/my-local-a",
+    "my-noname": "file:packages/my-noname"
+  },
+  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+  "error": "[Circular]",
+  "extraneous": false
+}

@@ -4,6 +4,11 @@
   "private": true,
   "version": "0.0.0",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/local-dependencies/project"
+  },
   "dependencies": {
     "my-local-a": {
       "name": "my-local-a",
@@ -23,7 +28,16 @@
           "private": true,
           "version": "0.0.0",
           "license": "Apache-2.0",
+          "repository": {
+            "type": "git",
+            "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-node-npm.git",
+            "directory": "demo/local-dependencies/project/packages/my-local-b"
+          },
+          "bugs": {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues"
+          },
           "readme": "ERROR: No README data found!",
+          "homepage": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
           "_id": "my-local-b-off@0.0.0",
           "_requested": {
             "type": "directory",
@@ -93,7 +107,16 @@
       "private": true,
       "version": "0.0.0",
       "license": "Apache-2.0",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-node-npm.git",
+        "directory": "demo/local-dependencies/project/packages/my-noname"
+      },
+      "bugs": {
+        "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues"
+      },
       "readme": "ERROR: No README data found!",
+      "homepage": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
       "_id": "@0.0.0",
       "_requested": {
         "type": "directory",
@@ -123,7 +146,11 @@
       "link": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\packages\\my-noname"
     }
   },
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues"
+  },
   "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
   "_id": "demo-local-deps@0.0.0",
   "_shrinkwrap": {
     "name": "demo-local-deps",
