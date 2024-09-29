@@ -418,6 +418,7 @@ export class BomBuilder {
    */
   private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
+  // 
   private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | false | undefined {
     // older npm-ls versions (v6) hide properties behind a `_`
     const isOptional = (data.optional ?? data._optional) === true
@@ -428,9 +429,24 @@ export class BomBuilder {
 
     // older npm-ls versions (v6) hide properties behind a `_`
     const isDev = (data.dev ?? data._development) === true
-    if (isDev && this.omitDependencyTypes.has('dev')) {
-      this.console.debug('DEBUG | omit dev component: %j %j', data.name, data._id)
-      return false
+    // if (isDev && this.omitDependencyTypes.has('dev')) {
+    //   this.console.debug('DEBUG | omit dev component: %j %j', data.name, data._id)
+    //   return false
+    // }
+
+    // Initialize component with a default value
+    let component: Models.Component | undefined = undefined;
+
+    // Modify the component's scope for devDependencies
+    if (isDev) {
+      // Set the scope of dev dependencies to 'Excluded'
+      component = this.componentBuilder.makeComponent(data, type);
+      if (component) {
+        component.scope = Enums.ComponentScope.Excluded;  // This line ensures dev dependencies are marked as excluded
+      }
+    } else {
+      // Handle other component logic (omitted for brevity)
+      component = this.componentBuilder.makeComponent(data, type);
     }
 
     // attention: `data.devOptional` are not to be skipped with devs, since they are still required by optionals.
@@ -453,48 +469,48 @@ export class BomBuilder {
     }
     // endregion fix normalizations
 
-    const component = this.componentBuilder.makeComponent(
+    const newComponent = this.componentBuilder.makeComponent(
       _dataC as normalizePackageData.Package,
       type
     )
-    if (component === undefined) {
+    if (newComponent === undefined) {
       this.console.debug('DEBUG | skip broken component: %j %j', data.name, data._id)
       return undefined
     }
 
-    component.licenses.forEach(l => {
+    newComponent.licenses.forEach(l => {
       l.acknowledgement = Enums.LicenseAcknowledgement.Declared
     })
 
     if (isOptional || isDevOptional) {
-      component.scope = Enums.ComponentScope.Optional
+      newComponent.scope = Enums.ComponentScope.Optional
     }
 
     // region properties
 
     if (isString(data.path)) {
-      component.properties.add(
+      newComponent.properties.add(
         new Models.Property(PropertyNames.PackageInstallPath, data.path as string)
       )
     }
     if (isDev || isDevOptional) {
-      component.properties.add(
+      newComponent.properties.add(
         new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
       )
     }
     if (data.extraneous === true) {
-      component.properties.add(
+      newComponent.properties.add(
         new Models.Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
       )
     }
     if (data.private === true || _dataC.private === true) {
-      component.properties.add(
+      newComponent.properties.add(
         new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
       )
     }
     // older npm-ls versions (v6) hide properties behind a `_`
     if ((data.inBundle ?? data._inBundle) === true) {
-      component.properties.add(
+      newComponent.properties.add(
         new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
       )
     }
@@ -519,7 +535,7 @@ export class BomBuilder {
           }
         }
       }
-      component.externalReferences.add(
+      newComponent.externalReferences.add(
         new Models.ExternalReference(
           tryRemoveSecretsFromUrl(resolved),
           Enums.ExternalReferenceType.Distribution,
@@ -533,16 +549,16 @@ export class BomBuilder {
     }
 
     // even private packages may have a PURL for identification
-    component.purl = this.makePurl(component)
+    newComponent.purl = this.makePurl(newComponent)
 
     /* eslint-disable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing
        -- since empty-string handling is needed */
-    component.bomRef.value = (isString(data._id) ? data._id : undefined) ||
-      `${component.group || '-'}/${component.name}@${component.version || '-'}`
+    newComponent.bomRef.value = (isString(data._id) ? data._id : undefined) ||
+      `${newComponent.group || '-'}/${newComponent.name}@${newComponent.version || '-'}`
     /* eslint-enable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing */
 
-    return component
-  }
+    return newComponent
+}
 
   private makePurl (component: Models.Component): PackageURL | undefined {
     const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
