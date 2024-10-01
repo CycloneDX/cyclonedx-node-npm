@@ -422,23 +422,58 @@ export class BomBuilder {
 
   private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | false | undefined {
     // older npm-ls versions (v6) hide properties behind a `_`
-    const isOptional = (data.optional ?? data._optional) === true
+    const isOptional = (data.optional ?? data._optional) === trueFrom https://github.com/ARRY7686/cyclonedx-node-npm
+    * branch            set_devdependencies_to_excluded -> FETCH_HEAD
+   hint: You have divergent branches and need to specify how to reconcile them.
+   hint: You can do so by running one of the following commands sometime before
+   hint: your next pull:
+   hint: 
+   hint:   git config pull.rebase false  # merge (the default strategy)
+   hint:   git config pull.rebase true   # rebase
+   hint:   git config pull.ff only       # fast-forward only
+   hint: 
+   hint: You can replace "git config" with "git config --global" to set a default
+   hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+   hint: or --ff-only on the command line to override the configured default per
+   hint: invocation.
+   fatal: Need to specify how to reconcile divergent branches.
     if (isOptional && this.omitDependencyTypes.has('optional')) {
       this.console.debug('DEBUG | omit optional component: %j %j', data.name, data._id)
       return false
-    }
-
-    // older npm-ls versions (v6) hide properties behind a `_`
+    }From https://github.com/ARRY7686/cyclonedx-node-npm
+    * branch            set_devdependencies_to_excluded -> FETCH_HEAD
+   hint: You have divergent branches and need to specify how to reconcile them.
+   hint: You can do so by running one of the following commands sometime before
+   hint: your next pull:
+   hint: 
+   hint:   git config pull.rebase false  # merge (the default strategy)
+   hint:   git config pull.rebase true   # rebase
+   hint:   git config pull.ff only       # fast-forward only
+   hint: 
+   hint: You can replace "git config" with "git config --global" to set a default
+   hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+   hint: or --ff-only on the command line to override the configured default per
+   hint: invocation.
+   fatal: Need to specify how to reconcile divergent branches.roperties behind a `_`
     const isDev = (data.dev ?? data._development) === true
+    // if (isDev && this.omitDependencyTypes.has('dev')) {
+    //   this.console.debug('DEBUG | omit dev component: %j %j', data.name, data._id)
+    //   return false
+    // }
 
     // Initialize component with a default value
-    let component: Models.Component | undefined
-    // Handle other component logic (omitted for brevity)
-    component = this.componentBuilder.makeComponent(data as PackageJson, type)
+    let component: Models.Component | undefined = undefined;
 
     // Modify the component's scope for devDependencies
-    if (isDev && component !== undefined) {
-      component.scope = Enums.ComponentScope.Excluded // This line ensures dev dependencies are marked as excluded
+    if (isDev) {
+      // Set the scope of dev dependencies to 'Excluded'
+      component = this.componentBuilder.makeComponent(data, type);
+      if (component) {
+        component.scope = Enums.ComponentScope.Excluded;  // This line ensures dev dependencies are marked as excluded
+      }
+    } else {
+      // Handle other component logic (omitted for brevity)
+      component = this.componentBuilder.makeComponent(data, type);
     }
 
     // attention: `data.devOptional` are not to be skipped with devs, since they are still required by optionals.
@@ -461,7 +496,7 @@ export class BomBuilder {
     }
     // endregion fix normalizations
 
-    component = this.componentBuilder.makeComponent(
+    const newComponent = this.componentBuilder.makeComponent(
       _dataC as normalizePackageData.Package,
       type
     )
@@ -549,8 +584,8 @@ export class BomBuilder {
       `${component.group || '-'}/${component.name}@${component.version || '-'}`
     /* eslint-enable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing */
 
-    return component
-  }
+    return newComponent
+}
 
   private makePurl (component: Models.Component): PackageURL | undefined {
     const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
