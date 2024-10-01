@@ -17,7 +17,9 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
+import type { Builders, Factories } from '@cyclonedx/cyclonedx-library'
+import { Enums, Models, Utils } from '@cyclonedx/cyclonedx-library'
+import type { PackageJson } from '@cyclonedx/cyclonedx-library/dist.d/_helpers/packageJson'
 import { existsSync } from 'fs'
 import * as normalizePackageData from 'normalize-package-data'
 import { type PackageURL } from 'packageurl-js'
@@ -418,7 +420,6 @@ export class BomBuilder {
    */
   private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
-  // 
   private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | false | undefined {
     // older npm-ls versions (v6) hide properties behind a `_`
     const isOptional = (data.optional ?? data._optional) === true
@@ -430,17 +431,15 @@ export class BomBuilder {
     // older npm-ls versions (v6) hide properties behind a `_`
     const isDev = (data.dev ?? data._development) === true
 
-
     // Initialize component with a default value
-    let component: Models.Component | undefined = undefined;
+    let component: Models.Component | undefined
     // Handle other component logic (omitted for brevity)
-    component = this.componentBuilder.makeComponent(data, type);
-
+    component = this.componentBuilder.makeComponent(data as PackageJson, type)
 
     // Modify the component's scope for devDependencies
-    if (isDev && component) {
-        component.scope = Enums.ComponentScope.Excluded;  // This line ensures dev dependencies are marked as excluded
-    } 
+    if (isDev && component !== undefined) {
+      component.scope = Enums.ComponentScope.Excluded // This line ensures dev dependencies are marked as excluded
+    }
 
     // attention: `data.devOptional` are not to be skipped with devs, since they are still required by optionals.
     const isDevOptional = data.devOptional === true
@@ -462,7 +461,7 @@ export class BomBuilder {
     }
     // endregion fix normalizations
 
-     component = this.componentBuilder.makeComponent(
+    component = this.componentBuilder.makeComponent(
       _dataC as normalizePackageData.Package,
       type
     )
@@ -551,7 +550,7 @@ export class BomBuilder {
     /* eslint-enable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing */
 
     return component
-}
+  }
 
   private makePurl (component: Models.Component): PackageURL | undefined {
     const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
