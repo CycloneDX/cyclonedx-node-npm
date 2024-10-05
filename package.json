@@ -50,7 +50,7 @@
     "@cyclonedx/cyclonedx-library": "^6.11.0",
     "commander": "^10.0.0",
     "normalize-package-data": "^3||^4||^5||^6",
-    "packageurl-js": "^1.2.1",
+    "packageurl-js": "^2.0.1",
     "xmlbuilder2": "^3.0.2"
   },
   "devDependencies": {
