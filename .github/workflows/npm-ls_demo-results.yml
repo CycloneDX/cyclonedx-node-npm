@@ -61,7 +61,7 @@ jobs:
             node-version: '22'  # Current
             os: ubuntu-latest
           - subject: local-workspaces
-            additional_nom-ls_args: '-ws'
+            additional_nom-ls_args: '--workspaces'
             npm-version: '10'   # Current
             node-version: '22'  # Current
             os: ubuntu-latest
