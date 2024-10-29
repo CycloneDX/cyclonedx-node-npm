@@ -13,7 +13,7 @@ env:
 
 jobs:
   demo-results:
-    name: '${{ matrix.subject }} npm${{ matrix.npm-version }} node${{ matrix.node-version }} ${{ matrix.os }}'
+    name: '${{ matrix.subject }} ${{matrix.additional_nom-ls_args}} | npm${{ matrix.npm-version }} node${{ matrix.node-version }} ${{ matrix.os }}'
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false # gather all the results !
@@ -24,16 +24,17 @@ jobs:
           # - bundled-dependencies
           # - dev-dependencies
           # - juice-shop
-          - local-dependencies
+          # - local-dependencies
           - local-workspaces
           # - package-integrity
           # - package-with-build-id
+        additional_nom-ls_args: [ '' ]
         npm-version:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
           ## see also: https://github.com/npm/cli/releases
-          - '10' # https://github.com/npm/cli/releases/tag/v10.0.0-pre.0
-          - '9'      # Current
-          - '8'      # Latest
+          - '10'     # Current
+          - '9'      # Legacy
+          - '8'      # Legacy
           - '7'      # Legacy
           - '6'      # Legacy
         node-version:
@@ -48,6 +49,22 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
+        include:
+          - subject: local-workspaces
+            additional_nom-ls_args: '-w my-local-e'
+            npm-version: '10'   # Current
+            node-version: '22'  # Current
+            os: ubuntu-latest
+          - subject: local-workspaces
+            additional_nom-ls_args: '-w my-local -w my-local-e'
+            npm-version: '10'   # Current
+            node-version: '22'  # Current
+            os: ubuntu-latest
+          - subject: local-workspaces
+            additional_nom-ls_args: '-ws'
+            npm-version: '10'   # Current
+            node-version: '22'  # Current
+            os: ubuntu-latest
         exclude:
           - # macos-latest no longer supports node14
             os: macos-latest
@@ -81,7 +98,7 @@ jobs:
       - name: prepare output
         run: |
           mkdir -p '${{ env.RESULTS_DIR }}'
-          echo 'OUT_FILE_PREFIX=${{ env.RESULTS_DIR }}/npm-ls_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}' >> $GITHUB_ENV
+          echo 'OUT_FILE_PREFIX=${{ env.RESULTS_DIR }}/npm-ls${{ matrix.additional_nom-ls_args }}_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}' >> $GITHUB_ENV
         working-directory: '${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}'
         shell: bash # don't want to write tht code twice, windows and unix-like
       - name: Setup Node.js ${{ matrix.node-version }}
@@ -103,15 +120,15 @@ jobs:
         # important: the command in use is the same used by the internal builders of this project
         run: >
           npm --prefix project
-          ls --json --all --long
-          2> ${{ env.OUT_FILE_PREFIX }}.err.log
-          1> ${{ env.OUT_FILE_PREFIX }}.json
+          ls --json --all --long ${{ matrix.additional_nom-ls_args }}
+          2> '${{ env.OUT_FILE_PREFIX }}.err.log'
+          1> '${{ env.OUT_FILE_PREFIX }}.json'
         working-directory: '${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}'
       - name: Artifact RESULTS
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: '${{ env.RESULTS_ARTIFACT }}_${{ matrix.subject }}_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}'
+          name: '${{ env.RESULTS_ARTIFACT }}_${{ matrix.subject }}${{ matrix.additional_nom-ls_args }}_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}'
           path: '${{ env.DEMO_ROOT_DIR}}/*/${{ env.RESULTS_DIR }}'
           if-no-files-found: error
           retention-days: 3
