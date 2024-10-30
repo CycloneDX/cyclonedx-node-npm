@@ -20,14 +20,14 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 const { sync: glob } = require('fast-glob')
 
 const fileGlob = '*/CI_results/*.json'
-const filePattern = /\/(?<subject>[^/]+?)\/CI_results\/npm-ls_npm(?<npm>.+?)_node(?<node>.+?)_(?<os>.+?).json$/i
+const filePattern = /\/(?<subject>[^/]+?)\/CI_results\/npm-ls(?<args>.*?)_npm(?<npm>.+?)_node(?<node>.+?)_(?<os>.+?).json$/i
 /** @type {import('fast-glob').OptionsInternal} */
 const globOptions = { absolute: true, caseSensitiveMatch: false, cwd: __dirname, deep: 3, onlyFiles: true, unique: true }
 
 let cached
 
 /**
- * @return {{path:string, subject?:string, npm?:string, node?:string, os?:string}[]}
+ * @return {{path:string, subject?:string, args?:string, npm?:string, node?:string, os?:string}[]}
  */
 function index () {
   if (cached === undefined) {

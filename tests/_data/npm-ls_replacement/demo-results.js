@@ -30,9 +30,14 @@ process.exitCode = Number(process.env.CT_EXIT_CODE || 0)
 
 const index = require('../npm-ls_demo-results').index()
 
-const { CT_SUBJECT: subject, CT_NPM: npm, CT_NODE: node, CT_OS: os } = process.env
-const matches = index.filter(i => i.subject === subject && i.npm === npm && i.node === node && i.os === os)
-assert.strictEqual(matches.length, 1, 'did not find exactly 1 match')
+const { CT_SUBJECT: subject, CT_ARGS: args = '', CT_NPM: npm, CT_NODE: node, CT_OS: os } = process.env
+const matches = index.filter(i =>
+  i.subject === subject &&
+  i.args === args &&
+  i.npm === npm &&
+  i.node === node &&
+  i.os === os)
+assert.strictEqual(matches.length, 1, `did not find exactly 1 match: ${JSON.stringify(matches)}`)
 
 const { path } = matches[0]
 
