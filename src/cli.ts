@@ -87,6 +87,10 @@ function makeCommand (process: NodeJS.Process): Command {
       `"${Omittable.Dev}" if the NODE_ENV environment variable is set to "production", otherwise empty`
     )
   ).addOption(
+    new Option('-w, --workspace <workspace-name...>', 'workspace')
+  ).addOption(
+    new Option('-ws, --workspaces', 'all workspaces')
+  ).addOption(
     new Option(
       '--flatten-components',
       'Whether to flatten the components.\n' +
