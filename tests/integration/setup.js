@@ -18,11 +18,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { spawnSync } = require('child_process')
-const path = require('path')
+const { join } = require('path')
 const { getNpmVersion } = require('../_helper')
-
-const projectRootPath = path.resolve(__dirname, '..', '..')
-const demoRootPath = path.resolve(projectRootPath, 'demo');
+const { projectDemoRootPath } = require('./');
 
 (function () {
   const REQUIRES_INSTALL = []
@@ -33,15 +31,15 @@ const demoRootPath = path.resolve(projectRootPath, 'demo');
 
   if (npmVersion[0] >= 8) {
     REQUIRES_INSTALL.push(
-      path.join(demoRootPath, 'alternative-package-registry', 'project'),
-      path.join(demoRootPath, 'bundled-dependencies', 'project'),
-      // path.join(demoRootPath, 'deps-from-git', 'project'),
-      path.join(demoRootPath, 'dev-dependencies', 'project'),
-      // path.join(demoRootPath, 'juice-shop', 'project'),
-      path.join(demoRootPath, 'local-dependencies', 'project'),
-      path.join(demoRootPath, 'local-workspaces', 'project'),
-      path.join(demoRootPath, 'package-integrity', 'project'),
-      path.join(demoRootPath, 'package-with-build-id', 'project')
+      join(projectDemoRootPath, 'alternative-package-registry', 'project'),
+      join(projectDemoRootPath, 'bundled-dependencies', 'project'),
+      // join(projectDemoRootPath, 'deps-from-git', 'project'),
+      join(projectDemoRootPath, 'dev-dependencies', 'project'),
+      // join(projectDemoRootPath, 'juice-shop', 'project'),
+      join(projectDemoRootPath, 'local-dependencies', 'project'),
+      join(projectDemoRootPath, 'local-workspaces', 'project'),
+      join(projectDemoRootPath, 'package-integrity', 'project'),
+      join(projectDemoRootPath, 'package-with-build-id', 'project')
     )
   }
   /* endregion demos */
