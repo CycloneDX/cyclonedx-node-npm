@@ -188,9 +188,9 @@ describe('integration.cli.from-collected', () => {
     describe.each(useCases)('$subject', (ud) => {
       mkdirSync(join(tmpRootRun, ud.subject))
 
-      test.each(demoCases)('$subject npm$npm node$node $os', async (dd) => {
-        const expectedOutSnap = resolve(demoResultsRoot, ud.subject, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
-        const logFileBase = join(tmpRootRun, ud.subject, `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
+      test.each(demoCases)('$subject $args npm$npm node$node $os', async (dd) => {
+        const expectedOutSnap = resolve(demoResultsRoot, ud.subject, `${dd.subject}${dd.args}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
+        const logFileBase = join(tmpRootRun, ud.subject, `${dd.subject}${dd.args}_npm${dd.npm}_node${dd.node}_${dd.os}`)
         const cwd = resolve(projectTestRootPath, '_data', 'dummy_projects')
 
         const { res, outFile, errFile } = runCLI([
@@ -205,12 +205,15 @@ describe('integration.cli.from-collected', () => {
           '--package-lock-only',
           // case-specific args
           ...ud.args,
+          // explicit args
+          ...(dd.args === '' ? [] : dd.args.split(' ')),
           '--',
           // just some dummy project
           join('with-lockfile', 'package.json')
         ], logFileBase, cwd, {
           CT_VERSION: `${dd.npm}.99.0`,
           CT_SUBJECT: dd.subject,
+          CT_ARGS: dd.args,
           CT_NPM: dd.npm,
           CT_NODE: dd.node,
           CT_OS: dd.os,

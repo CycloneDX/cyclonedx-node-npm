@@ -27,7 +27,7 @@ import { fileURLToPath } from 'node:url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const dirDemoRes = dirname(__dirname)
 
-const fnamePattern = /^npm-ls_npm(?<npm>\d+)_node(?<node>\d+)_(?<os>.+)\.json$/
+const fnamePattern = /^npm\-ls(?<args>.*?)_npm(?<npm>\d+)_node(?<node>\d+)_(?<os>.+)\.json$/
 
 /** @type {Object.<string, Object.<string, string[]>>} */
 const files = {}
@@ -41,33 +41,40 @@ for (const dirDemoResE of readdirSync(dirDemoRes)) {
       if (!fnameMatch) {
         continue
       }
-      if (!Object.hasOwn(files, fnameMatch.groups.npm)) {
-        files[fnameMatch.groups.npm] = {}
+      let _t = files
+      if (!Object.hasOwn(_t, fnameMatch.groups.args)) {
+        _t[fnameMatch.groups.args] = {}
       }
-      if (!Object.hasOwn(files[fnameMatch.groups.npm], fnameMatch.groups.os)) {
-        files[fnameMatch.groups.npm][fnameMatch.groups.os] = []
+      _t = _t[fnameMatch.groups.args]
+      if (!Object.hasOwn(_t, fnameMatch.groups.npm)) {
+        _t[fnameMatch.groups.npm] = {}
       }
-      files[fnameMatch.groups.npm][fnameMatch.groups.os].push(
-        join(dirResults, dirResultsE)
-      )
+      _t = _t[fnameMatch.groups.npm]
+      if (!Object.hasOwn(_t, fnameMatch.groups.os)) {
+        _t[fnameMatch.groups.os] = []
+      }
+      _t = _t[fnameMatch.groups.os]
+      _t.push(join(dirResults, dirResultsE))
     }
   } catch (e) {
     continue
   }
 }
 
-for (const filesByOs of Object.values(files)) {
-  for (const filePaths of Object.values(filesByOs)) {
-    const fileHashes = new Set()
-    for (const filePath of filePaths) {
-      const fileHash = await hashFile(filePath)
-      if (fileHashes.has(fileHash)) {
-        console.info('DELETE:', fileHash, filePath)
-        unlinkSync(filePath)
-        continue
+for (const filesByAs of Object.values(files)) {
+  for (const filesByOs of Object.values(filesByAs)) {
+    for (const filePaths of Object.values(filesByOs)) {
+      const fileHashes = new Set()
+      for (const filePath of filePaths) {
+        const fileHash = await hashFile(filePath)
+        if (fileHashes.has(fileHash)) {
+          console.info('DELETE:', fileHash, filePath)
+          unlinkSync(filePath)
+          continue
+        }
+        fileHashes.add(fileHash)
+        console.info('KEEP:', fileHash, filePath)
       }
-      fileHashes.add(fileHash)
-      console.info('KEEP:', fileHash, filePath)
     }
   }
 }
