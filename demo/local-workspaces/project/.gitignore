@@ -1,6 +1,8 @@
 /*
 !/.gitignore
+!/.npmrc
 !/package.json
+!/package-lock.json
 !/README.md
 !/workspaces/
 !/workspaces/**
