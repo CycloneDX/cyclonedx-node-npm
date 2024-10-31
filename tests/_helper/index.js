@@ -151,7 +151,7 @@ function getNpmVersion () {
     encoding: 'utf8',
     shell: process.platform.startsWith('win')
   }).stdout.split('.').map(Number)
-  process.stderr.write(`detected npm version: ${JSON.stringify(v)}`)
+  process.stderr.write(`\ndetected npm version: ${JSON.stringify(v)}\n`)
   return v
 }
 
