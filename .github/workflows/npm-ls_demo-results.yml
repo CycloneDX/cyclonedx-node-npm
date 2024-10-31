@@ -51,12 +51,12 @@ jobs:
           - macos-latest
         include:
           - subject: local-workspaces
-            additional_npm-ls_args: '-w my-local-e'
+            additional_npm-ls_args: '--workspace==my-local-e'
             npm-version: '10'   # Current
             node-version: '22'  # Current
             os: ubuntu-latest
           - subject: local-workspaces
-            additional_npm-ls_args: '-w my-local -w my-local-e'
+            additional_npm-ls_args: '--workspace==my-local --workspace==my-local-e'
             npm-version: '10'   # Current
             node-version: '22'  # Current
             os: ubuntu-latest

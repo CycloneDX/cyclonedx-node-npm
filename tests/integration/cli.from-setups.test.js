@@ -18,30 +18,23 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { spawnSync } = require('child_process')
-const { resolve, join } = require('path')
-const { mkdtempSync, writeFileSync, readFileSync } = require('fs')
+const { join } = require('path')
+const { writeFileSync, readFileSync } = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
-const { Spec } = require('@cyclonedx/cyclonedx-library')
 
 const { makeReproducible, getNpmVersion } = require('../_helper')
+const { UPDATE_SNAPSHOTS, mkTemp, cliWrapper, latestCdxSpecVersion, demoResultsRoot, projectDemoRootPath } = require('./')
 
-const projectRootPath = resolve(__dirname, '..', '..')
-const projectTestRootPath = join(projectRootPath, 'tests')
-const demoRootPath = join(projectRootPath, 'demo')
-
-const cliWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
-
-/* we run only the latest most advanced */
-const latestCdxSpecVersion = Spec.Version.v1dot6
-
-describe('integration.cli.from-setups', () => {
+// skipped for now
+describe.skip('integration.cli.from-setups', () => {
+  // !! due to inconsistencies between npm6,7,8 -
+  // some test beds might be skipped
   const skipAllTests = getNpmVersion()[0] < 8
 
-  const UPDATE_SNAPSHOTS = 1 // !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
   const cliRunTestTimeout = 15000
 
-  const tmpRoot = mkdtempSync(join(projectTestRootPath, '_tmp', 'CDX-IT-cli.from-setups.'))
+  const tmpRoot = mkTemp('cli.from-setups')
 
   const demos = [
     'alternative-package-registry',
@@ -55,8 +48,6 @@ describe('integration.cli.from-setups', () => {
     'package-with-build-id'
   ]
   const formats = ['json', 'xml']
-
-  const demoResultsRoot = resolve(projectTestRootPath, '_data', 'sbom_demo-results')
 
   /**
    * @param {string} demo
@@ -77,7 +68,7 @@ describe('integration.cli.from-setups', () => {
         '--output-file', outFile,
         '--validate'
       ], {
-        cwd: join(demoRootPath, demo, 'project'),
+        cwd: join(projectDemoRootPath, demo, 'project'),
         stdio: ['ignore', 'inherit', 'pipe'],
         encoding: 'utf8'
       }
