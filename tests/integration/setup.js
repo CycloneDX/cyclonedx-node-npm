@@ -23,11 +23,6 @@ const { getNpmVersion } = require('../_helper')
 const { projectDemoRootPath } = require('./');
 
 (function () {
-  // !! due to inconsistencies between npm6,7,8,9
-  // the related tests are about to be skipped
-  return
-  /* eslint-disable no-unreachable */
-
   const REQUIRES_INSTALL = []
 
   const npmVersion = getNpmVersion()

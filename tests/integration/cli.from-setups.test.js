@@ -26,12 +26,9 @@ const { describe, expect, test } = require('@jest/globals')
 const { makeReproducible, getNpmVersion } = require('../_helper')
 const { UPDATE_SNAPSHOTS, mkTemp, cliWrapper, latestCdxSpecVersion, demoResultsRoot, projectDemoRootPath } = require('./')
 
-describe('integration.cli.from-setups', () => {
-  // !! due to inconsistencies between npm6,7,8,9
-  // these tests are about to be skipped
-  return
-  /* eslint-disable no-unreachable */
-
+// !! due to inconsistencies between npm6,7,8,9
+// these tests are about to be skipped
+describe.skip('integration.cli.from-setups', () => {
   const skipAllTests = getNpmVersion()[0] < 8
 
   const cliRunTestTimeout = 15000
