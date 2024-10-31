@@ -146,11 +146,13 @@ function makeXmlReproducible (xml) {
  * @return {number[]}
  */
 function getNpmVersion () {
-  return spawnSync('npm', ['--version'], {
+  const v = spawnSync('npm', ['--version'], {
     stdio: ['ignore', 'pipe', 'ignore'],
     encoding: 'utf8',
     shell: process.platform.startsWith('win')
   }).stdout.split('.').map(Number)
+  process.stderr.write(`detected npm version: ${JSON.stringify(v)}`)
+  return v
 }
 
 module.exports = {

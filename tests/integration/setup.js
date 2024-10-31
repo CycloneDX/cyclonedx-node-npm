@@ -23,12 +23,18 @@ const { getNpmVersion } = require('../_helper')
 const { projectDemoRootPath } = require('./');
 
 (function () {
+  // skipped for now
+  return
+  /* eslint-disable no-unreachable */
+
   const REQUIRES_INSTALL = []
 
   const npmVersion = getNpmVersion()
 
   /* region demos */
 
+  // !! due to inconsistencies between npm6,7,8 -
+  // some test beds might be skipped
   if (npmVersion[0] >= 8) {
     REQUIRES_INSTALL.push(
       join(projectDemoRootPath, 'alternative-package-registry', 'project'),

@@ -26,9 +26,10 @@ const { describe, expect, test } = require('@jest/globals')
 const { makeReproducible, getNpmVersion } = require('../_helper')
 const { UPDATE_SNAPSHOTS, mkTemp, cliWrapper, latestCdxSpecVersion, demoResultsRoot, projectDemoRootPath } = require('./')
 
-// !! due to inconsistencies between npm6,7,8,9
-// these tests are about to be skipped
+// skipped for now
 describe.skip('integration.cli.from-setups', () => {
+  // !! due to inconsistencies between npm6,7,8 -
+  // some test beds might be skipped
   const skipAllTests = getNpmVersion()[0] < 8
 
   const cliRunTestTimeout = 15000
