@@ -4,56 +4,80 @@
   "specVersion": "1.6",
   "version": 1,
   "metadata": {
-    "tools": [
-      {
-        "name": "npm",
-        "version": "npmVersion-testing"
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \"bugs.url\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \"repository.url\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \"homepage\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-npm",
-        "version": "thisVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \"bugs.url\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \"repository.url\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \"homepage\""
-          }
-        ]
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "npm",
+          "version": "10.99.0"
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "7.0.0-beta.1",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-npm",
+          "group": "@cyclonedx",
+          "version": "1.19.3",
+          "author": "Jan Kowalleck",
+          "description": "Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
     "component": {
       "type": "application",
       "name": "demo-package-integrity",
