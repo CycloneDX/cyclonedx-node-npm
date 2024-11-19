@@ -44,7 +44,6 @@ type cPath = string
 type AllComponents = Map<cPath, Models.Component>
 
 export class BomBuilder {
-  toolBuilder: Builders.FromNodePackageJson.ToolBuilder
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
   treeBuilder: TreeBuilder
   purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
@@ -61,14 +60,12 @@ export class BomBuilder {
   console: Console
 
   constructor (
-    toolBuilder: BomBuilder['toolBuilder'],
     componentBuilder: BomBuilder['componentBuilder'],
     treeBuilder: BomBuilder['treeBuilder'],
     purlFactory: BomBuilder['purlFactory'],
     options: BomBuilderOptions,
     console_: BomBuilder['console']
   ) {
-    this.toolBuilder = toolBuilder
     this.componentBuilder = componentBuilder
     this.treeBuilder = treeBuilder
     this.purlFactory = purlFactory
@@ -227,14 +224,14 @@ export class BomBuilder {
 
     bom.metadata.component = rootComponent
 
-    bom.metadata.tools.add(new Models.Tool({
-      name: 'npm',
+    bom.metadata.tools.components.add(new Models.Component(
+      Enums.ComponentType.Application, 'npm' ,{
       version: npmVersion // use the self-proclaimed `version`
-      // omit `vendor` and `externalReferences`, because we cannot be sure about the used tool's actual origin
+      // omit `group` and `externalReferences`, because we cannot be sure about the used tool's actual origin
       // omit `hashes`, because unfortunately there is no agreed process of generating them
     }))
-    for (const tool of this.makeTools()) {
-      bom.metadata.tools.add(tool)
+    for (const toolC of this.makeToolCs()) {
+      bom.metadata.tools.components.add(toolC)
     }
 
     if (!this.reproducible) {
@@ -582,7 +579,7 @@ export class BomBuilder {
     }
   }
 
-  private * makeTools (): Generator<Models.Tool> {
+  private * makeToolCs (): Generator<Models.Component> {
     const packageJsonPaths = [path.resolve(module.path, '..', 'package.json')]
 
     const libs = [
@@ -605,9 +602,9 @@ export class BomBuilder {
     for (const packageJsonPath of packageJsonPaths) {
       const packageData: object = loadJsonFile(packageJsonPath) ?? {}
       normalizePackageData(packageData /* add debug for warnings? */)
-      const tool = this.toolBuilder.makeTool(packageData)
-      if (tool !== undefined) {
-        yield tool
+      const toolC = this.componentBuilder.makeComponent(packageData)
+      if (toolC !== undefined) {
+        yield toolC
       }
     }
   }
