@@ -47,7 +47,7 @@
     }
   ],
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^7.0.0-beta.1",
+    "@cyclonedx/cyclonedx-library": "^7.0.0-beta.2",
     "commander": "^10.0.0",
     "normalize-package-data": "^3||^4||^5||^6",
     "xmlbuilder2": "^3.0.2"
