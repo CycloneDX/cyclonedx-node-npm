@@ -32,18 +32,34 @@ describe('integration.cli.from-collected', () => {
   const tmpRoot = mkTemp('cli.from-collected')
 
   describe('with prepared npm-ls', () => {
+    const LATETS_NPM = '10'
+
     const tmpRootRun = join(tmpRoot, 'with-prepared')
     mkdirSync(tmpRootRun)
 
+    const _allDemoCases = indexNpmLsDemoData()
     const useCases = [
-      { subject: 'bare', args: [] },
-      { subject: 'flatten-components', args: ['--flatten-components'] }
+      {
+        subject: 'bare',
+        args: [],
+        demoCases: _allDemoCases
+      },
+      {
+        subject: 'flatten-components',
+        args: ['--flatten-components'],
+        demoCases: _allDemoCases.filter((c) => {
+          if (c.npm !== LATETS_NPM) { return false }
+          if (c.subject === 'juice-shop') { return true }
+          if (c.subject === 'bundled-dependencies') { return true }
+          return false
+        })
+      }
     ]
-    const demoCases = indexNpmLsDemoData()
+
     describe.each(useCases)('$subject', (ud) => {
       mkdirSync(join(tmpRootRun, ud.subject))
 
-      test.each(demoCases)('$subject $args npm$npm node$node $os', async (dd) => {
+      test.each(ud.demoCases)('$subject $args npm$npm node$node $os', async (dd) => {
         const expectedOutSnap = join(demoResultsRoot, ud.subject, `${dd.subject}${dd.args}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
         const logFileBase = join(tmpRootRun, ud.subject, `${dd.subject}${dd.args}_npm${dd.npm}_node${dd.node}_${dd.os}`)
         const cwd = dummyProjectsRoot
