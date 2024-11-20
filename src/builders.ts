@@ -234,11 +234,11 @@ export class BomBuilder {
     bom.metadata.component = rootComponent
 
     bom.metadata.tools.components.add(new Models.Component(
-      Enums.ComponentType.Application, 'npm' ,{
-      version: npmVersion // use the self-proclaimed `version`
+      Enums.ComponentType.Application, 'npm', {
+        version: npmVersion // use the self-proclaimed `version`
       // omit `group` and `externalReferences`, because we cannot be sure about the used tool's actual origin
       // omit `hashes`, because unfortunately there is no agreed process of generating them
-    }))
+      }))
     for (const toolC of this.makeToolCs()) {
       bom.metadata.tools.components.add(toolC)
     }
@@ -606,7 +606,9 @@ export class BomBuilder {
   }
 
   private * makeToolCs (): Generator<Models.Component> {
-    const packageJsonPaths = [path.resolve(module.path, '..', 'package.json')]
+    const packageJsonPaths: Array<[string, Enums.ComponentType]> = [
+      [path.resolve(module.path, '..', 'package.json'), Enums.ComponentType.Application]
+    ]
 
     const libs = [
       '@cyclonedx/cyclonedx-library'
@@ -618,17 +620,17 @@ export class BomBuilder {
       for (const nodeModulePath of nodeModulePaths) {
         const packageJsonPath = path.resolve(nodeModulePath, ...lib, 'package.json')
         if (existsSync(packageJsonPath)) {
-          packageJsonPaths.push(packageJsonPath)
+          packageJsonPaths.push([packageJsonPath, Enums.ComponentType.Library])
           continue libsLoop
         }
       }
     }
     /* eslint-enable no-labels */
 
-    for (const packageJsonPath of packageJsonPaths) {
+    for (const [packageJsonPath, cType] of packageJsonPaths) {
       const packageData: object = loadJsonFile(packageJsonPath) ?? {}
       normalizePackageData(packageData /* add debug for warnings? */)
-      const toolC = this.componentBuilder.makeComponent(packageData)
+      const toolC = this.componentBuilder.makeComponent(packageData, cType)
       if (toolC !== undefined) {
         yield toolC
       }

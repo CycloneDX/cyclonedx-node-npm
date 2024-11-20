@@ -79,6 +79,16 @@ function makeJsonReproducible (json) {
       '        "name": "npm",\n' +
       '        "version": "npmVersion-testing"'
     ).replace(
+      // replace npm in metadata.tools.components[].version
+      new RegExp(
+        '          "type": "application",\n' +
+        '          "name": "npm",\n' +
+        '          "version": ".+?"'
+      ),
+      '          "type": "application",\n' +
+      '          "name": "npm",\n' +
+      '          "version": "npmVersion-testing"'
+    ).replace(
       // replace self metadata.tools.tools[].version
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "cyclonedx-npm",\n' +
@@ -86,6 +96,16 @@ function makeJsonReproducible (json) {
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "cyclonedx-npm",\n' +
       '        "version": "thisVersion-testing"'
+    ).replace(
+      // replace self metadata.tools.components[].version
+      '          "type": "application",\n' +
+      '          "name": "cyclonedx-npm",\n' +
+      '          "group": "@cyclonedx",\n' +
+      `          "version": ${JSON.stringify(thisVersion)}`,
+      '          "type": "application",\n' +
+      '          "name": "cyclonedx-npm",\n' +
+      '          "group": "@cyclonedx",\n' +
+      '          "version": "thisVersion-testing"'
     ).replace(
       // replace library metadata.tools.tools[].version
       new RegExp(
@@ -96,6 +116,18 @@ function makeJsonReproducible (json) {
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "cyclonedx-library",\n' +
       '        "version": "libVersion-testing"'
+    ).replace(
+      // replace library metadata.tools.components[].version
+      new RegExp(
+        '          "type": "library",\n' +
+        '          "name": "cyclonedx-library",\n' +
+        '          "group": "@cyclonedx",\n' +
+        '          "version": ".+?"'
+      ),
+      '          "type": "library",\n' +
+      '          "name": "cyclonedx-library",\n' +
+      '          "group": "@cyclonedx",\n' +
+      '          "version": "libVersion-testing"'
     )
 }
 
