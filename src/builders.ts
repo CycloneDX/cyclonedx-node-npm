@@ -20,7 +20,6 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
 import { existsSync } from 'fs'
 import * as normalizePackageData from 'normalize-package-data'
-import { type PackageURL } from 'packageurl-js'
 import * as path from 'path'
 
 import { isString, loadJsonFile, tryRemoveSecretsFromUrl } from './_helpers'
@@ -544,7 +543,7 @@ export class BomBuilder {
     return component
   }
 
-  private makePurl (component: Models.Component): PackageURL | undefined {
+  private makePurl (component: Models.Component): ReturnType<BomBuilder['purlFactory']['makeFromComponent']> {
     const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
     if (purl === undefined) {
       return undefined
