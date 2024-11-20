@@ -6,11 +6,14 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Dependencies
+  * No longer depend on `packageurlk-js` (via [#1237])
 * Build
   * Use _TypeScript_ `v5.6.2` now, was `v5.5.3` (via [#1209], [#1218])
 
 [#1209]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1209
 [#1218]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1218
+[#1237]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1237
 
 ## 1.19.3 -- 2024-07-15
 
