@@ -13,6 +13,7 @@
 
     /* Language and Environment */
     /* check compat: https://node.green/ */
+    /* see: https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping */
     "target": "ES2020",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     // "lib": [],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
     // "jsx": "preserve",                                /* Specify what JSX code is generated. */
