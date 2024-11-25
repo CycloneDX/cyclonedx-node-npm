@@ -37,6 +37,7 @@ interface BomBuilderOptions {
   reproducible?: BomBuilder['reproducible']
   flattenComponents?: BomBuilder['flattenComponents']
   shortPURLs?: BomBuilder['shortPURLs']
+  workspaces?: BomBuilder['workspaces']
 }
 
 type cPath = string
@@ -56,6 +57,7 @@ export class BomBuilder {
   reproducible: boolean
   flattenComponents: boolean
   shortPURLs: boolean
+  workspaces: string[]
 
   console: Console
 
@@ -79,6 +81,7 @@ export class BomBuilder {
     this.reproducible = options.reproducible ?? false
     this.flattenComponents = options.flattenComponents ?? false
     this.shortPURLs = options.shortPURLs ?? false
+    this.workspaces = options.workspaces ?? []
 
     this.console = console_
   }
@@ -163,6 +166,10 @@ export class BomBuilder {
             break
         }
       }
+    }
+
+    for (const workspace of this.workspaces) {
+      args.push(`--workspace=${workspace}`)
     }
 
     this.console.info('INFO  | gathering dependency tree ...')

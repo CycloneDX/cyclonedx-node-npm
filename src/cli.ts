@@ -51,6 +51,7 @@ interface CommandOptions {
   outputFile: string
   validate: boolean | undefined
   mcType: Enums.ComponentType
+  workspaces: string[] | undefined
   verbose: number
 }
 
@@ -168,6 +169,12 @@ function makeCommand (process: NodeJS.Process): Command {
     )
   ).addOption(
     new Option(
+      '--workspaces <workspace...>',
+      'Whether to only include dependencies for specific workspaces. ' +
+      '(can be set multiple times)'
+    ).default([], 'empty')
+  ).addOption(
+    new Option(
       '-v, --verbose',
       'Increase the verbosity of messages. Use multiple times to increase the verbosity even more.'
     ).argParser<number>(
@@ -249,7 +256,8 @@ export async function run (process: NodeJS.Process): Promise<number> {
       omitDependencyTypes: options.omit,
       reproducible: options.outputReproducible,
       flattenComponents: options.flattenComponents,
-      shortPURLs: options.shortPURLs
+      shortPURLs: options.shortPURLs,
+      workspaces: options.workspaces
     },
     myConsole
   ).buildFromProjectDir(projectDir, process)
