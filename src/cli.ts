@@ -25,7 +25,6 @@ import { dirname, resolve } from 'path'
 import { loadJsonFile, writeAllSync } from './_helpers'
 import { BomBuilder, TreeBuilder } from './builders'
 import { makeConsoleLogger } from './logger'
-import { addLicenseTextsToBom } from './licensetexts.js'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -258,14 +257,11 @@ export async function run (process: NodeJS.Process): Promise<number> {
       omitDependencyTypes: options.omit,
       reproducible: options.outputReproducible,
       flattenComponents: options.flattenComponents,
-      shortPURLs: options.shortPURLs
+      shortPURLs: options.shortPURLs,
+      addLicenseText: options.addLicenseText
     },
     myConsole
   ).buildFromProjectDir(projectDir, process)
-
-  if (options.addLicenseText) {
-    addLicenseTextsToBom(projectDir, bom)
-  }
 
   const spec = Spec.SpecVersionDict[options.specVersion]
   if (undefined === spec) {

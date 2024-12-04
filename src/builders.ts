@@ -26,6 +26,7 @@ import { isString, loadJsonFile, tryRemoveSecretsFromUrl } from './_helpers'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
+import {addLicenseTextsToBom} from "./licensetexts";
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
@@ -37,6 +38,7 @@ interface BomBuilderOptions {
   reproducible?: BomBuilder['reproducible']
   flattenComponents?: BomBuilder['flattenComponents']
   shortPURLs?: BomBuilder['shortPURLs']
+  addLicenseText?: BomBuilder['addLicenseText']
 }
 
 type cPath = string
@@ -56,6 +58,7 @@ export class BomBuilder {
   reproducible: boolean
   flattenComponents: boolean
   shortPURLs: boolean
+  addLicenseText: boolean
 
   console: Console
 
@@ -79,14 +82,19 @@ export class BomBuilder {
     this.reproducible = options.reproducible ?? false
     this.flattenComponents = options.flattenComponents ?? false
     this.shortPURLs = options.shortPURLs ?? false
+    this.addLicenseText = options.addLicenseText ?? false
 
     this.console = console_
   }
 
   buildFromProjectDir (projectDir: string, process: NodeJS.Process): Models.Bom {
-    return this.buildFromNpmLs(
+    const bom = this.buildFromNpmLs(
       ...this.fetchNpmLs(projectDir, process)
     )
+    if (this.addLicenseText) {
+      addLicenseTextsToBom(projectDir, bom)
+    }
+    return bom
   }
 
   private versionTuple (value: string): number[] {
