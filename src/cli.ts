@@ -25,6 +25,7 @@ import { dirname, resolve } from 'path'
 import { loadJsonFile, writeAllSync } from './_helpers'
 import { BomBuilder, TreeBuilder } from './builders'
 import { makeConsoleLogger } from './logger'
+import { addLicenseTextsToBom } from './licensetexts.js'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -47,6 +48,7 @@ interface CommandOptions {
   flattenComponents: boolean
   shortPURLs: boolean
   outputReproducible: boolean
+  addLicenseText: boolean
   outputFormat: OutputFormat
   outputFile: string
   validate: boolean | undefined
@@ -115,6 +117,13 @@ function makeCommand (process: NodeJS.Process): Command {
     ).env(
       'BOM_REPRODUCIBLE'
     )
+  ).addOption(
+    new Option(
+      '--add-license-text',
+      'Whether to go the extra mile and add license texts from the package files.\n' +
+      'This requires more resources, and results in much bigger output and \n' +
+      'trust the package that the text in a license file corresponds to the one in package.json.'
+    ).default(false)
   ).addOption(
     (function () {
       const o = new Option(
@@ -253,6 +262,10 @@ export async function run (process: NodeJS.Process): Promise<number> {
     },
     myConsole
   ).buildFromProjectDir(projectDir, process)
+
+  if (options.addLicenseText) {
+    addLicenseTextsToBom(projectDir, bom)
+  }
 
   const spec = Spec.SpecVersionDict[options.specVersion]
   if (undefined === spec) {
