@@ -1,4 +1,4 @@
-/**
+/*!
 This file is part of CycloneDX generator for NPM projects.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -85,40 +85,15 @@ function addLicTextBasedOnLicenseFiles (license: Models.DisjunctiveLicense, inst
 
 /**
  * Add license texts to the license parts of the component
-*
-* @param {projectDir} string
-* @param {Models.Component} component
-*/
-function addLicenseTextToComponent (projectDir: string, component: Models.Component): void {
+ *
+ * @param {string} projectDir
+ * @param {Models.Component} component
+ */
+export function addLicenseTextToComponent (projectDir: string, component: Models.Component): void {
   if (component.licenses.size === 1) {
     const license = component.licenses.values().next().value
     if (license instanceof Models.NamedLicense || license instanceof Models.SpdxLicense) {
       addLicTextBasedOnLicenseFiles(license, join(projectDir, getComponentInstallPath(component)))
     }
   }
-}
-
-/**
- * Go through component tree and add license texts
- *
- * @param {projectDir} string
- * @param {Models.ComponentRepository} components
- */
-function addLicenseTextsToComponents (projectDir: string, components: Models.ComponentRepository): void {
-  for (const component of components) {
-    addLicenseTextToComponent(projectDir, component)
-    // Handle sub components
-    addLicenseTextsToComponents(projectDir, component.components)
-  }
-}
-
-/**
- * Entry function to add license texts to the components in the SBoM
- *
- * @export
- * @param {projectDir} string
- * @param {Models.Bom} bom
- */
-export function addLicenseTextsToBom (projectDir: string, bom: Models.Bom): void {
-  addLicenseTextsToComponents(projectDir, bom.components)
 }

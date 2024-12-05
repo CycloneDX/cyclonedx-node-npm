@@ -23,10 +23,10 @@ import * as normalizePackageData from 'normalize-package-data'
 import * as path from 'path'
 
 import { isString, loadJsonFile, tryRemoveSecretsFromUrl } from './_helpers'
+import { addLicenseTextToComponent } from './licensetexts'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
-import {addLicenseTextsToBom} from "./licensetexts";
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
@@ -91,9 +91,6 @@ export class BomBuilder {
     const bom = this.buildFromNpmLs(
       ...this.fetchNpmLs(projectDir, process)
     )
-    if (this.addLicenseText) {
-      addLicenseTextsToBom(projectDir, bom)
-    }
     return bom
   }
 
@@ -468,9 +465,14 @@ export class BomBuilder {
       this.console.debug('DEBUG | skip broken component: %j %j', data.name, data._id)
       return undefined
     }
-
-    component.licenses.forEach(l => {
-      l.acknowledgement = Enums.LicenseAcknowledgement.Declared
+    component.licenses.forEach(license => {
+      license.acknowledgement = Enums.LicenseAcknowledgement.Declared
+      if (this.addLicenseText) {
+        addLicenseTextToComponent(data?.path as string, component)
+        // if (license instanceof Models.NamedLicense || license instanceof Models.SpdxLicense) {
+        //   this.addLicTextBasedOnLicenseFiles(license)
+        // }
+      }
     })
 
     if (isOptional || isDevOptional) {
