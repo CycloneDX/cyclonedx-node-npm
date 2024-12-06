@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { Builders, Enums, Factories, Serialize, Spec, Validation } from '@cyclonedx/cyclonedx-library'
 import { Argument, Command, Option } from 'commander'
-import { existsSync, openSync } from 'fs'
+import { existsSync, mkdirSync, openSync } from 'fs'
 import { dirname, resolve } from 'path'
 
 import { loadJsonFile, writeAllSync } from './_helpers'
@@ -309,10 +309,14 @@ export async function run (process: NodeJS.Process): Promise<number> {
   }
 
   myConsole.log('LOG   | writing BOM to', options.outputFile)
+  const directory = dirname(options.outputFile)
+  if (!existsSync(directory)) {
+    mkdirSync(directory, { recursive: true })
+  }
   const written = await writeAllSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd
-      : openSync(resolve(process.cwd(), options.outputFile), 'w'),
+      : openSync(resolve(options.outputFile), 'w'),
     serialized
   )
   myConsole.info('INFO  | wrote %d bytes to %s', written, options.outputFile)
