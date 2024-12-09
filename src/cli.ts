@@ -316,7 +316,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
   const written = await writeAllSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd
-      : openSync(resolve(options.outputFile), 'w'),
+      : openSync(resolve(process.cwd(), options.outputFile), 'w'),
     serialized
   )
   myConsole.info('INFO  | wrote %d bytes to %s', written, options.outputFile)
