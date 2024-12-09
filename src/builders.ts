@@ -18,12 +18,13 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
-import { existsSync } from 'fs'
+import { existsSync, readdirSync, readFileSync } from 'fs'
+import { minimatch } from 'minimatch'
 import * as normalizePackageData from 'normalize-package-data'
 import * as path from 'path'
+import { join } from 'path'
 
 import { isString, loadJsonFile, tryRemoveSecretsFromUrl } from './_helpers'
-import { addLicenseTextToComponent } from './licensetexts'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
@@ -38,7 +39,6 @@ interface BomBuilderOptions {
   reproducible?: BomBuilder['reproducible']
   flattenComponents?: BomBuilder['flattenComponents']
   shortPURLs?: BomBuilder['shortPURLs']
-  addLicenseText?: BomBuilder['addLicenseText']
 }
 
 type cPath = string
@@ -49,6 +49,7 @@ export class BomBuilder {
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
   treeBuilder: TreeBuilder
   purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
+  licenseBuilder: LicenseBuilder
 
   ignoreNpmErrors: boolean
 
@@ -58,7 +59,6 @@ export class BomBuilder {
   reproducible: boolean
   flattenComponents: boolean
   shortPURLs: boolean
-  addLicenseText: boolean
 
   console: Console
 
@@ -67,6 +67,7 @@ export class BomBuilder {
     componentBuilder: BomBuilder['componentBuilder'],
     treeBuilder: BomBuilder['treeBuilder'],
     purlFactory: BomBuilder['purlFactory'],
+    licenseBuilder: BomBuilder['licenseBuilder'],
     options: BomBuilderOptions,
     console_: BomBuilder['console']
   ) {
@@ -74,6 +75,7 @@ export class BomBuilder {
     this.componentBuilder = componentBuilder
     this.treeBuilder = treeBuilder
     this.purlFactory = purlFactory
+    this.licenseBuilder = licenseBuilder
 
     this.ignoreNpmErrors = options.ignoreNpmErrors ?? false
     this.metaComponentType = options.metaComponentType ?? Enums.ComponentType.Library
@@ -82,7 +84,6 @@ export class BomBuilder {
     this.reproducible = options.reproducible ?? false
     this.flattenComponents = options.flattenComponents ?? false
     this.shortPURLs = options.shortPURLs ?? false
-    this.addLicenseText = options.addLicenseText ?? false
 
     this.console = console_
   }
@@ -465,15 +466,7 @@ export class BomBuilder {
       this.console.debug('DEBUG | skip broken component: %j %j', data.name, data._id)
       return undefined
     }
-    component.licenses.forEach(license => {
-      license.acknowledgement = Enums.LicenseAcknowledgement.Declared
-      if (this.addLicenseText) {
-        addLicenseTextToComponent(data?.path as string, component)
-        // if (license instanceof Models.NamedLicense || license instanceof Models.SpdxLicense) {
-        //   this.addLicTextBasedOnLicenseFiles(license)
-        // }
-      }
-    })
+    this.licenseBuilder.addLicensesTexts(component, data?.path as string)
 
     if (isOptional || isDevOptional) {
       component.scope = Enums.ComponentScope.Optional
@@ -678,3 +671,97 @@ export class TreeBuilder {
 const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
   ? structuredClone
   : function (value) { return JSON.parse(JSON.stringify(value)) }
+
+export class LicenseBuilder {
+  addLicenseText: boolean
+
+  constructor (addLicenseText: boolean, packageLockOnly: boolean) {
+    if (addLicenseText && packageLockOnly) {
+      throw new Error('Options \'package-lock-only\' and \'add-license-text\' cannot be combined!')
+    }
+    this.addLicenseText = addLicenseText
+  }
+
+  addLicensesTexts (component: Models.Component, path: string): void {
+    component.licenses.forEach(license => {
+      license.acknowledgement = Enums.LicenseAcknowledgement.Declared
+      if (this.addLicenseText) {
+        this.addLicenseTextToComponent(path, component)
+      }
+    })
+  }
+
+  /**
+   * Returns the local installation path of the component, which is mentioned in the component
+   *
+   * @param {Models.Component} component
+   * @returns {string} installation path
+   */
+  private getComponentInstallPath (component: Models.Component): string {
+    for (const property of component.properties) {
+      if (property.name === PropertyNames.PackageInstallPath) {
+        return (property.value)
+      }
+    }
+    return ''
+  }
+
+  /**
+   * Searches typical files in the package path which have typical a license text inside
+   *
+   * @param {string} pkgPath
+   * @param {string} licenseName
+   * @returns {Map<string, string>} filepath as key and guessed content type as value
+   */
+  private searchLicenseSources (pkgPath: string, licenseName: string): Map<string, string> {
+    const licenseFilenamesWType = new Map<string, string>()
+    if (pkgPath.length < 1) {
+      return licenseFilenamesWType
+    }
+    const typicalFilenames = ['license', 'licence', 'notice', 'unlicense', 'unlicence']
+    const licenseContentTypes = { 'text/plain': '', 'text/txt': '.txt', 'text/markdown': '.md', 'text/xml': '.xml' }
+    const potentialFilenames = readdirSync(pkgPath)
+    for (const typicalFilename of typicalFilenames) {
+      for (const filenameVariant of [typicalFilename, typicalFilename + '.' + licenseName, typicalFilename + '-' + licenseName]) {
+        for (const [licenseContentType, fileExtension] of Object.entries(licenseContentTypes)) {
+          for (const filename of minimatch.match(potentialFilenames, filenameVariant + fileExtension, { nocase: true, noglobstar: true, noext: true })) {
+            licenseFilenamesWType.set(join(pkgPath, filename), licenseContentType)
+          }
+        }
+      }
+    }
+    return licenseFilenamesWType
+  }
+
+  /**
+   * Adds the content of a guessed license file to the license as license text in base 64 format
+   *
+   * @param {Models.DisjunctiveLicense} license
+   * @param {string} installPath
+   */
+  private addLicTextBasedOnLicenseFiles (license: Models.DisjunctiveLicense, installPath: string): void {
+    const licenseFilenamesWType = this.searchLicenseSources(installPath, '')
+    for (const [licenseFilename, licenseContentType] of licenseFilenamesWType) {
+      const licContent = readFileSync(licenseFilename, { encoding: 'base64' })
+      license.text = new Models.Attachment(licContent, {
+        encoding: Enums.AttachmentEncoding.Base64,
+        contentType: licenseContentType
+      })
+    }
+  }
+
+  /**
+   * Add license texts to the license parts of the component
+   *
+   * @param {string} projectDir
+   * @param {Models.Component} component
+   */
+  private addLicenseTextToComponent (projectDir: string, component: Models.Component): void {
+    if (component.licenses.size === 1) {
+      const license = component.licenses.values().next().value
+      if (license instanceof Models.NamedLicense || license instanceof Models.SpdxLicense) {
+        this.addLicTextBasedOnLicenseFiles(license, join(projectDir, this.getComponentInstallPath(component)))
+      }
+    }
+  }
+}
