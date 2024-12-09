@@ -307,12 +307,12 @@ export async function run (process: NodeJS.Process): Promise<number> {
       }
     }
   }
-
-  myConsole.log('LOG   | writing BOM to', options.outputFile)
   const directory = dirname(options.outputFile)
   if (!existsSync(directory)) {
+    myConsole.info('INFO | Creating directory ' + directory)
     mkdirSync(directory, { recursive: true })
   }
+  myConsole.log('LOG   | writing BOM to', options.outputFile)
   const written = await writeAllSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd
