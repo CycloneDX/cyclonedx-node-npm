@@ -23,7 +23,7 @@ import { existsSync, openSync } from 'fs'
 import { dirname, resolve } from 'path'
 
 import { loadJsonFile, writeAllSync } from './_helpers'
-import { BomBuilder, LicenseBuilder, TreeBuilder } from './builders'
+import { BomBuilder, TreeBuilder } from './builders'
 import { makeConsoleLogger } from './logger'
 
 enum OutputFormat {
@@ -249,7 +249,6 @@ export async function run (process: NodeJS.Process): Promise<number> {
     ),
     new TreeBuilder(),
     new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
-    new LicenseBuilder(options.gatherLicenseTexts, options.packageLockOnly),
     {
       ignoreNpmErrors: options.ignoreNpmErrors,
       metaComponentType: options.mcType,
@@ -257,7 +256,8 @@ export async function run (process: NodeJS.Process): Promise<number> {
       omitDependencyTypes: options.omit,
       reproducible: options.outputReproducible,
       flattenComponents: options.flattenComponents,
-      shortPURLs: options.shortPURLs
+      shortPURLs: options.shortPURLs,
+      gatherLicenseTexts: options.gatherLicenseTexts
     },
     myConsole
   ).buildFromProjectDir(projectDir, process)
