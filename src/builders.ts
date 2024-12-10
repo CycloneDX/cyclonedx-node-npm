@@ -673,19 +673,19 @@ const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === '
   : function (value) { return JSON.parse(JSON.stringify(value)) }
 
 export class LicenseBuilder {
-  addLicenseText: boolean
+  gatherLicenseTexts: boolean
 
-  constructor (addLicenseText: boolean, packageLockOnly: boolean) {
-    if (addLicenseText && packageLockOnly) {
-      throw new Error('Options \'package-lock-only\' and \'add-license-text\' cannot be combined!')
+  constructor (gatherLicenseTexts: boolean, packageLockOnly: boolean) {
+    if (gatherLicenseTexts && packageLockOnly) {
+      throw new Error('Options \'package-lock-only\' and \'gather-license-texts\' cannot be combined!')
     }
-    this.addLicenseText = addLicenseText
+    this.gatherLicenseTexts = gatherLicenseTexts
   }
 
   addLicensesTexts (component: Models.Component, path: string): void {
     component.licenses.forEach(license => {
       license.acknowledgement = Enums.LicenseAcknowledgement.Declared
-      if (this.addLicenseText) {
+      if (this.gatherLicenseTexts) {
         this.addLicenseTextToComponent(path, component)
       }
     })

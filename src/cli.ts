@@ -47,7 +47,7 @@ interface CommandOptions {
   flattenComponents: boolean
   shortPURLs: boolean
   outputReproducible: boolean
-  addLicenseText: boolean
+  gatherLicenseTexts: boolean
   outputFormat: OutputFormat
   outputFile: string
   validate: boolean | undefined
@@ -118,10 +118,9 @@ function makeCommand (process: NodeJS.Process): Command {
     )
   ).addOption(
     new Option(
-      '--add-license-text',
-      'Whether to go the extra mile and add license texts from the package files.\n' +
-      'This requires more resources, and results in much bigger output and \n' +
-      'trust the package that the text in a license file corresponds to the one in package.json.'
+      '--gather-license-texts',
+      'Search for license files in components and include them as license evidence.\n' +
+      'This feature is experimental. (default: false)'
     ).default(false)
   ).addOption(
     (function () {
@@ -250,7 +249,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
     ),
     new TreeBuilder(),
     new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
-    new LicenseBuilder(options.addLicenseText, options.packageLockOnly),
+    new LicenseBuilder(options.gatherLicenseTexts, options.packageLockOnly),
     {
       ignoreNpmErrors: options.ignoreNpmErrors,
       metaComponentType: options.mcType,
