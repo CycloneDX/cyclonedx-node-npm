@@ -18,9 +18,10 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
-import { existsSync } from 'fs'
+import { existsSync, readdirSync, readFileSync } from 'fs'
 import * as normalizePackageData from 'normalize-package-data'
 import * as path from 'path'
+import { join, parse } from 'path'
 
 import { isString, loadJsonFile, tryRemoveSecretsFromUrl } from './_helpers'
 import { makeNpmRunner, type runFunc } from './npmRunner'
@@ -37,6 +38,7 @@ interface BomBuilderOptions {
   reproducible?: BomBuilder['reproducible']
   flattenComponents?: BomBuilder['flattenComponents']
   shortPURLs?: BomBuilder['shortPURLs']
+  gatherLicenseTexts?: BomBuilder['gatherLicenseTexts']
 }
 
 type cPath = string
@@ -47,6 +49,7 @@ export class BomBuilder {
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
   treeBuilder: TreeBuilder
   purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
+  licenseFetcher: LicenseFetcher
 
   ignoreNpmErrors: boolean
 
@@ -56,6 +59,7 @@ export class BomBuilder {
   reproducible: boolean
   flattenComponents: boolean
   shortPURLs: boolean
+  gatherLicenseTexts: boolean
 
   console: Console
 
@@ -71,6 +75,7 @@ export class BomBuilder {
     this.componentBuilder = componentBuilder
     this.treeBuilder = treeBuilder
     this.purlFactory = purlFactory
+    this.licenseFetcher = new LicenseFetcher()
 
     this.ignoreNpmErrors = options.ignoreNpmErrors ?? false
     this.metaComponentType = options.metaComponentType ?? Enums.ComponentType.Library
@@ -79,14 +84,16 @@ export class BomBuilder {
     this.reproducible = options.reproducible ?? false
     this.flattenComponents = options.flattenComponents ?? false
     this.shortPURLs = options.shortPURLs ?? false
+    this.gatherLicenseTexts = options.gatherLicenseTexts ?? false
 
     this.console = console_
   }
 
   buildFromProjectDir (projectDir: string, process: NodeJS.Process): Models.Bom {
-    return this.buildFromNpmLs(
+    const bom = this.buildFromNpmLs(
       ...this.fetchNpmLs(projectDir, process)
     )
+    return bom
   }
 
   private versionTuple (value: string): number[] {
@@ -465,6 +472,19 @@ export class BomBuilder {
       l.acknowledgement = Enums.LicenseAcknowledgement.Declared
     })
 
+    if (this.gatherLicenseTexts && this.packageLockOnly) {
+      this.console.warn('WARN  | Adding license text is ignored (package-lock-only is configured!) for %j', data.name)
+    }
+    if (this.gatherLicenseTexts && !this.packageLockOnly) {
+      const licenses = this.licenseFetcher.fetchLicenseEvidence(data?.path as string)
+      if (licenses !== undefined) {
+        component.evidence = new Models.ComponentEvidence()
+        for (const license of licenses) {
+          component.evidence.licenses.add(license)
+        }
+      }
+    }
+
     if (isOptional || isDevOptional) {
       component.scope = Enums.ComponentScope.Optional
     }
@@ -668,3 +688,63 @@ export class TreeBuilder {
 const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
   ? structuredClone
   : function (value) { return JSON.parse(JSON.stringify(value)) }
+
+export class LicenseFetcher {
+  readonly LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
+  readonly LICENSE_FILENAME_BASE = new Set(['licence', 'license'])
+  readonly LICENSE_FILENAME_EXT = new Set([
+    '.apache',
+    '.bsd',
+    '.gpl',
+    '.mit'
+  ])
+
+  readonly MAP_TEXT_EXTENSION_MIME = new Map([
+    ['', 'text/plain'],
+    ['.htm', 'text/html'],
+    ['.html', 'text/html'],
+    ['.md', 'text/markdown'],
+    ['.txt', 'text/plain'],
+    ['.rst', 'text/prs.fallenstein.rst'],
+    ['.xml', 'text/xml'],
+    ['.license', 'text/plain'],
+    ['.licence', 'text/plain']
+  ])
+
+  fetchLicenseEvidence (path: string): Set<Models.License> | undefined {
+    const licenses = new Set<Models.License>()
+    const files = readdirSync(path)
+    for (const file of files) {
+      if (!this.LICENSE_FILENAME_PATTERN.test(file)) {
+        continue
+      }
+
+      const contentType = this.getMimeForLicenseFile(file)
+      if (contentType === undefined) {
+        continue
+      }
+
+      const fp = join(path, file)
+      const namedLicense = new Models.NamedLicense(
+        `file: ${file}`,
+        {
+          text: new Models.Attachment(
+            readFileSync(fp).toString('base64'),
+            {
+              contentType,
+              encoding: Enums.AttachmentEncoding.Base64
+            }
+          )
+        })
+      licenses.add(namedLicense)
+    }
+    return licenses.size === 0 ? undefined : licenses
+  }
+
+  private getMimeForLicenseFile (filename: string): string | undefined {
+    const { name, ext } = parse(filename.toLowerCase())
+    return this.LICENSE_FILENAME_BASE.has(name) && this.LICENSE_FILENAME_EXT.has(ext)
+      ? 'text/plain'
+      : this.MAP_TEXT_EXTENSION_MIME.get(ext)
+  }
+}
