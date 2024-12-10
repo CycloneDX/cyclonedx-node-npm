@@ -468,6 +468,10 @@ export class BomBuilder {
       return undefined
     }
 
+    component.licenses.forEach(l => {
+      l.acknowledgement = Enums.LicenseAcknowledgement.Declared
+    })
+
     if (this.gatherLicenseTexts && this.packageLockOnly) {
       this.console.warn('WARN  | Adding license text is ignored (package-lock-only is configured!) for %j', data.name)
     }
