@@ -23,7 +23,13 @@ import * as normalizePackageData from 'normalize-package-data'
 import * as path from 'path'
 import { join, parse } from 'path'
 
-import { isString, loadJsonFile, tryRemoveSecretsFromUrl } from './_helpers'
+import {
+  isString,
+  LICENSE_FILENAME_BASE, LICENSE_FILENAME_EXT,
+  LICENSE_FILENAME_PATTERN,
+  loadJsonFile, MAP_TEXT_EXTENSION_MIME,
+  tryRemoveSecretsFromUrl
+} from './_helpers'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
@@ -689,32 +695,11 @@ const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === '
   : function (value) { return JSON.parse(JSON.stringify(value)) }
 
 export class LicenseFetcher {
-  readonly LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
-  readonly LICENSE_FILENAME_BASE = new Set(['licence', 'license'])
-  readonly LICENSE_FILENAME_EXT = new Set([
-    '.apache',
-    '.bsd',
-    '.gpl',
-    '.mit'
-  ])
-
-  readonly MAP_TEXT_EXTENSION_MIME = new Map([
-    ['', 'text/plain'],
-    ['.htm', 'text/html'],
-    ['.html', 'text/html'],
-    ['.md', 'text/markdown'],
-    ['.txt', 'text/plain'],
-    ['.rst', 'text/prs.fallenstein.rst'],
-    ['.xml', 'text/xml'],
-    ['.license', 'text/plain'],
-    ['.licence', 'text/plain']
-  ])
-
   fetchLicenseEvidence (path: string): Set<Models.License> | undefined {
     const licenses = new Set<Models.License>()
     const files = readdirSync(path)
     for (const file of files) {
-      if (!this.LICENSE_FILENAME_PATTERN.test(file)) {
+      if (!LICENSE_FILENAME_PATTERN.test(file)) {
         continue
       }
 
@@ -742,8 +727,8 @@ export class LicenseFetcher {
 
   private getMimeForLicenseFile (filename: string): string | undefined {
     const { name, ext } = parse(filename.toLowerCase())
-    return this.LICENSE_FILENAME_BASE.has(name) && this.LICENSE_FILENAME_EXT.has(ext)
+    return LICENSE_FILENAME_BASE.has(name) && LICENSE_FILENAME_EXT.has(ext)
       ? 'text/plain'
-      : this.MAP_TEXT_EXTENSION_MIME.get(ext)
+      : MAP_TEXT_EXTENSION_MIME.get(ext)
   }
 }

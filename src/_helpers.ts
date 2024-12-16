@@ -56,3 +56,18 @@ export function tryRemoveSecretsFromUrl (url: string): string {
     return url
   }
 }
+
+export const LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
+export const LICENSE_FILENAME_BASE = new Set(['licence', 'license'])
+export const LICENSE_FILENAME_EXT = new Set(['.apache', '.bsd', '.gpl', '.mit'])
+export const MAP_TEXT_EXTENSION_MIME = new Map([
+  ['', 'text/plain'],
+  ['.htm', 'text/html'],
+  ['.html', 'text/html'],
+  ['.md', 'text/markdown'],
+  ['.txt', 'text/plain'],
+  ['.rst', 'text/prs.fallenstein.rst'],
+  ['.xml', 'text/xml'],
+  ['.license', 'text/plain'],
+  ['.licence', 'text/plain']
+])
