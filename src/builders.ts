@@ -481,10 +481,13 @@ export class BomBuilder {
       if (this.packageLockOnly) {
         this.console.warn('WARN  | Adding license text is ignored (package-lock-only is configured!) for %j', data.name)
       } else {
-        const licenses = this.licenseFetcher.fetchLicenseEvidence(data?.path as string)
-        if (licenses !== undefined) {
-          component.evidence = new Models.ComponentEvidence()
-          for (const license of licenses) {
+        component.evidence = new Models.ComponentEvidence()
+        for (const license of this.licenseFetcher.fetchLicenseEvidence(data?.path as string)) {
+          if (license != null) {
+            // only create a evidence if a license attachment is found
+            if (component.evidence == null) {
+              component.evidence = new Models.ComponentEvidence()
+            }
             component.evidence.licenses.add(license)
           }
         }
@@ -696,8 +699,7 @@ const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === '
   : function (value) { return JSON.parse(JSON.stringify(value)) }
 
 export class LicenseFetcher {
-  fetchLicenseEvidence (path: string): Set<Models.License> | undefined {
-    const licenses = new Set<Models.License>()
+  * fetchLicenseEvidence (path: string): Generator<Models.License | null, void, void> {
     const files = readdirSync(path)
     for (const file of files) {
       if (!LICENSE_FILENAME_PATTERN.test(file)) {
@@ -710,7 +712,7 @@ export class LicenseFetcher {
       }
 
       const fp = join(path, file)
-      const namedLicense = new Models.NamedLicense(
+      yield new Models.NamedLicense(
         `file: ${file}`,
         {
           text: new Models.Attachment(
@@ -721,9 +723,7 @@ export class LicenseFetcher {
             }
           )
         })
-      licenses.add(namedLicense)
     }
-    return licenses.size === 0 ? undefined : licenses
   }
 
   private getMimeForLicenseFile (filename: string): string | undefined {
