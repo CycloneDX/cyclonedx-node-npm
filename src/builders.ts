@@ -90,10 +90,9 @@ export class BomBuilder {
   }
 
   buildFromProjectDir (projectDir: string, process: NodeJS.Process): Models.Bom {
-    const bom = this.buildFromNpmLs(
+    return this.buildFromNpmLs(
       ...this.fetchNpmLs(projectDir, process)
     )
-    return bom
   }
 
   private versionTuple (value: string): number[] {
