@@ -477,15 +477,16 @@ export class BomBuilder {
       l.acknowledgement = Enums.LicenseAcknowledgement.Declared
     })
 
-    if (this.gatherLicenseTexts && this.packageLockOnly) {
-      this.console.warn('WARN  | Adding license text is ignored (package-lock-only is configured!) for %j', data.name)
-    }
-    if (this.gatherLicenseTexts && !this.packageLockOnly) {
-      const licenses = this.licenseFetcher.fetchLicenseEvidence(data?.path as string)
-      if (licenses !== undefined) {
-        component.evidence = new Models.ComponentEvidence()
-        for (const license of licenses) {
-          component.evidence.licenses.add(license)
+    if (this.gatherLicenseTexts) {
+      if (this.packageLockOnly) {
+        this.console.warn('WARN  | Adding license text is ignored (package-lock-only is configured!) for %j', data.name)
+      } else {
+        const licenses = this.licenseFetcher.fetchLicenseEvidence(data?.path as string)
+        if (licenses !== undefined) {
+          component.evidence = new Models.ComponentEvidence()
+          for (const license of licenses) {
+            component.evidence.licenses.add(license)
+          }
         }
       }
     }
