@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { readFileSync, writeSync } from 'fs'
-import {parse} from "path";
+import { parse } from 'path'
 
 export function loadJsonFile (path: string): any {
   return JSON.parse(readFileSync(path, 'utf8'))
