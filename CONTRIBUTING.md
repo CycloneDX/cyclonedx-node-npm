@@ -16,7 +16,7 @@ npm ci
 ## Build from source
 
 ```shell
-npm run build
+npm run build-dev
 ```
 
 ## Testing
