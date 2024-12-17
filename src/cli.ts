@@ -47,6 +47,7 @@ interface CommandOptions {
   flattenComponents: boolean
   shortPURLs: boolean
   outputReproducible: boolean
+  gatherLicenseTexts: boolean
   outputFormat: OutputFormat
   outputFile: string
   validate: boolean | undefined
@@ -115,6 +116,12 @@ function makeCommand (process: NodeJS.Process): Command {
     ).env(
       'BOM_REPRODUCIBLE'
     )
+  ).addOption(
+    new Option(
+      '--gather-license-texts',
+      'Search for license files in components and include them as license evidence.\n' +
+      'This feature is experimental. (default: false)'
+    ).default(false)
   ).addOption(
     (function () {
       const o = new Option(
@@ -249,7 +256,8 @@ export async function run (process: NodeJS.Process): Promise<number> {
       omitDependencyTypes: options.omit,
       reproducible: options.outputReproducible,
       flattenComponents: options.flattenComponents,
-      shortPURLs: options.shortPURLs
+      shortPURLs: options.shortPURLs,
+      gatherLicenseTexts: options.gatherLicenseTexts
     },
     myConsole
   ).buildFromProjectDir(projectDir, process)

@@ -18,11 +18,17 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
-import { existsSync } from 'fs'
+import { existsSync, readdirSync, readFileSync } from 'fs'
 import * as normalizePackageData from 'normalize-package-data'
 import * as path from 'path'
+import { join } from 'path'
 
-import { isString, loadJsonFile, tryRemoveSecretsFromUrl } from './_helpers'
+import {
+  getMimeForLicenseFile,
+  isString,
+  LICENSE_FILENAME_PATTERN,
+  loadJsonFile, tryRemoveSecretsFromUrl
+} from './_helpers'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
@@ -37,6 +43,7 @@ interface BomBuilderOptions {
   reproducible?: BomBuilder['reproducible']
   flattenComponents?: BomBuilder['flattenComponents']
   shortPURLs?: BomBuilder['shortPURLs']
+  gatherLicenseTexts?: BomBuilder['gatherLicenseTexts']
 }
 
 type cPath = string
@@ -56,6 +63,7 @@ export class BomBuilder {
   reproducible: boolean
   flattenComponents: boolean
   shortPURLs: boolean
+  gatherLicenseTexts: boolean
 
   console: Console
 
@@ -79,6 +87,7 @@ export class BomBuilder {
     this.reproducible = options.reproducible ?? false
     this.flattenComponents = options.flattenComponents ?? false
     this.shortPURLs = options.shortPURLs ?? false
+    this.gatherLicenseTexts = options.gatherLicenseTexts ?? false
 
     this.console = console_
   }
@@ -465,6 +474,23 @@ export class BomBuilder {
       l.acknowledgement = Enums.LicenseAcknowledgement.Declared
     })
 
+    if (this.gatherLicenseTexts) {
+      if (this.packageLockOnly) {
+        this.console.warn('WARN  | Adding license text is ignored (package-lock-only is configured!) for %j', data.name)
+      } else {
+        component.evidence = new Models.ComponentEvidence()
+        for (const license of this.fetchLicenseEvidence(data?.path as string)) {
+          if (license != null) {
+            // only create a evidence if a license attachment is found
+            if (component.evidence == null) {
+              component.evidence = new Models.ComponentEvidence()
+            }
+            component.evidence.licenses.add(license)
+          }
+        }
+      }
+    }
+
     if (isOptional || isDevOptional) {
       component.scope = Enums.ComponentScope.Optional
     }
@@ -608,6 +634,33 @@ export class BomBuilder {
       if (tool !== undefined) {
         yield tool
       }
+    }
+  }
+
+  private * fetchLicenseEvidence (path: string): Generator<Models.License | null, void, void> {
+    const files = readdirSync(path)
+    for (const file of files) {
+      if (!LICENSE_FILENAME_PATTERN.test(file)) {
+        continue
+      }
+
+      const contentType = getMimeForLicenseFile(file)
+      if (contentType === undefined) {
+        continue
+      }
+
+      const fp = join(path, file)
+      yield new Models.NamedLicense(
+        `file: ${file}`,
+        {
+          text: new Models.Attachment(
+            readFileSync(fp).toString('base64'),
+            {
+              contentType,
+              encoding: Enums.AttachmentEncoding.Base64
+            }
+          )
+        })
     }
   }
 }
