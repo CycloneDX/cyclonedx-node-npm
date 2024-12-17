@@ -23,12 +23,7 @@ import * as normalizePackageData from 'normalize-package-data'
 import * as path from 'path'
 import { join } from 'path'
 
-import {
-  getMimeForLicenseFile,
-  isString,
-  LICENSE_FILENAME_PATTERN,
-  loadJsonFile, tryRemoveSecretsFromUrl
-} from './_helpers'
+import { getMimeForLicenseFile, isString, loadJsonFile, tryRemoveSecretsFromUrl } from './_helpers'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
@@ -637,10 +632,12 @@ export class BomBuilder {
     }
   }
 
+  readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
+
   private * fetchLicenseEvidence (path: string): Generator<Models.License | null, void, void> {
     const files = readdirSync(path)
     for (const file of files) {
-      if (!LICENSE_FILENAME_PATTERN.test(file)) {
+      if (!this.#LICENSE_FILENAME_PATTERN.test(file)) {
         continue
       }
 

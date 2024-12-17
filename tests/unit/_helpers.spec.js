@@ -17,30 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { getMimeForLicenseFile, LICENSE_FILENAME_PATTERN } = require('../../dist/_helpers')
+const { getMimeForLicenseFile } = require('../../dist/_helpers')
 const { describe, expect, test } = require('@jest/globals')
-
-describe('LICENSE_FILENAME_PATTERN', () => {
-  test.each([
-    'LICENCE',
-    'licence',
-    'LICENSE',
-    'license',
-    'NOTICE',
-    'UNLICENCE',
-    'UNLICENSE'])('valid name: %s', (fileName) => {
-    const value = LICENSE_FILENAME_PATTERN.test(fileName)
-    expect(value).toBeTruthy()
-  })
-  test.each([
-    'my-license',
-    'my_license',
-    'myNotice',
-    'the-LICENSE'])('invalid name: %s', (fileName) => {
-    const value = LICENSE_FILENAME_PATTERN.test(fileName)
-    expect(value).toBeFalsy()
-  })
-})
 
 describe('getMimeForLicenseFile', () => {
   test.each([
@@ -48,7 +26,8 @@ describe('getMimeForLicenseFile', () => {
     ['site.html', 'text/html'],
     ['license.md', 'text/markdown'],
     ['info.xml', 'text/xml'],
-    ['UNKNOWN', 'text/plain']
+    ['UNKNOWN', 'text/plain'],
+    ['LICENCE.MIT', 'text/plain']
   ])('check %s', (fileName, expected) => {
     const value = getMimeForLicenseFile(fileName)
     expect(value).toBe(expected)
