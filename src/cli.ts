@@ -43,11 +43,11 @@ interface CommandOptions {
   ignoreNpmErrors: boolean
   packageLockOnly: boolean
   omit: Omittable[]
-  specVersion: Spec.Version
+  gatherLicenseTexts: boolean
   flattenComponents: boolean
   shortPURLs: boolean
   outputReproducible: boolean
-  gatherLicenseTexts: boolean
+  specVersion: Spec.Version
   outputFormat: OutputFormat
   outputFile: string
   validate: boolean | undefined
@@ -89,6 +89,12 @@ function makeCommand (process: NodeJS.Process): Command {
     )
   ).addOption(
     new Option(
+      '--gather-license-texts',
+      'Search for license files in components and include them as license evidence.\n' +
+      'This feature is experimental.'
+    ).default(false)
+  ).addOption(
+    new Option(
       '--flatten-components',
       'Whether to flatten the components.\n' +
       'This means the actual nesting of node packages is not represented in the SBOM result.'
@@ -116,12 +122,6 @@ function makeCommand (process: NodeJS.Process): Command {
     ).env(
       'BOM_REPRODUCIBLE'
     )
-  ).addOption(
-    new Option(
-      '--gather-license-texts',
-      'Search for license files in components and include them as license evidence.\n' +
-      'This feature is experimental. (default: false)'
-    ).default(false)
   ).addOption(
     (function () {
       const o = new Option(
@@ -254,10 +254,10 @@ export async function run (process: NodeJS.Process): Promise<number> {
       metaComponentType: options.mcType,
       packageLockOnly: options.packageLockOnly,
       omitDependencyTypes: options.omit,
+      gatherLicenseTexts: options.gatherLicenseTexts,
       reproducible: options.outputReproducible,
       flattenComponents: options.flattenComponents,
-      shortPURLs: options.shortPURLs,
-      gatherLicenseTexts: options.gatherLicenseTexts
+      shortPURLs: options.shortPURLs
     },
     myConsole
   ).buildFromProjectDir(projectDir, process)
