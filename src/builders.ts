@@ -21,14 +21,13 @@ import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/
 import { existsSync, readdirSync, readFileSync } from 'fs'
 import * as normalizePackageData from 'normalize-package-data'
 import * as path from 'path'
-import { join, parse } from 'path'
+import { join } from 'path'
 
 import {
+  getMimeForLicenseFile,
   isString,
-  LICENSE_FILENAME_BASE, LICENSE_FILENAME_EXT,
   LICENSE_FILENAME_PATTERN,
-  loadJsonFile, MAP_TEXT_EXTENSION_MIME,
-  tryRemoveSecretsFromUrl
+  loadJsonFile, tryRemoveSecretsFromUrl
 } from './_helpers'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
@@ -706,7 +705,7 @@ export class LicenseFetcher {
         continue
       }
 
-      const contentType = this.getMimeForLicenseFile(file)
+      const contentType = getMimeForLicenseFile(file)
       if (contentType === undefined) {
         continue
       }
@@ -724,12 +723,5 @@ export class LicenseFetcher {
           )
         })
     }
-  }
-
-  private getMimeForLicenseFile (filename: string): string | undefined {
-    const { name, ext } = parse(filename.toLowerCase())
-    return LICENSE_FILENAME_BASE.has(name) && LICENSE_FILENAME_EXT.has(ext)
-      ? 'text/plain'
-      : MAP_TEXT_EXTENSION_MIME.get(ext)
   }
 }

@@ -18,6 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { readFileSync, writeSync } from 'fs'
+import {parse} from "path";
 
 export function loadJsonFile (path: string): any {
   return JSON.parse(readFileSync(path, 'utf8'))
@@ -58,9 +59,9 @@ export function tryRemoveSecretsFromUrl (url: string): string {
 }
 
 export const LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
-export const LICENSE_FILENAME_BASE = new Set(['licence', 'license'])
-export const LICENSE_FILENAME_EXT = new Set(['.apache', '.bsd', '.gpl', '.mit'])
-export const MAP_TEXT_EXTENSION_MIME = new Map([
+const LICENSE_FILENAME_BASE = new Set(['licence', 'license'])
+const LICENSE_FILENAME_EXT = new Set(['.apache', '.bsd', '.gpl', '.mit'])
+const MAP_TEXT_EXTENSION_MIME = new Map([
   ['', 'text/plain'],
   ['.htm', 'text/html'],
   ['.html', 'text/html'],
@@ -71,3 +72,10 @@ export const MAP_TEXT_EXTENSION_MIME = new Map([
   ['.license', 'text/plain'],
   ['.licence', 'text/plain']
 ])
+
+export function getMimeForLicenseFile (filename: string): string | undefined {
+  const { name, ext } = parse(filename.toLowerCase())
+  return LICENSE_FILENAME_BASE.has(name) && LICENSE_FILENAME_EXT.has(ext)
+    ? 'text/plain'
+    : MAP_TEXT_EXTENSION_MIME.get(ext)
+}
