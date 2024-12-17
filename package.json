@@ -91,6 +91,7 @@
     "lint": "tsc --noEmit",
     "prebuild": "node -r fs -e 'fs.rmSync(`dist`,{recursive:true,force:true})'",
     "build": "tsc -b ./tsconfig.json",
+    "build-dev": "npm run -- build --sourceMap",
     "cs-fix": "eslint --fix .",
     "setup-tests": "node tests/integration/setup.js",
     "test": "run-p --aggregate-output -lc test:*",
