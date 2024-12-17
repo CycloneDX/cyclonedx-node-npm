@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Dependencies
-  * No longer depend on `packageurlk-js` (via [#1237])
+  * No longer depend on `packageurl-js` (via [#1237])
 * Build
   * Use _TypeScript_ `v5.6.2` now, was `v5.5.3` (via [#1209], [#1218])
 
