@@ -54,7 +54,6 @@ export class BomBuilder {
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
   treeBuilder: TreeBuilder
   purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
-  licenseFetcher: LicenseFetcher
 
   ignoreNpmErrors: boolean
 
@@ -80,7 +79,6 @@ export class BomBuilder {
     this.componentBuilder = componentBuilder
     this.treeBuilder = treeBuilder
     this.purlFactory = purlFactory
-    this.licenseFetcher = new LicenseFetcher()
 
     this.ignoreNpmErrors = options.ignoreNpmErrors ?? false
     this.metaComponentType = options.metaComponentType ?? Enums.ComponentType.Library
@@ -481,7 +479,7 @@ export class BomBuilder {
         this.console.warn('WARN  | Adding license text is ignored (package-lock-only is configured!) for %j', data.name)
       } else {
         component.evidence = new Models.ComponentEvidence()
-        for (const license of this.licenseFetcher.fetchLicenseEvidence(data?.path as string)) {
+        for (const license of this.fetchLicenseEvidence(data?.path as string)) {
           if (license != null) {
             // only create a evidence if a license attachment is found
             if (component.evidence == null) {
@@ -638,6 +636,33 @@ export class BomBuilder {
       }
     }
   }
+
+  private * fetchLicenseEvidence (path: string): Generator<Models.License | null, void, void> {
+    const files = readdirSync(path)
+    for (const file of files) {
+      if (!LICENSE_FILENAME_PATTERN.test(file)) {
+        continue
+      }
+
+      const contentType = getMimeForLicenseFile(file)
+      if (contentType === undefined) {
+        continue
+      }
+
+      const fp = join(path, file)
+      yield new Models.NamedLicense(
+        `file: ${file}`,
+        {
+          text: new Models.Attachment(
+            readFileSync(fp).toString('base64'),
+            {
+              contentType,
+              encoding: Enums.AttachmentEncoding.Base64
+            }
+          )
+        })
+    }
+  }
 }
 
 class DummyComponent extends Models.Component {
@@ -696,32 +721,3 @@ export class TreeBuilder {
 const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
   ? structuredClone
   : function (value) { return JSON.parse(JSON.stringify(value)) }
-
-export class LicenseFetcher {
-  * fetchLicenseEvidence (path: string): Generator<Models.License | null, void, void> {
-    const files = readdirSync(path)
-    for (const file of files) {
-      if (!LICENSE_FILENAME_PATTERN.test(file)) {
-        continue
-      }
-
-      const contentType = getMimeForLicenseFile(file)
-      if (contentType === undefined) {
-        continue
-      }
-
-      const fp = join(path, file)
-      yield new Models.NamedLicense(
-        `file: ${file}`,
-        {
-          text: new Models.Attachment(
-            readFileSync(fp).toString('base64'),
-            {
-              contentType,
-              encoding: Enums.AttachmentEncoding.Base64
-            }
-          )
-        })
-    }
-  }
-}
