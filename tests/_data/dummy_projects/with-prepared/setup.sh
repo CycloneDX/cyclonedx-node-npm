@@ -13,7 +13,7 @@ rm -rf "$NODE_MODULES_DIR/**/.bin"
 find "$NODE_MODULES_DIR" \
   \( -type f -or -type l \) \
   -not \( \
-    -name 'package.json' \
+    -name 'package.json' -or -name '.package-lock.json' \
     -or -iname '*license*' -or  -iname '*licence*' \
     -or -name 'NOTICE' \
   \) \
