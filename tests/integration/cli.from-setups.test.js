@@ -19,16 +19,14 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 const { spawnSync } = require('child_process')
 const { join } = require('path')
-const { writeFileSync, readFileSync } = require('fs')
+const { writeFileSync, readFileSync, mkdirSync } = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
 
 const { makeReproducible, getNpmVersion } = require('../_helper')
-const { UPDATE_SNAPSHOTS, mkTemp, cliWrapper, latestCdxSpecVersion, demoResultsRoot, projectDemoRootPath } = require('./')
+const { UPDATE_SNAPSHOTS, mkTemp, cliWrapper, latestCdxSpecVersion, dummyProjectsRoot, dummyResultsRoot, projectDemoRootPath, demoResultsRoot } = require('./')
 
-// skipped for now
-describe.skip('integration.cli.from-setups', () => {
-  // !! due to inconsistencies between npm6,7,8 -
+describe('integration.cli.from-setups', () => {
   // some test beds might be skipped
   const skipAllTests = getNpmVersion()[0] < 8
 
@@ -36,82 +34,162 @@ describe.skip('integration.cli.from-setups', () => {
 
   const tmpRoot = mkTemp('cli.from-setups')
 
-  const demos = [
-    'alternative-package-registry',
-    'bundled-dependencies',
-    // 'deps-from-git',
-    'dev-dependencies',
-    // 'juice-shop',
-    'local-dependencies',
-    'local-workspaces',
-    'package-integrity',
-    'package-with-build-id'
-  ]
   const formats = ['json', 'xml']
 
-  /**
-   * @param {string} demo
-   * @param {string} oType
-   * @param {'json'|'xml'} format
-   * @param {string[]} [additionalCliArgs]
-   */
-  function runTest (demo, oType, format, additionalCliArgs = []) {
-    const expectedOutSnap = join(demoResultsRoot, oType, `${demo}_from-setup.snap.${format}`)
-    const outFile = join(tmpRoot, `${demo}_${oType}.${format}`)
-    const res = spawnSync(
-      process.execPath,
-      ['--', cliWrapper,
-        ...additionalCliArgs,
-        '--spec-version', latestCdxSpecVersion,
-        '--output-format', format,
-        '--output-reproducible',
-        '--output-file', outFile,
-        '--validate'
-      ], {
-        cwd: join(projectDemoRootPath, demo, 'project'),
-        stdio: ['ignore', 'inherit', 'pipe'],
-        encoding: 'utf8'
+  describe('dummy_projects', () => {
+    const tmpRootRun = join(tmpRoot, 'with-prepared')
+    mkdirSync(tmpRootRun)
+
+    const useCases = [
+      {
+        subject: 'bare',
+        args: [],
+        dummyProject: ['with-prepared']
+      },
+      {
+        subject: 'flat',
+        args: [],
+        dummyProject: ['with-prepared']
+      },
+      {
+        subject: 'with-licenses',
+        args: ['--gather-license-texts'],
+        dummyProject: ['with-prepared']
       }
-    )
-    try {
-      expect(res.status).toBe(0)
-    } catch (err) {
-      process.stderr.write('\n')
-      process.stderr.write(res.stderr)
-      process.stderr.write('\n')
-      throw err
+    ]
+
+    function runTest (subject, project, format, additionalCliArgs = []) {
+      const expectedOutSnap = join(dummyResultsRoot, subject, `${project}.snap.${format}`)
+      const outFile = join(tmpRoot, `${subject}_${project}.${format}`)
+      const res = spawnSync(
+        process.execPath,
+        ['--', cliWrapper,
+          ...additionalCliArgs,
+          '--spec-version', latestCdxSpecVersion,
+          '--output-format', format,
+          '--output-reproducible',
+          '--output-file', outFile,
+          '--validate'
+        ], {
+          cwd: join(dummyProjectsRoot, project),
+          stdio: ['ignore', 'inherit', 'pipe'],
+          encoding: 'utf8'
+        }
+      )
+      try {
+        expect(res.status).toBe(0)
+      } catch (err) {
+        process.stderr.write('\n')
+        process.stderr.write(res.stderr)
+        process.stderr.write('\n')
+        throw err
+      }
+      const actualOutput = makeReproducible(format, readFileSync(outFile, 'utf8'))
+
+      if (UPDATE_SNAPSHOTS) {
+        writeFileSync(expectedOutSnap, actualOutput, 'utf8')
+      }
+
+      expect(actualOutput).toEqual(
+        readFileSync(expectedOutSnap, 'utf8'),
+        `${outFile} should equal ${expectedOutSnap}`
+      )
     }
-    const actualOutput = makeReproducible(format, readFileSync(outFile, 'utf8'))
 
-    if (UPDATE_SNAPSHOTS) {
-      writeFileSync(expectedOutSnap, actualOutput, 'utf8')
-    }
+    describe.each(useCases)('subject: $subject', (ud) => {
+      mkdirSync(join(tmpRootRun, ud.subject))
 
-    expect(actualOutput).toEqual(
-      readFileSync(expectedOutSnap, 'utf8'),
-      `${outFile} should equal ${expectedOutSnap}`
-    )
-  }
-
-  for (const demo of demos) {
-    describe(`demo: ${demo}`, () => {
-      for (const format of formats) {
-        describe(`format: ${format}`, () => {
+      describe.each(ud.dummyProject)('dummyProject: %s', (dummyProject) => {
+        describe.each(formats)('format: %s', (format) => {
           (skipAllTests
             ? test.skip
             : test
-          )('bare', () => {
-            runTest(demo, 'bare', format)
-          }, cliRunTestTimeout);
-
-          (skipAllTests
-            ? test.skip
-            : test
-          )('flat', () => {
-            runTest(demo, 'flatten-components', format, ['--flatten-components'])
+          )('run', () => {
+            runTest(ud.subject, dummyProject, format, ud.args)
           }, cliRunTestTimeout)
         })
-      }
+      })
     })
-  }
+  })
+
+  // skipped for now
+  describe.skip('demos', () => {
+    const demos = [
+      'alternative-package-registry',
+      'bundled-dependencies',
+      // 'deps-from-git',
+      'dev-dependencies',
+      // 'juice-shop',
+      'local-dependencies',
+      'local-workspaces',
+      'package-integrity',
+      'package-with-build-id'
+    ]
+
+    /**
+     * @param {string} demo
+     * @param {string} oType
+     * @param {'json'|'xml'} format
+     * @param {string[]} [additionalCliArgs]
+     */
+    function runTest (demo, oType, format, additionalCliArgs = []) {
+      const expectedOutSnap = join(demoResultsRoot, oType, `${demo}_from-setup.snap.${format}`)
+      const outFile = join(tmpRoot, `${demo}_${oType}.${format}`)
+      const res = spawnSync(
+        process.execPath,
+        ['--', cliWrapper,
+          ...additionalCliArgs,
+          '--spec-version', latestCdxSpecVersion,
+          '--output-format', format,
+          '--output-reproducible',
+          '--output-file', outFile,
+          '--validate'
+        ], {
+          cwd: join(projectDemoRootPath, demo, 'project'),
+          stdio: ['ignore', 'inherit', 'pipe'],
+          encoding: 'utf8'
+        }
+      )
+      try {
+        expect(res.status).toBe(0)
+      } catch (err) {
+        process.stderr.write('\n')
+        process.stderr.write(res.stderr)
+        process.stderr.write('\n')
+        throw err
+      }
+      const actualOutput = makeReproducible(format, readFileSync(outFile, 'utf8'))
+
+      if (UPDATE_SNAPSHOTS) {
+        writeFileSync(expectedOutSnap, actualOutput, 'utf8')
+      }
+
+      expect(actualOutput).toEqual(
+        readFileSync(expectedOutSnap, 'utf8'),
+      `${outFile} should equal ${expectedOutSnap}`
+      )
+    }
+
+    for (const demo of demos) {
+      describe(`demo: ${demo}`, () => {
+        for (const format of formats) {
+          describe(`format: ${format}`, () => {
+            (skipAllTests
+              ? test.skip
+              : test
+            )('bare', () => {
+              runTest(demo, 'bare', format)
+            }, cliRunTestTimeout);
+
+            (skipAllTests
+              ? test.skip
+              : test
+            )('flat', () => {
+              runTest(demo, 'flatten-components', format, ['--flatten-components'])
+            }, cliRunTestTimeout)
+          })
+        }
+      })
+    }
+  })
 })
