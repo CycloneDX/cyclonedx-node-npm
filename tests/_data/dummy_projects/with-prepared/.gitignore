@@ -1,0 +1,12 @@
+*
+!/.gitignore
+!/.gitattributes
+
+!/node_modules
+!/node_modules/*
+!/node_modules/**/*
+!/package.json
+
+!/setup.sh
+!/README.md
+!/LICENCE.mit

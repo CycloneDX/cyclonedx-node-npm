@@ -80,7 +80,7 @@ describe('integration.cli.from-collected', () => {
           ...(dd.args === '' ? [] : dd.args.split(' ')),
           '--',
           // just some dummy project
-          join('with-lockfile', 'package.json')
+          join('with-prepared', 'package.json')
         ], logFileBase, cwd, {
           CT_VERSION: `${dd.npm}.99.0`,
           CT_SUBJECT: dd.subject,
