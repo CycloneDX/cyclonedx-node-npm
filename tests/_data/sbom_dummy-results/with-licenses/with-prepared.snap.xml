@@ -75,8 +75,12 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@7.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-javascript-library.git</purl>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@7.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@cyclonedx/cyclonedx-library/-/cyclonedx-library-7.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -117,8 +121,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40isaacs/cliui@8.0.2?vcs_url=git%2Bhttps%3A//github.com/yargs/cliui.git</purl>
+      <purl>pkg:npm/%40isaacs/cliui@8.0.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@isaacs/cliui/-/cliui-8.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/yargs/cliui/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -155,8 +163,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40npmcli/agent@2.2.2?vcs_url=git%2Bhttps%3A//github.com/npm/agent.git</purl>
+      <purl>pkg:npm/%40npmcli/agent@2.2.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@npmcli/agent/-/agent-2.2.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/agent/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -186,8 +198,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40npmcli/fs@3.1.1?vcs_url=git%2Bhttps%3A//github.com/npm/fs.git</purl>
+      <purl>pkg:npm/%40npmcli/fs@3.1.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@npmcli/fs/-/fs-3.1.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/fs/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -224,8 +240,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40oozcitak/dom@1.15.10?vcs_url=git%3A//github.com/oozcitak/dom.git</purl>
+      <purl>pkg:npm/%40oozcitak/dom@1.15.10</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@oozcitak/dom/-/dom-1.15.10.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/dom/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -300,8 +320,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40oozcitak/url@1.0.4?vcs_url=git%2Bhttps%3A//github.com/oozcitak/url.git</purl>
+      <purl>pkg:npm/%40oozcitak/url@1.0.4</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@oozcitak/url/-/url-1.0.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/url/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -375,8 +399,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40pkgjs/parseargs@0.11.0?vcs_url=git%2Bssh%3A//git%40github.com/pkgjs/parseargs.git</purl>
+      <purl>pkg:npm/%40pkgjs/parseargs@0.11.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/pkgjs/parseargs/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -412,8 +440,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40types/node@20.14.10?vcs_url=git%2Bhttps%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/node</purl>
+      <purl>pkg:npm/%40types/node@20.14.10#types/node</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@types/node/-/node-20.14.10.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -449,8 +481,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40types/uuid@8.3.4?vcs_url=git%2Bhttps%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid</purl>
+      <purl>pkg:npm/%40types/uuid@8.3.4#types/uuid</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -486,8 +522,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/abbrev@2.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/abbrev-js.git</purl>
+      <purl>pkg:npm/abbrev@2.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/abbrev/-/abbrev-2.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/abbrev-js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -523,8 +563,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/agent-base@7.1.3?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/agent-base</purl>
+      <purl>pkg:npm/agent-base@7.1.3#packages/agent-base</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/agent-base/-/agent-base-7.1.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -560,8 +604,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/aggregate-error@3.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/aggregate-error.git</purl>
+      <purl>pkg:npm/aggregate-error@3.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/aggregate-error/-/aggregate-error-3.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/aggregate-error/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -597,8 +645,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ajv-formats-draft2019@1.6.1?vcs_url=git%2Bhttps%3A//github.com/luzlab/ajv-formats-draft2019.git</purl>
+      <purl>pkg:npm/ajv-formats-draft2019@1.6.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ajv-formats-draft2019/-/ajv-formats-draft2019-1.6.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/luzlab/ajv-formats-draft2019/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -634,8 +686,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ajv-formats@3.0.1?vcs_url=git%2Bhttps%3A//github.com/ajv-validator/ajv-formats.git</purl>
+      <purl>pkg:npm/ajv-formats@3.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ajv-formats/-/ajv-formats-3.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/ajv-validator/ajv-formats/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -708,8 +764,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ansi-regex@6.1.0?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-regex.git</purl>
+      <purl>pkg:npm/ansi-regex@6.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/ansi-regex/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -745,8 +805,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ansi-styles@6.2.1?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-styles.git</purl>
+      <purl>pkg:npm/ansi-styles@6.2.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/ansi-styles/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -781,8 +845,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/argparse@1.0.10?vcs_url=git%2Bhttps%3A//github.com/nodeca/argparse.git</purl>
+      <purl>pkg:npm/argparse@1.0.10</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodeca/argparse/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -810,8 +878,12 @@
               <id>BSD-3-Clause</id>
             </license>
           </licenses>
-          <purl>pkg:npm/sprintf-js@1.0.3?vcs_url=git%2Bhttps%3A//github.com/alexei/sprintf.js.git</purl>
+          <purl>pkg:npm/sprintf-js@1.0.3</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/alexei/sprintf.js/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -857,8 +929,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/balanced-match@1.0.2?vcs_url=git%3A//github.com/juliangruber/balanced-match.git</purl>
+      <purl>pkg:npm/balanced-match@1.0.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/juliangruber/balanced-match/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -894,8 +970,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/base64-js@1.0.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git</purl>
+      <purl>pkg:npm/base64-js@1.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/base64-js/-/base64-js-1.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/beatgammit/base64-js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -931,8 +1011,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/bindings@1.5.0?vcs_url=git%3A//github.com/TooTallNate/node-bindings.git</purl>
+      <purl>pkg:npm/bindings@1.5.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/bindings/-/bindings-1.5.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/node-bindings/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -967,8 +1051,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/bl@4.1.0?vcs_url=git%2Bhttps%3A//github.com/rvagg/bl.git</purl>
+      <purl>pkg:npm/bl@4.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/bl/-/bl-4.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/rvagg/bl/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1004,8 +1092,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/brace-expansion@2.0.1?vcs_url=git%3A//github.com/juliangruber/brace-expansion.git</purl>
+      <purl>pkg:npm/brace-expansion@2.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/juliangruber/brace-expansion/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1060,18 +1152,22 @@
         <property name="cdx:npm:package:path">node_modules/buffer</property>
       </properties>
       <components>
-        <component type="library" bom-ref="buffer@5.7.1|base64-js@1.3.1">
+        <component type="library" bom-ref="buffer@5.7.1|base64-js@1.5.1">
           <author>T. Jameson Little</author>
           <name>base64-js</name>
-          <version>1.3.1</version>
+          <version>1.5.1</version>
           <description>Base64 encoding/decoding in pure JS</description>
           <licenses>
             <license acknowledgement="declared">
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/base64-js@1.3.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git</purl>
+          <purl>pkg:npm/base64-js@1.5.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/beatgammit/base64-js/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1117,8 +1213,12 @@
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/bundle-dependencies@1.0.2?vcs_url=git%2Bhttps%3A//github.com/gajus/bundle-dependencies.git</purl>
+      <purl>pkg:npm/bundle-dependencies@1.0.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/gajus/bundle-dependencies/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2979,8 +3079,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/cacache@18.0.4?vcs_url=git%2Bhttps%3A//github.com/npm/cacache.git</purl>
+      <purl>pkg:npm/cacache@18.0.4</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/cacache/-/cacache-18.0.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/cacache/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3016,8 +3120,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/chownr@2.0.0?vcs_url=git%3A//github.com/isaacs/chownr.git</purl>
+      <purl>pkg:npm/chownr@2.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/chownr/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3053,8 +3161,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/clean-stack@2.2.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/clean-stack.git</purl>
+      <purl>pkg:npm/clean-stack@2.2.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/clean-stack/-/clean-stack-2.2.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/clean-stack/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3090,8 +3202,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/color-convert@2.0.1?vcs_url=git%2Bhttps%3A//github.com/Qix-/color-convert.git</purl>
+      <purl>pkg:npm/color-convert@2.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/Qix-/color-convert/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3127,8 +3243,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/color-name@1.1.4?vcs_url=git%2Bssh%3A//git%40github.com/colorjs/color-name.git</purl>
+      <purl>pkg:npm/color-name@1.1.4</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/colorjs/color-name/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3164,8 +3284,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/commander@2.20.3?vcs_url=git%2Bhttps%3A//github.com/tj/commander.js.git</purl>
+      <purl>pkg:npm/commander@2.20.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/commander/-/commander-2.20.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/tj/commander.js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3201,8 +3325,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/cross-spawn@7.0.6?vcs_url=git%2Bssh%3A//git%40github.com/moxystudio/node-cross-spawn.git</purl>
+      <purl>pkg:npm/cross-spawn@7.0.6</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/moxystudio/node-cross-spawn/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3230,8 +3358,12 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/isexe@2.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/isexe.git</purl>
+          <purl>pkg:npm/isexe@2.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/isexe/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3267,8 +3399,12 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/which@2.0.2?vcs_url=git%3A//github.com/isaacs/node-which.git</purl>
+          <purl>pkg:npm/which@2.0.2</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/which/-/which-2.0.2.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/node-which/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3314,8 +3450,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/debug@4.4.0?vcs_url=git%3A//github.com/debug-js/debug.git</purl>
+      <purl>pkg:npm/debug@4.4.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/debug/-/debug-4.4.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/debug-js/debug/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3351,8 +3491,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/decompress-response@6.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/decompress-response.git</purl>
+      <purl>pkg:npm/decompress-response@6.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/decompress-response/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3392,8 +3536,12 @@
           <url>https://raw.githubusercontent.com/unclechu/node-deep-extend/master/LICENSE</url>
         </license>
       </licenses>
-      <purl>pkg:npm/deep-extend@0.6.0?vcs_url=git%3A//github.com/unclechu/node-deep-extend.git</purl>
+      <purl>pkg:npm/deep-extend@0.6.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/unclechu/node-deep-extend/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3429,8 +3577,12 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/detect-libc@2.0.3?vcs_url=git%3A//github.com/lovell/detect-libc.git</purl>
+      <purl>pkg:npm/detect-libc@2.0.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/lovell/detect-libc/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3466,8 +3618,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/discontinuous-range@1.0.0?vcs_url=git%2Bhttps%3A//github.com/dtudury/discontinuous-range.git</purl>
+      <purl>pkg:npm/discontinuous-range@1.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/discontinuous-range/-/discontinuous-range-1.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/dtudury/discontinuous-range/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3503,8 +3659,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/eastasianwidth@0.2.0?vcs_url=git%3A//github.com/komagata/eastasianwidth.git</purl>
+      <purl>pkg:npm/eastasianwidth@0.2.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/eastasianwidth/-/eastasianwidth-0.2.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/komagata/eastasianwidth/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3533,8 +3693,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/emoji-regex@9.2.2?vcs_url=git%2Bhttps%3A//github.com/mathiasbynens/emoji-regex.git</purl>
+      <purl>pkg:npm/emoji-regex@9.2.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3570,8 +3734,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/encoding@0.1.13?vcs_url=git%2Bhttps%3A//github.com/andris9/encoding.git</purl>
+      <purl>pkg:npm/encoding@0.1.13</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/andris9/encoding/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3607,8 +3775,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/end-of-stream@1.4.4?vcs_url=git%3A//github.com/mafintosh/end-of-stream.git</purl>
+      <purl>pkg:npm/end-of-stream@1.4.4</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mafintosh/end-of-stream/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3644,8 +3816,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/env-paths@2.2.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/env-paths.git</purl>
+      <purl>pkg:npm/env-paths@2.2.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/env-paths/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3681,8 +3857,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/err-code@2.0.3?vcs_url=git%3A//github.com/IndigoUnited/js-err-code.git</purl>
+      <purl>pkg:npm/err-code@2.0.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/err-code/-/err-code-2.0.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/IndigoUnited/js-err-code/issues/</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3711,8 +3891,12 @@
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git</purl>
+      <purl>pkg:npm/esprima@4.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/jquery/esprima/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3746,8 +3930,12 @@
       <licenses>
         <expression acknowledgement="declared">(MIT OR WTFPL)</expression>
       </licenses>
-      <purl>pkg:npm/expand-template@2.0.3?vcs_url=git%2Bhttps%3A//github.com/ralphtheninja/expand-template.git</purl>
+      <purl>pkg:npm/expand-template@2.0.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/expand-template/-/expand-template-2.0.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/ralphtheninja/expand-template/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3783,8 +3971,12 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/exponential-backoff@3.1.1?vcs_url=git%2Bhttps%3A//github.com/coveo/exponential-backoff.git</purl>
+      <purl>pkg:npm/exponential-backoff@3.1.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/exponential-backoff/-/exponential-backoff-3.1.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/coveo/exponential-backoff/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3820,8 +4012,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/extend@3.0.2?vcs_url=git%2Bhttps%3A//github.com/justmoon/node-extend.git</purl>
+      <purl>pkg:npm/extend@3.0.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/extend/-/extend-3.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/justmoon/node-extend/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3857,8 +4053,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/fast-deep-equal@3.1.3?vcs_url=git%2Bhttps%3A//github.com/epoberezkin/fast-deep-equal.git</purl>
+      <purl>pkg:npm/fast-deep-equal@3.1.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/epoberezkin/fast-deep-equal/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3894,8 +4094,12 @@
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/fast-uri@3.0.3?vcs_url=git%2Bhttps%3A//github.com/fastify/fast-uri.git</purl>
+      <purl>pkg:npm/fast-uri@3.0.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/fast-uri/-/fast-uri-3.0.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/fastify/fast-uri/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3931,8 +4135,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/file-uri-to-path@1.0.0?vcs_url=git%3A//github.com/TooTallNate/file-uri-to-path.git</purl>
+      <purl>pkg:npm/file-uri-to-path@1.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/file-uri-to-path/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -3968,8 +4176,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/foreground-child@3.3.0?vcs_url=git%2Bhttps%3A//github.com/tapjs/foreground-child.git</purl>
+      <purl>pkg:npm/foreground-child@3.3.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/foreground-child/-/foreground-child-3.3.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/tapjs/foreground-child/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4005,8 +4217,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/fs-constants@1.0.0?vcs_url=git%2Bhttps%3A//github.com/mafintosh/fs-constants.git</purl>
+      <purl>pkg:npm/fs-constants@1.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/fs-constants/-/fs-constants-1.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mafintosh/fs-constants/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4042,8 +4258,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/fs-minipass@3.0.3?vcs_url=git%2Bhttps%3A//github.com/npm/fs-minipass.git</purl>
+      <purl>pkg:npm/fs-minipass@3.0.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/fs-minipass/-/fs-minipass-3.0.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/fs-minipass/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4079,8 +4299,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/github-from-package@0.0.0?vcs_url=git%3A//github.com/substack/github-from-package.git</purl>
+      <purl>pkg:npm/github-from-package@0.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/github-from-package/-/github-from-package-0.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/substack/github-from-package/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4116,8 +4340,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/glob@10.4.5?vcs_url=git%3A//github.com/isaacs/node-glob.git</purl>
+      <purl>pkg:npm/glob@10.4.5</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/glob/-/glob-10.4.5.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-glob/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4152,8 +4380,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/graceful-fs@4.2.11?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-graceful-fs.git</purl>
+      <purl>pkg:npm/graceful-fs@4.2.11</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-graceful-fs/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4189,8 +4421,12 @@
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/http-cache-semantics@4.1.1?vcs_url=git%2Bhttps%3A//github.com/kornelski/http-cache-semantics.git</purl>
+      <purl>pkg:npm/http-cache-semantics@4.1.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.1.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/kornelski/http-cache-semantics/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4226,8 +4462,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/http-proxy-agent@7.0.2?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent</purl>
+      <purl>pkg:npm/http-proxy-agent@7.0.2#packages/http-proxy-agent</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4263,8 +4503,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/https-proxy-agent@7.0.6?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent</purl>
+      <purl>pkg:npm/https-proxy-agent@7.0.6#packages/https-proxy-agent</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4300,8 +4544,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/iconv-lite@0.6.3?vcs_url=git%3A//github.com/ashtuchkin/iconv-lite.git</purl>
+      <purl>pkg:npm/iconv-lite@0.6.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/ashtuchkin/iconv-lite/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4327,18 +4575,22 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ieee754@1.1.13">
+    <component type="library" bom-ref="ieee754@1.2.1">
       <author>Feross Aboukhadijeh</author>
       <name>ieee754</name>
-      <version>1.1.13</version>
+      <version>1.2.1</version>
       <description>Read/write IEEE754 floating point numbers from/to a Buffer or array-like object</description>
       <licenses>
         <license acknowledgement="declared">
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ieee754@1.1.13?vcs_url=git%3A//github.com/feross/ieee754.git</purl>
+      <purl>pkg:npm/ieee754@1.2.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/feross/ieee754/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4364,18 +4616,22 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ignore@5.1.4">
+    <component type="library" bom-ref="ignore@5.3.2">
       <author>kael</author>
       <name>ignore</name>
-      <version>5.1.4</version>
+      <version>5.3.2</version>
       <description>Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.</description>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ignore@5.1.4?vcs_url=git%2Bssh%3A//git%40github.com/kaelzhang/node-ignore.git</purl>
+      <purl>pkg:npm/ignore@5.3.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/kaelzhang/node-ignore/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4411,8 +4667,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/imurmurhash@0.1.4?vcs_url=git%2Bhttps%3A//github.com/jensyt/imurmurhash-js.git</purl>
+      <purl>pkg:npm/imurmurhash@0.1.4</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/jensyt/imurmurhash-js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4441,8 +4701,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/indent-string@4.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/indent-string.git</purl>
+      <purl>pkg:npm/indent-string@4.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/indent-string/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4514,8 +4778,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ini@1.3.8?vcs_url=git%3A//github.com/isaacs/ini.git</purl>
+      <purl>pkg:npm/ini@1.3.8</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ini/-/ini-1.3.8.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/ini/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4551,8 +4819,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ip-address@9.0.5?vcs_url=git%3A//github.com/beaugunderson/ip-address.git</purl>
+      <purl>pkg:npm/ip-address@9.0.5</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ip-address/-/ip-address-9.0.5.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/beaugunderson/ip-address/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4588,8 +4860,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-fullwidth-code-point.git</purl>
+      <purl>pkg:npm/is-fullwidth-code-point@3.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/is-fullwidth-code-point/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4625,8 +4901,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-lambda@1.0.1?vcs_url=git%2Bhttps%3A//github.com/watson/is-lambda.git</purl>
+      <purl>pkg:npm/is-lambda@1.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/is-lambda/-/is-lambda-1.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/watson/is-lambda/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4662,8 +4942,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/isexe@3.1.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/isexe.git</purl>
+      <purl>pkg:npm/isexe@3.1.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/isexe/-/isexe-3.1.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/isexe/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4699,8 +4983,12 @@
           <id>BlueOak-1.0.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/jackspeak@3.4.3?vcs_url=git%2Bhttps%3A//github.com/isaacs/jackspeak.git</purl>
+      <purl>pkg:npm/jackspeak@3.4.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/jackspeak/-/jackspeak-3.4.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/jackspeak/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4736,8 +5024,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/js-yaml@3.14.1?vcs_url=git%2Bhttps%3A//github.com/nodeca/js-yaml.git</purl>
+      <purl>pkg:npm/js-yaml@3.14.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodeca/js-yaml/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4773,8 +5065,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/jsbn@1.1.0?vcs_url=git%2Bhttps%3A//github.com/andyperlitch/jsbn.git</purl>
+      <purl>pkg:npm/jsbn@1.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/jsbn/-/jsbn-1.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/andyperlitch/jsbn/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4810,8 +5106,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/json-schema-traverse@1.0.0?vcs_url=git%2Bhttps%3A//github.com/epoberezkin/json-schema-traverse.git</purl>
+      <purl>pkg:npm/json-schema-traverse@1.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/epoberezkin/json-schema-traverse/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4847,8 +5147,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/libxmljs2@0.35.0?vcs_url=git%2Bssh%3A//git%40github.com/marudor/libxmljs2.git</purl>
+      <purl>pkg:npm/libxmljs2@0.35.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/libxmljs2/-/libxmljs2-0.35.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>http://github.com/marudor/libxmljs2/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4884,8 +5188,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lru-cache@10.4.3?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git</purl>
+      <purl>pkg:npm/lru-cache@10.4.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-lru-cache/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4921,8 +5229,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/make-fetch-happen@13.0.1?vcs_url=git%2Bhttps%3A//github.com/npm/make-fetch-happen.git</purl>
+      <purl>pkg:npm/make-fetch-happen@13.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/make-fetch-happen/-/make-fetch-happen-13.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/make-fetch-happen/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4958,8 +5270,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/mimic-response@3.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/mimic-response.git</purl>
+      <purl>pkg:npm/mimic-response@3.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/mimic-response/-/mimic-response-3.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/mimic-response/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4995,8 +5311,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minimatch@9.0.5?vcs_url=git%3A//github.com/isaacs/minimatch.git</purl>
+      <purl>pkg:npm/minimatch@9.0.5</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minimatch/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5032,8 +5352,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minimist@1.2.8?vcs_url=git%3A//github.com/minimistjs/minimist.git</purl>
+      <purl>pkg:npm/minimist@1.2.8</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/minimistjs/minimist/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5069,8 +5393,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-collect@2.0.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass-collect.git</purl>
+      <purl>pkg:npm/minipass-collect@2.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/minipass-collect/-/minipass-collect-2.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass-collect/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5106,8 +5434,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-fetch@3.0.5?vcs_url=git%2Bhttps%3A//github.com/npm/minipass-fetch.git</purl>
+      <purl>pkg:npm/minipass-fetch@3.0.5</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/minipass-fetch/-/minipass-fetch-3.0.5.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/minipass-fetch/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5172,8 +5504,12 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git</purl>
+          <purl>pkg:npm/minipass@3.3.6</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/minipass/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5234,8 +5570,12 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git</purl>
+          <purl>pkg:npm/minipass@3.3.6</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/minipass/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5281,8 +5621,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-sized@1.0.3?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass-sized.git</purl>
+      <purl>pkg:npm/minipass-sized@1.0.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/minipass-sized/-/minipass-sized-1.0.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass-sized/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5310,8 +5654,12 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git</purl>
+          <purl>pkg:npm/minipass@3.3.6</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/minipass/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5357,8 +5705,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass@7.1.2?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git</purl>
+      <purl>pkg:npm/minipass@7.1.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5423,8 +5775,12 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git</purl>
+          <purl>pkg:npm/minipass@3.3.6</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/minipass/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5470,8 +5826,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/mkdirp-classic@0.5.3?vcs_url=git%2Bhttps%3A//github.com/mafintosh/mkdirp-classic.git</purl>
+      <purl>pkg:npm/mkdirp-classic@0.5.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/mkdirp-classic/-/mkdirp-classic-0.5.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mafintosh/mkdirp-classic/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5506,8 +5866,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/mkdirp@1.0.4?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-mkdirp.git</purl>
+      <purl>pkg:npm/mkdirp@1.0.4</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-mkdirp/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5543,8 +5907,12 @@
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/moo@0.5.2?vcs_url=git%2Bhttps%3A//github.com/tjvr/moo.git</purl>
+      <purl>pkg:npm/moo@0.5.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/moo/-/moo-0.5.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/tjvr/moo/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5579,8 +5947,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ms@2.1.3?vcs_url=git%2Bhttps%3A//github.com/vercel/ms.git</purl>
+      <purl>pkg:npm/ms@2.1.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ms/-/ms-2.1.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/vercel/ms/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5615,8 +5987,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/nan@2.20.0?vcs_url=git%3A//github.com/nodejs/nan.git</purl>
+      <purl>pkg:npm/nan@2.20.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/nan/-/nan-2.20.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/nan/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5652,8 +6028,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/napi-build-utils@1.0.2?vcs_url=git%2Bhttps%3A//github.com/inspiredware/napi-build-utils.git</purl>
+      <purl>pkg:npm/napi-build-utils@1.0.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/napi-build-utils/-/napi-build-utils-1.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/inspiredware/napi-build-utils/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5689,8 +6069,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/nearley@2.20.1?vcs_url=git%2Bhttps%3A//github.com/hardmath123/nearley.git</purl>
+      <purl>pkg:npm/nearley@2.20.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/nearley/-/nearley-2.20.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/hardmath123/nearley/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5725,8 +6109,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/negotiator@0.6.4?vcs_url=git%2Bhttps%3A//github.com/jshttp/negotiator.git</purl>
+      <purl>pkg:npm/negotiator@0.6.4</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/negotiator/-/negotiator-0.6.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/jshttp/negotiator/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5762,8 +6150,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/node-abi@3.71.0?vcs_url=git%2Bhttps%3A//github.com/electron/node-abi.git</purl>
+      <purl>pkg:npm/node-abi@3.71.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/node-abi/-/node-abi-3.71.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/electron/node-abi/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5799,8 +6191,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/node-gyp@10.3.1?vcs_url=git%3A//github.com/nodejs/node-gyp.git</purl>
+      <purl>pkg:npm/node-gyp@10.3.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/node-gyp/-/node-gyp-10.3.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/node-gyp/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5836,8 +6232,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/nopt@7.2.1?vcs_url=git%2Bhttps%3A//github.com/npm/nopt.git</purl>
+      <purl>pkg:npm/nopt@7.2.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/nopt/-/nopt-7.2.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/nopt/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5910,8 +6310,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/p-map@4.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/p-map.git</purl>
+      <purl>pkg:npm/p-map@4.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/p-map/-/p-map-4.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/p-map/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5947,8 +6351,12 @@
           <id>BlueOak-1.0.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/package-json-from-dist@1.0.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/package-json-from-dist.git</purl>
+      <purl>pkg:npm/package-json-from-dist@1.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/package-json-from-dist/-/package-json-from-dist-1.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/package-json-from-dist/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5984,8 +6392,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/packageurl-js@2.0.1?vcs_url=git%2Bhttps%3A//github.com/package-url/packageurl-js.git</purl>
+      <purl>pkg:npm/packageurl-js@2.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/packageurl-js/-/packageurl-js-2.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/package-url/packageurl-js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6021,8 +6433,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/path-key@3.1.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/path-key.git</purl>
+      <purl>pkg:npm/path-key@3.1.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/path-key/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6058,8 +6474,12 @@
           <id>BlueOak-1.0.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/path-scurry@1.11.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/path-scurry.git</purl>
+      <purl>pkg:npm/path-scurry@1.11.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/path-scurry/-/path-scurry-1.11.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/path-scurry/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6095,8 +6515,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/prebuild-install@7.1.2?vcs_url=git%2Bhttps%3A//github.com/prebuild/prebuild-install.git</purl>
+      <purl>pkg:npm/prebuild-install@7.1.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/prebuild-install/-/prebuild-install-7.1.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/prebuild/prebuild-install/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6169,8 +6593,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/promise-retry@2.0.1?vcs_url=git%3A//github.com/IndigoUnited/node-promise-retry.git</purl>
+      <purl>pkg:npm/promise-retry@2.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/promise-retry/-/promise-retry-2.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/IndigoUnited/node-promise-retry/issues/</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6206,8 +6634,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/pump@3.0.2?vcs_url=git%3A//github.com/mafintosh/pump.git</purl>
+      <purl>pkg:npm/pump@3.0.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/pump/-/pump-3.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mafintosh/pump/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6243,8 +6675,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/punycode@2.3.1?vcs_url=git%2Bhttps%3A//github.com/mathiasbynens/punycode.js.git</purl>
+      <purl>pkg:npm/punycode@2.3.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mathiasbynens/punycode.js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6280,8 +6716,12 @@
           <id>CC0-1.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/railroad-diagrams@1.0.0?vcs_url=git%2Bhttps%3A//github.com/tabatkins/railroad-diagrams.git</purl>
+      <purl>pkg:npm/railroad-diagrams@1.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/tabatkins/railroad-diagrams/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6310,8 +6750,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/randexp@0.4.6?vcs_url=git%3A//github.com/fent/randexp.js.git</purl>
+      <purl>pkg:npm/randexp@0.4.6</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/randexp/-/randexp-0.4.6.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/fent/randexp.js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6345,8 +6789,12 @@
       <licenses>
         <expression acknowledgement="declared">(BSD-2-Clause OR MIT OR Apache-2.0)</expression>
       </licenses>
-      <purl>pkg:npm/rc@1.2.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/rc.git</purl>
+      <purl>pkg:npm/rc@1.2.8</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/rc/-/rc-1.2.8.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/dominictarr/rc/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6422,8 +6870,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/require-from-string@2.0.2?vcs_url=git%2Bhttps%3A//github.com/floatdrop/require-from-string.git</purl>
+      <purl>pkg:npm/require-from-string@2.0.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/floatdrop/require-from-string/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6459,8 +6911,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ret@0.1.15?vcs_url=git%3A//github.com/fent/ret.js.git</purl>
+      <purl>pkg:npm/ret@0.1.15</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ret/-/ret-0.1.15.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/fent/ret.js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6496,8 +6952,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/retry@0.12.0?vcs_url=git%3A//github.com/tim-kos/node-retry.git</purl>
+      <purl>pkg:npm/retry@0.12.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/retry/-/retry-0.12.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/tim-kos/node-retry/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6570,8 +7030,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/safer-buffer@2.1.2?vcs_url=git%2Bhttps%3A//github.com/ChALkeR/safer-buffer.git</purl>
+      <purl>pkg:npm/safer-buffer@2.1.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/ChALkeR/safer-buffer/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6607,8 +7071,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/schemes@1.4.0?vcs_url=git%3A//github.com/Munter/schemes.git</purl>
+      <purl>pkg:npm/schemes@1.4.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/schemes/-/schemes-1.4.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/Munter/schemes/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6674,8 +7142,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/shebang-command@2.0.0?vcs_url=git%2Bhttps%3A//github.com/kevva/shebang-command.git</purl>
+      <purl>pkg:npm/shebang-command@2.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/kevva/shebang-command/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6711,8 +7183,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/shebang-regex@3.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/shebang-regex.git</purl>
+      <purl>pkg:npm/shebang-regex@3.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/shebang-regex/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6748,8 +7224,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/signal-exit@4.1.0?vcs_url=git%2Bhttps%3A//github.com/tapjs/signal-exit.git</purl>
+      <purl>pkg:npm/signal-exit@4.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/signal-exit/-/signal-exit-4.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/tapjs/signal-exit/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6785,8 +7265,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/simple-concat@1.0.1?vcs_url=git%3A//github.com/feross/simple-concat.git</purl>
+      <purl>pkg:npm/simple-concat@1.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/simple-concat/-/simple-concat-1.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/feross/simple-concat/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6822,8 +7306,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/simple-get@4.0.1?vcs_url=git%3A//github.com/feross/simple-get.git</purl>
+      <purl>pkg:npm/simple-get@4.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/simple-get/-/simple-get-4.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/feross/simple-get/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6859,8 +7347,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/smart-buffer@4.2.0?vcs_url=git%2Bhttps%3A//github.com/JoshGlazebrook/smart-buffer.git</purl>
+      <purl>pkg:npm/smart-buffer@4.2.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/JoshGlazebrook/smart-buffer/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6896,8 +7388,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/smtp-address-parser@1.1.0?vcs_url=git%2Bhttps%3A//github.com/gene-hightower/smtp-address-parser.git</purl>
+      <purl>pkg:npm/smtp-address-parser@1.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/smtp-address-parser/-/smtp-address-parser-1.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/gene-hightower/smtp-address-parser/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6933,8 +7429,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/socks-proxy-agent@8.0.5?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent</purl>
+      <purl>pkg:npm/socks-proxy-agent@8.0.5#packages/socks-proxy-agent</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/socks-proxy-agent/-/socks-proxy-agent-8.0.5.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6970,8 +7470,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/socks@2.8.3?vcs_url=git%2Bhttps%3A//github.com/JoshGlazebrook/socks.git</purl>
+      <purl>pkg:npm/socks@2.8.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/socks/-/socks-2.8.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/JoshGlazebrook/socks/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7007,8 +7511,12 @@
           <id>CC-BY-3.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-exceptions@2.5.0?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-exceptions.json.git</purl>
+      <purl>pkg:npm/spdx-exceptions@2.5.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.5.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/kemitchell/spdx-exceptions.json/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7037,8 +7545,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-expression-parse@4.0.0?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-expression-parse.js.git</purl>
+      <purl>pkg:npm/spdx-expression-parse@4.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-4.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/jslicense/spdx-expression-parse.js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7074,8 +7586,12 @@
           <id>CC0-1.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-license-ids@3.0.20?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-license-ids.git</purl>
+      <purl>pkg:npm/spdx-license-ids@3.0.20</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.20.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/jslicense/spdx-license-ids/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7104,8 +7620,12 @@
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/sprintf-js@1.1.3?vcs_url=git%2Bhttps%3A//github.com/alexei/sprintf.js.git</purl>
+      <purl>pkg:npm/sprintf-js@1.1.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/alexei/sprintf.js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7177,8 +7697,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git</purl>
+      <purl>pkg:npm/string_decoder@1.3.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/string_decoder/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7214,8 +7738,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/string-width@4.2.3?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git</purl>
+      <purl>pkg:npm/string-width@4.2.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/string-width/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7243,8 +7771,12 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/ansi-regex@5.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-regex.git</purl>
+          <purl>pkg:npm/ansi-regex@5.0.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/ansi-regex/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7280,8 +7812,12 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/emoji-regex@8.0.0?vcs_url=git%2Bhttps%3A//github.com/mathiasbynens/emoji-regex.git</purl>
+          <purl>pkg:npm/emoji-regex@8.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7317,8 +7853,12 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/strip-ansi.git</purl>
+          <purl>pkg:npm/strip-ansi@6.0.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/strip-ansi/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7364,8 +7904,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/string-width@5.1.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git</purl>
+      <purl>pkg:npm/string-width@5.1.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/string-width/-/string-width-5.1.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/string-width/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7401,8 +7945,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/strip-ansi.git</purl>
+      <purl>pkg:npm/strip-ansi@6.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/strip-ansi/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7430,8 +7978,12 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/ansi-regex@5.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-regex.git</purl>
+          <purl>pkg:npm/ansi-regex@5.0.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/ansi-regex/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7514,8 +8066,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/strip-json-comments@2.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/strip-json-comments.git</purl>
+      <purl>pkg:npm/strip-json-comments@2.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/strip-json-comments/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7551,8 +8107,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/tar-fs@2.1.1?vcs_url=git%2Bhttps%3A//github.com/mafintosh/tar-fs.git</purl>
+      <purl>pkg:npm/tar-fs@2.1.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/tar-fs/-/tar-fs-2.1.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mafintosh/tar-fs/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7580,8 +8140,12 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/chownr@1.1.4?vcs_url=git%3A//github.com/isaacs/chownr.git</purl>
+          <purl>pkg:npm/chownr@1.1.4</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/chownr/-/chownr-1.1.4.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/chownr/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7627,8 +8191,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/tar-stream@2.2.0?vcs_url=git%2Bhttps%3A//github.com/mafintosh/tar-stream.git</purl>
+      <purl>pkg:npm/tar-stream@2.2.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/tar-stream/-/tar-stream-2.2.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mafintosh/tar-stream/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7693,8 +8261,12 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/fs-minipass@2.1.0?vcs_url=git%2Bhttps%3A//github.com/npm/fs-minipass.git</purl>
+          <purl>pkg:npm/fs-minipass@2.1.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/fs-minipass/-/fs-minipass-2.1.0.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/npm/fs-minipass/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7722,8 +8294,12 @@
                   <id>ISC</id>
                 </license>
               </licenses>
-              <purl>pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git</purl>
+              <purl>pkg:npm/minipass@3.3.6</purl>
               <externalReferences>
+                <reference type="distribution">
+                  <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
+                  <comment>as detected from npm-ls property "resolved"</comment>
+                </reference>
                 <reference type="issue-tracker">
                   <url>https://github.com/isaacs/minipass/issues</url>
                   <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7769,8 +8345,12 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/minipass@5.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git</purl>
+          <purl>pkg:npm/minipass@5.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/minipass/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7816,8 +8396,12 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/tunnel-agent@0.6.0?vcs_url=git%2Bhttps%3A//github.com/mikeal/tunnel-agent.git</purl>
+      <purl>pkg:npm/tunnel-agent@0.6.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.6.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mikeal/tunnel-agent/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7852,8 +8436,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/undici-types@5.26.5?vcs_url=git%2Bhttps%3A//github.com/nodejs/undici.git</purl>
+      <purl>pkg:npm/undici-types@5.26.5</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/undici/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7882,8 +8470,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/unique-filename@3.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/unique-filename.git</purl>
+      <purl>pkg:npm/unique-filename@3.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/unique-filename/-/unique-filename-3.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/iarna/unique-filename/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7919,8 +8511,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/unique-slug@4.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/unique-slug.git</purl>
+      <purl>pkg:npm/unique-slug@4.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/unique-slug/-/unique-slug-4.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/unique-slug/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7956,8 +8552,12 @@
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/uri-js@4.4.1?vcs_url=git%2Bssh%3A//git%40github.com/garycourt/uri-js.git</purl>
+      <purl>pkg:npm/uri-js@4.4.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/uri-js/-/uri-js-4.4.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/garycourt/uri-js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7993,8 +8593,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git</purl>
+      <purl>pkg:npm/util-deprecate@1.0.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/util-deprecate/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8029,8 +8633,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/uuid@8.3.2?vcs_url=git%2Bhttps%3A//github.com/uuidjs/uuid.git</purl>
+      <purl>pkg:npm/uuid@8.3.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/uuidjs/uuid/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8065,8 +8673,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/uuidv4@6.2.13?vcs_url=git%3A//github.com/thenativeweb/uuidv4.git</purl>
+      <purl>pkg:npm/uuidv4@6.2.13</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/thenativeweb/uuidv4/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8102,8 +8714,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/which@4.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/node-which.git</purl>
+      <purl>pkg:npm/which@4.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/which/-/which-4.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-which/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8139,8 +8755,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/wrap-ansi@7.0.0?vcs_url=git%2Bhttps%3A//github.com/chalk/wrap-ansi.git</purl>
+      <purl>pkg:npm/wrap-ansi@7.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/wrap-ansi/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8168,8 +8788,12 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/ansi-regex@5.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-regex.git</purl>
+          <purl>pkg:npm/ansi-regex@5.0.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/ansi-regex/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8205,8 +8829,12 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/ansi-styles@4.3.0?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-styles.git</purl>
+          <purl>pkg:npm/ansi-styles@4.3.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/ansi-styles/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8242,8 +8870,12 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/emoji-regex@8.0.0?vcs_url=git%2Bhttps%3A//github.com/mathiasbynens/emoji-regex.git</purl>
+          <purl>pkg:npm/emoji-regex@8.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8279,8 +8911,12 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/string-width@4.2.3?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git</purl>
+          <purl>pkg:npm/string-width@4.2.3</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/string-width/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8363,8 +8999,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/wrap-ansi@8.1.0?vcs_url=git%2Bhttps%3A//github.com/chalk/wrap-ansi.git</purl>
+      <purl>pkg:npm/wrap-ansi@8.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-8.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/wrap-ansi/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8400,8 +9040,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/wrappy@1.0.2?vcs_url=git%2Bhttps%3A//github.com/npm/wrappy.git</purl>
+      <purl>pkg:npm/wrappy@1.0.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/wrappy/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8437,8 +9081,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/xmlbuilder2@3.1.1?vcs_url=git%3A//github.com/oozcitak/xmlbuilder2.git</purl>
+      <purl>pkg:npm/xmlbuilder2@3.1.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/xmlbuilder2/-/xmlbuilder2-3.1.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/xmlbuilder2/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8519,7 +9167,7 @@
       <dependency ref="base64-js@1.0.1"/>
       <dependency ref="buffer@5.7.1"/>
       <dependency ref="bundle-dependencies@1.0.2"/>
-      <dependency ref="ignore@5.1.4"/>
+      <dependency ref="ignore@5.3.2"/>
       <dependency ref="uuid@8.3.2"/>
       <dependency ref="uuidv4@6.2.13"/>
     </dependency>
@@ -8601,10 +9249,10 @@
       <dependency ref="balanced-match@1.0.2"/>
     </dependency>
     <dependency ref="buffer@5.7.1">
-      <dependency ref="buffer@5.7.1|base64-js@1.3.1"/>
-      <dependency ref="ieee754@1.1.13"/>
+      <dependency ref="buffer@5.7.1|base64-js@1.5.1"/>
+      <dependency ref="ieee754@1.2.1"/>
     </dependency>
-    <dependency ref="buffer@5.7.1|base64-js@1.3.1"/>
+    <dependency ref="buffer@5.7.1|base64-js@1.5.1"/>
     <dependency ref="bundle-dependencies@1.0.2">
       <dependency ref="bundle-dependencies@1.0.2|yargs@4.1.0"/>
     </dependency>
@@ -8834,8 +9482,8 @@
     <dependency ref="iconv-lite@0.6.3">
       <dependency ref="safer-buffer@2.1.2"/>
     </dependency>
-    <dependency ref="ieee754@1.1.13"/>
-    <dependency ref="ignore@5.1.4"/>
+    <dependency ref="ieee754@1.2.1"/>
+    <dependency ref="ignore@5.3.2"/>
     <dependency ref="imurmurhash@0.1.4"/>
     <dependency ref="indent-string@4.0.0"/>
     <dependency ref="inherits@2.0.4"/>

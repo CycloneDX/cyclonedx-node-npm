@@ -103,8 +103,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@7.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-javascript-library.git",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@7.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@cyclonedx/cyclonedx-library/-/cyclonedx-library-7.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
           "type": "issue-tracker",
@@ -168,8 +173,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40isaacs/cliui@8.0.2?vcs_url=git%2Bhttps%3A//github.com/yargs/cliui.git",
+      "purl": "pkg:npm/%40isaacs/cliui@8.0.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@isaacs/cliui/-/cliui-8.0.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/yargs/cliui/issues",
           "type": "issue-tracker",
@@ -223,8 +233,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40npmcli/agent@2.2.2?vcs_url=git%2Bhttps%3A//github.com/npm/agent.git",
+      "purl": "pkg:npm/%40npmcli/agent@2.2.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@npmcli/agent/-/agent-2.2.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/agent/issues",
           "type": "issue-tracker",
@@ -265,8 +280,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40npmcli/fs@3.1.1?vcs_url=git%2Bhttps%3A//github.com/npm/fs.git",
+      "purl": "pkg:npm/%40npmcli/fs@3.1.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@npmcli/fs/-/fs-3.1.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/fs/issues",
           "type": "issue-tracker",
@@ -320,8 +340,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40oozcitak/dom@1.15.10?vcs_url=git%3A//github.com/oozcitak/dom.git",
+      "purl": "pkg:npm/%40oozcitak/dom@1.15.10",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@oozcitak/dom/-/dom-1.15.10.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "http://github.com/oozcitak/dom/issues",
           "type": "issue-tracker",
@@ -430,8 +455,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40oozcitak/url@1.0.4?vcs_url=git%2Bhttps%3A//github.com/oozcitak/url.git",
+      "purl": "pkg:npm/%40oozcitak/url@1.0.4",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@oozcitak/url/-/url-1.0.4.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "http://github.com/oozcitak/url/issues",
           "type": "issue-tracker",
@@ -539,8 +569,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40pkgjs/parseargs@0.11.0?vcs_url=git%2Bssh%3A//git%40github.com/pkgjs/parseargs.git",
+      "purl": "pkg:npm/%40pkgjs/parseargs@0.11.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/pkgjs/parseargs/issues",
           "type": "issue-tracker",
@@ -593,8 +628,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/node@20.14.10?vcs_url=git%2Bhttps%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/node",
+      "purl": "pkg:npm/%40types/node@20.14.10#types/node",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@types/node/-/node-20.14.10.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
           "type": "issue-tracker",
@@ -647,8 +687,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/uuid@8.3.4?vcs_url=git%2Bhttps%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
+      "purl": "pkg:npm/%40types/uuid@8.3.4#types/uuid",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
           "type": "issue-tracker",
@@ -701,8 +746,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/abbrev@2.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/abbrev-js.git",
+      "purl": "pkg:npm/abbrev@2.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/abbrev/-/abbrev-2.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/abbrev-js/issues",
           "type": "issue-tracker",
@@ -755,8 +805,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/agent-base@7.1.3?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/agent-base",
+      "purl": "pkg:npm/agent-base@7.1.3#packages/agent-base",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/agent-base/-/agent-base-7.1.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
           "type": "issue-tracker",
@@ -809,8 +864,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/aggregate-error@3.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/aggregate-error.git",
+      "purl": "pkg:npm/aggregate-error@3.1.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/aggregate-error/-/aggregate-error-3.1.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/aggregate-error/issues",
           "type": "issue-tracker",
@@ -863,8 +923,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/ajv-formats-draft2019@1.6.1?vcs_url=git%2Bhttps%3A//github.com/luzlab/ajv-formats-draft2019.git",
+      "purl": "pkg:npm/ajv-formats-draft2019@1.6.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ajv-formats-draft2019/-/ajv-formats-draft2019-1.6.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/luzlab/ajv-formats-draft2019/issues",
           "type": "issue-tracker",
@@ -917,8 +982,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/ajv-formats@3.0.1?vcs_url=git%2Bhttps%3A//github.com/ajv-validator/ajv-formats.git",
+      "purl": "pkg:npm/ajv-formats@3.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ajv-formats/-/ajv-formats-3.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/ajv-validator/ajv-formats/issues",
           "type": "issue-tracker",
@@ -1025,8 +1095,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-regex@6.1.0?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-regex.git",
+      "purl": "pkg:npm/ansi-regex@6.1.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.1.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/chalk/ansi-regex/issues",
           "type": "issue-tracker",
@@ -1079,8 +1154,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-styles@6.2.1?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-styles.git",
+      "purl": "pkg:npm/ansi-styles@6.2.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/chalk/ansi-styles/issues",
           "type": "issue-tracker",
@@ -1132,8 +1212,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/argparse@1.0.10?vcs_url=git%2Bhttps%3A//github.com/nodeca/argparse.git",
+      "purl": "pkg:npm/argparse@1.0.10",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/nodeca/argparse/issues",
           "type": "issue-tracker",
@@ -1172,8 +1257,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/sprintf-js@1.0.3?vcs_url=git%2Bhttps%3A//github.com/alexei/sprintf.js.git",
+          "purl": "pkg:npm/sprintf-js@1.0.3",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/alexei/sprintf.js/issues",
               "type": "issue-tracker",
@@ -1242,8 +1332,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/balanced-match@1.0.2?vcs_url=git%3A//github.com/juliangruber/balanced-match.git",
+      "purl": "pkg:npm/balanced-match@1.0.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/juliangruber/balanced-match/issues",
           "type": "issue-tracker",
@@ -1296,8 +1391,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/base64-js@1.0.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+      "purl": "pkg:npm/base64-js@1.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/base64-js/-/base64-js-1.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/beatgammit/base64-js/issues",
           "type": "issue-tracker",
@@ -1350,8 +1450,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/bindings@1.5.0?vcs_url=git%3A//github.com/TooTallNate/node-bindings.git",
+      "purl": "pkg:npm/bindings@1.5.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/bindings/-/bindings-1.5.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/TooTallNate/node-bindings/issues",
           "type": "issue-tracker",
@@ -1403,8 +1508,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/bl@4.1.0?vcs_url=git%2Bhttps%3A//github.com/rvagg/bl.git",
+      "purl": "pkg:npm/bl@4.1.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/bl/-/bl-4.1.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/rvagg/bl/issues",
           "type": "issue-tracker",
@@ -1457,8 +1567,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/brace-expansion@2.0.1?vcs_url=git%3A//github.com/juliangruber/brace-expansion.git",
+      "purl": "pkg:npm/brace-expansion@2.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/juliangruber/brace-expansion/issues",
           "type": "issue-tracker",
@@ -1539,8 +1654,8 @@
         {
           "type": "library",
           "name": "base64-js",
-          "version": "1.3.1",
-          "bom-ref": "buffer@5.7.1|base64-js@1.3.1",
+          "version": "1.5.1",
+          "bom-ref": "buffer@5.7.1|base64-js@1.5.1",
           "author": "T. Jameson Little",
           "description": "Base64 encoding/decoding in pure JS",
           "licenses": [
@@ -1551,8 +1666,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/base64-js@1.3.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+          "purl": "pkg:npm/base64-js@1.5.1",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/beatgammit/base64-js/issues",
               "type": "issue-tracker",
@@ -1621,8 +1741,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/bundle-dependencies@1.0.2?vcs_url=git%2Bhttps%3A//github.com/gajus/bundle-dependencies.git",
+      "purl": "pkg:npm/bundle-dependencies@1.0.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/gajus/bundle-dependencies/issues",
           "type": "issue-tracker",
@@ -4332,8 +4457,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/cacache@18.0.4?vcs_url=git%2Bhttps%3A//github.com/npm/cacache.git",
+      "purl": "pkg:npm/cacache@18.0.4",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/cacache/-/cacache-18.0.4.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/cacache/issues",
           "type": "issue-tracker",
@@ -4386,8 +4516,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/chownr@2.0.0?vcs_url=git%3A//github.com/isaacs/chownr.git",
+      "purl": "pkg:npm/chownr@2.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/chownr/issues",
           "type": "issue-tracker",
@@ -4440,8 +4575,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/clean-stack@2.2.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/clean-stack.git",
+      "purl": "pkg:npm/clean-stack@2.2.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/clean-stack/-/clean-stack-2.2.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/clean-stack/issues",
           "type": "issue-tracker",
@@ -4494,8 +4634,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/color-convert@2.0.1?vcs_url=git%2Bhttps%3A//github.com/Qix-/color-convert.git",
+      "purl": "pkg:npm/color-convert@2.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/Qix-/color-convert/issues",
           "type": "issue-tracker",
@@ -4548,8 +4693,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%2Bssh%3A//git%40github.com/colorjs/color-name.git",
+      "purl": "pkg:npm/color-name@1.1.4",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/colorjs/color-name/issues",
           "type": "issue-tracker",
@@ -4602,8 +4752,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/commander@2.20.3?vcs_url=git%2Bhttps%3A//github.com/tj/commander.js.git",
+      "purl": "pkg:npm/commander@2.20.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/tj/commander.js/issues",
           "type": "issue-tracker",
@@ -4656,8 +4811,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/cross-spawn@7.0.6?vcs_url=git%2Bssh%3A//git%40github.com/moxystudio/node-cross-spawn.git",
+      "purl": "pkg:npm/cross-spawn@7.0.6",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/moxystudio/node-cross-spawn/issues",
           "type": "issue-tracker",
@@ -4696,8 +4856,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/isexe@2.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/isexe.git",
+          "purl": "pkg:npm/isexe@2.0.0",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/isaacs/isexe/issues",
               "type": "issue-tracker",
@@ -4750,8 +4915,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/which@2.0.2?vcs_url=git%3A//github.com/isaacs/node-which.git",
+          "purl": "pkg:npm/which@2.0.2",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/which/-/which-2.0.2.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/isaacs/node-which/issues",
               "type": "issue-tracker",
@@ -4820,8 +4990,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/debug@4.4.0?vcs_url=git%3A//github.com/debug-js/debug.git",
+      "purl": "pkg:npm/debug@4.4.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/debug/-/debug-4.4.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/debug-js/debug/issues",
           "type": "issue-tracker",
@@ -4874,8 +5049,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/decompress-response@6.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/decompress-response.git",
+      "purl": "pkg:npm/decompress-response@6.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/decompress-response/issues",
           "type": "issue-tracker",
@@ -4935,8 +5115,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/deep-extend@0.6.0?vcs_url=git%3A//github.com/unclechu/node-deep-extend.git",
+      "purl": "pkg:npm/deep-extend@0.6.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/unclechu/node-deep-extend/issues",
           "type": "issue-tracker",
@@ -4989,8 +5174,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/detect-libc@2.0.3?vcs_url=git%3A//github.com/lovell/detect-libc.git",
+      "purl": "pkg:npm/detect-libc@2.0.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/lovell/detect-libc/issues",
           "type": "issue-tracker",
@@ -5043,8 +5233,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/discontinuous-range@1.0.0?vcs_url=git%2Bhttps%3A//github.com/dtudury/discontinuous-range.git",
+      "purl": "pkg:npm/discontinuous-range@1.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/discontinuous-range/-/discontinuous-range-1.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/dtudury/discontinuous-range/issues",
           "type": "issue-tracker",
@@ -5097,8 +5292,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/eastasianwidth@0.2.0?vcs_url=git%3A//github.com/komagata/eastasianwidth.git",
+      "purl": "pkg:npm/eastasianwidth@0.2.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/eastasianwidth/-/eastasianwidth-0.2.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/komagata/eastasianwidth/issues",
           "type": "issue-tracker",
@@ -5138,8 +5338,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/emoji-regex@9.2.2?vcs_url=git%2Bhttps%3A//github.com/mathiasbynens/emoji-regex.git",
+      "purl": "pkg:npm/emoji-regex@9.2.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/mathiasbynens/emoji-regex/issues",
           "type": "issue-tracker",
@@ -5192,8 +5397,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/encoding@0.1.13?vcs_url=git%2Bhttps%3A//github.com/andris9/encoding.git",
+      "purl": "pkg:npm/encoding@0.1.13",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/andris9/encoding/issues",
           "type": "issue-tracker",
@@ -5246,8 +5456,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/end-of-stream@1.4.4?vcs_url=git%3A//github.com/mafintosh/end-of-stream.git",
+      "purl": "pkg:npm/end-of-stream@1.4.4",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.4.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/mafintosh/end-of-stream/issues",
           "type": "issue-tracker",
@@ -5300,8 +5515,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/env-paths@2.2.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/env-paths.git",
+      "purl": "pkg:npm/env-paths@2.2.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/env-paths/issues",
           "type": "issue-tracker",
@@ -5354,8 +5574,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/err-code@2.0.3?vcs_url=git%3A//github.com/IndigoUnited/js-err-code.git",
+      "purl": "pkg:npm/err-code@2.0.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/err-code/-/err-code-2.0.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/IndigoUnited/js-err-code/issues/",
           "type": "issue-tracker",
@@ -5395,8 +5620,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
+      "purl": "pkg:npm/esprima@4.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/jquery/esprima/issues",
           "type": "issue-tracker",
@@ -5447,8 +5677,13 @@
           "acknowledgement": "declared"
         }
       ],
-      "purl": "pkg:npm/expand-template@2.0.3?vcs_url=git%2Bhttps%3A//github.com/ralphtheninja/expand-template.git",
+      "purl": "pkg:npm/expand-template@2.0.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/expand-template/-/expand-template-2.0.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/ralphtheninja/expand-template/issues",
           "type": "issue-tracker",
@@ -5501,8 +5736,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/exponential-backoff@3.1.1?vcs_url=git%2Bhttps%3A//github.com/coveo/exponential-backoff.git",
+      "purl": "pkg:npm/exponential-backoff@3.1.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/exponential-backoff/-/exponential-backoff-3.1.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/coveo/exponential-backoff/issues",
           "type": "issue-tracker",
@@ -5555,8 +5795,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/extend@3.0.2?vcs_url=git%2Bhttps%3A//github.com/justmoon/node-extend.git",
+      "purl": "pkg:npm/extend@3.0.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/extend/-/extend-3.0.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/justmoon/node-extend/issues",
           "type": "issue-tracker",
@@ -5609,8 +5854,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/fast-deep-equal@3.1.3?vcs_url=git%2Bhttps%3A//github.com/epoberezkin/fast-deep-equal.git",
+      "purl": "pkg:npm/fast-deep-equal@3.1.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/epoberezkin/fast-deep-equal/issues",
           "type": "issue-tracker",
@@ -5663,8 +5913,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/fast-uri@3.0.3?vcs_url=git%2Bhttps%3A//github.com/fastify/fast-uri.git",
+      "purl": "pkg:npm/fast-uri@3.0.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/fast-uri/-/fast-uri-3.0.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/fastify/fast-uri/issues",
           "type": "issue-tracker",
@@ -5717,8 +5972,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/file-uri-to-path@1.0.0?vcs_url=git%3A//github.com/TooTallNate/file-uri-to-path.git",
+      "purl": "pkg:npm/file-uri-to-path@1.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/TooTallNate/file-uri-to-path/issues",
           "type": "issue-tracker",
@@ -5771,8 +6031,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/foreground-child@3.3.0?vcs_url=git%2Bhttps%3A//github.com/tapjs/foreground-child.git",
+      "purl": "pkg:npm/foreground-child@3.3.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/foreground-child/-/foreground-child-3.3.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/tapjs/foreground-child/issues",
           "type": "issue-tracker",
@@ -5825,8 +6090,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/fs-constants@1.0.0?vcs_url=git%2Bhttps%3A//github.com/mafintosh/fs-constants.git",
+      "purl": "pkg:npm/fs-constants@1.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/fs-constants/-/fs-constants-1.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/mafintosh/fs-constants/issues",
           "type": "issue-tracker",
@@ -5879,8 +6149,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/fs-minipass@3.0.3?vcs_url=git%2Bhttps%3A//github.com/npm/fs-minipass.git",
+      "purl": "pkg:npm/fs-minipass@3.0.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/fs-minipass/-/fs-minipass-3.0.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/fs-minipass/issues",
           "type": "issue-tracker",
@@ -5933,8 +6208,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/github-from-package@0.0.0?vcs_url=git%3A//github.com/substack/github-from-package.git",
+      "purl": "pkg:npm/github-from-package@0.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/github-from-package/-/github-from-package-0.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/substack/github-from-package/issues",
           "type": "issue-tracker",
@@ -5987,8 +6267,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/glob@10.4.5?vcs_url=git%3A//github.com/isaacs/node-glob.git",
+      "purl": "pkg:npm/glob@10.4.5",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/glob/-/glob-10.4.5.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/node-glob/issues",
           "type": "issue-tracker",
@@ -6040,8 +6325,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/graceful-fs@4.2.11?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-graceful-fs.git",
+      "purl": "pkg:npm/graceful-fs@4.2.11",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/node-graceful-fs/issues",
           "type": "issue-tracker",
@@ -6094,8 +6384,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/http-cache-semantics@4.1.1?vcs_url=git%2Bhttps%3A//github.com/kornelski/http-cache-semantics.git",
+      "purl": "pkg:npm/http-cache-semantics@4.1.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.1.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/kornelski/http-cache-semantics/issues",
           "type": "issue-tracker",
@@ -6148,8 +6443,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/http-proxy-agent@7.0.2?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent",
+      "purl": "pkg:npm/http-proxy-agent@7.0.2#packages/http-proxy-agent",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
           "type": "issue-tracker",
@@ -6202,8 +6502,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/https-proxy-agent@7.0.6?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent",
+      "purl": "pkg:npm/https-proxy-agent@7.0.6#packages/https-proxy-agent",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
           "type": "issue-tracker",
@@ -6256,8 +6561,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/iconv-lite@0.6.3?vcs_url=git%3A//github.com/ashtuchkin/iconv-lite.git",
+      "purl": "pkg:npm/iconv-lite@0.6.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/ashtuchkin/iconv-lite/issues",
           "type": "issue-tracker",
@@ -6298,8 +6608,8 @@
     {
       "type": "library",
       "name": "ieee754",
-      "version": "1.1.13",
-      "bom-ref": "ieee754@1.1.13",
+      "version": "1.2.1",
+      "bom-ref": "ieee754@1.2.1",
       "author": "Feross Aboukhadijeh",
       "description": "Read/write IEEE754 floating point numbers from/to a Buffer or array-like object",
       "licenses": [
@@ -6310,8 +6620,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/ieee754@1.1.13?vcs_url=git%3A//github.com/feross/ieee754.git",
+      "purl": "pkg:npm/ieee754@1.2.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/feross/ieee754/issues",
           "type": "issue-tracker",
@@ -6352,8 +6667,8 @@
     {
       "type": "library",
       "name": "ignore",
-      "version": "5.1.4",
-      "bom-ref": "ignore@5.1.4",
+      "version": "5.3.2",
+      "bom-ref": "ignore@5.3.2",
       "author": "kael",
       "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.",
       "licenses": [
@@ -6364,8 +6679,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/ignore@5.1.4?vcs_url=git%2Bssh%3A//git%40github.com/kaelzhang/node-ignore.git",
+      "purl": "pkg:npm/ignore@5.3.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/kaelzhang/node-ignore/issues",
           "type": "issue-tracker",
@@ -6418,8 +6738,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/imurmurhash@0.1.4?vcs_url=git%2Bhttps%3A//github.com/jensyt/imurmurhash-js.git",
+      "purl": "pkg:npm/imurmurhash@0.1.4",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/jensyt/imurmurhash-js/issues",
           "type": "issue-tracker",
@@ -6459,8 +6784,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/indent-string@4.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/indent-string.git",
+      "purl": "pkg:npm/indent-string@4.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/indent-string/issues",
           "type": "issue-tracker",
@@ -6566,8 +6896,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/ini@1.3.8?vcs_url=git%3A//github.com/isaacs/ini.git",
+      "purl": "pkg:npm/ini@1.3.8",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ini/-/ini-1.3.8.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/ini/issues",
           "type": "issue-tracker",
@@ -6620,8 +6955,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/ip-address@9.0.5?vcs_url=git%3A//github.com/beaugunderson/ip-address.git",
+      "purl": "pkg:npm/ip-address@9.0.5",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ip-address/-/ip-address-9.0.5.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/beaugunderson/ip-address/issues",
           "type": "issue-tracker",
@@ -6674,8 +7014,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-fullwidth-code-point.git",
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/is-fullwidth-code-point/issues",
           "type": "issue-tracker",
@@ -6728,8 +7073,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-lambda@1.0.1?vcs_url=git%2Bhttps%3A//github.com/watson/is-lambda.git",
+      "purl": "pkg:npm/is-lambda@1.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/is-lambda/-/is-lambda-1.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/watson/is-lambda/issues",
           "type": "issue-tracker",
@@ -6782,8 +7132,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/isexe@3.1.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/isexe.git",
+      "purl": "pkg:npm/isexe@3.1.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/isexe/-/isexe-3.1.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/isexe/issues",
           "type": "issue-tracker",
@@ -6836,8 +7191,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/jackspeak@3.4.3?vcs_url=git%2Bhttps%3A//github.com/isaacs/jackspeak.git",
+      "purl": "pkg:npm/jackspeak@3.4.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/jackspeak/-/jackspeak-3.4.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/jackspeak/issues",
           "type": "issue-tracker",
@@ -6890,8 +7250,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/js-yaml@3.14.1?vcs_url=git%2Bhttps%3A//github.com/nodeca/js-yaml.git",
+      "purl": "pkg:npm/js-yaml@3.14.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/nodeca/js-yaml/issues",
           "type": "issue-tracker",
@@ -6944,8 +7309,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/jsbn@1.1.0?vcs_url=git%2Bhttps%3A//github.com/andyperlitch/jsbn.git",
+      "purl": "pkg:npm/jsbn@1.1.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/jsbn/-/jsbn-1.1.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/andyperlitch/jsbn/issues",
           "type": "issue-tracker",
@@ -6998,8 +7368,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/json-schema-traverse@1.0.0?vcs_url=git%2Bhttps%3A//github.com/epoberezkin/json-schema-traverse.git",
+      "purl": "pkg:npm/json-schema-traverse@1.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/epoberezkin/json-schema-traverse/issues",
           "type": "issue-tracker",
@@ -7052,8 +7427,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/libxmljs2@0.35.0?vcs_url=git%2Bssh%3A//git%40github.com/marudor/libxmljs2.git",
+      "purl": "pkg:npm/libxmljs2@0.35.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/libxmljs2/-/libxmljs2-0.35.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "http://github.com/marudor/libxmljs2/issues",
           "type": "issue-tracker",
@@ -7106,8 +7486,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/lru-cache@10.4.3?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git",
+      "purl": "pkg:npm/lru-cache@10.4.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/node-lru-cache/issues",
           "type": "issue-tracker",
@@ -7160,8 +7545,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/make-fetch-happen@13.0.1?vcs_url=git%2Bhttps%3A//github.com/npm/make-fetch-happen.git",
+      "purl": "pkg:npm/make-fetch-happen@13.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/make-fetch-happen/-/make-fetch-happen-13.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/make-fetch-happen/issues",
           "type": "issue-tracker",
@@ -7214,8 +7604,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/mimic-response@3.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/mimic-response.git",
+      "purl": "pkg:npm/mimic-response@3.1.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/mimic-response/-/mimic-response-3.1.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/mimic-response/issues",
           "type": "issue-tracker",
@@ -7268,8 +7663,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/minimatch@9.0.5?vcs_url=git%3A//github.com/isaacs/minimatch.git",
+      "purl": "pkg:npm/minimatch@9.0.5",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/minimatch/issues",
           "type": "issue-tracker",
@@ -7322,8 +7722,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/minimist@1.2.8?vcs_url=git%3A//github.com/minimistjs/minimist.git",
+      "purl": "pkg:npm/minimist@1.2.8",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/minimistjs/minimist/issues",
           "type": "issue-tracker",
@@ -7376,8 +7781,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-collect@2.0.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass-collect.git",
+      "purl": "pkg:npm/minipass-collect@2.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/minipass-collect/-/minipass-collect-2.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/minipass-collect/issues",
           "type": "issue-tracker",
@@ -7430,8 +7840,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-fetch@3.0.5?vcs_url=git%2Bhttps%3A//github.com/npm/minipass-fetch.git",
+      "purl": "pkg:npm/minipass-fetch@3.0.5",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/minipass-fetch/-/minipass-fetch-3.0.5.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/minipass-fetch/issues",
           "type": "issue-tracker",
@@ -7524,8 +7939,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
+          "purl": "pkg:npm/minipass@3.3.6",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/isaacs/minipass/issues",
               "type": "issue-tracker",
@@ -7617,8 +8037,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
+          "purl": "pkg:npm/minipass@3.3.6",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/isaacs/minipass/issues",
               "type": "issue-tracker",
@@ -7687,8 +8112,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-sized@1.0.3?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass-sized.git",
+      "purl": "pkg:npm/minipass-sized@1.0.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/minipass-sized/-/minipass-sized-1.0.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/minipass-sized/issues",
           "type": "issue-tracker",
@@ -7727,8 +8157,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
+          "purl": "pkg:npm/minipass@3.3.6",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/isaacs/minipass/issues",
               "type": "issue-tracker",
@@ -7797,8 +8232,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass@7.1.2?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
+      "purl": "pkg:npm/minipass@7.1.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/minipass/issues",
           "type": "issue-tracker",
@@ -7891,8 +8331,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
+          "purl": "pkg:npm/minipass@3.3.6",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/isaacs/minipass/issues",
               "type": "issue-tracker",
@@ -7961,8 +8406,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/mkdirp-classic@0.5.3?vcs_url=git%2Bhttps%3A//github.com/mafintosh/mkdirp-classic.git",
+      "purl": "pkg:npm/mkdirp-classic@0.5.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/mkdirp-classic/-/mkdirp-classic-0.5.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/mafintosh/mkdirp-classic/issues",
           "type": "issue-tracker",
@@ -8014,8 +8464,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/mkdirp@1.0.4?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-mkdirp.git",
+      "purl": "pkg:npm/mkdirp@1.0.4",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/node-mkdirp/issues",
           "type": "issue-tracker",
@@ -8068,8 +8523,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/moo@0.5.2?vcs_url=git%2Bhttps%3A//github.com/tjvr/moo.git",
+      "purl": "pkg:npm/moo@0.5.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/moo/-/moo-0.5.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/tjvr/moo/issues",
           "type": "issue-tracker",
@@ -8121,8 +8581,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/ms@2.1.3?vcs_url=git%2Bhttps%3A//github.com/vercel/ms.git",
+      "purl": "pkg:npm/ms@2.1.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/vercel/ms/issues",
           "type": "issue-tracker",
@@ -8174,8 +8639,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/nan@2.20.0?vcs_url=git%3A//github.com/nodejs/nan.git",
+      "purl": "pkg:npm/nan@2.20.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/nan/-/nan-2.20.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/nodejs/nan/issues",
           "type": "issue-tracker",
@@ -8228,8 +8698,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/napi-build-utils@1.0.2?vcs_url=git%2Bhttps%3A//github.com/inspiredware/napi-build-utils.git",
+      "purl": "pkg:npm/napi-build-utils@1.0.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/napi-build-utils/-/napi-build-utils-1.0.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/inspiredware/napi-build-utils/issues",
           "type": "issue-tracker",
@@ -8282,8 +8757,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/nearley@2.20.1?vcs_url=git%2Bhttps%3A//github.com/hardmath123/nearley.git",
+      "purl": "pkg:npm/nearley@2.20.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/nearley/-/nearley-2.20.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/hardmath123/nearley/issues",
           "type": "issue-tracker",
@@ -8335,8 +8815,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/negotiator@0.6.4?vcs_url=git%2Bhttps%3A//github.com/jshttp/negotiator.git",
+      "purl": "pkg:npm/negotiator@0.6.4",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/negotiator/-/negotiator-0.6.4.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/jshttp/negotiator/issues",
           "type": "issue-tracker",
@@ -8389,8 +8874,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/node-abi@3.71.0?vcs_url=git%2Bhttps%3A//github.com/electron/node-abi.git",
+      "purl": "pkg:npm/node-abi@3.71.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/node-abi/-/node-abi-3.71.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/electron/node-abi/issues",
           "type": "issue-tracker",
@@ -8443,8 +8933,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/node-gyp@10.3.1?vcs_url=git%3A//github.com/nodejs/node-gyp.git",
+      "purl": "pkg:npm/node-gyp@10.3.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/node-gyp/-/node-gyp-10.3.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/nodejs/node-gyp/issues",
           "type": "issue-tracker",
@@ -8497,8 +8992,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/nopt@7.2.1?vcs_url=git%2Bhttps%3A//github.com/npm/nopt.git",
+      "purl": "pkg:npm/nopt@7.2.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/nopt/-/nopt-7.2.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/nopt/issues",
           "type": "issue-tracker",
@@ -8605,8 +9105,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/p-map@4.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/p-map.git",
+      "purl": "pkg:npm/p-map@4.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/p-map/-/p-map-4.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/p-map/issues",
           "type": "issue-tracker",
@@ -8659,8 +9164,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/package-json-from-dist@1.0.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/package-json-from-dist.git",
+      "purl": "pkg:npm/package-json-from-dist@1.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/package-json-from-dist/-/package-json-from-dist-1.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/package-json-from-dist/issues",
           "type": "issue-tracker",
@@ -8713,8 +9223,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/packageurl-js@2.0.1?vcs_url=git%2Bhttps%3A//github.com/package-url/packageurl-js.git",
+      "purl": "pkg:npm/packageurl-js@2.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/packageurl-js/-/packageurl-js-2.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/package-url/packageurl-js/issues",
           "type": "issue-tracker",
@@ -8767,8 +9282,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-key@3.1.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/path-key.git",
+      "purl": "pkg:npm/path-key@3.1.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/path-key/issues",
           "type": "issue-tracker",
@@ -8821,8 +9341,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-scurry@1.11.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/path-scurry.git",
+      "purl": "pkg:npm/path-scurry@1.11.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/path-scurry/-/path-scurry-1.11.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/path-scurry/issues",
           "type": "issue-tracker",
@@ -8875,8 +9400,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/prebuild-install@7.1.2?vcs_url=git%2Bhttps%3A//github.com/prebuild/prebuild-install.git",
+      "purl": "pkg:npm/prebuild-install@7.1.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/prebuild-install/-/prebuild-install-7.1.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/prebuild/prebuild-install/issues",
           "type": "issue-tracker",
@@ -8983,8 +9513,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/promise-retry@2.0.1?vcs_url=git%3A//github.com/IndigoUnited/node-promise-retry.git",
+      "purl": "pkg:npm/promise-retry@2.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/promise-retry/-/promise-retry-2.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/IndigoUnited/node-promise-retry/issues/",
           "type": "issue-tracker",
@@ -9037,8 +9572,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/pump@3.0.2?vcs_url=git%3A//github.com/mafintosh/pump.git",
+      "purl": "pkg:npm/pump@3.0.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/pump/-/pump-3.0.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/mafintosh/pump/issues",
           "type": "issue-tracker",
@@ -9091,8 +9631,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/punycode@2.3.1?vcs_url=git%2Bhttps%3A//github.com/mathiasbynens/punycode.js.git",
+      "purl": "pkg:npm/punycode@2.3.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/mathiasbynens/punycode.js/issues",
           "type": "issue-tracker",
@@ -9145,8 +9690,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/railroad-diagrams@1.0.0?vcs_url=git%2Bhttps%3A//github.com/tabatkins/railroad-diagrams.git",
+      "purl": "pkg:npm/railroad-diagrams@1.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/tabatkins/railroad-diagrams/issues",
           "type": "issue-tracker",
@@ -9186,8 +9736,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/randexp@0.4.6?vcs_url=git%3A//github.com/fent/randexp.js.git",
+      "purl": "pkg:npm/randexp@0.4.6",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/randexp/-/randexp-0.4.6.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/fent/randexp.js/issues",
           "type": "issue-tracker",
@@ -9238,8 +9793,13 @@
           "acknowledgement": "declared"
         }
       ],
-      "purl": "pkg:npm/rc@1.2.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/rc.git",
+      "purl": "pkg:npm/rc@1.2.8",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/rc/-/rc-1.2.8.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/dominictarr/rc/issues",
           "type": "issue-tracker",
@@ -9355,8 +9915,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/require-from-string@2.0.2?vcs_url=git%2Bhttps%3A//github.com/floatdrop/require-from-string.git",
+      "purl": "pkg:npm/require-from-string@2.0.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/floatdrop/require-from-string/issues",
           "type": "issue-tracker",
@@ -9409,8 +9974,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/ret@0.1.15?vcs_url=git%3A//github.com/fent/ret.js.git",
+      "purl": "pkg:npm/ret@0.1.15",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ret/-/ret-0.1.15.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/fent/ret.js/issues",
           "type": "issue-tracker",
@@ -9463,8 +10033,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/retry@0.12.0?vcs_url=git%3A//github.com/tim-kos/node-retry.git",
+      "purl": "pkg:npm/retry@0.12.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/retry/-/retry-0.12.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/tim-kos/node-retry/issues",
           "type": "issue-tracker",
@@ -9571,8 +10146,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/safer-buffer@2.1.2?vcs_url=git%2Bhttps%3A//github.com/ChALkeR/safer-buffer.git",
+      "purl": "pkg:npm/safer-buffer@2.1.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/ChALkeR/safer-buffer/issues",
           "type": "issue-tracker",
@@ -9625,8 +10205,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/schemes@1.4.0?vcs_url=git%3A//github.com/Munter/schemes.git",
+      "purl": "pkg:npm/schemes@1.4.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/schemes/-/schemes-1.4.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/Munter/schemes/issues",
           "type": "issue-tracker",
@@ -9720,8 +10305,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/shebang-command@2.0.0?vcs_url=git%2Bhttps%3A//github.com/kevva/shebang-command.git",
+      "purl": "pkg:npm/shebang-command@2.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/kevva/shebang-command/issues",
           "type": "issue-tracker",
@@ -9774,8 +10364,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/shebang-regex@3.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/shebang-regex.git",
+      "purl": "pkg:npm/shebang-regex@3.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/shebang-regex/issues",
           "type": "issue-tracker",
@@ -9828,8 +10423,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/signal-exit@4.1.0?vcs_url=git%2Bhttps%3A//github.com/tapjs/signal-exit.git",
+      "purl": "pkg:npm/signal-exit@4.1.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/signal-exit/-/signal-exit-4.1.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/tapjs/signal-exit/issues",
           "type": "issue-tracker",
@@ -9882,8 +10482,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/simple-concat@1.0.1?vcs_url=git%3A//github.com/feross/simple-concat.git",
+      "purl": "pkg:npm/simple-concat@1.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/simple-concat/-/simple-concat-1.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/feross/simple-concat/issues",
           "type": "issue-tracker",
@@ -9936,8 +10541,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/simple-get@4.0.1?vcs_url=git%3A//github.com/feross/simple-get.git",
+      "purl": "pkg:npm/simple-get@4.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/simple-get/-/simple-get-4.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/feross/simple-get/issues",
           "type": "issue-tracker",
@@ -9990,8 +10600,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/smart-buffer@4.2.0?vcs_url=git%2Bhttps%3A//github.com/JoshGlazebrook/smart-buffer.git",
+      "purl": "pkg:npm/smart-buffer@4.2.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/JoshGlazebrook/smart-buffer/issues",
           "type": "issue-tracker",
@@ -10044,8 +10659,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/smtp-address-parser@1.1.0?vcs_url=git%2Bhttps%3A//github.com/gene-hightower/smtp-address-parser.git",
+      "purl": "pkg:npm/smtp-address-parser@1.1.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/smtp-address-parser/-/smtp-address-parser-1.1.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/gene-hightower/smtp-address-parser/issues",
           "type": "issue-tracker",
@@ -10098,8 +10718,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/socks-proxy-agent@8.0.5?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent",
+      "purl": "pkg:npm/socks-proxy-agent@8.0.5#packages/socks-proxy-agent",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/socks-proxy-agent/-/socks-proxy-agent-8.0.5.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
           "type": "issue-tracker",
@@ -10152,8 +10777,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/socks@2.8.3?vcs_url=git%2Bhttps%3A//github.com/JoshGlazebrook/socks.git",
+      "purl": "pkg:npm/socks@2.8.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/socks/-/socks-2.8.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/JoshGlazebrook/socks/issues",
           "type": "issue-tracker",
@@ -10206,8 +10836,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-exceptions@2.5.0?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-exceptions.json.git",
+      "purl": "pkg:npm/spdx-exceptions@2.5.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.5.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/kemitchell/spdx-exceptions.json/issues",
           "type": "issue-tracker",
@@ -10247,8 +10882,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-expression-parse@4.0.0?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-expression-parse.js.git",
+      "purl": "pkg:npm/spdx-expression-parse@4.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-4.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/jslicense/spdx-expression-parse.js/issues",
           "type": "issue-tracker",
@@ -10301,8 +10941,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-license-ids@3.0.20?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-license-ids.git",
+      "purl": "pkg:npm/spdx-license-ids@3.0.20",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.20.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/jslicense/spdx-license-ids/issues",
           "type": "issue-tracker",
@@ -10342,8 +10987,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/sprintf-js@1.1.3?vcs_url=git%2Bhttps%3A//github.com/alexei/sprintf.js.git",
+      "purl": "pkg:npm/sprintf-js@1.1.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/alexei/sprintf.js/issues",
           "type": "issue-tracker",
@@ -10449,8 +11099,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "purl": "pkg:npm/string_decoder@1.3.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/nodejs/string_decoder/issues",
           "type": "issue-tracker",
@@ -10503,8 +11158,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/string-width@4.2.3?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git",
+      "purl": "pkg:npm/string-width@4.2.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/string-width/issues",
           "type": "issue-tracker",
@@ -10543,8 +11203,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-regex.git",
+          "purl": "pkg:npm/ansi-regex@5.0.1",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/chalk/ansi-regex/issues",
               "type": "issue-tracker",
@@ -10597,8 +11262,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=git%2Bhttps%3A//github.com/mathiasbynens/emoji-regex.git",
+          "purl": "pkg:npm/emoji-regex@8.0.0",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/mathiasbynens/emoji-regex/issues",
               "type": "issue-tracker",
@@ -10651,8 +11321,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/strip-ansi.git",
+          "purl": "pkg:npm/strip-ansi@6.0.1",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/chalk/strip-ansi/issues",
               "type": "issue-tracker",
@@ -10721,8 +11396,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/string-width@5.1.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git",
+      "purl": "pkg:npm/string-width@5.1.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/string-width/-/string-width-5.1.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/string-width/issues",
           "type": "issue-tracker",
@@ -10775,8 +11455,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/strip-ansi.git",
+      "purl": "pkg:npm/strip-ansi@6.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/chalk/strip-ansi/issues",
           "type": "issue-tracker",
@@ -10815,8 +11500,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-regex.git",
+          "purl": "pkg:npm/ansi-regex@5.0.1",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/chalk/ansi-regex/issues",
               "type": "issue-tracker",
@@ -10939,8 +11629,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/strip-json-comments@2.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/strip-json-comments.git",
+      "purl": "pkg:npm/strip-json-comments@2.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/sindresorhus/strip-json-comments/issues",
           "type": "issue-tracker",
@@ -10993,8 +11688,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/tar-fs@2.1.1?vcs_url=git%2Bhttps%3A//github.com/mafintosh/tar-fs.git",
+      "purl": "pkg:npm/tar-fs@2.1.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/tar-fs/-/tar-fs-2.1.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/mafintosh/tar-fs/issues",
           "type": "issue-tracker",
@@ -11033,8 +11733,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/chownr@1.1.4?vcs_url=git%3A//github.com/isaacs/chownr.git",
+          "purl": "pkg:npm/chownr@1.1.4",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/chownr/-/chownr-1.1.4.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/isaacs/chownr/issues",
               "type": "issue-tracker",
@@ -11103,8 +11808,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/tar-stream@2.2.0?vcs_url=git%2Bhttps%3A//github.com/mafintosh/tar-stream.git",
+      "purl": "pkg:npm/tar-stream@2.2.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/tar-stream/-/tar-stream-2.2.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/mafintosh/tar-stream/issues",
           "type": "issue-tracker",
@@ -11197,8 +11907,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/fs-minipass@2.1.0?vcs_url=git%2Bhttps%3A//github.com/npm/fs-minipass.git",
+          "purl": "pkg:npm/fs-minipass@2.1.0",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/fs-minipass/-/fs-minipass-2.1.0.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/npm/fs-minipass/issues",
               "type": "issue-tracker",
@@ -11237,8 +11952,13 @@
                   }
                 }
               ],
-              "purl": "pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
+              "purl": "pkg:npm/minipass@3.3.6",
               "externalReferences": [
+                {
+                  "url": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
+                  "type": "distribution",
+                  "comment": "as detected from npm-ls property \"resolved\""
+                },
                 {
                   "url": "https://github.com/isaacs/minipass/issues",
                   "type": "issue-tracker",
@@ -11307,8 +12027,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/minipass@5.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
+          "purl": "pkg:npm/minipass@5.0.0",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/isaacs/minipass/issues",
               "type": "issue-tracker",
@@ -11377,8 +12102,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/tunnel-agent@0.6.0?vcs_url=git%2Bhttps%3A//github.com/mikeal/tunnel-agent.git",
+      "purl": "pkg:npm/tunnel-agent@0.6.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.6.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/mikeal/tunnel-agent/issues",
           "type": "issue-tracker",
@@ -11430,8 +12160,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/undici-types@5.26.5?vcs_url=git%2Bhttps%3A//github.com/nodejs/undici.git",
+      "purl": "pkg:npm/undici-types@5.26.5",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/nodejs/undici/issues",
           "type": "issue-tracker",
@@ -11471,8 +12206,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/unique-filename@3.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/unique-filename.git",
+      "purl": "pkg:npm/unique-filename@3.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/unique-filename/-/unique-filename-3.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/iarna/unique-filename/issues",
           "type": "issue-tracker",
@@ -11525,8 +12265,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/unique-slug@4.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/unique-slug.git",
+      "purl": "pkg:npm/unique-slug@4.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/unique-slug/-/unique-slug-4.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/unique-slug/issues",
           "type": "issue-tracker",
@@ -11579,8 +12324,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/uri-js@4.4.1?vcs_url=git%2Bssh%3A//git%40github.com/garycourt/uri-js.git",
+      "purl": "pkg:npm/uri-js@4.4.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/uri-js/-/uri-js-4.4.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/garycourt/uri-js/issues",
           "type": "issue-tracker",
@@ -11633,8 +12383,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git",
+      "purl": "pkg:npm/util-deprecate@1.0.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/TooTallNate/util-deprecate/issues",
           "type": "issue-tracker",
@@ -11686,8 +12441,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/uuid@8.3.2?vcs_url=git%2Bhttps%3A//github.com/uuidjs/uuid.git",
+      "purl": "pkg:npm/uuid@8.3.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/uuidjs/uuid/issues",
           "type": "issue-tracker",
@@ -11739,8 +12499,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/uuidv4@6.2.13?vcs_url=git%3A//github.com/thenativeweb/uuidv4.git",
+      "purl": "pkg:npm/uuidv4@6.2.13",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/thenativeweb/uuidv4/issues",
           "type": "issue-tracker",
@@ -11793,8 +12558,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/which@4.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/node-which.git",
+      "purl": "pkg:npm/which@4.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/which/-/which-4.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/node-which/issues",
           "type": "issue-tracker",
@@ -11847,8 +12617,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/wrap-ansi@7.0.0?vcs_url=git%2Bhttps%3A//github.com/chalk/wrap-ansi.git",
+      "purl": "pkg:npm/wrap-ansi@7.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/chalk/wrap-ansi/issues",
           "type": "issue-tracker",
@@ -11887,8 +12662,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-regex.git",
+          "purl": "pkg:npm/ansi-regex@5.0.1",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/chalk/ansi-regex/issues",
               "type": "issue-tracker",
@@ -11941,8 +12721,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-styles.git",
+          "purl": "pkg:npm/ansi-styles@4.3.0",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/chalk/ansi-styles/issues",
               "type": "issue-tracker",
@@ -11995,8 +12780,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=git%2Bhttps%3A//github.com/mathiasbynens/emoji-regex.git",
+          "purl": "pkg:npm/emoji-regex@8.0.0",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/mathiasbynens/emoji-regex/issues",
               "type": "issue-tracker",
@@ -12049,8 +12839,13 @@
               }
             }
           ],
-          "purl": "pkg:npm/string-width@4.2.3?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git",
+          "purl": "pkg:npm/string-width@4.2.3",
           "externalReferences": [
+            {
+              "url": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
+              "type": "distribution",
+              "comment": "as detected from npm-ls property \"resolved\""
+            },
             {
               "url": "https://github.com/sindresorhus/string-width/issues",
               "type": "issue-tracker",
@@ -12173,8 +12968,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/wrap-ansi@8.1.0?vcs_url=git%2Bhttps%3A//github.com/chalk/wrap-ansi.git",
+      "purl": "pkg:npm/wrap-ansi@8.1.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-8.1.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/chalk/wrap-ansi/issues",
           "type": "issue-tracker",
@@ -12227,8 +13027,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/wrappy@1.0.2?vcs_url=git%2Bhttps%3A//github.com/npm/wrappy.git",
+      "purl": "pkg:npm/wrappy@1.0.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/wrappy/issues",
           "type": "issue-tracker",
@@ -12281,8 +13086,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/xmlbuilder2@3.1.1?vcs_url=git%3A//github.com/oozcitak/xmlbuilder2.git",
+      "purl": "pkg:npm/xmlbuilder2@3.1.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/xmlbuilder2/-/xmlbuilder2-3.1.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "http://github.com/oozcitak/xmlbuilder2/issues",
           "type": "issue-tracker",
@@ -12397,7 +13207,7 @@
         "base64-js@1.0.1",
         "buffer@5.7.1",
         "bundle-dependencies@1.0.2",
-        "ignore@5.1.4",
+        "ignore@5.3.2",
         "uuid@8.3.2",
         "uuidv4@6.2.13"
       ]
@@ -12547,12 +13357,12 @@
     {
       "ref": "buffer@5.7.1",
       "dependsOn": [
-        "buffer@5.7.1|base64-js@1.3.1",
-        "ieee754@1.1.13"
+        "buffer@5.7.1|base64-js@1.5.1",
+        "ieee754@1.2.1"
       ]
     },
     {
-      "ref": "buffer@5.7.1|base64-js@1.3.1"
+      "ref": "buffer@5.7.1|base64-js@1.5.1"
     },
     {
       "ref": "bundle-dependencies@1.0.2",
@@ -13003,10 +13813,10 @@
       ]
     },
     {
-      "ref": "ieee754@1.1.13"
+      "ref": "ieee754@1.2.1"
     },
     {
-      "ref": "ignore@5.1.4"
+      "ref": "ignore@5.3.2"
     },
     {
       "ref": "imurmurhash@0.1.4"
