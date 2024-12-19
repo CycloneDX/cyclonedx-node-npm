@@ -238,13 +238,10 @@ export async function run (process: NodeJS.Process): Promise<number> {
     throw new Error('missing evidence')
   }
 
-  const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
-
   myConsole.log('LOG   | gathering BOM data ...')
   const bom = new BomBuilder(
-    new Builders.FromNodePackageJson.ToolBuilder(extRefFactory),
     new Builders.FromNodePackageJson.ComponentBuilder(
-      extRefFactory,
+      new Factories.FromNodePackageJson.ExternalReferenceFactory(),
       new Factories.LicenseFactory()
     ),
     new TreeBuilder(),
