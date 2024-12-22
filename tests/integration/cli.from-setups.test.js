@@ -23,7 +23,7 @@ const { writeFileSync, readFileSync, existsSync } = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
 
-const { makeReproducible, getNpmVersion } = require('../_helper')
+const { makeReproducible, getNpmVersion, regexEscape } = require('../_helper')
 const { UPDATE_SNAPSHOTS, mkTemp, cliWrapper, latestCdxSpecVersion, dummyProjectsRoot, dummyResultsRoot, projectDemoRootPath, demoResultsRoot } = require('./')
 
 describe('integration.cli.from-setups', () => {
@@ -87,7 +87,7 @@ describe('integration.cli.from-setups', () => {
 
       const expectStdErr = expect(res.stderr);
       (outDirExisted ? expectStdErr.not : expectStdErr).toContain(`creating directory ${dirname(outFile)}`)
-      expectStdErr.toMatch(new RegExp(`wrote \\d+ bytes to ${outFile}`))
+      expectStdErr.toMatch(new RegExp(`wrote \\d+ bytes to ${regexEscape(outFile)}`))
 
       const actualOutput = makeReproducible(format, readFileSync(outFile, 'utf8'))
 
