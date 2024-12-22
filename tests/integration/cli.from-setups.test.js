@@ -18,8 +18,8 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { spawnSync } = require('child_process')
-const { join } = require('path')
-const { writeFileSync, readFileSync, mkdirSync } = require('fs')
+const { dirname, join } = require('path')
+const { writeFileSync, readFileSync } = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
 
@@ -37,9 +37,6 @@ describe('integration.cli.from-setups', () => {
   const formats = ['json', 'xml']
 
   describe('dummy_projects', () => {
-    const tmpRootRun = join(tmpRoot, 'with-prepared')
-    mkdirSync(tmpRootRun)
-
     const useCases = [
       {
         subject: 'bare',
@@ -60,7 +57,8 @@ describe('integration.cli.from-setups', () => {
 
     function runTest (subject, project, format, additionalCliArgs = []) {
       const expectedOutSnap = join(dummyResultsRoot, subject, `${project}.snap.${format}`)
-      const outFile = join(tmpRoot, `${subject}_${project}.${format}`)
+      const outFile = join(tmpRoot, subject, `${project}.${format}`)
+      // no need to create that outFile dir first - the tool is expected to do that for us
       const res = spawnSync(
         process.execPath,
         ['--', cliWrapper,
@@ -69,10 +67,11 @@ describe('integration.cli.from-setups', () => {
           '--output-format', format,
           '--output-reproducible',
           '--output-file', outFile,
-          '--validate'
+          '--validate',
+          '-vvv'
         ], {
           cwd: join(dummyProjectsRoot, project),
-          stdio: ['ignore', 'inherit', 'pipe'],
+          stdio: ['ignore', 'ignore', 'pipe'],
           encoding: 'utf8'
         }
       )
@@ -84,6 +83,7 @@ describe('integration.cli.from-setups', () => {
         process.stderr.write('\n')
         throw err
       }
+
       const actualOutput = makeReproducible(format, readFileSync(outFile, 'utf8'))
 
       if (UPDATE_SNAPSHOTS) {
@@ -97,8 +97,6 @@ describe('integration.cli.from-setups', () => {
     }
 
     describe.each(useCases)('subject: $subject', (ud) => {
-      mkdirSync(join(tmpRootRun, ud.subject))
-
       describe.each(ud.dummyProject)('dummyProject: %s', (dummyProject) => {
         describe.each(formats)('format: %s', (format) => {
           (skipAllTests
