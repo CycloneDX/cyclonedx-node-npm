@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 const { spawnSync } = require('child_process')
 const { dirname, join } = require('path')
-const { writeFileSync, readFileSync } = require('fs')
+const { writeFileSync, readFileSync, existsSync} = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
 
@@ -58,6 +58,7 @@ describe('integration.cli.from-setups', () => {
     function runTest (subject, project, format, additionalCliArgs = []) {
       const expectedOutSnap = join(dummyResultsRoot, subject, `${project}.snap.${format}`)
       const outFile = join(tmpRoot, subject, `${project}.${format}`)
+      const outDirExisted = existsSync(dirname(outFile))
       // no need to create that outFile dir first - the tool is expected to do that for us
       const res = spawnSync(
         process.execPath,
@@ -83,6 +84,10 @@ describe('integration.cli.from-setups', () => {
         process.stderr.write('\n')
         throw err
       }
+
+      const expectStdErr = expect(res.stderr);
+      (outDirExisted ? expectStdErr.not : expectStdErr).toContain(`creating directory ${dirname(outFile)}`)
+      expectStdErr.toMatch(new RegExp(`wrote \\d+ bytes to ${outFile}`))
 
       const actualOutput = makeReproducible(format, readFileSync(outFile, 'utf8'))
 
