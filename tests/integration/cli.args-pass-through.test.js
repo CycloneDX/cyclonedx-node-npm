@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { join } = require('path')
-const { mkdirSync, readFileSync } = require('fs')
+const { readFileSync } = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
 
@@ -31,7 +31,6 @@ describe('integration.cli.args-pass-through', () => {
 
   describe('npm-version depending npm-args', () => {
     const tmpRootRun = join(tmpRoot, 'npmVersion-depending-npmArgs')
-    mkdirSync(tmpRootRun)
 
     const rMinor = Math.round(99 * Math.random())
     const rPatch = Math.round(99 * Math.random())
