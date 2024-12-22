@@ -87,6 +87,8 @@ Options:
   --omit <type...>          Dependency types to omit from the installation tree.
                             (can be set multiple times)
                             (choices: "dev", "optional", "peer", default: "dev" if the NODE_ENV environment variable is set to "production", otherwise empty)
+  --gather-license-texts    Search for license files in components and include them as license evidence.
+                            This feature is experimental. (default: false)
   --flatten-components      Whether to flatten the components.
                             This means the actual nesting of node packages is not represented in the SBOM result.
                             (default: false)

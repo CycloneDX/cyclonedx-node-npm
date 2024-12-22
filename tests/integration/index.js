@@ -33,6 +33,7 @@ const projectTestDataPath = join(projectTestRootPath, '_data')
 
 const dummyProjectsRoot = join(projectTestDataPath, 'dummy_projects')
 const demoResultsRoot = join(projectTestDataPath, 'sbom_demo-results')
+const dummyResultsRoot = join(projectTestDataPath, 'sbom_dummy-results')
 const npmLsReplacementPath = join(projectTestDataPath, 'npm-ls_replacement')
 
 const npmLsReplacement = {
@@ -105,6 +106,7 @@ module.exports = {
   projectDemoRootPath,
   projectTestDataPath,
   demoResultsRoot,
+  dummyResultsRoot,
   dummyProjectsRoot,
   npmLsReplacementPath,
   npmLsReplacement,
