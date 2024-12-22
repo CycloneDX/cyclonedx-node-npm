@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 const { spawnSync } = require('child_process')
 const { dirname, join } = require('path')
-const { writeFileSync, readFileSync, existsSync} = require('fs')
+const { writeFileSync, readFileSync, existsSync } = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
 
