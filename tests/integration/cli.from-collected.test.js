@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { join } = require('path')
-const { mkdirSync, writeFileSync, readFileSync } = require('fs')
+const { writeFileSync, readFileSync } = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
 
