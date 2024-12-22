@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { join } = require('path')
-const { writeFileSync, readFileSync } = require('fs')
+const { mkdirSync, writeFileSync, readFileSync } = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
 
@@ -32,6 +32,7 @@ describe('integration.cli.edge-cases', () => {
 
   describe('broken project', () => {
     const tmpRootRun = join(tmpRoot, 'broken-project')
+    mkdirSync(tmpRootRun)
 
     test.each([
       ['no-lockfile', /missing evidence/i],
@@ -53,6 +54,7 @@ describe('integration.cli.edge-cases', () => {
 
   describe('with broken npm-ls', () => {
     const tmpRootRun = join(tmpRoot, 'with-broken')
+    mkdirSync(tmpRootRun)
 
     test('error on non-existing binary', async () => {
       const logFileBase = join(tmpRootRun, 'non-existing')
@@ -113,6 +115,7 @@ describe('integration.cli.edge-cases', () => {
   test('suppressed error on non-zero exit', async () => {
     const dd = { subject: 'dev-dependencies', npm: '8', node: '14', os: 'ubuntu-latest' }
 
+    mkdirSync(join(tmpRoot, 'suppressed-error-on-non-zero-exit'))
     const expectedOutSnap = join(demoResultsRoot, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
     const logFileBase = join(tmpRoot, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
     const cwd = dummyProjectsRoot

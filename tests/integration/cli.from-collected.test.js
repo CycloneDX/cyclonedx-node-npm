@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { join } = require('path')
-const { writeFileSync, readFileSync } = require('fs')
+const { mkdirSync, writeFileSync, readFileSync } = require('fs')
 
 const { describe, expect, test } = require('@jest/globals')
 
@@ -35,6 +35,7 @@ describe('integration.cli.from-collected', () => {
     const LATETS_NPM = '10'
 
     const tmpRootRun = join(tmpRoot, 'with-prepared')
+    mkdirSync(tmpRootRun)
 
     const _allDemoCases = indexNpmLsDemoData()
     const useCases = [
@@ -56,6 +57,8 @@ describe('integration.cli.from-collected', () => {
     ]
 
     describe.each(useCases)('$subject', (ud) => {
+      mkdirSync(join(tmpRootRun, ud.subject))
+
       test.each(ud.demoCases)('$subject $args npm$npm node$node $os', async (dd) => {
         const expectedOutSnap = join(demoResultsRoot, ud.subject, `${dd.subject}${dd.args}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)
         const logFileBase = join(tmpRootRun, ud.subject, `${dd.subject}${dd.args}_npm${dd.npm}_node${dd.node}_${dd.os}`)
