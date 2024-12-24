@@ -175,6 +175,9 @@ jobs:
       matrix:
         include:
           - npm-version: 'latest'
+          - npm-version: '^11'
+            ## "node": "^20.17.0 || >=22.9.0"
+            node-version: '^22.9'
           - npm-version: '^10'
             ## "node": "^18.17.0 || >=20.5.0"
             node-version: '^20.5'

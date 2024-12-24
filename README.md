@@ -24,7 +24,7 @@ and might have properties following [`cdx:npm` Namespace Taxonomy](https://githu
 ## Requirements
 
 * `node` >= `14`
-* `npm` in range `6 - 10`
+* `npm` in range `6 - 11`
 
 ## Installation
 
