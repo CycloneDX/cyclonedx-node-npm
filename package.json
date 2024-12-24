@@ -71,7 +71,7 @@
   "type": "commonjs",
   "engines": {
     "node": ">=14",
-    "npm": "6 - 10"
+    "npm": "6 - 11"
   },
   "directories": {
     "doc": "docs",
