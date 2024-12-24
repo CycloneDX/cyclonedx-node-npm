@@ -7,7 +7,6 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Added
-  * Official support for `npm@11` ([#1245] via [#1249])
   * Capability to gather license text evidences ([#256] via [#1243])  
     This feature can be controlled via CLI switch `--gather-license-texts`.  
     This feature is experimental. This feature is disabled per default.
@@ -21,8 +20,6 @@ All notable changes to this project will be documented in this file.
 [#1218]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1218
 [#1237]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1237
 [#1243]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1243
-[#1245]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1245
-[#1249]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1249
 
 ## 1.19.3 -- 2024-07-15
 
