@@ -44,6 +44,7 @@ describe('integration.cli.args-pass-through', () => {
     const npm8ArgsGeneral = [...npmArgsGeneral, '--all']
     const npm9ArgsGeneral = [...npmArgsGeneral, '--all']
     const npm10ArgsGeneral = [...npmArgsGeneral, '--all']
+    const npm11ArgsGeneral = [...npmArgsGeneral, '--all']
 
     test.each([
       // region basic
@@ -52,6 +53,7 @@ describe('integration.cli.args-pass-through', () => {
       ['basic npm 8', `8.${rMinor}.${rPatch}`, [], npm8ArgsGeneral],
       ['basic npm 9', `9.${rMinor}.${rPatch}`, [], npm9ArgsGeneral],
       ['basic npm 10', `10.${rMinor}.${rPatch}`, [], npm10ArgsGeneral],
+      ['basic npm 11', `11.${rMinor}.${rPatch}`, [], npm11ArgsGeneral],
       // endregion basic
       // region omit
       ['omit everything npm 6', `6.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm6ArgsGeneral, '--production']],
@@ -60,6 +62,7 @@ describe('integration.cli.args-pass-through', () => {
       ['omit everything npm greater-equal 8.7', `8.${ge7}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm8ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
       ['omit everything npm 9', `9.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm9ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
       ['omit everything npm 10', `10.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm10ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
+      ['omit everything npm 11', `11.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm11ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
       // endregion omit
       // region package-lock-only
       ['package-lock-only not supported npm 6 ', `6.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm6ArgsGeneral]],
@@ -67,6 +70,7 @@ describe('integration.cli.args-pass-through', () => {
       ['package-lock-only npm 8', `8.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm8ArgsGeneral, '--package-lock-only']],
       ['package-lock-only npm 9', `9.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm9ArgsGeneral, '--package-lock-only']],
       ['package-lock-only npm 10', `10.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm10ArgsGeneral, '--package-lock-only']],
+      ['package-lock-only npm 11', `11.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm11ArgsGeneral, '--package-lock-only']]
       // endregion package-lock-only
       // region workspace
       ['workspace not supported npm 6', `6.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm6ArgsGeneral]],
@@ -74,6 +78,7 @@ describe('integration.cli.args-pass-through', () => {
       ['workspace npm 8', `8.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm8ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
       ['workspace npm 9', `9.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm9ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
       ['workspace npm 10', `10.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm10ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
+      ['workspace npm 11', `11.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm11ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
       // endregion workspace
       // region include-workspace-root
       ['workspace root not supported npm 6', `6.${rMinor}.${rPatch}`, ['-w', 'my-wsA', '--include-workspace-root'], [...npm6ArgsGeneral]],
@@ -81,13 +86,15 @@ describe('integration.cli.args-pass-through', () => {
       ['workspace root npm 8', `8.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm8ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
       ['workspace root npm 9', `9.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm9ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
       ['workspace root npm 10', `10.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm10ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
+      ['workspace root npm 11', `11.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm11ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
       // endregion include-workspace-root
       // region workspaces
       ['workspaces disabled not supported npm 6', `6.${rMinor}.${rPatch}`, ['--no-workspaces'], [...npm6ArgsGeneral]],
       ['workspaces disabled npm 7', `7.${rMinor}.${rPatch}`, ['--no-workspaces'], [...npm7ArgsGeneral, '--workspaces=false']],
       ['workspaces disabled npm 8', `8.${rMinor}.${rPatch}`, ['-no-ws'], [...npm8ArgsGeneral, '--workspaces=false']],
       ['workspaces disabled npm 9', `9.${rMinor}.${rPatch}`, ['--no-workspaces'], [...npm9ArgsGeneral, '--workspaces=false']],
-      ['workspaces disabled npm 10', `10.${rMinor}.${rPatch}`, ['-no-ws'], [...npm10ArgsGeneral, '--workspaces=false']]
+      ['workspaces disabled npm 10', `10.${rMinor}.${rPatch}`, ['-no-ws'], [...npm10ArgsGeneral, '--workspaces=false']],
+      ['workspaces disabled npm 11', `11.${rMinor}.${rPatch}`, ['-no-ws'], [...npm10ArgsGeneral, '--workspaces=false']]
       // endregion workspaces
     ])('%s', async (purpose, npmVersion, cdxArgs, expectedArgs) => {
       const logFileBase = join(tmpRootRun, purpose.replace(/\W/g, '_'))

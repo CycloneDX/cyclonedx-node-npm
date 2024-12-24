@@ -32,7 +32,7 @@ describe('integration.cli.from-collected', () => {
   const tmpRoot = mkTemp('cli.from-collected')
 
   describe('with prepared npm-ls', () => {
-    const LATETS_NPM = '10'
+    const LATETS_NPM = '11'
 
     const tmpRootRun = join(tmpRoot, 'with-prepared')
     mkdirSync(tmpRootRun)

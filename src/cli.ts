@@ -43,10 +43,11 @@ interface CommandOptions {
   ignoreNpmErrors: boolean
   packageLockOnly: boolean
   omit: Omittable[]
-  specVersion: Spec.Version
+  gatherLicenseTexts: boolean
   flattenComponents: boolean
   shortPURLs: boolean
   outputReproducible: boolean
+  specVersion: Spec.Version
   outputFormat: OutputFormat
   outputFile: string
   validate: boolean | undefined
@@ -89,6 +90,12 @@ function makeCommand (process: NodeJS.Process): Command {
         : [],
       `"${Omittable.Dev}" if the NODE_ENV environment variable is set to "production", otherwise empty`
     )
+  ).addOption(
+    new Option(
+      '--gather-license-texts',
+      'Search for license files in components and include them as license evidence.\n' +
+      'This feature is experimental.'
+    ).default(false)
   ).addOption(
     new Option(
       '--flatten-components',
@@ -280,6 +287,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
       metaComponentType: options.mcType,
       packageLockOnly: options.packageLockOnly,
       omitDependencyTypes: options.omit,
+      gatherLicenseTexts: options.gatherLicenseTexts,
       reproducible: options.outputReproducible,
       flattenComponents: options.flattenComponents,
       shortPURLs: options.shortPURLs,

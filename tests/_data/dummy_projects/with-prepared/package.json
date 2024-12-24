@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "@dummy-projects/with-prepared",
+  "optionalDependencies": {
+    "uuidv4": "6.2.13"
+  },
+  "dependencies": {
+    "@cyclonedx/cyclonedx-library": "7.0.0",
+    "base64-js": "1.0.1",
+    "buffer": "^5.4.3",
+    "bundle-dependencies": "1.0.2",
+    "ignore": "^5.1.4"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/uuid": "8.3.4",
+    "uuid": "8.3.2"
+  }
+}
