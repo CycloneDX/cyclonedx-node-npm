@@ -44,6 +44,7 @@ describe('integration.cli.args-pass-through', () => {
     const npm8ArgsGeneral = [...npmArgsGeneral, '--all']
     const npm9ArgsGeneral = [...npmArgsGeneral, '--all']
     const npm10ArgsGeneral = [...npmArgsGeneral, '--all']
+    const npm11ArgsGeneral = [...npmArgsGeneral, '--all']
 
     test.each([
       // region basic
@@ -52,6 +53,7 @@ describe('integration.cli.args-pass-through', () => {
       ['basic npm 8', `8.${rMinor}.${rPatch}`, [], npm8ArgsGeneral],
       ['basic npm 9', `9.${rMinor}.${rPatch}`, [], npm9ArgsGeneral],
       ['basic npm 10', `10.${rMinor}.${rPatch}`, [], npm10ArgsGeneral],
+      ['basic npm 11', `11.${rMinor}.${rPatch}`, [], npm11ArgsGeneral],
       // endregion basic
       // region omit
       ['omit everything npm 6', `6.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm6ArgsGeneral, '--production']],
@@ -60,13 +62,15 @@ describe('integration.cli.args-pass-through', () => {
       ['omit everything npm greater-equal 8.7', `8.${ge7}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm8ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
       ['omit everything npm 9', `9.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm9ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
       ['omit everything npm 10', `10.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm10ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
+      ['omit everything npm 11', `11.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm11ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
       // endregion omit
       // region package-lock-only
       ['package-lock-only not supported npm 6 ', `6.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm6ArgsGeneral]],
       ['package-lock-only npm 7', `7.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm7ArgsGeneral, '--package-lock-only']],
       ['package-lock-only npm 8', `8.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm8ArgsGeneral, '--package-lock-only']],
       ['package-lock-only npm 9', `9.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm9ArgsGeneral, '--package-lock-only']],
-      ['package-lock-only npm 10', `10.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm10ArgsGeneral, '--package-lock-only']]
+      ['package-lock-only npm 10', `10.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm10ArgsGeneral, '--package-lock-only']],
+      ['package-lock-only npm 11', `11.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm11ArgsGeneral, '--package-lock-only']]
       // endregion package-lock-only
     ])('%s', async (purpose, npmVersion, cdxArgs, expectedArgs) => {
       const logFileBase = join(tmpRootRun, purpose.replace(/\W/g, '_'))
