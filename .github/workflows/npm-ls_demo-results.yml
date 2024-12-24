@@ -57,7 +57,7 @@ jobs:
             node-version: '22'  # LTS
             os: ubuntu-latest
           - subject: local-workspaces
-            additional_npm-ls_args: '--workspace=my-local --workspace==my-local-e'
+            additional_npm-ls_args: '--workspace=my-local --workspace=my-local-e'
             npm-version: '11'   # Current
             node-version: '22'  # LTS
             os: ubuntu-latest
