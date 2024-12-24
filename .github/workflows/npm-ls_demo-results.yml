@@ -19,24 +19,25 @@ jobs:
       fail-fast: false # gather all the results !
       matrix:
         subject:
-          # - deps-from-git
-          # - alternative-package-registry
-          # - bundled-dependencies
-          # - dev-dependencies
-          # - juice-shop
-          # - local-dependencies
+          - deps-from-git
+          - alternative-package-registry
+          - bundled-dependencies
+          - dev-dependencies
+          - juice-shop
+          - local-dependencies
           - local-workspaces
-          # - package-integrity
-          # - package-with-build-id
+          - package-integrity
+          - package-with-build-id
         additional_npm-ls_args: [ '' ]
         npm-version:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
           ## see also: https://github.com/npm/cli/releases
-          - '10'     # Current
-          - '9'      # Legacy
-          - '8'      # Legacy
-          - '7'      # Legacy
-          - '6'      # Legacy
+          - '11'     # Current
+          #- '10'     # Legacy
+          #- '9'      # Legacy
+          #- '8'      # Legacy
+          #- '7'      # Legacy
+          #- '6'      # Legacy
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
@@ -52,22 +53,31 @@ jobs:
         include:
           - subject: local-workspaces
             additional_npm-ls_args: '--workspace==my-local-e'
-            npm-version: '10'   # Current
+            npm-version: '11'   # Current
             node-version: '22'  # Current
             os: ubuntu-latest
           - subject: local-workspaces
             additional_npm-ls_args: '--workspace==my-local --workspace==my-local-e'
-            npm-version: '10'   # Current
+            npm-version: '11'   # Current
             node-version: '22'  # Current
             os: ubuntu-latest
           - subject: local-workspaces
             additional_npm-ls_args: '--workspaces'
-            npm-version: '10'   # Current
+            npm-version: '11'   # Current
             node-version: '22'  # Current
             os: ubuntu-latest
         exclude:
           - # macos-latest no longer supports node14
             os: macos-latest
+            node-version: '14'
+          - # npm11 requires node ^20.17.0 || >=22.9.0
+            npm-version: '11'
+            node-version: '18'
+          - # npm11 requires node ^20.17.0 || >=22.9.0
+            npm-version: '11'
+            node-version: '16'
+          - # npm11 requires node ^20.17.0 || >=22.9.0
+            npm-version: '11'
             node-version: '14'
           - # npm10 requires node ^18.17.0 || >=20.5.0
             npm-version: '10'
