@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Added
-  * Capability to gather license text evidences (#256 via #1243)  
+  * Capability to gather license text evidences ([#256] via [#1243])  
     This feature can be controlled via CLI switch `--gather-license-texts`.  
     This feature is experimental. This feature is disabled per default.
 * Dependencies
