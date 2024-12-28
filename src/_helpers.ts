@@ -20,6 +20,10 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { readFileSync, writeSync } from 'fs'
 import { extname, parse } from 'path'
 
+export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
+  ? structuredClone
+  : function (value) { return JSON.parse(JSON.stringify(value)) }
+
 export function loadJsonFile (path: string): any {
   return JSON.parse(readFileSync(path, 'utf8'))
   // may be replaced by `require(f, { with: { type: "json" } })`
