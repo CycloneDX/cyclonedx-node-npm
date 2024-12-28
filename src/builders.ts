@@ -23,7 +23,13 @@ import * as normalizePackageData from 'normalize-package-data'
 import * as path from 'path'
 import { join } from 'path'
 
-import { getMimeForLicenseFile, isString, loadJsonFile, tryRemoveSecretsFromUrl } from './_helpers'
+import {
+  getMimeForLicenseFile,
+  isString,
+  loadJsonFile,
+  structuredClonePolyfill,
+  tryRemoveSecretsFromUrl
+} from './_helpers'
 import { makeNpmRunner, type runFunc } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
@@ -714,7 +720,3 @@ export class TreeBuilder {
     }
   }
 }
-
-const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
-  ? structuredClone
-  : function (value) { return JSON.parse(JSON.stringify(value)) }
