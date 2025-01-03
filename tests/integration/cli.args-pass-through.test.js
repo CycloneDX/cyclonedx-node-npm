@@ -72,6 +72,30 @@ describe('integration.cli.args-pass-through', () => {
       ['package-lock-only npm 10', `10.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm10ArgsGeneral, '--package-lock-only']],
       ['package-lock-only npm 11', `11.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm11ArgsGeneral, '--package-lock-only']]
       // endregion package-lock-only
+      // region workspace
+      ['workspace not supported npm 6', `6.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm6ArgsGeneral]],
+      ['workspace npm 7', `7.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm7ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
+      ['workspace npm 8', `8.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm8ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
+      ['workspace npm 9', `9.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm9ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
+      ['workspace npm 10', `10.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm10ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
+      ['workspace npm 11', `11.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm11ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
+      // endregion workspace
+      // region include-workspace-root
+      ['workspace root not supported npm 6', `6.${rMinor}.${rPatch}`, ['-w', 'my-wsA', '--include-workspace-root'], [...npm6ArgsGeneral]],
+      ['workspace root npm 7', `7.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm7ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
+      ['workspace root npm 8', `8.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm8ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
+      ['workspace root npm 9', `9.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm9ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
+      ['workspace root npm 10', `10.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm10ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
+      ['workspace root npm 11', `11.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm11ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
+      // endregion include-workspace-root
+      // region workspaces
+      ['workspaces disabled not supported npm 6', `6.${rMinor}.${rPatch}`, ['--no-workspaces'], [...npm6ArgsGeneral]],
+      ['workspaces disabled npm 7', `7.${rMinor}.${rPatch}`, ['--no-workspaces'], [...npm7ArgsGeneral, '--workspaces=false']],
+      ['workspaces disabled npm 8', `8.${rMinor}.${rPatch}`, ['-no-ws'], [...npm8ArgsGeneral, '--workspaces=false']],
+      ['workspaces disabled npm 9', `9.${rMinor}.${rPatch}`, ['--no-workspaces'], [...npm9ArgsGeneral, '--workspaces=false']],
+      ['workspaces disabled npm 10', `10.${rMinor}.${rPatch}`, ['-no-ws'], [...npm10ArgsGeneral, '--workspaces=false']],
+      ['workspaces disabled npm 11', `11.${rMinor}.${rPatch}`, ['-no-ws'], [...npm10ArgsGeneral, '--workspaces=false']]
+      // endregion workspaces
     ])('%s', async (purpose, npmVersion, cdxArgs, expectedArgs) => {
       const logFileBase = join(tmpRootRun, purpose.replace(/\W/g, '_'))
       const cwd = dummyProjectsRoot

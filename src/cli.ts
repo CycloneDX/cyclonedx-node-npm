@@ -52,6 +52,9 @@ interface CommandOptions {
   outputFile: string
   validate: boolean | undefined
   mcType: Enums.ComponentType
+  workspace: string[]
+  includeWorkspaceRoot: boolean
+  workspaces: boolean | undefined
   verbose: number
 }
 
@@ -175,6 +178,22 @@ function makeCommand (process: NodeJS.Process): Command {
     )
   ).addOption(
     new Option(
+      '-w, --workspace <workspace...>',
+      'Whether to only include dependencies for a specific workspace. ' +
+      '(can be set multiple times)'
+    ).default([], 'empty')
+  ).addOption(
+    new Option(
+      '-no-ws, --no-workspaces',
+      'Do not include dependencies for workspaces.'
+    )
+  ).addOption(
+    new Option(
+      '-wr, --include-workspace-root',
+      'Include the workspace root when workspaces are defined using `-w` or `--workspace`.'
+    ).default(false)
+  ).addOption(
+    new Option(
       '-v, --verbose',
       'Increase the verbosity of messages. Use multiple times to increase the verbosity even more.'
     ).argParser<number>(
@@ -238,6 +257,20 @@ export async function run (process: NodeJS.Process): Promise<number> {
     throw new Error('missing evidence')
   }
 
+  if (options.workspaces !== undefined && !options.workspaces) {
+    if (options.workspace !== undefined && options.workspace.length > 0) {
+      myConsole.error('ERROR | Bad config: `--workspace` option cannot be used when `--no-workspaces` is also configured')
+      throw new Error('bad config')
+    }
+  }
+
+  if (options.includeWorkspaceRoot) {
+    if (options.workspace.length === 0) {
+      myConsole.error('ERROR | Bad config: `--include-workspace-root` can only be used when `--workspace` is also configured')
+      throw new Error('bad config')
+    }
+  }
+
   const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
 
   myConsole.log('LOG   | gathering BOM data ...')
@@ -257,7 +290,10 @@ export async function run (process: NodeJS.Process): Promise<number> {
       gatherLicenseTexts: options.gatherLicenseTexts,
       reproducible: options.outputReproducible,
       flattenComponents: options.flattenComponents,
-      shortPURLs: options.shortPURLs
+      shortPURLs: options.shortPURLs,
+      workspace: options.workspace,
+      includeWorkspaceRoot: options.includeWorkspaceRoot,
+      workspaces: options.workspaces
     },
     myConsole
   ).buildFromProjectDir(projectDir, process)
