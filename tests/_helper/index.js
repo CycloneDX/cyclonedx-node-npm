@@ -71,6 +71,7 @@ function makeReproducible (format, data) {
 function makeJsonReproducible (json) {
   return json
     .replace(
+      // replace npm in metadata.tools[].version
       new RegExp(
         '        "name": "npm",\n' +
         '        "version": ".+?"'
@@ -78,7 +79,15 @@ function makeJsonReproducible (json) {
       '        "name": "npm",\n' +
       '        "version": "npmVersion-testing"'
     ).replace(
-      // replace metadata.tools.version
+      // replace npm in metadata.tools.components[].version
+      new RegExp(
+        '          "name": "npm",\n' +
+        '          "version": ".+?"'
+      ),
+      '          "name": "npm",\n' +
+      '          "version": "npmVersion-testing"'
+    ).replace(
+      // replace self metadata.tools[].version
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "cyclonedx-npm",\n' +
       `        "version": ${JSON.stringify(thisVersion)}`,
@@ -86,7 +95,17 @@ function makeJsonReproducible (json) {
       '        "name": "cyclonedx-npm",\n' +
       '        "version": "thisVersion-testing"'
     ).replace(
-      // replace metadata.tools.version
+      // replace self metadata.tools.components[].version
+      '          "type": "application",\n' +
+      '          "name": "cyclonedx-npm",\n' +
+      '          "group": "@cyclonedx",\n' +
+      `          "version": ${JSON.stringify(thisVersion)}`,
+      '          "type": "application",\n' +
+      '          "name": "cyclonedx-npm",\n' +
+      '          "group": "@cyclonedx",\n' +
+      '          "version": "thisVersion-testing"'
+    ).replace(
+      // replace library metadata.tools[].version
       new RegExp(
         '        "vendor": "@cyclonedx",\n' +
         '        "name": "cyclonedx-library",\n' +
@@ -95,6 +114,18 @@ function makeJsonReproducible (json) {
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "cyclonedx-library",\n' +
       '        "version": "libVersion-testing"'
+    ).replace(
+      // replace library metadata.tools.components[].version
+      new RegExp(
+        '          "type": "library",\n' +
+        '          "name": "cyclonedx-library",\n' +
+        '          "group": "@cyclonedx",\n' +
+        '          "version": ".+?"'
+      ),
+      '          "type": "library",\n' +
+      '          "name": "cyclonedx-library",\n' +
+      '          "group": "@cyclonedx",\n' +
+      '          "version": "libVersion-testing"'
     )
 }
 
@@ -107,7 +138,7 @@ function makeJsonReproducible (json) {
 function makeXmlReproducible (xml) {
   return xml
     .replace(
-      // replace metadata.tools.version
+      // replace npm in metadata.tools[].version
       new RegExp(
         '        <name>npm</name>\n' +
         '        <version>.+?</version>'
@@ -115,7 +146,15 @@ function makeXmlReproducible (xml) {
       '        <name>npm</name>\n' +
       '        <version>npmVersion-testing</version>'
     ).replace(
-      // replace metadata.tools.version
+      // replace npm in metadata.tools.components[].version
+      new RegExp(
+        '          <name>npm</name>\n' +
+        '          <version>.+?</version>'
+      ),
+      '          <name>npm</name>\n' +
+      '          <version>npmVersion-testing</version>'
+    ).replace(
+      // replace metadata.tools[].version
       '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>cyclonedx-npm</name>\n' +
       `        <version>${thisVersion}</version>`,
@@ -123,7 +162,15 @@ function makeXmlReproducible (xml) {
       '        <name>cyclonedx-npm</name>\n' +
       '        <version>thisVersion-testing</version>'
     ).replace(
-      // replace metadata.tools.version
+      // replace metadata.tools.components[].version
+      '          <group>@cyclonedx</group>\n' +
+      '          <name>cyclonedx-npm</name>\n' +
+      `          <version>${thisVersion}</version>`,
+      '          <group>@cyclonedx</group>\n' +
+      '          <name>cyclonedx-npm</name>\n' +
+      '          <version>thisVersion-testing</version>'
+    ).replace(
+      // replace metadata.tools[].version
       new RegExp(
         '        <vendor>@cyclonedx</vendor>\n' +
         '        <name>cyclonedx-library</name>\n' +
@@ -133,12 +180,13 @@ function makeXmlReproducible (xml) {
       '        <name>cyclonedx-library</name>\n' +
       '        <version>libVersion-testing</version>'
     ).replace(
-      new RegExp(
-        '         <name>npm</name>\n' +
-        '        <version>.+?</version>'
-      ),
-      '         <name>npm</name>\n' +
-      '        <version>npmVersion-testing</version>'
+      // replace metadata.tools.components[].version
+      '          <group>@cyclonedx</group>\n' +
+      '          <name>cyclonedx-library</name>\n' +
+      '          <version>.+?</version>',
+      '          <group>@cyclonedx</group>\n' +
+      '          <name>cyclonedx-library</name>\n' +
+      '          <version>libVersion-testing</version>'
     )
 }
 
