@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 1.20.0 -- 2025-01-15
+
 * Added
   * Official support for `npm@11` ([#1245] via [#1249])
   * Capability to gather license text evidences ([#256] via [#1243])  
