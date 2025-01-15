@@ -22,3 +22,11 @@ A clear and concise description of any alternative solutions or features you've 
 ## Additional context
 
 Add any other context or screenshots about the feature request here.
+
+
+
+## Contribution 
+
+<!-- pleasechooseone by putting an x in the box [ ] -->
+- [ ] I am willing to provide an implementation
+- [ ] I will wait until somebody else implements it
