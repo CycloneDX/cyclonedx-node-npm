@@ -27,6 +27,6 @@ Add any other context or screenshots about the feature request here.
 
 ## Contribution 
 
-<!-- pleasechooseone by putting an x in the box [ ] -->
+<!-- please choose one by putting an `x` in the box `[ ]` -->
 - [ ] I am willing to provide an implementation
 - [ ] I will wait until somebody else implements it
