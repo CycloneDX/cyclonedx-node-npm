@@ -33,3 +33,9 @@ If applicable, add screenshots or past the output to help explain your problem.
 ## Additional context
 
 Add any other context about the problem here.
+
+## Contribution 
+
+<!-- please choose one by putting an `x` in the box `[ ]` -->
+- [ ] I am willing to provide a fix
+- [ ] I will wait until somebody else fixes it
