@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 const { describe, expect, test } = require('@jest/globals')
 
-const { versionCompare } = require('../../dist/versionCompare')
+const { versionCompare } = require('../../dist/_helpers')
 
 describe('versionCompare', () => {
   test.each([

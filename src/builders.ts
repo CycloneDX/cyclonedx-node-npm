@@ -28,11 +28,11 @@ import {
   isString,
   loadJsonFile,
   structuredClonePolyfill,
-  tryRemoveSecretsFromUrl
+  tryRemoveSecretsFromUrl,
+  versionCompare
 } from './_helpers'
 import { PropertyNames, PropertyValueBool } from './cdx'
 import { makeNpmRunner, type runFunc } from './npmRunner'
-import { versionCompare } from './versionCompare'
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
