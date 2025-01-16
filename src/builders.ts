@@ -30,8 +30,8 @@ import {
   structuredClonePolyfill,
   tryRemoveSecretsFromUrl
 } from './_helpers'
+import { PropertyNames, PropertyValueBool } from './cdx'
 import { makeNpmRunner, type runFunc } from './npmRunner'
-import { PropertyNames, PropertyValueBool } from './properties'
 import { versionCompare } from './versionCompare'
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
