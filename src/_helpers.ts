@@ -104,3 +104,28 @@ export function getMimeForLicenseFile (filename: string): MimeType | undefined {
 }
 
 // endregion MIME
+
+// region version compare
+
+type Version = number[]
+type CompareResult = -1 | 0 | 1
+
+export function versionCompare (a: Version, b: Version): CompareResult {
+  let ai: number, bi: number
+  for (let i = 0, l = Math.max(a.length, b.length); i < l; ++i) {
+    // make values NaN-save, null-safe, undefined-safe
+    ai = a[i] || 0 /* eslint-disable-line @typescript-eslint/strict-boolean-expressions */
+    bi = b[i] || 0 /* eslint-disable-line @typescript-eslint/strict-boolean-expressions */
+    if (ai < bi) {
+      // A < B
+      return -1
+    }
+    if (ai > bi) {
+      // A > B
+      return +1
+    }
+  }
+  // A == B
+  return 0
+}
+// endregion version compare
