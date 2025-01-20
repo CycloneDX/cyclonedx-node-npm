@@ -118,7 +118,7 @@ Options:
 
 ## Demo
 
-For a demo of _cyclonedx-npm_ see the [demo project][demo_readme].
+For a demo of _cyclonedx-npm_ see the [demo projects][demo_readme].
 
 ## How it works
 
