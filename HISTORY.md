@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * BREAKING changes
-  * CLI option `--spec-version` defaults to `1.6`, was `1.4` ([#1173] via [#]) 
+  * CLI option `--spec-version` defaults to `1.6`, was `1.4` ([#1173] via [#1258]) 
   * Emit `.metadata.tools` as components ([#1233] via [#1235])  
     This affects only CycloneDX spec-version 1.5 and later.
   * Emitted `.purl` values might be partially url-encoded (via [#1235])  
@@ -22,7 +22,7 @@ All notable changes to this project will be documented in this file.
 [#1235]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1235
 [#1241]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1241
 [#1242]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1242
-[#]: 
+[#1258]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1258
 
 ## 1.20.0 -- 2025-01-13
 
