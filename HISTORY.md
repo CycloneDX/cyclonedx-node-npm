@@ -7,9 +7,17 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * BREAKING changes
-  * Create dir for output file if not exist ([#1241] via [#1242])  
+  * Emit `.metadata.tools` as components ([#1233] via [#1235])  
+    This affects only CycloneDX spec-version 1.5 and later.
+  * Emitted `.purl` values might be partially url-encoded (via [#1235])  
+    This is cased by changes on underlying 3rd-party dependency `packageurl-js`.
+  * Create dir for output file if not exists ([#1241] via [#1242])  
     This is only a breaking change if you relied on non-existent result paths.
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^7.0.0`, was `@^6.11.0` (via [#1235])
 
+[#1233]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1233
+[#1235]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1235
 [#1241]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1241
 [#1242]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1242
 
@@ -73,7 +81,7 @@ All notable changes to this project will be documented in this file.
 
 * Added
   * Licenses acknowledgement might be populated ([#1171] via [#1183])
-* Misc
+* Dependencies
   * Raised dependency `@cyclonedx/cyclonedx-library@^6.6.0`, was `@^6.5.0` (via [#1183])
 
 [#1171]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1171
@@ -265,7 +273,7 @@ Details
     They should be marked as expression, now.
 * Added
   * Added detection for package integrity with SHA-1 ([#699] via [#735])
-* Misc
+* Dependencies
   * Raised dependency `@cyclonedx/cyclonedx-library@^2.0.0`, was `@^1.14.0` (via [#726])
 
 [#699]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/699
