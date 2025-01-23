@@ -155,8 +155,17 @@ function getNpmVersion () {
   return v
 }
 
+/**
+ * @param {string} s
+ * @return {string}
+ */
+function regexEscape (s) {
+  return s.replace(/[\^$(){}[\]+*?.|\\-]/g, '\\$&')
+}
+
 module.exports = {
   hashFile,
   makeReproducible,
-  getNpmVersion
+  getNpmVersion,
+  regexEscape
 }
