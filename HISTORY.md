@@ -15,7 +15,7 @@ All notable changes to this project will be documented in this file.
   * Emitted `.purl` values might be partially url-encoded (via [#1235])  
     This is caused by changes on underlying 3rd-party dependency `packageurl-js`.
   * Create dir for output file if not exists ([#1241] via [#1242])  
-    This is only a breaking change if you relied on non-existent result paths.
+    This is only a breaking change if you relied on non-existent result paths to cause errors.
 * Misc
   * Raised dependency `@cyclonedx/cyclonedx-library@^7.0.0`, was `@^6.11.0` (via [#1235])
 
