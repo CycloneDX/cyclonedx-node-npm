@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * BREAKING changes
-  * default value for CLI option `--spec-version` is `1.6` now, was `1.4` ([#1173] via [#]) 
+  * CLI option `--spec-version` defaults to `1.6`, was `1.4` ([#1173] via [#]) 
   * Emit `.metadata.tools` as components ([#1233] via [#1235])  
     This affects only CycloneDX spec-version 1.5 and later.
   * Emitted `.purl` values might be partially url-encoded (via [#1235])  
