@@ -7,9 +7,13 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * BREAKING changes
+  * Emit `.metadata.tools` as components ([#1233] via [#1235])  
+    This affects only CycloneDX spec-version 1.5 and later.
   * Create dir for output file if not exist ([#1241] via [#1242])  
     This is only a breaking change if you relied on non-existent result paths.
 
+[#1233]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1233
+[#1235]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1235
 [#1241]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1241
 [#1242]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1242
 
