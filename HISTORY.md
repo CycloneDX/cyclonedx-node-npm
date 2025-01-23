@@ -6,6 +6,13 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* BREAKING changes
+  * Create dir for output file if not exist ([#1241] via [#1242])  
+    This is only a breaking change if you relied on non-existent result paths.
+
+[#1241]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1241
+[#1242]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1242
+
 ## 1.20.0 -- 2025-01-13
 
 * Added
