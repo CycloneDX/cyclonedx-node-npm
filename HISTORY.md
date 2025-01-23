@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 
 ## 2.0.0 -- 2025-01-23
 
-* BREAKING changes
+* BREAKING Changes
   * CLI option `--spec-version` defaults to `1.6`, was `1.4` ([#1173] via [#1258]) 
   * Emit `.metadata.tools` as components ([#1233] via [#1235])  
     This affects only CycloneDX spec-version 1.5 and later.
