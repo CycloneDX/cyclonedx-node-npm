@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file.
   * Emit `.metadata.tools` as components ([#1233] via [#1235])  
     This affects only CycloneDX spec-version 1.5 and later.
   * Emitted `.purl` values might be partially url-encoded (via [#1235])  
-    This is cased by changes on underlying 3rd-party dependency `packageurl-js`.
+    This is caused by changes on underlying 3rd-party dependency `packageurl-js`.
   * Create dir for output file if not exists ([#1241] via [#1242])  
     This is only a breaking change if you relied on non-existent result paths.
 * Misc
