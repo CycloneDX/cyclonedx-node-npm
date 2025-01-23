@@ -96,7 +96,7 @@ Options:
                             This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.
                             (default: false)
   --spec-version <version>  Which version of CycloneDX spec to use.
-                            (choices: "1.2", "1.3", "1.4", "1.5", "1.6", default: "1.4")
+                            (choices: "1.2", "1.3", "1.4", "1.5", "1.6", default: "1.6")
   --output-reproducible     Whether to go the extra mile and make the output reproducible.
                             This requires more resources, and might result in loss of time- and random-based-values.
                             (env: BOM_REPRODUCIBLE)
