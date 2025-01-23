@@ -6,8 +6,6 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
-## 2.0.0 -- planned
-
 * BREAKING Changes
   * CLI option `--spec-version` defaults to `1.6`, was `1.4` ([#1173] via [#1258]) 
   * Emit `.metadata.tools` as components ([#1233] via [#1235])  
@@ -26,7 +24,7 @@ All notable changes to this project will be documented in this file.
 [#1242]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1242
 [#1258]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1258
 
-## 1.20.0 -- 2025-01-13
+## 1.20.0 - 2025-01-13
 
 * Added
   * Official support for `npm@11` ([#1245] via [#1249])
@@ -47,7 +45,7 @@ All notable changes to this project will be documented in this file.
 [#1249]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1249
 [#1255]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1255
 
-## 1.19.3 -- 2024-07-15
+## 1.19.3 - 2024-07-15
 
 * Dependencies
   * Raised runtime dependency `@cyclonedx/cyclonedx-library@^6.11.0`, was `@^6.6.0` (via [#1205])  
@@ -58,7 +56,7 @@ All notable changes to this project will be documented in this file.
 [#1201]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1201
 [#1205]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1205
 
-## 1.19.2 -- 2024-07-10
+## 1.19.2 - 2024-07-10
 
 * Fixed
   * CycloneDX `externalReference`s for `vcs` type ([#1198] via [#1202]) 
@@ -68,7 +66,7 @@ All notable changes to this project will be documented in this file.
 [#1202]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1202
 [#1203]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1203
 
-## 1.19.0 -- 2024-06-01
+## 1.19.0 - 2024-06-01
 
 * Changed
   * Try to sanitize distribution URLs (via [#1187], [#1191])
@@ -82,7 +80,7 @@ All notable changes to this project will be documented in this file.
 [#1189]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1189
 [#1191]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1191
 
-## 1.18.0 -- 2024-05-08
+## 1.18.0 - 2024-05-08
 
 * Added
   * Licenses acknowledgement might be populated ([#1171] via [#1183])
@@ -92,7 +90,7 @@ All notable changes to this project will be documented in this file.
 [#1171]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1171
 [#1183]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1183
 
-## 1.17.0 -- 2024-04-23
+## 1.17.0 - 2024-04-23
 
 Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/specification/releases/tag/1.6).
 
@@ -107,7 +105,7 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 [#1175]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1175
 [#1167]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1167
 
-## 1.16.2 -- 2024-03-19
+## 1.16.2 - 2024-03-19
 
 * Style
   * Applied latest code standards (via [#1149])
@@ -117,7 +115,7 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 [#1149]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1149
 [#1160]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1160
 
-## 1.16.1 -- 2024-01-11
+## 1.16.1 - 2024-01-11
 
 * Fixed
   * Writing large results to buffered streams no longer drops data, but retries until success (via [#1145])
@@ -127,7 +125,7 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 [#1142]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1142
 [#1145]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1145
 
-## 1.16.0 -- 2023-12-11
+## 1.16.0 - 2023-12-11
 
 * Change
   * If BOM result validation was explicitly requested and skipped, then a warning is shown ([#1137] via [#1138])
@@ -136,7 +134,7 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 [#1137]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1137
 [#1138]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1138
 
-## 1.15.0 -- 2023-12-10
+## 1.15.0 - 2023-12-10
 
 * Changed
   * Log output is less verbose, can be re-enabled via CLI switch `--verbose` ([#158] via [#1131])  
@@ -157,7 +155,7 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 [#1133]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1133
 [#1135]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1135
 
-## 1.14.3 -- 2023-12-01
+## 1.14.3 - 2023-12-01
 
 * Fixed
   * Added direct dependency `packageurl-js` as such (via [#1122])
@@ -173,7 +171,7 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 [#1124]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1124
 [#1125]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1125
 
-## 1.14.2 -- 2023-11-06
+## 1.14.2 - 2023-11-06
 
 * Fixed
   * SBOM results might have the `externalReferences[].hashes` populated ([#1118] via [#1120])  
@@ -187,7 +185,7 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 [#1120]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1120
 [#1121]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1121
 
-## 1.14.1 -- 2023-09-18
+## 1.14.1 - 2023-09-18
 
 * Fixed
   * explicit allow engine `npm@10` (via [#1107])  
@@ -198,7 +196,7 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 [#1107]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1107
 [#1108]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1108
 
-## 1.14.0 -- 2023-09-03
+## 1.14.0 - 2023-09-03
 
 * Added
   * SBOM result might have additional items in `metadata.tools` populated ([#1100] via [#1101]) 
@@ -206,7 +204,7 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 [#1100]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1100
 [#1101]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1101
 
-## 1.13.3 -- 2023-09-01
+## 1.13.3 - 2023-09-01
 
 * Docs
   * Tell about support for `npm` version 10 ([#973] via [#974]) 
@@ -216,7 +214,7 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 [#973]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/973
 [#974]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/974
 
-## 1.13.2 -- 2023-08-28
+## 1.13.2 - 2023-08-28
 
 * Build
   * Use _TypeScript_ `v5.2.2` now, was `v5.1.6` (via [#1098])
@@ -226,7 +224,7 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 [#1096]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1096
 [#1098]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1098
 
-## 1.13.1 -- 2023-08-18
+## 1.13.1 - 2023-08-18
 
 * Misc
   * Raised dependency `@cyclonedx/cyclonedx-library@^3||^4||^5`, was `@^3||^4` (via [#1042])
@@ -235,7 +233,7 @@ Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/s
 [#1042]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1042
 [#1043]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1043
 
-## 1.13.0 -- 2023-07-07
+## 1.13.0 - 2023-07-07
 
 Added support for [_CycloneDX_ Specification-1.5](https://github.com/CycloneDX/specification/releases/tag/1.5).
 
@@ -253,7 +251,7 @@ Added support for [_CycloneDX_ Specification-1.5](https://github.com/CycloneDX/s
 [#841]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/841
 [#843]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/843
 
-## 1.12.1 -- 2023-06-16
+## 1.12.1 - 2023-06-16
 
 * Build
   * Use _TypeScript_ `v5.1.3` now, was `v5.0.4` (via [#764])
@@ -263,7 +261,7 @@ Added support for [_CycloneDX_ Specification-1.5](https://github.com/CycloneDX/s
 [#736]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/736
 [#764]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/764
 
-## 1.12.0 -- 2023-05-17
+## 1.12.0 - 2023-05-17
 
 Based on [OWASP Software Component Verification Standard for Software Bill of Materials](https://scvs.owasp.org/scvs/v2-software-bill-of-materials/)
 (SCVS SBOM) criteria, this tool is now capable of producing SBOM documents almost passing Level-2 (only signing needs to be done externally).  
@@ -285,7 +283,7 @@ Details
 [#726]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/726
 [#735]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/735
 
-## 1.11.0 -- 2023-04-27
+## 1.11.0 - 2023-04-27
 
 * Added
   * SBOM result might be validated (via [#660])  
@@ -295,7 +293,7 @@ Details
 
 [#660]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/660
 
-## 1.10.0 -- 2023-04-17
+## 1.10.0 - 2023-04-17
 
 * Added
   * SBOM result might have `component.scope=optional` populated for OptionalDependencies ([#645] via [#657])  
@@ -312,7 +310,7 @@ Details
 [#647]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/647
 [#657]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/657
 
-## 1.9.2 -- 2023-03-30
+## 1.9.2 - 2023-03-30
 
 * Fixed
   * No longer omit components' version's buildID ([#551] via [#597])  
@@ -325,14 +323,14 @@ Details
 [#597]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/597
 [#599]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/599
 
-## 1.9.1 -- 2023-03-15
+## 1.9.1 - 2023-03-15
 
 * Docs
   * added section "How it works" to the README (via [#563])
 
 [#563]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/563
 
-## 1.9.0 -- 2023-03-03
+## 1.9.0 - 2023-03-03
 
 * Changed
   * Detected node packages' metadata are now [normalized](https://www.npmjs.com/package/normalize-package-data), before translation to SBOM components happens ([#536] via [#537])  
@@ -341,7 +339,7 @@ Details
 [#536]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/536
 [#537]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/537
 
-## 1.8.0 -- 2023-02-16
+## 1.8.0 - 2023-02-16
 
 * Added
   * SBOM result might have additional items in `metadata.tools` populated ([#505] via [#506])
@@ -349,15 +347,15 @@ Details
 [#505]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/505
 [#506]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/506
 
-## 1.7.5 -- 2023-02-14
+## 1.7.5 - 2023-02-14
 
 Maintenance release
 
-## 1.7.4 -- 2023-02-14
+## 1.7.4 - 2023-02-14
 
 Maintenance release
 
-## 1.7.3 -- 2023-02-12
+## 1.7.3 - 2023-02-12
 
 Maintenance release
 
@@ -369,7 +367,7 @@ Maintenance release
 [#431]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/431
 [#482]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/482
 
-## 1.7.2 -- 2022-12-19
+## 1.7.2 - 2022-12-19
 
 * Changed
   * Enhanced randomness when generating a `serialNumber` (via [#389])
@@ -379,7 +377,7 @@ Maintenance release
 [#366]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/366
 [#389]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/389
 
-## 1.7.1 -- 2022-12-16
+## 1.7.1 - 2022-12-16
 
 Maintenance release
 
@@ -389,7 +387,7 @@ Maintenance release
 [badges/shields#8671]: https://github.com/badges/shields/issues/8671
 [#378]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/378
 
-## 1.7.0 -- 2022-12-15
+## 1.7.0 - 2022-12-15
 
 * Added
   * SBOM result might have `serialNumber` populated ([#375] via [#376], [#377])
@@ -398,7 +396,7 @@ Maintenance release
 [#376]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/376
 [#377]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/377
 
-## 1.6.1 -- 2022-11-19
+## 1.6.1 - 2022-11-19
 
 Maintenance release
 
@@ -413,7 +411,7 @@ Maintenance release
 [#331]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/331
 [#333]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/333
 
-## 1.6.0 -- 2022-11-12
+## 1.6.0 - 2022-11-12
 
 * Added
   * When CLI option `--flatten-components=true` is set, then the property [`cdx:npm:package:bundled`](https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md) might be added ([#311] via [#310])
@@ -423,7 +421,7 @@ Maintenance release
 [#310]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/310
 [#311]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/311
 
-## 1.5.0 -- 2022-11-11
+## 1.5.0 - 2022-11-11
 
 * Added
   * Components' install path/location will be visible in the SBOM result ([#305] via [#308])
@@ -431,7 +429,7 @@ Maintenance release
 [#305]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/305
 [#308]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/308
 
-## 1.4.1 -- 2022-11-06
+## 1.4.1 - 2022-11-06
 
 * Fixed
   * Components' "sha512" hash is properly detected and populated in the SBOM result ([#302] via [#303])
@@ -439,7 +437,7 @@ Maintenance release
 [#302]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/302
 [#303]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/303
 
-## 1.4.0 -- 2022-11-05
+## 1.4.0 - 2022-11-05
 
 * Added
   * Enabled support for NPM v9 ([#245] via [#246])
@@ -447,7 +445,7 @@ Maintenance release
 [#245]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/245
 [#246]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/246
 
-## 1.3.0 -- 2022-10-30
+## 1.3.0 - 2022-10-30
 
 * Fixed
   * Improved the NPM compatibility with `--omit` options ([#254] via [#259])
@@ -459,7 +457,7 @@ Maintenance release
 [#259]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/259
 [#260]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/260
 
-## 1.2.0 -- 2022-10-23
+## 1.2.0 - 2022-10-23
 
 * Changed
   * The existence of a lock file is no longer enforced, as long as there are other evidence ([#247] via [#248])
@@ -467,7 +465,7 @@ Maintenance release
 [#247]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/247
 [#248]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/248
 
-## 1.1.0 -- 2022-10-22
+## 1.1.0 - 2022-10-22
 
 * Added
   * CLI got a new switch `--short-PURLs` ([#225] via [#226])
@@ -486,7 +484,7 @@ Maintenance release
 [#231]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/231
 [#234]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/234
 
-## 1.0.0 -- 2022-09-24
+## 1.0.0 - 2022-09-24
 
 First major version (via [#1])
 
@@ -494,7 +492,7 @@ Thanks to all the beta testers. Your efforts, feedback and contributions are app
 
 [#1]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1
 
-## 1.0.0-beta.8 -- 2022-09-10
+## 1.0.0-beta.8 - 2022-09-10
 
 * Fixed
   * Run on Windows systems was improved for `npm`/`npx` sub-processes.
@@ -503,17 +501,17 @@ Thanks to all the beta testers. Your efforts, feedback and contributions are app
 * Build
   * Use _TypeScript_ `v4.8.3` now, was `v4.8.2`.
 
-## 1.0.0-beta.7 -- 2022-09-07
+## 1.0.0-beta.7 - 2022-09-07
 
 * Changed
   * PackageUrl(PURL) in JSON and XML results are as short as possible, but still precise.
 
-## 1.0.0-beta.6 -- 2022-09-06
+## 1.0.0-beta.6 - 2022-09-06
 
 * Added
   * CLI switch `--ignore-npm-errors` to ignore/suppress NPM errors.
 
-## 1.0.0-beta.5 -- 2022-09-06
+## 1.0.0-beta.5 - 2022-09-06
 
 * Added
   * Support for node 14 was enabled.
@@ -525,25 +523,25 @@ Thanks to all the beta testers. Your efforts, feedback and contributions are app
 * Build
   * Use _TypeScript_ `v4.8.2` now, was `v4.7.4`.
 
-## 1.0.0-beta.4 -- 2022-08-25
+## 1.0.0-beta.4 - 2022-08-25
 
 * Fixed
   * Run on Windows systems was fixed.
   * Improved error reporting.
   * Debug output was made clearer to understand.
 
-## 1.0.0-beta.3 -- 2022-08-23
+## 1.0.0-beta.3 - 2022-08-23
 
 * Change
   * The package no longer pins dependencies via shrinkwrap.
 
-## 1.0.0-beta.2 -- 2022-08-21
+## 1.0.0-beta.2 - 2022-08-21
 
 * Fixed
   * Debug output was made clearer to understand and less annoying.
 * Style
   * Improved internal typing for OmittableDependencyTypes.
 
-## 1.0.0-beta.1 -- 2022-08-20
+## 1.0.0-beta.1 - 2022-08-20
 
 * First feature complete implementation.
