@@ -11,8 +11,8 @@ All notable changes to this project will be documented in this file.
     This affects only CycloneDX spec-version 1.5 and later.
   * Create dir for output file if not exist ([#1241] via [#1242])  
     This is only a breaking change if you relied on non-existent result paths.
-* Dependencies
-  * Bumped to `@cyclonedx/cyclonedx-library@^7.0.0`, was `@^6.11.0` (via [#1242])
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^7.0.0`, was `@^6.11.0` (via [#1242])
 
 [#1233]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1233
 [#1235]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1235
@@ -79,7 +79,7 @@ All notable changes to this project will be documented in this file.
 
 * Added
   * Licenses acknowledgement might be populated ([#1171] via [#1183])
-* Misc
+* Dependencies
   * Raised dependency `@cyclonedx/cyclonedx-library@^6.6.0`, was `@^6.5.0` (via [#1183])
 
 [#1171]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1171
@@ -271,7 +271,7 @@ Details
     They should be marked as expression, now.
 * Added
   * Added detection for package integrity with SHA-1 ([#699] via [#735])
-* Misc
+* Dependencies
   * Raised dependency `@cyclonedx/cyclonedx-library@^2.0.0`, was `@^1.14.0` (via [#726])
 
 [#699]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/699
