@@ -11,6 +11,8 @@ All notable changes to this project will be documented in this file.
     This affects only CycloneDX spec-version 1.5 and later.
   * Create dir for output file if not exist ([#1241] via [#1242])  
     This is only a breaking change if you relied on non-existent result paths.
+  * Emitted `.purl` values might be partially url-encoded (via [#1242])  
+    This is cased by changes on underlying 3rd-party dependency `packageurl-js`.
 * Misc
   * Raised dependency `@cyclonedx/cyclonedx-library@^7.0.0`, was `@^6.11.0` (via [#1242])
 
