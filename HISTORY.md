@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 2.0.0 -- 2025-01-23
+
 * BREAKING changes
   * CLI option `--spec-version` defaults to `1.6`, was `1.4` ([#1173] via [#1258]) 
   * Emit `.metadata.tools` as components ([#1233] via [#1235])  
