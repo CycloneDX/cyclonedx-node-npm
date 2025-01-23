@@ -112,7 +112,7 @@ function makeCommand (process: NodeJS.Process): Command {
     ).choices(
       Object.keys(Spec.SpecVersionDict).sort()
     ).default(
-      Spec.Version.v1dot4
+      Spec.Version.v1dot6
     )
   ).addOption(
     new Option(
