@@ -56,7 +56,7 @@
     "@types/hosted-git-info": "^3.0.5",
     "@types/node": "ts5.6",
     "@types/normalize-package-data": "^2.4.1",
-    "eslint": "8.57.0",
+    "eslint": "9.20.0",
     "eslint-config-standard": "17.1.0",
     "eslint-config-standard-with-typescript": "43.0.1",
     "eslint-plugin-header": "3.1.1",
