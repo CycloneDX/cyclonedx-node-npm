@@ -43,6 +43,9 @@ interface CommandOptions {
   ignoreNpmErrors: boolean
   packageLockOnly: boolean
   omit: Omittable[]
+  workspace: string[]
+  includeWorkspaceRoot: boolean
+  workspaces: boolean | undefined
   gatherLicenseTexts: boolean
   flattenComponents: boolean
   shortPURLs: boolean
@@ -87,6 +90,35 @@ function makeCommand (process: NodeJS.Process): Command {
         : [],
       `"${Omittable.Dev}" if the NODE_ENV environment variable is set to "production", otherwise empty`
     )
+  ).addOption(
+    new Option(
+      '-w, --workspace <workspace...>',
+      'Whether to only include dependencies for a specific workspace. ' +
+      '(can be set multiple times)\n' +
+      'This feature is experimental.'
+    ).default([], 'empty')
+  ).addOption(
+    new Option(
+      '-ws, --workspaces',
+      'Whether to include dependencies for workspaces.\n' +
+      'Default behaviour for NPM 7 is to not include workspace dependencies but for NPM > 7 the default behaviour is to include them.\n' +
+      'Default behaviour includes workspace root dependencies (--include-workspace-root) ' +
+      'but if explicitly enabled then this is not the case (disabled by default).\n' +
+      'If explicitly enabled an error will occur if there are no configured workspaces.\n' +
+      'This feature is experimental.'
+    ).default(undefined)
+  ).addOption(
+    new Option(
+      '--no-workspaces',
+      'Whether to exclude dependencies for workspaces.\n' +
+      'This feature is experimental.'
+    )
+  ).addOption(
+    new Option(
+      '--include-workspace-root',
+      'Include the workspace root when workspaces are defined using `-w` or `--workspace`; or if `--workspaces` is configured.\n' +
+      'This feature is experimental.'
+    ).default(false)
   ).addOption(
     new Option(
       '--gather-license-texts',
@@ -238,6 +270,20 @@ export async function run (process: NodeJS.Process): Promise<number> {
     throw new Error('missing evidence')
   }
 
+  if (options.workspaces === false) {
+    if (options.workspace !== undefined && options.workspace.length > 0) {
+      myConsole.error('ERROR | Bad config: `--workspace` option cannot be used when `--no-workspaces` is also configured')
+      throw new Error('bad config')
+    }
+  }
+
+  if (options.includeWorkspaceRoot) {
+    if (options.workspace.length === 0 && options.workspaces !== true) {
+      myConsole.error('ERROR | Bad config: `--include-workspace-root` can only be used when `--workspace` or `--workspaces` is also configured')
+      throw new Error('bad config')
+    }
+  }
+
   myConsole.log('LOG   | gathering BOM data ...')
   const bom = new BomBuilder(
     new Builders.FromNodePackageJson.ComponentBuilder(
@@ -254,7 +300,10 @@ export async function run (process: NodeJS.Process): Promise<number> {
       gatherLicenseTexts: options.gatherLicenseTexts,
       reproducible: options.outputReproducible,
       flattenComponents: options.flattenComponents,
-      shortPURLs: options.shortPURLs
+      shortPURLs: options.shortPURLs,
+      workspace: options.workspace,
+      includeWorkspaceRoot: options.includeWorkspaceRoot,
+      workspaces: options.workspaces
     },
     myConsole
   ).buildFromProjectDir(projectDir, process)

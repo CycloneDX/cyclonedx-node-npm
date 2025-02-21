@@ -45,6 +45,9 @@ interface BomBuilderOptions {
   flattenComponents?: BomBuilder['flattenComponents']
   shortPURLs?: BomBuilder['shortPURLs']
   gatherLicenseTexts?: BomBuilder['gatherLicenseTexts']
+  workspace?: BomBuilder['workspace']
+  includeWorkspaceRoot?: BomBuilder['includeWorkspaceRoot']
+  workspaces?: BomBuilder['workspaces']
 }
 
 type cPath = string
@@ -64,6 +67,9 @@ export class BomBuilder {
   flattenComponents: boolean
   shortPURLs: boolean
   gatherLicenseTexts: boolean
+  workspace: string[]
+  includeWorkspaceRoot: boolean
+  workspaces?: boolean
 
   console: Console
 
@@ -86,6 +92,9 @@ export class BomBuilder {
     this.flattenComponents = options.flattenComponents ?? false
     this.shortPURLs = options.shortPURLs ?? false
     this.gatherLicenseTexts = options.gatherLicenseTexts ?? false
+    this.workspace = options.workspace ?? []
+    this.includeWorkspaceRoot = options.includeWorkspaceRoot ?? false
+    this.workspaces = options.workspaces
 
     this.console = console_
   }
@@ -169,6 +178,31 @@ export class BomBuilder {
             this.console.warn('WARN  | your NPM does not support "--omit=%s", internally skipped this option', odt)
             break
         }
+      }
+    }
+
+    for (const workspace of this.workspace) {
+      if (npmVersionT[0] >= 7) {
+        args.push(`--workspace=${workspace}`)
+      } else {
+        this.console.warn('WARN  | your NPM does not support "--workspace=%s", internally skipped this option', workspace)
+      }
+    }
+
+    // No need to set explicitly if false as this is default behaviour
+    if (this.includeWorkspaceRoot) {
+      if (npmVersionT[0] >= 8) {
+        args.push('--include-workspace-root=true')
+      } else {
+        this.console.warn('WARN  | your NPM does not support "--include-workspace-root=true", internally skipped this option')
+      }
+    }
+
+    if (this.workspaces != null) {
+      if (npmVersionT[0] >= 7) {
+        args.push(`--workspaces=${this.workspaces}`)
+      } else {
+        this.console.warn('WARN  | your NPM does not support "--workspaces=%s", internally skipped this option', this.workspaces)
       }
     }
 
