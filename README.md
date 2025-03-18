@@ -12,7 +12,8 @@
 
 ----
 
-Create [CycloneDX] Software Bill of Materials (SBOM) from _[npm]_ projects.
+Create [CycloneDX] Software Bill of Materials (SBOM) from _[npm]_ projects.  
+This is probably the most accurate, complete SBOM generator for npm-based projects.
 
 Based on [OWASP Software Component Verification Standard for Software Bill of Materials](https://scvs.owasp.org/scvs/v2-software-bill-of-materials/)'s
 criteria, this tool is capable of producing SBOM documents almost passing Level-2 (only signing needs to be done externally).
