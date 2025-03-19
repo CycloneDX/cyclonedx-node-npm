@@ -23,7 +23,17 @@ const { mkdirSync, writeFileSync, readFileSync } = require('fs')
 const { describe, expect, test } = require('@jest/globals')
 
 const { makeReproducible } = require('../_helper')
-const { UPDATE_SNAPSHOTS, mkTemp, runCLI, latestCdxSpecVersion, dummyProjectsRoot, npmLsReplacement, demoResultsRoot } = require('./')
+const {
+  UPDATE_SNAPSHOTS,
+  mkTemp,
+  runCLI,
+  cliWrapper,
+  latestCdxSpecVersion,
+  dummyProjectsRoot,
+  npmLsReplacement,
+  demoResultsRoot
+} = require('./')
+const { spawnSync } = require('child_process')
 
 describe('integration.cli.edge-cases', () => {
   const cliRunTestTimeout = 15000
@@ -162,4 +172,28 @@ describe('integration.cli.edge-cases', () => {
       `${outFile} should equal ${expectedOutSnap}`
     )
   }, cliRunTestTimeout)
+
+  describe('workspace-specifics', () => {
+    test.each([
+      ['exclusive mutual options: workspace no-workspaces', ['--workspace', 'foo', '--no-workspaces'], "error: option '--no-workspaces' cannot be used with option '-w, --workspace <workspace...>'"],
+      ['include-workspace-root w/o workspace', ['--include-workspace-root'], 'error: can only use --include-workspace-root when --workspace is also configured'],
+      ['include-workspace-root no-workspaces', ['--include-workspace-root', '--no-workspaces'], 'error: can only use --include-workspace-root when --workspace is also configured']
+    ])('%s', async (purpose, cdxArgs, expectedError) => {
+      const res = spawnSync(
+        process.execPath,
+        ['--', cliWrapper, ...cdxArgs],
+        {
+          cwd: join(dummyProjectsRoot, 'with-lockfile'),
+          stdio: ['ignore', 'ignore', 'pipe'],
+          encoding: 'utf8',
+          env: {
+            CT_VERSION: '11.0.1',
+            npm_execpath: npmLsReplacement.justExit
+          }
+        }
+      )
+      expect(res.status).not.toBe(0)
+      expect(res.stderr.toLowerCase()).toContain(expectedError)
+    }, cliRunTestTimeout)
+  })
 })
