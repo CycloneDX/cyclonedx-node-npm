@@ -43,6 +43,9 @@ interface CommandOptions {
   ignoreNpmErrors: boolean
   packageLockOnly: boolean
   omit: Omittable[]
+  workspace: string[]
+  includeWorkspaceRoot: boolean | undefined
+  workspaces: boolean | undefined
   gatherLicenseTexts: boolean
   flattenComponents: boolean
   shortPURLs: boolean
@@ -87,6 +90,37 @@ function makeCommand (process: NodeJS.Process): Command {
         : [],
       `"${Omittable.Dev}" if the NODE_ENV environment variable is set to "production", otherwise empty`
     )
+  ).addOption(
+    new Option(
+      '-w, --workspace <workspace...>',
+      'Only include dependencies for a specific workspace. ' +
+      '(can be set multiple times)\n' +
+      'This feature is experimental.'
+    ).default([], 'empty')
+  ).addOption(
+    new Option(
+      '--no-workspaces',
+      'Do not include dependencies for workspaces.\n' +
+      'Default behaviour is to include dependencies for all configured workspaces.\n' +
+      'This can not be used if workspaces have been explicitly defined using `-w` or `--workspace`\n' +
+      'This feature is experimental.'
+    ).default(undefined).conflicts('workspace')
+  ).addOption(
+    new Option(
+      '--include-workspace-root',
+      'Include workspace root dependencies along with explicitly defined workspaces\' dependencies. ' +
+      'This can only be used if you have explicitly defined workspaces using `-w` or `--workspace`.\n' +
+      'Default behaviour is to not include the workspace root when workspaces are excplicitly defined using `-w` or `--workspace`.\n' +
+      'This feature is experimental.'
+    ).default(undefined)
+  ).addOption(
+    new Option(
+      '--no-include-workspace-root',
+      'Do not include workspace root dependencies. This only has an effect if you have one or more workspaces configured in your project.\n' +
+      'This is useful if you want to include all dependencies for all workspaces without explicitly defining them with `-w` or `--workspace` (default behaviour) but ' +
+      'you do not want the workspace root dependencies included.\n' +
+      'This feature is experimental.'
+    ).default(undefined)
   ).addOption(
     new Option(
       '--gather-license-texts',
@@ -238,6 +272,19 @@ export async function run (process: NodeJS.Process): Promise<number> {
     throw new Error('missing evidence')
   }
 
+  // Commander will default this option to true as there
+  // is no positive boolean parameter (we define --no-workspaces but
+  // no --workspaces).
+  if (options.workspaces === true) {
+    options.workspaces = undefined
+  }
+
+  if (options.includeWorkspaceRoot === true) {
+    if (options.workspace.length === 0) {
+      throw new Error('Can only use --include-workspace-root when --workspace is also configured')
+    }
+  }
+
   myConsole.log('LOG   | gathering BOM data ...')
   const bom = new BomBuilder(
     new Builders.FromNodePackageJson.ComponentBuilder(
@@ -254,7 +301,10 @@ export async function run (process: NodeJS.Process): Promise<number> {
       gatherLicenseTexts: options.gatherLicenseTexts,
       reproducible: options.outputReproducible,
       flattenComponents: options.flattenComponents,
-      shortPURLs: options.shortPURLs
+      shortPURLs: options.shortPURLs,
+      workspace: options.workspace,
+      includeWorkspaceRoot: options.includeWorkspaceRoot,
+      workspaces: options.workspaces
     },
     myConsole
   ).buildFromProjectDir(projectDir, process)
