@@ -45,6 +45,9 @@ interface BomBuilderOptions {
   flattenComponents?: BomBuilder['flattenComponents']
   shortPURLs?: BomBuilder['shortPURLs']
   gatherLicenseTexts?: BomBuilder['gatherLicenseTexts']
+  workspace?: BomBuilder['workspace']
+  includeWorkspaceRoot?: BomBuilder['includeWorkspaceRoot']
+  workspaces?: BomBuilder['workspaces']
 }
 
 type cPath = string
@@ -64,6 +67,9 @@ export class BomBuilder {
   flattenComponents: boolean
   shortPURLs: boolean
   gatherLicenseTexts: boolean
+  workspace: string[]
+  includeWorkspaceRoot?: boolean
+  workspaces?: boolean
 
   console: Console
 
@@ -86,6 +92,9 @@ export class BomBuilder {
     this.flattenComponents = options.flattenComponents ?? false
     this.shortPURLs = options.shortPURLs ?? false
     this.gatherLicenseTexts = options.gatherLicenseTexts ?? false
+    this.workspace = options.workspace ?? []
+    this.includeWorkspaceRoot = options.includeWorkspaceRoot
+    this.workspaces = options.workspaces
 
     this.console = console_
   }
@@ -172,6 +181,26 @@ export class BomBuilder {
       }
     }
 
+    // Although some workspace functionality is supported by npm 7 it is inconsistent with later versions. In order
+    // to provide a consistent and intuitive experience to users we do not support workspace functionality before npm 8.
+    if (npmVersionT[0] <= 7) {
+      if (this.workspace.length > 0 || this.workspaces !== undefined || this.includeWorkspaceRoot !== undefined) {
+        this.console.warn('WARN  | your NPM does not fully support workspaces functionality, internally skipping workspace related options')
+      }
+    } else {
+      for (const workspace of this.workspace) {
+        args.push(`--workspace=${workspace}`)
+      }
+
+      if (this.includeWorkspaceRoot !== undefined) {
+        args.push(`--include-workspace-root=${this.includeWorkspaceRoot}`)
+      }
+
+      if (this.workspaces !== undefined) {
+        args.push(`--workspaces=${this.workspaces}`)
+      }
+    }
+
     this.console.info('INFO  | gathering dependency tree ...')
     this.console.debug('DEBUG | npm-ls: run npm with %j in %j', args, projectDir)
     let npmLsReturns: Buffer
@@ -193,9 +222,7 @@ export class BomBuilder {
       this.console.error('%s', runError.stderr)
       this.console.groupEnd()
       if (!this.ignoreNpmErrors) {
-        throw new Error(`npm-ls exited with errors: ${
-          runError.status as string ?? 'noStatus'} ${
-          runError.signal as string ?? 'noSignal'}`)
+        throw new Error(`npm-ls exited with errors: ${runError.status as string ?? 'noStatus'} ${runError.signal as string ?? 'noSignal'}`)
       }
       this.console.debug('DEBUG | npm-ls exited with errors that are to be ignored.')
       npmLsReturns = runError.stdout ?? Buffer.alloc(0)
@@ -355,7 +382,7 @@ export class BomBuilder {
    * they fail to load package details or miss details.
    * So here is a poly-fill that loads ALL the package's data.
    */
-  private enhancedPackageData <T>(data: T & { path: string }): T {
+  private enhancedPackageData<T>(data: T & { path: string }): T {
     if (!path.isAbsolute(data.path)) {
       this.console.debug('DEBUG | skip loading package manifest in %j', data.path)
       return data
