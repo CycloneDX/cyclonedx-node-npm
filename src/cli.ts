@@ -282,10 +282,8 @@ export async function run (process: NodeJS.Process): Promise<number> {
     options.workspaces = undefined
   }
 
-  if (options.includeWorkspaceRoot === true) {
-    if (options.workspace.length === 0) {
-      throw new Error("option '--include-workspace-root' cannot be used without option '-w, --workspace <workspace...>'")
-    }
+  if (options.includeWorkspaceRoot === true && options.workspace.length === 0) {
+    throw new Error("option '--include-workspace-root' cannot be used without option '-w, --workspace <workspace...>'")
   }
 
   myConsole.log('LOG   | gathering BOM data ...')
