@@ -176,8 +176,8 @@ describe('integration.cli.edge-cases', () => {
   describe('workspace-specifics', () => {
     test.each([
       ['exclusive mutual options: workspace no-workspaces', ['--workspace', 'foo', '--no-workspaces'], "error: option '--no-workspaces' cannot be used with option '-w, --workspace <workspace...>'"],
-      ['include-workspace-root w/o workspace', ['--include-workspace-root'], 'error: can only use --include-workspace-root when --workspace is also configured'],
-      ['include-workspace-root no-workspaces', ['--include-workspace-root', '--no-workspaces'], 'error: can only use --include-workspace-root when --workspace is also configured']
+      ['include-workspace-root w/o workspace', ['--include-workspace-root'], "error: option '--include-workspace-root' cannot be used without option '-w, --workspace <workspace...>'"],
+      ['include-workspace-root no-workspaces', ['--include-workspace-root', '--no-workspaces'], "error: option '--include-workspace-root' cannot be used without option '-w, --workspace <workspace...>'"]
     ])('%s', async (purpose, cdxArgs, expectedError) => {
       const res = spawnSync(
         process.execPath,

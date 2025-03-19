@@ -284,7 +284,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
 
   if (options.includeWorkspaceRoot === true) {
     if (options.workspace.length === 0) {
-      throw new Error('Can only use --include-workspace-root when --workspace is also configured')
+      throw new Error("option '--include-workspace-root' cannot be used without option '-w, --workspace <workspace...>'")
     }
   }
 
