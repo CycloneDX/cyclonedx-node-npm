@@ -44,7 +44,9 @@
     {
       "name": "Alex Miller",
       "email": "codex.nz@gmail.com"
-    }
+    },
+      "name": "Malick Burger",
+      "email": "malickjackburger@gmail.com"
   ],
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "^7.0.0",
