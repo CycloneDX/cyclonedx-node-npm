@@ -80,8 +80,8 @@ function makeCommand (process: NodeJS.Process): Command {
   ).addOption(
     new Option(
       '--omit <type...>',
-      'Dependency types to omit from the installation tree. ' +
-      '(can be set multiple times)'
+      'Dependency types to omit from the installation tree.' +
+      ' (can be set multiple times)'
     ).choices(
       Object.values(Omittable).sort()
     ).default(
@@ -93,8 +93,8 @@ function makeCommand (process: NodeJS.Process): Command {
   ).addOption(
     new Option(
       '-w, --workspace <workspace...>',
-      'Only include dependencies for a specific workspace. ' +
-      '(can be set multiple times)' +
+      'Only include dependencies for specific workspaces.' +
+      ' (can be set multiple times)' +
       '\nThis feature is experimental.'
     ).default([], 'empty')
   ).addOption(

@@ -88,7 +88,7 @@ Options:
   --omit <type...>                Dependency types to omit from the installation tree.
                                   (can be set multiple times)
                                   (choices: "dev", "optional", "peer", default: "dev" if the NODE_ENV environment variable is set to "production", otherwise empty)
-  -w, --workspace <workspace...>  Only include dependencies for a specific workspace.
+  -w, --workspace <workspace...>  Only include dependencies for specific workspaces.
                                   (can be set multiple times)
                                   This feature is experimental.
                                   (default: empty)
