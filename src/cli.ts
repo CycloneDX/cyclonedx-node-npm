@@ -94,38 +94,40 @@ function makeCommand (process: NodeJS.Process): Command {
     new Option(
       '-w, --workspace <workspace...>',
       'Only include dependencies for a specific workspace. ' +
-      '(can be set multiple times)\n' +
-      'This feature is experimental.'
+      '(can be set multiple times)' +
+      '\nThis feature is experimental.'
     ).default([], 'empty')
   ).addOption(
     new Option(
       '--no-workspaces',
       'Do not include dependencies for workspaces.\n' +
       'Default behaviour is to include dependencies for all configured workspaces.\n' +
-      'This can not be used if workspaces have been explicitly defined using `-w` or `--workspace`\n' +
-      'This feature is experimental.'
-    ).default(undefined).conflicts('workspace')
+      'This cannot be used if workspaces have been explicitly defined using `--workspace`.' +
+      '\nThis feature is experimental.'
+    ).default(
+      undefined
+    ).conflicts('workspace')
   ).addOption(
     new Option(
       '--include-workspace-root',
-      'Include workspace root dependencies along with explicitly defined workspaces\' dependencies. ' +
-      'This can only be used if you have explicitly defined workspaces using `-w` or `--workspace`.\n' +
-      'Default behaviour is to not include the workspace root when workspaces are excplicitly defined using `-w` or `--workspace`.\n' +
-      'This feature is experimental.'
+      "Include workspace root dependencies along with explicitly defined workspaces' dependencies. " +
+      'This can only be used if you have explicitly defined workspaces using `--workspace`.\n' +
+      'Default behaviour is to not include the workspace root when workspaces are explicitly defined using `--workspace`.' +
+      '\nThis feature is experimental.'
     ).default(undefined)
   ).addOption(
     new Option(
       '--no-include-workspace-root',
-      'Do not include workspace root dependencies. This only has an effect if you have one or more workspaces configured in your project.\n' +
-      'This is useful if you want to include all dependencies for all workspaces without explicitly defining them with `-w` or `--workspace` (default behaviour) but ' +
-      'you do not want the workspace root dependencies included.\n' +
-      'This feature is experimental.'
+      'Do not include workspace root dependencies. ' +
+      'This only has an effect if you have one or more workspaces configured in your project.\n' +
+      'This is useful if you want to include all dependencies for all workspaces without explicitly defining them with `--workspace` (default behaviour) but you do not want the workspace root dependencies included.' +
+      '\nThis feature is experimental.'
     ).default(undefined)
   ).addOption(
     new Option(
       '--gather-license-texts',
-      'Search for license files in components and include them as license evidence.\n' +
-      'This feature is experimental.'
+      'Search for license files in components and include them as license evidence.' +
+      '\nThis feature is experimental.'
     ).default(false)
   ).addOption(
     new Option(
@@ -185,7 +187,7 @@ function makeCommand (process: NodeJS.Process): Command {
   ).addOption(
     new Option(
       '--validate',
-      'Validate resulting BOM before outputting. ' +
+      'Validate resulting BOM before outputting.\n' +
       'Validation is skipped, if requirements not met. See the README.'
     ).default(undefined)
   ).addOption(
@@ -210,7 +212,8 @@ function makeCommand (process: NodeJS.Process): Command {
   ).addOption(
     new Option(
       '-v, --verbose',
-      'Increase the verbosity of messages. Use multiple times to increase the verbosity even more.'
+      'Increase the verbosity of messages.\n' +
+      'Use multiple times to increase the verbosity even more.'
     ).argParser<number>(
       function (_: any, previous: number): number {
         return previous + 1
