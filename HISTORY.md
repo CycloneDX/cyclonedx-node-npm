@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Added
+  * Functionality for workspaces ([#1126] via [#1212])  
+    This introduces new CLI options/switches: `--workspace`, `--no-workspaces`, `--include-workspace-root`.
+    See the docs for details.
+
+[#1126]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1126
+[#1212]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1212
+
 ## 2.0.0 - 2025-01-27
 
 * BREAKING Changes
