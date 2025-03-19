@@ -34,20 +34,38 @@
   ],
   "author": {
     "name": "Jan Kowalleck",
-    "email": "jan.kowalleck@gmail.com"
+    "url": "https://github.com/jkowalleck"
   },
   "contributors": [
     {
       "name": "Jan Kowalleck",
-      "email": "jan.kowalleck@gmail.com"
+      "url": "https://github.com/jkowalleck"
     },
     {
       "name": "Alex Miller",
-      "email": "codex.nz@gmail.com"
+      "email": "codex.nz@gmail.com",
+      "uwl": "https://github.com/Codex-"
     },
     {
       "name": "Malick Burger",
-      "email": "malickjackburger@gmail.com"
+      "email": "malickjackburger@gmail.com",
+      "url": "https://github.com/MalickBurger"
+    },
+    {
+      "name": "Igor Dimitrijevic",
+      "url": "https://github.com/igord"
+    },
+    {
+      "name": "Arthur Lutz",
+      "url": "https://github.com/arthurlutz"
+    },
+    {
+      "name": "Joona Heinikoski",
+      "url": "https://github.com/joonamo"
+    },
+    {
+      "name": "cuhland",
+      "url": "https://github.com/cuhland"
     }
   ],
   "dependencies": {
