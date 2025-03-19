@@ -251,6 +251,17 @@ export async function run (process: NodeJS.Process): Promise<number> {
   const myConsole = makeConsoleLogger(process, options.verbose)
   myConsole.debug('DEBUG | options: %j', options)
 
+  // Commander will default this option to true as there
+  // is no positive boolean parameter (we define --no-workspaces but
+  // no --workspaces).
+  if (options.workspaces === true) {
+    options.workspaces = undefined
+  }
+
+  if (options.includeWorkspaceRoot === true && options.workspace.length === 0) {
+    throw new Error("option '--include-workspace-root' cannot be used without option '-w, --workspace <workspace...>'")
+  }
+
   const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
   if (!existsSync(packageFile)) {
     throw new Error(`missing project's manifest file: ${packageFile}`)
@@ -273,17 +284,6 @@ export async function run (process: NodeJS.Process): Promise<number> {
       myConsole.error('ERROR | No evidence: no `node_modules` dir')
     }
     throw new Error('missing evidence')
-  }
-
-  // Commander will default this option to true as there
-  // is no positive boolean parameter (we define --no-workspaces but
-  // no --workspaces).
-  if (options.workspaces === true) {
-    options.workspaces = undefined
-  }
-
-  if (options.includeWorkspaceRoot === true && options.workspace.length === 0) {
-    throw new Error("option '--include-workspace-root' cannot be used without option '-w, --workspace <workspace...>'")
   }
 
   myConsole.log('LOG   | gathering BOM data ...')
