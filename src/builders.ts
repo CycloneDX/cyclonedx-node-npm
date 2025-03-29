@@ -27,8 +27,7 @@ import {
   isString,
   loadJsonFile,
   structuredClonePolyfill,
-  tryRemoveSecretsFromUrl,
-  versionCompare
+  tryRemoveSecretsFromUrl
 } from './_helpers'
 import { PropertyNames, PropertyValueBool } from './cdx'
 import { makeNpmRunner, type runFunc } from './npmRunner'
@@ -137,7 +136,6 @@ export class BomBuilder {
     const npmRunner = makeNpmRunner(process_, this.console)
 
     const npmVersionR = this.getNpmVersion(npmRunner, process_)
-    const npmVersionT = this.versionTuple(npmVersionR)
 
     const args: string[] = [
       'ls',
@@ -153,25 +151,9 @@ export class BomBuilder {
       args.push('--package-lock-only')
     }
 
-    if (versionCompare(npmVersionT, [8, 7]) >= 0) {
-      // since NPM v8.7 -- https://github.com/npm/cli/pull/4744
-      for (const odt of this.omitDependencyTypes) {
-        args.push(`--omit=${odt}`)
-      }
-    } else {
-      // see https://github.com/npm/cli/pull/4744
-      for (const odt of this.omitDependencyTypes) {
-        switch (odt) {
-          case 'dev':
-            this.console.warn('WARN  | your NPM does not support "--omit=%s", internally using "--production" to mitigate', odt)
-            args.push('--production')
-            break
-          case 'peer':
-          case 'optional':
-            this.console.warn('WARN  | your NPM does not support "--omit=%s", internally skipped this option', odt)
-            break
-        }
-      }
+    // since NPM v8.7 -- https://github.com/npm/cli/pull/4744
+    for (const odt of this.omitDependencyTypes) {
+      args.push(`--omit=${odt}`)
     }
 
     for (const workspace of this.workspace) {

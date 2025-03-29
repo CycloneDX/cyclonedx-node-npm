@@ -244,6 +244,8 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
 export async function run (process: NodeJS.Process): Promise<number> {
   process.title = 'cyclonedx-node-npm'
 
+  // TODO test for NPM version, and error if not in supported range -- and write a test for this
+
   const program = makeCommand(process)
   program.parse(process.argv)
 

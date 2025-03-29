@@ -35,7 +35,6 @@ describe('integration.cli.args-pass-through', () => {
 
     const rMinor = Math.round(99 * Math.random())
     const rPatch = Math.round(99 * Math.random())
-    const le6 = Math.round(6 * Math.random())
     const ge7 = 7 + Math.round(92 * Math.random())
 
     const npmArgsGeneral = ['--json', '--long']
@@ -52,7 +51,6 @@ describe('integration.cli.args-pass-through', () => {
       ['basic npm 11', `11.${rMinor}.${rPatch}`, [], npm11ArgsGeneral],
       // endregion basic
       // region omit
-      ['omit everything npm lower 8.7', `8.${le6}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm8ArgsGeneral, '--production']],
       ['omit everything npm greater-equal 8.7', `8.${ge7}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm8ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
       ['omit everything npm 9', `9.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm9ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
       ['omit everything npm 10', `10.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm10ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],

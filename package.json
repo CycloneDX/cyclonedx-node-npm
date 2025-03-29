@@ -93,7 +93,7 @@
   "type": "commonjs",
   "engines": {
     "node": ">=20.18.0",
-    "npm": ">=8"
+    "npm": ">=8.7"
   },
   "directories": {
     "doc": "docs",
