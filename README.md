@@ -25,7 +25,7 @@ and might have properties following [`cdx:npm` Namespace Taxonomy](https://githu
 ## Requirements
 
 * `node` >= `20.18.0`
-* `npm` in range `6 - 11`
+* `npm` in range `8 - 11`
 
 However, there are older versions that support 
 * Node.js v14 or later
