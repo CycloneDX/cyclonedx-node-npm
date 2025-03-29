@@ -19,7 +19,7 @@ jobs:
       fail-fast: false # gather all the results !
       matrix:
         subject:
-          # - deps-from-git
+          - deps-from-git
           # - alternative-package-registry
           # - bundled-dependencies
           # - dev-dependencies
