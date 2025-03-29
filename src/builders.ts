@@ -146,17 +146,11 @@ export class BomBuilder {
       // get all the needed content
       '--long',
       // depth = infinity
-      npmVersionT[0] >= 7
-        ? '--all'
-        : '--depth=255'
+      '--all'
     ]
 
     if (this.packageLockOnly) {
-      if (npmVersionT[0] >= 7) {
-        args.push('--package-lock-only')
-      } else {
-        this.console.warn('WARN  | your NPM does not support "--package-lock-only", internally skipped this option')
-      }
+      args.push('--package-lock-only')
     }
 
     if (versionCompare(npmVersionT, [8, 7]) >= 0) {
@@ -180,24 +174,14 @@ export class BomBuilder {
       }
     }
 
-    // Although some workspace functionality is supported by npm 7 it is inconsistent with later versions. In order
-    // to provide a consistent and intuitive experience to users we do not support workspace functionality before npm 8.
-    if (npmVersionT[0] <= 7) {
-      if (this.workspace.length > 0 || this.workspaces !== undefined || this.includeWorkspaceRoot !== undefined) {
-        this.console.warn('WARN  | your NPM does not fully support workspaces functionality, internally skipping workspace related options')
-      }
-    } else {
-      for (const workspace of this.workspace) {
-        args.push(`--workspace=${workspace}`)
-      }
-
-      if (this.includeWorkspaceRoot !== undefined) {
-        args.push(`--include-workspace-root=${this.includeWorkspaceRoot}`)
-      }
-
-      if (this.workspaces !== undefined) {
-        args.push(`--workspaces=${this.workspaces}`)
-      }
+    for (const workspace of this.workspace) {
+      args.push(`--workspace=${workspace}`)
+    }
+    if (this.includeWorkspaceRoot !== undefined) {
+      args.push(`--include-workspace-root=${this.includeWorkspaceRoot}`)
+    }
+    if (this.workspaces !== undefined) {
+      args.push(`--workspaces=${this.workspaces}`)
     }
 
     this.console.info('INFO  | gathering dependency tree ...')
@@ -450,15 +434,13 @@ export class BomBuilder {
   private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
   private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | false | undefined {
-    // older npm-ls versions (v6) hide properties behind a `_`
-    const isOptional = (data.optional ?? data._optional) === true
+    const isOptional = data.optional === true
     if (isOptional && this.omitDependencyTypes.has('optional')) {
       this.console.debug('DEBUG | omit optional component: %j %j', data.name, data._id)
       return false
     }
 
-    // older npm-ls versions (v6) hide properties behind a `_`
-    const isDev = (data.dev ?? data._development) === true
+    const isDev = data.dev === true
     if (isDev && this.omitDependencyTypes.has('dev')) {
       this.console.debug('DEBUG | omit dev component: %j %j', data.name, data._id)
       return false
@@ -540,8 +522,7 @@ export class BomBuilder {
         new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
       )
     }
-    // older npm-ls versions (v6) hide properties behind a `_`
-    if ((data.inBundle ?? data._inBundle) === true) {
+    if (data.inBundle === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
       )
@@ -549,12 +530,10 @@ export class BomBuilder {
 
     // endregion properties
 
-    // older npm-ls versions (v6) hide properties behind a `_`
-    const resolved = data.resolved ?? data._resolved
+    const resolved = data.resolved
     if (isString(resolved) && !this.resolvedRE_ignore.test(resolved)) {
       const hashes = new Models.HashDictionary()
-      // older npm-ls versions (v6) hide properties behind a `_`
-      const integrity = data.integrity ?? data._integrity
+      const integrity = data.integrity
       if (isString(integrity)) {
         for (const [hashAlgorithm, hashRE] of this.integrityRE) {
           const hashMatchBase64 = hashRE.exec(integrity) ?? []
