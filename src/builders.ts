@@ -643,8 +643,8 @@ export class BomBuilder {
 
   readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
 
-  private * fetchLicenseEvidence (filePath: string): Generator<Models.License | null, void, void> {
-    const files = readdirSync(filePath)
+  private * fetchLicenseEvidence (dirPath: string): Generator<Models.License | null, void, void> {
+    const files = readdirSync(dirPath)
     for (const file of files) {
       if (!this.#LICENSE_FILENAME_PATTERN.test(file)) {
         continue
@@ -655,7 +655,7 @@ export class BomBuilder {
         continue
       }
 
-      const fp = path.join(filePath, file)
+      const fp = path.join(dirPath, file)
       yield new Models.NamedLicense(
         `file: ${file}`,
         {
