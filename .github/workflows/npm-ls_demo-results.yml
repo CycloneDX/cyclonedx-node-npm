@@ -66,12 +66,12 @@ jobs:
           - # our specific version of juice-shop might not be node22 compatible
             subject: juice-shop
             node-version: '22'
-          - # our specific version of juice-shop might not be npm6 compatible
-            subject: juice-shop
-            npm-version: '6'
-          - # workspaces are a feature of NPM since 7.0
-            subject: local-workspaces
-            npm-version: '6'
+          - # git-foo seams bugged in windows
+            subject: deps-from-git
+            os: windows-latest
+          - # git-foo seams bugged in macos
+            subject: deps-from-git
+            os: macos-latest
     timeout-minutes: 10 # this is a large matrix, just don't waste time!
     steps:
       - name: Checkout
