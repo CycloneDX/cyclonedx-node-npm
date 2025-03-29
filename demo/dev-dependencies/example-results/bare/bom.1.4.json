@@ -7,12 +7,12 @@
     "tools": [
       {
         "name": "npm",
-        "version": "9.4.2"
+        "version": "10.9.2"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.11.0",
+        "version": "7.1.0",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
@@ -34,7 +34,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.19.3",
+        "version": "2.1.0",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -67,7 +67,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/demo-dev-dependencies@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/dev-dependencies/project",
+      "purl": "pkg:npm/demo-dev-dependencies@0.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-node-npm.git#demo/dev-dependencies/project",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",

@@ -4,12 +4,12 @@
     <tools>
       <tool>
         <name>npm</name>
-        <version>9.4.2</version>
+        <version>10.9.2</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>6.11.0</version>
+        <version>7.1.0</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
@@ -28,7 +28,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.19.3</version>
+        <version>2.1.0</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
@@ -55,7 +55,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/juice-shop@14.1.1?vcs_url=git%2Bhttps%3A//github.com/juice-shop/juice-shop.git</purl>
+      <purl>pkg:npm/juice-shop@14.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjuice-shop%2Fjuice-shop.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/juice-shop/juice-shop/issues</url>
