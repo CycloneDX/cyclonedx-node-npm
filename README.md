@@ -24,10 +24,10 @@ and might have properties following [`cdx:npm` Namespace Taxonomy](https://githu
 
 ## Requirements
 
-* `node` >= `20.18.0`
-* `npm` in range `8 - 11`
+* `node >= 20.18.0`
+* `npm >= 8`
 
-However, there are older versions that support 
+However, there are older versions of this tool that support
 * Node.js v14 or later
 * NPM v6 or later
 
