@@ -2,48 +2,64 @@
 <bom xmlns="http://cyclonedx.org/schema/bom/1.5" version="1">
   <metadata>
     <tools>
-      <tool>
-        <name>npm</name>
-        <version>9.4.2</version>
-      </tool>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>cyclonedx-library</name>
-        <version>6.11.0</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>cyclonedx-npm</name>
-        <version>1.19.3</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
+      <components>
+        <component type="application">
+          <name>npm</name>
+          <version>10.9.2</version>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>cyclonedx-library</name>
+          <version>7.1.0</version>
+          <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+        <component type="application">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>cyclonedx-npm</name>
+          <version>2.1.0</version>
+          <description>Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
     </tools>
     <component type="application" bom-ref="demo-workspaces@0.0.0">
       <name>demo-workspaces</name>
@@ -54,7 +70,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/demo-workspaces@0.0.0?vcs_url=git%2Bssh%3A//git%40gitlab.example.com/my-packages/demo-workspaces.git</purl>
+      <purl>pkg:npm/demo-workspaces@0.0.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40gitlab.example.com%2Fmy-packages%2Fdemo-workspaces.git</purl>
       <externalReferences>
         <reference type="vcs">
           <url>git+ssh://git@gitlab.example.com/my-packages/demo-workspaces.git</url>
@@ -77,7 +93,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-a@0.1.0?vcs_url=git%2Bhttps%3A//gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local-c</purl>
+      <purl>pkg:npm/my-local-a@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.example.com%2Fmy-packages%2Fdemo-workspaces.git#workspaces/my-local-c</purl>
       <externalReferences>
         <reference type="vcs">
           <url>git+https://gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local-c</url>
@@ -98,7 +114,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-b-off@0.0.0?vcs_url=https%3A//gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local-b</purl>
+      <purl>pkg:npm/my-local-b-off@0.0.0?vcs_url=https%3A%2F%2Fgitlab.example.com%2Fmy-packages%2Fdemo-workspaces.git#workspaces/my-local-b</purl>
       <externalReferences>
         <reference type="vcs">
           <url>https://gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local-b</url>
@@ -119,7 +135,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-c@0.23.42?vcs_url=git%2Bssh%3A//git%40gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local</purl>
+      <purl>pkg:npm/my-local-c@0.23.42?vcs_url=git%2Bssh%3A%2F%2Fgit%40gitlab.example.com%2Fmy-packages%2Fdemo-workspaces.git#workspaces/my-local</purl>
       <externalReferences>
         <reference type="vcs">
           <url>git+ssh://git@gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local</url>
@@ -140,7 +156,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-e@0.1.0?vcs_url=git%2Bhttps%3A//gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local-e</purl>
+      <purl>pkg:npm/my-local-e@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.example.com%2Fmy-packages%2Fdemo-workspaces.git#workspaces/my-local-e</purl>
       <externalReferences>
         <reference type="vcs">
           <url>git+https://gitlab.example.com/my-packages/demo-workspaces.git#workspaces/my-local-e</url>

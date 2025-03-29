@@ -7,12 +7,12 @@
     "tools": [
       {
         "name": "npm",
-        "version": "9.4.2"
+        "version": "10.9.2"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.11.0",
+        "version": "7.1.0",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
@@ -34,7 +34,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.19.3",
+        "version": "2.1.0",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -67,7 +67,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/demo-local-deps@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-dependencies/project",
+      "purl": "pkg:npm/demo-local-deps@0.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-node-npm.git#demo/local-dependencies/project",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -111,7 +111,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-a@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
+      "purl": "pkg:npm/my-local-a@0.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -153,7 +153,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-dependencies/project/packages/my-local-b",
+      "purl": "pkg:npm/my-local-b-off@0.0.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-node-npm.git#demo/local-dependencies/project/packages/my-local-b",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -195,7 +195,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-noname@0.0.0?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-dependencies/project/packages/my-noname",
+      "purl": "pkg:npm/my-noname@0.0.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-node-npm.git#demo/local-dependencies/project/packages/my-noname",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",

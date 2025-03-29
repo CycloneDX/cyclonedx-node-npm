@@ -81,16 +81,14 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '22'      # Current
-          - '20'      # active LTS
-          - '18'
-          - '16'
-          - '14'
-          - '14.0.0'  # lowest supported
+          - '23'      # Current
+          - '22'      # active LTS
+          - '20'
+          - '20.18.0' # lowest supported
         os:
           - ubuntu-latest
           - windows-latest
-          - macos-13 # macos-latest has issues with node14
+          - macos-latest
     timeout-minutes: 15
     steps:
       - name: Checkout
@@ -108,28 +106,9 @@ jobs:
         shell: bash
         run: |
           set -ex
-          dep_constraints=''
-          dev_requirements='jest jest-junit imurmurhash fast-glob'
-          # as long as npm cannot auto-resolve engine-constraints, we need to help here
-          case '${{ matrix.node-version }}' in
-            '14')
-              dep_constraints='normalize-package-data@^5'
-              ;;
-            '14.0.0')
-              dep_constraints='normalize-package-data@^3'
-              dev_requirements='jest@^26 jest-junit imurmurhash fast-glob'
-              ;;
-          esac
-          ## !! dont install all the dev-packages, especially since some are not runnable on node 14.0.0
-          if [[ -n "$dep_constraints" ]]
-          then
-            npm add --ignore-scripts --omit=dev --only=prod --production --loglevel=silly --save $dep_constraints
-          fi
-          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
+          npm i --ignore-scripts --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
-          ## install the needed dev-deps
-          npm i --ignore-scripts --loglevel=silly --no-save $dev_requirements
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
@@ -180,19 +159,13 @@ jobs:
             node-version: '^22.9'
           - npm-version: '^10'
             ## "node": "^18.17.0 || >=20.5.0"
-            node-version: '^20.5'
+            node-version: '^20.18'
           - npm-version: '^9'
             ## "node": "^14.17.0 || ^16.13.0 || >=18.0.0"
-            node-version: '^18'
+            node-version: '^20.18'
           - npm-version: '^8'
             ## "node": "^12.13.0 || ^14.15.0 || >=16"
             # node-version: '^16' ## cannot pin due to https://github.com/npm/cli/issues/6743
-          - npm-version: '^7'
-            ## "node": ">=10"
-            # node-version: '^14'  ## cannot pin due to https://github.com/npm/cli/issues/6743
-          - npm-version: '^6'
-            ## "node": "6 >=6.2.0 || 8 || >=9.3.0"
-            # node-version: '^14'  ## cannot pin due to https://github.com/npm/cli/issues/6743
     env:
       npm_config_engine_strict: true
     timeout-minutes: 10

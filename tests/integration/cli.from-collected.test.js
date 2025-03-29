@@ -24,7 +24,7 @@ const { describe, expect, test } = require('@jest/globals')
 
 const { index: indexNpmLsDemoData } = require('../_data/npm-ls_demo-results')
 const { makeReproducible } = require('../_helper')
-const { UPDATE_SNAPSHOTS, mkTemp, dummyProjectsRoot, runCLI, latestCdxSpecVersion, demoResultsRoot, npmLsReplacement } = require('./')
+const { UPDATE_SNAPSHOTS, NPM_LOWEST_SUPPORTED, mkTemp, dummyProjectsRoot, runCLI, latestCdxSpecVersion, demoResultsRoot, npmLsReplacement } = require('./')
 
 describe('integration.cli.from-collected', () => {
   const cliRunTestTimeout = 15000
@@ -32,8 +32,6 @@ describe('integration.cli.from-collected', () => {
   const tmpRoot = mkTemp('cli.from-collected')
 
   describe('with prepared npm-ls', () => {
-    const LATETS_NPM = '11'
-
     const tmpRootRun = join(tmpRoot, 'with-prepared')
     mkdirSync(tmpRootRun)
 
@@ -48,7 +46,7 @@ describe('integration.cli.from-collected', () => {
         subject: 'flatten-components',
         args: ['--flatten-components'],
         demoCases: _allDemoCases.filter((c) => {
-          if (c.npm !== LATETS_NPM) { return false }
+          if (c.npm !== NPM_LOWEST_SUPPORTED) { return false }
           if (c.subject === 'juice-shop') { return true }
           if (c.subject === 'bundled-dependencies') { return true }
           return false

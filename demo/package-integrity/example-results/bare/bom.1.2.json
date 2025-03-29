@@ -7,17 +7,17 @@
     "tools": [
       {
         "name": "npm",
-        "version": "9.4.2"
+        "version": "10.9.2"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.11.0"
+        "version": "7.1.0"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.19.3"
+        "version": "2.1.0"
       }
     ],
     "component": {
@@ -26,7 +26,7 @@
       "version": "",
       "bom-ref": "-/demo-package-integrity@-",
       "description": "demo: package-integrity -- packages with different integrity information.",
-      "purl": "pkg:npm/demo-package-integrity?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git",
+      "purl": "pkg:npm/demo-package-integrity?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-node-npm.git",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",

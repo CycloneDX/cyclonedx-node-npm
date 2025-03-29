@@ -7,17 +7,17 @@
     "tools": [
       {
         "name": "npm",
-        "version": "9.4.2"
+        "version": "10.9.2"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.11.0"
+        "version": "7.1.0"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.19.3"
+        "version": "2.1.0"
       }
     ],
     "component": {
@@ -34,7 +34,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/juice-shop@14.1.1?vcs_url=git%2Bhttps%3A//github.com/juice-shop/juice-shop.git",
+      "purl": "pkg:npm/juice-shop@14.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjuice-shop%2Fjuice-shop.git",
       "externalReferences": [
         {
           "url": "https://github.com/juice-shop/juice-shop/issues",

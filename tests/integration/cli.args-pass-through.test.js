@@ -39,8 +39,6 @@ describe('integration.cli.args-pass-through', () => {
     const ge7 = 7 + Math.round(92 * Math.random())
 
     const npmArgsGeneral = ['--json', '--long']
-    const npm6ArgsGeneral = [...npmArgsGeneral, '--depth=255']
-    const npm7ArgsGeneral = [...npmArgsGeneral, '--all']
     const npm8ArgsGeneral = [...npmArgsGeneral, '--all']
     const npm9ArgsGeneral = [...npmArgsGeneral, '--all']
     const npm10ArgsGeneral = [...npmArgsGeneral, '--all']
@@ -48,16 +46,12 @@ describe('integration.cli.args-pass-through', () => {
 
     test.each([
       // region basic
-      ['basic npm 6', `6.${rMinor}.${rPatch}`, [], npm6ArgsGeneral],
-      ['basic npm 7', `7.${rMinor}.${rPatch}`, [], npm7ArgsGeneral],
       ['basic npm 8', `8.${rMinor}.${rPatch}`, [], npm8ArgsGeneral],
       ['basic npm 9', `9.${rMinor}.${rPatch}`, [], npm9ArgsGeneral],
       ['basic npm 10', `10.${rMinor}.${rPatch}`, [], npm10ArgsGeneral],
       ['basic npm 11', `11.${rMinor}.${rPatch}`, [], npm11ArgsGeneral],
       // endregion basic
       // region omit
-      ['omit everything npm 6', `6.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm6ArgsGeneral, '--production']],
-      ['omit everything npm 7', `7.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm7ArgsGeneral, '--production']],
       ['omit everything npm lower 8.7', `8.${le6}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm8ArgsGeneral, '--production']],
       ['omit everything npm greater-equal 8.7', `8.${ge7}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm8ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
       ['omit everything npm 9', `9.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm9ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
@@ -65,40 +59,30 @@ describe('integration.cli.args-pass-through', () => {
       ['omit everything npm 11', `11.${rMinor}.${rPatch}`, ['--omit', 'dev', 'optional', 'peer'], [...npm11ArgsGeneral, '--omit=dev', '--omit=optional', '--omit=peer']],
       // endregion omit
       // region package-lock-only
-      ['package-lock-only not supported npm 6 ', `6.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm6ArgsGeneral]],
-      ['package-lock-only npm 7', `7.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm7ArgsGeneral, '--package-lock-only']],
       ['package-lock-only npm 8', `8.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm8ArgsGeneral, '--package-lock-only']],
       ['package-lock-only npm 9', `9.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm9ArgsGeneral, '--package-lock-only']],
       ['package-lock-only npm 10', `10.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm10ArgsGeneral, '--package-lock-only']],
       ['package-lock-only npm 11', `11.${rMinor}.${rPatch}`, ['--package-lock-only'], [...npm11ArgsGeneral, '--package-lock-only']],
       // endregion package-lock-only
       // region workspace
-      ['workspace not supported npm 6', `6.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm6ArgsGeneral]],
-      ['workspace not supported npm 7', `7.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm7ArgsGeneral]],
       ['workspace npm 8', `8.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm8ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
       ['workspace npm 9', `9.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm9ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
       ['workspace npm 10', `10.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm10ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
       ['workspace npm 11', `11.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB'], [...npm11ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB']],
       // endregion workspace
       // region include-workspace-root
-      ['workspace root not supported npm 6', `6.${rMinor}.${rPatch}`, ['-w', 'my-wsA', '--include-workspace-root'], [...npm6ArgsGeneral]],
-      ['workspace root not supported npm 7', `7.${rMinor}.${rPatch}`, ['-w', 'my-wsA', '--include-workspace-root'], [...npm7ArgsGeneral]],
       ['workspace root npm 8', `8.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm8ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
       ['workspace root npm 9', `9.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm9ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
       ['workspace root npm 10', `10.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm10ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
       ['workspace root npm 11', `11.${rMinor}.${rPatch}`, ['--workspace', 'my-wsA', '-w', 'my-wsB', '--include-workspace-root'], [...npm11ArgsGeneral, '--workspace=my-wsA', '--workspace=my-wsB', '--include-workspace-root=true']],
       // endregion include-workspace-root
       // region no-include-workspace-root
-      ['no workspace root not supported npm 6', `6.${rMinor}.${rPatch}`, ['--no-include-workspace-root'], [...npm6ArgsGeneral]],
-      ['no workspace root not supported npm 7', `7.${rMinor}.${rPatch}`, ['--no-include-workspace-root'], [...npm7ArgsGeneral]],
       ['no workspace root npm 8', `8.${rMinor}.${rPatch}`, ['--no-include-workspace-root'], [...npm8ArgsGeneral, '--include-workspace-root=false']],
       ['no workspace root npm 9', `9.${rMinor}.${rPatch}`, ['--no-include-workspace-root'], [...npm9ArgsGeneral, '--include-workspace-root=false']],
       ['no workspace root npm 10', `10.${rMinor}.${rPatch}`, ['--no-include-workspace-root'], [...npm10ArgsGeneral, '--include-workspace-root=false']],
       ['no workspace root npm 11', `11.${rMinor}.${rPatch}`, ['--no-include-workspace-root'], [...npm11ArgsGeneral, '--include-workspace-root=false']],
       // endregion no-include-workspace-root
       // region no-workspaces
-      ['no workspaces not supported npm 6', `6.${rMinor}.${rPatch}`, ['--no-workspaces'], [...npm6ArgsGeneral]],
-      ['no workspaces not supported npm 7', `7.${rMinor}.${rPatch}`, ['--no-workspaces'], [...npm7ArgsGeneral]],
       ['workspaces npm 8', `8.${rMinor}.${rPatch}`, ['--no-workspaces'], [...npm8ArgsGeneral, '--workspaces=false']],
       ['workspaces npm 9', `9.${rMinor}.${rPatch}`, ['--no-workspaces'], [...npm9ArgsGeneral, '--workspaces=false']],
       ['workspaces npm 10', `10.${rMinor}.${rPatch}`, ['--no-workspaces'], [...npm10ArgsGeneral, '--workspaces=false']],
