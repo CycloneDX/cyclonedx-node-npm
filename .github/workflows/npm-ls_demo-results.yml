@@ -32,8 +32,8 @@ jobs:
         npm-version:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
           ## see also: https://github.com/npm/cli/releases
-          - '11'     # Current
-          - '10'
+          #- '11'     # Current
+          #- '10'
           - '9'
           - '8'      # Lowest supported
         node-version:
