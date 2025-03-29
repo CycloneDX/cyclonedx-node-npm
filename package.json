@@ -92,7 +92,7 @@
   },
   "type": "commonjs",
   "engines": {
-    "node": ">=14",
+    "node": ">=20.18.0",
     "npm": "6 - 11"
   },
   "directories": {
