@@ -19,9 +19,8 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
 import { existsSync, readdirSync, readFileSync } from 'fs'
-import * as normalizePackageData from 'normalize-package-data'
-import * as path from 'path'
-import { join } from 'path'
+import normalizePackageData from 'normalize-package-data'
+import path from 'path'
 
 import {
   getMimeForLicenseFile,
@@ -477,7 +476,6 @@ export class BomBuilder {
     if (!this.packageLockOnly) {
       _dataC = this.enhancedPackageData(_dataC)
     }
-    /* @ts-expect-error TS2349 */
     normalizePackageData(_dataC as normalizePackageData.Input /* add debug for warnings? */)
     // region fix normalizations
     if (isString(data.version)) {
@@ -656,7 +654,6 @@ export class BomBuilder {
 
     for (const [packageJsonPath, cType] of packageJsonPaths) {
       const packageData: object = loadJsonFile(packageJsonPath) ?? {}
-      /* @ts-expect-error TS2349 */
       normalizePackageData(packageData /* add debug for warnings? */)
       const toolC = this.componentBuilder.makeComponent(packageData, cType)
       if (toolC !== undefined) {
@@ -667,8 +664,8 @@ export class BomBuilder {
 
   readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
 
-  private * fetchLicenseEvidence (path: string): Generator<Models.License | null, void, void> {
-    const files = readdirSync(path)
+  private * fetchLicenseEvidence (filePath: string): Generator<Models.License | null, void, void> {
+    const files = readdirSync(filePath)
     for (const file of files) {
       if (!this.#LICENSE_FILENAME_PATTERN.test(file)) {
         continue
@@ -679,7 +676,7 @@ export class BomBuilder {
         continue
       }
 
-      const fp = join(path, file)
+      const fp = path.join(filePath, file)
       yield new Models.NamedLicense(
         `file: ${file}`,
         {
