@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+
+* BREAKING Changes
+  * Dropped support for `node<20.18.0` ([#1192] via [#])
+
+[#1192]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1192
+
 ## 2.1.0 - 2025-03-19
 
 * Added
