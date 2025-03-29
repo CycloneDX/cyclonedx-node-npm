@@ -20,14 +20,14 @@ jobs:
       matrix:
         subject:
           - deps-from-git
-          # - alternative-package-registry
-          # - bundled-dependencies
-          # - dev-dependencies
-          # - juice-shop
-          # - local-dependencies
+          - alternative-package-registry
+          - bundled-dependencies
+          - dev-dependencies
+          - juice-shop
+          - local-dependencies
           - local-workspaces
-          # - package-integrity
-          # - package-with-build-id
+          - package-integrity
+          - package-with-build-id
         additional_npm-ls_args: [ '' ]
         npm-version:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
