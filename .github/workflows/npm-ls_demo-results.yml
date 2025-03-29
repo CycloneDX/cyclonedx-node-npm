@@ -41,11 +41,9 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '22'     # Current
+          - '23'     # Current
+          - '22'
           - '20'     # Active LTS
-          - '18'
-          - '16'
-          - '14'
         os:
           - ubuntu-latest
           - windows-latest
@@ -67,33 +65,9 @@ jobs:
             node-version: '22'  # LTS
             os: ubuntu-latest
         exclude:
-          - # macos-latest no longer supports node14
-            os: macos-latest
-            node-version: '14'
-          - # npm11 requires node ^20.17.0 || >=22.9.0
-            npm-version: '11'
-            node-version: '18'
-          - # npm11 requires node ^20.17.0 || >=22.9.0
-            npm-version: '11'
-            node-version: '16'
-          - # npm11 requires node ^20.17.0 || >=22.9.0
-            npm-version: '11'
-            node-version: '14'
-          - # npm10 requires node ^18.17.0 || >=20.5.0
-            npm-version: '10'
-            node-version: '16'
-          - # npm10 requires node ^18.17.0 || >=20.5.0
-            npm-version: '10'
-            node-version: '14'
-          - # npm9 upgrade/install failed on node14
-            npm-version: '9'
-            node-version: '14'
           - # our specific version of juice-shop might not be node22 compatible
             subject: juice-shop
             node-version: '22'
-          - # our specific version of juice-shop might not be node14 compatible
-            subject: juice-shop
-            node-version: '14'
           - # our specific version of juice-shop might not be npm6 compatible
             subject: juice-shop
             npm-version: '6'
