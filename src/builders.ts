@@ -234,7 +234,6 @@ export class BomBuilder {
         npmVersionR
       ]
     } catch (jsonParseError) {
-      /* @ts-expect-error TS2554 */
       throw new Error('failed to parse npm-ls response', { cause: jsonParseError })
     }
   }
@@ -478,6 +477,7 @@ export class BomBuilder {
     if (!this.packageLockOnly) {
       _dataC = this.enhancedPackageData(_dataC)
     }
+    /* @ts-expect-error TS2349 */
     normalizePackageData(_dataC as normalizePackageData.Input /* add debug for warnings? */)
     // region fix normalizations
     if (isString(data.version)) {
@@ -656,6 +656,7 @@ export class BomBuilder {
 
     for (const [packageJsonPath, cType] of packageJsonPaths) {
       const packageData: object = loadJsonFile(packageJsonPath) ?? {}
+      /* @ts-expect-error TS2349 */
       normalizePackageData(packageData /* add debug for warnings? */)
       const toolC = this.componentBuilder.makeComponent(packageData, cType)
       if (toolC !== undefined) {
