@@ -33,11 +33,11 @@ jobs:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
           ## see also: https://github.com/npm/cli/releases
           - '11'     # Current
-          #- '10'     # Legacy
-          #- '9'      # Legacy
-          #- '8'      # Legacy
-          #- '7'      # Legacy
-          #- '6'      # Legacy
+          - '10'     # Legacy
+          - '9'      # Legacy
+          - '8'      # Legacy
+          - '7'      # Legacy
+          - '6'      # Legacy
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
