@@ -40,6 +40,8 @@ describe('integration.cli.edge-cases', () => {
 
   const tmpRoot = mkTemp('cli.edge_cases')
 
+  // TODO test fail with unsupported version
+
   describe('broken project', () => {
     const tmpRootRun = join(tmpRoot, 'broken-project')
     mkdirSync(tmpRootRun)

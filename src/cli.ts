@@ -261,8 +261,8 @@ export async function run (process: NodeJS.Process): Promise<number> {
     maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
   }).toString().trim())
   if (versionCompare(npmVersion, npmMinVersion) < 0) {
-    throw new Error(
-      `expected NPM version ${npmMinVersion.join('.')}, found ${npmVersion.join('.')}`)
+    throw new RangeError('Unsupported NPM version. ' +
+      `Expected >= ${npmMinVersion.join('.')}, got ${npmVersion.join('.')}`)
   }
   myConsole.debug('DEBUG | found NPM version %j', npmVersion)
 
