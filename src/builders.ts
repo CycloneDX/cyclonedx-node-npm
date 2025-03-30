@@ -103,10 +103,6 @@ export class BomBuilder {
     )
   }
 
-  private versionTuple (value: string): number[] {
-    return value.split('.').map(v => Number(v))
-  }
-
   private getNpmVersion (npmRunner: runFunc, process_: NodeJS.Process): string {
     let version: string
     this.console.info('INFO  | detecting NPM version ...')

@@ -22,9 +22,10 @@ import { Argument, Command, Option } from 'commander'
 import { existsSync, mkdirSync, openSync } from 'fs'
 import { dirname, resolve } from 'path'
 
-import { loadJsonFile, writeAllSync } from './_helpers'
+import { loadJsonFile, versionCompare, versionTuple, writeAllSync } from './_helpers'
 import { BomBuilder, TreeBuilder } from './builders'
 import { makeConsoleLogger } from './logger'
+import { makeNpmRunner } from './npmRunner'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -241,10 +242,10 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
   INVALID: 2
 })
 
+const npmMinVersion = [8, 7]
+
 export async function run (process: NodeJS.Process): Promise<number> {
   process.title = 'cyclonedx-node-npm'
-
-  // TODO test for NPM version, and error if not in supported range -- and write a test for this
 
   const program = makeCommand(process)
   program.parse(process.argv)
@@ -252,6 +253,18 @@ export async function run (process: NodeJS.Process): Promise<number> {
   const options: CommandOptions = program.opts()
   const myConsole = makeConsoleLogger(process, options.verbose)
   myConsole.debug('DEBUG | options: %j', options)
+
+  const npmRunner = makeNpmRunner(process, myConsole)
+  const npmVersion = versionTuple(npmRunner(['--version'], {
+    env: process.env,
+    encoding: 'buffer',
+    maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
+  }).toString().trim())
+  if (versionCompare(npmVersion, npmMinVersion) < 0) {
+    throw new Error(
+      `expected NPM version ${npmMinVersion.join('.')}, found ${npmVersion.join('.')}`)
+  }
+  myConsole.debug('DEBUG | found NPM version %j', npmVersion)
 
   // Commander will default this option to true as there
   // is no positive boolean parameter (we define --no-workspaces but
