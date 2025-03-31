@@ -99,8 +99,8 @@ function mkTemp (caseName) {
   return mkdtempSync(join(projectTestRootPath, '_tmp', `CDX-IT-${caseName}.`))
 }
 
-const NPM_LATETS = '11'
-const NPM_LOWEST_SUPPORTED = '8'
+const NPM_LATETS = 11
+const NPM_LOWEST_SUPPORTED = [9, 0, 0]
 
 module.exports = {
   NPM_LATETS,

@@ -46,7 +46,7 @@ describe('integration.cli.from-collected', () => {
         subject: 'flatten-components',
         args: ['--flatten-components'],
         demoCases: _allDemoCases.filter((c) => {
-          if (c.npm !== NPM_LOWEST_SUPPORTED) { return false }
+          if (c.npm !== `${NPM_LOWEST_SUPPORTED[0]}`) { return false }
           if (c.subject === 'juice-shop') { return true }
           if (c.subject === 'bundled-dependencies') { return true }
           return false
