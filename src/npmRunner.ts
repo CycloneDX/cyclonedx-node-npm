@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'child_process'
+import { type CommonExecOptions, execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'child_process'
 import { existsSync } from 'fs'
 import { resolve } from 'path'
 
@@ -51,9 +51,10 @@ export class NpmRunner {
 
   #version: string | undefined
 
-  get version (): string {
+  getVersion (options: CommonExecOptions = {}): string {
     if (this.#version === undefined) {
       this.#version = this.run(['--version'], {
+        ...options,
         encoding: 'buffer',
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
       }).toString().trim()

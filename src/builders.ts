@@ -100,8 +100,11 @@ export class BomBuilder {
     this.console = console_
   }
 
-  buildFromProjectDir (projectDir: string, process: NodeJS.Process): Models.Bom {
-    return this.buildFromNpmLs(this.fetchNpmLs(projectDir, process))
+  buildFromProjectDir (projectDir: string, process_: NodeJS.Process): Models.Bom {
+    return this.buildFromNpmLs(
+      this.fetchNpmLs(projectDir, process_),
+      this.npmRunner.getVersion({ env: process_.env })
+    )
   }
 
   private fetchNpmLs (projectDir: string, process_: NodeJS.Process): any {
@@ -168,7 +171,7 @@ export class BomBuilder {
     }
   }
 
-  buildFromNpmLs (data: any): Models.Bom {
+  buildFromNpmLs (data: any, npmVersion: string): Models.Bom {
     this.console.info('INFO  | building BOM ...')
 
     // region all components & dependencies
@@ -191,7 +194,7 @@ export class BomBuilder {
 
     bom.metadata.tools.components.add(new Models.Component(
       Enums.ComponentType.Application, 'npm', {
-        version: this.npmRunner.version // use the self-proclaimed `version`
+        version: npmVersion
       // omit `group` and `externalReferences`, because we cannot be sure about the used tool's actual origin
       // omit `hashes`, because unfortunately there is no agreed process of generating them
       }))

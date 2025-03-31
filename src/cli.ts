@@ -255,7 +255,7 @@ export async function run (process_: NodeJS.Process): Promise<number> {
   myConsole.debug('DEBUG | options: %j', options)
 
   const npmRunner = new NpmRunner(process_, myConsole)
-  const npmVersion = npmRunner.version
+  const npmVersion = npmRunner.getVersion({ env: process_.env })
   if (versionCompare(versionTuple(npmVersion), npmMinVersion) < 0) {
     throw new RangeError('Unsupported NPM version. ' +
       `Expected >= ${npmMinVersion.join('.')}, got ${npmVersion}`)
