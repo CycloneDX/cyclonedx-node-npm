@@ -49,6 +49,9 @@ const latestCdxSpecVersion = Spec.Version.v1dot6
 
 const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
 
+const NPM_LATETS = 11
+const NPM_LOWEST_SUPPORTED = [9, 0, 0]
+
 /**
  * @param {string[]} args
  * @param {string} logFileBase
@@ -79,6 +82,7 @@ function runCLI (args, logFileBase, cwd, env) {
     ],
     env: {
       ...process.env,
+      CT_VERSION: NPM_LOWEST_SUPPORTED.join('.'),
       ...env
     }
   }
@@ -98,9 +102,6 @@ const cliWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
 function mkTemp (caseName) {
   return mkdtempSync(join(projectTestRootPath, '_tmp', `CDX-IT-${caseName}.`))
 }
-
-const NPM_LATETS = 11
-const NPM_LOWEST_SUPPORTED = [9, 0, 0]
 
 module.exports = {
   NPM_LATETS,

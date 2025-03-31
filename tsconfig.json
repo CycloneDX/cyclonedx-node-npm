@@ -66,12 +66,12 @@
     // "stripInternal": false,                            /* Disable emitting declarations that have `@internal` in their JSDoc comments. */
     // "noEmitHelpers": true,                            /* Disable generating custom helper functions like `__extends` in compiled output. */
     // "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
-    // "preserveConstEnums": true,                       /* Disable erasing `const enum` declarations in generated code. */
+    "preserveConstEnums": false,                       /* Disable erasing `const enum` declarations in generated code. */
     // "declarationDir": "./",                           /* Specify the output directory for generated declaration files. */
     // "preserveValueImports": true,                     /* Preserve unused imported values in the JavaScript output that would otherwise be removed. */
 
     /* Interop Constraints */
-    "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
+    // "isolatedModules": false,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
     // "allowSyntheticDefaultImports": true,             /* Allow 'import x from y' when a module doesn't have a default export. */
     // "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
     // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */

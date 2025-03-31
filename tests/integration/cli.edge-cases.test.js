@@ -114,7 +114,6 @@ describe('integration.cli.edge-cases', () => {
       const expectedExitCode = 1 + Math.floor(254 * Math.random())
 
       const { res, errFile } = runCLI([], logFileBase, cwd, {
-        CT_VERSION: NPM_LOWEST_SUPPORTED.join('.'),
         // non-zero exit code
         CT_EXIT_CODE: `${expectedExitCode}`,
         npm_execpath: npmLsReplacement.justExit
@@ -133,7 +132,6 @@ describe('integration.cli.edge-cases', () => {
       const cwd = join(dummyProjectsRoot, 'with-lockfile')
 
       const { res, errFile } = runCLI([], logFileBase, cwd, {
-        CT_VERSION: NPM_LOWEST_SUPPORTED.join('.'),
         // abuse the npm-ls replacement, as it can be caused to crash under control.
         npm_execpath: npmLsReplacement.brokenJson
       })
@@ -160,6 +158,7 @@ describe('integration.cli.edge-cases', () => {
     const logFileBase = join(tmpRoot, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}`)
     const cwd = dummyProjectsRoot
 
+    // non-zero exit code
     const expectedExitCode = 1 + Math.floor(254 * Math.random())
 
     const { res, outFile, errFile } = runCLI([
@@ -175,7 +174,6 @@ describe('integration.cli.edge-cases', () => {
       join('with-lockfile', 'package.json')
     ], logFileBase, cwd, {
       CT_VERSION: `${dd.npm}.99.0`,
-      // non-zero exit code
       CT_EXIT_CODE: expectedExitCode,
       CT_SUBJECT: dd.subject,
       CT_NPM: dd.npm,

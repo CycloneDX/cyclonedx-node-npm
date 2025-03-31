@@ -108,11 +108,11 @@ export function getMimeForLicenseFile (filename: string): MimeType | undefined {
 // region version compare
 
 export function versionTuple (value: string): Version {
-  return value.split('.').map(Number)
+  return Object.freeze(value.split('.').map(Number))
 }
 
-type Version = number[]
-type CompareResult = -1 | 0 | 1
+export type Version = readonly number[]
+export type CompareResult = -1 | 0 | 1
 
 export function versionCompare (a: Version, b: Version): CompareResult {
   let ai: number, bi: number
