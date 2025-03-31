@@ -22,7 +22,7 @@ import { Argument, Command, Option } from 'commander'
 import { existsSync, mkdirSync, openSync } from 'fs'
 import { dirname, resolve } from 'path'
 
-import { loadJsonFile, versionCompare, versionTuple, writeAllSync } from './_helpers'
+import {loadJsonFile, type Version, versionCompare, versionTuple, writeAllSync} from './_helpers'
 import { BomBuilder, TreeBuilder } from './builders'
 import { makeConsoleLogger } from './logger'
 import { NpmRunner } from './npmRunner'
@@ -242,7 +242,7 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
   INVALID: 2
 })
 
-const npmMinVersion = [9, 0, 0]
+const npmMinVersion: Version = Object.freeze([9, 0, 0])
 
 export async function run (process_: NodeJS.Process): Promise<number> {
   process_.title = 'cyclonedx-node-npm'
