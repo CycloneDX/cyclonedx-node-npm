@@ -31,7 +31,8 @@ const {
   latestCdxSpecVersion,
   dummyProjectsRoot,
   npmLsReplacement,
-  demoResultsRoot
+  demoResultsRoot,
+  NPM_LOWEST_SUPPORTED
 } = require('./')
 const { spawnSync } = require('child_process')
 
@@ -44,15 +45,12 @@ describe('integration.cli.edge-cases', () => {
     const logFileBase = join(tmpRoot, 'unsupported-npm-version')
     const cwd = join(dummyProjectsRoot, 'with-lockfile')
 
-    // lowest supported = [8.7.0] - need to find a lower number
+    // lowest supported = [9.0.0] - need to find a lower number
     const npmVersion = [
-      Math.round(8 * Math.random()),
+      Math.round(NPM_LOWEST_SUPPORTED[0] * Math.random()),
       Math.round(99 * Math.random()),
       Math.round(99 * Math.random())
     ]
-    if (npmVersion[0] === 8) {
-      npmVersion[1] = Math.round(6 * Math.random())
-    }
 
     const { res, errFile } = runCLI([], logFileBase, cwd, {
       CT_VERSION: npmVersion.join('.'),
@@ -116,7 +114,7 @@ describe('integration.cli.edge-cases', () => {
       const expectedExitCode = 1 + Math.floor(254 * Math.random())
 
       const { res, errFile } = runCLI([], logFileBase, cwd, {
-        CT_VERSION: '8.99.0',
+        CT_VERSION: NPM_LOWEST_SUPPORTED.join('.'),
         // non-zero exit code
         CT_EXIT_CODE: `${expectedExitCode}`,
         npm_execpath: npmLsReplacement.justExit
@@ -135,7 +133,7 @@ describe('integration.cli.edge-cases', () => {
       const cwd = join(dummyProjectsRoot, 'with-lockfile')
 
       const { res, errFile } = runCLI([], logFileBase, cwd, {
-        CT_VERSION: '8.99.0',
+        CT_VERSION: NPM_LOWEST_SUPPORTED.join('.'),
         // abuse the npm-ls replacement, as it can be caused to crash under control.
         npm_execpath: npmLsReplacement.brokenJson
       })
@@ -152,7 +150,7 @@ describe('integration.cli.edge-cases', () => {
   test('suppressed error on non-zero exit', async () => {
     const dd = {
       subject: 'dev-dependencies',
-      npm: '8',
+      npm: NPM_LOWEST_SUPPORTED[0],
       node: '20',
       os: 'ubuntu-latest'
     }
@@ -219,7 +217,7 @@ describe('integration.cli.edge-cases', () => {
           stdio: ['ignore', 'ignore', 'pipe'],
           encoding: 'utf8',
           env: {
-            CT_VERSION: '11.0.1',
+            CT_VERSION: NPM_LOWEST_SUPPORTED.join('.'),
             npm_execpath: npmLsReplacement.justExit
           }
         }

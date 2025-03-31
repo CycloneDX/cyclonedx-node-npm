@@ -163,9 +163,6 @@ jobs:
           - npm-version: '^9'
             ## "node": "^14.17.0 || ^16.13.0 || >=18.0.0"
             node-version: '^20.18'
-          - npm-version: '^8'
-            ## "node": "^12.13.0 || ^14.15.0 || >=16"
-            # node-version: '^16' ## cannot pin due to https://github.com/npm/cli/issues/6743
     env:
       npm_config_engine_strict: true
     timeout-minutes: 10
