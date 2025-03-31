@@ -73,7 +73,7 @@
         <licenses>
           <license>
             <name>file: LICENCE.mit</name>
-            <text content-type="text/plain" encoding="base64">dGhpcyBpcyBhIGR1bW15IGxpY2Vuc2UgZmlsZS4K</text>
+            <text content-type="text/plain" encoding="base64">dGhpcyBpcyBhIGR1bW15IGxpY2Vuc2UgZmlsZSBmb3IgTUlUCg==</text>
           </license>
         </licenses>
       </evidence>

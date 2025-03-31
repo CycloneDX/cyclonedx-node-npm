@@ -144,6 +144,7 @@ export class BomBuilder {
       npmLsReturns = this.npmRunner.run(args, {
         cwd: projectDir,
         env: process_.env,
+        stdio: ['ignore', 'pipe', 'pipe'],
         encoding: 'buffer',
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
       })
@@ -158,7 +159,11 @@ export class BomBuilder {
       this.console.error('%s', runError.stderr)
       this.console.groupEnd()
       if (!this.ignoreNpmErrors) {
-        throw new Error(`npm-ls exited with errors: ${runError.status as string ?? 'noStatus'} ${runError.signal as string ?? 'noSignal'}`)
+        throw new Error(
+          `npm-ls exited with errors: ${
+            runError.status as undefined | string ?? 'noStatus'} ${
+            runError.signal as undefined | string ?? 'noSignal'}`,
+          { cause: runError })
       }
       this.console.debug('DEBUG | npm-ls exited with errors that are to be ignored.')
       npmLsReturns = runError.stdout ?? Buffer.alloc(0)
@@ -167,7 +172,9 @@ export class BomBuilder {
     try {
       return JSON.parse(npmLsReturns.toString())
     } catch (jsonParseError) {
-      throw new Error('failed to parse npm-ls response', { cause: jsonParseError })
+      throw new Error(
+        'failed to parse npm-ls response',
+        { cause: jsonParseError })
     }
   }
 

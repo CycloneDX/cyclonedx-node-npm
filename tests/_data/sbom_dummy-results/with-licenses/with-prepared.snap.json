@@ -99,7 +99,7 @@
             "license": {
               "name": "file: LICENCE.mit",
               "text": {
-                "content": "dGhpcyBpcyBhIGR1bW15IGxpY2Vuc2UgZmlsZS4K",
+                "content": "dGhpcyBpcyBhIGR1bW15IGxpY2Vuc2UgZmlsZSBmb3IgTUlUCg==",
                 "contentType": "text/plain",
                 "encoding": "base64"
               }
