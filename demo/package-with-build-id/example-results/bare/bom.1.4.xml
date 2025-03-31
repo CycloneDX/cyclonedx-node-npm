@@ -4,12 +4,12 @@
     <tools>
       <tool>
         <name>npm</name>
-        <version>9.4.2</version>
+        <version>10.9.2</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>6.11.0</version>
+        <version>7.1.0</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
@@ -28,7 +28,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>1.19.3</version>
+        <version>2.1.0</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
@@ -49,7 +49,7 @@
       <name>demo-package-with-build-id</name>
       <version>1.0.0-123+456</version>
       <description>demo: package-with-build-id -- show how buildID in the version looks like</description>
-      <purl>pkg:npm/demo-package-with-build-id@1.0.0-123+456?vcs_url=git%2Bhttps%3A//gist.github.com/44e29a0bc4a002ec3413d9f5c2c1962f.git</purl>
+      <purl>pkg:npm/demo-package-with-build-id@1.0.0-123+456?vcs_url=git%2Bhttps%3A%2F%2Fgist.github.com%2F44e29a0bc4a002ec3413d9f5c2c1962f.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://gist.github.com/44e29a0bc4a002ec3413d9f5c2c1962f</url>

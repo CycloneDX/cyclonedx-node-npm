@@ -40,6 +40,33 @@ describe('integration.cli.edge-cases', () => {
 
   const tmpRoot = mkTemp('cli.edge_cases')
 
+  test('unsupported NPM version', async () => {
+    const logFileBase = join(tmpRoot, 'unsupported-npm-version')
+    const cwd = join(dummyProjectsRoot, 'with-lockfile')
+
+    // lowest supported = [8.7.0] - need to find a lower number
+    const npmVersion = [
+      Math.round(8 * Math.random()),
+      Math.round(99 * Math.random()),
+      Math.round(99 * Math.random())
+    ]
+    if (npmVersion[0] === 8) {
+      npmVersion[1] = Math.round(6 * Math.random())
+    }
+
+    const { res, errFile } = runCLI([], logFileBase, cwd, {
+      CT_VERSION: npmVersion.join('.'),
+      npm_execpath: npmLsReplacement.justExit
+    })
+
+    try {
+      await expect(res).rejects.toThrow(/Unsupported NPM version/i)
+    } catch (err) {
+      process.stderr.write(readFileSync(errFile))
+      throw err
+    }
+  })
+
   describe('broken project', () => {
     const tmpRootRun = join(tmpRoot, 'broken-project')
     mkdirSync(tmpRootRun)
@@ -123,7 +150,12 @@ describe('integration.cli.edge-cases', () => {
   })
 
   test('suppressed error on non-zero exit', async () => {
-    const dd = { subject: 'dev-dependencies', npm: '8', node: '14', os: 'ubuntu-latest' }
+    const dd = {
+      subject: 'dev-dependencies',
+      npm: '8',
+      node: '20',
+      os: 'ubuntu-latest'
+    }
 
     mkdirSync(join(tmpRoot, 'suppressed-error-on-non-zero-exit'))
     const expectedOutSnap = join(demoResultsRoot, 'suppressed-error-on-non-zero-exit', `${dd.subject}_npm${dd.npm}_node${dd.node}_${dd.os}.snap.json`)

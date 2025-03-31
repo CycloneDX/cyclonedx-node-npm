@@ -19,17 +19,15 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
 import { existsSync, readdirSync, readFileSync } from 'fs'
-import * as normalizePackageData from 'normalize-package-data'
-import * as path from 'path'
-import { join } from 'path'
+import normalizePackageData from 'normalize-package-data'
+import path from 'path'
 
 import {
   getMimeForLicenseFile,
   isString,
   loadJsonFile,
   structuredClonePolyfill,
-  tryRemoveSecretsFromUrl,
-  versionCompare
+  tryRemoveSecretsFromUrl
 } from './_helpers'
 import { PropertyNames, PropertyValueBool } from './cdx'
 import { makeNpmRunner, type runFunc } from './npmRunner'
@@ -105,10 +103,6 @@ export class BomBuilder {
     )
   }
 
-  private versionTuple (value: string): number[] {
-    return value.split('.').map(v => Number(v))
-  }
-
   private getNpmVersion (npmRunner: runFunc, process_: NodeJS.Process): string {
     let version: string
     this.console.info('INFO  | detecting NPM version ...')
@@ -138,7 +132,6 @@ export class BomBuilder {
     const npmRunner = makeNpmRunner(process_, this.console)
 
     const npmVersionR = this.getNpmVersion(npmRunner, process_)
-    const npmVersionT = this.versionTuple(npmVersionR)
 
     const args: string[] = [
       'ls',
@@ -147,58 +140,26 @@ export class BomBuilder {
       // get all the needed content
       '--long',
       // depth = infinity
-      npmVersionT[0] >= 7
-        ? '--all'
-        : '--depth=255'
+      '--all'
     ]
 
     if (this.packageLockOnly) {
-      if (npmVersionT[0] >= 7) {
-        args.push('--package-lock-only')
-      } else {
-        this.console.warn('WARN  | your NPM does not support "--package-lock-only", internally skipped this option')
-      }
+      args.push('--package-lock-only')
     }
 
-    if (versionCompare(npmVersionT, [8, 7]) >= 0) {
-      // since NPM v8.7 -- https://github.com/npm/cli/pull/4744
-      for (const odt of this.omitDependencyTypes) {
-        args.push(`--omit=${odt}`)
-      }
-    } else {
-      // see https://github.com/npm/cli/pull/4744
-      for (const odt of this.omitDependencyTypes) {
-        switch (odt) {
-          case 'dev':
-            this.console.warn('WARN  | your NPM does not support "--omit=%s", internally using "--production" to mitigate', odt)
-            args.push('--production')
-            break
-          case 'peer':
-          case 'optional':
-            this.console.warn('WARN  | your NPM does not support "--omit=%s", internally skipped this option', odt)
-            break
-        }
-      }
+    // since NPM v8.7 -- https://github.com/npm/cli/pull/4744
+    for (const odt of this.omitDependencyTypes) {
+      args.push(`--omit=${odt}`)
     }
 
-    // Although some workspace functionality is supported by npm 7 it is inconsistent with later versions. In order
-    // to provide a consistent and intuitive experience to users we do not support workspace functionality before npm 8.
-    if (npmVersionT[0] <= 7) {
-      if (this.workspace.length > 0 || this.workspaces !== undefined || this.includeWorkspaceRoot !== undefined) {
-        this.console.warn('WARN  | your NPM does not fully support workspaces functionality, internally skipping workspace related options')
-      }
-    } else {
-      for (const workspace of this.workspace) {
-        args.push(`--workspace=${workspace}`)
-      }
-
-      if (this.includeWorkspaceRoot !== undefined) {
-        args.push(`--include-workspace-root=${this.includeWorkspaceRoot}`)
-      }
-
-      if (this.workspaces !== undefined) {
-        args.push(`--workspaces=${this.workspaces}`)
-      }
+    for (const workspace of this.workspace) {
+      args.push(`--workspace=${workspace}`)
+    }
+    if (this.includeWorkspaceRoot !== undefined) {
+      args.push(`--include-workspace-root=${this.includeWorkspaceRoot}`)
+    }
+    if (this.workspaces !== undefined) {
+      args.push(`--workspaces=${this.workspaces}`)
     }
 
     this.console.info('INFO  | gathering dependency tree ...')
@@ -234,7 +195,6 @@ export class BomBuilder {
         npmVersionR
       ]
     } catch (jsonParseError) {
-      /* @ts-expect-error TS2554 */
       throw new Error('failed to parse npm-ls response', { cause: jsonParseError })
     }
   }
@@ -452,15 +412,13 @@ export class BomBuilder {
   private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
   private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | false | undefined {
-    // older npm-ls versions (v6) hide properties behind a `_`
-    const isOptional = (data.optional ?? data._optional) === true
+    const isOptional = data.optional === true
     if (isOptional && this.omitDependencyTypes.has('optional')) {
       this.console.debug('DEBUG | omit optional component: %j %j', data.name, data._id)
       return false
     }
 
-    // older npm-ls versions (v6) hide properties behind a `_`
-    const isDev = (data.dev ?? data._development) === true
+    const isDev = data.dev === true
     if (isDev && this.omitDependencyTypes.has('dev')) {
       this.console.debug('DEBUG | omit dev component: %j %j', data.name, data._id)
       return false
@@ -542,8 +500,7 @@ export class BomBuilder {
         new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
       )
     }
-    // older npm-ls versions (v6) hide properties behind a `_`
-    if ((data.inBundle ?? data._inBundle) === true) {
+    if (data.inBundle === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
       )
@@ -551,12 +508,10 @@ export class BomBuilder {
 
     // endregion properties
 
-    // older npm-ls versions (v6) hide properties behind a `_`
-    const resolved = data.resolved ?? data._resolved
+    const resolved = data.resolved
     if (isString(resolved) && !this.resolvedRE_ignore.test(resolved)) {
       const hashes = new Models.HashDictionary()
-      // older npm-ls versions (v6) hide properties behind a `_`
-      const integrity = data.integrity ?? data._integrity
+      const integrity = data.integrity
       if (isString(integrity)) {
         for (const [hashAlgorithm, hashRE] of this.integrityRE) {
           const hashMatchBase64 = hashRE.exec(integrity) ?? []
@@ -666,8 +621,8 @@ export class BomBuilder {
 
   readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
 
-  private * fetchLicenseEvidence (path: string): Generator<Models.License | null, void, void> {
-    const files = readdirSync(path)
+  private * fetchLicenseEvidence (dirPath: string): Generator<Models.License | null, void, void> {
+    const files = readdirSync(dirPath)
     for (const file of files) {
       if (!this.#LICENSE_FILENAME_PATTERN.test(file)) {
         continue
@@ -678,7 +633,7 @@ export class BomBuilder {
         continue
       }
 
-      const fp = join(path, file)
+      const fp = path.join(dirPath, file)
       yield new Models.NamedLicense(
         `file: ${file}`,
         {

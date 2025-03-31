@@ -7,17 +7,17 @@
     "tools": [
       {
         "name": "npm",
-        "version": "9.4.2"
+        "version": "10.9.2"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.11.0"
+        "version": "7.1.0"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "1.19.3"
+        "version": "2.1.0"
       }
     ],
     "component": {
@@ -26,7 +26,7 @@
       "version": "1.0.0-123+456",
       "bom-ref": "demo-package-with-build-id@1.0.0-123+456",
       "description": "demo: package-with-build-id -- show how buildID in the version looks like",
-      "purl": "pkg:npm/demo-package-with-build-id@1.0.0-123+456?vcs_url=git%2Bhttps%3A//gist.github.com/44e29a0bc4a002ec3413d9f5c2c1962f.git",
+      "purl": "pkg:npm/demo-package-with-build-id@1.0.0-123+456?vcs_url=git%2Bhttps%3A%2F%2Fgist.github.com%2F44e29a0bc4a002ec3413d9f5c2c1962f.git",
       "externalReferences": [
         {
           "url": "https://gist.github.com/44e29a0bc4a002ec3413d9f5c2c1962f",

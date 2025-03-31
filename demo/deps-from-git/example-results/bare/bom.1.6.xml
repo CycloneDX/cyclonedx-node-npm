@@ -2,48 +2,64 @@
 <bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
     <tools>
-      <tool>
-        <name>npm</name>
-        <version>9.4.2</version>
-      </tool>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>cyclonedx-library</name>
-        <version>6.11.0</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>cyclonedx-npm</name>
-        <version>1.19.3</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
+      <components>
+        <component type="application">
+          <name>npm</name>
+          <version>10.9.2</version>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>cyclonedx-library</name>
+          <version>7.1.0</version>
+          <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+        <component type="application">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>cyclonedx-npm</name>
+          <version>2.1.0</version>
+          <description>Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-node-npm.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-node-npm#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
     </tools>
     <component type="application" bom-ref="demo-deps-from-git@1.0.0">
       <name>demo-deps-from-git</name>
@@ -68,7 +84,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.0.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%23c887c803ac56deb5f91b617ef0486ca3fb98473b</purl>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.0.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23c887c803ac56deb5f91b617ef0486ca3fb98473b</purl>
       <externalReferences>
         <reference type="distribution">
           <url>git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#c887c803ac56deb5f91b617ef0486ca3fb98473b</url>
@@ -102,7 +118,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.1.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%23e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7</purl>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.1.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7</purl>
       <externalReferences>
         <reference type="distribution">
           <url>git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7</url>
@@ -136,7 +152,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.2.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%23d66d36280dde484bcf73a5c2139961663e3ba954</purl>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.2.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23d66d36280dde484bcf73a5c2139961663e3ba954</purl>
       <externalReferences>
         <reference type="distribution">
           <url>git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#d66d36280dde484bcf73a5c2139961663e3ba954</url>
@@ -170,7 +186,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.3.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%237a914980f0508368df54ca193347cec6ffd16415</purl>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.3.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%237a914980f0508368df54ca193347cec6ffd16415</purl>
       <externalReferences>
         <reference type="distribution">
           <url>git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#7a914980f0508368df54ca193347cec6ffd16415</url>
@@ -204,7 +220,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.4.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%233367c1638662d57c53caff0824ee94cd7859bee2</purl>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.4.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%233367c1638662d57c53caff0824ee94cd7859bee2</purl>
       <externalReferences>
         <reference type="distribution">
           <url>git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#3367c1638662d57c53caff0824ee94cd7859bee2</url>
@@ -238,7 +254,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.5.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%234cea42bf5ec78f17b86dcd308022b6d52e9a98f0</purl>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.5.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%234cea42bf5ec78f17b86dcd308022b6d52e9a98f0</purl>
       <externalReferences>
         <reference type="distribution">
           <url>git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#4cea42bf5ec78f17b86dcd308022b6d52e9a98f0</url>

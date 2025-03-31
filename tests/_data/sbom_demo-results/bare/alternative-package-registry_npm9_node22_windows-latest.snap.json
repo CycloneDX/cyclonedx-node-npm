@@ -91,7 +91,24 @@
           }
         }
       ],
-      "purl": "pkg:npm/demo-alternative-package-registry@0.0.0",
+      "purl": "pkg:npm/demo-alternative-package-registry@0.0.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-node-npm.git#demo/alternative-package-registry/project",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-node-npm.git#demo/alternative-package-registry/project",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
       "properties": [
         {
           "name": "cdx:npm:package:path",

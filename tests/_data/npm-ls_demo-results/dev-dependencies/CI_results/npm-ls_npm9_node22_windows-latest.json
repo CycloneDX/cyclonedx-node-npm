@@ -4,30 +4,35 @@
   "description": "demo: demo-dev-dependencies -- showcase how devDependencies look like",
   "private": true,
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/dev-dependencies/project"
+  },
   "optionalDependencies": {
-    "uuidv4": "^6.2.13"
+    "uuidv4": "6.2.13"
   },
   "devDependencies": {
-    "@types/node": ">=16",
-    "@types/uuid": "^8",
-    "uuid": "^8"
+    "@types/node": "20.14.10",
+    "@types/uuid": "8.3.4",
+    "uuid": "8.3.2"
   },
   "_id": "demo-dev-dependencies@0.0.0",
   "extraneous": false,
   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project",
   "_dependencies": {
-    "uuidv4": "^6.2.13"
+    "uuidv4": "6.2.13"
   },
   "peerDependencies": {},
   "dependencies": {
     "@types/node": {
-      "version": "20.12.8",
-      "resolved": "https://registry.npmjs.org/@types/node/-/node-20.12.8.tgz",
+      "version": "20.14.10",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-20.14.10.tgz",
       "overridden": false,
       "name": "@types/node",
-      "integrity": "sha512-NU0rJLJnshZWdE/097cdCBbyW1h4hEg0xpovcoAQYHl8dnEyp/NAOiE45pvc+Bd1Dt+2r94v2eGFpQJ4R7g+2w==",
+      "integrity": "sha512-MdiXf+nDuMvY0gJKxyfZ7/6UFsETO7mGKF54MVD/ekJS6HdFtpZFBgrh6Pseu64XTb2MLyFPlbW6hj8HYRQNOQ==",
       "dev": true,
-      "_id": "@types/node@20.12.8",
+      "_id": "@types/node@20.14.10",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\dev-dependencies\\project\\node_modules\\@types\\node",
       "_dependencies": {
@@ -89,6 +94,7 @@
       "overridden": false,
       "name": "uuidv4",
       "integrity": "sha512-AXyzMjazYB3ovL3q051VLH06Ixj//Knx7QnUSi1T//Ie3io6CpsPu9nVMOx5MoLWh6xV0B9J0hIaxungxXUbPQ==",
+      "deprecated": "Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
       "optional": true,
       "_id": "uuidv4@6.2.13",
       "extraneous": false,

@@ -91,7 +91,24 @@
           }
         }
       ],
-      "purl": "pkg:npm/demo-dev-dependencies@0.0.0",
+      "purl": "pkg:npm/demo-dev-dependencies@0.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-node-npm.git#demo/dev-dependencies/project",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/dev-dependencies/project",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
       "properties": [
         {
           "name": "cdx:npm:package:path",
@@ -109,17 +126,17 @@
       "type": "library",
       "name": "node",
       "group": "@types",
-      "version": "20.12.8",
-      "bom-ref": "@types/node@20.12.8",
-      "purl": "pkg:npm/%40types/node@20.12.8",
+      "version": "20.14.10",
+      "bom-ref": "@types/node@20.14.10",
+      "purl": "pkg:npm/%40types/node@20.14.10",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@types/node/-/node-20.12.8.tgz",
+          "url": "https://registry.npmjs.org/@types/node/-/node-20.14.10.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "354d2b24b267b21656744ff4f7b71d0816f25b5878844834c69a2f72801060797c767132a7f3403a2138e69bdcf817750edfb6afde2fd9e185a5027847b83edb"
+              "content": "31d8977fe9c3b8cbd8d2024ac727d9effe9416c1133bb986285e783150ff7a4252e87745b69645060ae1e8fb1ebbae174dbd8c2f214f95b5ba863f0761140d39"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -259,7 +276,7 @@
   ],
   "dependencies": [
     {
-      "ref": "@types/node@20.12.8",
+      "ref": "@types/node@20.14.10",
       "dependsOn": [
         "undici-types@5.26.5"
       ]
@@ -270,7 +287,7 @@
     {
       "ref": "demo-dev-dependencies@0.0.0",
       "dependsOn": [
-        "@types/node@20.12.8",
+        "@types/node@20.14.10",
         "@types/uuid@8.3.4",
         "uuid@8.3.2",
         "uuidv4@6.2.13"
