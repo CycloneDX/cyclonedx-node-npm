@@ -70,7 +70,7 @@
   ],
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "^8.0.0",
-    "commander": "^13.0.0",
+    "commander": "^13.1.0",
     "normalize-package-data": "^7.0.0",
     "xmlbuilder2": "^3.0.2"
   },
