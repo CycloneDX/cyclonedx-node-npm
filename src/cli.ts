@@ -242,7 +242,7 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
   INVALID: 2
 })
 
-const npmMinVersion = [8, 7]
+const npmMinVersion = [9, 0, 0]
 
 export async function run (process: NodeJS.Process): Promise<number> {
   process.title = 'cyclonedx-node-npm'
