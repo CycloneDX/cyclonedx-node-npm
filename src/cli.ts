@@ -22,7 +22,7 @@ import { Argument, Command, Option } from 'commander'
 import { existsSync, mkdirSync, openSync } from 'fs'
 import { dirname, resolve } from 'path'
 
-import {loadJsonFile, type Version, versionCompare, versionTuple, writeAllSync} from './_helpers'
+import { loadJsonFile, type Version, versionCompare, versionTuple, writeAllSync } from './_helpers'
 import { BomBuilder, TreeBuilder } from './builders'
 import { makeConsoleLogger } from './logger'
 import { NpmRunner } from './npmRunner'
@@ -236,11 +236,11 @@ function makeCommand (process_: NodeJS.Process): Command {
   )
 }
 
-const ExitCode: Readonly<Record<string, number>> = Object.freeze({
-  SUCCESS: 0,
-  FAILURE: 1,
-  INVALID: 2
-})
+const enum ExitCode {
+  SUCCESS = 0,
+  FAILURE = 1,
+  INVALID = 2
+}
 
 const npmMinVersion: Version = Object.freeze([9, 0, 0])
 
