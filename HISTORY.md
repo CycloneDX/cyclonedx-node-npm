@@ -13,7 +13,6 @@ All notable changes to this project will be documented in this file.
 * Build
   * Use _TypeScript_ `v5.8.2` now, was `v5.7.3` (via [#1267])
 
-
 [#1192]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1192
 [#1267]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1267
 [#1273]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1273
