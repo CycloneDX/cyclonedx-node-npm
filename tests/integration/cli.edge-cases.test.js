@@ -47,7 +47,7 @@ describe('integration.cli.edge-cases', () => {
 
     // lowest supported = [9.0.0] - need to find a lower number
     const npmVersion = [
-      Math.round(NPM_LOWEST_SUPPORTED[0] * Math.random()),
+      Math.round((NPM_LOWEST_SUPPORTED[0] - 1) * Math.random()),
       Math.round(99 * Math.random()),
       Math.round(99 * Math.random())
     ]
