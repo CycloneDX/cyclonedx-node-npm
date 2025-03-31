@@ -25,7 +25,7 @@ import { dirname, resolve } from 'path'
 import { loadJsonFile, versionCompare, versionTuple, writeAllSync } from './_helpers'
 import { BomBuilder, TreeBuilder } from './builders'
 import { makeConsoleLogger } from './logger'
-import { makeNpmRunner } from './npmRunner'
+import { NpmRunner } from './npmRunner'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -59,7 +59,7 @@ interface CommandOptions {
   verbose: number
 }
 
-function makeCommand (process: NodeJS.Process): Command {
+function makeCommand (process_: NodeJS.Process): Command {
   return new Command(
   ).description(
     'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
@@ -86,7 +86,7 @@ function makeCommand (process: NodeJS.Process): Command {
     ).choices(
       Object.values(Omittable).sort()
     ).default(
-      process.env.NODE_ENV === 'production'
+      process_.env.NODE_ENV === 'production'
         ? [Omittable.Dev]
         : [],
       `"${Omittable.Dev}" if the NODE_ENV environment variable is set to "production", otherwise empty`
@@ -244,25 +244,21 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
 
 const npmMinVersion = [9, 0, 0]
 
-export async function run (process: NodeJS.Process): Promise<number> {
-  process.title = 'cyclonedx-node-npm'
+export async function run (process_: NodeJS.Process): Promise<number> {
+  process_.title = 'cyclonedx-node-npm'
 
-  const program = makeCommand(process)
-  program.parse(process.argv)
+  const program = makeCommand(process_)
+  program.parse(process_.argv)
 
   const options: CommandOptions = program.opts()
-  const myConsole = makeConsoleLogger(process, options.verbose)
+  const myConsole = makeConsoleLogger(process_, options.verbose)
   myConsole.debug('DEBUG | options: %j', options)
 
-  const npmRunner = makeNpmRunner(process, myConsole)
-  const npmVersion = versionTuple(npmRunner(['--version'], {
-    env: process.env,
-    encoding: 'buffer',
-    maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
-  }).toString().trim())
-  if (versionCompare(npmVersion, npmMinVersion) < 0) {
+  const npmRunner = new NpmRunner(process_, myConsole)
+  const npmVersion = npmRunner.version
+  if (versionCompare(versionTuple(npmVersion), npmMinVersion) < 0) {
     throw new RangeError('Unsupported NPM version. ' +
-      `Expected >= ${npmMinVersion.join('.')}, got ${npmVersion.join('.')}`)
+      `Expected >= ${npmMinVersion.join('.')}, got ${npmVersion}`)
   }
   myConsole.debug('DEBUG | found NPM version %j', npmVersion)
 
@@ -277,7 +273,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
     throw new Error("option '--include-workspace-root' cannot be used without option '-w, --workspace <workspace...>'")
   }
 
-  const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
+  const packageFile = resolve(process_.cwd(), program.args[0] ?? 'package.json')
   if (!existsSync(packageFile)) {
     throw new Error(`missing project's manifest file: ${packageFile}`)
   }
@@ -303,6 +299,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
 
   myConsole.log('LOG   | gathering BOM data ...')
   const bom = new BomBuilder(
+    npmRunner,
     new Builders.FromNodePackageJson.ComponentBuilder(
       new Factories.FromNodePackageJson.ExternalReferenceFactory(),
       new Factories.LicenseFactory()
@@ -323,7 +320,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
       workspaces: options.workspaces
     },
     myConsole
-  ).buildFromProjectDir(projectDir, process)
+  ).buildFromProjectDir(projectDir, process_)
 
   const spec = Spec.SpecVersionDict[options.specVersion]
   if (undefined === spec) {
@@ -386,8 +383,8 @@ export async function run (process: NodeJS.Process): Promise<number> {
   myConsole.log('LOG   | writing BOM to', options.outputFile)
   const written = await writeAllSync(
     options.outputFile === OutputStdOut
-      ? process.stdout.fd
-      : openSync(resolve(process.cwd(), options.outputFile), 'w'),
+      ? process_.stdout.fd
+      : openSync(resolve(process_.cwd(), options.outputFile), 'w'),
     serialized
   )
   myConsole.info('INFO  | wrote %d bytes to %s', written, options.outputFile)

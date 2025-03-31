@@ -30,7 +30,7 @@ import {
   tryRemoveSecretsFromUrl
 } from './_helpers'
 import { PropertyNames, PropertyValueBool } from './cdx'
-import { makeNpmRunner, type runFunc } from './npmRunner'
+import type { NpmRunner } from './npmRunner'
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
@@ -52,6 +52,7 @@ type cPath = string
 type AllComponents = Map<cPath, Models.Component>
 
 export class BomBuilder {
+  npmRunner: NpmRunner
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
   treeBuilder: TreeBuilder
   purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
@@ -72,12 +73,14 @@ export class BomBuilder {
   console: Console
 
   constructor (
+    npmRunner: NpmRunner,
     componentBuilder: BomBuilder['componentBuilder'],
     treeBuilder: BomBuilder['treeBuilder'],
     purlFactory: BomBuilder['purlFactory'],
     options: BomBuilderOptions,
     console_: BomBuilder['console']
   ) {
+    this.npmRunner = npmRunner
     this.componentBuilder = componentBuilder
     this.treeBuilder = treeBuilder
     this.purlFactory = purlFactory
@@ -98,41 +101,10 @@ export class BomBuilder {
   }
 
   buildFromProjectDir (projectDir: string, process: NodeJS.Process): Models.Bom {
-    return this.buildFromNpmLs(
-      ...this.fetchNpmLs(projectDir, process)
-    )
+    return this.buildFromNpmLs(this.fetchNpmLs(projectDir, process))
   }
 
-  private getNpmVersion (npmRunner: runFunc, process_: NodeJS.Process): string {
-    let version: string
-    this.console.info('INFO  | detecting NPM version ...')
-    try {
-      version = npmRunner(['--version'], {
-        env: process_.env,
-        encoding: 'buffer',
-        maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
-      }).toString().trim()
-    } catch (runError: any) {
-      this.console.group('DEBUG | npm-ls: STDOUT')
-      this.console.debug('%s', runError.stdout)
-      this.console.groupEnd()
-      this.console.group('WARN  | npm-ls: MESSAGE')
-      this.console.warn('%s', runError.message)
-      this.console.groupEnd()
-      this.console.group('ERROR | npm-ls: STDERR')
-      this.console.error('%s', runError.stderr)
-      this.console.groupEnd()
-      throw runError
-    }
-    this.console.debug('DEBUG | detected NPM version %j', version)
-    return version
-  }
-
-  private fetchNpmLs (projectDir: string, process_: NodeJS.Process): [any, string | undefined] {
-    const npmRunner = makeNpmRunner(process_, this.console)
-
-    const npmVersionR = this.getNpmVersion(npmRunner, process_)
-
+  private fetchNpmLs (projectDir: string, process_: NodeJS.Process): any {
     const args: string[] = [
       'ls',
       // format as parsable json
@@ -166,7 +138,7 @@ export class BomBuilder {
     this.console.debug('DEBUG | npm-ls: run npm with %j in %j', args, projectDir)
     let npmLsReturns: Buffer
     try {
-      npmLsReturns = npmRunner(args, {
+      npmLsReturns = this.npmRunner.run(args, {
         cwd: projectDir,
         env: process_.env,
         encoding: 'buffer',
@@ -190,16 +162,13 @@ export class BomBuilder {
     }
     // this.console.debug('stdout: %s', npmLsReturns)
     try {
-      return [
-        JSON.parse(npmLsReturns.toString()),
-        npmVersionR
-      ]
+      return JSON.parse(npmLsReturns.toString())
     } catch (jsonParseError) {
       throw new Error('failed to parse npm-ls response', { cause: jsonParseError })
     }
   }
 
-  buildFromNpmLs (data: any, npmVersion?: string): Models.Bom {
+  buildFromNpmLs (data: any): Models.Bom {
     this.console.info('INFO  | building BOM ...')
 
     // region all components & dependencies
@@ -222,7 +191,7 @@ export class BomBuilder {
 
     bom.metadata.tools.components.add(new Models.Component(
       Enums.ComponentType.Application, 'npm', {
-        version: npmVersion // use the self-proclaimed `version`
+        version: this.npmRunner.version // use the self-proclaimed `version`
       // omit `group` and `externalReferences`, because we cannot be sure about the used tool's actual origin
       // omit `hashes`, because unfortunately there is no agreed process of generating them
       }))

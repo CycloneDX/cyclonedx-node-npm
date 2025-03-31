@@ -22,67 +22,84 @@ import { existsSync } from 'fs'
 import { resolve } from 'path'
 
 /** !attention: args might not be shell-save. */
-export type runFunc = (args: string[], options: ExecSyncOptionsWithBufferEncoding) => Buffer
+type runFunc = (args: string[], options: ExecSyncOptionsWithBufferEncoding) => Buffer
 
-/**
- * Matches the filename for the npx cli script in a given path:
- *
- * Matches:
- *   - npx-cli.js     // plain
- *   - foo/npx-cli.js // unix-like paths
- *   - foo\npx-cli.js // windows-like paths
- *
- * Does not match:
- *   - foobar/            // Not the filename
- *   - foobar-npx-cli.js  // Invalid leading string
- *   - foo/npx-cli_js     // Invalid extension
- *   - npx-cli.js/foo.sh  // Directory of the same name
- */
-const npxMatcher = /(^|\\|\/)npx-cli\.js$/
+export class NpmRunner {
+  static readonly #jsMatcher = /\.[cm]?js$/
 
-const jsMatcher = /\.[cm]?js$/
+  /**
+   * Matches the filename for the npx cli script in a given path:
+   *
+   * Matches:
+   *   - npx-cli.js     // plain
+   *   - foo/npx-cli.js // unix-like paths
+   *   - foo\npx-cli.js // windows-like paths
+   *
+   * Does not match:
+   *   - foobar/            // Not the filename
+   *   - foobar-npx-cli.js  // Invalid leading string
+   *   - foo/npx-cli_js     // Invalid extension
+   *   - npx-cli.js/foo.sh  // Directory of the same name
+   */
+  static readonly #npxMatcher = /(^|\\|\/)npx-cli\.js$/
 
-/**
- * @throws {Error} when npm path unexpected
- */
-function getExecPath (process_: NodeJS.Process, console_: Console): string | undefined {
-  // `npm_execpath` will be whichever cli script has called this application by npm.
-  // This can be `npm`, `npx`, or `undefined` if called by `node` directly.
-  const execPath = process_.env.npm_execpath ?? ''
-  if (execPath === '') {
-    return undefined
+  constructor (process_: NodeJS.Process, console_: Console) {
+    this.run = NpmRunner.#makeNpmRunner(process_, console_)
   }
 
-  if (npxMatcher.test(execPath)) {
-    // `npm` must be used for executing `ls`.
-    console_.debug('DEBUG | command: npx-cli.js usage detected, checking for npm-cli.js ...')
-    // Typically `npm-cli.js` is alongside `npx-cli.js`, as such we attempt to use this and validate it exists.
-    // Replace the script in the path, and normalise it with resolve (eliminates any extraneous path separators).
-    const npmPath = resolve(execPath.replace(npxMatcher, '$1npm-cli.js'))
-    if (existsSync(npmPath)) {
-      return npmPath
+  run: runFunc
+
+  #version: string | undefined
+
+  get version (): string {
+    if (this.#version === undefined) {
+      this.#version = this.run(['--version'], {
+        encoding: 'buffer',
+        maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
+      }).toString().trim()
     }
-  } else if (existsSync(execPath)) {
-    return execPath
+    return this.#version
   }
 
-  throw new Error(`unexpected NPM execPath: ${execPath}`)
-}
+  static #getExecPath (process_: NodeJS.Process, console_: Console): string | undefined {
+    // `npm_execpath` will be whichever cli script has called this application by npm.
+    // This can be `npm`, `npx`, or `undefined` if called by `node` directly.
+    const execPath = process_.env.npm_execpath ?? ''
+    if (execPath === '') {
+      return undefined
+    }
 
-export function makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
-  const execPath = getExecPath(process_, console_)
-  if (execPath === undefined) {
-    console_.debug('DEBUG | makeNpmRunner caused execSync "npm"')
-    // not shell-save - but this is okay four our use case - since we have complete control over `args` in the caller.
-    return (args, options) => execSync('npm ' + args.join(' '), options)
+    if (NpmRunner.#npxMatcher.test(execPath)) {
+      // `npm` must be used for executing `ls`.
+      console_.debug('DEBUG | command: npx-cli.js usage detected, checking for npm-cli.js ...')
+      // Typically `npm-cli.js` is alongside `npx-cli.js`, as such we attempt to use this and validate it exists.
+      // Replace the script in the path, and normalise it with resolve (eliminates any extraneous path separators).
+      const npmPath = resolve(execPath.replace(NpmRunner.#npxMatcher, '$1npm-cli.js'))
+      if (existsSync(npmPath)) {
+        return npmPath
+      }
+    } else if (existsSync(execPath)) {
+      return execPath
+    }
+
+    throw new Error(`unexpected NPM execPath: ${execPath}`)
   }
 
-  if (jsMatcher.test(execPath)) {
-    const nodeExecPath = process_.execPath
-    console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with  "-- %s"', nodeExecPath, execPath)
-    return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
-  }
+  static #makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
+    const execPath = NpmRunner.#getExecPath(process_, console_)
+    if (execPath === undefined) {
+      console_.debug('DEBUG | makeNpmRunner caused execSync "npm"')
+      // not shell-save - but this is okay four our use case - since we have complete control over `args` in the caller.
+      return (args, options) => execSync('npm ' + args.join(' '), options)
+    }
 
-  console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s"', execPath)
-  return (args, options) => execFileSync(execPath, args, options)
+    if (NpmRunner.#jsMatcher.test(execPath)) {
+      const nodeExecPath = process_.execPath
+      console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with  "-- %s"', nodeExecPath, execPath)
+      return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
+    }
+
+    console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s"', execPath)
+    return (args, options) => execFileSync(execPath, args, options)
+  }
 }
