@@ -10,8 +10,12 @@ All notable changes to this project will be documented in this file.
 * BREAKING Changes
   * Dropped support for `node<20.18.0` ([#1192] via [#1273])
   * Dropped support for `npm<9` ([#1274] via [#1273], [#1277])
+* Build
+  * Use _TypeScript_ `v5.8.2` now, was `v5.7.3` (via [#1267])
+
 
 [#1192]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1192
+[#1267]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1267
 [#1273]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1273
 [#1274]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1274
 [#1277]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1277
