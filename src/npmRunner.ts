@@ -55,6 +55,7 @@ export class NpmRunner {
     if (this.#version === undefined) {
       this.#version = this.run(['--version'], {
         ...options,
+        stdio: ['ignore', 'pipe', 'ignore'],
         encoding: 'buffer',
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
       }).toString().trim()

@@ -270,7 +270,8 @@ export async function run (process_: NodeJS.Process): Promise<number> {
   }
 
   if (options.includeWorkspaceRoot === true && options.workspace.length === 0) {
-    throw new Error("option '--include-workspace-root' cannot be used without option '-w, --workspace <workspace...>'")
+    throw new Error(
+      "option '--include-workspace-root' cannot be used without option '-w, --workspace <workspace...>'")
   }
 
   const packageFile = resolve(process_.cwd(), program.args[0] ?? 'package.json')

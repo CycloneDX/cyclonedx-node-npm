@@ -24,11 +24,11 @@ const { writeFileSync, readFileSync, existsSync } = require('fs')
 const { describe, expect, test } = require('@jest/globals')
 
 const { makeReproducible, getNpmVersion, regexEscape } = require('../_helper')
-const { UPDATE_SNAPSHOTS, mkTemp, cliWrapper, latestCdxSpecVersion, dummyProjectsRoot, dummyResultsRoot, projectDemoRootPath, demoResultsRoot } = require('./')
+const { NPM_LOWEST_SUPPORTED, UPDATE_SNAPSHOTS, mkTemp, cliWrapper, latestCdxSpecVersion, dummyProjectsRoot, dummyResultsRoot, projectDemoRootPath, demoResultsRoot } = require('./')
 
 describe('integration.cli.from-setups', () => {
   // some test beds might be skipped
-  const skipAllTests = getNpmVersion()[0] < 8
+  const skipAllTests = getNpmVersion()[0] < NPM_LOWEST_SUPPORTED[0]
 
   const cliRunTestTimeout = 15000
 
