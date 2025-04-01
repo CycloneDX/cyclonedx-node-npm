@@ -100,7 +100,6 @@ Options:
                                   Default behaviour is to include dependencies for all configured workspaces.
                                   This cannot be used if workspaces have been explicitly defined using `--workspace`.
                                   This feature is experimental.
-                                  (default: false)
   --include-workspace-root        Include workspace root dependencies along with explicitly defined workspaces' dependencies. This can only be used if you have explicitly defined workspaces using `--workspace`.
                                   Default behaviour is to not include the workspace root when workspaces are explicitly defined using `--workspace`.
                                   This feature is experimental.
@@ -127,7 +126,7 @@ Options:
                                   Set to "-" to write to STDOUT.
                                   (default: write to STDOUT)
   --validate                      Validate resulting BOM before outputting.
-                                  Validation is skipped, if requirements not met.See the README.
+                                  Validation is skipped, if requirements not met. See the README.
   --no-validate                   Disable validation of resulting BOM.
   --mc-type <type>                Type of the main component.
                                   (choices: "application", "firmware", "library", default: "application")

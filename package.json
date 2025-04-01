@@ -69,15 +69,15 @@
     }
   ],
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^7.0.0",
-    "commander": "^10.0.0",
-    "normalize-package-data": "^3||^4||^5||^6",
+    "@cyclonedx/cyclonedx-library": "^8.0.0",
+    "commander": "^13.1.0",
+    "normalize-package-data": "^7.0.0",
     "xmlbuilder2": "^3.0.2"
   },
   "devDependencies": {
     "@types/hosted-git-info": "^3.0.5",
-    "@types/node": "ts5.6",
-    "@types/normalize-package-data": "^2.4.1",
+    "@types/node": "ts5.8",
+    "@types/normalize-package-data": "^2.4.4",
     "eslint": "8.57.0",
     "eslint-config-standard": "17.1.0",
     "eslint-config-standard-with-typescript": "43.0.1",
