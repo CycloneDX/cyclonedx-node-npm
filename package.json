@@ -84,6 +84,7 @@
     "eslint-plugin-simple-import-sort": "12.1.1",
     "fast-glob": "^3.2.11",
     "imurmurhash": "^0.1.4",
+    "c8": "^10",
     "jest": "29.7.0",
     "jest-junit": "16.0.0",
     "npm-run-all2": "^7",
@@ -105,7 +106,7 @@
     "cyclonedx-npm": "bin/cyclonedx-npm-cli.js"
   },
   "main": "./dist/cli.js",
-  "exports": "./dist/index.js",
+  "exports": "./index.js",
   "scripts": {
     "prepublish": "npm run build",
     "prepublishOnly": "run-s -lc build setup-tests test:jest",
@@ -116,7 +117,7 @@
     "cs-fix": "eslint --fix .",
     "setup-tests": "node tests/integration/setup.js",
     "test": "run-p --aggregate-output -lc test:\\*",
-    "test:jest": "jest",
+    "test:jest": "c8 jest",
     "test:standard": "eslint .",
     "dogfooding:npx": "npx .",
     "dogfooding:npm-exec": "npm exec .",
