@@ -17,11 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { Spec } = require('@cyclonedx/cyclonedx-library')
-const { mkdtempSync } = require('fs')
-const { join, resolve } = require('path')
+const { createWriteStream, openSync } = require('node:fs')
+const { mkdtempSync } = require('node:fs')
+const { join, resolve } = require('node:path')
 
-const { createWriteStream, openSync } = require('fs')
+const { Spec } = require('@cyclonedx/cyclonedx-library')
 
 const cli = require('../../dist/cli')
 
@@ -56,7 +56,7 @@ const NPM_LOWEST_SUPPORTED = [9, 0, 0]
  * @param {string[]} args
  * @param {string} logFileBase
  * @param {string} cwd
- * @param {Object.<string, string>} env
+ * @param {Object<string, string>} env
  * @return {{res: Promise.<number>, outFile:string, errFile:string}}
  */
 function runCLI (args, logFileBase, cwd, env) {
@@ -68,7 +68,10 @@ function runCLI (args, logFileBase, cwd, env) {
   const errFD = openSync(errFile, 'w')
   const stderr = createWriteStream(null, { fd: errFD })
 
-  /** @type Partial<NodeJS.Process> */
+  /**
+   * Partial Process
+   * @see {NodeJS.Process}
+   */
   const mockProcess = {
     stdout,
     stderr,
@@ -87,7 +90,9 @@ function runCLI (args, logFileBase, cwd, env) {
     }
   }
 
-  /** @type Promise.<number> */
+  /**
+   * @type {Promise<number>}
+   */
   const res = cli.run(mockProcess)
 
   return { res, outFile, errFile }
@@ -107,16 +112,16 @@ module.exports = {
   NPM_LATETS,
   NPM_LOWEST_SUPPORTED,
   UPDATE_SNAPSHOTS,
-  latestCdxSpecVersion,
-  projectRootPath,
-  projectDemoRootPath,
-  projectTestDataPath,
-  demoResultsRoot,
-  dummyResultsRoot,
-  dummyProjectsRoot,
-  npmLsReplacementPath,
-  npmLsReplacement,
-  runCLI,
   cliWrapper,
-  mkTemp
+  demoResultsRoot,
+  dummyProjectsRoot,
+  dummyResultsRoot,
+  latestCdxSpecVersion,
+  mkTemp,
+  npmLsReplacement,
+  npmLsReplacementPath,
+  projectDemoRootPath,
+  projectRootPath,
+  projectTestDataPath,
+  runCLI
 }

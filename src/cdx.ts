@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 /**
  * CDX properties' names - specific to this very tool.
- * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md npm property taxonomy}
+ * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md | npm property taxonomy}
  */
 export const enum PropertyNames {
   PackageBundled = 'cdx:npm:package:bundled',
@@ -31,7 +31,7 @@ export const enum PropertyNames {
 
 /**
  * CDX properties' values' boolean representation - specific to this very tool.
- * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md npm property taxonomy}
+ * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md | npm property taxonomy}
  */
 export const enum PropertyValueBool {
   True = 'true',

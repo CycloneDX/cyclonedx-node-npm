@@ -17,9 +17,9 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { TreeBuilder } = require('../../dist/builders')
-
 const { describe, expect, test } = require('@jest/globals')
+
+const { TreeBuilder } = require('../../dist/builders')
 
 describe('builders.TreeBuilder', () => {
   describe('fromPaths', () => {

@@ -22,7 +22,9 @@ const { sync: glob } = require('fast-glob')
 const fileGlob = '*/CI_results/*.json'
 
 const filePattern = /\/(?<subject>[^/]+?)\/CI_results\/npm-ls(?<args>.*?)_npm(?<npm>.+?)_node(?<node>.+?)_(?<os>.+?).json$/i
-/** @typedef fileMatch
+
+/**
+ * @typedef fileMatch
  * @prop {string} path
  * @prop {string} subject
  * @prop {string} args
@@ -31,6 +33,7 @@ const filePattern = /\/(?<subject>[^/]+?)\/CI_results\/npm-ls(?<args>.*?)_npm(?<
  * @prop {string} os
  */
 
+/* eslint-disable-next-line jsdoc/valid-types -- ack */
 /** @type {import('fast-glob').OptionsInternal} */
 const globOptions = { absolute: true, caseSensitiveMatch: false, cwd: __dirname, deep: 3, onlyFiles: true, unique: true }
 

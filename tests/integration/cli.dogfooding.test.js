@@ -17,11 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { spawnSync } = require('child_process')
+const { spawnSync } = require('node:child_process')
 
 const { describe, expect, test } = require('@jest/globals')
 
-const { projectRootPath, cliWrapper } = require('./')
+const { cliWrapper, projectRootPath } = require('./')
 
 describe('integration.cli.dogfooding', () => {
   const cliRunTestTimeout = 15000

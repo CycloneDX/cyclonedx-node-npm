@@ -17,14 +17,14 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { join } = require('path')
-const { mkdirSync, writeFileSync, readFileSync } = require('fs')
+const { mkdirSync, readFileSync, writeFileSync } = require('node:fs')
+const { join } = require('node:path')
 
 const { describe, expect, test } = require('@jest/globals')
 
 const { index: indexNpmLsDemoData } = require('../_data/npm-ls_demo-results')
 const { makeReproducible } = require('../_helper')
-const { UPDATE_SNAPSHOTS, NPM_LOWEST_SUPPORTED, mkTemp, dummyProjectsRoot, runCLI, latestCdxSpecVersion, demoResultsRoot, npmLsReplacement } = require('./')
+const { NPM_LOWEST_SUPPORTED, UPDATE_SNAPSHOTS, demoResultsRoot, dummyProjectsRoot, latestCdxSpecVersion, mkTemp, npmLsReplacement, runCLI } = require('./')
 
 describe('integration.cli.from-collected', () => {
   const cliRunTestTimeout = 15000

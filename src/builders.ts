@@ -17,10 +17,13 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+/* eslint-disable max-lines -- ack */
+
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
+import path from 'node:path'
+
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
-import { existsSync, readdirSync, readFileSync } from 'fs'
-import normalizePackageData from 'normalize-package-data'
-import path from 'path'
+import normalizePackageJson from 'normalize-package-data'
 
 import {
   getMimeForLicenseFile,
@@ -72,6 +75,7 @@ export class BomBuilder {
 
   console: Console
 
+  /* eslint-disable-next-line @typescript-eslint/max-params -- ack */
   constructor (
     npmRunner: NpmRunner,
     componentBuilder: BomBuilder['componentBuilder'],
@@ -139,6 +143,7 @@ export class BomBuilder {
 
     this.console.info('INFO  | gathering dependency tree ...')
     this.console.debug('DEBUG | npm-ls: run npm with %j in %j', args, projectDir)
+    /* eslint-disable-next-line @typescript-eslint/init-declarations -- ack */
     let npmLsReturns: Buffer
     try {
       npmLsReturns = this.npmRunner.run(args, {
@@ -153,19 +158,21 @@ export class BomBuilder {
       // this.console.debug('%s', runError.stdout)
       // this.console.groupEnd()
       this.console.group('WARN  | npm-ls: MESSAGE')
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
       this.console.warn('%s', runError.message)
       this.console.groupEnd()
       this.console.group('ERROR | npm-ls: STDERR')
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
       this.console.error('%s', runError.stderr)
       this.console.groupEnd()
       if (!this.ignoreNpmErrors) {
         throw new Error(
-          `npm-ls exited with errors: ${
-            runError.status as undefined | string ?? 'noStatus'} ${
-            runError.signal as undefined | string ?? 'noSignal'}`,
+          /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
+          `npm-ls exited with errors: ${runError.status ?? 'noStatus'} ${runError.signal ?? 'noSignal'}`,
           { cause: runError })
       }
       this.console.debug('DEBUG | npm-ls exited with errors that are to be ignored.')
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access -- ack */
       npmLsReturns = runError.stdout ?? Buffer.alloc(0)
     }
     // this.console.debug('stdout: %s', npmLsReturns)
@@ -181,15 +188,22 @@ export class BomBuilder {
   buildFromNpmLs (data: any, npmVersion: string): Models.Bom {
     this.console.info('INFO  | building BOM ...')
 
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- ack */
+    const dataPath = data.path
+    if(!isString(dataPath) || dataPath.length === 0)
+    {
+      throw new Error(`unexpected path ${JSON.stringify(dataPath)}`)
+    }
+
     // region all components & dependencies
 
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
      * as we need to enforce a proper root component to enable all features of SBOM */
     const rootComponent: Models.Component = this.makeComponent(data, this.metaComponentType) ||
       new DummyComponent(this.metaComponentType, 'RootComponent')
-    const allComponents: AllComponents = new Map([[data.path, rootComponent]])
+    const allComponents: AllComponents = new Map([[dataPath, rootComponent]])
     this.gatherDependencies(allComponents, data, rootComponent.dependencies)
-    this.finalizePathProperties(data.path, allComponents.values())
+    this.finalizePathProperties(dataPath, allComponents.values())
 
     // endregion all components & dependencies
 
@@ -224,7 +238,7 @@ export class BomBuilder {
       this.treeBuilder.fromPaths(
         new Set(allComponents.keys()),
         // do not depend on `path.sep` -- this would be runtime-dependent, not input-dependent
-        data.path[0] === '/' ? '/' : '\\'
+        dataPath.startsWith('/') ? '/' : '\\'
       )
     )
     bom.components.forEach(c => { this.adjustNestedBomRefs(c, '') })
@@ -268,7 +282,7 @@ export class BomBuilder {
     return children
   }
 
-  private gatherDependencies (allComponents: AllComponents, data: any, directDepRefs: Set<Models.BomRef>): void {
+  private gatherDependencies (allComponents: AllComponents, data: NonNullable<any>, directDepRefs: Set<Models.BomRef>): void {
     /* One and the same component may appear multiple times in the tree,
      * but only one occurrence has all the direct dependencies.
      * So we work only on the one `data` that actually has dependencies.
@@ -277,15 +291,16 @@ export class BomBuilder {
      * but only the most top-level has a complete set with all `dependencies` *and* `resolved`.
      * This detail might cause implementation changes: run over the top level first, then go into nested dependencies.
      */
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument */
-    for (const [depName, depData] of Object.entries(data.dependencies ?? {}) as any) {
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-argument -- ack */
+    for (const [depName, depData] of Object.entries(data.dependencies ?? {}) as Iterable<[string, NonNullable<any>]>) {
       if (depData === null || typeof depData !== 'object') {
         // cannot build
         this.console.debug('DEBUG | skip malformed component %j in %j', depName, depData)
         continue // for-loop
       }
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access -- ack */
       const depPath = depData.path
-      if (!isString(depPath)) {
+      if (!isString(depPath) || depPath.length === 0) {
         // might be an optional dependency that was not installed
         // skip, as it was not installed anyway
         this.console.debug('DEBUG | skip missing component %j in %j', depName, depPath)
@@ -328,10 +343,11 @@ export class BomBuilder {
     }
     const packageJsonPath = path.join(data.path, 'package.json')
     try {
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- false-positive */
       return Object.assign(
         loadJsonFile(packageJsonPath) ?? {},
         data
-      )
+      ) as T
     } catch (err) {
       this.console.debug('DEBUG | failed loading package manifest %j: %s', packageJsonPath, err)
       return data
@@ -339,9 +355,9 @@ export class BomBuilder {
   }
 
   /**
-   * See {@link https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json#packages package lock docs} for "integrity"
-   * > integrity: A sha512 or sha1 [Standard Subresource Integrity](https://w3c.github.io/webappsec/specs/subresourceintegrity/)
-   * > string for the artifact that was unpacked in this location.
+   * See {@link https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json#packages | package lock docs} for "integrity"
+   *
+   * integrity: A sha512 or sha1 [Standard Subresource Integrity](https://w3c.github.io/webappsec/specs/subresourceintegrity/) string for the artifact that was unpacked in this location.
    */
   private readonly integrityRE: ReadonlyMap<Enums.HashAlgorithm, RegExp> = new Map([
     // !!! this list is pre-sorted, starting with most-common usage.
@@ -390,7 +406,10 @@ export class BomBuilder {
    */
   private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
-  private makeComponent (data: any, type?: Enums.ComponentType | undefined): Models.Component | false | undefined {
+  /* eslint-disable-next-line complexity -- ack*/
+  private makeComponent (data: any & { path: string }, type?: Enums.ComponentType): Models.Component | false | undefined {
+    /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- needed */
+
     const isOptional = data.optional === true
     if (isOptional && this.omitDependencyTypes.has('optional')) {
       this.console.debug('DEBUG | omit optional component: %j %j', data.name, data._id)
@@ -410,21 +429,24 @@ export class BomBuilder {
       return false
     }
 
-    // work with a deep copy, because `normalizePackageData()` might modify the data
+    // work with a deep copy, because `normalizePackageJson()` might modify the data
     let _dataC = structuredClonePolyfill(data)
     if (!this.packageLockOnly) {
       _dataC = this.enhancedPackageData(_dataC)
     }
-    normalizePackageData(_dataC as normalizePackageData.Input /* add debug for warnings? */)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
+    normalizePackageJson(_dataC as normalizePackageJson.Input /* add debug for warnings? */)
     // region fix normalizations
     if (isString(data.version)) {
       // allow non-SemVer strings
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-call -- ack */
       _dataC.version = data.version.trim()
     }
     // endregion fix normalizations
 
     const component = this.componentBuilder.makeComponent(
-      _dataC as normalizePackageData.Package,
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
+      _dataC as normalizePackageJson.Package,
       type
     )
     if (component === undefined) {
@@ -441,12 +463,11 @@ export class BomBuilder {
         this.console.warn('WARN  | Adding license text is ignored (package-lock-only is configured!) for %j', data.name)
       } else {
         component.evidence = new Models.ComponentEvidence()
-        for (const license of this.fetchLicenseEvidence(data?.path as string)) {
+        /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- false-positive */
+        for (const license of this.fetchLicenseEvidence(data.path)) {
           if (license != null) {
             // only create a evidence if a license attachment is found
-            if (component.evidence == null) {
-              component.evidence = new Models.ComponentEvidence()
-            }
+            component.evidence ??= new Models.ComponentEvidence();
             component.evidence.licenses.add(license)
           }
         }
@@ -461,7 +482,8 @@ export class BomBuilder {
 
     if (isString(data.path)) {
       component.properties.add(
-        new Models.Property(PropertyNames.PackageInstallPath, data.path as string)
+        /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- false-positive */
+        new Models.Property(PropertyNames.PackageInstallPath, data.path)
       )
     }
     if (isDev || isDevOptional) {
@@ -494,7 +516,7 @@ export class BomBuilder {
       if (isString(integrity)) {
         for (const [hashAlgorithm, hashRE] of this.integrityRE) {
           const hashMatchBase64 = hashRE.exec(integrity) ?? []
-          if (hashMatchBase64?.length === 2) {
+          if (hashMatchBase64.length === 2) {
             hashes.set(
               hashAlgorithm,
               Buffer.from(hashMatchBase64[1], 'base64').toString('hex')
@@ -516,11 +538,14 @@ export class BomBuilder {
       )
     }
 
+    /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
+
     // even private packages may have a PURL for identification
     component.purl = this.makePurl(component)
 
     /* eslint-disable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing
        -- since empty-string handling is needed */
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access -- ack */
     component.bomRef.value = (isString(data._id) ? data._id : undefined) ||
       `${component.group || '-'}/${component.name}@${component.version || '-'}`
     /* eslint-enable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing */
@@ -546,14 +571,15 @@ export class BomBuilder {
     if (!isString(rootPath) || rootPath === '') {
       return
     }
-    /* eslint-disable @typescript-eslint/unbound-method */
+    /* eslint-disable @typescript-eslint/unbound-method -- needed */
     // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
-    const [relativePath, dirSepRE] = rootPath[0] === '/'
+    const [relativePath, dirSepRE] = rootPath.startsWith('/')
       ? [path.posix.relative, /\//g]
       : [path.win32.relative, /\\/g]
     /* eslint-enable @typescript-eslint/unbound-method */
     for (const component of components) {
       for (const property of component.properties) {
+        /* eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison -- false positive */
         if (property.name !== PropertyNames.PackageInstallPath) {
           continue
         }
@@ -575,7 +601,7 @@ export class BomBuilder {
       '@cyclonedx/cyclonedx-library'
     ].map(s => s.split('/', 2))
     const nodeModulePaths = require.resolve.paths('__some_none-native_package__') ?? []
-    /* eslint-disable no-labels */
+    /* eslint-disable no-labels -- needed */
     libsLoop:
     for (const lib of libs) {
       for (const nodeModulePath of nodeModulePaths) {
@@ -589,9 +615,12 @@ export class BomBuilder {
     /* eslint-enable no-labels */
 
     for (const [packageJsonPath, cType] of packageJsonPaths) {
-      const packageData: object = loadJsonFile(packageJsonPath) ?? {}
-      normalizePackageData(packageData /* add debug for warnings? */)
-      const toolC = this.componentBuilder.makeComponent(packageData, cType)
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
+      const packageData = loadJsonFile(packageJsonPath) ?? {}
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+      normalizePackageJson(packageData as normalizePackageJson.Input /* add debug for warnings? */)
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+      const toolC = this.componentBuilder.makeComponent(packageData  as normalizePackageJson.Package, cType)
       if (toolC !== undefined) {
         yield toolC
       }
@@ -641,7 +670,9 @@ type PTree = Map<string, PTree>
 
 export class TreeBuilder {
   fromPaths (paths: Set<string>, dirSeparator: string): PTree {
-    const tree: PTree = new Map(Array.from(paths, p => [p + dirSeparator, new Map()]))
+    const tree: PTree = new Map(Array.from(
+      paths,
+        p => [p + dirSeparator, new Map<string, PTree>()]))
     this.nestPT(tree)
     this.renderPR(tree, '')
     return tree

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 /*!
 This file is part of CycloneDX generator for NPM projects.
 
@@ -18,8 +19,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const assert = require('assert')
-const { resolve } = require('path')
+const assert = require('node:assert')
+const { resolve } = require('node:path')
 
 if (process.argv[2] === '--version') {
   process.stdout.write(`${process.env.CT_VERSION}\n`)

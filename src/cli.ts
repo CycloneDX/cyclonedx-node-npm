@@ -17,10 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { existsSync, mkdirSync, openSync } from 'node:fs'
+import { dirname, resolve } from 'node:path'
+
 import { Builders, Enums, Factories, Serialize, Spec, Validation } from '@cyclonedx/cyclonedx-library'
 import { Argument, Command, Option } from 'commander'
-import { existsSync, mkdirSync, openSync } from 'fs'
-import { dirname, resolve } from 'path'
 
 import { loadJsonFile, type Version, versionCompare, versionTuple, writeAllSync } from './_helpers'
 import { BomBuilder, TreeBuilder } from './builders'
@@ -230,6 +231,7 @@ function makeCommand (process_: NodeJS.Process): Command {
     )
   ).version(
     // that is supposed to be the last option in the list on the help page.
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion, @typescript-eslint/no-unsafe-member-access -- ack */
     loadJsonFile(resolve(module.path, '..', 'package.json')).version as string
   ).allowExcessArguments(
     false
@@ -244,6 +246,7 @@ const enum ExitCode {
 
 const npmMinVersion: Version = Object.freeze([9, 0, 0])
 
+/* eslint-disable-next-line complexity -- ack */
 export async function run (process_: NodeJS.Process): Promise<number> {
   process_.title = 'cyclonedx-node-npm'
 
@@ -328,7 +331,9 @@ export async function run (process_: NodeJS.Process): Promise<number> {
     throw new Error('unsupported spec-version')
   }
 
+  /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
   let serializer: Serialize.Types.Serializer
+  /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
   let validator: Validation.Types.Validator
   switch (options.outputFormat) {
     case OutputFormat.XML:
@@ -350,6 +355,7 @@ export async function run (process_: NodeJS.Process): Promise<number> {
   if (options.validate ?? true) {
     myConsole.log('LOG   | try validating BOM result ...')
     try {
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- false-positive  */
       const validationErrors = await validator.validate(serialized)
       if (validationErrors === null) {
         myConsole.info('INFO  | BOM result appears valid')
@@ -371,7 +377,9 @@ export async function run (process_: NodeJS.Process): Promise<number> {
           myConsole.info('INFO  | skipped validating BOM:', err.message)
         }
       } else {
+        myConsole.debug('DEBUG | unexpected error. details: ', err)
         myConsole.error('ERROR | unexpected error')
+        /* eslint-disable-next-line @typescript-eslint/only-throw-error -- forward */
         throw err
       }
     }
