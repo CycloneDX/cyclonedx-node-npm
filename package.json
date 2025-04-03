@@ -75,7 +75,6 @@
     "xmlbuilder2": "^3.0.2"
   },
   "devDependencies": {
-    "@types/hosted-git-info": "^3.0.5",
     "@types/node": "ts5.8",
     "@types/normalize-package-data": "^2.4.4",
     "eslint": "8.57.0",
