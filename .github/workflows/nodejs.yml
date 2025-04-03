@@ -106,9 +106,12 @@ jobs:
         shell: bash
         run: |
           set -ex
-          npm i --ignore-scripts --loglevel=silly
+          dev_requirements='c8 jest jest-junit imurmurhash fast-glob'
+          npm i --ignore-scripts --omit=peer --omit=dev --only=prod --production --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
-          npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
+          npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2 || true
+          ## install the needed dev-deps
+          npm i --ignore-scripts --loglevel=silly --no-save $dev_requirements
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
@@ -118,14 +121,7 @@ jobs:
       - name: setup-tests
         run: npm run setup-tests
       - name: test
-        run: >
-          npm run test:jest -- 
-          --ci
-          --verbose
-          --runInBand
-          --logHeapUsage
-          --coverage
-          --coverageDirectory='${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}/coverage'
+        run: npm run test:jest
         env:
           JEST_JUNIT_OUTPUT_DIR: '${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}'
       - name: artifact test logs
@@ -136,6 +132,13 @@ jobs:
           name: logs-jest_node${{ matrix.node-version }}_${{ matrix.os }}
           path: tests/_log
           if-no-files-found: error
+      - name: collect coverage
+        if: ${{ failure() || success() }}
+        run: >
+          node -- node_modules/c8/bin/c8.js
+          report
+          --reporter clover
+          --reports-dir '${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}/coverage'
       - name: artifact test reports
         if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
@@ -143,7 +146,6 @@ jobs:
         with:
           name: '${{ env.TESTS_REPORTS_ARTIFACT }}_node${{ matrix.node-version }}_${{ matrix.os }}'
           path: ${{ env.REPORTS_DIR }}
-          if-no-files-found: error
 
   dogfooding:
     needs: [ 'build' ]
@@ -234,5 +236,5 @@ jobs:
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ env.CODACY_PROJECT_TOKEN }}
-          coverage-reports: ${{ env.REPORTS_DIR }}/*/coverage/clover.xml
+          coverage-reports: ${{ env.REPORTS_DIR }}/*/coverage/*
 

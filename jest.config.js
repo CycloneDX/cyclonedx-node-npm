@@ -37,33 +37,22 @@ module.exports = {
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: true,
+  collectCoverage: false, // need to utilize `c8` to fetch coverage of child processes...
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: [
-    'bin/**',
-    'src/**',
-    'dist/**' // running tests on build results, so need to have this vector
-  ],
+  collectCoverageFrom: ['.no_src'], // need to utilize `c8` to fetch coverage of child processes...
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: 'reports/jest/coverage',
+  coverageDirectory: '.no_target', // need to utilize `c8` to fetch coverage of child processes...
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: [
-    '/node_modules/'
-  ],
+  coveragePathIgnorePatterns: ['/'], // need to utilize `c8` to fetch coverage of child processes...
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: 'babel', // we use compiled data with a map - we need to use babel here.
+  coverageProvider: undefined, // need to utilize `c8` to fetch coverage of child processes...
 
   // A list of reporter names that Jest uses when writing coverage reports
-  coverageReporters: [
-    'json',
-    'text',
-    'lcov',
-    'clover'
-  ],
+  coverageReporters: [], // need to utilize `c8` to fetch coverage of child processes...
 
   // An object that configures minimum threshold enforcement for coverage results
   // coverageThreshold: undefined,

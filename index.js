@@ -34,7 +34,7 @@ Call it programmatically like so:
       }))
 `)
 
-export {/*
+module.exports = {/*
 Intentionally, here are no exports.
 See above!
 */}
