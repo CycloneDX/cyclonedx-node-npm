@@ -52,10 +52,10 @@ jobs:
           path: ${{ env.DIST_DIR }}
           if-no-files-found: error
 
-  test-standards:
-    name: test standards
-    timeout-minutes: 30
-    runs-on: 'ubuntu-latest'
+  test-standard:
+    name: test standard
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
@@ -65,11 +65,37 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          # cache: 'npm'
-      - name: install subject
-        run: npm i --loglevel=silly
-      - name: run tests
-        run: npm run test:standard
+          # cache: "npm"
+          # cache-dependency-path: "**/package-lock.json"
+      - name: setup project
+        run: |
+          npm install --ignore-scripts --loglevel=silly
+      - name: setup tools
+        run: |
+          echo "::group::install code-style deps"
+          npm run -- dev-setup:code-style --ignore-scripts --loglevel=silly
+          echo "::endgroup::"
+      - name: make reports dir
+        run: mkdir -p "$REPORTS_DIR"
+      - name: test
+        run: >
+          npm run -- test:standard
+          --format json
+          --output-file "$PWD/$REPORTS_DIR/eslint.json"
+      - name: Annotate Code
+        if: ${{ failure() || success() }}
+        # see https://github.com/DerLev/eslint-annotations
+        uses: DerLev/eslint-annotations@v2
+        with:
+          eslint-report: ${{ env.REPORTS_DIR }}/eslint.json
+      - name: artifact eslint result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        if: ${{ failure() }}
+        with:
+          name: ${{ env.STANDARD_REPORTS_ARTIFACT }}
+          path: ${{ env.REPORTS_DIR }}
+          if-no-files-found: error
 
   test-jest:
     needs: [ 'build' ]
