@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 /*!
 This file is part of CycloneDX generator for NPM projects.
 

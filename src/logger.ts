@@ -23,6 +23,7 @@ function noop (): void {
 
 export function makeConsoleLogger (process: NodeJS.Process, level: number): Console {
   // all output shall be bound to stdError - stdOut is for result output only
+  /* eslint-disable-next-line no-console -- intended */
   const myConsole = new console.Console(process.stderr, process.stderr)
 
   if (level < 3) {

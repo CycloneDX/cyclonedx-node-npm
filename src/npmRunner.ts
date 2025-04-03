@@ -17,9 +17,9 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { type CommonExecOptions, execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'child_process'
-import { existsSync } from 'fs'
-import { resolve } from 'path'
+import { type CommonExecOptions, execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'node:child_process'
+import { existsSync } from 'node:fs'
+import { resolve } from 'node:path'
 
 /** !attention: args might not be shell-save. */
 type runFunc = (args: string[], options: ExecSyncOptionsWithBufferEncoding) => Buffer
@@ -31,9 +31,9 @@ export class NpmRunner {
    * Matches the filename for the npx cli script in a given path:
    *
    * Matches:
-   *   - npx-cli.js     // plain
-   *   - foo/npx-cli.js // unix-like paths
-   *   - foo\npx-cli.js // windows-like paths
+   *   - npx-cli.js        // plain
+   *   - foo/npx-cli.js    // unix-like paths
+   *   - foo\\npx-cli.js   // windows-like paths
    *
    * Does not match:
    *   - foobar/            // Not the filename

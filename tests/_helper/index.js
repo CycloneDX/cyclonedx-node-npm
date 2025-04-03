@@ -17,12 +17,12 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { createReadStream } = require('fs')
+const { spawnSync } = require('node:child_process')
+const { createReadStream } = require('node:fs')
 
 const MurmurHash3 = require('imurmurhash')
 
 const { version: thisVersion } = require('../../package.json')
-const { spawnSync } = require('child_process')
 
 /**
  * @type {Map<string, Promise<string>>}
@@ -204,8 +204,8 @@ function regexEscape (s) {
 }
 
 module.exports = {
+  getNpmVersion,
   hashFile,
   makeReproducible,
-  getNpmVersion,
   regexEscape
 }

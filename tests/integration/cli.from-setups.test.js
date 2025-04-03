@@ -17,14 +17,14 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { spawnSync } = require('child_process')
-const { dirname, join } = require('path')
-const { writeFileSync, readFileSync, existsSync } = require('fs')
+const { spawnSync } = require('node:child_process')
+const { existsSync, readFileSync, writeFileSync } = require('node:fs')
+const { dirname, join } = require('node:path')
 
 const { describe, expect, test } = require('@jest/globals')
 
-const { makeReproducible, getNpmVersion, regexEscape } = require('../_helper')
-const { NPM_LOWEST_SUPPORTED, UPDATE_SNAPSHOTS, mkTemp, cliWrapper, latestCdxSpecVersion, dummyProjectsRoot, dummyResultsRoot, projectDemoRootPath, demoResultsRoot } = require('./')
+const { getNpmVersion, makeReproducible, regexEscape } = require('../_helper')
+const { NPM_LOWEST_SUPPORTED, UPDATE_SNAPSHOTS, cliWrapper, demoResultsRoot, dummyProjectsRoot, dummyResultsRoot, latestCdxSpecVersion, mkTemp, projectDemoRootPath } = require('./')
 
 describe('integration.cli.from-setups', () => {
   // some test beds might be skipped
@@ -134,6 +134,7 @@ describe('integration.cli.from-setups', () => {
      * @param {string} oType
      * @param {'json'|'xml'} format
      * @param {string[]} [additionalCliArgs]
+     * @throws {*} forwarded from `expect()...`
      */
     function runTest (demo, oType, format, additionalCliArgs = []) {
       const expectedOutSnap = join(demoResultsRoot, oType, `${demo}_from-setup.snap.${format}`)

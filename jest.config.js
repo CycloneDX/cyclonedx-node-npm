@@ -17,10 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+/* eslint-disable jsdoc/valid-types */
+
 /**
  * For a detailed explanation regarding each configuration property, visit:
  * {@link https://jestjs.io/docs/configuration}
- *
  * @type {import('jest').Config}
  */
 module.exports = {

@@ -17,12 +17,15 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { readFileSync, writeSync } from 'fs'
-import { extname, parse } from 'path'
+import { readFileSync, writeSync } from 'node:fs'
+import { extname, parse } from 'node:path'
 
 export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
   ? structuredClone
-  : function (value) { return JSON.parse(JSON.stringify(value)) }
+  : function <T>(value: T): T {
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
+    return JSON.parse(JSON.stringify(value)) as T
+  }
 
 export function loadJsonFile (path: string): any {
   return JSON.parse(readFileSync(path, 'utf8'))
@@ -38,10 +41,13 @@ export async function writeAllSync (fd: number, data: string): Promise<number> {
   while (w < l) {
     try {
       w += writeSync(fd, b, w)
-    } catch (error: any) {
+    } catch (error:any) {
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
       if (error.code !== 'EAGAIN') {
-        throw error
+        /* eslint-disable-next-line @typescript-eslint/only-throw-error -- ack */
+        throw error // forward
       }
+      /* eslint-disable-next-line promise/avoid-new -- needed */
       await new Promise((resolve) => setTimeout(resolve, 100))
     }
   }
@@ -115,11 +121,10 @@ export type Version = readonly number[]
 export type CompareResult = -1 | 0 | 1
 
 export function versionCompare (a: Version, b: Version): CompareResult {
-  let ai: number, bi: number
   for (let i = 0, l = Math.max(a.length, b.length); i < l; ++i) {
     // make values NaN-save, null-safe, undefined-safe
-    ai = a[i] || 0 /* eslint-disable-line @typescript-eslint/strict-boolean-expressions */
-    bi = b[i] || 0 /* eslint-disable-line @typescript-eslint/strict-boolean-expressions */
+    const ai = a[i] || 0 /* eslint-disable-line @typescript-eslint/strict-boolean-expressions -- needed */
+    const bi = b[i] || 0 /* eslint-disable-line @typescript-eslint/strict-boolean-expressions -- needed */
     if (ai < bi) {
       // A < B
       return -1

@@ -17,8 +17,9 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { getMimeForLicenseFile } = require('../../dist/_helpers')
 const { describe, expect, test } = require('@jest/globals')
+
+const { getMimeForLicenseFile } = require('../../dist/_helpers')
 
 describe('getMimeForLicenseFile', () => {
   test.each([
