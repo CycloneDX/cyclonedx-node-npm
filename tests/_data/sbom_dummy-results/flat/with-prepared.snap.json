@@ -9580,50 +9580,6 @@
     },
     {
       "type": "library",
-      "name": "uuidv4",
-      "version": "6.2.13",
-      "bom-ref": "uuidv4@6.2.13",
-      "description": "uuidv4 creates v4 UUIDs.",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/uuidv4@6.2.13",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "https://github.com/thenativeweb/uuidv4/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git://github.com/thenativeweb/uuidv4.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/thenativeweb/uuidv4#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/uuidv4"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "which",
       "version": "4.0.0",
       "bom-ref": "which@4.0.0",
@@ -10133,8 +10089,7 @@
         "buffer@5.7.1",
         "bundle-dependencies@1.0.2",
         "ignore@5.3.2",
-        "uuid@8.3.2",
-        "uuidv4@6.2.13"
+        "uuid@8.3.2"
       ]
     },
     {
@@ -11273,13 +11228,6 @@
     },
     {
       "ref": "uuid@8.3.2"
-    },
-    {
-      "ref": "uuidv4@6.2.13",
-      "dependsOn": [
-        "@types/uuid@8.3.4",
-        "uuid@8.3.2"
-      ]
     },
     {
       "ref": "which@4.0.0",

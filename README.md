@@ -157,6 +157,8 @@ Read more on the topic in the [dedicated docs "Component Deduplication"](https:/
 This tool utilizes the [CycloneDX library][cyclonedx-library] to generate the actual data structures, and serialize and validate them.  
 Validation requires [transitive optional dependencies](https://github.com/CycloneDX/cyclonedx-javascript-library/blob/main/README.md#optional-dependencies).
 
+> **Security Note**: Due to a vulnerability in the optional dependency `libxmljs2` ([GHSA-78h3-pg4x-j8cv](https://github.com/advisories/GHSA-78h3-pg4x-j8cv)), this package is configured to omit optional dependencies by default. This may affect XML validation functionality.
+
 This tool does **not** expose any additional _public_ API or classes - all code is intended to be internal and might change without any notice during version upgrades.
 However, the CLI is stable - you may call it programmatically like:
 ```javascript

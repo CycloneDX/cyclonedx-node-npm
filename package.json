@@ -74,6 +74,12 @@
     "normalize-package-data": "^7.0.0",
     "xmlbuilder2": "^3.0.2"
   },
+  "installConfig": {
+    "omit": ["optional"]
+  },
+  "comments": {
+    "security": "omit optional dependencies to avoid vulnerable libxmljs2 package"
+  },
   "devDependencies": {
     "@types/node": "ts5.8",
     "@types/normalize-package-data": "^2.4.4",
@@ -124,5 +130,6 @@
     "suiteName": "jest tests",
     "outputDirectory": "reports/jest",
     "outputName": "tests.junit.xml"
-  }
+  },
+  "packageManager": "pnpm@10.7.1+sha512.2d92c86b7928dc8284f53494fb4201f983da65f0fb4f0d40baafa5cf628fa31dae3e5968f12466f17df7e97310e30f343a648baea1b9b350685dafafffdf5808"
 }

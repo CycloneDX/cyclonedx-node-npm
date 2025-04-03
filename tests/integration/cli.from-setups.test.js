@@ -56,9 +56,19 @@ describe('integration.cli.from-setups', () => {
     ]
 
     function runTest (subject, project, format, additionalCliArgs = []) {
-      const expectedOutSnap = join(dummyResultsRoot, subject, `${project}.snap.${format}`)
+      // For XML validation tests, we need to use normal snapshots with optional dependencies
+      // For JSON tests and non-validation XML tests, we can use the no_optional snapshots
+      const useOptionalDeps = format === 'xml' && additionalCliArgs.includes('--validate')
+
+      // Choose between standard and no_optional snapshots based on whether XML validation is needed
+      const snapshotSubject = useOptionalDeps ? subject : `${subject}_no_optional`
+      const expectedOutSnap = join(dummyResultsRoot, snapshotSubject, `${project}.snap.${format}`)
+
       const outFile = join(tmpRoot, subject, `${project}.${format}`)
       const outDirExisted = existsSync(dirname(outFile))
+
+      // Determine environment variables based on whether we need optional dependencies
+      const envVars = useOptionalDeps ? {} : { npm_config_omit: 'optional' }
       // no need to create that outFile dir first - the tool is expected to do that for us
       const res = spawnSync(
         process.execPath,
@@ -73,7 +83,11 @@ describe('integration.cli.from-setups', () => {
         ], {
           cwd: join(dummyProjectsRoot, project),
           stdio: ['ignore', 'ignore', 'pipe'],
-          encoding: 'utf8'
+          encoding: 'utf8',
+          env: {
+            ...process.env,
+            ...envVars
+          }
         }
       )
       try {
