@@ -10,7 +10,7 @@ first.
 To start developing simply run to install dev-dependencies and tools:
 
 ```shell
-npm ci
+npm run dev-setup
 ```
 
 ## Build from source
