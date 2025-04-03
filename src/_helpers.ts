@@ -113,12 +113,12 @@ export function getMimeForLicenseFile (filename: string): MimeType | undefined {
 
 // region version compare
 
+export type Version = readonly number[]
+export type CompareResult = -1 | 0 | 1
+
 export function versionTuple (value: string): Version {
   return Object.freeze(value.split('.').map(Number))
 }
-
-export type Version = readonly number[]
-export type CompareResult = -1 | 0 | 1
 
 export function versionCompare (a: Version, b: Version): CompareResult {
   for (let i = 0, l = Math.max(a.length, b.length); i < l; ++i) {
