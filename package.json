@@ -77,7 +77,7 @@
   "devDependencies": {
     "@types/node": "ts5.8",
     "@types/normalize-package-data": "^2.4.4",
-    "eslint": "8.57.0",
+    "eslint": "9.23.0",
     "eslint-config-standard": "17.1.0",
     "eslint-config-standard-with-typescript": "43.0.1",
     "eslint-plugin-header": "3.1.1",
