@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file.
 * Added
   * CLI switch `-o`   as shorthand for `--output-file` ([#1282] via [#1288]) 
   * CLI switch `--ov` as shorthand for `--outout-format` ([#1282] via [#1288]) 
-  * CLI switch `--sv` as shorthand for `--schema-version` ([#1282] via [#1288])
+  * CLI switch `--sv` as shorthand for `--spec-version` ([#1282] via [#1288])
 * Runtime Dependencies
   * Raised `@cyclonedx/cyclonedx-library@^8.0.0`, was `@^7.0.0` (via [#1281])
   * Raised `commander@^13.1.0`, was `@^10.0.0` (via [#1281], [#1288])
