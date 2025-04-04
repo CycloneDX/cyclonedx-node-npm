@@ -12,7 +12,7 @@ All notable changes to this project will be documented in this file.
   * Dropped support for `npm<9` ([#1274] via [#1273], [#1277])
 * Added
   * CLI switch `-o`   as shorthand for `--output-file` ([#1282] via [#1288]) 
-  * CLI switch `--ov` as shorthand for `--outout-format` ([#1282] via [#1288]) 
+  * CLI switch `--of` as shorthand for `--outout-format` ([#1282] via [#1288]) 
   * CLI switch `--sv` as shorthand for `--spec-version` ([#1282] via [#1288])
 * Runtime Dependencies
   * Raised `@cyclonedx/cyclonedx-library@^8.0.0`, was `@^7.0.0` (via [#1281])
