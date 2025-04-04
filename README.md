@@ -115,14 +115,14 @@ Options:
   --short-PURLs                   Omit all qualifiers from PackageURLs.
                                   This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.
                                   (default: false)
-  --spec-version <version>        Which version of CycloneDX spec to use.
+  --sv, --spec-version <version>  Which version of CycloneDX spec to use.
                                   (choices: "1.2", "1.3", "1.4", "1.5", "1.6", default: "1.6")
   --output-reproducible           Whether to go the extra mile and make the output reproducible.
                                   This requires more resources, and might result in loss of time- and random-based-values.
                                   (env: BOM_REPRODUCIBLE)
-  --output-format <format>        Which output format to use.
+  --of, --output-format <format>  Which output format to use.
                                   (choices: "JSON", "XML", default: "JSON")
-  --output-file <file>            Path to the output file.
+  -o, --output-file <file>        Path to the output file.
                                   Set to "-" to write to STDOUT.
                                   (default: write to STDOUT)
   --validate                      Validate resulting BOM before outputting.
