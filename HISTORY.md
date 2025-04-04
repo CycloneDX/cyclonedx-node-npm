@@ -10,10 +10,14 @@ All notable changes to this project will be documented in this file.
 * BREAKING Changes
   * Dropped support for `node<20.18.0` ([#1192] via [#1273])
   * Dropped support for `npm<9` ([#1274] via [#1273], [#1277])
+* Added
+  * CLI switch `-o`   as shorthand for `--output-file` ([#1282] via [#1288]) 
+  * CLI switch `--ov` as shorthand for `--outout-format` ([#1282] via [#1288]) 
+  * CLI switch `--sv` as shorthand for `--schema-version` ([#1282] via [#1288])
 * Runtime Dependencies
-    * Raised `@cyclonedx/cyclonedx-library@^8.0.0`, was `@^7.0.0` (via [#1281])
-    * Raised `commander@^13.1.0`, was `@^10.0.0` (via [#1281])
-    * Raised `normalize-package-data@^7.0.0`, was `@^3||^4||^5||^6` (via [#1281])
+  * Raised `@cyclonedx/cyclonedx-library@^8.0.0`, was `@^7.0.0` (via [#1281])
+  * Raised `commander@^13.1.0`, was `@^10.0.0` (via [#1281], [#1288])
+  * Raised `normalize-package-data@^7.0.0`, was `@^3||^4||^5||^6` (via [#1281])
 * Build
   * Use _TypeScript_ `v5.8.2` now, was `v5.7.3` (via [#1267])
 
@@ -23,6 +27,8 @@ All notable changes to this project will be documented in this file.
 [#1274]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1274
 [#1277]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1277
 [#1281]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1281
+[#1282]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1282
+[#1288]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1288
 
 ## 2.1.0 - 2025-03-19
 

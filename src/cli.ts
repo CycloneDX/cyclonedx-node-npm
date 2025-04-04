@@ -145,7 +145,7 @@ function makeCommand (process_: NodeJS.Process): Command {
     ).default(false)
   ).addOption(
     new Option(
-      '--spec-version <version>',
+      '--sv, --spec-version <version>',
       'Which version of CycloneDX spec to use.'
     ).choices(
       Object.keys(Spec.SpecVersionDict).sort()
@@ -163,7 +163,7 @@ function makeCommand (process_: NodeJS.Process): Command {
   ).addOption(
     (function () {
       const o = new Option(
-        '--output-format <format>',
+        '--of, --output-format <format>',
         'Which output format to use.'
       ).choices(
         Object.values(OutputFormat).sort()
@@ -179,7 +179,7 @@ function makeCommand (process_: NodeJS.Process): Command {
     })()
   ).addOption(
     new Option(
-      '--output-file <file>',
+      '-o, --output-file <file>',
       'Path to the output file.\n' +
       `Set to "${OutputStdOut}" to write to STDOUT.`
     ).default(
