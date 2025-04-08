@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "7.0.0",
+    "@db-ui/base": "^0.29.2",
     "base64-js": "1.0.1",
     "buffer": "^5.4.3",
     "bundle-dependencies": "1.0.2",

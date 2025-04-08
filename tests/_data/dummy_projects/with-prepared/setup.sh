@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -eux
 
 THIS_DIR="$(realpath "$(dirname $0)" )"
 NODE_MODULES_DIR="$THIS_DIR/node_modules"
@@ -16,6 +17,7 @@ find "$NODE_MODULES_DIR" \
     -name 'package.json' -or -name '.package-lock.json' \
     -or -iname '*license*' -or  -iname '*licence*' \
     -or -name 'NOTICE' \
+    -or -path '*/LICENSES/*' \
   \) \
   -delete
 
@@ -24,6 +26,7 @@ find "$NODE_MODULES_DIR" \
   -or -iname '*.ts'  -or -iname '*.js' \
   -or -iname '*.cts' -or -iname '*.cjs' \
   -or -iname '*.mts' -or -iname '*.mjs' \
-  \) -delete
+  \) \
+  -delete
 
 
