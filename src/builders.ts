@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 /* eslint-disable max-lines -- ack */
 
-import { existsSync, readdirSync, readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import path from 'node:path'
 
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
@@ -635,24 +635,37 @@ export class BomBuilder {
       if (!this.#LICENSE_FILENAME_PATTERN.test(file)) {
         continue
       }
+      const fp = path.join(dirPath, file)
+
+      // Ignore all directories - they are not files :-)
+      // Don't follow symlinks for security reasons!
+      if (!statSync(fp).isFile()) {
+        continue
+      }
 
       const contentType = getMimeForLicenseFile(file)
       if (contentType === undefined) {
         continue
       }
 
-      const fp = path.join(dirPath, file)
-      yield new Models.NamedLicense(
-        `file: ${file}`,
-        {
-          text: new Models.Attachment(
-            readFileSync(fp).toString('base64'),
-            {
-              contentType,
-              encoding: Enums.AttachmentEncoding.Base64
-            }
-          )
-        })
+      try {
+        yield new Models.NamedLicense(
+          `file: ${file}`,
+          {
+            text: new Models.Attachment(
+              readFileSync(fp).toString('base64'),
+              {
+                contentType,
+                encoding: Enums.AttachmentEncoding.Base64
+              }
+            )
+          })
+      }
+      /* c8 ignore next 3 */
+      catch (err) {
+        this.console.info('INFO  | skipped license file %s', fp)
+        this.console.debug('DEBUG | skipped license file %s: %s', fp, err)
+      }
     }
   }
 }
