@@ -1,0 +1,46 @@
+All Deutsche Bahn AG (hereinafter “DB”) specific design assets like fonts, icons,
+trademarks, brandings, etc. (hereinafter “DB Designs”) are licensed under the following
+license agreement (the “DB Designs License”):
+
+-   The DB Designs may only be used by external users who are acting as contractors or
+    service providers for DB or a group company by virtue of a contractual relationship and
+    use the DB Designs in this context ("User"). A license agreement with third parties who
+    are not in a contractual relationship with DB or a group company is not possible.
+-   DB is and remains the owner or holds the exclusive usage rights to the DB Designs.
+    DB grants the User a royalty-free, non-exclusive, non-transferable, and non-sublicensable
+    right, limited geographically, temporally, and in content to the duration and purposes
+    of the contractual relationship with DB or a group company, to use the DB Designs in
+    accordance with this license agreement.
+-   The User may use the DB Designs only in connection with or for the fulfillment of
+    orders and/or services that they provide for DB or a group company. Any other use,
+    particularly for private personal purposes or for unauthorized third parties, is
+    prohibited. The User may not sublicense, distribute, or otherwise make the DB Designs
+    accessible to third parties who are not part of DB AG or a group company, unless this
+    is expressly permitted by the underlying contractual relationship between the User and
+    DB or the group company. The User may not modify, alter, convert, edit, reverse engineer,
+    or decompile the DB Designs; in particular, they may not make any graphical changes
+    and/or alter, remove, or add technical functions. Editing or using the DB Designs in
+    an altered form is only permitted with the express prior written consent of DB.
+-   Unless required by applicable law or agreed to in writing, DB provides the DB Designs
+    on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+    implied, including, without limitation, any warranties or conditions of title,
+    non-infringement, merchantability, or fitness for a particular purpose. DB is only liable
+    in cases of intent or gross negligence, within the framework of mandatory statutory
+    liability provisions, particularly the Product Liability Act, as well as for damages
+    arising from injury to life, body, or health of individuals. In cases of gross negligence,
+    liability is limited to typical and foreseeable damages. This limitation of liability also
+    applies in favor of group companies as well as in favor of vicarious agents of DB and
+    its group companies.
+-   This DB Designs License automatically ends at the time when the underlying contractual
+    relationship between the user and DB or a group company ends. DB may terminate this
+    DB Designs License at any time without notice for good cause, in particular, if the User
+    violates this DB Designs License and does not cease the violation within a reasonable
+    period after a warning. The User is obligated to cease using the DB Designs immediately
+    upon termination of this DB Designs License and to delete all DB Designs and related files
+    in their possession or installed on their systems, as well as any backup copies, without delay.
+-   If any provision of this agreement is or becomes invalid or unenforceable, the remaining
+    provisions of this agreement shall remain unaffected. In place of the invalid or unenforceable
+    provision, a provision shall be deemed agreed upon that comes closest to the economic purpose
+    of the invalid or unenforceable provision in a legally permissible manner. The same applies in
+    the event of a gap in the agreement. This DB Designs License is governed by and construed in
+    accordance with the laws of Germany, excluding conflicts of law rules and principles.

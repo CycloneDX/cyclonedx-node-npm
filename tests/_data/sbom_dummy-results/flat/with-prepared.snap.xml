@@ -106,6 +106,40 @@
         <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library</property>
       </properties>
     </component>
+    <component type="library" bom-ref="@db-ui/base@0.29.2">
+      <author>Maximilian Franzke</author>
+      <group>@db-ui</group>
+      <name>base</name>
+      <version>0.29.2</version>
+      <description>Provides basic tokens and assets based on the DB Design System.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40db-ui/base@0.29.2</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@db-ui/base/-/base-0.29.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/db-ui/base/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/db-ui/base.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://db-ui.github.io/base/</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:path">node_modules/@db-ui/base</property>
+      </properties>
+    </component>
     <component type="library" bom-ref="@isaacs/cliui@8.0.2">
       <author>Ben Coe</author>
       <group>@isaacs</group>
@@ -7404,8 +7438,10 @@
       <dependency ref="spdx-expression-parse@4.0.0"/>
       <dependency ref="xmlbuilder2@3.1.1"/>
     </dependency>
+    <dependency ref="@db-ui/base@0.29.2"/>
     <dependency ref="@dummy-projects/with-prepared@-">
       <dependency ref="@cyclonedx/cyclonedx-library@7.0.0"/>
+      <dependency ref="@db-ui/base@0.29.2"/>
       <dependency ref="@types/node@20.14.10"/>
       <dependency ref="@types/uuid@8.3.4"/>
       <dependency ref="base64-js@1.0.1"/>
