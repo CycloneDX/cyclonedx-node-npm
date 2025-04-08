@@ -14,6 +14,8 @@ All notable changes to this project will be documented in this file.
   * CLI switch `-o`   as shorthand for `--output-file` ([#1282] via [#1288]) 
   * CLI switch `--of` as shorthand for `--outout-format` ([#1282] via [#1288]) 
   * CLI switch `--sv` as shorthand for `--spec-version` ([#1282] via [#1288])
+* Fixed
+  * License gathering correctly ignores symlinks and directories ([#1290] via [#1291])
 * Runtime Dependencies
   * Raised `@cyclonedx/cyclonedx-library@^8.0.0`, was `@^7.0.0` (via [#1281])
   * Raised `commander@^13.1.0`, was `@^10.0.0` (via [#1281], [#1288])
@@ -29,6 +31,8 @@ All notable changes to this project will be documented in this file.
 [#1281]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1281
 [#1282]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1282
 [#1288]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1288
+[#1290]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1290
+[#1291]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1291
 
 ## 2.1.0 - 2025-03-19
 
