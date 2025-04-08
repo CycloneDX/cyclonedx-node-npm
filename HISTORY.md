@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 3.0.0 - 2025-04-08
 
 * BREAKING Changes
   * Dropped support for `node<20.18.0` ([#1192] via [#1273])
@@ -21,7 +22,7 @@ All notable changes to this project will be documented in this file.
   * Raised `commander@^13.1.0`, was `@^10.0.0` (via [#1281], [#1288])
   * Raised `normalize-package-data@^7.0.0`, was `@^3||^4||^5||^6` (via [#1281])
 * Build
-  * Use _TypeScript_ `v5.8.2` now, was `v5.7.3` (via [#1267])
+  * Use _TypeScript_ `v5.8.3` now, was `v5.7.3` (via [#1267], [#1289])
 
 [#1192]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1192
 [#1267]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1267
@@ -31,6 +32,7 @@ All notable changes to this project will be documented in this file.
 [#1281]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1281
 [#1282]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1282
 [#1288]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1288
+[#1289]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1289
 [#1290]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1290
 [#1291]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1291
 
