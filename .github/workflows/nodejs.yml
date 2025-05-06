@@ -213,6 +213,11 @@ jobs:
         shell: bash
         run: |
           set -ex
+          if [[ '${{ matrix.npm-version }}' = '^9' ]]
+          then
+            # npm9 is bugged, - it does not properly check dependencies' engine requirements to select sufficient candidates... lets do this manually
+            npm i --no-save --ignore-scripts --loglevel=silly npm-run-all2@^7
+          fi
           npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2 || true
