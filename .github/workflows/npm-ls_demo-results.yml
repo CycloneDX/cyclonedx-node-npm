@@ -6,6 +6,8 @@ name: npm-ls demo results
 on:
   workflow_dispatch:
 
+permissions: {}
+
 env:
   DEMO_ROOT_DIR: demo
   RESULTS_DIR: CI_results

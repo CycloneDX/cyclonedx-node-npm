@@ -18,6 +18,8 @@ concurrency:
   group: '${{ github.workflow }}-${{ github.ref }}'
   cancel-in-progress: true
 
+permissions: {}
+
 env:
   NODE_ACTIVE_LTS: '22'  # https://nodejs.org/en/about/releases/
   DIST_DIR: dist
