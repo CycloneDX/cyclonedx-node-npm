@@ -28,7 +28,7 @@ on:
         default: false
         required: false
 
-permissions: write-all
+permissions: {}
 
 env:
   REPORTS_DIR: CI_reports
@@ -45,6 +45,8 @@ jobs:
       version_plain: ${{ steps.bump.outputs.version_plain }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      contents: write  # needed for git push
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
@@ -85,6 +87,8 @@ jobs:
     name: publish NPMJS
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      id-token: write  # Enables provenance signing via OIDC
     env:
       NPMJS_RELEASE_TAG: ${{ github.event.inputs.prerelease == 'true' && 'unstable-prerelease' || 'latest' }}
     steps:
@@ -130,6 +134,8 @@ jobs:
     name: publish GitHub
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      contents: write  # create a release
     env:
       ASSETS_DIR: release_assets
     steps:
