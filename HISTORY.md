@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Runtime Dependencies
+  * Raised `commander@^14.0.0`, was `@^13.1.0` (via [#1297])
+
+[#1297]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1297
+
 ## 3.0.0 - 2025-04-08
 
 * BREAKING Changes
