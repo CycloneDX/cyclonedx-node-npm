@@ -29,4 +29,8 @@ find "$NODE_MODULES_DIR" \
   \) \
   -delete
 
-
+find "$NODE_MODULES_DIR" \
+  -type d \
+  \( -name 'build' -or -name 'dist' -or -name 'lib' \) \
+  \( -path '*/node_modules/@*/*' -or -path '*/node_modules/[^@]*' \) \
+  | xargs rm -rf

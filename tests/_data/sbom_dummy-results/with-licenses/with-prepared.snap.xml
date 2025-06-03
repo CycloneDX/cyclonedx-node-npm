@@ -95,10 +95,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/@cyclonedx/cyclonedx-library/-/cyclonedx-library-7.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">8c56fe517b693dc7bd8a71d37a2742a67ed8e9ec175b5f59e0661bad26eca7223fa3c3c48f747cf59dd23fba981b180825a3676dd1951323719ef73d414ba5fb</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
@@ -144,10 +141,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/@db-ui/base/-/base-0.29.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">bc3c65ee804d300ac059c98f5df72d1d5e12747df866a08cfb310b9f5cd5017bfd6ce693b401ad2dc0d0a8ef3f1cb0caaf298a68592b340583d99532b54de90e</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/db-ui/base/issues</url>
@@ -180,7 +174,6 @@
       <name>cliui</name>
       <version>8.0.2</version>
       <description>easily create complex multi-column command-line-interfaces</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -190,10 +183,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/@isaacs/cliui/-/cliui-8.0.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">3bc8dc8da6d76a578e1bd0d0d3e0115d66414df9cfe16340ab3ba224aee5978e009b118abff2763384cf8f18d8df39c109fbc15c5cee726d6dc1dc85c9b16a10</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/yargs/cliui/issues</url>
@@ -226,7 +216,6 @@
       <name>agent</name>
       <version>2.2.2</version>
       <description>the http/https agent used by the npm cli</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -236,10 +225,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/@npmcli/agent/-/agent-2.2.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">3ab70d3d77694a5f545fba8f55159b996302497adc0dad8cf43beb6ce4e3edaa354b83e5a95158bfdff22ca324ac9299fd5e40fe40c10baf74a2bdf4ee2dba3a</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/agent/issues</url>
@@ -265,7 +251,6 @@
       <name>fs</name>
       <version>3.1.1</version>
       <description>filesystem utilities for the npm cli</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -275,10 +260,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/@npmcli/fs/-/fs-3.1.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">abd0915a3a4708c221e6c57279fa03d5c03b3e4bc82ea099b2748e114522bce44b8f108efc8ae6b9ed83a6b11388d804aa4b4305968cd418be8eb6abc755dd0a</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/fs/issues</url>
@@ -311,7 +293,6 @@
       <name>dom</name>
       <version>1.15.10</version>
       <description>A modern DOM implementation</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -321,10 +302,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/@oozcitak/dom/-/dom-1.15.10.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">d094f6f7f2dac558117062af1e64ab51312f67c057bd98469762c04915201ea0d30b5339835a4b995bf9e8860dcadddb1b60948c391cebbc27c990b5e296d0ad</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/dom/issues</url>
@@ -357,21 +335,13 @@
       <name>infra</name>
       <version>1.0.8</version>
       <description>An implementation of the Infra Living Standard</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40oozcitak/infra@1.0.8</purl>
+      <purl>pkg:npm/%40oozcitak/infra@1.0.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Foozcitak%2Finfra.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/@oozcitak/infra/-/infra-1.0.8.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">25101473d551e8818738bece185fb2aefb342cef1296a1a73c032acb33ae1593d26525c8ed77f63bdf9ac103d2317808586b6051ffdd03a1ece97eb24846964e</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/infra/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -403,7 +373,6 @@
       <name>url</name>
       <version>1.0.4</version>
       <description>An implementation of the URL Living Standard</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -413,10 +382,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/@oozcitak/url/-/url-1.0.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">903703f32fb2dc50923af9c123a1c9825d34be23bf9c66d0a0220d990d21f7c3a19c6213ad64776ce19fc180ad86072b57c0274c9cfc333b254d06c2dd23809b</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/url/issues</url>
@@ -449,21 +415,13 @@
       <name>util</name>
       <version>8.3.8</version>
       <description>Utility functions</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40oozcitak/util@8.3.8</purl>
+      <purl>pkg:npm/%40oozcitak/util@8.3.8?vcs_url=git%3A%2F%2Fgithub.com%2Foozcitak%2Futil.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/@oozcitak/util/-/util-8.3.8.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">4fc4db4a71acc68e930c1271fd282ffc195524bdedb21c593fb02ae51d664a733939c1d8d9d41ac4b32edbe13cbb780dd0c2cecdd8eeaea37865156ecd0c9c39</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/util/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -494,7 +452,6 @@
       <name>parseargs</name>
       <version>0.11.0</version>
       <description>Polyfill of future proposal for `util.parseArgs()`</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -504,10 +461,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">fb55648dd0f44012cfa1d1ab2547aa6ab1fc54022f40e0c86f087d5e93f94b28ac7fb628420b0928f345a2aa8b425bbe550fed552b21311ea5a0f327f14f9d3e</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/pkgjs/parseargs/issues</url>
@@ -548,10 +502,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/@types/node/-/node-20.14.10.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">31d8977fe9c3b8cbd8d2024ac727d9effe9416c1133bb986285e783150ff7a4252e87745b69645060ae1e8fb1ebbae174dbd8c2f214f95b5ba863f0761140d39</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
@@ -567,7 +518,6 @@
         </reference>
       </externalReferences>
       <properties>
-        <property name="cdx:npm:package:development">true</property>
         <property name="cdx:npm:package:path">node_modules/@types/node</property>
       </properties>
       <evidence>
@@ -584,7 +534,6 @@
       <name>uuid</name>
       <version>8.3.4</version>
       <description>TypeScript definitions for uuid</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -594,10 +543,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">73f23c6516f9d63fa960602ee42ac5311c6a67691ee32da0ac404ee4052381291293ea93d846be39d584973fce88c7f930da67d9bd7b92e541c192d0257ce287</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
@@ -613,7 +559,6 @@
         </reference>
       </externalReferences>
       <properties>
-        <property name="cdx:npm:package:development">true</property>
         <property name="cdx:npm:package:path">node_modules/@types/uuid</property>
       </properties>
       <evidence>
@@ -630,7 +575,6 @@
       <name>abbrev</name>
       <version>2.0.0</version>
       <description>Like ruby's abbrev module, but in js</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -640,10 +584,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/abbrev/-/abbrev-2.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">ebf9a1d44daed98804b021dd634631e685beeb581953ed6f5daa221c7ae929eb9134d805bd2fbf8ebc07890841e5aa407f9a01ed407b135f689764762ca1fc85</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/abbrev-js/issues</url>
@@ -675,7 +616,6 @@
       <name>agent-base</name>
       <version>7.1.3</version>
       <description>Turn a function into an `http.Agent` instance</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -685,10 +625,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/agent-base/-/agent-base-7.1.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">8d1479c1dca5abc0a439eea17a2d7d186667c4ceab046c05977060d1822d1838a6be31ad02f7599383eee82978bb8220b30b386b57ddd55ab77b3ae19f82a617</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -720,7 +657,6 @@
       <name>aggregate-error</name>
       <version>3.1.0</version>
       <description>Create an error from multiple errors</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -730,10 +666,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/aggregate-error/-/aggregate-error-3.1.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">e08ed3774d6ab96fd1a6871f35ac85745564d6a4aea21d04ec9adb449d7a9c7d351e128543cf0836af5277e9ddef6cea4724a5afd0660c0f3194427abc932b60</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/aggregate-error/issues</url>
@@ -765,7 +698,6 @@
       <name>ajv-formats-draft2019</name>
       <version>1.6.1</version>
       <description>Plugin for AJV that adds support for some of string formats adding in the draft2019 JSON Schema.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -775,10 +707,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/ajv-formats-draft2019/-/ajv-formats-draft2019-1.6.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">2503ef6afa64583bc8b01a76677dd49180ad5c24a95b81c3ded019fa82f888414e93da1b4197dfc74c80370102b7abf3afa113fbb1cde5ccd1caa5db9eafeed1</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/luzlab/ajv-formats-draft2019/issues</url>
@@ -810,7 +739,6 @@
       <name>ajv-formats</name>
       <version>3.0.1</version>
       <description>Format validation for Ajv v7+</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -820,10 +748,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/ajv-formats/-/ajv-formats-3.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">f2252a979d04511fae51c7514371c3a9ae84572a3776870bf20e5627714d7169aeeb621b90652e7bfa44c8b056f1518a2ae7133e0a9e92ce1f214d43038ca8c1</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/ajv-validator/ajv-formats/issues</url>
@@ -855,21 +780,13 @@
       <name>ajv</name>
       <version>8.17.1</version>
       <description>Another JSON Schema Validator</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ajv@8.17.1</purl>
+      <purl>pkg:npm/ajv@8.17.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fajv-validator%2Fajv.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">07f801b8d8394a2313acf902f80dbe716d11b33c316269fa558c41fe29e5052b52e67c7ac4722dfde84a46120c86abac97b6bc2e34286678c2b39be1c31390d6</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/ajv-validator/ajv/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -900,7 +817,6 @@
       <name>ansi-regex</name>
       <version>6.1.0</version>
       <description>Regular expression for matching ANSI escape codes</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -910,10 +826,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.1.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">ec7497e1041be02b297222e9545c3245eefd3b7c6c2190c32c4476d6411143bd6868fa1d17c8cbef6e408093050186e8a08aa8949a112ee33cd52a5e524a64bc</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/ansi-regex/issues</url>
@@ -945,7 +858,6 @@
       <name>ansi-styles</name>
       <version>6.2.1</version>
       <description>ANSI escape codes for styling strings in the terminal</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -955,10 +867,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">6cdefdf2015f417faf8b0dd1ef2ac6591aa7acdda84641245238e5e09367e04f06c716e3b46dc56eb108218de5f3f86bc14c0878266f8b842e3933f8304ad5ba</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/ansi-styles/issues</url>
@@ -989,7 +898,6 @@
       <name>argparse</name>
       <version>1.0.10</version>
       <description>Very powerful CLI arguments parser. Native port of argparse - python's options parsing library</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -999,10 +907,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">a39468cbab4d1b848bfc53a408037a4738e26a4652db944b605adc32db49a9b75df015ab9c0f9f1b3e7b88de4f6f4ea9bc11af979810d01e3c74996c957be84e</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodeca/argparse/issues</url>
@@ -1026,7 +931,6 @@
           <name>sprintf-js</name>
           <version>1.0.3</version>
           <description>JavaScript sprintf implementation</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>BSD-3-Clause</id>
@@ -1036,10 +940,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">0fd70f824bcb955deddc8ccbd03d182ef180f40864e0f72f57051b3747521abd5a3f436bb780049d351bb86beab840b4980eb81aab757f38ab951b3989b5f1f2</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/alexei/sprintf.js/issues</url>
@@ -1081,7 +982,6 @@
       <name>balanced-match</name>
       <version>1.0.2</version>
       <description>Match balanced character pairs, like "{" and "}"</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -1091,10 +991,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">de849e50ed13315ebb84dd4099b5ec2b8c9aa94eed8e21e56f144364ea47d0a5bdf82797e1b440697d009f1b74b71d8cae94695b041a3f02252121098585393f</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/juliangruber/balanced-match/issues</url>
@@ -1135,10 +1032,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/base64-js/-/base64-js-1.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">b336821564a1924bd025b8a4c6d2db7810a6b1c170fbc7b8ef175925447fb38b7dd2689e9ec40ee2412a55a20e20013ec7371c5b119a629846a88b35b4bbd27f</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/beatgammit/base64-js/issues</url>
@@ -1170,7 +1064,6 @@
       <name>bindings</name>
       <version>1.5.0</version>
       <description>Helper module for loading your native module's .node file</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -1180,10 +1073,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/bindings/-/bindings-1.5.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">a76abfb7f9a1bee3a3fd478b955eb9eba183fe0ba8c25af4847c42948d16f66ecc59890bd45d212e8fb401ec6cf4748f0ad4754974344c3dcc30aad765a8db89</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/node-bindings/issues</url>
@@ -1214,7 +1104,6 @@
       <name>bl</name>
       <version>4.1.0</version>
       <description>Buffer List: collect buffers and access with a standard readable Buffer interface, streamable too!</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -1224,10 +1113,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/bl/-/bl-4.1.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">d56d3b70cf604ba0dc2e97ab65f1528fe6d62ed68f1923875a13e21b35e6bd525b44b746f36b07fca9fc12d5b556a595039e0029fda1e64e416e721bc05de1eb</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/rvagg/bl/issues</url>
@@ -1259,7 +1145,6 @@
       <name>brace-expansion</name>
       <version>2.0.1</version>
       <description>Brace expansion as known from sh/bash</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -1269,10 +1154,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">5e7008bd0f1e33e902e9a50bc7ac2e422c15b27cec8bd7775b1cd5dc5a564c6035f45eb6d64c1d6ec01c14a5e02941d95accbe998ea22f5b074f1584142cad0c</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/juliangruber/brace-expansion/issues</url>
@@ -1309,15 +1191,8 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/buffer@5.7.1</purl>
+      <purl>pkg:npm/buffer@5.7.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">10773220f050e0148696f8c1d7a9392a0009dbb088b0763fd8906609145ea38f32f6b43731a533597dca56505ae14eccc97d361dd563d0aec2dd6681de3bbb15</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/feross/buffer/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1349,10 +1224,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">00aa5a6251e7f2de1255b3870b2f9be7e28a82f478bebb03f2f6efadb890269b3b7ca0d3923903af2ea38b4ad42630b49336cd78f2f0cf1abc8b2a68e35a9e58</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/beatgammit/base64-js/issues</url>
@@ -1403,10 +1275,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">7ccf50f6125c5f56589f28ef7874e9b4566aa4b2833b681dc5186e07c30d498110bc2ea42260c31f6d37f09fed1df72e5742511948fc9fc6b10d8d009c59177c</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/gajus/bundle-dependencies/issues</url>
@@ -1451,7 +1320,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/ansi-regex</property>
           </properties>
           <evidence>
@@ -1489,7 +1357,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/builtin-modules</property>
           </properties>
           <evidence>
@@ -1527,7 +1394,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/camelcase</property>
           </properties>
           <evidence>
@@ -1565,7 +1431,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/cliui</property>
           </properties>
           <evidence>
@@ -1603,7 +1468,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/code-point-at</property>
           </properties>
           <evidence>
@@ -1641,7 +1505,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/decamelize</property>
           </properties>
           <evidence>
@@ -1678,7 +1541,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/error-ex</property>
           </properties>
           <evidence>
@@ -1716,7 +1578,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/escape-string-regexp</property>
           </properties>
           <evidence>
@@ -1754,7 +1615,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/find-up</property>
           </properties>
           <evidence>
@@ -1791,7 +1651,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/graceful-fs</property>
           </properties>
           <evidence>
@@ -1829,7 +1688,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/hosted-git-info</property>
           </properties>
           <evidence>
@@ -1867,7 +1725,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/invert-kv</property>
           </properties>
           <evidence/>
@@ -1898,7 +1755,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/is-arrayish</property>
           </properties>
           <evidence>
@@ -1936,7 +1792,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/is-builtin-module</property>
           </properties>
           <evidence>
@@ -1974,7 +1829,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/is-fullwidth-code-point</property>
           </properties>
           <evidence>
@@ -2012,7 +1866,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/is-utf8</property>
           </properties>
           <evidence>
@@ -2050,7 +1903,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/lcid</property>
           </properties>
           <evidence>
@@ -2088,7 +1940,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/load-json-file</property>
           </properties>
           <evidence>
@@ -2126,7 +1977,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/lodash.assign</property>
           </properties>
           <evidence>
@@ -2164,7 +2014,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/lodash.keys</property>
           </properties>
           <evidence>
@@ -2202,7 +2051,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/lodash.rest</property>
           </properties>
           <evidence>
@@ -2240,7 +2088,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/normalize-package-data</property>
           </properties>
           <evidence>
@@ -2278,7 +2125,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/number-is-nan</property>
           </properties>
           <evidence>
@@ -2316,7 +2162,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/object-assign</property>
           </properties>
           <evidence>
@@ -2354,7 +2199,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/os-locale</property>
           </properties>
           <evidence>
@@ -2392,7 +2236,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/parse-json</property>
           </properties>
           <evidence>
@@ -2430,7 +2273,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/path-exists</property>
           </properties>
           <evidence>
@@ -2468,7 +2310,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/path-type</property>
           </properties>
           <evidence>
@@ -2506,7 +2347,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/pify</property>
           </properties>
           <evidence>
@@ -2544,7 +2384,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/pinkie-promise</property>
           </properties>
           <evidence>
@@ -2582,7 +2421,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/pinkie</property>
           </properties>
           <evidence>
@@ -2620,7 +2458,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/pkg-conf</property>
           </properties>
           <evidence>
@@ -2658,7 +2495,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/read-pkg-up</property>
           </properties>
           <evidence>
@@ -2696,7 +2532,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/read-pkg</property>
           </properties>
           <evidence>
@@ -2734,7 +2569,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/require-main-filename</property>
           </properties>
           <evidence>
@@ -2771,7 +2605,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/semver</property>
           </properties>
           <evidence>
@@ -2809,7 +2642,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/spdx-correct</property>
           </properties>
           <evidence>
@@ -2847,7 +2679,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/spdx-exceptions</property>
           </properties>
           <evidence/>
@@ -2876,7 +2707,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/spdx-expression-parse</property>
           </properties>
           <evidence>
@@ -2914,7 +2744,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/spdx-license-ids</property>
           </properties>
           <evidence>
@@ -2952,7 +2781,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/string-width</property>
           </properties>
           <evidence>
@@ -2990,7 +2818,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/strip-ansi</property>
           </properties>
           <evidence>
@@ -3028,7 +2855,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/strip-bom</property>
           </properties>
           <evidence>
@@ -3066,7 +2892,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/symbol</property>
           </properties>
           <evidence>
@@ -3104,7 +2929,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/validate-npm-package-license</property>
           </properties>
           <evidence>
@@ -3142,7 +2966,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/window-size</property>
           </properties>
           <evidence>
@@ -3180,7 +3003,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/wrap-ansi</property>
           </properties>
           <evidence>
@@ -3218,7 +3040,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/y18n</property>
           </properties>
           <evidence/>
@@ -3249,7 +3070,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/yargs-parser</property>
           </properties>
           <evidence>
@@ -3286,7 +3106,6 @@
             </reference>
           </externalReferences>
           <properties>
-            <property name="cdx:npm:package:bundled">true</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/yargs</property>
           </properties>
           <evidence>
@@ -3313,7 +3132,6 @@
       <name>cacache</name>
       <version>18.0.4</version>
       <description>Fast, fault-tolerant, cross-platform, disk-based, data-agnostic, content-addressable cache.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -3323,10 +3141,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/cacache/-/cacache-18.0.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">07e2f98886bd9a07232db9628abdad877eb21303dfb6bced78762e8f3b31ddd14fff7d46087708792f1fe4c19df34a1d2ce8da3af4a9537104026450a6d9312d</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/cacache/issues</url>
@@ -3358,7 +3173,6 @@
       <name>chownr</name>
       <version>2.0.0</version>
       <description>like `chown -R`</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -3368,10 +3182,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">6c8a26b43179286a5da2090b77d56ca6f17393d29fa72c86952f18155665ed318f0472f9b2720e9f17ac8705603ed790f5be04c9d97ea556c8c84d4372f09681</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/chownr/issues</url>
@@ -3403,7 +3214,6 @@
       <name>clean-stack</name>
       <version>2.2.0</version>
       <description>Clean up error stack traces</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -3413,10 +3223,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/clean-stack/-/clean-stack-2.2.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">e1d882f4769313e29100c5a10e1ac63840a0599c687af31ce5396439b32a352b1553ad8f6335d9fd23138f3c8600517562eb20c46712593117061a7408fc10d4</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/clean-stack/issues</url>
@@ -3448,7 +3255,6 @@
       <name>color-convert</name>
       <version>2.0.1</version>
       <description>Plain color conversion functions</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -3458,10 +3264,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">4511023ec8fb8aeff16f9a0a61cb051d2a6914d9ec8ffe763954d129be333f9a275f0545df3566993a0d70e7c60be0910e97cafd4e7ce1f320dfc64709a12529</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/Qix-/color-convert/issues</url>
@@ -3493,7 +3296,6 @@
       <name>color-name</name>
       <version>1.1.4</version>
       <description>A list of color names and its values</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -3503,10 +3305,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">74ecbedc0b96ddadb035b64722e319a537208c6b8b53fb812ffb9b71917d3976c3a3c7dfe0ef32569e417f479f4bcb84a18a39ab8171edd63d3a04065e002c40</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/colorjs/color-name/issues</url>
@@ -3538,7 +3337,6 @@
       <name>commander</name>
       <version>2.20.3</version>
       <description>the complete solution for node.js command-line programs</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -3548,10 +3346,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/commander/-/commander-2.20.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">1a956498cf2f176bd05248f62ef6660f7e49c5e24e2c2c09f5c524ba0ca4da7ba16efdfe989be92d862dfb4f9448cc44fa88fe7b2fe52449e1670ef9c7f38c71</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/tj/commander.js/issues</url>
@@ -3583,7 +3378,6 @@
       <name>cross-spawn</name>
       <version>7.0.6</version>
       <description>Cross platform child_process#spawn and child_process#spawnSync</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -3593,10 +3387,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">b95d903963f69d6ceccb668ca7c69189b862f5d9731791e0879487681f4e893184c834e2249cb1d2ecb9d505ddc966ed00736e6b85c9cd429c6b73b3294777bc</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/moxystudio/node-cross-spawn/issues</url>
@@ -3620,7 +3411,6 @@
           <name>isexe</name>
           <version>2.0.0</version>
           <description>Minimal module to check if a file is executable.</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>ISC</id>
@@ -3630,10 +3420,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">447c4c2e9f659ca1c61d19e0f5016144231b600715a67ebdb2648672addfdfac638155564e18f8aaa2db4cb96aed2b23f01f9f210d44b8210623694ab3241e23</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/isexe/issues</url>
@@ -3665,7 +3452,6 @@
           <name>which</name>
           <version>2.0.2</version>
           <description>Like which(1) unix command. Find the first instance of an executable in the PATH.</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>ISC</id>
@@ -3675,10 +3461,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/which/-/which-2.0.2.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">04b2374e5d535b73ef97bd25df2ab763ae22f9ac29c17aac181616924a8cb676d782b303fb28fbae15b492e103c7325a6171a3116e6881aa4a34c10a34c8e26c</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/node-which/issues</url>
@@ -3720,7 +3503,6 @@
       <name>debug</name>
       <version>4.4.0</version>
       <description>Lightweight debugging utility for Node.js and the browser</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -3730,10 +3512,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/debug/-/debug-4.4.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">e964d9fc8c4263f4fa0402e8647684e1cb69f719be679918fe9cd86821d115ec958688f196b9bee3acbaf0703a86bd1373012cb28c4d8831142508df3d9fd160</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/debug-js/debug/issues</url>
@@ -3765,7 +3544,6 @@
       <name>decompress-response</name>
       <version>6.0.0</version>
       <description>Decompress a HTTP response if needed</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -3775,10 +3553,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">696df9c9933a05bff8a099599dc307d8b0a866d2574d1c444b5eef137868462a305369161da24a1644810e70d1f9c9bd27ef5085799113221fbf4a638bd7a309</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/decompress-response/issues</url>
@@ -3810,7 +3585,6 @@
       <name>deep-extend</name>
       <version>0.6.0</version>
       <description>Recursive object extending</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -3824,10 +3598,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">2ce1f120e68f61d1e5251b4241f0c8559b5fc3fb9f33cfab563eb8f51207cdc9bfbc6c1045716de8e3ea2055ac9b65c432b34812d591eb8b18d4b10a0f6bc038</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/unclechu/node-deep-extend/issues</url>
@@ -3859,7 +3630,6 @@
       <name>detect-libc</name>
       <version>2.0.3</version>
       <description>Node.js module to detect the C standard library (libc) implementation family and version</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>Apache-2.0</id>
@@ -3869,10 +3639,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">6f0cb43065b9e5b1b8d55ab1c72a4eb1d49d1aa2f05cf23f7e873081360214c6dd522040c4b83d085cc6d3cb33d9aab3927c225fb1e49746d010d8e0f222c1cb</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/lovell/detect-libc/issues</url>
@@ -3904,7 +3671,6 @@
       <name>discontinuous-range</name>
       <version>1.0.0</version>
       <description>for adding, subtracting, and indexing discontinuous ranges of numbers</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -3914,10 +3680,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/discontinuous-range/-/discontinuous-range-1.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">73af0ba4b6cefbb90ffdbd47af5aacf3f049d3d1799216464f1ab166e873c699b024a3a04451c95886fdfca9aa9ea1e12dd3b9e5a3b1147fc4181bd441b2ff45</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/dtudury/discontinuous-range/issues</url>
@@ -3949,7 +3712,6 @@
       <name>eastasianwidth</name>
       <version>0.2.0</version>
       <description>Get East Asian Width from a character.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -3959,10 +3721,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/eastasianwidth/-/eastasianwidth-0.2.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">23cf1361959cf578981d1438ff7739ae38df8248e12f25b696e18885e18445b350e8e63bc93c9b6a74a90d765af32ed550ff589837186be7b2ab871aee22ea58</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/komagata/eastasianwidth/issues</url>
@@ -3987,7 +3746,6 @@
       <name>emoji-regex</name>
       <version>9.2.2</version>
       <description>A regular expression to match all Emoji-only symbols as per the Unicode Standard.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -3997,10 +3755,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">2f5f03689b17494936fb8da9bfc98bb398c94f686a164144e23db5c0e9a06d4aac67684bef636c514efce60f515e0a37b3464d815978d93887a7766d3affd5ca</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
@@ -4032,7 +3787,6 @@
       <name>encoding</name>
       <version>0.1.13</version>
       <description>Convert encodings, uses iconv-lite</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -4042,10 +3796,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">11305aba8c354f7e58fd664c922a3d8e2334679c631c7989e179a364eab597f757cf796bdac467f3b9c9cb6d11ba9a928751769b71c73d2a7c4a120f409ac9dc</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/andris9/encoding/issues</url>
@@ -4077,7 +3828,6 @@
       <name>end-of-stream</name>
       <version>1.4.4</version>
       <description>Call a callback when a readable/writable/duplex stream has completed or failed.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -4087,10 +3837,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">faec358a720754f428695b87cd1c97776d6270cf9c9ede02cc3e6b5be342d708ce5124ceb3e4deec53afec084deef4bdc7fa08ca12cfe4f4751fea614001eee5</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mafintosh/end-of-stream/issues</url>
@@ -4122,7 +3869,6 @@
       <name>env-paths</name>
       <version>2.2.1</version>
       <description>Get paths for storing things like data, config, cache, etc</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -4132,10 +3878,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">fa1d6590b2a164c4d88e8835544a49346ecd64959cb9cd830e4feab2a49345108e5e22e3790d5dd7fb9dad41a1a8cc5480097028d67471fdaea9a9f918bb92d8</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/env-paths/issues</url>
@@ -4167,7 +3910,6 @@
       <name>err-code</name>
       <version>2.0.3</version>
       <description>Create an error with a code</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -4177,10 +3919,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/err-code/-/err-code-2.0.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">d9b9a546934a0714ff09198f3a5c88490a4d8fea92798bdcca6fee4f4271d9b30e94a2ed4b2d5998bb95c5210a2b2a2bfcde7286fa7f6621b5a04dc311831214</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/IndigoUnited/js-err-code/issues/</url>
@@ -4205,7 +3944,6 @@
       <name>esprima</name>
       <version>4.0.1</version>
       <description>ECMAScript parsing infrastructure for multipurpose analysis</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>BSD-2-Clause</id>
@@ -4215,10 +3953,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">786b85170ed4a5d6be838a7e407be75b44724d7fd255e2410ccfe00ad30044ed1c2ee4f61dc10a9d33ef86357a6867aaac207fb1b368a742acce6d23b1a594e0</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/jquery/esprima/issues</url>
@@ -4250,7 +3985,6 @@
       <name>expand-template</name>
       <version>2.0.3</version>
       <description>Expand placeholders in a template string</description>
-      <scope>optional</scope>
       <licenses>
         <expression acknowledgement="declared">(MIT OR WTFPL)</expression>
       </licenses>
@@ -4258,10 +3992,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/expand-template/-/expand-template-2.0.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">5d87ee28cbe3e0edf97ffa4e5cb39b9dd211bf243effee8084e0e1f8e2968fd4bde3df291c79ff20cb331fe82dd1f04245630d7e4d594a9e71dc089f9a7236be</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/ralphtheninja/expand-template/issues</url>
@@ -4293,7 +4024,6 @@
       <name>exponential-backoff</name>
       <version>3.1.1</version>
       <description>A utility that allows retrying a function with an exponential delay between attempts.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>Apache-2.0</id>
@@ -4303,10 +4033,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/exponential-backoff/-/exponential-backoff-3.1.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">757edefcb1d527a5b70c4d4c1d68bd4b5118cc311210d7cbad8a211b61befa8bd9ad83a49b82a7c1ad26735727f38c49391e0a114d1649c8612db77452495b1f</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/coveo/exponential-backoff/issues</url>
@@ -4338,7 +4065,6 @@
       <name>extend</name>
       <version>3.0.2</version>
       <description>Port of jQuery.extend for node.js and the browser</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -4348,10 +4074,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/extend/-/extend-3.0.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">7e3aae0b9f5c0fb0b25babab3572b4141b9f9197288861bcd304ee3ee8d7e7dd1c0794ed967db4136501e12fd601156a8577df665d8b3604be81074f2088a6fe</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/justmoon/node-extend/issues</url>
@@ -4383,7 +4106,6 @@
       <name>fast-deep-equal</name>
       <version>3.1.3</version>
       <description>Fast deep equal</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -4393,10 +4115,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">7f7a90f68432f63d808417bf1fd542f75c0b98a042094fe00ce9ca340606e61b303bb04b2a3d3d1dce4760dcfd70623efb19690c22200da8ad56cd3701347ce1</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/epoberezkin/fast-deep-equal/issues</url>
@@ -4428,7 +4147,6 @@
       <name>fast-uri</name>
       <version>3.0.3</version>
       <description>Dependency free RFC 3986 URI toolbox</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>BSD-3-Clause</id>
@@ -4438,10 +4156,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/fast-uri/-/fast-uri-3.0.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">68bac7b61cc28c7e477b86761fd619fafe948dbf68711b96e99ce42503ab4f195e1228c036ae2fd53b1a3da546d4f65cbaeac4ceb2dc591c980585c3e5c1226b</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/fastify/fast-uri/issues</url>
@@ -4473,7 +4188,6 @@
       <name>file-uri-to-path</name>
       <version>1.0.0</version>
       <description>Convert a file: URI to a file path</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -4483,10 +4197,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">d19b7eb372fb55fd5b8b0599dbd6804625582f1ee23069c4525f71df77db07f8f78d1f35bbf3b62dba8af819b508348d0ca56d27f623c18ed351de5291e2d02f</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/file-uri-to-path/issues</url>
@@ -4518,7 +4229,6 @@
       <name>foreground-child</name>
       <version>3.3.0</version>
       <description>Run a child as if it's the foreground process. Give it stdio. Exit when it exits.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -4528,10 +4238,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/foreground-child/-/foreground-child-3.3.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">2ddda0f2bac0c8c6055c1844a8ccfc6401c18b8278b92d62fc2c463039e3c8559d74c5cb55c0e9d39d4365fbbeb7bf9a6fb5afe9232aa569b21488f951b7c5be</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/tapjs/foreground-child/issues</url>
@@ -4563,7 +4270,6 @@
       <name>fs-constants</name>
       <version>1.0.0</version>
       <description>Require constants across node and the browser</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -4573,10 +4279,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/fs-constants/-/fs-constants-1.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">cba380c284887fb1728cc22ff78bbe6f9add85e6448f347adc64f26499b9aa1e018bed988302c2708fdf3c56642f93d28b13ade9934a9bec3e1dfa7f05c8b0a3</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mafintosh/fs-constants/issues</url>
@@ -4608,7 +4311,6 @@
       <name>fs-minipass</name>
       <version>3.0.3</version>
       <description>fs read and write streams based on minipass</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -4618,10 +4320,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/fs-minipass/-/fs-minipass-3.0.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">5d4040f570a51db9c95927c1ce3926e91bcfb32837b2bc99b74e81110a17705ec42bfc6919a41826040a0c94941f948667be98ee9171d500675f3d3dad4e456f</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/fs-minipass/issues</url>
@@ -4653,7 +4352,6 @@
       <name>github-from-package</name>
       <version>0.0.0</version>
       <description>return the github url from a package.json file</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -4663,10 +4361,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/github-from-package/-/github-from-package-0.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">4b21f2dd3d6fd8d5179f6f4eb1677198ae91c070febe48f7bfc7a7f00381675c0143f842010e5b0104c3d36916e16f6d529ff7421e89f2bf44be7b62c8298e3b</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/substack/github-from-package/issues</url>
@@ -4698,7 +4393,6 @@
       <name>glob</name>
       <version>10.4.5</version>
       <description>the most correct and second fastest glob implementation in JavaScript</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -4708,10 +4402,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/glob/-/glob-10.4.5.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">ec1bfc445d24eb18e8edde00fcfc582db5027dbe9cf95a5ddbf981db244395ec3b25be611178820fd89b7ceef0a64f22e2c7af2ba0c59f2f61ec461b337fec1e</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-glob/issues</url>
@@ -4742,7 +4433,6 @@
       <name>graceful-fs</name>
       <version>4.2.11</version>
       <description>A drop-in replacement for fs, making various improvements.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -4752,10 +4442,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">45b279fe398570d342703579a3d7939c12c9fc7b33595d0fef76dcf857f89d2feb263f98692e881b288e2f45680585fe9755ab97793ade1fcaac7fa7849d17bd</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-graceful-fs/issues</url>
@@ -4787,7 +4474,6 @@
       <name>http-cache-semantics</name>
       <version>4.1.1</version>
       <description>Parses Cache-Control and other headers. Helps building correct HTTP caches and proxies</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>BSD-2-Clause</id>
@@ -4797,10 +4483,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.1.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">7abdbde4328f56c57cda3e64c351a3b7e00303f5d81ec6a397cd9c18d406d9eca83e4be05215fe9c32327a5ce12166dbb173f7f441dc23a979b58b36158a985d</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/kornelski/http-cache-semantics/issues</url>
@@ -4832,7 +4515,6 @@
       <name>http-proxy-agent</name>
       <version>7.0.2</version>
       <description>An HTTP(s) proxy `http.Agent` implementation for HTTP</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -4842,10 +4524,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">4f58240226180d6631dd5e419b2bbb1dc7dcbcbee652b4d688ceb239f6b73c8a6156227f8053dbbe2750faf7aa48e1dc8bf3f105c0da6de50d0b3a4e3832598a</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -4877,7 +4556,6 @@
       <name>https-proxy-agent</name>
       <version>7.0.6</version>
       <description>An HTTP(s) proxy `http.Agent` implementation for HTTPS</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -4887,10 +4565,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">bcaf4fe7f8947dd97de4023e255c94b88715b5de287efb6b3abdc736d336cb10bd6e731b11da77c74d4e8503678dbf082588b7f159531379815f071fbf2c2e4b</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -4922,7 +4597,6 @@
       <name>iconv-lite</name>
       <version>0.6.3</version>
       <description>Convert character encodings in pure javascript.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -4932,10 +4606,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">e1f0a4efdc2c84c773329dab1f4eaa5ab244e22a25a8b842507f8e8ae22053ef91074fbde0d9432fcd5ab4eec65f9e6e50ab9ea34b711cdb6f13223a0fb59d33</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/ashtuchkin/iconv-lite/issues</url>
@@ -4976,10 +4647,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">75ccaa843bd7d42e3a95765c56a0a92be16d31141574830debf0dfe63b36ce8b94b2a1bb23ab05c62b480beeca60adbd29d5ce2c776ef732f8b059e85509ea68</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/feross/ieee754/issues</url>
@@ -5020,10 +4688,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">86c053354a904c3c245ad71d608da2d3a63f9d4044b0d10324a8d676280bbde832f240ee2404bcb91969924710a721172f467fa630f2e4706632344227682afa</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/kaelzhang/node-ignore/issues</url>
@@ -5055,7 +4720,6 @@
       <name>imurmurhash</name>
       <version>0.1.4</version>
       <description>An incremental implementation of MurmurHash3</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -5065,10 +4729,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">2665cc67ac2ebc398b88712697dca4cea3ba97015ba1fd061b822470668435d0910c398c5679f2eece47b0880709b6aad30d8cc8f843aa48535204b62d4d8f1c</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/jensyt/imurmurhash-js/issues</url>
@@ -5093,7 +4754,6 @@
       <name>indent-string</name>
       <version>4.0.0</version>
       <description>Indent each line in a string</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -5103,10 +4763,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">11d0c366ee00d8ec882bb2ebff6cc6fb0e6399bba4d435419c4c11110bc1ceca412640846d16bc1b153596085871a1890a745689b8c35e5abbefd5f5ff2e71c2</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/indent-string/issues</url>
@@ -5137,21 +4794,13 @@
       <name>inherits</name>
       <version>2.0.4</version>
       <description>Browser-friendly inheritance fully compatible with standard node.js inherits()</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/inherits@2.0.4</purl>
+      <purl>pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">93fbc6697e3f6256b75b3c8c0af4d039761e207bea38ab67a8176ecd31e9ce9419cc0b2428c859d8af849c189233dcc64a820578ca572b16b8758799210a9ec1</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/inherits/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5182,7 +4831,6 @@
       <name>ini</name>
       <version>1.3.8</version>
       <description>An ini encoder/decoder for node</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -5192,10 +4840,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/ini/-/ini-1.3.8.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">255ff2ba0576bb35b988c4528990320ed41dfa7c6d5278de2edd1a70d770f7c90a2ebbee455c81f34b6c444384ef2bc65606a5859e913570a61079142812b17b</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/ini/issues</url>
@@ -5227,7 +4872,6 @@
       <name>ip-address</name>
       <version>9.0.5</version>
       <description>A library for parsing IPv4 and IPv6 IP addresses in node and the browser.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -5237,10 +4881,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/ip-address/-/ip-address-9.0.5.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">cc7b50cc6a236574f06531d0aab6be11329de129f7be08bbb819a53e85d5599a98bee2a6b48d25fd56538ea1a6258f71f3c18639a67df86f444bc842e13e17f2</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/beaugunderson/ip-address/issues</url>
@@ -5272,7 +4913,6 @@
       <name>is-fullwidth-code-point</name>
       <version>3.0.0</version>
       <description>Check if the character represented by a given Unicode code point is fullwidth</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -5282,10 +4922,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">cf29a6e7ebbeb02b125b20fda8d69e8d5dc316f84229c94a762cd868952e1c0f3744b8dbee74ae1a775d0871afd2193e298ec130096c59e2b851e83a115e9742</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/is-fullwidth-code-point/issues</url>
@@ -5317,7 +4954,6 @@
       <name>is-lambda</name>
       <version>1.0.1</version>
       <description>Detect if your code is running on an AWS Lambda server</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -5327,10 +4963,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/is-lambda/-/is-lambda-1.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">cfb08c14636b10dab988507d06aa3ae1793a63db20f9ea6ad66c8871d1da1a76cc4d83b1bf3b04b5d62a414ca507b2f17e4be0aeb8cfdf64fa6307228a8f5421</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/watson/is-lambda/issues</url>
@@ -5362,7 +4995,6 @@
       <name>isexe</name>
       <version>3.1.1</version>
       <description>Minimal module to check if a file is executable.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -5372,10 +5004,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/isexe/-/isexe-3.1.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">2e907fe7807eff627986a43b8a66477dd537d4e96042ac7b6627159649bd93383dff0f0628b11c15f265fedec30840ee78ec81003eb3082c133ba173b3436811</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/isexe/issues</url>
@@ -5407,7 +5036,6 @@
       <name>jackspeak</name>
       <version>3.4.3</version>
       <description>A very strict and proper argument parser.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>BlueOak-1.0.0</id>
@@ -5417,10 +5045,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/jackspeak/-/jackspeak-3.4.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">386959429cf6c9f6a103f45dd58f0277d48812caaf5e42d5a12c3f720c219e114c0dbb1015e658a0927b6c86414bd05c6a6516f7a6acabf9e93d6ba033e45007</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/jackspeak/issues</url>
@@ -5452,7 +5077,6 @@
       <name>js-yaml</name>
       <version>3.14.1</version>
       <description>YAML 1.2 parser and serializer</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -5462,10 +5086,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">a24307ece5d727b62b37d3a4dff497ae7bb8897f723a4fb6e67a97e22992da7a6ebd36039a8fd0119a2ac199186880e4de356f04e4ce20480485a2ceca7052f6</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodeca/js-yaml/issues</url>
@@ -5497,7 +5118,6 @@
       <name>jsbn</name>
       <version>1.1.0</version>
       <description>The jsbn library is a fast, portable implementation of large-number math in pure JavaScript, enabling public-key crypto and other applications on desktop and mobile browsers.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -5507,10 +5127,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/jsbn/-/jsbn-1.1.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">e1b61557768032d0d34eee3ec6c0d86bab32f46c89ebdfda9acbbdb18176cea8e2128640e71262dc1adf5f7b98fbf21e908bbb33074e6dd6c35a9a19741bf7fc</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/andyperlitch/jsbn/issues</url>
@@ -5542,7 +5159,6 @@
       <name>json-schema-traverse</name>
       <version>1.0.0</version>
       <description>Traverse JSON Schema passing each schema object to callback</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -5552,10 +5168,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">34cf3f3fd9f75e35e12199f594b86415a0024ce5114178d6855e0103f4673aff31be0aadaa9017f483b89914314b1d51968e2dab37aa6f4b0e96bb9a3b2dddba</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/epoberezkin/json-schema-traverse/issues</url>
@@ -5587,7 +5200,6 @@
       <name>libxmljs2</name>
       <version>0.35.0</version>
       <description>libxml bindings for v8 javascript engine</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -5597,10 +5209,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/libxmljs2/-/libxmljs2-0.35.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">4a9568a6a9f860dc9d9cb8e419f2fac90c338e58a99849c20ac56b0ffd21426760b1059be6b566489c718d096d1c8513b68dbdbe05fe3e12e35e873e80c78005</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>http://github.com/marudor/libxmljs2/issues</url>
@@ -5632,7 +5241,6 @@
       <name>lru-cache</name>
       <version>10.4.3</version>
       <description>A cache object that deletes the least-recently-used items.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -5642,10 +5250,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">24d03365c5eb0ade365462ee633d337c0cc37c0bc9596e807d8943050c835790c2948da6e6c0262be3883bbb39f577ec46c587a74da3009ad169d3d1193b7a49</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-lru-cache/issues</url>
@@ -5677,7 +5282,6 @@
       <name>make-fetch-happen</name>
       <version>13.0.1</version>
       <description>Opinionated, caching, retrying fetch client</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -5687,10 +5291,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/make-fetch-happen/-/make-fetch-happen-13.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">70a4d415cfeb6ca51dffd99e3af82ba49d96acdcf29adea37d10ddc20e540a7573bfd753a448fd252e66df0b738975428e5b885f22fca5c6ae918a9ecc8cd940</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/make-fetch-happen/issues</url>
@@ -5722,7 +5323,6 @@
       <name>mimic-response</name>
       <version>3.1.0</version>
       <description>Mimic a Node.js HTTP response stream</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -5732,10 +5332,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/mimic-response/-/mimic-response-3.1.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">cf4c9623ee050ebaf0792f199ade048f91dd266932d79f8bd9ee96827dfe88ae5f5b36fa4f77e1345ab6f8c79345bd3ae1ce96af837fc2fd03cd04e33731cd19</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/mimic-response/issues</url>
@@ -5767,7 +5364,6 @@
       <name>minimatch</name>
       <version>9.0.5</version>
       <description>a glob matcher in javascript</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -5777,10 +5373,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">1ba4f4657e3cc60a33c7be7cee4a1e5fd62cd8d632e869affff3fcf6c12d7bd57dc2121aa4c345e2274ac675b642d09c2e24d695bff07c269b02d0055a1841a3</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minimatch/issues</url>
@@ -5812,7 +5405,6 @@
       <name>minimist</name>
       <version>1.2.8</version>
       <description>parse argument options</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -5822,10 +5414,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">db2c8047ca8190ddd8ba17896a7529582e54ddb6f9a2c0f2c0d07c4730d5943c031dba1c009bdeaaa8f5bbcf92543ee39164f8cafb070a95aaa96a80c5bd3308</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/minimistjs/minimist/issues</url>
@@ -5857,7 +5446,6 @@
       <name>minipass-collect</name>
       <version>2.0.1</version>
       <description>A Minipass stream that collects all the data into a single chunk</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -5867,10 +5455,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/minipass-collect/-/minipass-collect-2.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">0fb57c3cef686b3ecf5862db0800ae235a843acabb50a7cba2dc7f0b401eb78ddf09407fc1f43b0d87aada847fb2f1491980c73ebdfc48701379a8ff6682872b</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass-collect/issues</url>
@@ -5902,7 +5487,6 @@
       <name>minipass-fetch</name>
       <version>3.0.5</version>
       <description>An implementation of window.fetch in Node.js using Minipass streams</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -5912,10 +5496,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/minipass-fetch/-/minipass-fetch-3.0.5.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">d8df1e943400b529c55740e4ee0b75e4a1ec4b4172cfa09b619dfad21d164d85754f2e3a962deb01754e423d531cc34b766ac3f55b79a413ed5ad564a70181aa</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/minipass-fetch/issues</url>
@@ -5947,21 +5528,13 @@
       <name>minipass-flush</name>
       <version>1.0.5</version>
       <description>A Minipass stream that calls a flush function before emitting 'end'</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-flush@1.0.5</purl>
+      <purl>pkg:npm/minipass-flush@1.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass-flush.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/minipass-flush/-/minipass-flush-1.0.5.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">266412618a4f52a5f92729f5997691c0e75ad6e43c1cfe4a013fe80d22c2cedd41611850534fe10edb01d6e7d97c4133319f5a0159ac070f3e156b085e50a55b</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass-flush/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5984,7 +5557,6 @@
           <name>minipass</name>
           <version>3.3.6</version>
           <description>minimal implementation of a PassThrough stream</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>ISC</id>
@@ -5994,10 +5566,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">0f188d89dc5210afad1c6eb3388925bcd3b09b786f0ab6d4addb7363be14e87293271bc80df3942f95b93f61a17770d392184a3d81aa78d508879a9c3386017f</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/minipass/issues</url>
@@ -6039,22 +5608,12 @@
       <name>minipass-pipeline</name>
       <version>1.2.4</version>
       <description>create a pipeline of streams using Minipass</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
       <purl>pkg:npm/minipass-pipeline@1.2.4</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/minipass-pipeline/-/minipass-pipeline-1.2.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">c6e22aedc20eb74f513d1275f60762e1bf9188dbc31587b9247fa080dbc1a86aa941772bbb73dc466399b8704a58ad53c5ff7e710f8731537877acf8e8b64fec</hash>
-          </hashes>
-        </reference>
-      </externalReferences>
       <properties>
         <property name="cdx:npm:package:path">node_modules/minipass-pipeline</property>
       </properties>
@@ -6064,7 +5623,6 @@
           <name>minipass</name>
           <version>3.3.6</version>
           <description>minimal implementation of a PassThrough stream</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>ISC</id>
@@ -6074,10 +5632,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">0f188d89dc5210afad1c6eb3388925bcd3b09b786f0ab6d4addb7363be14e87293271bc80df3942f95b93f61a17770d392184a3d81aa78d508879a9c3386017f</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/minipass/issues</url>
@@ -6119,7 +5674,6 @@
       <name>minipass-sized</name>
       <version>1.0.3</version>
       <description>A Minipass stream that raises an error if you get a different number of bytes than expected</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -6129,10 +5683,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/minipass-sized/-/minipass-sized-1.0.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">31b9104360938813250360e6ff9718fbd49614437ca73cce5e2eab94ce57c6ad18a9b75ae59432f6c53be5aebbdc513d64ad19b1bafa63988feaef6792d7e0da</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass-sized/issues</url>
@@ -6156,7 +5707,6 @@
           <name>minipass</name>
           <version>3.3.6</version>
           <description>minimal implementation of a PassThrough stream</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>ISC</id>
@@ -6166,10 +5716,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">0f188d89dc5210afad1c6eb3388925bcd3b09b786f0ab6d4addb7363be14e87293271bc80df3942f95b93f61a17770d392184a3d81aa78d508879a9c3386017f</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/minipass/issues</url>
@@ -6211,7 +5758,6 @@
       <name>minipass</name>
       <version>7.1.2</version>
       <description>minimal implementation of a PassThrough stream</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -6221,10 +5767,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">a8e3b34b57014d6605e011fc7d578f0c138ef62a6d327194119c0d73f70c5a74d5da754b67b56835610f1e461ccd9034a5da00edd97a7bb14beb9f675fd4b66b</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass/issues</url>
@@ -6256,21 +5799,13 @@
       <name>minizlib</name>
       <version>2.1.2</version>
       <description>A small fast zlib stream built on [minipass](http://npm.im/minipass) and Node.js's zlib binding.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minizlib@2.1.2</purl>
+      <purl>pkg:npm/minizlib@2.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminizlib.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">6c0c6c47c0557e3eb40d65c7137bb7d281f37e5e06ee48644ae3d6faabe977b8c54479bb74bc4e8d493510700227f8712d8f29846274621607668ee38a5ed076</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minizlib/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6293,7 +5828,6 @@
           <name>minipass</name>
           <version>3.3.6</version>
           <description>minimal implementation of a PassThrough stream</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>ISC</id>
@@ -6303,10 +5837,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">0f188d89dc5210afad1c6eb3388925bcd3b09b786f0ab6d4addb7363be14e87293271bc80df3942f95b93f61a17770d392184a3d81aa78d508879a9c3386017f</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/minipass/issues</url>
@@ -6348,7 +5879,6 @@
       <name>mkdirp-classic</name>
       <version>0.5.3</version>
       <description>Mirror of mkdirp 0.5.2</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -6358,10 +5888,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/mkdirp-classic/-/mkdirp-classic-0.5.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">80a2dc444321b6e651c1101fa8fdd1156f932b826a029541b4e21fb55823b8006902da7184f19a0dc7ef6e136f0f407c883d6852bfedc57df936371a63a36cfc</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mafintosh/mkdirp-classic/issues</url>
@@ -6392,7 +5919,6 @@
       <name>mkdirp</name>
       <version>1.0.4</version>
       <description>Recursively mkdir, like `mkdir -p`</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -6402,10 +5928,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">bd5a95650c9fdd62f1d9285dd2a27dc6ebea800c8a3cb022a884c4b6a5b4a08523ce8dcf78f0dde9f5bd885cf7d1e7fb62ca7fa225aa6e1b33786596d93e86cf</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-mkdirp/issues</url>
@@ -6437,7 +5960,6 @@
       <name>moo</name>
       <version>0.5.2</version>
       <description>Optimised tokenizer/lexer generator! 🐄 Much performance. Moo!</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>BSD-3-Clause</id>
@@ -6447,10 +5969,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/moo/-/moo-0.5.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">8920092c760a9d7e3598a7092a3aaf9c037db1fd0b3034d70c4bc5bfe7dfb9147d6b5308b972e330d2fa12c9c31d290a2d358da90439ba8eb53f811b538354f9</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/tjvr/moo/issues</url>
@@ -6481,7 +6000,6 @@
       <name>ms</name>
       <version>2.1.3</version>
       <description>Tiny millisecond conversion utility</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -6491,10 +6009,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/ms/-/ms-2.1.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">e85973b9b4cb646dc9d9afcd542025784863ceae68c601f268253dc985ef70bb2fa1568726afece715c8ebf5d73fab73ed1f7100eb479d23bfb57b45dd645394</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/vercel/ms/issues</url>
@@ -6525,7 +6040,6 @@
       <name>nan</name>
       <version>2.20.0</version>
       <description>Native Abstractions for Node.js: C++ header for Node 0.8 -&gt; 22 compatibility</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -6535,10 +6049,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/nan/-/nan-2.20.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">6e4de05c16431882eeba8ffab0ab6bd034264938581cbb4d09d49d5e4f589310ff8cae97daf982cb25c1071caa6785dc9f34f260401385f5f70c21272dfea283</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/nan/issues</url>
@@ -6570,7 +6081,6 @@
       <name>napi-build-utils</name>
       <version>1.0.2</version>
       <description>A set of utilities to assist developers of tools that build N-API native add-ons</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -6580,10 +6090,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/napi-build-utils/-/napi-build-utils-1.0.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">38d99152a2bbce3ec3597d03f400ded37c1bc0e059c4d01f176d0f9467c2590703dfefcc6a44a1207accab1f58c0f4dfc43745d732de2fe44666247d90630b76</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/inspiredware/napi-build-utils/issues</url>
@@ -6615,7 +6122,6 @@
       <name>nearley</name>
       <version>2.20.1</version>
       <description>Simple, fast, powerful parser toolkit for JavaScript.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -6625,10 +6131,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/nearley/-/nearley-2.20.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">f8c73c51a01e6c5ce057e2a92399fb0dab2eb9008703cf5d9b09bb257c374d5e37ba47cd43d0e7047dcc75bda0fc8e05771736ea9c229815af8c8c3450020b49</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/hardmath123/nearley/issues</url>
@@ -6659,7 +6162,6 @@
       <name>negotiator</name>
       <version>0.6.4</version>
       <description>HTTP content negotiation</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -6669,10 +6171,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/negotiator/-/negotiator-0.6.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">9b2453dc38963c7aa1a393eb25a211c9a32fda48187f499456004d39832e087e4a8b5c8489069ffd926e43ada7be9738e302f95836d35fbc86262d4d79ebf0f3</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/jshttp/negotiator/issues</url>
@@ -6704,7 +6203,6 @@
       <name>node-abi</name>
       <version>3.71.0</version>
       <description>Get the Node ABI for a given target and runtime, and vice versa.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -6714,10 +6212,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/node-abi/-/node-abi-3.71.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">499e34bd18b2ffec114dfdb58719241233c9669011cd4315709a10b1ed8417caa45166db3b6cfbbdde6803f1fa6d51fa49943949319cbb42910d2edb88d45fc7</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/electron/node-abi/issues</url>
@@ -6749,7 +6244,6 @@
       <name>node-gyp</name>
       <version>10.3.1</version>
       <description>Node.js native addon build tool</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -6759,10 +6253,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/node-gyp/-/node-gyp-10.3.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">3e9de7147053847cd5b4d63b53a25f3e3bd3fc34c4f3ea3fe312ac2d0b41a14fa3d872ec1a585c7f37e502852b79a25b3666275fe2e52e2d2a8d5f24a723bac5</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/node-gyp/issues</url>
@@ -6794,7 +6285,6 @@
       <name>nopt</name>
       <version>7.2.1</version>
       <description>Option parsing for Node, supporting types, shorthands, etc. Used by npm.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -6804,10 +6294,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/nopt/-/nopt-7.2.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">b5a336e158a28a64ff5e7b716cfc89433086fa9e0428ea600f79b11705b7f261a3554adf11140e798e040c78dd9e9b6db5f1ee1d05c5c7e9533f4f10fa62daff</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/nopt/issues</url>
@@ -6839,21 +6326,13 @@
       <name>once</name>
       <version>1.4.0</version>
       <description>Run a function exactly one time</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/once@1.4.0</purl>
+      <purl>pkg:npm/once@1.4.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fonce.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/once/-/once-1.4.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">94d689808fb643951140191c7042874d038f697754c67659125413658d0c15402e684a9ed44f8dcaf81dcff688c8d8ba67d3333b976fd47f27e7cfc610ba77fb</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/once/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6884,7 +6363,6 @@
       <name>p-map</name>
       <version>4.0.0</version>
       <description>Map over promises concurrently</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -6894,10 +6372,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/p-map/-/p-map-4.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">fdb8ceaa68044c1601e41a0478655e6bc766bc76f69bd18bcb513d5b8df27b27cfe9040264614d6be5d171e244b8307aceaafe80aa4802694b79b329ca4c3f31</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/p-map/issues</url>
@@ -6929,7 +6404,6 @@
       <name>package-json-from-dist</name>
       <version>1.0.1</version>
       <description>Load the local package.json from either src or dist folder</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>BlueOak-1.0.0</id>
@@ -6939,10 +6413,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/package-json-from-dist/-/package-json-from-dist-1.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">5046484b7fdbcb8382f2f2f73f67535d1113a5e6cb236362239bc8ae3683ff952dae4157fed35bc234d2440182ffeec2028da921c05a4605a670104772c68223</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/package-json-from-dist/issues</url>
@@ -6983,10 +6454,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/packageurl-js/-/packageurl-js-2.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">3798b15e3cd3cb8403407d10f58163a8859deb31faf77e838e99769bd40d1660efe45ba6f2af018e4a4070734ccce144d08c10ac584959ec7700dea44b4392c2</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/package-url/packageurl-js/issues</url>
@@ -7018,7 +6486,6 @@
       <name>path-key</name>
       <version>3.1.1</version>
       <description>Get the PATH environment variable key cross-platform</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7028,10 +6495,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">a2399e374a9dfb2d23b3312da18e3caf43deab97703049089423aee90e5fe3595f92cc17b8ab58ae18284e92e7c887079b6e1486ac7ee53aa6d889d2c0b844e9</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/path-key/issues</url>
@@ -7063,7 +6527,6 @@
       <name>path-scurry</name>
       <version>1.11.1</version>
       <description>walk paths fast and efficiently</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>BlueOak-1.0.0</id>
@@ -7073,10 +6536,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/path-scurry/-/path-scurry-1.11.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">5dae0dc35ec54bd02940527dba62e2252e28ac68e6ed9cf052bc1a99c190b874b30f2b61f5ba0a0dac9c61d0dc643baa6004d7c381c55e06aa59372d5bfbf51c</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/path-scurry/issues</url>
@@ -7108,7 +6568,6 @@
       <name>prebuild-install</name>
       <version>7.1.2</version>
       <description>A command line tool to easily install prebuilt binaries for multiple version of node/iojs on a specific platform</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7118,10 +6577,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/prebuild-install/-/prebuild-install-7.1.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">5273647b72106fab206ab71920353781b31e4e9ffd4925350c02248a5ecfaea1b5bd9941b58e66b1871c48a4870ea6b784d838dfa2172be48d22645eb80d7011</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/prebuild/prebuild-install/issues</url>
@@ -7153,21 +6609,13 @@
       <name>proc-log</name>
       <version>4.2.0</version>
       <description>just emit 'log' events on the process object</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/proc-log@4.2.0</purl>
+      <purl>pkg:npm/proc-log@4.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fproc-log.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/proc-log/-/proc-log-4.2.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">83cf8e9d4fcbdaffb0ca254af83e5f037e09ec41fc8d9f030e5bf085108cc66323ed4081bf188ed6619e37edfa25720a178cdebd4e2444177c955806f6f2de94</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/proc-log/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7198,7 +6646,6 @@
       <name>promise-retry</name>
       <version>2.0.1</version>
       <description>Retries a function that returns a promise, leveraging the power of the retry module.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7208,10 +6655,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/promise-retry/-/promise-retry-2.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">cbe58a165051f011979ec3652071463d99b20dfdc314ca0b85a7e5027c99815eab1bac6ef89c1eb13a3643d47a5f0626b66c001429009377b7e6311da1e87fde</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/IndigoUnited/node-promise-retry/issues/</url>
@@ -7243,7 +6687,6 @@
       <name>pump</name>
       <version>3.0.2</version>
       <description>pipe streams together and close all of them if one of them closes</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7253,10 +6696,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/pump/-/pump-3.0.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">b543d7b7394633c144dcfd192fa0d5b3fdcfe7c93d9e4f3f8d97900aead327295003ca856331c57e104992eab21341627ceb10d2e2967a4899e60f30b6bdbc73</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mafintosh/pump/issues</url>
@@ -7288,7 +6728,6 @@
       <name>punycode</name>
       <version>2.3.1</version>
       <description>A robust Punycode converter that fully complies to RFC 3492 and RFC 5891, and works on nearly all JavaScript platforms.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7298,10 +6737,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">bd8b7b503d54f5683ad77f2c84bb4b3af740bbef03b02fe2945b44547707fb0c9d712a4d136d007d239db9fe8c91115a84be4563b5f5a14ee7295645b5fabc16</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mathiasbynens/punycode.js/issues</url>
@@ -7333,7 +6769,6 @@
       <name>railroad-diagrams</name>
       <version>1.0.0</version>
       <description>A small JS+SVG library for drawing railroad syntax diagrams.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>CC0-1.0</id>
@@ -7343,10 +6778,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">733f770e335e2d8d2276b08d387e8fbe264644df46261b1d9bd8699f56024bcefd7e3e16fb1e4814986191165cc1580c98517b47cd9403fece87e47c94b660e8</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/tabatkins/railroad-diagrams/issues</url>
@@ -7371,7 +6803,6 @@
       <name>randexp</name>
       <version>0.4.6</version>
       <description>Create random strings that match a given regular expression.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7381,10 +6812,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/randexp/-/randexp-0.4.6.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">f3458d99df43034b6666bc3da906bad863cf59fb972649eb99598b731beae2e641758a9bd706282939a794651c86f5567b45e22eea58901a1754ec73dc2f0361</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/fent/randexp.js/issues</url>
@@ -7416,7 +6844,6 @@
       <name>rc</name>
       <version>1.2.8</version>
       <description>hardwired configuration loader</description>
-      <scope>optional</scope>
       <licenses>
         <expression acknowledgement="declared">(BSD-2-Clause OR MIT OR Apache-2.0)</expression>
       </licenses>
@@ -7424,10 +6851,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/rc/-/rc-1.2.8.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">cb76c682a2a3dd005dc4b6cb9289a5a2192fb00f207408944254812670617e7f813f18386dceb677c4dc056d79c1abc37e07b10a071c72485c66fcb0c9060f3b</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/dominictarr/rc/issues</url>
@@ -7462,21 +6886,13 @@
       <name>readable-stream</name>
       <version>3.6.2</version>
       <description>Streams3, a user-land copy of the stream library from Node.js</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/readable-stream@3.6.2</purl>
+      <purl>pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">f6efec9e20ab6370f959db04447cc71381b66025eaa06e454c7522082e1221bafa5dc2d9058d39c9af442a361e93d3b9c4e0308c6abed497460404bb43d49ca0</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/readable-stream/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7507,7 +6923,6 @@
       <name>require-from-string</name>
       <version>2.0.2</version>
       <description>Require module from string</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7517,10 +6932,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">5dfd2759ee91b1ece214cbbe029f5b8a251b9a996ae92f7fa7eef0ed85cffc904786b5030d48706bebc0372b9bbaa7d9593bde53ffc36151ac0c6ed128bfef13</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/floatdrop/require-from-string/issues</url>
@@ -7552,7 +6964,6 @@
       <name>ret</name>
       <version>0.1.15</version>
       <description>Tokenizes a string that represents a regular expression.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7562,10 +6973,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/ret/-/ret-0.1.15.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">4d3958a5af8e2febcc30d1b6e314a5406109dc1fd1cc47d494b72dedbe46ff2b5abfec0fae9942a55305bb0cd76e479c26b6fa218a358856f44bdbf7efbe789a</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/fent/ret.js/issues</url>
@@ -7597,7 +7005,6 @@
       <name>retry</name>
       <version>0.12.0</version>
       <description>Abstraction for exponential and custom retry strategies for failed operations.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7607,10 +7014,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/retry/-/retry-0.12.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">f4b9224f08d487aad3e79e43b44f6b4d7f81281c8f7eb333100b67944b5d130af73647dfc228a1a9ed9b5800e0f8e4118edf6097a20276607f6450c2180b52a3</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/tim-kos/node-retry/issues</url>
@@ -7642,21 +7046,13 @@
       <name>safe-buffer</name>
       <version>5.2.1</version>
       <description>Safer Node.js Buffer API</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/safe-buffer@5.2.1</purl>
+      <purl>pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">ae9dd2a34eca71d9a629b1af81a37141226bedb1954959394bd12ad45fa9a5b468ef4f9879a0f1930e4377c34f37e183e9b8e7626d95b8fb825e6a6e62f9825d</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/feross/safe-buffer/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7687,7 +7083,6 @@
       <name>safer-buffer</name>
       <version>2.1.2</version>
       <description>Modern Buffer API polyfill without footguns</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7697,10 +7092,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">619a372bcd920fb462ca2d04d4440fa232f3ee4a5ea6749023d2323db1c78355d75debdbe5d248eeda72376003c467106c71bbbdcc911e4d1c6f0a9c42b894b6</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/ChALkeR/safer-buffer/issues</url>
@@ -7732,7 +7124,6 @@
       <name>schemes</name>
       <version>1.4.0</version>
       <description>IANA Uniform Resource Identifier (URI) Schemes list, including crowd sourced unofficial ones</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7742,10 +7133,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/schemes/-/schemes-1.4.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">226172f456c2b109558271374c25a62cf0859d5cf1d251cbfe5fae987a650ea00a7747731699d2ea51592296a00656212b0cd59a5577e9e7346355d3bbc24101</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/Munter/schemes/issues</url>
@@ -7770,21 +7158,13 @@
       <name>semver</name>
       <version>7.6.3</version>
       <description>The semantic version parser used by npm.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/semver@7.6.3</purl>
+      <purl>pkg:npm/semver@7.6.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/semver/-/semver-7.6.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">a157a43f570ab48f824c3bc759815470cb6c2bfd34c260047f2a8a7cd740466f2ed7035585281a5fb03c77852e225508e5ef38884c0e86ced93d8466cd4f54e8</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-semver/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7815,7 +7195,6 @@
       <name>shebang-command</name>
       <version>2.0.0</version>
       <description>Get the command from a shebang</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7825,10 +7204,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">907c6bdb366962d766acdd6a0e3aeb5ff675ad1d641bc0f1fa09292b51b87979af5ecc26704d614d6056614ce5ada630d7fc99a7a62e0d8efb62dbdb3747660c</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/kevva/shebang-command/issues</url>
@@ -7860,7 +7236,6 @@
       <name>shebang-regex</name>
       <version>3.0.0</version>
       <description>Regular expression for matching a shebang line</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7870,10 +7245,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">efef9d161b5cc77df9dee05aabc0c347836ec417ad0730bb6503a19934089c711de9b4ab5dd884cb30af1b4ed9e3851874b4a1594c97b7933fca1cfc7a471bd4</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/shebang-regex/issues</url>
@@ -7905,7 +7277,6 @@
       <name>signal-exit</name>
       <version>4.1.0</version>
       <description>when you want to fire an event no matter how a process exits.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -7915,10 +7286,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/signal-exit/-/signal-exit-4.1.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">6f3c99d5ef3cc3d3b588d25b2a73a5bd84eb58f0e5e3a3b56c6d03dd7227bfef6d90faf1acdf235144e21650e4926296827d4ce827c8035dd2b86a8e6bd2a8af</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/tapjs/signal-exit/issues</url>
@@ -7950,7 +7318,6 @@
       <name>simple-concat</name>
       <version>1.0.1</version>
       <description>Super-minimalist version of `concat-stream`. Less than 15 lines!</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -7960,10 +7327,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/simple-concat/-/simple-concat-1.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">71216d00fb518658efebd20ad214d5650f8e7c4f6778f8bfaed266c395231de57256ba04a895cfd6c173b4a532d6a53ec6fcf7bbfb1f6092daf78edbee700dd9</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/feross/simple-concat/issues</url>
@@ -7995,7 +7359,6 @@
       <name>simple-get</name>
       <version>4.0.1</version>
       <description>Simplest way to make http get requests. Supports HTTPS, redirects, gzip/deflate, streams in &lt; 100 lines.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -8005,10 +7368,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/simple-get/-/simple-get-4.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">6ebbfba795a01f48e6409af56430df2833927965a0f8e572a46f7d03fe6f6063ea27aa7189a1cbcbc9f1b458c103ba0c6b4d5e6c0f607e1d6e30216a3ae5f1bc</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/feross/simple-get/issues</url>
@@ -8040,7 +7400,6 @@
       <name>smart-buffer</name>
       <version>4.2.0</version>
       <description>smart-buffer is a Buffer wrapper that adds automatic read &amp; write offset tracking, string operations, data insertions, and more.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -8050,10 +7409,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">f7884ad0787cacfa90976c577371ec681a0e5ca576d0c4e83e4717bf06c84962c4b3eeb8b01ab9905827da42431dbd4faf2f72acfd1dc6b088f5145c8bb4572a</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/JoshGlazebrook/smart-buffer/issues</url>
@@ -8085,7 +7441,6 @@
       <name>smtp-address-parser</name>
       <version>1.1.0</version>
       <description>Parse an SMTP (RFC-5321) address</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -8095,10 +7450,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/smtp-address-parser/-/smtp-address-parser-1.1.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">1b3d758db354d2996b45e53d4a3edf9ac852071c49f5285d0f6ab892d1c81e8feba531fa945c90a181d828834f26d3def1a1c59ec6ed5b8e8bb34b42081b0866</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/gene-hightower/smtp-address-parser/issues</url>
@@ -8130,7 +7482,6 @@
       <name>socks-proxy-agent</name>
       <version>8.0.5</version>
       <description>A SOCKS proxy `http.Agent` implementation for HTTP and HTTPS</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -8140,10 +7491,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/socks-proxy-agent/-/socks-proxy-agent-8.0.5.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">1de84212ca2d16a6cf5bdb09f1655807a51b98832fee4514391205d8d9dcab8550bc17cd04b89b5bd619479765602494870703eb6f29465966ee7f84f984f327</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -8175,7 +7523,6 @@
       <name>socks</name>
       <version>2.8.3</version>
       <description>Fully featured SOCKS proxy client supporting SOCKSv4, SOCKSv4a, and SOCKSv5. Includes Bind and Associate functionality.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -8185,10 +7532,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/socks/-/socks-2.8.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">979c7b5545166e35456da7c62f13d6918b0722112f985f39b5b21e15959cf193eda0ccb26ee1212fb2727bfa280b8fdde3c1603a34895e0b05fc024f6025bc67</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/JoshGlazebrook/socks/issues</url>
@@ -8229,10 +7573,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.5.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">3e2538dabfb13b851b512d5bba8dcb3c992394eef8df45e7e5254085da73cec3c7b236d855f9679c57404e069b9cbb9d7be0aabb6e69e8dfa0da5c3f3c5b1ae3</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/kemitchell/spdx-exceptions.json/issues</url>
@@ -8266,10 +7607,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-4.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">0a5c9ae492228ffec2e9b451db6fad9c65db73854a9626ca4958f6887bd5797e62316eecd5221096abbaf7d26438324922187fa54bbc2f4fd52e1f317e50fe2d</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/jslicense/spdx-expression-parse.js/issues</url>
@@ -8310,10 +7648,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.20.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">8e0db93620d5ff57cbb52804832bd5c83ba7bda3476eec05f657cd575ee04a63c502563375f34194bb4bcd74debf090f8fb0e119b98df559e624880b9e1bda07</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/jslicense/spdx-license-ids/issues</url>
@@ -8338,7 +7673,6 @@
       <name>sprintf-js</name>
       <version>1.1.3</version>
       <description>JavaScript sprintf implementation</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>BSD-3-Clause</id>
@@ -8348,10 +7682,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">3a8fb4444155e7dfebcf781f24d2908819707c7692112975a5c1b200142c9e721f58e16de89363e600a883653a30b67ffc81980fe9c0f2723e9934a144445e68</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/alexei/sprintf.js/issues</url>
@@ -8383,21 +7714,13 @@
       <name>ssri</name>
       <version>10.0.6</version>
       <description>Standard Subresource Integrity library -- parses, serializes, generates, and verifies integrity metadata according to the SRI spec.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ssri@10.0.6</purl>
+      <purl>pkg:npm/ssri@10.0.6?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fssri.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/ssri/-/ssri-10.0.6.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">306ac51fd67834ff48ca1aa7d7ab03b41a5144d27463684d6ba0fae61ef7e9f55268f087af80cce2c59436f55a4ae0bed0e046870b2bc9d4309a07e0e4b9dca9</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/ssri/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8427,7 +7750,6 @@
       <name>string_decoder</name>
       <version>1.3.0</version>
       <description>The string_decoder module from Node core</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -8437,10 +7759,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">864457f14d568c915df0bb03276c90ff0596c5aa2912c0015355df90cf00fa3d3ef392401a9a6dd7a72bd56860e8a21b6f8a2453a32a97a04e8febaea7fc0a78</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/string_decoder/issues</url>
@@ -8472,7 +7791,6 @@
       <name>string-width</name>
       <version>4.2.3</version>
       <description>Get the visual width of a string - the number of columns required to display it</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -8482,10 +7800,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">c0ac90450a63274b08a7ad84ad265d1ac8cc256b1aa79a1136284786ee86ec954effd8c807a5327af2feb57b8eaab9e0f23fdcc4a4d6c96530bd24eb8a2673fe</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/string-width/issues</url>
@@ -8509,7 +7824,6 @@
           <name>ansi-regex</name>
           <version>5.0.1</version>
           <description>Regular expression for matching ANSI escape codes</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>MIT</id>
@@ -8519,10 +7833,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">aae2505e54d25062f62c7f52517a3c570b18e2ca1a9e1828e8b3529bce04d4b05c13cb373b4c29762473c91f73fd9649325316bf7eea38e6fda5d26531410a15</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/ansi-regex/issues</url>
@@ -8554,7 +7865,6 @@
           <name>emoji-regex</name>
           <version>8.0.0</version>
           <description>A regular expression to match all Emoji-only symbols as per the Unicode Standard.</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>MIT</id>
@@ -8564,10 +7874,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">3128d8cdc58d380d1ec001e9cf4331a5816fc20eb28f2d4d1b7c6d7a8ab3eb8e150a8fd13e09ebd7f186b7e89cde2253cd0f04bb74dd335e126b09d5526184e8</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
@@ -8599,7 +7906,6 @@
           <name>strip-ansi</name>
           <version>6.0.1</version>
           <description>Strip ANSI escape codes from a string</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>MIT</id>
@@ -8609,10 +7915,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">637f153d21dcaa416b0a916743dbee4979aabaebf9a1738aa46793e9a1abaf7a3719cf409556ba2417d448e0a76f1186645fbfd28a08ecaacfb944b3b54754e4</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/strip-ansi/issues</url>
@@ -8654,7 +7957,6 @@
       <name>string-width</name>
       <version>5.1.2</version>
       <description>Get the visual width of a string - the number of columns required to display it</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -8664,10 +7966,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/string-width/-/string-width-5.1.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">1e72ce091def8dc63c6dea0d2ed723679fe7c67d9a7e6304ea586b0eb79ba24a8c6a9f976de5bc9fd4d7a4f0cea9d18ae6a708de84f418a4d6eb00bb10c895a8</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/string-width/issues</url>
@@ -8699,7 +7998,6 @@
       <name>strip-ansi</name>
       <version>6.0.1</version>
       <description>Strip ANSI escape codes from a string</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -8709,10 +8007,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">637f153d21dcaa416b0a916743dbee4979aabaebf9a1738aa46793e9a1abaf7a3719cf409556ba2417d448e0a76f1186645fbfd28a08ecaacfb944b3b54754e4</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/strip-ansi/issues</url>
@@ -8736,7 +8031,6 @@
           <name>ansi-regex</name>
           <version>5.0.1</version>
           <description>Regular expression for matching ANSI escape codes</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>MIT</id>
@@ -8746,10 +8040,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">aae2505e54d25062f62c7f52517a3c570b18e2ca1a9e1828e8b3529bce04d4b05c13cb373b4c29762473c91f73fd9649325316bf7eea38e6fda5d26531410a15</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/ansi-regex/issues</url>
@@ -8791,21 +8082,13 @@
       <name>strip-ansi</name>
       <version>7.1.0</version>
       <description>Strip ANSI escape codes from a string</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/strip-ansi@7.1.0</purl>
+      <purl>pkg:npm/strip-ansi@7.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">8aae9e55523ae274104d162ad8ab44836776b94ecb125853270b07e18cc81d9b21c658199acff021ce15a03413946fc8bd522b04a1b4e82ad99e9d2abfb86471</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/strip-ansi/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8836,7 +8119,6 @@
       <name>strip-json-comments</name>
       <version>2.0.1</version>
       <description>Strip comments from JSON. Lets you use comments in your JSON files!</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -8846,10 +8128,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">e2007c9dad3b7de715564388e91b387bb4fa34e4e48b91262fb4d476e4ece9bbb711d9d2c9c9ed549e2b7bc920640fb0c7d22e788d98d756df6e0c2dcee13429</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/strip-json-comments/issues</url>
@@ -8881,7 +8160,6 @@
       <name>tar-fs</name>
       <version>2.1.1</version>
       <description>filesystem bindings for tar-stream</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -8891,10 +8169,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/tar-fs/-/tar-fs-2.1.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">574af663db1c99b0d12c235ec7ffa1633be9ff3c988ef15b1cf36055329f42f56b6fa82e884fdfc4ff976e50cd474d75bada296e47b1da7338747355e860ec9e</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mafintosh/tar-fs/issues</url>
@@ -8918,7 +8193,6 @@
           <name>chownr</name>
           <version>1.1.4</version>
           <description>like `chown -R`</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>ISC</id>
@@ -8928,10 +8202,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/chownr/-/chownr-1.1.4.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">8c9d1bab36b296626d567360cd37923acf033dabe96d8804aff6f460bf3fd863b7c4912122716684a3149c42508d9ba62bb297185854cbcf4faec25695a90156</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/chownr/issues</url>
@@ -8973,7 +8244,6 @@
       <name>tar-stream</name>
       <version>2.2.0</version>
       <description>tar-stream is a streaming tar parser and generator and nothing else. It is streams2 and operates purely using streams which means you can easily extract/parse tarballs without ever hitting the file system.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -8983,10 +8253,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/tar-stream/-/tar-stream-2.2.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">ba37aa6dc780060c0c6711099e4d870d8d83967519fbda0471bd4acd355f6078a8d1413a746ef59fad1df03d88e2a36f95e5abad7a668e9b7bbd9785d4b9cc65</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mafintosh/tar-stream/issues</url>
@@ -9018,21 +8285,13 @@
       <name>tar</name>
       <version>6.2.1</version>
       <description>tar for node</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/tar@6.2.1</purl>
+      <purl>pkg:npm/tar@6.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-tar.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/tar/-/tar-6.2.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">0d9e323914f0adb4e3ffb31962adb0fbf645748e8e67f7fd4851d1fbbd6021551984e40f1f35422e9bd19cf83268ca5f5b1c64ff838dbdadc6412c8d20a46fe8</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-tar/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -9055,7 +8314,6 @@
           <name>fs-minipass</name>
           <version>2.1.0</version>
           <description>fs read and write streams based on minipass</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>ISC</id>
@@ -9065,10 +8323,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/fs-minipass/-/fs-minipass-2.1.0.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">57f26038b1424be47a55cab4b250ae69e58474d0b7a2e0e524c348b1a707d95b402e2bbd995e0b3eb1dce5c0e5f24e5ac3a27c8f08165a9893a39458866233be</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/npm/fs-minipass/issues</url>
@@ -9092,7 +8347,6 @@
               <name>minipass</name>
               <version>3.3.6</version>
               <description>minimal implementation of a PassThrough stream</description>
-              <scope>optional</scope>
               <licenses>
                 <license acknowledgement="declared">
                   <id>ISC</id>
@@ -9102,10 +8356,7 @@
               <externalReferences>
                 <reference type="distribution">
                   <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
-                  <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-                  <hashes>
-                    <hash alg="SHA-512">0f188d89dc5210afad1c6eb3388925bcd3b09b786f0ab6d4addb7363be14e87293271bc80df3942f95b93f61a17770d392184a3d81aa78d508879a9c3386017f</hash>
-                  </hashes>
+                  <comment>as detected from npm-ls property "resolved"</comment>
                 </reference>
                 <reference type="issue-tracker">
                   <url>https://github.com/isaacs/minipass/issues</url>
@@ -9147,7 +8398,6 @@
           <name>minipass</name>
           <version>5.0.0</version>
           <description>minimal implementation of a PassThrough stream</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>ISC</id>
@@ -9157,10 +8407,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">dc59e362e7a1bfd93aa2f3846f23acc1a7420cf5f5a6209f855f2772662d1ce8ee3f0ca5556b208532e8eeb69b8c2dd1c79c43e070f1f169b5c67305ed2e6a15</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/minipass/issues</url>
@@ -9202,7 +8449,6 @@
       <name>tunnel-agent</name>
       <version>0.6.0</version>
       <description>HTTP proxy tunneling agent. Formerly part of mikeal/request, now a standalone module.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>Apache-2.0</id>
@@ -9212,10 +8458,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.6.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">31c9cd895d65f1161e63cb41804a6ea1d082d662d475b48df826012fb909b093489ce3fc5230c3130764e8cc3ad2f74b2ebaf934729984c00e4ab476359b90fb</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mikeal/tunnel-agent/issues</url>
@@ -9255,10 +8498,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">26508c3be7a174420aaa517193a21f568014566833edc53bcc3fe1f57674ab37a8b121e650954ecd242fbd84985979055c2f887cb29221f7e1bf4b1566ea7aa4</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/undici/issues</url>
@@ -9274,7 +8514,6 @@
         </reference>
       </externalReferences>
       <properties>
-        <property name="cdx:npm:package:development">true</property>
         <property name="cdx:npm:package:path">node_modules/undici-types</property>
       </properties>
       <evidence/>
@@ -9284,7 +8523,6 @@
       <name>unique-filename</name>
       <version>3.0.0</version>
       <description>Generate a unique filename for use in temporary directories or caches.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -9294,10 +8532,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/unique-filename/-/unique-filename-3.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">69f5e1b82e79c240266743f5f10b1513a929f096b1ac4a243761c6228215bf68a31d0778d7d1f4fba12280015c2335de30891c224341a41dcbfc35c1ddc4d2fe</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/iarna/unique-filename/issues</url>
@@ -9329,7 +8564,6 @@
       <name>unique-slug</name>
       <version>4.0.0</version>
       <description>Generate a unique character string suitible for use in files and URLs.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -9339,10 +8573,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/unique-slug/-/unique-slug-4.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">5ab700e80c847ea0d7e5b5a281eff83507cf64cb4048d571766591efa584498415000092816711e9ef62d26a1faaa071605b4be280313c8a6d63bdffd181350d</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/unique-slug/issues</url>
@@ -9374,7 +8605,6 @@
       <name>uri-js</name>
       <version>4.4.1</version>
       <description>An RFC 3986/3987 compliant, scheme extendable URI/IRI parsing/validating/resolving library for JavaScript.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>BSD-2-Clause</id>
@@ -9384,10 +8614,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/uri-js/-/uri-js-4.4.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">eeb294cb2df7435c9cf7ca50d430262edc17d74f45ed321f5a55b561da3c5a5d628b549e1e279e8741c77cf78bd9f3172bacf4b3c79c2acf5fac2b8b26f9dd06</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/garycourt/uri-js/issues</url>
@@ -9419,7 +8646,6 @@
       <name>util-deprecate</name>
       <version>1.0.2</version>
       <description>The Node.js `util.deprecate()` function with browser support</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -9429,10 +8655,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">10f0f9ab5b97c85c49a42acb9c27359c79eade039ae83641a1c008888d93692080ed5089d5424331a802cc891736c5187c3d5d68afff2d3110f318886eb1ed73</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/util-deprecate/issues</url>
@@ -9463,7 +8686,6 @@
       <name>uuid</name>
       <version>8.3.2</version>
       <description>RFC4122 (v1, v4, and v5) UUIDs</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -9473,10 +8695,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">f8d62cd9078c5b2f865853849bdc679fa1c20e9d25ed0043ee697cccb52627ef77439345d0da1c12b9f09139175453625f7fdfa42e9a7d2f0385bfe0cfb47b7a</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/uuidjs/uuid/issues</url>
@@ -9492,7 +8711,6 @@
         </reference>
       </externalReferences>
       <properties>
-        <property name="cdx:npm:package:development">true</property>
         <property name="cdx:npm:package:path">node_modules/uuid</property>
       </properties>
       <evidence>
@@ -9508,7 +8726,6 @@
       <name>uuidv4</name>
       <version>6.2.13</version>
       <description>uuidv4 creates v4 UUIDs.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -9518,10 +8735,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">017cb33236b3601de8bcbdead39d552c7d3a2318fffca9f1ed09d44a2d53fff21ede2a3a0a9b0fbbd9d530ec793282d687ac55d01f49d2121ac6e9e0c5751b3d</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/thenativeweb/uuidv4/issues</url>
@@ -9553,7 +8767,6 @@
       <name>which</name>
       <version>4.0.0</version>
       <description>Like which(1) unix command. Find the first instance of an executable in the PATH.</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -9563,10 +8776,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/which/-/which-4.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">1a5698c846f4ec33f16022a12b3a65096049b6fc5971932b2fee1492b4d22471cfc99538998613bf7a9a39eefb1fb10e0cb492a2901414073a5bc538caabec72</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-which/issues</url>
@@ -9598,7 +8808,6 @@
       <name>wrap-ansi</name>
       <version>7.0.0</version>
       <description>Wordwrap a string with ANSI escape codes</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -9608,10 +8817,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">6151888f691a98b493c70e8db198e80717d2c2c9f4c9c75eb26738a7e436d5ce733ee675a65f8d7f155dc4fb5d1ef98d54e43a5d2606e0052dcadfc58bb0f5e9</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/wrap-ansi/issues</url>
@@ -9635,7 +8841,6 @@
           <name>ansi-regex</name>
           <version>5.0.1</version>
           <description>Regular expression for matching ANSI escape codes</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>MIT</id>
@@ -9645,10 +8850,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">aae2505e54d25062f62c7f52517a3c570b18e2ca1a9e1828e8b3529bce04d4b05c13cb373b4c29762473c91f73fd9649325316bf7eea38e6fda5d26531410a15</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/ansi-regex/issues</url>
@@ -9680,7 +8882,6 @@
           <name>ansi-styles</name>
           <version>4.3.0</version>
           <description>ANSI escape codes for styling strings in the terminal</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>MIT</id>
@@ -9690,10 +8891,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">cdb07dac22404f5adb8e25436f686a2851cd60bc60b64f0d511c59dc86700f717a36dc5b5d94029e74a2d4b931f880e885d3e5169db6db05402c885e64941212</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/ansi-styles/issues</url>
@@ -9725,7 +8923,6 @@
           <name>emoji-regex</name>
           <version>8.0.0</version>
           <description>A regular expression to match all Emoji-only symbols as per the Unicode Standard.</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>MIT</id>
@@ -9735,10 +8932,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">3128d8cdc58d380d1ec001e9cf4331a5816fc20eb28f2d4d1b7c6d7a8ab3eb8e150a8fd13e09ebd7f186b7e89cde2253cd0f04bb74dd335e126b09d5526184e8</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
@@ -9770,7 +8964,6 @@
           <name>string-width</name>
           <version>4.2.3</version>
           <description>Get the visual width of a string - the number of columns required to display it</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>MIT</id>
@@ -9780,10 +8973,7 @@
           <externalReferences>
             <reference type="distribution">
               <url>https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">c0ac90450a63274b08a7ad84ad265d1ac8cc256b1aa79a1136284786ee86ec954effd8c807a5327af2feb57b8eaab9e0f23fdcc4a4d6c96530bd24eb8a2673fe</hash>
-              </hashes>
+              <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/string-width/issues</url>
@@ -9815,21 +9005,13 @@
           <name>strip-ansi</name>
           <version>6.0.1</version>
           <description>Strip ANSI escape codes from a string</description>
-          <scope>optional</scope>
           <licenses>
             <license acknowledgement="declared">
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/strip-ansi@6.0.1</purl>
+          <purl>pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git</purl>
           <externalReferences>
-            <reference type="distribution">
-              <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz</url>
-              <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-              <hashes>
-                <hash alg="SHA-512">637f153d21dcaa416b0a916743dbee4979aabaebf9a1738aa46793e9a1abaf7a3719cf409556ba2417d448e0a76f1186645fbfd28a08ecaacfb944b3b54754e4</hash>
-              </hashes>
-            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/strip-ansi/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -9870,7 +9052,6 @@
       <name>wrap-ansi</name>
       <version>8.1.0</version>
       <description>Wordwrap a string with ANSI escape codes</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -9880,10 +9061,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-8.1.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">b22ed0588eb350cab9e9b11216f6a0b66ccc7463ada317d1f927b3d753286df73bb66f9591472493d6d6d9479f7d319551b3a4b31992c34000da0b3c83bd4d09</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/wrap-ansi/issues</url>
@@ -9915,7 +9093,6 @@
       <name>wrappy</name>
       <version>1.0.2</version>
       <description>Callback wrapping utility</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
@@ -9925,10 +9102,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">9784a9fc346c7a8afdc0be84bd5dbe4ee427eb774c90f8d9feca7d5e48214c46d5f4a94f4b5c54b19deeeff2103b8c31b5c141e1b82940f45c477402bdeccf71</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/wrappy/issues</url>
@@ -9960,7 +9134,6 @@
       <name>xmlbuilder2</name>
       <version>3.1.1</version>
       <description>An XML builder for node.js</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
@@ -9970,10 +9143,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://registry.npmjs.org/xmlbuilder2/-/xmlbuilder2-3.1.1.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">58249f6df66740374b40b88c746510a4cc71724790e2864d30d84b56471e913bbbc610f8b6e503c803e863c0b05ef05813a2f004777a416d9665794e5abd6f0b</hash>
-          </hashes>
+          <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/xmlbuilder2/issues</url>
@@ -10005,21 +9175,13 @@
       <name>yallist</name>
       <version>4.0.0</version>
       <description>Yet Another Linked List</description>
-      <scope>optional</scope>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/yallist@4.0.0</purl>
+      <purl>pkg:npm/yallist@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fyallist.git</purl>
       <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz</url>
-          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
-          <hashes>
-            <hash alg="SHA-512">df074689d672ab93c1d3ce172c44b94e9392440df08d7025216321ba6da445cbffe354a7d9e990d1dc9c416e2e6572de8f02af83a12cbdb76554bf8560472dec</hash>
-          </hashes>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/yallist/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
