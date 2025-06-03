@@ -32,7 +32,6 @@ const fnamePattern = /^npm-ls(?<args>.*?)_npm(?<npm>\d+)_node(?<node>\d+)_(?<os>
 /** @type {Object.<string, Object.<string, string[]>>} */
 const files = {}
 
-// /CI_results/npm-ls_npm6_node14_macos-latest.json
 for (const dirDemoResE of readdirSync(dirDemoRes)) {
   const dirResults = join(dirDemoRes, dirDemoResE, 'CI_results')
   try {
