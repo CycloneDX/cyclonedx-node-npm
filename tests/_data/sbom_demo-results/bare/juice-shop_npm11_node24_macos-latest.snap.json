@@ -127,8 +127,8 @@
       "type": "library",
       "name": "helper-string-parser",
       "group": "@babel",
-      "version": "7.25.9",
-      "bom-ref": "@babel/helper-string-parser@7.25.9",
+      "version": "7.27.1",
+      "bom-ref": "@babel/helper-string-parser@7.27.1",
       "licenses": [
         {
           "license": {
@@ -137,15 +137,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40babel/helper-string-parser@7.25.9",
+      "purl": "pkg:npm/%40babel/helper-string-parser@7.27.1",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.25.9.tgz",
+          "url": "https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.27.1.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "e00fd20abff628b7798ebb4e305cda2a356d01e8b7fb6aff34286804da19dc4c8fffe1a58686841a858e6549859a82133fbcce2721c8326f8361177ca373ef1c"
+              "content": "a8c952c4a6e946502b89d0c4c64f769d2a1bc837693e28d4ab60d6ea80e752a77488e1b19908f2aa13088a123dfb3bf82cfc997518ded9c6af58f6c26d69b778"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -162,8 +162,8 @@
       "type": "library",
       "name": "helper-validator-identifier",
       "group": "@babel",
-      "version": "7.25.9",
-      "bom-ref": "@babel/helper-validator-identifier@7.25.9",
+      "version": "7.27.1",
+      "bom-ref": "@babel/helper-validator-identifier@7.27.1",
       "licenses": [
         {
           "license": {
@@ -172,15 +172,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40babel/helper-validator-identifier@7.25.9",
+      "purl": "pkg:npm/%40babel/helper-validator-identifier@7.27.1",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.25.9.tgz",
+          "url": "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.27.1.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "11deb553a5c973709545f904449583cf8749c0a7bb88b9a626c6ce1aef704a5a0d485b6d1d5d08f20e940206fbaa72b9972e5b18b3dde285d997109d00d04e59"
+              "content": "0f684ff5e03e4aac75901660cf1661d32d6dadbb94f89a03922130aa1437ea7a1d62a270c842213d274c35dee53a6ff88a8ef696e4cf587db461d6b4c4eb94a3"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -197,8 +197,8 @@
       "type": "library",
       "name": "parser",
       "group": "@babel",
-      "version": "7.27.0",
-      "bom-ref": "@babel/parser@7.27.0",
+      "version": "7.27.4",
+      "bom-ref": "@babel/parser@7.27.4",
       "licenses": [
         {
           "license": {
@@ -207,15 +207,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40babel/parser@7.27.0",
+      "purl": "pkg:npm/%40babel/parser@7.27.4",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@babel/parser/-/parser-7.27.0.tgz",
+          "url": "https://registry.npmjs.org/@babel/parser/-/parser-7.27.4.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "89a7a9868ef7ff63f3ef0d9e312d10e5ff37fb444a23b8b8c66898781983cdf4556d0b53386ed3b344b81f3255b1330623d91e53cacd7ee66bf0329f4aded8ca"
+              "content": "05198b1c6c2952a2c54768f3c7da2b06e5ff0010e48f68cb28e5eb1c34cdd9a38a2fe8c50c329a44da3d9f262c225f61fd413fee530a7438ca410cb128a0d9ee"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -232,8 +232,8 @@
       "type": "library",
       "name": "runtime",
       "group": "@babel",
-      "version": "7.27.0",
-      "bom-ref": "@babel/runtime@7.27.0",
+      "version": "7.27.4",
+      "bom-ref": "@babel/runtime@7.27.4",
       "licenses": [
         {
           "license": {
@@ -242,15 +242,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40babel/runtime@7.27.0",
+      "purl": "pkg:npm/%40babel/runtime@7.27.4",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.27.0.tgz",
+          "url": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.27.4.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "56d3ce92b74f1d9b0a73f72536aca2f56500f1320d919e1c1a4eb7514137bb8a6607693e64c4110ee20e6a0bfc51577a8fb9344f7f914486fb6de29379b35b73"
+              "content": "b77c9a10eb86bbd365219fa121e19b06316d653ee3d9c6f6b60d1fb9a24a786a2d7214638cb7eb040f4ac1ff2aba1a4fd4452ec4ca1d420d38abf981c3283cb8"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -267,8 +267,8 @@
       "type": "library",
       "name": "types",
       "group": "@babel",
-      "version": "7.27.0",
-      "bom-ref": "@babel/types@7.27.0",
+      "version": "7.27.3",
+      "bom-ref": "@babel/types@7.27.3",
       "licenses": [
         {
           "license": {
@@ -277,15 +277,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40babel/types@7.27.0",
+      "purl": "pkg:npm/%40babel/types@7.27.3",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@babel/types/-/types-7.27.0.tgz",
+          "url": "https://registry.npmjs.org/@babel/types/-/types-7.27.3.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "1f8e6cf1f54b6236e1147eb67482775ad989e9148fb7fdc344ed19713d92522622432cf704b55bf400c49cb97dd66ef86903d2dc0cf379a8d91d839a9567b76e"
+              "content": "6351a423892daedbe66b0a12abee050951cdaf279aeae47ea94432d001b12d2b23097d2756691840c04b1c391766ea39846c7b79876721ab25b1d0459bbcdb53"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -510,8 +510,8 @@
         {
           "type": "library",
           "name": "detect-libc",
-          "version": "2.0.3",
-          "bom-ref": "@mapbox/node-pre-gyp@1.0.11|detect-libc@2.0.3",
+          "version": "2.0.4",
+          "bom-ref": "@mapbox/node-pre-gyp@1.0.11|detect-libc@2.0.4",
           "licenses": [
             {
               "license": {
@@ -520,15 +520,15 @@
               }
             }
           ],
-          "purl": "pkg:npm/detect-libc@2.0.3",
+          "purl": "pkg:npm/detect-libc@2.0.4",
           "externalReferences": [
             {
-              "url": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.3.tgz",
+              "url": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.4.tgz",
               "type": "distribution",
               "hashes": [
                 {
                   "alg": "SHA-512",
-                  "content": "6f0cb43065b9e5b1b8d55ab1c72a4eb1d49d1aa2f05cf23f7e873081360214c6dd522040c4b83d085cc6d3cb33d9aab3927c225fb1e49746d010d8e0f222c1cb"
+                  "content": "dd40eff86f42b0228ed5628c1b0f5fc2afd258961b23473963b2d4d405d8a0375b844d801d0e8de8d6f7e2c1bc163ed3e403f2f2a5c308abae207775051d2d54"
                 }
               ],
               "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -3344,8 +3344,8 @@
       "type": "library",
       "name": "cors",
       "group": "@types",
-      "version": "2.8.17",
-      "bom-ref": "@types/cors@2.8.17",
+      "version": "2.8.18",
+      "bom-ref": "@types/cors@2.8.18",
       "licenses": [
         {
           "license": {
@@ -3354,15 +3354,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/cors@2.8.17",
+      "purl": "pkg:npm/%40types/cors@2.8.18",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@types/cors/-/cors-2.8.17.tgz",
+          "url": "https://registry.npmjs.org/@types/cors/-/cors-2.8.18.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "f02183beb063d73828daa13ea12de9382c9836a08faf23166366c67f003475c7e8a561a0c6cfbbf1d7f446cdeb73d4c73f82643a12ec01afb5e5576902a91c50"
+              "content": "9d7dddd2cc495b8d42a90bdf3b3546d4d0935df143ac35888210999dca4779695515df35cf107f0cb860edabc583a7872c2457edc9019a820872a6befaea6f24"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -3449,8 +3449,8 @@
       "type": "library",
       "name": "node",
       "group": "@types",
-      "version": "22.13.14",
-      "bom-ref": "@types/node@22.13.14",
+      "version": "22.15.29",
+      "bom-ref": "@types/node@22.15.29",
       "licenses": [
         {
           "license": {
@@ -3459,15 +3459,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/node@22.13.14",
+      "purl": "pkg:npm/%40types/node@22.15.29",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@types/node/-/node-22.13.14.tgz",
+          "url": "https://registry.npmjs.org/@types/node/-/node-22.15.29.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "66cfce965735489f2729402073b8af38474804cf0900a82baaa5188b627df7b26e28eeffb69402f9609eb50d6cca988a09058776f760f7004da543c459969eef"
+              "content": "2cd7633a4503954d5165bf1ed64388529375a90525cc6904b5b54da39def6ebc03839a26ea876e866e1289468f5b90124d784088fd23227586f10c7d7d594e79"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -3589,8 +3589,8 @@
       "type": "library",
       "name": "validator",
       "group": "@types",
-      "version": "13.12.3",
-      "bom-ref": "@types/validator@13.12.3",
+      "version": "13.15.1",
+      "bom-ref": "@types/validator@13.15.1",
       "licenses": [
         {
           "license": {
@@ -3599,15 +3599,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/validator@13.12.3",
+      "purl": "pkg:npm/%40types/validator@13.15.1",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/@types/validator/-/validator-13.12.3.tgz",
+          "url": "https://registry.npmjs.org/@types/validator/-/validator-13.15.1.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "da2a706763727464092269def8584d761811337edef6509ebfdf4a9ea91b14777de179ff984ac04562354522de9b5400d7d721e643a1cc865dedef02036148f2"
+              "content": "f601baa2061ca08da608c2dd70ed0d608d0062b6f1223bf43039b2ff9630a3a0a9596aea61ac9cfa69a0c51b0282d706266f4149b5e432c9b119a8758861c001"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -3899,8 +3899,8 @@
         {
           "type": "library",
           "name": "debug",
-          "version": "4.4.0",
-          "bom-ref": "agent-base@6.0.2|debug@4.4.0",
+          "version": "4.4.1",
+          "bom-ref": "agent-base@6.0.2|debug@4.4.1",
           "licenses": [
             {
               "license": {
@@ -3909,15 +3909,15 @@
               }
             }
           ],
-          "purl": "pkg:npm/debug@4.4.0",
+          "purl": "pkg:npm/debug@4.4.1",
           "externalReferences": [
             {
-              "url": "https://registry.npmjs.org/debug/-/debug-4.4.0.tgz",
+              "url": "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz",
               "type": "distribution",
               "hashes": [
                 {
                   "alg": "SHA-512",
-                  "content": "e964d9fc8c4263f4fa0402e8647684e1cb69f719be679918fe9cd86821d115ec958688f196b9bee3acbaf0703a86bd1373012cb28c4d8831142508df3d9fd160"
+                  "content": "29c282aa27ed049719afefbbca4a03204c126b75d6a304df34fa3dd816318d78b260456b51087668bca1c410b0c30fa17a8aed505c44258711ce8b2cb5310161"
                 }
               ],
               "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -14318,6 +14318,41 @@
     },
     {
       "type": "library",
+      "name": "fsevents",
+      "version": "2.3.3",
+      "bom-ref": "fsevents@2.3.3",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/fsevents@2.3.3",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "e71a037d7f9f2fb7da0139da82658fa5b16dc21fd1efb5a630caaa1c64bae42defbc1d181eb805f81d58999df8e35b4c8f99fade4d36d765cda09c339617df43"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/fsevents"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "fstream",
       "version": "1.0.12",
       "bom-ref": "fstream@1.0.12",
@@ -17469,8 +17504,8 @@
         {
           "type": "library",
           "name": "debug",
-          "version": "4.4.0",
-          "bom-ref": "http-proxy-agent@5.0.0|debug@4.4.0",
+          "version": "4.4.1",
+          "bom-ref": "http-proxy-agent@5.0.0|debug@4.4.1",
           "licenses": [
             {
               "license": {
@@ -17479,15 +17514,15 @@
               }
             }
           ],
-          "purl": "pkg:npm/debug@4.4.0",
+          "purl": "pkg:npm/debug@4.4.1",
           "externalReferences": [
             {
-              "url": "https://registry.npmjs.org/debug/-/debug-4.4.0.tgz",
+              "url": "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz",
               "type": "distribution",
               "hashes": [
                 {
                   "alg": "SHA-512",
-                  "content": "e964d9fc8c4263f4fa0402e8647684e1cb69f719be679918fe9cd86821d115ec958688f196b9bee3acbaf0703a86bd1373012cb28c4d8831142508df3d9fd160"
+                  "content": "29c282aa27ed049719afefbbca4a03204c126b75d6a304df34fa3dd816318d78b260456b51087668bca1c410b0c30fa17a8aed505c44258711ce8b2cb5310161"
                 }
               ],
               "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -17607,8 +17642,8 @@
         {
           "type": "library",
           "name": "debug",
-          "version": "4.4.0",
-          "bom-ref": "https-proxy-agent@5.0.1|debug@4.4.0",
+          "version": "4.4.1",
+          "bom-ref": "https-proxy-agent@5.0.1|debug@4.4.1",
           "licenses": [
             {
               "license": {
@@ -17617,15 +17652,15 @@
               }
             }
           ],
-          "purl": "pkg:npm/debug@4.4.0",
+          "purl": "pkg:npm/debug@4.4.1",
           "externalReferences": [
             {
-              "url": "https://registry.npmjs.org/debug/-/debug-4.4.0.tgz",
+              "url": "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz",
               "type": "distribution",
               "hashes": [
                 {
                   "alg": "SHA-512",
-                  "content": "e964d9fc8c4263f4fa0402e8647684e1cb69f719be679918fe9cd86821d115ec958688f196b9bee3acbaf0703a86bd1373012cb28c4d8831142508df3d9fd160"
+                  "content": "29c282aa27ed049719afefbbca4a03204c126b75d6a304df34fa3dd816318d78b260456b51087668bca1c410b0c30fa17a8aed505c44258711ce8b2cb5310161"
                 }
               ],
               "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -22019,8 +22054,8 @@
         {
           "type": "library",
           "name": "debug",
-          "version": "4.4.0",
-          "bom-ref": "make-fetch-happen@9.1.0|debug@4.4.0",
+          "version": "4.4.1",
+          "bom-ref": "make-fetch-happen@9.1.0|debug@4.4.1",
           "scope": "optional",
           "licenses": [
             {
@@ -22030,15 +22065,15 @@
               }
             }
           ],
-          "purl": "pkg:npm/debug@4.4.0",
+          "purl": "pkg:npm/debug@4.4.1",
           "externalReferences": [
             {
-              "url": "https://registry.npmjs.org/debug/-/debug-4.4.0.tgz",
+              "url": "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz",
               "type": "distribution",
               "hashes": [
                 {
                   "alg": "SHA-512",
-                  "content": "e964d9fc8c4263f4fa0402e8647684e1cb69f719be679918fe9cd86821d115ec958688f196b9bee3acbaf0703a86bd1373012cb28c4d8831142508df3d9fd160"
+                  "content": "29c282aa27ed049719afefbbca4a03204c126b75d6a304df34fa3dd816318d78b260456b51087668bca1c410b0c30fa17a8aed505c44258711ce8b2cb5310161"
                 }
               ],
               "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -22054,8 +22089,8 @@
         {
           "type": "library",
           "name": "http-cache-semantics",
-          "version": "4.1.1",
-          "bom-ref": "make-fetch-happen@9.1.0|http-cache-semantics@4.1.1",
+          "version": "4.2.0",
+          "bom-ref": "make-fetch-happen@9.1.0|http-cache-semantics@4.2.0",
           "scope": "optional",
           "licenses": [
             {
@@ -22065,15 +22100,15 @@
               }
             }
           ],
-          "purl": "pkg:npm/http-cache-semantics@4.1.1",
+          "purl": "pkg:npm/http-cache-semantics@4.2.0",
           "externalReferences": [
             {
-              "url": "https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.1.1.tgz",
+              "url": "https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.2.0.tgz",
               "type": "distribution",
               "hashes": [
                 {
                   "alg": "SHA-512",
-                  "content": "7abdbde4328f56c57cda3e64c351a3b7e00303f5d81ec6a397cd9c18d406d9eca83e4be05215fe9c32327a5ce12166dbb173f7f441dc23a979b58b36158a985d"
+                  "content": "753c5cbcf5ea3ef5c1429ab9754afa9843095f8a08105bfa6f0a26dc50f02910ecb888e324600daa106ea009fd73545024874029abf7dc40fae44db2b3ef3b41"
                 }
               ],
               "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -26716,8 +26751,8 @@
     {
       "type": "library",
       "name": "pg-connection-string",
-      "version": "2.7.0",
-      "bom-ref": "pg-connection-string@2.7.0",
+      "version": "2.9.0",
+      "bom-ref": "pg-connection-string@2.9.0",
       "licenses": [
         {
           "license": {
@@ -26726,15 +26761,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/pg-connection-string@2.7.0",
+      "purl": "pkg:npm/pg-connection-string@2.9.0",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/pg-connection-string/-/pg-connection-string-2.7.0.tgz",
+          "url": "https://registry.npmjs.org/pg-connection-string/-/pg-connection-string-2.9.0.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "3c8d96f66bf9deb5c940439bf31351f251fb1ebf8429aea825adfccec2b44bf932d9eaf5ea2a2cd702ca859cb1cc3ee35117a25a891cf562b99f14a70bb5b54c"
+              "content": "3f60c404abaf87944295a7cb9e0900b867bd39494557b79bbbcc3592669a3a03dca49775448161ee8b444df23a84047c62ea4e2c54d8ee7bafbc89fb3cb72251"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -28554,40 +28589,6 @@
     },
     {
       "type": "library",
-      "name": "regenerator-runtime",
-      "version": "0.14.1",
-      "bom-ref": "regenerator-runtime@0.14.1",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/regenerator-runtime@0.14.1",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz",
-          "type": "distribution",
-          "hashes": [
-            {
-              "alg": "SHA-512",
-              "content": "7589e11e1d2726831f9e466ce869a684592700646b2f39cebb99dcf4c2fe109c46bebc7a1fbb5eb9ebea56a0ae3dc3cafffdde0ebae34217a15d5c7d72790677"
-            }
-          ],
-          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/regenerator-runtime"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "regex-not",
       "version": "1.0.2",
       "bom-ref": "regex-not@1.0.2",
@@ -30253,8 +30254,8 @@
     {
       "type": "library",
       "name": "semver",
-      "version": "7.7.1",
-      "bom-ref": "semver@7.7.1",
+      "version": "7.7.2",
+      "bom-ref": "semver@7.7.2",
       "licenses": [
         {
           "license": {
@@ -30263,15 +30264,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/semver@7.7.1",
+      "purl": "pkg:npm/semver@7.7.2",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/semver/-/semver-7.7.1.tgz",
+          "url": "https://registry.npmjs.org/semver/-/semver-7.7.2.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "865abcb407e7d26ffad69e0155170fcc81abe8b2a2330a3854ce9d1a2ea9b78a9c46498dcd3716aba782123121faa5e390c0ef3e53851521b0423a046ba83230"
+              "content": "445d05c3eacee4031ff4c0326915c8e005745258f994c1ea571c5d4a08956e2c52097a049a65ff8e4d02b89c38fb74aaae860ef55a1487e1dcb898afbed25e98"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -30459,8 +30460,8 @@
         {
           "type": "library",
           "name": "debug",
-          "version": "4.4.0",
-          "bom-ref": "sequelize@6.37.7|debug@4.4.0",
+          "version": "4.4.1",
+          "bom-ref": "sequelize@6.37.7|debug@4.4.1",
           "licenses": [
             {
               "license": {
@@ -30469,15 +30470,15 @@
               }
             }
           ],
-          "purl": "pkg:npm/debug@4.4.0",
+          "purl": "pkg:npm/debug@4.4.1",
           "externalReferences": [
             {
-              "url": "https://registry.npmjs.org/debug/-/debug-4.4.0.tgz",
+              "url": "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz",
               "type": "distribution",
               "hashes": [
                 {
                   "alg": "SHA-512",
-                  "content": "e964d9fc8c4263f4fa0402e8647684e1cb69f719be679918fe9cd86821d115ec958688f196b9bee3acbaf0703a86bd1373012cb28c4d8831142508df3d9fd160"
+                  "content": "29c282aa27ed049719afefbbca4a03204c126b75d6a304df34fa3dd816318d78b260456b51087668bca1c410b0c30fa17a8aed505c44258711ce8b2cb5310161"
                 }
               ],
               "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -32150,8 +32151,8 @@
         {
           "type": "library",
           "name": "debug",
-          "version": "4.4.0",
-          "bom-ref": "socks-proxy-agent@6.2.1|debug@4.4.0",
+          "version": "4.4.1",
+          "bom-ref": "socks-proxy-agent@6.2.1|debug@4.4.1",
           "scope": "optional",
           "licenses": [
             {
@@ -32161,15 +32162,15 @@
               }
             }
           ],
-          "purl": "pkg:npm/debug@4.4.0",
+          "purl": "pkg:npm/debug@4.4.1",
           "externalReferences": [
             {
-              "url": "https://registry.npmjs.org/debug/-/debug-4.4.0.tgz",
+              "url": "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz",
               "type": "distribution",
               "hashes": [
                 {
                   "alg": "SHA-512",
-                  "content": "e964d9fc8c4263f4fa0402e8647684e1cb69f719be679918fe9cd86821d115ec958688f196b9bee3acbaf0703a86bd1373012cb28c4d8831142508df3d9fd160"
+                  "content": "29c282aa27ed049719afefbbca4a03204c126b75d6a304df34fa3dd816318d78b260456b51087668bca1c410b0c30fa17a8aed505c44258711ce8b2cb5310161"
                 }
               ],
               "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -32795,8 +32796,8 @@
         {
           "type": "library",
           "name": "detect-libc",
-          "version": "2.0.3",
-          "bom-ref": "sqlite3@5.1.7|detect-libc@2.0.3",
+          "version": "2.0.4",
+          "bom-ref": "sqlite3@5.1.7|detect-libc@2.0.4",
           "licenses": [
             {
               "license": {
@@ -32805,15 +32806,15 @@
               }
             }
           ],
-          "purl": "pkg:npm/detect-libc@2.0.3",
+          "purl": "pkg:npm/detect-libc@2.0.4",
           "externalReferences": [
             {
-              "url": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.3.tgz",
+              "url": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.4.tgz",
               "type": "distribution",
               "hashes": [
                 {
                   "alg": "SHA-512",
-                  "content": "6f0cb43065b9e5b1b8d55ab1c72a4eb1d49d1aa2f05cf23f7e873081360214c6dd522040c4b83d085cc6d3cb33d9aab3927c225fb1e49746d010d8e0f222c1cb"
+                  "content": "dd40eff86f42b0228ed5628c1b0f5fc2afd258961b23473963b2d4d405d8a0375b844d801d0e8de8d6f7e2c1bc163ed3e403f2f2a5c308abae207775051d2d54"
                 }
               ],
               "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -32897,8 +32898,8 @@
         {
           "type": "library",
           "name": "node-abi",
-          "version": "3.74.0",
-          "bom-ref": "sqlite3@5.1.7|node-abi@3.74.0",
+          "version": "3.75.0",
+          "bom-ref": "sqlite3@5.1.7|node-abi@3.75.0",
           "licenses": [
             {
               "license": {
@@ -32907,15 +32908,15 @@
               }
             }
           ],
-          "purl": "pkg:npm/node-abi@3.74.0",
+          "purl": "pkg:npm/node-abi@3.75.0",
           "externalReferences": [
             {
-              "url": "https://registry.npmjs.org/node-abi/-/node-abi-3.74.0.tgz",
+              "url": "https://registry.npmjs.org/node-abi/-/node-abi-3.75.0.tgz",
               "type": "distribution",
               "hashes": [
                 {
                   "alg": "SHA-512",
-                  "content": "7395cad0c8e4181ad03c6606db818100366e7743426f39f1371d19912f9e6d44eb995d6a4c3c4fc522fccc400f5115d26cb45655ec7198fe3df3a07389a84be7"
+                  "content": "3a161a639b03b0891aec7ec0b628ed23d8f01982f2976f5e427fd6eb6dc388dfcc22fe6c52a73883b0480d3857fa06fb762f5feb12b4da7929f2c75f15664b4e"
                 }
               ],
               "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -33876,8 +33877,8 @@
     {
       "type": "library",
       "name": "swagger-ui-dist",
-      "version": "5.20.2",
-      "bom-ref": "swagger-ui-dist@5.20.2",
+      "version": "5.22.0",
+      "bom-ref": "swagger-ui-dist@5.22.0",
       "licenses": [
         {
           "license": {
@@ -33886,15 +33887,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/swagger-ui-dist@5.20.2",
+      "purl": "pkg:npm/swagger-ui-dist@5.22.0",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-5.20.2.tgz",
+          "url": "https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-5.22.0.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "ccfd9b899bc2b7a475200cff8867237845621decfb50f1d415f305c85ea3713292d5920fd9c82bf8a49910c8419e921c15f0eb671903f2fe7ab5a2f903ca61b8"
+              "content": "f189424b18b26fcb8f15aeeaa01d6544762bd4f05b4f536e57d46f41d1453c53ee7510533dff5ca14e63974d8a873bebb664c4c388d74606f4920f2926f56e59"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -33944,8 +33945,8 @@
     {
       "type": "library",
       "name": "tar-fs",
-      "version": "2.1.2",
-      "bom-ref": "tar-fs@2.1.2",
+      "version": "2.1.3",
+      "bom-ref": "tar-fs@2.1.3",
       "licenses": [
         {
           "license": {
@@ -33954,15 +33955,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/tar-fs@2.1.2",
+      "purl": "pkg:npm/tar-fs@2.1.3",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/tar-fs/-/tar-fs-2.1.2.tgz",
+          "url": "https://registry.npmjs.org/tar-fs/-/tar-fs-2.1.3.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "12c6805f0c66c7c501ec544aa9ea33a843e8a7af435dc998c134305efc803c5df9d8726c3dd91586f4da0cf62a7cd82bbaf789209cb74c0da5fb6ce3f0b24824"
+              "content": "d3dd27c182439a5870170116dd0425faf68d9f1b0edb256c778e5e4ca441cd2ceefa195bd70d8af629d5ab96f49e05ee2d5a90e00a6fb141c79eeff340d91602"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -33979,7 +33980,7 @@
           "type": "library",
           "name": "bl",
           "version": "4.1.0",
-          "bom-ref": "tar-fs@2.1.2|bl@4.1.0",
+          "bom-ref": "tar-fs@2.1.3|bl@4.1.0",
           "licenses": [
             {
               "license": {
@@ -34013,7 +34014,7 @@
           "type": "library",
           "name": "chownr",
           "version": "1.1.4",
-          "bom-ref": "tar-fs@2.1.2|chownr@1.1.4",
+          "bom-ref": "tar-fs@2.1.3|chownr@1.1.4",
           "licenses": [
             {
               "license": {
@@ -34047,7 +34048,7 @@
           "type": "library",
           "name": "readable-stream",
           "version": "3.6.2",
-          "bom-ref": "tar-fs@2.1.2|readable-stream@3.6.2",
+          "bom-ref": "tar-fs@2.1.3|readable-stream@3.6.2",
           "licenses": [
             {
               "license": {
@@ -34081,7 +34082,7 @@
           "type": "library",
           "name": "tar-stream",
           "version": "2.2.0",
-          "bom-ref": "tar-fs@2.1.2|tar-stream@2.2.0",
+          "bom-ref": "tar-fs@2.1.3|tar-stream@2.2.0",
           "licenses": [
             {
               "license": {
@@ -35372,8 +35373,8 @@
     {
       "type": "library",
       "name": "typescript",
-      "version": "5.8.2",
-      "bom-ref": "typescript@5.8.2",
+      "version": "5.8.3",
+      "bom-ref": "typescript@5.8.3",
       "licenses": [
         {
           "license": {
@@ -35382,15 +35383,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/typescript@5.8.2",
+      "purl": "pkg:npm/typescript@5.8.3",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/typescript/-/typescript-5.8.2.tgz",
+          "url": "https://registry.npmjs.org/typescript/-/typescript-5.8.3.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "6899fac2ad77fda7d9a7f8d3f50666c048c3aaabd21a9d554f919583e7ffb7afe8572ae05cce8163587d05187f3b9a773e550f01ef96ba21193a66ffe3d46aa1"
+              "content": "a757625ba4ea2fd2f4ee7371bd130cee130cc387395cea3fd626cbe1a0081a6480b7db254c4d57830e4a5aea1fdae4cebc283d058ed9462f86685fbbb1f80f79"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -35543,8 +35544,8 @@
     {
       "type": "library",
       "name": "undici-types",
-      "version": "6.20.0",
-      "bom-ref": "undici-types@6.20.0",
+      "version": "6.21.0",
+      "bom-ref": "undici-types@6.21.0",
       "licenses": [
         {
           "license": {
@@ -35553,15 +35554,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/undici-types@6.20.0",
+      "purl": "pkg:npm/undici-types@6.21.0",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/undici-types/-/undici-types-6.20.0.tgz",
+          "url": "https://registry.npmjs.org/undici-types/-/undici-types-6.21.0.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "372e90676363bb6d2fc354911dedddf6356eea027ee1edfe30ca6abbba6a1391d3e96b134a571efbe19098ae545d2f26cd5f034981eb407f97adfda355cb8a36"
+              "content": "8b00d9aa0d10006ae0f516afe47e27d0ceb87379a4479f5c27ac10a7eec2e2723482c984c5a79d6982cd3b8e1e4f802d041c236d38863cc96dd8c7744fd1fd25"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -36605,8 +36606,8 @@
     {
       "type": "library",
       "name": "validator",
-      "version": "13.15.0",
-      "bom-ref": "validator@13.15.0",
+      "version": "13.15.15",
+      "bom-ref": "validator@13.15.15",
       "licenses": [
         {
           "license": {
@@ -36615,15 +36616,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/validator@13.15.0",
+      "purl": "pkg:npm/validator@13.15.15",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/validator/-/validator-13.15.0.tgz",
+          "url": "https://registry.npmjs.org/validator/-/validator-13.15.15.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "dfa076af2978fa82f94316770330f4b794ac30d1af4ed407a638053b9b5b3717d76cc16463cdb692d0837b532796a577df4d50408f522c70cd26890323e67da4"
+              "content": "0605956c223bd9a210cbddfbc5b6b072cfa1ad568dfc2676530bad81a277ea11aa46b2cd33e7f92d44ff60f45ba3c215fc049e1735eccdecd5fb2dbeaeade5f0"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -38350,28 +38351,25 @@
   ],
   "dependencies": [
     {
-      "ref": "@babel/helper-string-parser@7.25.9"
+      "ref": "@babel/helper-string-parser@7.27.1"
     },
     {
-      "ref": "@babel/helper-validator-identifier@7.25.9"
+      "ref": "@babel/helper-validator-identifier@7.27.1"
     },
     {
-      "ref": "@babel/parser@7.27.0",
+      "ref": "@babel/parser@7.27.4",
       "dependsOn": [
-        "@babel/types@7.27.0"
+        "@babel/types@7.27.3"
       ]
     },
     {
-      "ref": "@babel/runtime@7.27.0",
-      "dependsOn": [
-        "regenerator-runtime@0.14.1"
-      ]
+      "ref": "@babel/runtime@7.27.4"
     },
     {
-      "ref": "@babel/types@7.27.0",
+      "ref": "@babel/types@7.27.3",
       "dependsOn": [
-        "@babel/helper-string-parser@7.25.9",
-        "@babel/helper-validator-identifier@7.25.9"
+        "@babel/helper-string-parser@7.27.1",
+        "@babel/helper-validator-identifier@7.27.1"
       ]
     },
     {
@@ -38391,14 +38389,14 @@
     {
       "ref": "@mapbox/node-pre-gyp@1.0.11",
       "dependsOn": [
-        "@mapbox/node-pre-gyp@1.0.11|detect-libc@2.0.3",
+        "@mapbox/node-pre-gyp@1.0.11|detect-libc@2.0.4",
         "@mapbox/node-pre-gyp@1.0.11|make-dir@3.1.0",
         "@mapbox/node-pre-gyp@1.0.11|nopt@5.0.0",
         "@mapbox/node-pre-gyp@1.0.11|npmlog@5.0.1",
         "https-proxy-agent@5.0.1",
         "node-fetch@2.7.0",
         "rimraf@3.0.2",
-        "semver@7.7.1",
+        "semver@7.7.2",
         "tar@6.2.1"
       ]
     },
@@ -38413,7 +38411,7 @@
       ]
     },
     {
-      "ref": "@mapbox/node-pre-gyp@1.0.11|detect-libc@2.0.3"
+      "ref": "@mapbox/node-pre-gyp@1.0.11|detect-libc@2.0.4"
     },
     {
       "ref": "@mapbox/node-pre-gyp@1.0.11|gauge@3.0.2",
@@ -38859,7 +38857,7 @@
       "ref": "@npmcli/fs@1.1.1",
       "dependsOn": [
         "@gar/promisify@1.1.3",
-        "semver@7.7.1"
+        "semver@7.7.2"
       ]
     },
     {
@@ -38929,9 +38927,9 @@
       "ref": "@types/cookie@0.4.1"
     },
     {
-      "ref": "@types/cors@2.8.17",
+      "ref": "@types/cors@2.8.18",
       "dependsOn": [
-        "@types/node@22.13.14"
+        "@types/node@22.15.29"
       ]
     },
     {
@@ -38944,9 +38942,9 @@
       "ref": "@types/ms@2.1.0"
     },
     {
-      "ref": "@types/node@22.13.14",
+      "ref": "@types/node@22.15.29",
       "dependsOn": [
-        "undici-types@6.20.0"
+        "undici-types@6.21.0"
       ]
     },
     {
@@ -38959,7 +38957,7 @@
       "ref": "@types/triple-beam@1.3.5"
     },
     {
-      "ref": "@types/validator@13.12.3"
+      "ref": "@types/validator@13.15.1"
     },
     {
       "ref": "abbrev@1.1.1"
@@ -38995,11 +38993,11 @@
     {
       "ref": "agent-base@6.0.2",
       "dependsOn": [
-        "agent-base@6.0.2|debug@4.4.0"
+        "agent-base@6.0.2|debug@4.4.1"
       ]
     },
     {
-      "ref": "agent-base@6.0.2|debug@4.4.0",
+      "ref": "agent-base@6.0.2|debug@4.4.1",
       "dependsOn": [
         "agent-base@6.0.2|ms@2.1.3"
       ]
@@ -39183,7 +39181,7 @@
     {
       "ref": "babel-walk@3.0.0-canary-5",
       "dependsOn": [
-        "@babel/types@7.27.0"
+        "@babel/types@7.27.3"
       ]
     },
     {
@@ -39527,6 +39525,7 @@
         "chokidar@3.6.0|braces@3.0.3",
         "chokidar@3.6.0|is-glob@4.0.3",
         "chokidar@3.6.0|normalize-path@3.0.0",
+        "fsevents@2.3.3",
         "glob-parent@5.1.2",
         "is-binary-path@2.1.0",
         "readdirp@3.6.0"
@@ -39765,8 +39764,8 @@
     {
       "ref": "constantinople@4.0.1",
       "dependsOn": [
-        "@babel/parser@7.27.0",
-        "@babel/types@7.27.0"
+        "@babel/parser@7.27.4",
+        "@babel/types@7.27.3"
       ]
     },
     {
@@ -39832,7 +39831,7 @@
     {
       "ref": "date-fns@2.30.0",
       "dependsOn": [
-        "@babel/runtime@7.27.0"
+        "@babel/runtime@7.27.4"
       ]
     },
     {
@@ -40692,6 +40691,9 @@
       "ref": "fs.realpath@1.0.0"
     },
     {
+      "ref": "fsevents@2.3.3"
+    },
+    {
       "ref": "fstream@1.0.12",
       "dependsOn": [
         "fstream@1.0.12|rimraf@2.7.1",
@@ -41254,11 +41256,11 @@
       "dependsOn": [
         "@tootallnate/once@2.0.0",
         "agent-base@6.0.2",
-        "http-proxy-agent@5.0.0|debug@4.4.0"
+        "http-proxy-agent@5.0.0|debug@4.4.1"
       ]
     },
     {
-      "ref": "http-proxy-agent@5.0.0|debug@4.4.0",
+      "ref": "http-proxy-agent@5.0.0|debug@4.4.1",
       "dependsOn": [
         "http-proxy-agent@5.0.0|ms@2.1.3"
       ]
@@ -41278,11 +41280,11 @@
       "ref": "https-proxy-agent@5.0.1",
       "dependsOn": [
         "agent-base@6.0.2",
-        "https-proxy-agent@5.0.1|debug@4.4.0"
+        "https-proxy-agent@5.0.1|debug@4.4.1"
       ]
     },
     {
-      "ref": "https-proxy-agent@5.0.1|debug@4.4.0",
+      "ref": "https-proxy-agent@5.0.1|debug@4.4.1",
       "dependsOn": [
         "https-proxy-agent@5.0.1|ms@2.1.3"
       ]
@@ -41804,7 +41806,7 @@
         "request@2.88.2",
         "sanitize-filename@1.6.3",
         "sanitize-html@1.4.2",
-        "semver@7.7.1",
+        "semver@7.7.2",
         "sequelize@6.37.7",
         "serve-index@1.9.1",
         "socket.io@3.1.2",
@@ -42023,7 +42025,7 @@
         "https-proxy-agent@5.0.1",
         "is-lambda@1.0.1",
         "lru-cache@6.0.0",
-        "make-fetch-happen@9.1.0|http-cache-semantics@4.1.1",
+        "make-fetch-happen@9.1.0|http-cache-semantics@4.2.0",
         "make-fetch-happen@9.1.0|http-proxy-agent@4.0.1",
         "minipass-collect@1.0.2",
         "minipass-fetch@1.4.1",
@@ -42040,20 +42042,20 @@
       "ref": "make-fetch-happen@9.1.0|@tootallnate/once@1.1.2"
     },
     {
-      "ref": "make-fetch-happen@9.1.0|debug@4.4.0",
+      "ref": "make-fetch-happen@9.1.0|debug@4.4.1",
       "dependsOn": [
         "make-fetch-happen@9.1.0|ms@2.1.3"
       ]
     },
     {
-      "ref": "make-fetch-happen@9.1.0|http-cache-semantics@4.1.1"
+      "ref": "make-fetch-happen@9.1.0|http-cache-semantics@4.2.0"
     },
     {
       "ref": "make-fetch-happen@9.1.0|http-proxy-agent@4.0.1",
       "dependsOn": [
         "agent-base@6.0.2",
         "make-fetch-happen@9.1.0|@tootallnate/once@1.1.2",
-        "make-fetch-happen@9.1.0|debug@4.4.0"
+        "make-fetch-happen@9.1.0|debug@4.4.1"
       ]
     },
     {
@@ -42351,7 +42353,7 @@
         "node-gyp@8.4.1|nopt@5.0.0",
         "node-gyp@8.4.1|npmlog@6.0.2",
         "rimraf@3.0.2",
-        "semver@7.7.1",
+        "semver@7.7.2",
         "tar@6.2.1",
         "which@2.0.2"
       ]
@@ -42803,7 +42805,7 @@
       "ref": "performance-now@2.1.0"
     },
     {
-      "ref": "pg-connection-string@2.7.0"
+      "ref": "pg-connection-string@2.9.0"
     },
     {
       "ref": "picomatch@2.3.1"
@@ -42851,7 +42853,7 @@
         "pump@3.0.2",
         "rc@1.2.8",
         "simple-get@3.1.1",
-        "tar-fs@2.1.2",
+        "tar-fs@2.1.3",
         "tunnel-agent@0.6.0",
         "which-pm-runs@1.1.0"
       ]
@@ -43127,9 +43129,6 @@
       "dependsOn": [
         "resolve@1.22.10"
       ]
-    },
-    {
-      "ref": "regenerator-runtime@0.14.1"
     },
     {
       "ref": "regex-not@1.0.2",
@@ -43413,7 +43412,7 @@
       ]
     },
     {
-      "ref": "semver@7.7.1"
+      "ref": "semver@7.7.2"
     },
     {
       "ref": "send@0.19.0",
@@ -43446,25 +43445,25 @@
       "ref": "sequelize@6.37.7",
       "dependsOn": [
         "@types/debug@4.1.12",
-        "@types/validator@13.12.3",
+        "@types/validator@13.15.1",
         "dottie@2.0.6",
         "inflection@1.13.4",
         "lodash@4.17.21",
         "moment-timezone@0.5.48",
         "moment@2.30.1",
-        "pg-connection-string@2.7.0",
+        "pg-connection-string@2.9.0",
         "retry-as-promised@7.1.1",
-        "semver@7.7.1",
+        "semver@7.7.2",
         "sequelize-pool@7.1.0",
-        "sequelize@6.37.7|debug@4.4.0",
+        "sequelize@6.37.7|debug@4.4.1",
         "sequelize@6.37.7|uuid@8.3.2",
         "toposort-class@1.0.1",
-        "validator@13.15.0",
+        "validator@13.15.15",
         "wkx@0.5.0"
       ]
     },
     {
-      "ref": "sequelize@6.37.7|debug@4.4.0",
+      "ref": "sequelize@6.37.7|debug@4.4.1",
       "dependsOn": [
         "sequelize@6.37.7|ms@2.1.3"
       ]
@@ -43732,8 +43731,8 @@
       "ref": "socket.io@3.1.2",
       "dependsOn": [
         "@types/cookie@0.4.1",
-        "@types/cors@2.8.17",
-        "@types/node@22.13.14",
+        "@types/cors@2.8.18",
+        "@types/node@22.15.29",
         "accepts@1.3.8",
         "base64id@2.0.0",
         "engine.io@4.1.2",
@@ -43755,12 +43754,12 @@
       "ref": "socks-proxy-agent@6.2.1",
       "dependsOn": [
         "agent-base@6.0.2",
-        "socks-proxy-agent@6.2.1|debug@4.4.0",
+        "socks-proxy-agent@6.2.1|debug@4.4.1",
         "socks@2.8.4"
       ]
     },
     {
-      "ref": "socks-proxy-agent@6.2.1|debug@4.4.0",
+      "ref": "socks-proxy-agent@6.2.1|debug@4.4.1",
       "dependsOn": [
         "socks-proxy-agent@6.2.1|ms@2.1.3"
       ]
@@ -43865,7 +43864,7 @@
       ]
     },
     {
-      "ref": "sqlite3@5.1.7|detect-libc@2.0.3"
+      "ref": "sqlite3@5.1.7|detect-libc@2.0.4"
     },
     {
       "ref": "sqlite3@5.1.7|mimic-response@3.1.0"
@@ -43874,9 +43873,9 @@
       "ref": "sqlite3@5.1.7|napi-build-utils@2.0.0"
     },
     {
-      "ref": "sqlite3@5.1.7|node-abi@3.74.0",
+      "ref": "sqlite3@5.1.7|node-abi@3.75.0",
       "dependsOn": [
-        "semver@7.7.1"
+        "semver@7.7.2"
       ]
     },
     {
@@ -43888,11 +43887,11 @@
         "mkdirp-classic@0.5.3",
         "pump@3.0.2",
         "rc@1.2.8",
-        "sqlite3@5.1.7|detect-libc@2.0.3",
+        "sqlite3@5.1.7|detect-libc@2.0.4",
         "sqlite3@5.1.7|napi-build-utils@2.0.0",
-        "sqlite3@5.1.7|node-abi@3.74.0",
+        "sqlite3@5.1.7|node-abi@3.75.0",
         "sqlite3@5.1.7|simple-get@4.0.1",
-        "tar-fs@2.1.2",
+        "tar-fs@2.1.3",
         "tunnel-agent@0.6.0"
       ]
     },
@@ -44039,7 +44038,7 @@
       ]
     },
     {
-      "ref": "swagger-ui-dist@5.20.2",
+      "ref": "swagger-ui-dist@5.22.0",
       "dependsOn": [
         "@scarf/scarf@1.4.0"
       ]
@@ -44048,31 +44047,31 @@
       "ref": "swagger-ui-express@4.6.3",
       "dependsOn": [
         "express@4.21.2",
-        "swagger-ui-dist@5.20.2"
+        "swagger-ui-dist@5.22.0"
       ]
     },
     {
-      "ref": "tar-fs@2.1.2",
+      "ref": "tar-fs@2.1.3",
       "dependsOn": [
         "mkdirp-classic@0.5.3",
         "pump@3.0.2",
-        "tar-fs@2.1.2|chownr@1.1.4",
-        "tar-fs@2.1.2|tar-stream@2.2.0"
+        "tar-fs@2.1.3|chownr@1.1.4",
+        "tar-fs@2.1.3|tar-stream@2.2.0"
       ]
     },
     {
-      "ref": "tar-fs@2.1.2|bl@4.1.0",
+      "ref": "tar-fs@2.1.3|bl@4.1.0",
       "dependsOn": [
         "buffer@5.7.1",
         "inherits@2.0.4",
-        "tar-fs@2.1.2|readable-stream@3.6.2"
+        "tar-fs@2.1.3|readable-stream@3.6.2"
       ]
     },
     {
-      "ref": "tar-fs@2.1.2|chownr@1.1.4"
+      "ref": "tar-fs@2.1.3|chownr@1.1.4"
     },
     {
-      "ref": "tar-fs@2.1.2|readable-stream@3.6.2",
+      "ref": "tar-fs@2.1.3|readable-stream@3.6.2",
       "dependsOn": [
         "inherits@2.0.4",
         "string_decoder@1.1.1",
@@ -44080,13 +44079,13 @@
       ]
     },
     {
-      "ref": "tar-fs@2.1.2|tar-stream@2.2.0",
+      "ref": "tar-fs@2.1.3|tar-stream@2.2.0",
       "dependsOn": [
         "end-of-stream@1.4.4",
         "fs-constants@1.0.0",
         "inherits@2.0.4",
-        "tar-fs@2.1.2|bl@4.1.0",
-        "tar-fs@2.1.2|readable-stream@3.6.2"
+        "tar-fs@2.1.3|bl@4.1.0",
+        "tar-fs@2.1.3|readable-stream@3.6.2"
       ]
     },
     {
@@ -44230,7 +44229,7 @@
         "ts-node-dev@1.1.8|rimraf@2.7.1",
         "ts-node@9.1.1",
         "tsconfig@7.0.0",
-        "typescript@5.8.2"
+        "typescript@5.8.3"
       ]
     },
     {
@@ -44250,7 +44249,7 @@
         "diff@4.0.2",
         "make-error@1.3.6",
         "source-map-support@0.5.21",
-        "typescript@5.8.2",
+        "typescript@5.8.3",
         "yn@3.1.1"
       ]
     },
@@ -44289,7 +44288,7 @@
       "ref": "typedarray@0.0.6"
     },
     {
-      "ref": "typescript@5.8.2"
+      "ref": "typescript@5.8.3"
     },
     {
       "ref": "uglify-js@3.19.3"
@@ -44312,7 +44311,7 @@
       ]
     },
     {
-      "ref": "undici-types@6.20.0"
+      "ref": "undici-types@6.21.0"
     },
     {
       "ref": "unicode-properties@1.4.1",
@@ -44479,7 +44478,7 @@
       ]
     },
     {
-      "ref": "validator@13.15.0"
+      "ref": "validator@13.15.15"
     },
     {
       "ref": "vary@1.1.2"
@@ -44625,8 +44624,8 @@
     {
       "ref": "with@7.0.2",
       "dependsOn": [
-        "@babel/parser@7.27.0",
-        "@babel/types@7.27.0",
+        "@babel/parser@7.27.4",
+        "@babel/types@7.27.3",
         "assert-never@1.4.0",
         "babel-walk@3.0.0-canary-5"
       ]
@@ -44634,7 +44633,7 @@
     {
       "ref": "wkx@0.5.0",
       "dependsOn": [
-        "@types/node@22.13.14"
+        "@types/node@22.15.29"
       ]
     },
     {
