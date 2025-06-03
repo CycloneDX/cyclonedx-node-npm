@@ -29,7 +29,7 @@ const dirDemoRes = dirname(__dirname)
 
 const fnamePattern = /^npm-ls(?<args>.*?)_npm(?<npm>\d+)_node(?<node>\d+)_(?<os>.+)\.json$/
 
-/** @type {Object.<string, Object.<string, string[]>>} */
+/** @type {Object<string, Object<string, string[]>>} */
 const files = {}
 
 for (const dirDemoResE of readdirSync(dirDemoRes)) {
