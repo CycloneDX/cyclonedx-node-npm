@@ -32,5 +32,7 @@ find "$NODE_MODULES_DIR" \
 find "$NODE_MODULES_DIR" \
   -type d \
   \( -name 'build' -or -name 'dist' -or -name 'lib' \) \
-  \( -path '*/node_modules/@*/*' -or -path '*/node_modules/[^@]*' \) \
-  | xargs rm -rf
+  \( -path '*/node_modules/@*/*/*' -or -path '*/node_modules/[^@]*/*' \) \
+  -print0 \
+  | xargs -0 \
+    rm -rf

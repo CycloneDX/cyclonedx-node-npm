@@ -10,7 +10,8 @@
     "base64-js": "1.0.1",
     "buffer": "^5.4.3",
     "bundle-dependencies": "1.0.2",
-    "ignore": "^5.1.4"
+    "ignore": "^5.1.4",
+    "is-obj": "3.0.0"
   },
   "devDependencies": {
     "@types/node": "20.14.10",
