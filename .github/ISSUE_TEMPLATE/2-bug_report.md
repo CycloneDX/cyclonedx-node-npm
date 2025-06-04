@@ -21,7 +21,8 @@ A clear and concise description of what you expected to happen.
 
 ## Screenshots or output-paste
 
-If applicable, add screenshots or past the output to help explain your problem.
+If applicable, add screenshots or past the output to help explain your problem.  
+If possible, show which CLI command was run, which parameters were used, and run with CLI switch `-vvv` for more debug information.
 
 ## Environment
 
