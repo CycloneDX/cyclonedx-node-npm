@@ -10,6 +10,10 @@
     "directory": "demo/bundled-dependencies/project"
   },
   "dependencies": {
-    "bundle-dependencies": "1.0.2"
-  }
+    "bundle-dependencies": "1.0.2",
+    "is-obj": "3.0.0"
+  },
+  "bundledDependencies": [
+    "is-obj"
+  ]
 }

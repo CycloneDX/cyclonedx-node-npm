@@ -11,6 +11,8 @@ or a list of `string` that identifies the keys in dependencies-lists.
 The package [`bundle-dependencies`](https://www.npmjs.com/package/bundle-dependencies)
 ships with bundled version of `yargs`.
 
+This package itself has a bundled dependency, whcih can be tested with `npm pack`.
+
 ## remarks
 
 * In *npm6* the `_inBundle` property is set to `true` in a dependency
@@ -18,6 +20,8 @@ ships with bundled version of `yargs`.
 * Additionally, there is the property `bundleDependencies`(deprecated)/`bundledDependencies` in a component.  
   Value might be `true`(all), `false`(none), or a list of `string` that point to the keys in dependency list.  
 * Only one `resolved` can be found, since al the other packages were bundled, and are therefore not resolve.
+* Some package managers add a "dist" section to the bundled dependencies - which can be evaluated.  
+  See <https://github.com/CycloneDX/cyclonedx-node-npm/issues/1300>.
 
 ## output
 
@@ -53,7 +57,12 @@ Output of `npm ls --json -a -l` look like this:
               // other properties
             },
             // other dependencies
-          }
+          },
+          // other properties
+          "dist": {
+            "shasum": "035e5ea466ac7fea584b00353e33eae4082b9894",
+            "tarball": "http://registry.npmjs.org/yargs/-/yargs-4.1.0.tgz"
+          },
         }
       }
     }
