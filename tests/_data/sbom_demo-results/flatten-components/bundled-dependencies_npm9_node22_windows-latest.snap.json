@@ -1395,6 +1395,36 @@
           "value": "node_modules/bundle-dependencies/node_modules/yargs"
         }
       ]
+    },
+    {
+      "type": "library",
+      "name": "is-obj",
+      "version": "3.0.0",
+      "bom-ref": "is-obj@3.0.0",
+      "purl": "pkg:npm/is-obj@3.0.0",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/is-obj/-/is-obj-3.0.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "225b171073a3b4a86937caffb51163da70f24e61ef71f35ebbf9eb448717135ed139e6ad5dc864a237df6b54a976a5b872bfc58fa42411ffc69f8cdfe8a2af11"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/is-obj"
+        }
+      ]
     }
   ],
   "dependencies": [
@@ -1675,8 +1705,12 @@
     {
       "ref": "demo-bundled-deps@0.0.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2"
+        "bundle-dependencies@1.0.2",
+        "is-obj@3.0.0"
       ]
+    },
+    {
+      "ref": "is-obj@3.0.0"
     }
   ]
 }

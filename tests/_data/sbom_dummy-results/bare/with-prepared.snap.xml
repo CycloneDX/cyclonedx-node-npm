@@ -1067,8 +1067,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/ansi-regex@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fansi-regex.git</purl>
+          <purl>pkg:npm/ansi-regex@2.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/ansi-regex/-/ansi-regex-2.0.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">c5061b6e0ef8a81775e50f5d66151bf6bf371107</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/ansi-regex/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1096,8 +1103,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/builtin-modules@1.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fbuiltin-modules.git</purl>
+          <purl>pkg:npm/builtin-modules@1.1.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/builtin-modules/-/builtin-modules-1.1.1.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">270f076c5a72c02f5b65a47df94c5fe3a278892f</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/builtin-modules/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1125,8 +1139,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/camelcase@2.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fcamelcase.git</purl>
+          <purl>pkg:npm/camelcase@2.1.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/camelcase/-/camelcase-2.1.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">533ad4cd7f8a1080ded31aba6c79b4bf437ff30c</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/camelcase/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1154,8 +1175,15 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/cliui@3.1.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fbcoe%2Fcliui.git</purl>
+          <purl>pkg:npm/cliui@3.1.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/cliui/-/cliui-3.1.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">a3b880308e0a8191721e0081a8c2a8b506d0abf9</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/bcoe/cliui/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1183,8 +1211,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/code-point-at@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fcode-point-at.git</purl>
+          <purl>pkg:npm/code-point-at@1.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/code-point-at/-/code-point-at-1.0.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">f69b192d3f7d91e382e4b71bddb77878619ab0c6</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/code-point-at/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1212,8 +1247,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/decamelize@1.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fdecamelize.git</purl>
+          <purl>pkg:npm/decamelize@1.1.2</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/decamelize/-/decamelize-1.1.2.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">dcc93727be209632e98b02718ef4cb79602322f2</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/decamelize/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1240,8 +1282,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/error-ex@1.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fqix-%2Fnode-error-ex.git</purl>
+          <purl>pkg:npm/error-ex@1.3.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/error-ex/-/error-ex-1.3.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">e67b43f3e82c96ea3a584ffee0b9fc3325d802d9</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/qix-/node-error-ex/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1269,8 +1318,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/escape-string-regexp@1.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fescape-string-regexp.git</purl>
+          <purl>pkg:npm/escape-string-regexp@1.0.5</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">1b61c0562190a8dff6ae3bb2cf0200ca130b86d4</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/escape-string-regexp/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1298,8 +1354,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/find-up@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Ffind-up.git</purl>
+          <purl>pkg:npm/find-up@1.1.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/find-up/-/find-up-1.1.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">a63b0eec4625a2902534898a5f9eec8aaed046e9</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/find-up/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1326,8 +1389,15 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/graceful-fs@4.1.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-graceful-fs.git</purl>
+          <purl>pkg:npm/graceful-fs@4.1.3</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.3.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">92033ce11113c41e2628d61fdfa40bc10dc0155c</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/isaacs/node-graceful-fs/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1355,8 +1425,15 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/hosted-git-info@2.1.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fhosted-git-info.git</purl>
+          <purl>pkg:npm/hosted-git-info@2.1.4</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.1.4.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">d9e953b26988be88096c46e926494d9604c300f8</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/npm/hosted-git-info/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1384,8 +1461,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/invert-kv@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Finvert-kv.git</purl>
+          <purl>pkg:npm/invert-kv@1.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/invert-kv/-/invert-kv-1.0.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/invert-kv/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1413,8 +1497,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/is-arrayish@0.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fqix-%2Fnode-is-arrayish.git</purl>
+          <purl>pkg:npm/is-arrayish@0.2.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">77c99840527aa8ecb1a8ba697b80645a7a926a9d</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/qix-/node-is-arrayish/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1442,8 +1533,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/is-builtin-module@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fis-builtin-module.git</purl>
+          <purl>pkg:npm/is-builtin-module@1.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/is-builtin-module/-/is-builtin-module-1.0.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">540572d34f7ac3119f8f76c30cbc1b1e037affbe</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/is-builtin-module/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1471,8 +1569,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/is-fullwidth-code-point@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fis-fullwidth-code-point.git</purl>
+          <purl>pkg:npm/is-fullwidth-code-point@1.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">ef9e31386f031a7f0d643af82fde50c457ef00cb</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/is-fullwidth-code-point/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1500,8 +1605,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/is-utf8@0.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fwayfind%2Fis-utf8.git</purl>
+          <purl>pkg:npm/is-utf8@0.2.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/is-utf8/-/is-utf8-0.2.1.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">4b0da1442104d1b336340e80797e865cf39f7d72</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/wayfind/is-utf8/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1529,8 +1641,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/lcid@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Flcid.git</purl>
+          <purl>pkg:npm/lcid@1.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/lcid/-/lcid-1.0.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">308accafa0bc483a3867b4b6f2b9506251d1b835</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/lcid/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1558,8 +1677,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/load-json-file@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fload-json-file.git</purl>
+          <purl>pkg:npm/load-json-file@1.1.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/load-json-file/-/load-json-file-1.1.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">956905708d58b4bab4c2261b04f59f31c99374c0</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/load-json-file/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1587,8 +1713,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/lodash.assign@4.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flodash%2Flodash.git</purl>
+          <purl>pkg:npm/lodash.assign@4.0.3</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/lodash.assign/-/lodash.assign-4.0.3.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">208252719b4375f361981c3ba3a8a09d1cbdb218</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/lodash/lodash/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1616,8 +1749,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/lodash.keys@4.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flodash%2Flodash.git</purl>
+          <purl>pkg:npm/lodash.keys@4.0.3</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/lodash.keys/-/lodash.keys-4.0.3.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">f698bb75edfae6f690db9e11908157732fe7b342</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/lodash/lodash/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1645,8 +1785,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/lodash.rest@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flodash%2Flodash.git</purl>
+          <purl>pkg:npm/lodash.rest@4.0.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/lodash.rest/-/lodash.rest-4.0.1.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">cbecbb84e68e499a1b242baf9b27bb63ef4dd980</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/lodash/lodash/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1674,8 +1821,15 @@
               <id>BSD-2-Clause</id>
             </license>
           </licenses>
-          <purl>pkg:npm/normalize-package-data@2.3.5?vcs_url=git%3A%2F%2Fgithub.com%2Fnpm%2Fnormalize-package-data.git</purl>
+          <purl>pkg:npm/normalize-package-data@2.3.5</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.3.5.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">8d924f142960e1777e7ffe170543631cc7cb02df</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/npm/normalize-package-data/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1703,8 +1857,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/number-is-nan@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fnumber-is-nan.git</purl>
+          <purl>pkg:npm/number-is-nan@1.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/number-is-nan/-/number-is-nan-1.0.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">c020f529c5282adfdd233d91d4b181c3d686dc4b</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/number-is-nan/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1732,8 +1893,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/object-assign@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fobject-assign.git</purl>
+          <purl>pkg:npm/object-assign@4.0.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/object-assign/-/object-assign-4.0.1.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">99504456c3598b5cad4fc59c26e8a9bb107fe0bd</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/object-assign/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1761,8 +1929,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/os-locale@1.4.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fos-locale.git</purl>
+          <purl>pkg:npm/os-locale@1.4.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/os-locale/-/os-locale-1.4.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">20f9f17ae29ed345e8bde583b13d2009803c14d9</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/os-locale/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1790,8 +1965,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/parse-json@2.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fparse-json.git</purl>
+          <purl>pkg:npm/parse-json@2.2.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/parse-json/-/parse-json-2.2.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">f480f40434ef80741f8469099f8dea18f55a4dc9</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/parse-json/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1819,8 +2001,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/path-exists@2.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpath-exists.git</purl>
+          <purl>pkg:npm/path-exists@2.1.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/path-exists/-/path-exists-2.1.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">0feb6c64f0fc518d9a754dd5efb62c7022761f4b</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/path-exists/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1848,8 +2037,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/path-type@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpath-type.git</purl>
+          <purl>pkg:npm/path-type@1.1.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/path-type/-/path-type-1.1.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">59c44f7ee491da704da415da5a4070ba4f8fe441</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/path-type/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1877,8 +2073,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/pify@2.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpify.git</purl>
+          <purl>pkg:npm/pify@2.3.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/pify/-/pify-2.3.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">ed141a6ac043a849ea588498e7dca8b15330e90c</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/pify/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1906,8 +2109,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/pinkie-promise@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ffloatdrop%2Fpinkie-promise.git</purl>
+          <purl>pkg:npm/pinkie-promise@2.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">4c83538de1f6e660c29e0a13446844f7a7e88259</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/floatdrop/pinkie-promise/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1935,8 +2145,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/pinkie@2.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ffloatdrop%2Fpinkie.git</purl>
+          <purl>pkg:npm/pinkie@2.0.4</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">72556b80cfa0d48a974e80e77248e80ed4f7f870</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/floatdrop/pinkie/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1964,8 +2181,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/pkg-conf@1.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpkg-conf.git</purl>
+          <purl>pkg:npm/pkg-conf@1.1.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/pkg-conf/-/pkg-conf-1.1.1.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">a3caee3fb9c23ab4abad3baaea02f0001c75f200</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/pkg-conf/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1993,8 +2217,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/read-pkg-up@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fread-pkg-up.git</purl>
+          <purl>pkg:npm/read-pkg-up@1.0.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/read-pkg-up/-/read-pkg-up-1.0.1.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">9d63c13276c065918d57f002a57f40a1b643fb02</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/read-pkg-up/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2022,8 +2253,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/read-pkg@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fread-pkg.git</purl>
+          <purl>pkg:npm/read-pkg@1.1.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/read-pkg/-/read-pkg-1.1.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">f5ffaa5ecd29cb31c0474bca7d756b6bb29e3f28</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/read-pkg/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2051,8 +2289,15 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/require-main-filename@1.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fyargs%2Frequire-main-filename.git</purl>
+          <purl>pkg:npm/require-main-filename@1.0.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/require-main-filename/-/require-main-filename-1.0.1.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">97f717b69d48784f5f526a6c5aa8ffdda055a4d1</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/yargs/require-main-filename/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2079,8 +2324,15 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/semver@5.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git</purl>
+          <purl>pkg:npm/semver@5.1.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/semver/-/semver-5.1.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">85f2cf8550465c4df000cf7d86f6b054106ab9e5</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/npm/node-semver/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2108,8 +2360,15 @@
               <id>Apache-2.0</id>
             </license>
           </licenses>
-          <purl>pkg:npm/spdx-correct@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fspdx-correct.js.git</purl>
+          <purl>pkg:npm/spdx-correct@1.0.2</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/spdx-correct/-/spdx-correct-1.0.2.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">4b3073d933ff51f3912f03ac5519498a4150db40</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/kemitchell/spdx-correct.js/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2137,8 +2396,15 @@
               <id>CC-BY-3.0</id>
             </license>
           </licenses>
-          <purl>pkg:npm/spdx-exceptions@1.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fspdx-exceptions.json.git</purl>
+          <purl>pkg:npm/spdx-exceptions@1.0.4</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-1.0.4.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">220b84239119ae9045a892db81a83f4ce16f80fd</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/kemitchell/spdx-exceptions.json/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2164,8 +2430,15 @@
           <licenses>
             <expression acknowledgement="declared">(MIT AND CC-BY-3.0)</expression>
           </licenses>
-          <purl>pkg:npm/spdx-expression-parse@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fspdx-expression-parse.js.git</purl>
+          <purl>pkg:npm/spdx-expression-parse@1.0.2</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-1.0.2.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">d52b14b5e9670771440af225bcb563122ac452f6</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/kemitchell/spdx-expression-parse.js/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2193,8 +2466,15 @@
               <id>Unlicense</id>
             </license>
           </licenses>
-          <purl>pkg:npm/spdx-license-ids@1.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fshinnn%2Fspdx-license-ids.git</purl>
+          <purl>pkg:npm/spdx-license-ids@1.2.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-1.2.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">b549dd0f63dcb745a17e2ea3a07402e0e332d1e2</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/shinnn/spdx-license-ids/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2222,8 +2502,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/string-width@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fstring-width.git</purl>
+          <purl>pkg:npm/string-width@1.0.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/string-width/-/string-width-1.0.1.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">c92129b6f1d7f52acf9af424a26e3864a05ceb0a</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/string-width/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2251,8 +2538,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/strip-ansi@3.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git</purl>
+          <purl>pkg:npm/strip-ansi@3.0.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">6a385fb8853d952d5ff05d0e8aaf94278dc63dcf</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/strip-ansi/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2280,8 +2574,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/strip-bom@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fstrip-bom.git</purl>
+          <purl>pkg:npm/strip-bom@2.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/strip-bom/-/strip-bom-2.0.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">6219a85616520491f35788bdbf1447a99c7e6b0e</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/sindresorhus/strip-bom/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2309,8 +2610,15 @@
               <name>MPLv2.0</name>
             </license>
           </licenses>
-          <purl>pkg:npm/symbol@0.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Fseanmonstar%2Fsymbol.git</purl>
+          <purl>pkg:npm/symbol@0.2.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/symbol/-/symbol-0.2.1.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">c2124fb7b2e3eea30e4fa824341aa789b3534c95</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/seanmonstar/symbol/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2338,8 +2646,15 @@
               <id>Apache-2.0</id>
             </license>
           </licenses>
-          <purl>pkg:npm/validate-npm-package-license@3.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fvalidate-npm-package-license.js.git</purl>
+          <purl>pkg:npm/validate-npm-package-license@3.0.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.1.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">2804babe712ad3379459acfbe24746ab2c303fbc</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/kemitchell/validate-npm-package-license.js/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2367,8 +2682,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/window-size@0.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjonschlinkert%2Fwindow-size.git</purl>
+          <purl>pkg:npm/window-size@0.2.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/window-size/-/window-size-0.2.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">b4315bb4214a3d7058ebeee892e13fa24d98b075</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/jonschlinkert/window-size/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2396,8 +2718,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/wrap-ansi@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fwrap-ansi.git</purl>
+          <purl>pkg:npm/wrap-ansi@1.0.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/wrap-ansi/-/wrap-ansi-1.0.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">f573bb9ee23cf43891f3362f5f359a1dfa38fc34</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/wrap-ansi/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2425,8 +2754,15 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/y18n@3.2.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fbcoe%2Fy18n.git</purl>
+          <purl>pkg:npm/y18n@3.2.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/y18n/-/y18n-3.2.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">3bec64c93b730d924a6148c765757932433e34c8</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/bcoe/y18n/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2454,8 +2790,15 @@
               <id>ISC</id>
             </license>
           </licenses>
-          <purl>pkg:npm/yargs-parser@2.1.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fyargs%2Fyargs-parser.git</purl>
+          <purl>pkg:npm/yargs-parser@2.1.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/yargs-parser/-/yargs-parser-2.1.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">5f214362f948a085389abf34a78d8b5eef0b1350</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/yargs/yargs-parser/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -2482,8 +2825,15 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/yargs@4.1.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fbcoe%2Fyargs.git</purl>
+          <purl>pkg:npm/yargs@4.1.0</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>http://registry.npmjs.org/yargs/-/yargs-4.1.0.tgz</url>
+              <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+              <hashes>
+                <hash alg="SHA-1">035e5ea466ac7fea584b00353e33eae4082b9894</hash>
+              </hashes>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/bcoe/yargs/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -4017,6 +4367,39 @@
       </externalReferences>
       <properties>
         <property name="cdx:npm:package:path">node_modules/is-lambda</property>
+      </properties>
+    </component>
+    <component type="library" bom-ref="is-obj@3.0.0">
+      <author>Sindre Sorhus</author>
+      <name>is-obj</name>
+      <version>3.0.0</version>
+      <description>Check if a value is an object</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/is-obj@3.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/is-obj/-/is-obj-3.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/is-obj/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/is-obj.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/is-obj#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:path">node_modules/is-obj</property>
       </properties>
     </component>
     <component type="library" bom-ref="isexe@3.1.1">
@@ -7448,6 +7831,7 @@
       <dependency ref="buffer@5.7.1"/>
       <dependency ref="bundle-dependencies@1.0.2"/>
       <dependency ref="ignore@5.3.2"/>
+      <dependency ref="is-obj@3.0.0"/>
       <dependency ref="uuid@8.3.2"/>
       <dependency ref="uuidv4@6.2.13"/>
     </dependency>
@@ -7774,6 +8158,7 @@
     </dependency>
     <dependency ref="is-fullwidth-code-point@3.0.0"/>
     <dependency ref="is-lambda@1.0.1"/>
+    <dependency ref="is-obj@3.0.0"/>
     <dependency ref="isexe@3.1.1"/>
     <dependency ref="jackspeak@3.4.3">
       <dependency ref="@isaacs/cliui@8.0.2"/>
