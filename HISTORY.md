@@ -7,9 +7,11 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Runtime Dependencies
+  * Raised `@cyclonedx/cyclonedx-library@^8.2.0`, was `@^8.0.0` (via [#1301])
   * Raised `commander@^14.0.0`, was `@^13.1.0` (via [#1297])
 
 [#1297]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1297
+[#1301]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1301
 
 ## 3.0.0 - 2025-04-08
 

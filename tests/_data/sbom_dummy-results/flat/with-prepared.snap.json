@@ -1452,8 +1452,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/ansi-regex@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fansi-regex.git",
+          "purl": "pkg:npm/ansi-regex@2.0.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/ansi-regex/-/ansi-regex-2.0.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "c5061b6e0ef8a81775e50f5d66151bf6bf371107"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/ansi-regex/issues",
               "type": "issue-tracker",
@@ -1492,8 +1503,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/builtin-modules@1.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fbuiltin-modules.git",
+          "purl": "pkg:npm/builtin-modules@1.1.1",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/builtin-modules/-/builtin-modules-1.1.1.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "270f076c5a72c02f5b65a47df94c5fe3a278892f"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/builtin-modules/issues",
               "type": "issue-tracker",
@@ -1532,8 +1554,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/camelcase@2.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fcamelcase.git",
+          "purl": "pkg:npm/camelcase@2.1.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/camelcase/-/camelcase-2.1.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "533ad4cd7f8a1080ded31aba6c79b4bf437ff30c"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/camelcase/issues",
               "type": "issue-tracker",
@@ -1572,8 +1605,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/cliui@3.1.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fbcoe%2Fcliui.git",
+          "purl": "pkg:npm/cliui@3.1.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/cliui/-/cliui-3.1.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "a3b880308e0a8191721e0081a8c2a8b506d0abf9"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/bcoe/cliui/issues",
               "type": "issue-tracker",
@@ -1612,8 +1656,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/code-point-at@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fcode-point-at.git",
+          "purl": "pkg:npm/code-point-at@1.0.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/code-point-at/-/code-point-at-1.0.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "f69b192d3f7d91e382e4b71bddb77878619ab0c6"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/code-point-at/issues",
               "type": "issue-tracker",
@@ -1652,8 +1707,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/decamelize@1.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fdecamelize.git",
+          "purl": "pkg:npm/decamelize@1.1.2",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/decamelize/-/decamelize-1.1.2.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "dcc93727be209632e98b02718ef4cb79602322f2"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/decamelize/issues",
               "type": "issue-tracker",
@@ -1691,8 +1757,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/error-ex@1.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fqix-%2Fnode-error-ex.git",
+          "purl": "pkg:npm/error-ex@1.3.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/error-ex/-/error-ex-1.3.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "e67b43f3e82c96ea3a584ffee0b9fc3325d802d9"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/qix-/node-error-ex/issues",
               "type": "issue-tracker",
@@ -1731,8 +1808,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/escape-string-regexp@1.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fescape-string-regexp.git",
+          "purl": "pkg:npm/escape-string-regexp@1.0.5",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/escape-string-regexp/issues",
               "type": "issue-tracker",
@@ -1771,8 +1859,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/find-up@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Ffind-up.git",
+          "purl": "pkg:npm/find-up@1.1.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/find-up/-/find-up-1.1.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "a63b0eec4625a2902534898a5f9eec8aaed046e9"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/find-up/issues",
               "type": "issue-tracker",
@@ -1810,8 +1909,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/graceful-fs@4.1.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-graceful-fs.git",
+          "purl": "pkg:npm/graceful-fs@4.1.3",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.3.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "92033ce11113c41e2628d61fdfa40bc10dc0155c"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/isaacs/node-graceful-fs/issues",
               "type": "issue-tracker",
@@ -1850,8 +1960,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/hosted-git-info@2.1.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fhosted-git-info.git",
+          "purl": "pkg:npm/hosted-git-info@2.1.4",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.1.4.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "d9e953b26988be88096c46e926494d9604c300f8"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/npm/hosted-git-info/issues",
               "type": "issue-tracker",
@@ -1890,8 +2011,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/invert-kv@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Finvert-kv.git",
+          "purl": "pkg:npm/invert-kv@1.0.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/invert-kv/-/invert-kv-1.0.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/invert-kv/issues",
               "type": "issue-tracker",
@@ -1930,8 +2062,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/is-arrayish@0.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fqix-%2Fnode-is-arrayish.git",
+          "purl": "pkg:npm/is-arrayish@0.2.1",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "77c99840527aa8ecb1a8ba697b80645a7a926a9d"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/qix-/node-is-arrayish/issues",
               "type": "issue-tracker",
@@ -1970,8 +2113,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/is-builtin-module@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fis-builtin-module.git",
+          "purl": "pkg:npm/is-builtin-module@1.0.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/is-builtin-module/-/is-builtin-module-1.0.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "540572d34f7ac3119f8f76c30cbc1b1e037affbe"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/is-builtin-module/issues",
               "type": "issue-tracker",
@@ -2010,8 +2164,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/is-fullwidth-code-point@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fis-fullwidth-code-point.git",
+          "purl": "pkg:npm/is-fullwidth-code-point@1.0.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "ef9e31386f031a7f0d643af82fde50c457ef00cb"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/is-fullwidth-code-point/issues",
               "type": "issue-tracker",
@@ -2050,8 +2215,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/is-utf8@0.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fwayfind%2Fis-utf8.git",
+          "purl": "pkg:npm/is-utf8@0.2.1",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/is-utf8/-/is-utf8-0.2.1.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "4b0da1442104d1b336340e80797e865cf39f7d72"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/wayfind/is-utf8/issues",
               "type": "issue-tracker",
@@ -2090,8 +2266,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/lcid@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Flcid.git",
+          "purl": "pkg:npm/lcid@1.0.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/lcid/-/lcid-1.0.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "308accafa0bc483a3867b4b6f2b9506251d1b835"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/lcid/issues",
               "type": "issue-tracker",
@@ -2130,8 +2317,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/load-json-file@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fload-json-file.git",
+          "purl": "pkg:npm/load-json-file@1.1.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/load-json-file/-/load-json-file-1.1.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "956905708d58b4bab4c2261b04f59f31c99374c0"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/load-json-file/issues",
               "type": "issue-tracker",
@@ -2170,8 +2368,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/lodash.assign@4.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flodash%2Flodash.git",
+          "purl": "pkg:npm/lodash.assign@4.0.3",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/lodash.assign/-/lodash.assign-4.0.3.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "208252719b4375f361981c3ba3a8a09d1cbdb218"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/lodash/lodash/issues",
               "type": "issue-tracker",
@@ -2210,8 +2419,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/lodash.keys@4.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flodash%2Flodash.git",
+          "purl": "pkg:npm/lodash.keys@4.0.3",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/lodash.keys/-/lodash.keys-4.0.3.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "f698bb75edfae6f690db9e11908157732fe7b342"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/lodash/lodash/issues",
               "type": "issue-tracker",
@@ -2250,8 +2470,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/lodash.rest@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flodash%2Flodash.git",
+          "purl": "pkg:npm/lodash.rest@4.0.1",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/lodash.rest/-/lodash.rest-4.0.1.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "cbecbb84e68e499a1b242baf9b27bb63ef4dd980"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/lodash/lodash/issues",
               "type": "issue-tracker",
@@ -2290,8 +2521,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/normalize-package-data@2.3.5?vcs_url=git%3A%2F%2Fgithub.com%2Fnpm%2Fnormalize-package-data.git",
+          "purl": "pkg:npm/normalize-package-data@2.3.5",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.3.5.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "8d924f142960e1777e7ffe170543631cc7cb02df"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/npm/normalize-package-data/issues",
               "type": "issue-tracker",
@@ -2330,8 +2572,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/number-is-nan@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fnumber-is-nan.git",
+          "purl": "pkg:npm/number-is-nan@1.0.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/number-is-nan/-/number-is-nan-1.0.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "c020f529c5282adfdd233d91d4b181c3d686dc4b"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/number-is-nan/issues",
               "type": "issue-tracker",
@@ -2370,8 +2623,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/object-assign@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fobject-assign.git",
+          "purl": "pkg:npm/object-assign@4.0.1",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/object-assign/-/object-assign-4.0.1.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "99504456c3598b5cad4fc59c26e8a9bb107fe0bd"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/object-assign/issues",
               "type": "issue-tracker",
@@ -2410,8 +2674,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/os-locale@1.4.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fos-locale.git",
+          "purl": "pkg:npm/os-locale@1.4.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/os-locale/-/os-locale-1.4.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "20f9f17ae29ed345e8bde583b13d2009803c14d9"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/os-locale/issues",
               "type": "issue-tracker",
@@ -2450,8 +2725,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/parse-json@2.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fparse-json.git",
+          "purl": "pkg:npm/parse-json@2.2.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/parse-json/-/parse-json-2.2.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "f480f40434ef80741f8469099f8dea18f55a4dc9"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/parse-json/issues",
               "type": "issue-tracker",
@@ -2490,8 +2776,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/path-exists@2.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpath-exists.git",
+          "purl": "pkg:npm/path-exists@2.1.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/path-exists/-/path-exists-2.1.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "0feb6c64f0fc518d9a754dd5efb62c7022761f4b"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/path-exists/issues",
               "type": "issue-tracker",
@@ -2530,8 +2827,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/path-type@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpath-type.git",
+          "purl": "pkg:npm/path-type@1.1.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/path-type/-/path-type-1.1.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "59c44f7ee491da704da415da5a4070ba4f8fe441"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/path-type/issues",
               "type": "issue-tracker",
@@ -2570,8 +2878,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/pify@2.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpify.git",
+          "purl": "pkg:npm/pify@2.3.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/pify/-/pify-2.3.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "ed141a6ac043a849ea588498e7dca8b15330e90c"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/pify/issues",
               "type": "issue-tracker",
@@ -2610,8 +2929,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/pinkie-promise@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ffloatdrop%2Fpinkie-promise.git",
+          "purl": "pkg:npm/pinkie-promise@2.0.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "4c83538de1f6e660c29e0a13446844f7a7e88259"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/floatdrop/pinkie-promise/issues",
               "type": "issue-tracker",
@@ -2650,8 +2980,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/pinkie@2.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ffloatdrop%2Fpinkie.git",
+          "purl": "pkg:npm/pinkie@2.0.4",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "72556b80cfa0d48a974e80e77248e80ed4f7f870"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/floatdrop/pinkie/issues",
               "type": "issue-tracker",
@@ -2690,8 +3031,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/pkg-conf@1.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpkg-conf.git",
+          "purl": "pkg:npm/pkg-conf@1.1.1",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/pkg-conf/-/pkg-conf-1.1.1.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "a3caee3fb9c23ab4abad3baaea02f0001c75f200"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/pkg-conf/issues",
               "type": "issue-tracker",
@@ -2730,8 +3082,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/read-pkg-up@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fread-pkg-up.git",
+          "purl": "pkg:npm/read-pkg-up@1.0.1",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/read-pkg-up/-/read-pkg-up-1.0.1.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "9d63c13276c065918d57f002a57f40a1b643fb02"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/read-pkg-up/issues",
               "type": "issue-tracker",
@@ -2770,8 +3133,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/read-pkg@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fread-pkg.git",
+          "purl": "pkg:npm/read-pkg@1.1.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/read-pkg/-/read-pkg-1.1.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "f5ffaa5ecd29cb31c0474bca7d756b6bb29e3f28"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/read-pkg/issues",
               "type": "issue-tracker",
@@ -2810,8 +3184,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/require-main-filename@1.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fyargs%2Frequire-main-filename.git",
+          "purl": "pkg:npm/require-main-filename@1.0.1",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/require-main-filename/-/require-main-filename-1.0.1.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/yargs/require-main-filename/issues",
               "type": "issue-tracker",
@@ -2849,8 +3234,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/semver@5.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git",
+          "purl": "pkg:npm/semver@5.1.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/semver/-/semver-5.1.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "85f2cf8550465c4df000cf7d86f6b054106ab9e5"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/npm/node-semver/issues",
               "type": "issue-tracker",
@@ -2889,8 +3285,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/spdx-correct@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fspdx-correct.js.git",
+          "purl": "pkg:npm/spdx-correct@1.0.2",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/spdx-correct/-/spdx-correct-1.0.2.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "4b3073d933ff51f3912f03ac5519498a4150db40"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/kemitchell/spdx-correct.js/issues",
               "type": "issue-tracker",
@@ -2929,8 +3336,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/spdx-exceptions@1.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fspdx-exceptions.json.git",
+          "purl": "pkg:npm/spdx-exceptions@1.0.4",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-1.0.4.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "220b84239119ae9045a892db81a83f4ce16f80fd"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/kemitchell/spdx-exceptions.json/issues",
               "type": "issue-tracker",
@@ -2967,8 +3385,19 @@
               "acknowledgement": "declared"
             }
           ],
-          "purl": "pkg:npm/spdx-expression-parse@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fspdx-expression-parse.js.git",
+          "purl": "pkg:npm/spdx-expression-parse@1.0.2",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-1.0.2.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "d52b14b5e9670771440af225bcb563122ac452f6"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/kemitchell/spdx-expression-parse.js/issues",
               "type": "issue-tracker",
@@ -3007,8 +3436,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/spdx-license-ids@1.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fshinnn%2Fspdx-license-ids.git",
+          "purl": "pkg:npm/spdx-license-ids@1.2.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-1.2.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "b549dd0f63dcb745a17e2ea3a07402e0e332d1e2"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/shinnn/spdx-license-ids/issues",
               "type": "issue-tracker",
@@ -3047,8 +3487,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/string-width@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fstring-width.git",
+          "purl": "pkg:npm/string-width@1.0.1",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/string-width/-/string-width-1.0.1.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "c92129b6f1d7f52acf9af424a26e3864a05ceb0a"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/string-width/issues",
               "type": "issue-tracker",
@@ -3087,8 +3538,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/strip-ansi@3.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git",
+          "purl": "pkg:npm/strip-ansi@3.0.1",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "6a385fb8853d952d5ff05d0e8aaf94278dc63dcf"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/chalk/strip-ansi/issues",
               "type": "issue-tracker",
@@ -3127,8 +3589,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/strip-bom@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fstrip-bom.git",
+          "purl": "pkg:npm/strip-bom@2.0.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/strip-bom/-/strip-bom-2.0.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "6219a85616520491f35788bdbf1447a99c7e6b0e"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/sindresorhus/strip-bom/issues",
               "type": "issue-tracker",
@@ -3167,8 +3640,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/symbol@0.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Fseanmonstar%2Fsymbol.git",
+          "purl": "pkg:npm/symbol@0.2.1",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/symbol/-/symbol-0.2.1.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "c2124fb7b2e3eea30e4fa824341aa789b3534c95"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/seanmonstar/symbol/issues",
               "type": "issue-tracker",
@@ -3207,8 +3691,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/validate-npm-package-license@3.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fvalidate-npm-package-license.js.git",
+          "purl": "pkg:npm/validate-npm-package-license@3.0.1",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.1.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "2804babe712ad3379459acfbe24746ab2c303fbc"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/kemitchell/validate-npm-package-license.js/issues",
               "type": "issue-tracker",
@@ -3247,8 +3742,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/window-size@0.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjonschlinkert%2Fwindow-size.git",
+          "purl": "pkg:npm/window-size@0.2.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/window-size/-/window-size-0.2.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "b4315bb4214a3d7058ebeee892e13fa24d98b075"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/jonschlinkert/window-size/issues",
               "type": "issue-tracker",
@@ -3287,8 +3793,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/wrap-ansi@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fwrap-ansi.git",
+          "purl": "pkg:npm/wrap-ansi@1.0.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/wrap-ansi/-/wrap-ansi-1.0.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "f573bb9ee23cf43891f3362f5f359a1dfa38fc34"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/chalk/wrap-ansi/issues",
               "type": "issue-tracker",
@@ -3327,8 +3844,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/y18n@3.2.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fbcoe%2Fy18n.git",
+          "purl": "pkg:npm/y18n@3.2.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/y18n/-/y18n-3.2.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "3bec64c93b730d924a6148c765757932433e34c8"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/bcoe/y18n/issues",
               "type": "issue-tracker",
@@ -3367,8 +3895,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/yargs-parser@2.1.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fyargs%2Fyargs-parser.git",
+          "purl": "pkg:npm/yargs-parser@2.1.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/yargs-parser/-/yargs-parser-2.1.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "5f214362f948a085389abf34a78d8b5eef0b1350"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/yargs/yargs-parser/issues",
               "type": "issue-tracker",
@@ -3406,8 +3945,19 @@
               }
             }
           ],
-          "purl": "pkg:npm/yargs@4.1.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fbcoe%2Fyargs.git",
+          "purl": "pkg:npm/yargs@4.1.0",
           "externalReferences": [
+            {
+              "url": "http://registry.npmjs.org/yargs/-/yargs-4.1.0.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-1",
+                  "content": "035e5ea466ac7fea584b00353e33eae4082b9894"
+                }
+              ],
+              "comment": "as detected from PackageJson property \"dist.tarball\" and property \"dist.shasum\""
+            },
             {
               "url": "https://github.com/bcoe/yargs/issues",
               "type": "issue-tracker",
@@ -5500,6 +6050,51 @@
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/is-lambda"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-obj",
+      "version": "3.0.0",
+      "bom-ref": "is-obj@3.0.0",
+      "author": "Sindre Sorhus",
+      "description": "Check if a value is an object",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/is-obj@3.0.0",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/is-obj/-/is-obj-3.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/is-obj/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/is-obj.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/is-obj#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/is-obj"
         }
       ]
     },
@@ -10183,6 +10778,7 @@
         "buffer@5.7.1",
         "bundle-dependencies@1.0.2",
         "ignore@5.3.2",
+        "is-obj@3.0.0",
         "uuid@8.3.2",
         "uuidv4@6.2.13"
       ]
@@ -10817,6 +11413,9 @@
     },
     {
       "ref": "is-lambda@1.0.1"
+    },
+    {
+      "ref": "is-obj@3.0.0"
     },
     {
       "ref": "isexe@3.1.1"

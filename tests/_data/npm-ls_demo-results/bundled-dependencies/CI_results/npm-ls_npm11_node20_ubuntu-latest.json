@@ -10,10 +10,14 @@
     "directory": "demo/bundled-dependencies/project"
   },
   "_id": "demo-bundled-deps@0.0.0",
+  "bundleDependencies": [
+    "is-obj"
+  ],
   "extraneous": false,
   "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/bundled-dependencies/project",
   "_dependencies": {
-    "bundle-dependencies": "1.0.2"
+    "bundle-dependencies": "1.0.2",
+    "is-obj": "3.0.0"
   },
   "devDependencies": {},
   "peerDependencies": {},
@@ -1148,6 +1152,27 @@
           }
         }
       }
+    },
+    "is-obj": {
+      "version": "3.0.0",
+      "resolved": "https://registry.npmjs.org/is-obj/-/is-obj-3.0.0.tgz",
+      "overridden": false,
+      "name": "is-obj",
+      "integrity": "sha512-IlsXEHOjtKhpN8r/tRFj2nDyTmHvcfNeu/nrRIcXE17ROeatXchkojffa1SpdqW4cr/Fj6QkEf/Gn4zf6KKvEQ==",
+      "inBundle": true,
+      "license": "MIT",
+      "engines": {
+        "node": ">=12"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      },
+      "_id": "is-obj@3.0.0",
+      "extraneous": false,
+      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/bundled-dependencies/project/node_modules/is-obj",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
     }
   }
 }

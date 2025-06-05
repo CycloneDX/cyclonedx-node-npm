@@ -21,15 +21,15 @@ jobs:
       fail-fast: false # gather all the results !
       matrix:
         subject:
-          - deps-from-git
-          - alternative-package-registry
+          # - deps-from-git
+          # - alternative-package-registry
           - bundled-dependencies
-          - dev-dependencies
-          - juice-shop
-          - local-dependencies
-          - local-workspaces
-          - package-integrity
-          - package-with-build-id
+          # - dev-dependencies
+          # - juice-shop
+          # - local-dependencies
+          # - local-workspaces
+          # - package-integrity
+          # - package-with-build-id
         additional_npm-ls_args: [ '' ]
         npm-version:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
@@ -41,8 +41,8 @@ jobs:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
           - '24'     # Current
-          #- '22'     # Active LTS
-          #- '20'
+          - '22'     # Active LTS
+          - '20'
         os:
           - ubuntu-latest
           - windows-latest
