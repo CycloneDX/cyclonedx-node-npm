@@ -56,7 +56,7 @@ type AllComponents = Map<cPath, Models.Component>
 export class BomBuilder {
   npmRunner: NpmRunner
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
-  leFetcher: Builders.License.LicenseEvidenceFetcher
+  leFetcher: Utils.LicenseUtility.LicenseEvidenceFetcher
   treeBuilder: TreeBuilder
   purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
 
@@ -577,7 +577,7 @@ export class BomBuilder {
 
   private * fetchLicenseEvidence (dirPath: string): Generator<Models.License> {
     try {
-      const files = this.leFetcher.fetch(
+      const files = this.leFetcher.fetchAsAttachment(
         dirPath,
         (error: Error): void => {
           /* c8 ignore next 2 */

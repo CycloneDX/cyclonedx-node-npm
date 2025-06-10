@@ -20,7 +20,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { existsSync, mkdirSync, openSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 
-import { Builders, Enums, Factories, Serialize, Spec, Validation } from '@cyclonedx/cyclonedx-library'
+import { Builders, Enums, Factories, Serialize, Spec, Validation, Utils } from '@cyclonedx/cyclonedx-library'
 import { Argument, Command, Option } from 'commander'
 
 import { loadJsonFile, type Version, versionCompare, versionTuple, writeAllSync } from './_helpers'
@@ -310,7 +310,7 @@ export async function run (process_: NodeJS.Process): Promise<number> {
     ),
     new TreeBuilder(),
     new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
-    new Builders.License.LicenseEvidenceFetcher(),
+    new Utils.LicenseUtility.LicenseEvidenceFetcher(),
     {
       ignoreNpmErrors: options.ignoreNpmErrors,
       metaComponentType: options.mcType,
