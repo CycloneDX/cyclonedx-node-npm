@@ -579,8 +579,8 @@ export class BomBuilder {
     try {
       return this.leFetcher.fetch(
         dirPath,
-        /* c8 ignore next 3 */
         (error: Error): void => {
+          /* c8 ignore next 2 */
           this.console.info(`INFO  | ${error.message}`)
           this.console.debug(`DEBUG | ${error.message} -`, error)
         }
