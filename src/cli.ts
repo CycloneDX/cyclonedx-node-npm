@@ -310,6 +310,7 @@ export async function run (process_: NodeJS.Process): Promise<number> {
     ),
     new TreeBuilder(),
     new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
+    new Builders.License.LicenseEvidenceFetcher(),
     {
       ignoreNpmErrors: options.ignoreNpmErrors,
       metaComponentType: options.mcType,
