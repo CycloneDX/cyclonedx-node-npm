@@ -33,6 +33,7 @@ import {
 } from './_helpers'
 import { PropertyNames, PropertyValueBool } from './cdx'
 import type { NpmRunner } from './npmRunner'
+import {NamedLicense} from "../../cyclonedx-javascript-library/src/models";
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
@@ -577,7 +578,7 @@ export class BomBuilder {
 
   private * fetchLicenseEvidence (dirPath: string): Generator<Models.License> {
     try {
-      return this.leFetcher.fetch(
+      const files = this.leFetcher.fetch(
         dirPath,
         (error: Error): void => {
           /* c8 ignore next 2 */
@@ -585,7 +586,12 @@ export class BomBuilder {
           this.console.debug(`DEBUG | ${error.message} -`, error)
         }
       )
-    } catch (e) {
+      for (const {file, text} of files) {
+        return new NamedLicense(`file: ${file}`, {text})
+      }
+    }
+    /* c8 ignore next 2 */
+    catch (e) {
       this.console.warn('WARN  | collecting license evidence in', dirPath, 'failed:', e)
     }
   }
