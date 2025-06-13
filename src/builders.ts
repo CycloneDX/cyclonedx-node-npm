@@ -576,21 +576,22 @@ export class BomBuilder {
   }
 
   private * fetchLicenseEvidence (dirPath: string): Generator<Models.License> {
+    const files = this.leGatherer.getFileAttachments(
+      dirPath,
+      (error: Error): void => {
+        /* c8 ignore next 2 */
+        this.console.info(`INFO  | ${error.message}`)
+        this.console.debug(`DEBUG | ${error.message} -`, error)
+      }
+    )
     try {
-      const files = this.leGatherer.getFileAttachments(
-        dirPath,
-        (error: Error): void => {
-          /* c8 ignore next 2 */
-          this.console.info(`INFO  | ${error.message}`)
-          this.console.debug(`DEBUG | ${error.message} -`, error)
-        }
-      )
       for (const {file, text} of files) {
         yield new Models.NamedLicense(`file: ${file}`, {text})
       }
     }
-    /* c8 ignore next 2 */
+    /* c8 ignore next 3 */
     catch (e) {
+      // generator will not throw before first `.nest()` is called ...
       this.console.warn('WARN  | collecting license evidence in', dirPath, 'failed:', e)
     }
   }
