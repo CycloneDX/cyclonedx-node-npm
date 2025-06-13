@@ -41,17 +41,17 @@ describe('integration.cli.from-setups', () => {
       {
         subject: 'bare',
         args: [],
-        dummyProject: ['with-prepared']
+        dummyProjects: ['with-prepared']
       },
       {
         subject: 'flat',
         args: [],
-        dummyProject: ['with-prepared']
+        dummyProjects: ['with-prepared']
       },
       {
         subject: 'with-licenses',
         args: ['--gather-license-texts'],
-        dummyProject: ['with-prepared']
+        dummyProjects: ['with-prepared']
       }
     ]
 
@@ -102,7 +102,7 @@ describe('integration.cli.from-setups', () => {
     }
 
     describe.each(useCases)('subject: $subject', (ud) => {
-      describe.each(ud.dummyProject)('dummyProject: %s', (dummyProject) => {
+      describe.each(ud.dummyProjects)('dummyProject: %s', (dummyProject) => {
         describe.each(formats)('format: %s', (format) => {
           (skipAllTests
             ? test.skip
