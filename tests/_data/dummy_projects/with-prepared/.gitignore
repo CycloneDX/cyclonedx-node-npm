@@ -7,9 +7,11 @@
 !/node_modules/**/*
 !/package.json
 !/package-lock.json
+!/.npmrc
 
 !/setup.sh
 !/README.md
+
 !/LICENCE.mit
 !/LICENSES/
 !/LICENSES/*
