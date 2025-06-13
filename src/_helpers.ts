@@ -18,7 +18,6 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { readFileSync, writeSync } from 'node:fs'
-import { extname, parse } from 'node:path'
 
 export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
   ? structuredClone
@@ -67,49 +66,6 @@ export function tryRemoveSecretsFromUrl (url: string): string {
     return url
   }
 }
-
-// region MIME
-
-export type MimeType = string
-
-const MIME_TEXT_PLAIN: MimeType = 'text/plain'
-
-const MAP_TEXT_EXTENSION_MIME: Readonly<Record<string, MimeType>> = {
-  '': MIME_TEXT_PLAIN,
-  // https://www.iana.org/assignments/media-types/media-types.xhtml
-  '.csv': 'text/csv',
-  '.htm': 'text/html',
-  '.html': 'text/html',
-  '.md': 'text/markdown',
-  '.txt': MIME_TEXT_PLAIN,
-  '.rst': 'text/prs.fallenstein.rst',
-  '.xml': 'text/xml', // not `application/xml` -- our scope is text!
-  // add more mime types above this line. pull-requests welcome!
-  // license-specific files
-  '.license': MIME_TEXT_PLAIN,
-  '.licence': MIME_TEXT_PLAIN
-} as const
-
-export function getMimeForTextFile (filename: string): MimeType | undefined {
-  return MAP_TEXT_EXTENSION_MIME[extname(filename).toLowerCase()]
-}
-
-const LICENSE_FILENAME_BASE = new Set(['licence', 'license'])
-const LICENSE_FILENAME_EXT = new Set([
-  '.apache',
-  '.bsd',
-  '.gpl',
-  '.mit'
-])
-
-export function getMimeForLicenseFile (filename: string): MimeType | undefined {
-  const { name, ext } = parse(filename.toLowerCase())
-  return LICENSE_FILENAME_BASE.has(name) && LICENSE_FILENAME_EXT.has(ext)
-    ? MIME_TEXT_PLAIN
-    : MAP_TEXT_EXTENSION_MIME[ext]
-}
-
-// endregion MIME
 
 // region version compare
 
