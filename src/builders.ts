@@ -586,7 +586,7 @@ export class BomBuilder {
         }
       )
       for (const {file, text} of files) {
-        return new Models.NamedLicense(`file: ${file}`, {text})
+        yield new Models.NamedLicense(`file: ${file}`, {text})
       }
     }
     /* c8 ignore next 2 */
