@@ -6,12 +6,16 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+
+* Changed
+  * Utilizes license file gatherer of `@cyclonedx/cyclonedx-library`, previously used own implementation (via [#1303])
 * Runtime Dependencies
-  * Raised `@cyclonedx/cyclonedx-library@^8.2.0`, was `@^8.0.0` (via [#1301])
+  * Raised `@cyclonedx/cyclonedx-library@^8.4.0`, was `@^8.0.0` (via [#1301], [#1303])
   * Raised `commander@^14.0.0`, was `@^13.1.0` (via [#1297])
 
 [#1297]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1297
 [#1301]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1301
+[#1303]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1303
 
 ## 3.0.0 - 2025-04-08
 
