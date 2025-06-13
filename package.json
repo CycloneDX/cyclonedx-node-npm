@@ -69,7 +69,7 @@
     }
   ],
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "file:../cyclonedx-javascript-library",
+    "@cyclonedx/cyclonedx-library": "^8.4.0-rc.0",
     "commander": "^14.0.0",
     "normalize-package-data": "^7.0.0",
     "xmlbuilder2": "^3.0.2"
