@@ -34,6 +34,7 @@ import {
 } from './_helpers'
 import { PropertyNames, PropertyValueBool } from './cdx'
 import type { NpmRunner } from './npmRunner'
+import * as fs from "node:fs";
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
@@ -143,6 +144,15 @@ export class BomBuilder {
 
     this.console.info('INFO  | gathering dependency tree ...')
     this.console.debug('DEBUG | npm-ls: run npm with %j in %j', args, projectDir)
+
+    /*
+    const env = Object.fromEntries(
+      Object.entries(process_.env).filter(
+        ([k,]) => !(
+          k.toLowerCase().startsWith('node_') ||
+          k.toLowerCase().startsWith('npm_'))))
+    */
+
     /* eslint-disable-next-line @typescript-eslint/init-declarations -- ack */
     let npmLsReturns: Buffer
     try {
@@ -175,9 +185,26 @@ export class BomBuilder {
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access -- ack */
       npmLsReturns = runError.stdout ?? Buffer.alloc(0)
     }
+
+    const rres =     npmLsReturns.toString()
+
+    const dbgF = fs.openSync(path.join(__dirname, '..', 'dbg', `dbg${Math.random()}`), 'w')
+    fs.writeSync(dbgF, JSON.stringify(
+      {
+        args,
+        cwd: projectDir,
+        env: process_.env,
+      }
+    ))
+    fs.writeSync(dbgF, "\n\n")
+    fs.writeSync(dbgF, rres)
+    fs.closeSync(dbgF)
+
+
+
     // this.console.debug('stdout: %s', npmLsReturns)
     try {
-      return JSON.parse(npmLsReturns.toString())
+      return JSON.parse(rres)
     } catch (jsonParseError) {
       throw new Error(
         'failed to parse npm-ls response',
