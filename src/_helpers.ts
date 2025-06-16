@@ -94,3 +94,9 @@ export function versionCompare (a: Version, b: Version): CompareResult {
   return 0
 }
 // endregion version compare
+
+export function * iteratorMap <I, R> (iter: Iterable<I>, func: (e: I) => R): Generator<R> {
+  for (const item of iter) {
+    yield func(item)
+  }
+}

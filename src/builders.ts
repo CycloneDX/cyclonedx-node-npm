@@ -26,7 +26,7 @@ import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/
 import normalizePackageJson from 'normalize-package-data'
 
 import {
-  isString,
+  isString, iteratorMap,
   loadJsonFile,
   structuredClonePolyfill,
   tryRemoveSecretsFromUrl
@@ -50,8 +50,15 @@ interface BomBuilderOptions {
   workspaces?: BomBuilder['workspaces']
 }
 
-type cPath = string
-type AllComponents = Map<cPath, Models.Component>
+type PackagePath = string
+interface PackageData {
+  name: string
+  version: string
+  resolved?: string
+  integrity?: string
+  license?: string
+}
+
 
 export class BomBuilder {
   npmRunner: NpmRunner
@@ -197,17 +204,13 @@ export class BomBuilder {
       throw new Error(`unexpected path ${JSON.stringify(dataPath)}`)
     }
 
-    // region all components & dependencies
+    const allPackages = this.gatherPackages(data)
+    const allComponents = new Map(iteratorMap(
+      allPackages.entries(),
+      ([p, packageData]) => [p, this.makeComponent(packageData)]
+      ))
 
-    /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
-     * as we need to enforce a proper root component to enable all features of SBOM */
-    const rootComponent: Models.Component = this.makeComponent(data, this.metaComponentType) ||
-      new DummyComponent(this.metaComponentType, 'RootComponent')
-    const allComponents: AllComponents = new Map([[dataPath, rootComponent]])
-    this.gatherDependencies(allComponents, data, rootComponent.dependencies)
-    this.finalizePathProperties(dataPath, allComponents.values())
-
-    // endregion all components & dependencies
+    const rootComponent = allComponents.get(dataPath)
 
     const bom = new Models.Bom()
 
@@ -233,311 +236,44 @@ export class BomBuilder {
     // endregion metadata
 
     // region components
-
-    bom.components = this.nestComponents(
-      // remove rootComponent - so the elements that are nested below it are just returned.
-      new Map(Array.from(allComponents.entries()).filter(([, c]) => c !== rootComponent)),
-      this.treeBuilder.fromPaths(
-        new Set(allComponents.keys()),
-        // do not depend on `path.sep` -- this would be runtime-dependent, not input-dependent
-        dataPath.startsWith('/') ? '/' : '\\'
-      )
-    )
-    bom.components.forEach(c => { this.adjustNestedBomRefs(c, '') })
-    rootComponent.components.clear()
-
-    if (this.flattenComponents) {
-      for (const component of allComponents.values()) {
-        component.components.clear()
-        if (component !== rootComponent) {
-          bom.components.add(component)
-        }
-      }
-    }
-
+    // bom.components = ...
     // endregion components
 
     return bom
   }
 
-  private adjustNestedBomRefs (component: Models.Component, pref: string): void {
-    if (component.bomRef.value === undefined) {
-      return
-    }
-    component.bomRef.value = pref + component.bomRef.value
-    const fill = component.bomRef.value + '|'
-    component.components.forEach(c => { this.adjustNestedBomRefs(c, fill) })
-  }
-
-  private nestComponents (allComponents: AllComponents, tree: PTree): Models.ComponentRepository {
-    const children = new Models.ComponentRepository()
-    for (const [p, pTree] of tree) {
-      const component = allComponents.get(p)
-      const components = this.nestComponents(allComponents, pTree)
-      if (component === undefined) {
-        components.forEach(c => children.add(c))
-      } else {
-        component.components = components
-        children.add(component)
-      }
-    }
-    return children
-  }
-
-  private gatherDependencies (allComponents: AllComponents, data: NonNullable<any>, directDepRefs: Set<Models.BomRef>): void {
-    /* One and the same component may appear multiple times in the tree,
-     * but only one occurrence has all the direct dependencies.
-     * So we work only on the one `data` that actually has dependencies.
-     */
-    /* One and the same component may appear multiple times in the tree,
-     * but only the most top-level has a complete set with all `dependencies` *and* `resolved`.
-     * This detail might cause implementation changes: run over the top level first, then go into nested dependencies.
-     */
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-argument -- ack */
-    for (const [depName, depData] of Object.entries(data.dependencies ?? {}) as Iterable<[string, NonNullable<any>]>) {
-      if (depData === null || typeof depData !== 'object') {
-        // cannot build
-        this.console.debug('DEBUG | skip malformed component %j in %j', depName, depData)
-        continue // for-loop
-      }
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access -- ack */
-      const depPath = depData.path
-      if (!isString(depPath) || depPath.length === 0) {
-        // might be an optional dependency that was not installed
-        // skip, as it was not installed anyway
-        this.console.debug('DEBUG | skip missing component %j in %j', depName, depPath)
-        continue // for-loop
-      }
-
-      let dep = allComponents.get(depPath)
-      if (dep === undefined) {
-        const _dep = this.makeComponent(depData)
-        if (_dep === false) {
-          // shall be skipped
-          this.console.debug('DEBUG | skip impossible component %j in %j', depName, depPath)
-          continue // for-loop
-        }
-        dep = _dep ??
-          new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName}`)
-        if (dep instanceof DummyComponent) {
-          this.console.warn('WARN  | InterferedDependency %j in %j', depName, depPath)
+  private gatherPackages(data: any): Map<PackagePath, PackageData> {
+    const packages = new Map<PackagePath, PackageData>()
+    const todo = [data]
+    let w: typeof data
+    while (w = todo.pop())
+    {
+      const path = packages.path
+      if (isString(path)) {
+        const d = packages.get(path)
+        if (d === undefined) {
+          // gather relevant data
+          packages.set(path, {
+            name: w.name,
+            version: w.version,
+            resolved: w.resolved,
+            integrity: w.integrity,
+            license: w.license
+          })
         } else {
-          this.console.debug('DEBUG | built component %j in %j: %j', depName, depPath, dep)
-        }
-        this.console.info('INFO  | add component for %j in %j', depName, depPath)
-        allComponents.set(depPath, dep)
-      }
-      directDepRefs.add(dep.bomRef)
-
-      this.gatherDependencies(allComponents, depData, dep.dependencies)
-    }
-  }
-
-  /**
-   * Some combinations/versions of `npm-install`/`npm-ls` are insufficient,
-   * they fail to load package details or miss details.
-   * So here is a poly-fill that loads ALL the package's data.
-   */
-  private enhancedPackageData<T>(data: T & { path: string }): T {
-    if (!path.isAbsolute(data.path)) {
-      this.console.debug('DEBUG | skip loading package manifest in %j', data.path)
-      return data
-    }
-    const packageJsonPath = path.join(data.path, 'package.json')
-    try {
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- false-positive */
-      return Object.assign(
-        loadJsonFile(packageJsonPath) ?? {},
-        data
-      ) as T
-    } catch (err) {
-      this.console.debug('DEBUG | failed loading package manifest %j: %s', packageJsonPath, err)
-      return data
-    }
-  }
-
-  /**
-   * Ignore pattern for `resolved`.
-   * - ignore: well, just ignore it ... i guess.
-   * - file: local dist cannot be shipped and therefore should be ignored.
-   */
-  private readonly resolvedRE_ignore = /^(?:ignore|file):/i
-
-  /* eslint-disable-next-line complexity -- ack*/
-  private makeComponent (data: any & { path: string }, type?: Enums.ComponentType): Models.Component | false | undefined {
-    /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- needed */
-
-    const isOptional = data.optional === true
-    if (isOptional && this.omitDependencyTypes.has('optional')) {
-      this.console.debug('DEBUG | omit optional component: %j %j', data.name, data._id)
-      return false
-    }
-
-    const isDev = data.dev === true
-    if (isDev && this.omitDependencyTypes.has('dev')) {
-      this.console.debug('DEBUG | omit dev component: %j %j', data.name, data._id)
-      return false
-    }
-
-    // attention: `data.devOptional` are not to be skipped with devs, since they are still required by optionals.
-    const isDevOptional = data.devOptional === true
-    if (isDevOptional && this.omitDependencyTypes.has('dev') && this.omitDependencyTypes.has('optional')) {
-      this.console.debug('DEBUG | omit devOptional component: %j %j', data.name, data._id)
-      return false
-    }
-
-    // work with a deep copy, because `normalizePackageJson()` might modify the data
-    let _dataC = structuredClonePolyfill(data)
-    if (!this.packageLockOnly) {
-      _dataC = this.enhancedPackageData(_dataC)
-    }
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
-    normalizePackageJson(_dataC as normalizePackageJson.Input /* add debug for warnings? */)
-    // region fix normalizations
-    if (isString(data.version)) {
-      // allow non-SemVer strings
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-call -- ack */
-      _dataC.version = data.version.trim()
-    }
-    // endregion fix normalizations
-
-    const component = this.componentBuilder.makeComponent(
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
-      _dataC as normalizePackageJson.Package,
-      type
-    )
-    if (component === undefined) {
-      this.console.debug('DEBUG | skip broken component: %j %j', data.name, data._id)
-      return undefined
-    }
-
-    component.licenses.forEach(l => {
-      l.acknowledgement = Enums.LicenseAcknowledgement.Declared
-    })
-
-    if (this.gatherLicenseTexts) {
-      if (this.packageLockOnly) {
-        this.console.warn('WARN  | Adding license text is ignored (package-lock-only is configured!) for %j', data.name)
-      } else {
-        component.evidence = new Models.ComponentEvidence()
-        /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- false-positive */
-        for (const license of this.fetchLicenseEvidence(data.path)) {
-            // only create a evidence if a license attachment is found
-            component.evidence ??= new Models.ComponentEvidence();
-            component.evidence.licenses.add(license)
+          d.resolved ??= w.resolved
+          d.integrity ??= w.integrity
+          d.license ??= w.license
         }
       }
+      todo.push(Object.values(w.dependencies??{}))
+
     }
-
-    if (isOptional || isDevOptional) {
-      component.scope = Enums.ComponentScope.Optional
-    }
-
-    // region properties
-
-    if (isString(data.path)) {
-      component.properties.add(
-        /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- false-positive */
-        new Models.Property(PropertyNames.PackageInstallPath, data.path)
-      )
-    }
-    if (isDev || isDevOptional) {
-      component.properties.add(
-        new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
-      )
-    }
-    if (data.extraneous === true) {
-      component.properties.add(
-        new Models.Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
-      )
-    }
-    if (data.private === true || _dataC.private === true) {
-      component.properties.add(
-        new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
-      )
-    }
-    if (data.inBundle === true) {
-      component.properties.add(
-        new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
-      )
-    }
-
-    // endregion properties
-
-    const resolved = data.resolved
-    if (isString(resolved) && !this.resolvedRE_ignore.test(resolved)) {
-      const hashes = new Models.HashDictionary()
-      const integrity = data.integrity
-      if (isString(integrity)) {
-        try {
-          hashes.set(...Utils.NpmjsUtility.parsePackageIntegrity(integrity))
-        } catch { /* pass */}
-      }
-      component.externalReferences.add(
-        new Models.ExternalReference(
-          tryRemoveSecretsFromUrl(resolved),
-          Enums.ExternalReferenceType.Distribution,
-          {
-            hashes,
-            comment: 'as detected from npm-ls property "resolved"' +
-              (hashes.size > 0 ? ' and property "integrity"' : '')
-          }
-        )
-      )
-    }
-
-    /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
-
-    // even private packages may have a PURL for identification
-    component.purl = this.makePurl(component)
-
-    /* eslint-disable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing
-       -- since empty-string handling is needed */
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access -- ack */
-    component.bomRef.value = (isString(data._id) ? data._id : undefined) ||
-      `${component.group || '-'}/${component.name}@${component.version || '-'}`
-    /* eslint-enable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing */
-
-    return component
+    return packages
   }
 
-  private makePurl (component: Models.Component): ReturnType<BomBuilder['purlFactory']['makeFromComponent']> {
-    const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
-    if (purl === undefined) {
-      return undefined
-    }
-
-    if (this.shortPURLs) {
-      purl.qualifiers = undefined
-      purl.subpath = undefined
-    }
-
-    return purl
-  }
-
-  private finalizePathProperties (rootPath: any, components: IterableIterator<Models.Component>): void {
-    if (!isString(rootPath) || rootPath === '') {
-      return
-    }
-    /* eslint-disable @typescript-eslint/unbound-method -- needed */
-    // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
-    const [relativePath, dirSepRE] = rootPath.startsWith('/')
-      ? [path.posix.relative, /\//g]
-      : [path.win32.relative, /\\/g]
-    /* eslint-enable @typescript-eslint/unbound-method */
-    for (const component of components) {
-      for (const property of component.properties) {
-        /* eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison -- false positive */
-        if (property.name !== PropertyNames.PackageInstallPath) {
-          continue
-        }
-        if (property.value === '') {
-          component.properties.delete(property)
-          continue
-        }
-        property.value = relativePath(rootPath, property.value).replace(dirSepRE, '/')
-      }
-    }
+  private makeComponent (data: PackageData): Models.Component {
+    return new Models.Component(Enums.ComponentType.Library, '@TODO')
   }
 
   private * makeToolCs (): Generator<Models.Component> {
@@ -575,35 +311,6 @@ export class BomBuilder {
     }
   }
 
-  private * fetchLicenseEvidence (dirPath: string): Generator<Models.License> {
-    const files = this.leGatherer.getFileAttachments(
-      dirPath,
-      (error: Error): void => {
-        /* c8 ignore next 2 */
-        this.console.info(`INFO  | ${error.message}`)
-        this.console.debug(`DEBUG | ${error.message} -`, error)
-      }
-    )
-    try {
-      for (const {file, text} of files) {
-        yield new Models.NamedLicense(`file: ${file}`, {text})
-      }
-    }
-    /* c8 ignore next 3 */
-    catch (e) {
-      // generator will not throw before first `.nest()` is called ...
-      this.console.warn('WARN  | collecting license evidence in', dirPath, 'failed:', e)
-    }
-  }
-}
-
-class DummyComponent extends Models.Component {
-  constructor (type: Models.Component['type'], name: Models.Component['name']) {
-    super(type, `DummyComponent.${name}`, {
-      bomRef: `DummyComponent.${name}`,
-      description: `This is a dummy component "${name}" that fills the gap where the actual built failed.`
-    })
-  }
 }
 
 type PTree = Map<string, PTree>
