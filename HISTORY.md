@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 3.1.0 - 2025-06-16
 
 * Changed
   * Utilizes license file gatherer of `@cyclonedx/cyclonedx-library`, previously used own implementation (via [#1303])
