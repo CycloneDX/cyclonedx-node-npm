@@ -19,14 +19,13 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 /* eslint-disable max-lines -- ack */
 
-import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
+import { existsSync } from 'node:fs'
 import path from 'node:path'
 
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
 import normalizePackageJson from 'normalize-package-data'
 
 import {
-  getMimeForLicenseFile,
   isString,
   loadJsonFile,
   structuredClonePolyfill,
@@ -57,6 +56,7 @@ type AllComponents = Map<cPath, Models.Component>
 export class BomBuilder {
   npmRunner: NpmRunner
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
+  leGatherer: Utils.LicenseUtility.LicenseEvidenceGatherer
   treeBuilder: TreeBuilder
   purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
 
@@ -81,6 +81,7 @@ export class BomBuilder {
     componentBuilder: BomBuilder['componentBuilder'],
     treeBuilder: BomBuilder['treeBuilder'],
     purlFactory: BomBuilder['purlFactory'],
+    leFetcher: BomBuilder['leGatherer'],
     options: BomBuilderOptions,
     console_: BomBuilder['console']
   ) {
@@ -88,6 +89,7 @@ export class BomBuilder {
     this.componentBuilder = componentBuilder
     this.treeBuilder = treeBuilder
     this.purlFactory = purlFactory
+    this.leGatherer = leFetcher
 
     this.ignoreNpmErrors = options.ignoreNpmErrors ?? false
     this.metaComponentType = options.metaComponentType ?? Enums.ComponentType.Library
@@ -420,11 +422,9 @@ export class BomBuilder {
         component.evidence = new Models.ComponentEvidence()
         /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- false-positive */
         for (const license of this.fetchLicenseEvidence(data.path)) {
-          if (license != null) {
             // only create a evidence if a license attachment is found
             component.evidence ??= new Models.ComponentEvidence();
             component.evidence.licenses.add(license)
-          }
         }
       }
     }
@@ -575,45 +575,24 @@ export class BomBuilder {
     }
   }
 
-  readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
-
-  private * fetchLicenseEvidence (dirPath: string): Generator<Models.License | null, void, void> {
-    const files = readdirSync(dirPath)
-    for (const file of files) {
-      if (!this.#LICENSE_FILENAME_PATTERN.test(file)) {
-        continue
+  private * fetchLicenseEvidence (dirPath: string): Generator<Models.License> {
+    const files = this.leGatherer.getFileAttachments(
+      dirPath,
+      (error: Error): void => {
+        /* c8 ignore next 2 */
+        this.console.info(`INFO  | ${error.message}`)
+        this.console.debug(`DEBUG | ${error.message} -`, error)
       }
-      const fp = path.join(dirPath, file)
-
-      // Ignore all directories - they are not files :-)
-      // Don't follow symlinks for security reasons!
-      if (!statSync(fp).isFile()) {
-        continue
+    )
+    try {
+      for (const {file, text} of files) {
+        yield new Models.NamedLicense(`file: ${file}`, {text})
       }
-
-      const contentType = getMimeForLicenseFile(file)
-      if (contentType === undefined) {
-        continue
-      }
-
-      try {
-        yield new Models.NamedLicense(
-          `file: ${file}`,
-          {
-            text: new Models.Attachment(
-              readFileSync(fp).toString('base64'),
-              {
-                contentType,
-                encoding: Enums.AttachmentEncoding.Base64
-              }
-            )
-          })
-      }
-      /* c8 ignore next 3 */
-      catch (err) {
-        this.console.info('INFO  | skipped license file %s', fp)
-        this.console.debug('DEBUG | skipped license file %s: %s', fp, err)
-      }
+    }
+    /* c8 ignore next 3 */
+    catch (e) {
+      // generator will not throw before first `.nest()` is called ...
+      this.console.warn('WARN  | collecting license evidence in', dirPath, 'failed:', e)
     }
   }
 }
