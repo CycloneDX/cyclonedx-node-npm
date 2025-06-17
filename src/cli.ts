@@ -301,6 +301,11 @@ export async function run (process_: NodeJS.Process): Promise<number> {
     throw new Error('missing evidence')
   }
 
+  if (options.gatherLicenseTexts && options.packageLockOnly) {
+    myConsole.warn('WARN  | Adding license text is ignored (package-lock-only is configured!)')
+    options.gatherLicenseTexts = false
+  }
+
   myConsole.log('LOG   | gathering BOM data ...')
   const bom = new BomBuilder(
     npmRunner,
