@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 /* eslint-disable max-lines -- ack */
 
-import {existsSync, openSync, readFileSync} from 'node:fs'
+import { existsSync } from 'node:fs'
 import path from 'node:path'
 
 import {type Builders, Enums, type Factories, Models, Utils} from '@cyclonedx/cyclonedx-library'
@@ -54,16 +54,25 @@ interface BomBuilderOptions {
 type PackagePath = string
 interface PackageData {
   name: string
-  version?: string // local packages might not have a version
+  /** ! local packages might not have a version */
+  version?: any
+  funding?: any
+  license?: any
+  /** where was the package downloaded from? */
   resolved?: string
+  /** kind-of checksum of that resolved version */
   integrity?: string
+  /** is (transitive) optional */
   optional?: boolean
+  /** is dev-dependency */
   dev?: boolean
+  /*** is dev-dependency AND is (transitive) optional */
   devOptional?: boolean
+  /**is not required by any dependency */
   extraneous?: boolean
+  /**is bundled with another package */
   inBundle?: boolean
 }
-
 
 export class BomBuilder {
   npmRunner: NpmRunner
@@ -153,15 +162,16 @@ export class BomBuilder {
       : [path.win32.relative, /\\/g]
     allComponents.forEach((c, p) => {
       c.purl = this.makePurl(c)
-      relativePath(rootPath, p).replace(dirSepRE, '/')
+      c.properties.add(new Models.Property(
+        PropertyNames.PackageInstallPath,
+    relativePath(rootPath, p).replace(dirSepRE, '/')
+        ))
     })
 
     const bom = new Models.Bom()
 
     // region metadata
-
     bom.metadata.component = rootComponent
-
     bom.metadata.tools.components.add(new Models.Component(
       Enums.ComponentType.Application, 'npm', {
         version: npmVersion
@@ -171,17 +181,19 @@ export class BomBuilder {
     for (const toolC of this.makeToolCs()) {
       bom.metadata.tools.components.add(toolC)
     }
-
     if (!this.reproducible) {
       bom.serialNumber = Utils.BomUtility.randomSerialNumber()
       bom.metadata.timestamp = new Date()
     }
-
     // endregion metadata
 
     // region components
-    // bom.components = ... nested or flat ...
+    // @TODO bom.components = ... nested or flat ...
     // endregion components
+
+    // region dependency graph
+    // @TODO dependency graph
+    // endregion dependency graph
 
     return bom
   }
@@ -317,21 +329,22 @@ export class BomBuilder {
     }
   }
 
+  private normalizePackageJson(data: any): normalizePackageJson.Package
+  {
+    const dataN = structuredClonePolyfill(data)
+    normalizePackageJson(dataN as normalizePackageJson.Input /* add debug for warnings? */)
+    if (isString(data.version)) {
+      // allow non-SemVer strings
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-call -- ack */
+      dataN.version = data.version.trim()
+    }
+    return dataN
+  }
+
   private makeComponentFromPackagePath(ppath: PackagePath, type: Enums.ComponentType): Models.Component {
     try {
       const manifest = loadJsonFile(path.join(ppath, 'package.json'))
-
-      const manifestN = structuredClonePolyfill(manifest)
-      normalizePackageJson(manifestN as normalizePackageJson.Input /* add debug for warnings? */)
-      // region fix normalizations
-      if (isString(manifestN.version)) {
-        // allow non-SemVer strings
-        /* eslint-disable-next-line @typescript-eslint/no-unsafe-call -- ack */
-        manifestN.version = manifestN.version.trim()
-      }
-      // endregion fix normalizations
-
-      const component = this.componentBuilder.makeComponent(manifestN, type)
+      const component = this.componentBuilder.makeComponent(this.normalizePackageJson(manifest), type)
       if (component === undefined) {
         throw new TypeError('created no component')
       }
@@ -367,7 +380,7 @@ export class BomBuilder {
 
   private makeComponentWithPackageData(data: PackageData, ppath: PackagePath, type: Enums.ComponentType = Enums.ComponentType.Library): Models.Component {
     let component = this.packageLockOnly
-      ? this.componentBuilder.makeComponent(data, type)
+      ? this.componentBuilder.makeComponent(this.normalizePackageJson(data), type)
       : this.makeComponentFromPackagePath(ppath, type)
     if (component === undefined) {
       this.console.debug('DEBUG | creating DummyComponent for ',ppath)
@@ -379,7 +392,6 @@ export class BomBuilder {
     }
 
     // region properties
-
     if (data.dev === true || data.devOptional ===  true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
@@ -395,13 +407,13 @@ export class BomBuilder {
         new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
       )
     }
-
     // endregion properties
 
+    // region resolved
     const {resolved, integrity} = data
     if (isString(resolved) && !this.resolvedRE_ignore.test(resolved)) {
       const rref = new Models.ExternalReference(
-        resolved,
+        tryRemoveSecretsFromUrl(resolved),
         Enums.ExternalReferenceType.Distribution,
         {comment: 'as detected from npm-ls property "resolved"'}
       )
@@ -415,6 +427,7 @@ export class BomBuilder {
       }
       component.externalReferences.add(rref)
     }
+    // endregion resolved
 
     return component
   }
