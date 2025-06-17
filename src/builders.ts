@@ -95,12 +95,7 @@ export class BomBuilder {
   workspaces?: boolean
 
   console: Console
-  /**
-   * Ignore pattern for `resolved`.
-   * - ignore: well, just ignore it ... i guess.
-   * - file: local dist cannot be shipped and therefore should be ignored.
-   */
-  private readonly resolvedRE_ignore = /^(?:ignore|file):/i
+
 
   /* eslint-disable-next-line @typescript-eslint/max-params -- ack */
   constructor (
@@ -431,26 +426,42 @@ export class BomBuilder {
     // endregion properties
 
     // region resolved
-    const {resolved, integrity} = data
-    if (isString(resolved) && !this.resolvedRE_ignore.test(resolved)) {
-      const rref = new Models.ExternalReference(
-        tryRemoveSecretsFromUrl(resolved),
-        Enums.ExternalReferenceType.Distribution,
-        {comment: 'as detected from npm-ls property "resolved"'}
-      )
-      if (isString(integrity)) {
-        try {
-          // actually not the hash of the file, but more of an integrity-check -- lets use it anyway.
-          // see https://blog.npmjs.org/post/172999548390/new-pgp-machinery
-          rref.hashes.set(...Utils.NpmjsUtility.parsePackageIntegrity(integrity))
-          rref.comment += ' and property "integrity"'
-        } catch { /* pass */ }
-      }
+    const rref = this.makeExtRefDistFromPachageData(data)
+    if ( rref !== undefined) {
       component.externalReferences.add(rref)
     }
     // endregion resolved
 
     return component
+  }
+
+  /**
+   * Ignore pattern for `resolved`.
+   * - ignore: well, just ignore it ... i guess.
+   * - file: local dist cannot be shipped and therefore should be ignored.
+   */
+  private readonly resolvedRE_ignore = /^(?:ignore|file):/i
+
+  private makeExtRefDistFromPachageData(data: PackageData)
+  {
+    const {resolved, integrity} = data
+    if (!isString(resolved) || this.resolvedRE_ignore.test(resolved)) {
+      return undefined
+    }
+    const rref = new Models.ExternalReference(
+      tryRemoveSecretsFromUrl(resolved),
+      Enums.ExternalReferenceType.Distribution,
+      {comment: 'as detected from npm-ls property "resolved"'}
+    )
+    if (isString(integrity)) {
+      try {
+        // actually not the hash of the file, but more of an integrity-check -- lets use it anyway.
+        // see https://blog.npmjs.org/post/172999548390/new-pgp-machinery
+        rref.hashes.set(...Utils.NpmjsUtility.parsePackageIntegrity(integrity))
+        rref.comment += ' and property "integrity"'
+      } catch { /* pass */ }
+    }
+    return rref
   }
 
   private makePurl (component: Models.Component): ReturnType<BomBuilder['purlFactory']['makeFromComponent']> {
