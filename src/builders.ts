@@ -157,9 +157,9 @@ export class BomBuilder {
     allComponents.set(rootPath, rootComponent)
 
     // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
-    const [relativePath, dirSepRE] = rootPath.startsWith('/')
-      ? [path.posix.relative, /\//g]
-      : [path.win32.relative, /\\/g]
+    const [relativePath, dirSep, dirSepRE] = rootPath.startsWith('/')
+      ? [path.posix.relative, '/', /\//g]
+      : [path.win32.relative, '\\', /\\/g]
     allComponents.forEach((c, p) => {
       c.purl = this.makePurl(c)
       c.properties.add(new Models.Property(
@@ -188,10 +188,21 @@ export class BomBuilder {
     // endregion metadata
 
     // region components
-    // @TODO bom.components = ... nested or flat ...
+    if (this.flattenComponents) {
+      for (const c of allComponents.values())
+      {
+        if (c === rootComponent) { continue }
+        bom.components.add(c)
+      }
+    } else {
+      const pTree = this.treeBuilder.fromPaths(allComponents.keys(), dirSep)
+      bom.components = this.nestComponents(allComponents, pTree)
+      rootComponent.components.clear()
+    }
     // endregion components
 
     // region dependency graph
+    // @TODO adjust bom-refs
     // @TODO dependency graph
     // endregion dependency graph
 
@@ -303,6 +314,7 @@ export class BomBuilder {
           d.dev ??= w.dev
         }
       }
+      // `dependencies` might be missing to prevent circles...
       todo.push(...Object.values(w.dependencies ?? {}))
     }
     return packages
@@ -322,15 +334,14 @@ export class BomBuilder {
         yield new Models.NamedLicense(`file: ${file}`, {text})
       }
     }
-      /* c8 ignore next 3 */
+    /* c8 ignore next 3 */
     catch (e) {
       // generator will not throw before first `.nest()` is called ...
       this.console.warn('WARN  | collecting license evidence in', dirPath, 'failed:', e)
     }
   }
 
-  private normalizePackageJson(data: any): normalizePackageJson.Package
-  {
+  private normalizePackageJson(data: any): normalizePackageJson.Package {
     const dataN = structuredClonePolyfill(data)
     normalizePackageJson(dataN as normalizePackageJson.Input /* add debug for warnings? */)
     if (isString(data.version)) {
@@ -342,7 +353,6 @@ export class BomBuilder {
   }
 
   private makeComponentFromPackagePath(ppath: PackagePath, type: Enums.ComponentType): Models.Component {
-    try {
       const manifest = loadJsonFile(path.join(ppath, 'package.json'))
       const component = this.componentBuilder.makeComponent(this.normalizePackageJson(manifest), type)
       if (component === undefined) {
@@ -354,40 +364,51 @@ export class BomBuilder {
       })
 
       if ( this.gatherLicenseTexts ) {
+        component.evidence = new Models.ComponentEvidence()
         for (const le of this.fetchLicenseEvidence(ppath) ) {
-          // only create evidence if a license attachment is found
-          component.evidence ??= new Models.ComponentEvidence()
           component.evidence.licenses.add(le)
         }
       }
 
       // region properties
-
       if (manifest.private === true) {
         component.properties.add(
           new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
         )
       }
-
       // endregion properties
 
       return component
-    } catch (err) {
-      this.console.debug('DEBUG | creating DummyComponent for ',ppath, err)
-      return new DummyComponent(type, ppath)
-    }
   }
 
   private makeComponentWithPackageData(data: PackageData, ppath: PackagePath, type: Enums.ComponentType = Enums.ComponentType.Library): Models.Component {
-    let component = this.packageLockOnly
-      ? this.componentBuilder.makeComponent(this.normalizePackageJson(data), type)
-      : this.makeComponentFromPackagePath(ppath, type)
+    const isOptional = data.optional || data.devOptional
+    let isExcluded= false
+
+    let component
+    if (!this.packageLockOnly) {
+      try {
+        component = this.makeComponentFromPackagePath(ppath, type)
+      } catch (err: any) {
+        if (err.code === 'ENOENT' && isOptional) {
+          // an optional dependency that was probably excluded
+          isExcluded = true
+        } else {
+          this.console.debug('DEBUG | creating DummyComponent for ', ppath, err)
+        }
+      }
+    }
+    if ( component === undefined ) {
+      component = this.componentBuilder.makeComponent(this.normalizePackageJson(data), type)
+    }
     if (component === undefined) {
-      this.console.debug('DEBUG | creating DummyComponent for ',ppath)
+      this.console.info('INFO  | creating DummyComponent for ', ppath)
       component = new DummyComponent(type, ppath)
     }
 
-    if (data.optional || data.devOptional) {
+    if (isExcluded) {
+      component.scope = Enums.ComponentScope.Excluded
+    } else if (isOptional) {
       component.scope = Enums.ComponentScope.Optional
     }
 
@@ -481,6 +502,21 @@ export class BomBuilder {
     }
   }
 
+  private nestComponents (allComponents: Map<PackagePath, Models.Component>, tree: PTree): Models.ComponentRepository {
+    const children = new Models.ComponentRepository()
+    for (const [p, pTree] of tree) {
+      const component = allComponents.get(p)
+      const components = this.nestComponents(allComponents, pTree)
+      if (component === undefined) {
+        components.forEach(c => children.add(c))
+      } else {
+        component.components = components
+        children.add(component)
+      }
+    }
+    return children
+  }
+
 }
 
 class DummyComponent extends Models.Component {
@@ -492,19 +528,20 @@ class DummyComponent extends Models.Component {
   }
 }
 
-type PTree = Map<string, PTree>
+type PTree = Map<PackagePath, PTree>
 
 export class TreeBuilder {
-  fromPaths (paths: Set<string>, dirSeparator: string): PTree {
+  fromPaths (paths: Iterable<PackagePath>, dirSeparator: string): PTree {
     const tree: PTree = new Map(Array.from(
-      paths,
-        p => [p + dirSeparator, new Map<string, PTree>()]))
+      new Set(paths),
+        p => [p + dirSeparator, new Map<PackagePath, PTree>()]))
     this.nestPT(tree)
     this.renderPR(tree, '')
     return tree
   }
 
-  private renderPR (tree: PTree, pref: string): void {
+  private renderPR (tree: PTree, pref: PackagePath): void {
+    // work with a copy of the tree, as we will modify it on the go
     for (const [p, pTree] of [...tree.entries()]) {
       tree.delete(p)
       const pFull = pref + p

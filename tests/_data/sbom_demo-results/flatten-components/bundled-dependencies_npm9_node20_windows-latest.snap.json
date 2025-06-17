@@ -79,44 +79,14 @@
     },
     "component": {
       "type": "application",
-      "name": "demo-bundled-deps",
-      "version": "0.0.0",
-      "bom-ref": "demo-bundled-deps@0.0.0",
-      "description": "demo: demo-bundled-deps -- showcase how bundled deps look like",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/demo-bundled-deps@0.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-node-npm.git#demo/bundled-dependencies/project",
-      "externalReferences": [
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/bundled-dependencies/project",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
-        },
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ],
+      "name": "DummyComponent.D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project",
+      "bom-ref": "DummyComponent.D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project",
+      "description": "This is a dummy component \"D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\" that fills the gap where the actual built failed.",
+      "purl": "pkg:npm/dummycomponent.d%3A%5Ca%5Ccyclonedx-node-npm%5Ccyclonedx-node-npm%5Cdemo%5Cbundled-dependencies%5Cproject",
       "properties": [
         {
           "name": "cdx:npm:package:path",
           "value": ""
-        },
-        {
-          "name": "cdx:npm:package:private",
-          "value": "true"
         }
       ]
     }
@@ -124,44 +94,10 @@
   "components": [
     {
       "type": "library",
-      "name": "bundle-dependencies",
-      "version": "1.0.2",
-      "bom-ref": "bundle-dependencies@1.0.2",
-      "purl": "pkg:npm/bundle-dependencies@1.0.2",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz",
-          "type": "distribution",
-          "hashes": [
-            {
-              "alg": "SHA-512",
-              "content": "7ccf50f6125c5f56589f28ef7874e9b4566aa4b2833b681dc5186e07c30d498110bc2ea42260c31f6d37f09fed1df72e5742511948fc9fc6b10d8d009c59177c"
-            }
-          ],
-          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "ansi-regex",
+      "name": "strip-bom",
       "version": "2.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|ansi-regex@2.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/ansi-regex@2.0.0",
+      "bom-ref": "BomRef.00f28ugrtt8.ustohpdc30o",
+      "purl": "pkg:npm/strip-bom@2.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:bundled",
@@ -169,24 +105,16 @@
         },
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/ansi-regex"
+          "value": "node_modules/bundle-dependencies/node_modules/strip-bom"
         }
       ]
     },
     {
       "type": "library",
-      "name": "builtin-modules",
-      "version": "1.1.1",
-      "bom-ref": "bundle-dependencies@1.0.2|builtin-modules@1.1.1",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/builtin-modules@1.1.1",
+      "name": "is-utf8",
+      "version": "0.2.1",
+      "bom-ref": "BomRef.1tt8uis9mgo.noql00hasdg",
+      "purl": "pkg:npm/is-utf8@0.2.1",
       "properties": [
         {
           "name": "cdx:npm:package:bundled",
@@ -194,24 +122,16 @@
         },
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/builtin-modules"
+          "value": "node_modules/bundle-dependencies/node_modules/is-utf8"
         }
       ]
     },
     {
       "type": "library",
-      "name": "camelcase",
-      "version": "2.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|camelcase@2.1.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/camelcase@2.1.0",
+      "name": "load-json-file",
+      "version": "1.1.0",
+      "bom-ref": "BomRef.32trtc78mhg.e3k5n1f5pmo",
+      "purl": "pkg:npm/load-json-file@1.1.0",
       "properties": [
         {
           "name": "cdx:npm:package:bundled",
@@ -219,24 +139,16 @@
         },
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/camelcase"
+          "value": "node_modules/bundle-dependencies/node_modules/load-json-file"
         }
       ]
     },
     {
       "type": "library",
-      "name": "cliui",
-      "version": "3.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|cliui@3.1.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/cliui@3.1.0",
+      "name": "read-pkg",
+      "version": "1.1.0",
+      "bom-ref": "BomRef.399ria56sao.r88f0jfr5to",
+      "purl": "pkg:npm/read-pkg@1.1.0",
       "properties": [
         {
           "name": "cdx:npm:package:bundled",
@@ -244,57 +156,7 @@
         },
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/cliui"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "code-point-at",
-      "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|code-point-at@1.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/code-point-at@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/code-point-at"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "decamelize",
-      "version": "1.1.2",
-      "bom-ref": "bundle-dependencies@1.0.2|decamelize@1.1.2",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/decamelize@1.1.2",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/decamelize"
+          "value": "node_modules/bundle-dependencies/node_modules/read-pkg"
         }
       ]
     },
@@ -302,15 +164,7 @@
       "type": "library",
       "name": "error-ex",
       "version": "1.3.0",
-      "bom-ref": "bundle-dependencies@1.0.2|error-ex@1.3.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
+      "bom-ref": "BomRef.3bif2jpt1r.m1df2rnu5v8",
       "purl": "pkg:npm/error-ex@1.3.0",
       "properties": [
         {
@@ -325,17 +179,162 @@
     },
     {
       "type": "library",
+      "name": "is-fullwidth-code-point",
+      "version": "1.0.0",
+      "bom-ref": "BomRef.4b3fntdhgq.uvb337abln",
+      "purl": "pkg:npm/is-fullwidth-code-point@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/is-fullwidth-code-point"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pinkie",
+      "version": "2.0.4",
+      "bom-ref": "BomRef.4dk2iip8jt.27oanenbue8",
+      "purl": "pkg:npm/pinkie@2.0.4",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/pinkie"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "window-size",
+      "version": "0.2.0",
+      "bom-ref": "BomRef.4nrm1u44p6g.1og7cffjquo",
+      "purl": "pkg:npm/window-size@0.2.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/window-size"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "number-is-nan",
+      "version": "1.0.0",
+      "bom-ref": "BomRef.4varkr8it3g.lu2cfgbdnc",
+      "purl": "pkg:npm/number-is-nan@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/number-is-nan"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "hosted-git-info",
+      "version": "2.1.4",
+      "bom-ref": "BomRef.577l3fel1k8.i725p7j1qlg",
+      "purl": "pkg:npm/hosted-git-info@2.1.4",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/hosted-git-info"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "parse-json",
+      "version": "2.2.0",
+      "bom-ref": "BomRef.7905q4ftjv8.0nr9799qu28",
+      "purl": "pkg:npm/parse-json@2.2.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/parse-json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lodash.keys",
+      "version": "4.0.3",
+      "bom-ref": "BomRef.79pe6p27mm8.7n1a2k39jo",
+      "purl": "pkg:npm/lodash.keys@4.0.3",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/lodash.keys"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cliui",
+      "version": "3.1.0",
+      "bom-ref": "BomRef.7jupgs6mh1g.rkqlq4md1no",
+      "purl": "pkg:npm/cliui@3.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/cliui"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "normalize-package-data",
+      "version": "2.3.5",
+      "bom-ref": "BomRef.7o16db53dt8.piv161582ag",
+      "purl": "pkg:npm/normalize-package-data@2.3.5",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/normalize-package-data"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "escape-string-regexp",
       "version": "1.0.5",
-      "bom-ref": "bundle-dependencies@1.0.2|escape-string-regexp@1.0.5",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
+      "bom-ref": "BomRef.81nm93rc5ko.bvuk5kh55rg",
       "purl": "pkg:npm/escape-string-regexp@1.0.5",
       "properties": [
         {
@@ -352,15 +351,7 @@
       "type": "library",
       "name": "find-up",
       "version": "1.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|find-up@1.1.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
+      "bom-ref": "BomRef.8c8cpfs81kg.r5d3nqlkhe",
       "purl": "pkg:npm/find-up@1.1.0",
       "properties": [
         {
@@ -375,865 +366,9 @@
     },
     {
       "type": "library",
-      "name": "graceful-fs",
-      "version": "4.1.3",
-      "bom-ref": "bundle-dependencies@1.0.2|graceful-fs@4.1.3",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/graceful-fs@4.1.3",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/graceful-fs"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "hosted-git-info",
-      "version": "2.1.4",
-      "bom-ref": "bundle-dependencies@1.0.2|hosted-git-info@2.1.4",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/hosted-git-info@2.1.4",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/hosted-git-info"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "invert-kv",
-      "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|invert-kv@1.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/invert-kv@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/invert-kv"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "is-arrayish",
-      "version": "0.2.1",
-      "bom-ref": "bundle-dependencies@1.0.2|is-arrayish@0.2.1",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/is-arrayish@0.2.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/is-arrayish"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "is-builtin-module",
-      "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|is-builtin-module@1.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/is-builtin-module@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/is-builtin-module"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "is-fullwidth-code-point",
-      "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/is-fullwidth-code-point@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/is-fullwidth-code-point"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "is-utf8",
-      "version": "0.2.1",
-      "bom-ref": "bundle-dependencies@1.0.2|is-utf8@0.2.1",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/is-utf8@0.2.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/is-utf8"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "lcid",
-      "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|lcid@1.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/lcid@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/lcid"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "load-json-file",
-      "version": "1.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|load-json-file@1.1.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/load-json-file@1.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/load-json-file"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "lodash.assign",
-      "version": "4.0.3",
-      "bom-ref": "bundle-dependencies@1.0.2|lodash.assign@4.0.3",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/lodash.assign@4.0.3",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/lodash.assign"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "lodash.keys",
-      "version": "4.0.3",
-      "bom-ref": "bundle-dependencies@1.0.2|lodash.keys@4.0.3",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/lodash.keys@4.0.3",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/lodash.keys"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "lodash.rest",
-      "version": "4.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|lodash.rest@4.0.1",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/lodash.rest@4.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/lodash.rest"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "normalize-package-data",
-      "version": "2.3.5",
-      "bom-ref": "bundle-dependencies@1.0.2|normalize-package-data@2.3.5",
-      "licenses": [
-        {
-          "license": {
-            "id": "BSD-2-Clause",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/normalize-package-data@2.3.5",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/normalize-package-data"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "number-is-nan",
-      "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|number-is-nan@1.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/number-is-nan@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/number-is-nan"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "object-assign",
-      "version": "4.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|object-assign@4.0.1",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/object-assign@4.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/object-assign"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "os-locale",
-      "version": "1.4.0",
-      "bom-ref": "bundle-dependencies@1.0.2|os-locale@1.4.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/os-locale@1.4.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/os-locale"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "parse-json",
-      "version": "2.2.0",
-      "bom-ref": "bundle-dependencies@1.0.2|parse-json@2.2.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/parse-json@2.2.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/parse-json"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "path-exists",
-      "version": "2.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|path-exists@2.1.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/path-exists@2.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/path-exists"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "path-type",
-      "version": "1.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|path-type@1.1.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/path-type@1.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/path-type"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "pify",
-      "version": "2.3.0",
-      "bom-ref": "bundle-dependencies@1.0.2|pify@2.3.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/pify@2.3.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/pify"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "pinkie-promise",
-      "version": "2.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|pinkie-promise@2.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/pinkie-promise@2.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/pinkie-promise"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "pinkie",
-      "version": "2.0.4",
-      "bom-ref": "bundle-dependencies@1.0.2|pinkie@2.0.4",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/pinkie@2.0.4",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/pinkie"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "pkg-conf",
-      "version": "1.1.1",
-      "bom-ref": "bundle-dependencies@1.0.2|pkg-conf@1.1.1",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/pkg-conf@1.1.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/pkg-conf"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "read-pkg-up",
-      "version": "1.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|read-pkg-up@1.0.1",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/read-pkg-up@1.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/read-pkg-up"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "read-pkg",
-      "version": "1.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|read-pkg@1.1.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/read-pkg@1.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/read-pkg"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "require-main-filename",
-      "version": "1.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|require-main-filename@1.0.1",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/require-main-filename@1.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/require-main-filename"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "semver",
-      "version": "5.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|semver@5.1.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/semver@5.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/semver"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "spdx-correct",
-      "version": "1.0.2",
-      "bom-ref": "bundle-dependencies@1.0.2|spdx-correct@1.0.2",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/spdx-correct@1.0.2",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/spdx-correct"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "spdx-exceptions",
-      "version": "1.0.4",
-      "bom-ref": "bundle-dependencies@1.0.2|spdx-exceptions@1.0.4",
-      "licenses": [
-        {
-          "license": {
-            "id": "CC-BY-3.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/spdx-exceptions@1.0.4",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/spdx-exceptions"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "spdx-expression-parse",
-      "version": "1.0.2",
-      "bom-ref": "bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2",
-      "licenses": [
-        {
-          "expression": "(MIT AND CC-BY-3.0)",
-          "acknowledgement": "declared"
-        }
-      ],
-      "purl": "pkg:npm/spdx-expression-parse@1.0.2",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/spdx-expression-parse"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "spdx-license-ids",
-      "version": "1.2.0",
-      "bom-ref": "bundle-dependencies@1.0.2|spdx-license-ids@1.2.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "Unlicense",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/spdx-license-ids@1.2.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/spdx-license-ids"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "string-width",
-      "version": "1.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|string-width@1.0.1",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/string-width@1.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/string-width"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "strip-ansi",
-      "version": "3.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|strip-ansi@3.0.1",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/strip-ansi@3.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/strip-ansi"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "strip-bom",
-      "version": "2.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|strip-bom@2.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/strip-bom@2.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/strip-bom"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "symbol",
       "version": "0.2.1",
-      "bom-ref": "bundle-dependencies@1.0.2|symbol@0.2.1",
-      "licenses": [
-        {
-          "license": {
-            "name": "MPLv2.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
+      "bom-ref": "BomRef.8jm4q2aup3o.os485cv8s4o",
       "purl": "pkg:npm/symbol@0.2.1",
       "properties": [
         {
@@ -1248,68 +383,10 @@
     },
     {
       "type": "library",
-      "name": "validate-npm-package-license",
-      "version": "3.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/validate-npm-package-license@3.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/validate-npm-package-license"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "window-size",
-      "version": "0.2.0",
-      "bom-ref": "bundle-dependencies@1.0.2|window-size@0.2.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/window-size@0.2.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/window-size"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "wrap-ansi",
+      "name": "is-builtin-module",
       "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|wrap-ansi@1.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/wrap-ansi@1.0.0",
+      "bom-ref": "BomRef.91icipmrde.qjq2j050e9o",
+      "purl": "pkg:npm/is-builtin-module@1.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:bundled",
@@ -1317,24 +394,16 @@
         },
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/wrap-ansi"
+          "value": "node_modules/bundle-dependencies/node_modules/is-builtin-module"
         }
       ]
     },
     {
       "type": "library",
-      "name": "y18n",
-      "version": "3.2.0",
-      "bom-ref": "bundle-dependencies@1.0.2|y18n@3.2.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/y18n@3.2.0",
+      "name": "read-pkg-up",
+      "version": "1.0.1",
+      "bom-ref": "BomRef.9477mrd6dvo.vouknvmfiso",
+      "purl": "pkg:npm/read-pkg-up@1.0.1",
       "properties": [
         {
           "name": "cdx:npm:package:bundled",
@@ -1342,24 +411,16 @@
         },
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/y18n"
+          "value": "node_modules/bundle-dependencies/node_modules/read-pkg-up"
         }
       ]
     },
     {
       "type": "library",
-      "name": "yargs-parser",
-      "version": "2.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|yargs-parser@2.1.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/yargs-parser@2.1.0",
+      "name": "require-main-filename",
+      "version": "1.0.1",
+      "bom-ref": "BomRef.97c5c342f58.spvfcblaugg",
+      "purl": "pkg:npm/require-main-filename@1.0.1",
       "properties": [
         {
           "name": "cdx:npm:package:bundled",
@@ -1367,7 +428,75 @@
         },
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/yargs-parser"
+          "value": "node_modules/bundle-dependencies/node_modules/require-main-filename"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "invert-kv",
+      "version": "1.0.0",
+      "bom-ref": "BomRef.9djt3aan61.ofgg9tvgeio",
+      "purl": "pkg:npm/invert-kv@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/invert-kv"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "semver",
+      "version": "5.1.0",
+      "bom-ref": "BomRef.auv435itro8.ib49s8o5ds",
+      "purl": "pkg:npm/semver@5.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/semver"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spdx-expression-parse",
+      "version": "1.0.2",
+      "bom-ref": "BomRef.ba3q807kauo.u31slf6l3q",
+      "purl": "pkg:npm/spdx-expression-parse@1.0.2",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/spdx-expression-parse"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "graceful-fs",
+      "version": "4.1.3",
+      "bom-ref": "BomRef.buahdmgr3b.tkltqhksho",
+      "purl": "pkg:npm/graceful-fs@4.1.3",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/graceful-fs"
         }
       ]
     },
@@ -1375,15 +504,7 @@
       "type": "library",
       "name": "yargs",
       "version": "4.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|yargs@4.1.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
+      "bom-ref": "BomRef.cembd36hp0g.r4g4s78hhv8",
       "purl": "pkg:npm/yargs@4.1.0",
       "properties": [
         {
@@ -1398,9 +519,162 @@
     },
     {
       "type": "library",
+      "name": "object-assign",
+      "version": "4.0.1",
+      "bom-ref": "BomRef.d2v2vpf95d.sqva1bllr28",
+      "purl": "pkg:npm/object-assign@4.0.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/object-assign"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lodash.rest",
+      "version": "4.0.1",
+      "bom-ref": "BomRef.d48jhna2u9o.tvmhqtjtbk8",
+      "purl": "pkg:npm/lodash.rest@4.0.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/lodash.rest"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "camelcase",
+      "version": "2.1.0",
+      "bom-ref": "BomRef.dgsbfbb84i8.d2n6jerdiko",
+      "purl": "pkg:npm/camelcase@2.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/camelcase"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "string-width",
+      "version": "1.0.1",
+      "bom-ref": "BomRef.didtr1jqai8.6knfavsn6to",
+      "purl": "pkg:npm/string-width@1.0.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/string-width"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ansi-regex",
+      "version": "2.0.0",
+      "bom-ref": "BomRef.dipbaiu97s.udvb66rmcqg",
+      "purl": "pkg:npm/ansi-regex@2.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/ansi-regex"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "wrap-ansi",
+      "version": "1.0.0",
+      "bom-ref": "BomRef.e5ctnb930s.eq0akjlq17g",
+      "purl": "pkg:npm/wrap-ansi@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/wrap-ansi"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lcid",
+      "version": "1.0.0",
+      "bom-ref": "BomRef.ef261m5ciao.ds8a91ij448",
+      "purl": "pkg:npm/lcid@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/lcid"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "path-type",
+      "version": "1.1.0",
+      "bom-ref": "BomRef.f6tk25gejeg.d3jofeu53pg",
+      "purl": "pkg:npm/path-type@1.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/path-type"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "strip-ansi",
+      "version": "3.0.1",
+      "bom-ref": "BomRef.gt65c9064eg.4225ro6g4uo",
+      "purl": "pkg:npm/strip-ansi@3.0.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/strip-ansi"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "is-obj",
       "version": "3.0.0",
-      "bom-ref": "is-obj@3.0.0",
+      "bom-ref": "BomRef.i7019ppfgdg.mg259cduiao",
       "purl": "pkg:npm/is-obj@3.0.0",
       "externalReferences": [
         {
@@ -1425,292 +699,465 @@
           "value": "node_modules/is-obj"
         }
       ]
+    },
+    {
+      "type": "library",
+      "name": "bundle-dependencies",
+      "version": "1.0.2",
+      "bom-ref": "BomRef.jt6dm8f12m8.fkdnuhrfs0o",
+      "purl": "pkg:npm/bundle-dependencies@1.0.2",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "7ccf50f6125c5f56589f28ef7874e9b4566aa4b2833b681dc5186e07c30d498110bc2ea42260c31f6d37f09fed1df72e5742511948fc9fc6b10d8d009c59177c"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "validate-npm-package-license",
+      "version": "3.0.1",
+      "bom-ref": "BomRef.k2tjpisr0f.3n0h8nr5bt",
+      "purl": "pkg:npm/validate-npm-package-license@3.0.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/validate-npm-package-license"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "decamelize",
+      "version": "1.1.2",
+      "bom-ref": "BomRef.lnt31635198.nqee3757d2o",
+      "purl": "pkg:npm/decamelize@1.1.2",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/decamelize"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spdx-correct",
+      "version": "1.0.2",
+      "bom-ref": "BomRef.lr9h8967p38.ugnbde9gbn8",
+      "purl": "pkg:npm/spdx-correct@1.0.2",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/spdx-correct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pkg-conf",
+      "version": "1.1.1",
+      "bom-ref": "BomRef.mu4shmpe9m8.91afndp0aj8",
+      "purl": "pkg:npm/pkg-conf@1.1.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/pkg-conf"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pify",
+      "version": "2.3.0",
+      "bom-ref": "BomRef.n3g2u3ldvj.gnpu4sea03o",
+      "purl": "pkg:npm/pify@2.3.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/pify"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "builtin-modules",
+      "version": "1.1.1",
+      "bom-ref": "BomRef.nbanc5plseg.0pitg18bv28",
+      "purl": "pkg:npm/builtin-modules@1.1.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/builtin-modules"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "yargs-parser",
+      "version": "2.1.0",
+      "bom-ref": "BomRef.obnnq2ic9f8.aug70jhk1to",
+      "purl": "pkg:npm/yargs-parser@2.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/yargs-parser"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "code-point-at",
+      "version": "1.0.0",
+      "bom-ref": "BomRef.oell904vmno.3eqg0fhdl38",
+      "purl": "pkg:npm/code-point-at@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/code-point-at"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "path-exists",
+      "version": "2.1.0",
+      "bom-ref": "BomRef.pv15h3k9id.67bb8uvbrh",
+      "purl": "pkg:npm/path-exists@2.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/path-exists"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spdx-exceptions",
+      "version": "1.0.4",
+      "bom-ref": "BomRef.r6jf287jq8g.3nvc5hf4sb",
+      "purl": "pkg:npm/spdx-exceptions@1.0.4",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/spdx-exceptions"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lodash.assign",
+      "version": "4.0.3",
+      "bom-ref": "BomRef.rcgk8733p6.29rgkv80qdg",
+      "purl": "pkg:npm/lodash.assign@4.0.3",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/lodash.assign"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-arrayish",
+      "version": "0.2.1",
+      "bom-ref": "BomRef.rnmctrqhta8.q68krubsno8",
+      "purl": "pkg:npm/is-arrayish@0.2.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/is-arrayish"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pinkie-promise",
+      "version": "2.0.0",
+      "bom-ref": "BomRef.t9n9sa7k3eo.lagllohi7ag",
+      "purl": "pkg:npm/pinkie-promise@2.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/pinkie-promise"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spdx-license-ids",
+      "version": "1.2.0",
+      "bom-ref": "BomRef.ttqk3hghh6o.kql7qc4sri",
+      "purl": "pkg:npm/spdx-license-ids@1.2.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/spdx-license-ids"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "y18n",
+      "version": "3.2.0",
+      "bom-ref": "BomRef.ume4jf4mikg.m9aj54uis7g",
+      "purl": "pkg:npm/y18n@3.2.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/y18n"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "os-locale",
+      "version": "1.4.0",
+      "bom-ref": "BomRef.vp9t7mja2q.4h6l1i84gmg",
+      "purl": "pkg:npm/os-locale@1.4.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/os-locale"
+        }
+      ]
     }
   ],
   "dependencies": [
     {
-      "ref": "bundle-dependencies@1.0.2",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|yargs@4.1.0"
-      ]
+      "ref": "BomRef.00f28ugrtt8.ustohpdc30o"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|ansi-regex@2.0.0"
+      "ref": "BomRef.1tt8uis9mgo.noql00hasdg"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|builtin-modules@1.1.1"
+      "ref": "BomRef.32trtc78mhg.e3k5n1f5pmo"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|camelcase@2.1.0"
+      "ref": "BomRef.399ria56sao.r88f0jfr5to"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|cliui@3.1.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|string-width@1.0.1",
-        "bundle-dependencies@1.0.2|strip-ansi@3.0.1",
-        "bundle-dependencies@1.0.2|wrap-ansi@1.0.0"
-      ]
+      "ref": "BomRef.3bif2jpt1r.m1df2rnu5v8"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|code-point-at@1.0.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|number-is-nan@1.0.0"
-      ]
+      "ref": "BomRef.4b3fntdhgq.uvb337abln"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|decamelize@1.1.2",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"
-      ]
+      "ref": "BomRef.4dk2iip8jt.27oanenbue8"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|error-ex@1.3.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|is-arrayish@0.2.1"
-      ]
+      "ref": "BomRef.4nrm1u44p6g.1og7cffjquo"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"
+      "ref": "BomRef.4varkr8it3g.lu2cfgbdnc"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|find-up@1.1.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|path-exists@2.1.0",
-        "bundle-dependencies@1.0.2|pinkie-promise@2.0.0"
-      ]
+      "ref": "BomRef.577l3fel1k8.i725p7j1qlg"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|graceful-fs@4.1.3"
+      "ref": "BomRef.7905q4ftjv8.0nr9799qu28"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|hosted-git-info@2.1.4"
+      "ref": "BomRef.79pe6p27mm8.7n1a2k39jo"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|invert-kv@1.0.0"
+      "ref": "BomRef.7jupgs6mh1g.rkqlq4md1no"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|is-arrayish@0.2.1"
+      "ref": "BomRef.7o16db53dt8.piv161582ag"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|is-builtin-module@1.0.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|builtin-modules@1.1.1"
-      ]
+      "ref": "BomRef.81nm93rc5ko.bvuk5kh55rg"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|number-is-nan@1.0.0"
-      ]
+      "ref": "BomRef.8c8cpfs81kg.r5d3nqlkhe"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|is-utf8@0.2.1"
+      "ref": "BomRef.8jm4q2aup3o.os485cv8s4o"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|lcid@1.0.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|invert-kv@1.0.0"
-      ]
+      "ref": "BomRef.91icipmrde.qjq2j050e9o"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|load-json-file@1.1.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|graceful-fs@4.1.3",
-        "bundle-dependencies@1.0.2|parse-json@2.2.0",
-        "bundle-dependencies@1.0.2|pify@2.3.0",
-        "bundle-dependencies@1.0.2|pinkie-promise@2.0.0",
-        "bundle-dependencies@1.0.2|strip-bom@2.0.0"
-      ]
+      "ref": "BomRef.9477mrd6dvo.vouknvmfiso"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|lodash.assign@4.0.3",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|lodash.keys@4.0.3",
-        "bundle-dependencies@1.0.2|lodash.rest@4.0.1"
-      ]
+      "ref": "BomRef.97c5c342f58.spvfcblaugg"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|lodash.keys@4.0.3"
+      "ref": "BomRef.9djt3aan61.ofgg9tvgeio"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|lodash.rest@4.0.1"
+      "ref": "BomRef.auv435itro8.ib49s8o5ds"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|normalize-package-data@2.3.5",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|hosted-git-info@2.1.4",
-        "bundle-dependencies@1.0.2|is-builtin-module@1.0.0",
-        "bundle-dependencies@1.0.2|semver@5.1.0",
-        "bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1"
-      ]
+      "ref": "BomRef.ba3q807kauo.u31slf6l3q"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|number-is-nan@1.0.0"
+      "ref": "BomRef.buahdmgr3b.tkltqhksho"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|object-assign@4.0.1"
+      "ref": "BomRef.cembd36hp0g.r4g4s78hhv8"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|os-locale@1.4.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|lcid@1.0.0"
-      ]
+      "ref": "BomRef.d2v2vpf95d.sqva1bllr28"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|parse-json@2.2.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|error-ex@1.3.0"
-      ]
+      "ref": "BomRef.d48jhna2u9o.tvmhqtjtbk8"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|path-exists@2.1.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|pinkie-promise@2.0.0"
-      ]
+      "ref": "BomRef.dgsbfbb84i8.d2n6jerdiko"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|path-type@1.1.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|graceful-fs@4.1.3",
-        "bundle-dependencies@1.0.2|pify@2.3.0",
-        "bundle-dependencies@1.0.2|pinkie-promise@2.0.0"
-      ]
+      "ref": "BomRef.didtr1jqai8.6knfavsn6to"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|pify@2.3.0"
+      "ref": "BomRef.dipbaiu97s.udvb66rmcqg"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|pinkie-promise@2.0.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|pinkie@2.0.4"
-      ]
+      "ref": "BomRef.e5ctnb930s.eq0akjlq17g"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|pinkie@2.0.4"
+      "ref": "BomRef.ef261m5ciao.ds8a91ij448"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|pkg-conf@1.1.1",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|find-up@1.1.0",
-        "bundle-dependencies@1.0.2|object-assign@4.0.1",
-        "bundle-dependencies@1.0.2|read-pkg@1.1.0",
-        "bundle-dependencies@1.0.2|symbol@0.2.1"
-      ]
+      "ref": "BomRef.f6tk25gejeg.d3jofeu53pg"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|read-pkg-up@1.0.1",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|find-up@1.1.0",
-        "bundle-dependencies@1.0.2|read-pkg@1.1.0"
-      ]
+      "ref": "BomRef.gt65c9064eg.4225ro6g4uo"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|read-pkg@1.1.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|load-json-file@1.1.0",
-        "bundle-dependencies@1.0.2|normalize-package-data@2.3.5",
-        "bundle-dependencies@1.0.2|path-type@1.1.0"
-      ]
+      "ref": "BomRef.i7019ppfgdg.mg259cduiao"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|require-main-filename@1.0.1"
+      "ref": "BomRef.jt6dm8f12m8.fkdnuhrfs0o"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|semver@5.1.0"
+      "ref": "BomRef.k2tjpisr0f.3n0h8nr5bt"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|spdx-correct@1.0.2",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"
-      ]
+      "ref": "BomRef.lnt31635198.nqee3757d2o"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"
+      "ref": "BomRef.lr9h8967p38.ugnbde9gbn8"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|spdx-exceptions@1.0.4",
-        "bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"
-      ]
+      "ref": "BomRef.mu4shmpe9m8.91afndp0aj8"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"
+      "ref": "BomRef.n3g2u3ldvj.gnpu4sea03o"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|string-width@1.0.1",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|code-point-at@1.0.0",
-        "bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0",
-        "bundle-dependencies@1.0.2|strip-ansi@3.0.1"
-      ]
+      "ref": "BomRef.nbanc5plseg.0pitg18bv28"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|strip-ansi@3.0.1",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|ansi-regex@2.0.0"
-      ]
+      "ref": "BomRef.obnnq2ic9f8.aug70jhk1to"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|strip-bom@2.0.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|is-utf8@0.2.1"
-      ]
+      "ref": "BomRef.oell904vmno.3eqg0fhdl38"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|symbol@0.2.1"
+      "ref": "BomRef.pv15h3k9id.67bb8uvbrh"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|spdx-correct@1.0.2",
-        "bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2"
-      ]
+      "ref": "BomRef.r6jf287jq8g.3nvc5hf4sb"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|window-size@0.2.0"
+      "ref": "BomRef.rcgk8733p6.29rgkv80qdg"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|wrap-ansi@1.0.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|string-width@1.0.1"
-      ]
+      "ref": "BomRef.rnmctrqhta8.q68krubsno8"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|y18n@3.2.0"
+      "ref": "BomRef.t9n9sa7k3eo.lagllohi7ag"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|yargs-parser@2.1.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|camelcase@2.1.0",
-        "bundle-dependencies@1.0.2|lodash.assign@4.0.3"
-      ]
+      "ref": "BomRef.ttqk3hghh6o.kql7qc4sri"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|yargs@4.1.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2|camelcase@2.1.0",
-        "bundle-dependencies@1.0.2|cliui@3.1.0",
-        "bundle-dependencies@1.0.2|decamelize@1.1.2",
-        "bundle-dependencies@1.0.2|os-locale@1.4.0",
-        "bundle-dependencies@1.0.2|pkg-conf@1.1.1",
-        "bundle-dependencies@1.0.2|read-pkg-up@1.0.1",
-        "bundle-dependencies@1.0.2|require-main-filename@1.0.1",
-        "bundle-dependencies@1.0.2|string-width@1.0.1",
-        "bundle-dependencies@1.0.2|window-size@0.2.0",
-        "bundle-dependencies@1.0.2|y18n@3.2.0",
-        "bundle-dependencies@1.0.2|yargs-parser@2.1.0"
-      ]
+      "ref": "BomRef.ume4jf4mikg.m9aj54uis7g"
     },
     {
-      "ref": "demo-bundled-deps@0.0.0",
-      "dependsOn": [
-        "bundle-dependencies@1.0.2",
-        "is-obj@3.0.0"
-      ]
+      "ref": "BomRef.vp9t7mja2q.4h6l1i84gmg"
     },
     {
-      "ref": "is-obj@3.0.0"
+      "ref": "DummyComponent.D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project"
     }
   ]
 }
