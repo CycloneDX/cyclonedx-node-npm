@@ -81,7 +81,7 @@
       "type": "application",
       "name": "demo-deps-from-git",
       "version": "1.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0",
       "purl": "pkg:npm/demo-deps-from-git@1.0.0",
       "properties": [
         {
@@ -94,9 +94,275 @@
   "components": [
     {
       "type": "library",
+      "name": "cyclonedx-library",
+      "group": "@cyclonedx",
+      "version": "6.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.0.0",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.0.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23c887c803ac56deb5f91b617ef0486ca3fb98473b",
+      "externalReferences": [
+        {
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#c887c803ac56deb5f91b617ef0486ca3fb98473b",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/lib0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cyclonedx-library",
+      "group": "@cyclonedx",
+      "version": "6.1.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.1.0",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.1.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
+      "externalReferences": [
+        {
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/lib1"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cyclonedx-library",
+      "group": "@cyclonedx",
+      "version": "6.2.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.2.0",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.2.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23d66d36280dde484bcf73a5c2139961663e3ba954",
+      "externalReferences": [
+        {
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#d66d36280dde484bcf73a5c2139961663e3ba954",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/lib2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cyclonedx-library",
+      "group": "@cyclonedx",
+      "version": "6.3.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.3.0",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.3.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%237a914980f0508368df54ca193347cec6ffd16415",
+      "externalReferences": [
+        {
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#7a914980f0508368df54ca193347cec6ffd16415",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/lib3"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cyclonedx-library",
+      "group": "@cyclonedx",
+      "version": "6.4.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.4.0",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.4.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%233367c1638662d57c53caff0824ee94cd7859bee2",
+      "externalReferences": [
+        {
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#3367c1638662d57c53caff0824ee94cd7859bee2",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/lib4"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cyclonedx-library",
+      "group": "@cyclonedx",
+      "version": "6.5.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.5.0",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.5.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%234cea42bf5ec78f17b86dcd308022b6d52e9a98f0",
+      "externalReferences": [
+        {
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#4cea42bf5ec78f17b86dcd308022b6d52e9a98f0",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/lib5"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "node-pre-gyp",
+      "group": "@mapbox",
+      "version": "1.0.11",
+      "bom-ref": "demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11",
+      "scope": "optional",
+      "purl": "pkg:npm/%40mapbox/node-pre-gyp@1.0.11",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.11.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "62195aafabfd590814a7f1deec1760ccecfc96a310f2c53e8e40aaed6c7c33273960524b6c47bb960ba2fd5ec6d6a0750c9ca41d21b0ade71e49a0fad18d0f51"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@mapbox/node-pre-gyp"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dom",
+      "group": "@oozcitak",
+      "version": "1.15.10",
+      "bom-ref": "demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10",
+      "scope": "optional",
+      "purl": "pkg:npm/%40oozcitak/dom@1.15.10",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@oozcitak/dom/-/dom-1.15.10.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "d094f6f7f2dac558117062af1e64ab51312f67c057bd98469762c04915201ea0d30b5339835a4b995bf9e8860dcadddb1b60948c391cebbc27c990b5e296d0ad"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@oozcitak/dom"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "infra",
+      "group": "@oozcitak",
+      "version": "1.0.8",
+      "bom-ref": "demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
+      "scope": "optional",
+      "purl": "pkg:npm/%40oozcitak/infra@1.0.8",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@oozcitak/infra/-/infra-1.0.8.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "25101473d551e8818738bece185fb2aefb342cef1296a1a73c032acb33ae1593d26525c8ed77f63bdf9ac103d2317808586b6051ffdd03a1ece97eb24846964e"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@oozcitak/infra"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "url",
+      "group": "@oozcitak",
+      "version": "1.0.4",
+      "bom-ref": "demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4",
+      "scope": "optional",
+      "purl": "pkg:npm/%40oozcitak/url@1.0.4",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@oozcitak/url/-/url-1.0.4.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "903703f32fb2dc50923af9c123a1c9825d34be23bf9c66d0a0220d990d21f7c3a19c6213ad64776ce19fc180ad86072b57c0274c9cfc333b254d06c2dd23809b"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@oozcitak/url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "util",
+      "group": "@oozcitak",
+      "version": "8.3.8",
+      "bom-ref": "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8",
+      "scope": "optional",
+      "purl": "pkg:npm/%40oozcitak/util@8.3.8",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@oozcitak/util/-/util-8.3.8.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "4fc4db4a71acc68e930c1271fd282ffc195524bdedb21c593fb02ae51d664a733939c1d8d9d41ac4b32edbe13cbb780dd0c2cecdd8eeaea37865156ecd0c9c39"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@oozcitak/util"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "abbrev",
       "version": "1.1.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/abbrev@1.1.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|abbrev@1.1.1",
       "scope": "optional",
       "purl": "pkg:npm/abbrev@1.1.1",
       "externalReferences": [
@@ -123,7 +389,7 @@
       "type": "library",
       "name": "agent-base",
       "version": "6.0.2",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/agent-base@6.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|agent-base@6.0.2",
       "scope": "optional",
       "purl": "pkg:npm/agent-base@6.0.2",
       "externalReferences": [
@@ -150,7 +416,7 @@
       "type": "library",
       "name": "ajv-formats-draft2019",
       "version": "1.6.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/ajv-formats-draft2019@1.6.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
       "scope": "optional",
       "purl": "pkg:npm/ajv-formats-draft2019@1.6.1",
       "externalReferences": [
@@ -177,7 +443,7 @@
       "type": "library",
       "name": "ajv-formats",
       "version": "2.1.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/ajv-formats@2.1.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
       "scope": "optional",
       "purl": "pkg:npm/ajv-formats@2.1.1",
       "externalReferences": [
@@ -204,7 +470,7 @@
       "type": "library",
       "name": "ajv",
       "version": "8.17.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/ajv@8.17.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|ajv@8.17.1",
       "scope": "optional",
       "purl": "pkg:npm/ajv@8.17.1",
       "externalReferences": [
@@ -231,7 +497,7 @@
       "type": "library",
       "name": "ansi-regex",
       "version": "5.0.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/ansi-regex@5.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|ansi-regex@5.0.1",
       "scope": "optional",
       "purl": "pkg:npm/ansi-regex@5.0.1",
       "externalReferences": [
@@ -258,7 +524,7 @@
       "type": "library",
       "name": "aproba",
       "version": "2.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/aproba@2.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|aproba@2.0.0",
       "scope": "optional",
       "purl": "pkg:npm/aproba@2.0.0",
       "externalReferences": [
@@ -285,7 +551,7 @@
       "type": "library",
       "name": "are-we-there-yet",
       "version": "2.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/are-we-there-yet@2.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|are-we-there-yet@2.0.0",
       "scope": "optional",
       "purl": "pkg:npm/are-we-there-yet@2.0.0",
       "externalReferences": [
@@ -312,7 +578,7 @@
       "type": "library",
       "name": "argparse",
       "version": "1.0.10",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/argparse@1.0.10",
+      "bom-ref": "demo-deps-from-git@1.0.0|argparse@1.0.10",
       "scope": "optional",
       "purl": "pkg:npm/argparse@1.0.10",
       "externalReferences": [
@@ -339,7 +605,7 @@
       "type": "library",
       "name": "balanced-match",
       "version": "1.0.2",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/balanced-match@1.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|balanced-match@1.0.2",
       "scope": "optional",
       "purl": "pkg:npm/balanced-match@1.0.2",
       "externalReferences": [
@@ -366,7 +632,7 @@
       "type": "library",
       "name": "bindings",
       "version": "1.5.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/bindings@1.5.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|bindings@1.5.0",
       "scope": "optional",
       "purl": "pkg:npm/bindings@1.5.0",
       "externalReferences": [
@@ -393,7 +659,7 @@
       "type": "library",
       "name": "brace-expansion",
       "version": "1.1.11",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/brace-expansion@1.1.11",
+      "bom-ref": "demo-deps-from-git@1.0.0|brace-expansion@1.1.11",
       "scope": "optional",
       "purl": "pkg:npm/brace-expansion@1.1.11",
       "externalReferences": [
@@ -420,7 +686,7 @@
       "type": "library",
       "name": "chownr",
       "version": "2.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/chownr@2.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|chownr@2.0.0",
       "scope": "optional",
       "purl": "pkg:npm/chownr@2.0.0",
       "externalReferences": [
@@ -447,7 +713,7 @@
       "type": "library",
       "name": "color-support",
       "version": "1.1.3",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/color-support@1.1.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|color-support@1.1.3",
       "scope": "optional",
       "purl": "pkg:npm/color-support@1.1.3",
       "externalReferences": [
@@ -474,7 +740,7 @@
       "type": "library",
       "name": "commander",
       "version": "2.20.3",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/commander@2.20.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|commander@2.20.3",
       "scope": "optional",
       "purl": "pkg:npm/commander@2.20.3",
       "externalReferences": [
@@ -501,7 +767,7 @@
       "type": "library",
       "name": "concat-map",
       "version": "0.0.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/concat-map@0.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|concat-map@0.0.1",
       "scope": "optional",
       "purl": "pkg:npm/concat-map@0.0.1",
       "externalReferences": [
@@ -528,7 +794,7 @@
       "type": "library",
       "name": "console-control-strings",
       "version": "1.1.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/console-control-strings@1.1.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|console-control-strings@1.1.0",
       "scope": "optional",
       "purl": "pkg:npm/console-control-strings@1.1.0",
       "externalReferences": [
@@ -555,7 +821,7 @@
       "type": "library",
       "name": "debug",
       "version": "4.4.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/debug@4.4.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|debug@4.4.0",
       "scope": "optional",
       "purl": "pkg:npm/debug@4.4.0",
       "externalReferences": [
@@ -582,7 +848,7 @@
       "type": "library",
       "name": "delegates",
       "version": "1.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/delegates@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|delegates@1.0.0",
       "scope": "optional",
       "purl": "pkg:npm/delegates@1.0.0",
       "externalReferences": [
@@ -609,7 +875,7 @@
       "type": "library",
       "name": "detect-libc",
       "version": "2.0.3",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/detect-libc@2.0.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|detect-libc@2.0.3",
       "scope": "optional",
       "purl": "pkg:npm/detect-libc@2.0.3",
       "externalReferences": [
@@ -636,7 +902,7 @@
       "type": "library",
       "name": "discontinuous-range",
       "version": "1.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/discontinuous-range@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|discontinuous-range@1.0.0",
       "scope": "optional",
       "purl": "pkg:npm/discontinuous-range@1.0.0",
       "externalReferences": [
@@ -663,7 +929,7 @@
       "type": "library",
       "name": "emoji-regex",
       "version": "8.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/emoji-regex@8.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|emoji-regex@8.0.0",
       "scope": "optional",
       "purl": "pkg:npm/emoji-regex@8.0.0",
       "externalReferences": [
@@ -690,7 +956,7 @@
       "type": "library",
       "name": "esprima",
       "version": "4.0.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/esprima@4.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|esprima@4.0.1",
       "scope": "optional",
       "purl": "pkg:npm/esprima@4.0.1",
       "externalReferences": [
@@ -717,7 +983,7 @@
       "type": "library",
       "name": "extend",
       "version": "3.0.2",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/extend@3.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|extend@3.0.2",
       "scope": "optional",
       "purl": "pkg:npm/extend@3.0.2",
       "externalReferences": [
@@ -744,7 +1010,7 @@
       "type": "library",
       "name": "fast-deep-equal",
       "version": "3.1.3",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/fast-deep-equal@3.1.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|fast-deep-equal@3.1.3",
       "scope": "optional",
       "purl": "pkg:npm/fast-deep-equal@3.1.3",
       "externalReferences": [
@@ -771,7 +1037,7 @@
       "type": "library",
       "name": "fast-uri",
       "version": "3.0.6",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/fast-uri@3.0.6",
+      "bom-ref": "demo-deps-from-git@1.0.0|fast-uri@3.0.6",
       "scope": "optional",
       "purl": "pkg:npm/fast-uri@3.0.6",
       "externalReferences": [
@@ -798,7 +1064,7 @@
       "type": "library",
       "name": "file-uri-to-path",
       "version": "1.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/file-uri-to-path@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|file-uri-to-path@1.0.0",
       "scope": "optional",
       "purl": "pkg:npm/file-uri-to-path@1.0.0",
       "externalReferences": [
@@ -825,7 +1091,7 @@
       "type": "library",
       "name": "fs-minipass",
       "version": "2.1.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/fs-minipass@2.1.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|fs-minipass@2.1.0",
       "scope": "optional",
       "purl": "pkg:npm/fs-minipass@2.1.0",
       "externalReferences": [
@@ -852,7 +1118,7 @@
           "type": "library",
           "name": "minipass",
           "version": "3.3.6",
-          "bom-ref": "-/demo-deps-from-git@1.0.0|-/demo-deps-from-git@1.0.0|-/fs-minipass@2.1.0|-/minipass@3.3.6",
+          "bom-ref": "demo-deps-from-git@1.0.0|fs-minipass@2.1.0|minipass@3.3.6",
           "scope": "optional",
           "purl": "pkg:npm/minipass@3.3.6",
           "externalReferences": [
@@ -881,7 +1147,7 @@
       "type": "library",
       "name": "fs.realpath",
       "version": "1.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/fs.realpath@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|fs.realpath@1.0.0",
       "scope": "optional",
       "purl": "pkg:npm/fs.realpath@1.0.0",
       "externalReferences": [
@@ -908,7 +1174,7 @@
       "type": "library",
       "name": "gauge",
       "version": "3.0.2",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/gauge@3.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|gauge@3.0.2",
       "scope": "optional",
       "purl": "pkg:npm/gauge@3.0.2",
       "externalReferences": [
@@ -935,7 +1201,7 @@
       "type": "library",
       "name": "glob",
       "version": "7.2.3",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/glob@7.2.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|glob@7.2.3",
       "scope": "optional",
       "purl": "pkg:npm/glob@7.2.3",
       "externalReferences": [
@@ -962,7 +1228,7 @@
       "type": "library",
       "name": "has-unicode",
       "version": "2.0.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/has-unicode@2.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|has-unicode@2.0.1",
       "scope": "optional",
       "purl": "pkg:npm/has-unicode@2.0.1",
       "externalReferences": [
@@ -989,7 +1255,7 @@
       "type": "library",
       "name": "https-proxy-agent",
       "version": "5.0.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/https-proxy-agent@5.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|https-proxy-agent@5.0.1",
       "scope": "optional",
       "purl": "pkg:npm/https-proxy-agent@5.0.1",
       "externalReferences": [
@@ -1016,7 +1282,7 @@
       "type": "library",
       "name": "inflight",
       "version": "1.0.6",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/inflight@1.0.6",
+      "bom-ref": "demo-deps-from-git@1.0.0|inflight@1.0.6",
       "scope": "optional",
       "purl": "pkg:npm/inflight@1.0.6",
       "externalReferences": [
@@ -1043,7 +1309,7 @@
       "type": "library",
       "name": "inherits",
       "version": "2.0.4",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/inherits@2.0.4",
+      "bom-ref": "demo-deps-from-git@1.0.0|inherits@2.0.4",
       "scope": "optional",
       "purl": "pkg:npm/inherits@2.0.4",
       "externalReferences": [
@@ -1070,7 +1336,7 @@
       "type": "library",
       "name": "is-fullwidth-code-point",
       "version": "3.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/is-fullwidth-code-point@3.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|is-fullwidth-code-point@3.0.0",
       "scope": "optional",
       "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
       "externalReferences": [
@@ -1097,7 +1363,7 @@
       "type": "library",
       "name": "js-yaml",
       "version": "3.14.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/js-yaml@3.14.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|js-yaml@3.14.1",
       "scope": "optional",
       "purl": "pkg:npm/js-yaml@3.14.1",
       "externalReferences": [
@@ -1124,7 +1390,7 @@
       "type": "library",
       "name": "json-schema-traverse",
       "version": "1.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/json-schema-traverse@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|json-schema-traverse@1.0.0",
       "scope": "optional",
       "purl": "pkg:npm/json-schema-traverse@1.0.0",
       "externalReferences": [
@@ -1151,7 +1417,7 @@
       "type": "library",
       "name": "libxmljs2",
       "version": "0.32.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/libxmljs2@0.32.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
       "scope": "optional",
       "purl": "pkg:npm/libxmljs2@0.32.0",
       "externalReferences": [
@@ -1178,7 +1444,7 @@
       "type": "library",
       "name": "make-dir",
       "version": "3.1.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/make-dir@3.1.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|make-dir@3.1.0",
       "scope": "optional",
       "purl": "pkg:npm/make-dir@3.1.0",
       "externalReferences": [
@@ -1205,7 +1471,7 @@
           "type": "library",
           "name": "semver",
           "version": "6.3.1",
-          "bom-ref": "-/demo-deps-from-git@1.0.0|-/demo-deps-from-git@1.0.0|-/make-dir@3.1.0|-/semver@6.3.1",
+          "bom-ref": "demo-deps-from-git@1.0.0|make-dir@3.1.0|semver@6.3.1",
           "scope": "optional",
           "purl": "pkg:npm/semver@6.3.1",
           "externalReferences": [
@@ -1234,7 +1500,7 @@
       "type": "library",
       "name": "minimatch",
       "version": "3.1.2",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/minimatch@3.1.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|minimatch@3.1.2",
       "scope": "optional",
       "purl": "pkg:npm/minimatch@3.1.2",
       "externalReferences": [
@@ -1261,7 +1527,7 @@
       "type": "library",
       "name": "minipass",
       "version": "5.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/minipass@5.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|minipass@5.0.0",
       "scope": "optional",
       "purl": "pkg:npm/minipass@5.0.0",
       "externalReferences": [
@@ -1288,7 +1554,7 @@
       "type": "library",
       "name": "minizlib",
       "version": "2.1.2",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/minizlib@2.1.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|minizlib@2.1.2",
       "scope": "optional",
       "purl": "pkg:npm/minizlib@2.1.2",
       "externalReferences": [
@@ -1315,7 +1581,7 @@
           "type": "library",
           "name": "minipass",
           "version": "3.3.6",
-          "bom-ref": "-/demo-deps-from-git@1.0.0|-/demo-deps-from-git@1.0.0|-/minizlib@2.1.2|-/minipass@3.3.6",
+          "bom-ref": "demo-deps-from-git@1.0.0|minizlib@2.1.2|minipass@3.3.6",
           "scope": "optional",
           "purl": "pkg:npm/minipass@3.3.6",
           "externalReferences": [
@@ -1344,7 +1610,7 @@
       "type": "library",
       "name": "mkdirp",
       "version": "1.0.4",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/mkdirp@1.0.4",
+      "bom-ref": "demo-deps-from-git@1.0.0|mkdirp@1.0.4",
       "scope": "optional",
       "purl": "pkg:npm/mkdirp@1.0.4",
       "externalReferences": [
@@ -1371,7 +1637,7 @@
       "type": "library",
       "name": "moo",
       "version": "0.5.2",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/moo@0.5.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|moo@0.5.2",
       "scope": "optional",
       "purl": "pkg:npm/moo@0.5.2",
       "externalReferences": [
@@ -1398,7 +1664,7 @@
       "type": "library",
       "name": "ms",
       "version": "2.1.3",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/ms@2.1.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|ms@2.1.3",
       "scope": "optional",
       "purl": "pkg:npm/ms@2.1.3",
       "externalReferences": [
@@ -1425,7 +1691,7 @@
       "type": "library",
       "name": "nan",
       "version": "2.17.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/nan@2.17.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|nan@2.17.0",
       "scope": "optional",
       "purl": "pkg:npm/nan@2.17.0",
       "externalReferences": [
@@ -1452,7 +1718,7 @@
       "type": "library",
       "name": "nearley",
       "version": "2.20.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/nearley@2.20.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|nearley@2.20.1",
       "scope": "optional",
       "purl": "pkg:npm/nearley@2.20.1",
       "externalReferences": [
@@ -1479,7 +1745,7 @@
       "type": "library",
       "name": "node-fetch",
       "version": "2.7.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/node-fetch@2.7.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|node-fetch@2.7.0",
       "scope": "optional",
       "purl": "pkg:npm/node-fetch@2.7.0",
       "externalReferences": [
@@ -1506,7 +1772,7 @@
       "type": "library",
       "name": "nopt",
       "version": "5.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/nopt@5.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|nopt@5.0.0",
       "scope": "optional",
       "purl": "pkg:npm/nopt@5.0.0",
       "externalReferences": [
@@ -1533,7 +1799,7 @@
       "type": "library",
       "name": "npmlog",
       "version": "5.0.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/npmlog@5.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|npmlog@5.0.1",
       "scope": "optional",
       "purl": "pkg:npm/npmlog@5.0.1",
       "externalReferences": [
@@ -1560,7 +1826,7 @@
       "type": "library",
       "name": "object-assign",
       "version": "4.1.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/object-assign@4.1.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|object-assign@4.1.1",
       "scope": "optional",
       "purl": "pkg:npm/object-assign@4.1.1",
       "externalReferences": [
@@ -1587,7 +1853,7 @@
       "type": "library",
       "name": "once",
       "version": "1.4.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/once@1.4.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|once@1.4.0",
       "scope": "optional",
       "purl": "pkg:npm/once@1.4.0",
       "externalReferences": [
@@ -1614,7 +1880,7 @@
       "type": "library",
       "name": "packageurl-js",
       "version": "1.2.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/packageurl-js@1.2.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
       "purl": "pkg:npm/packageurl-js@1.2.1",
       "externalReferences": [
         {
@@ -1640,7 +1906,7 @@
       "type": "library",
       "name": "path-is-absolute",
       "version": "1.0.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/path-is-absolute@1.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|path-is-absolute@1.0.1",
       "scope": "optional",
       "purl": "pkg:npm/path-is-absolute@1.0.1",
       "externalReferences": [
@@ -1667,7 +1933,7 @@
       "type": "library",
       "name": "punycode",
       "version": "2.3.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/punycode@2.3.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|punycode@2.3.1",
       "scope": "optional",
       "purl": "pkg:npm/punycode@2.3.1",
       "externalReferences": [
@@ -1694,7 +1960,7 @@
       "type": "library",
       "name": "railroad-diagrams",
       "version": "1.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/railroad-diagrams@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|railroad-diagrams@1.0.0",
       "scope": "optional",
       "purl": "pkg:npm/railroad-diagrams@1.0.0",
       "externalReferences": [
@@ -1721,7 +1987,7 @@
       "type": "library",
       "name": "randexp",
       "version": "0.4.6",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/randexp@0.4.6",
+      "bom-ref": "demo-deps-from-git@1.0.0|randexp@0.4.6",
       "scope": "optional",
       "purl": "pkg:npm/randexp@0.4.6",
       "externalReferences": [
@@ -1748,7 +2014,7 @@
       "type": "library",
       "name": "readable-stream",
       "version": "3.6.2",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/readable-stream@3.6.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|readable-stream@3.6.2",
       "scope": "optional",
       "purl": "pkg:npm/readable-stream@3.6.2",
       "externalReferences": [
@@ -1775,7 +2041,7 @@
       "type": "library",
       "name": "require-from-string",
       "version": "2.0.2",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/require-from-string@2.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|require-from-string@2.0.2",
       "scope": "optional",
       "purl": "pkg:npm/require-from-string@2.0.2",
       "externalReferences": [
@@ -1802,7 +2068,7 @@
       "type": "library",
       "name": "ret",
       "version": "0.1.15",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/ret@0.1.15",
+      "bom-ref": "demo-deps-from-git@1.0.0|ret@0.1.15",
       "scope": "optional",
       "purl": "pkg:npm/ret@0.1.15",
       "externalReferences": [
@@ -1829,7 +2095,7 @@
       "type": "library",
       "name": "rimraf",
       "version": "3.0.2",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/rimraf@3.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|rimraf@3.0.2",
       "scope": "optional",
       "purl": "pkg:npm/rimraf@3.0.2",
       "externalReferences": [
@@ -1856,7 +2122,7 @@
       "type": "library",
       "name": "safe-buffer",
       "version": "5.2.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/safe-buffer@5.2.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|safe-buffer@5.2.1",
       "scope": "optional",
       "purl": "pkg:npm/safe-buffer@5.2.1",
       "externalReferences": [
@@ -1883,7 +2149,7 @@
       "type": "library",
       "name": "schemes",
       "version": "1.4.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/schemes@1.4.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|schemes@1.4.0",
       "scope": "optional",
       "purl": "pkg:npm/schemes@1.4.0",
       "externalReferences": [
@@ -1910,7 +2176,7 @@
       "type": "library",
       "name": "semver",
       "version": "7.7.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/semver@7.7.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|semver@7.7.1",
       "scope": "optional",
       "purl": "pkg:npm/semver@7.7.1",
       "externalReferences": [
@@ -1937,7 +2203,7 @@
       "type": "library",
       "name": "set-blocking",
       "version": "2.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/set-blocking@2.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|set-blocking@2.0.0",
       "scope": "optional",
       "purl": "pkg:npm/set-blocking@2.0.0",
       "externalReferences": [
@@ -1964,7 +2230,7 @@
       "type": "library",
       "name": "signal-exit",
       "version": "3.0.7",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/signal-exit@3.0.7",
+      "bom-ref": "demo-deps-from-git@1.0.0|signal-exit@3.0.7",
       "scope": "optional",
       "purl": "pkg:npm/signal-exit@3.0.7",
       "externalReferences": [
@@ -1991,7 +2257,7 @@
       "type": "library",
       "name": "smtp-address-parser",
       "version": "1.1.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/smtp-address-parser@1.1.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|smtp-address-parser@1.1.0",
       "scope": "optional",
       "purl": "pkg:npm/smtp-address-parser@1.1.0",
       "externalReferences": [
@@ -2018,7 +2284,7 @@
       "type": "library",
       "name": "spdx-exceptions",
       "version": "2.5.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/spdx-exceptions@2.5.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|spdx-exceptions@2.5.0",
       "purl": "pkg:npm/spdx-exceptions@2.5.0",
       "externalReferences": [
         {
@@ -2044,7 +2310,7 @@
       "type": "library",
       "name": "spdx-expression-parse",
       "version": "3.0.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/spdx-expression-parse@3.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
       "purl": "pkg:npm/spdx-expression-parse@3.0.1",
       "externalReferences": [
         {
@@ -2070,7 +2336,7 @@
       "type": "library",
       "name": "spdx-license-ids",
       "version": "3.0.21",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/spdx-license-ids@3.0.21",
+      "bom-ref": "demo-deps-from-git@1.0.0|spdx-license-ids@3.0.21",
       "purl": "pkg:npm/spdx-license-ids@3.0.21",
       "externalReferences": [
         {
@@ -2096,7 +2362,7 @@
       "type": "library",
       "name": "sprintf-js",
       "version": "1.0.3",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/sprintf-js@1.0.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|sprintf-js@1.0.3",
       "scope": "optional",
       "purl": "pkg:npm/sprintf-js@1.0.3",
       "externalReferences": [
@@ -2123,7 +2389,7 @@
       "type": "library",
       "name": "string_decoder",
       "version": "1.3.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/string_decoder@1.3.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|string_decoder@1.3.0",
       "scope": "optional",
       "purl": "pkg:npm/string_decoder@1.3.0",
       "externalReferences": [
@@ -2150,7 +2416,7 @@
       "type": "library",
       "name": "string-width",
       "version": "4.2.3",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/string-width@4.2.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|string-width@4.2.3",
       "scope": "optional",
       "purl": "pkg:npm/string-width@4.2.3",
       "externalReferences": [
@@ -2177,7 +2443,7 @@
       "type": "library",
       "name": "strip-ansi",
       "version": "6.0.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/strip-ansi@6.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|strip-ansi@6.0.1",
       "scope": "optional",
       "purl": "pkg:npm/strip-ansi@6.0.1",
       "externalReferences": [
@@ -2204,7 +2470,7 @@
       "type": "library",
       "name": "tar",
       "version": "6.2.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/tar@6.2.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|tar@6.2.1",
       "scope": "optional",
       "purl": "pkg:npm/tar@6.2.1",
       "externalReferences": [
@@ -2231,7 +2497,7 @@
       "type": "library",
       "name": "tr46",
       "version": "0.0.3",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/tr46@0.0.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|tr46@0.0.3",
       "scope": "optional",
       "purl": "pkg:npm/tr46@0.0.3",
       "externalReferences": [
@@ -2258,7 +2524,7 @@
       "type": "library",
       "name": "uri-js",
       "version": "4.4.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/uri-js@4.4.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|uri-js@4.4.1",
       "scope": "optional",
       "purl": "pkg:npm/uri-js@4.4.1",
       "externalReferences": [
@@ -2285,7 +2551,7 @@
       "type": "library",
       "name": "util-deprecate",
       "version": "1.0.2",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/util-deprecate@1.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|util-deprecate@1.0.2",
       "scope": "optional",
       "purl": "pkg:npm/util-deprecate@1.0.2",
       "externalReferences": [
@@ -2312,7 +2578,7 @@
       "type": "library",
       "name": "webidl-conversions",
       "version": "3.0.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/webidl-conversions@3.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|webidl-conversions@3.0.1",
       "scope": "optional",
       "purl": "pkg:npm/webidl-conversions@3.0.1",
       "externalReferences": [
@@ -2339,7 +2605,7 @@
       "type": "library",
       "name": "whatwg-url",
       "version": "5.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/whatwg-url@5.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|whatwg-url@5.0.0",
       "scope": "optional",
       "purl": "pkg:npm/whatwg-url@5.0.0",
       "externalReferences": [
@@ -2366,7 +2632,7 @@
       "type": "library",
       "name": "wide-align",
       "version": "1.1.5",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/wide-align@1.1.5",
+      "bom-ref": "demo-deps-from-git@1.0.0|wide-align@1.1.5",
       "scope": "optional",
       "purl": "pkg:npm/wide-align@1.1.5",
       "externalReferences": [
@@ -2393,7 +2659,7 @@
       "type": "library",
       "name": "wrappy",
       "version": "1.0.2",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/wrappy@1.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|wrappy@1.0.2",
       "scope": "optional",
       "purl": "pkg:npm/wrappy@1.0.2",
       "externalReferences": [
@@ -2420,7 +2686,7 @@
       "type": "library",
       "name": "xmlbuilder2",
       "version": "3.1.1",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/xmlbuilder2@3.1.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1",
       "scope": "optional",
       "purl": "pkg:npm/xmlbuilder2@3.1.1",
       "externalReferences": [
@@ -2447,7 +2713,7 @@
       "type": "library",
       "name": "yallist",
       "version": "4.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|-/yallist@4.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|yallist@4.0.0",
       "scope": "optional",
       "purl": "pkg:npm/yallist@4.0.0",
       "externalReferences": [
@@ -2469,828 +2735,562 @@
           "value": "node_modules/yallist"
         }
       ]
-    },
-    {
-      "type": "library",
-      "name": "cyclonedx-library",
-      "group": "@cyclonedx",
-      "version": "6.0.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.0.0",
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.0.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23c887c803ac56deb5f91b617ef0486ca3fb98473b",
-      "externalReferences": [
-        {
-          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#c887c803ac56deb5f91b617ef0486ca3fb98473b",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/lib0"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "cyclonedx-library",
-      "group": "@cyclonedx",
-      "version": "6.1.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.1.0",
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.1.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
-      "externalReferences": [
-        {
-          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/lib1"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "cyclonedx-library",
-      "group": "@cyclonedx",
-      "version": "6.2.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.2.0",
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.2.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23d66d36280dde484bcf73a5c2139961663e3ba954",
-      "externalReferences": [
-        {
-          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#d66d36280dde484bcf73a5c2139961663e3ba954",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/lib2"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "cyclonedx-library",
-      "group": "@cyclonedx",
-      "version": "6.3.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.3.0",
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.3.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%237a914980f0508368df54ca193347cec6ffd16415",
-      "externalReferences": [
-        {
-          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#7a914980f0508368df54ca193347cec6ffd16415",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/lib3"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "cyclonedx-library",
-      "group": "@cyclonedx",
-      "version": "6.4.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.4.0",
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.4.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%233367c1638662d57c53caff0824ee94cd7859bee2",
-      "externalReferences": [
-        {
-          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#3367c1638662d57c53caff0824ee94cd7859bee2",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/lib4"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "cyclonedx-library",
-      "group": "@cyclonedx",
-      "version": "6.5.0",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.5.0",
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.5.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%234cea42bf5ec78f17b86dcd308022b6d52e9a98f0",
-      "externalReferences": [
-        {
-          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#4cea42bf5ec78f17b86dcd308022b6d52e9a98f0",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/lib5"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "node-pre-gyp",
-      "group": "@mapbox",
-      "version": "1.0.11",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11",
-      "scope": "optional",
-      "purl": "pkg:npm/%40mapbox/node-pre-gyp@1.0.11",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.11.tgz",
-          "type": "distribution",
-          "hashes": [
-            {
-              "alg": "SHA-512",
-              "content": "62195aafabfd590814a7f1deec1760ccecfc96a310f2c53e8e40aaed6c7c33273960524b6c47bb960ba2fd5ec6d6a0750c9ca41d21b0ade71e49a0fad18d0f51"
-            }
-          ],
-          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/@mapbox/node-pre-gyp"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "dom",
-      "group": "@oozcitak",
-      "version": "1.15.10",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10",
-      "scope": "optional",
-      "purl": "pkg:npm/%40oozcitak/dom@1.15.10",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/@oozcitak/dom/-/dom-1.15.10.tgz",
-          "type": "distribution",
-          "hashes": [
-            {
-              "alg": "SHA-512",
-              "content": "d094f6f7f2dac558117062af1e64ab51312f67c057bd98469762c04915201ea0d30b5339835a4b995bf9e8860dcadddb1b60948c391cebbc27c990b5e296d0ad"
-            }
-          ],
-          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/@oozcitak/dom"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "infra",
-      "group": "@oozcitak",
-      "version": "1.0.8",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
-      "scope": "optional",
-      "purl": "pkg:npm/%40oozcitak/infra@1.0.8",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/@oozcitak/infra/-/infra-1.0.8.tgz",
-          "type": "distribution",
-          "hashes": [
-            {
-              "alg": "SHA-512",
-              "content": "25101473d551e8818738bece185fb2aefb342cef1296a1a73c032acb33ae1593d26525c8ed77f63bdf9ac103d2317808586b6051ffdd03a1ece97eb24846964e"
-            }
-          ],
-          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/@oozcitak/infra"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "url",
-      "group": "@oozcitak",
-      "version": "1.0.4",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4",
-      "scope": "optional",
-      "purl": "pkg:npm/%40oozcitak/url@1.0.4",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/@oozcitak/url/-/url-1.0.4.tgz",
-          "type": "distribution",
-          "hashes": [
-            {
-              "alg": "SHA-512",
-              "content": "903703f32fb2dc50923af9c123a1c9825d34be23bf9c66d0a0220d990d21f7c3a19c6213ad64776ce19fc180ad86072b57c0274c9cfc333b254d06c2dd23809b"
-            }
-          ],
-          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/@oozcitak/url"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "util",
-      "group": "@oozcitak",
-      "version": "8.3.8",
-      "bom-ref": "-/demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8",
-      "scope": "optional",
-      "purl": "pkg:npm/%40oozcitak/util@8.3.8",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/@oozcitak/util/-/util-8.3.8.tgz",
-          "type": "distribution",
-          "hashes": [
-            {
-              "alg": "SHA-512",
-              "content": "4fc4db4a71acc68e930c1271fd282ffc195524bdedb21c593fb02ae51d664a733939c1d8d9d41ac4b32edbe13cbb780dd0c2cecdd8eeaea37865156ecd0c9c39"
-            }
-          ],
-          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/@oozcitak/util"
-        }
-      ]
     }
   ],
   "dependencies": [
     {
-      "ref": "-/demo-deps-from-git@1.0.0",
+      "ref": "demo-deps-from-git@1.0.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.0.0",
-        "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.1.0",
-        "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.2.0",
-        "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.3.0",
-        "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.4.0",
-        "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.5.0"
+        "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.0.0",
+        "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.1.0",
+        "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.2.0",
+        "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.3.0",
+        "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.4.0",
+        "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.5.0"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/abbrev@1.1.1"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/agent-base@6.0.2",
+      "ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.0.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/debug@4.4.0"
+        "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
+        "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
+        "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+        "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+        "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/ajv-formats-draft2019@1.6.1",
+      "ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.1.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/ajv@8.17.1",
-        "-/demo-deps-from-git@1.0.0|-/punycode@2.3.1",
-        "-/demo-deps-from-git@1.0.0|-/schemes@1.4.0",
-        "-/demo-deps-from-git@1.0.0|-/smtp-address-parser@1.1.0",
-        "-/demo-deps-from-git@1.0.0|-/uri-js@4.4.1"
+        "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
+        "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
+        "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+        "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+        "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/ajv-formats@2.1.1",
+      "ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.2.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/ajv@8.17.1"
+        "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
+        "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
+        "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+        "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+        "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/ajv@8.17.1",
+      "ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.3.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/fast-deep-equal@3.1.3",
-        "-/demo-deps-from-git@1.0.0|-/fast-uri@3.0.6",
-        "-/demo-deps-from-git@1.0.0|-/json-schema-traverse@1.0.0",
-        "-/demo-deps-from-git@1.0.0|-/require-from-string@2.0.2"
+        "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
+        "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
+        "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+        "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+        "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/ansi-regex@5.0.1"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/aproba@2.0.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/are-we-there-yet@2.0.0",
+      "ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.4.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/delegates@1.0.0",
-        "-/demo-deps-from-git@1.0.0|-/readable-stream@3.6.2"
+        "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
+        "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
+        "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+        "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+        "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/argparse@1.0.10",
+      "ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.5.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/sprintf-js@1.0.3"
+        "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
+        "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
+        "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+        "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+        "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/balanced-match@1.0.2"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/bindings@1.5.0",
+      "ref": "demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/file-uri-to-path@1.0.0"
+        "demo-deps-from-git@1.0.0|detect-libc@2.0.3",
+        "demo-deps-from-git@1.0.0|https-proxy-agent@5.0.1",
+        "demo-deps-from-git@1.0.0|make-dir@3.1.0",
+        "demo-deps-from-git@1.0.0|node-fetch@2.7.0",
+        "demo-deps-from-git@1.0.0|nopt@5.0.0",
+        "demo-deps-from-git@1.0.0|npmlog@5.0.1",
+        "demo-deps-from-git@1.0.0|rimraf@3.0.2",
+        "demo-deps-from-git@1.0.0|semver@7.7.1",
+        "demo-deps-from-git@1.0.0|tar@6.2.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/brace-expansion@1.1.11",
+      "ref": "demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/balanced-match@1.0.2",
-        "-/demo-deps-from-git@1.0.0|-/concat-map@0.0.1"
+        "demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
+        "demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4",
+        "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/chownr@2.0.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/color-support@1.1.3"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/commander@2.20.3"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/concat-map@0.0.1"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/console-control-strings@1.1.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/debug@4.4.0",
+      "ref": "demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/ms@2.1.3"
+        "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/delegates@1.0.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/demo-deps-from-git@1.0.0|-/fs-minipass@2.1.0|-/minipass@3.3.6",
+      "ref": "demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/yallist@4.0.0"
+        "demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
+        "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/demo-deps-from-git@1.0.0|-/make-dir@3.1.0|-/semver@6.3.1"
+      "ref": "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/demo-deps-from-git@1.0.0|-/minizlib@2.1.2|-/minipass@3.3.6",
+      "ref": "demo-deps-from-git@1.0.0|abbrev@1.1.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|agent-base@6.0.2",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/yallist@4.0.0"
+        "demo-deps-from-git@1.0.0|debug@4.4.0"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/detect-libc@2.0.3"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/discontinuous-range@1.0.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/emoji-regex@8.0.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/esprima@4.0.1"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/extend@3.0.2"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/fast-deep-equal@3.1.3"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/fast-uri@3.0.6"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/file-uri-to-path@1.0.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/fs-minipass@2.1.0",
+      "ref": "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/demo-deps-from-git@1.0.0|-/fs-minipass@2.1.0|-/minipass@3.3.6"
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|punycode@2.3.1",
+        "demo-deps-from-git@1.0.0|schemes@1.4.0",
+        "demo-deps-from-git@1.0.0|smtp-address-parser@1.1.0",
+        "demo-deps-from-git@1.0.0|uri-js@4.4.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/fs.realpath@1.0.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/gauge@3.0.2",
+      "ref": "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/aproba@2.0.0",
-        "-/demo-deps-from-git@1.0.0|-/color-support@1.1.3",
-        "-/demo-deps-from-git@1.0.0|-/console-control-strings@1.1.0",
-        "-/demo-deps-from-git@1.0.0|-/has-unicode@2.0.1",
-        "-/demo-deps-from-git@1.0.0|-/object-assign@4.1.1",
-        "-/demo-deps-from-git@1.0.0|-/signal-exit@3.0.7",
-        "-/demo-deps-from-git@1.0.0|-/string-width@4.2.3",
-        "-/demo-deps-from-git@1.0.0|-/strip-ansi@6.0.1",
-        "-/demo-deps-from-git@1.0.0|-/wide-align@1.1.5"
+        "demo-deps-from-git@1.0.0|ajv@8.17.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/glob@7.2.3",
+      "ref": "demo-deps-from-git@1.0.0|ajv@8.17.1",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/fs.realpath@1.0.0",
-        "-/demo-deps-from-git@1.0.0|-/inflight@1.0.6",
-        "-/demo-deps-from-git@1.0.0|-/inherits@2.0.4",
-        "-/demo-deps-from-git@1.0.0|-/minimatch@3.1.2",
-        "-/demo-deps-from-git@1.0.0|-/once@1.4.0",
-        "-/demo-deps-from-git@1.0.0|-/path-is-absolute@1.0.1"
+        "demo-deps-from-git@1.0.0|fast-deep-equal@3.1.3",
+        "demo-deps-from-git@1.0.0|fast-uri@3.0.6",
+        "demo-deps-from-git@1.0.0|json-schema-traverse@1.0.0",
+        "demo-deps-from-git@1.0.0|require-from-string@2.0.2"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/has-unicode@2.0.1"
+      "ref": "demo-deps-from-git@1.0.0|ansi-regex@5.0.1"
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/https-proxy-agent@5.0.1",
+      "ref": "demo-deps-from-git@1.0.0|aproba@2.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|are-we-there-yet@2.0.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/agent-base@6.0.2",
-        "-/demo-deps-from-git@1.0.0|-/debug@4.4.0"
+        "demo-deps-from-git@1.0.0|delegates@1.0.0",
+        "demo-deps-from-git@1.0.0|readable-stream@3.6.2"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/inflight@1.0.6",
+      "ref": "demo-deps-from-git@1.0.0|argparse@1.0.10",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/once@1.4.0",
-        "-/demo-deps-from-git@1.0.0|-/wrappy@1.0.2"
+        "demo-deps-from-git@1.0.0|sprintf-js@1.0.3"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/inherits@2.0.4"
+      "ref": "demo-deps-from-git@1.0.0|balanced-match@1.0.2"
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/is-fullwidth-code-point@3.0.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/js-yaml@3.14.1",
+      "ref": "demo-deps-from-git@1.0.0|bindings@1.5.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/argparse@1.0.10",
-        "-/demo-deps-from-git@1.0.0|-/esprima@4.0.1"
+        "demo-deps-from-git@1.0.0|file-uri-to-path@1.0.0"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/json-schema-traverse@1.0.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/libxmljs2@0.32.0",
+      "ref": "demo-deps-from-git@1.0.0|brace-expansion@1.1.11",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/bindings@1.5.0",
-        "-/demo-deps-from-git@1.0.0|-/nan@2.17.0",
-        "-/demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11"
+        "demo-deps-from-git@1.0.0|balanced-match@1.0.2",
+        "demo-deps-from-git@1.0.0|concat-map@0.0.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/make-dir@3.1.0",
+      "ref": "demo-deps-from-git@1.0.0|chownr@2.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|color-support@1.1.3"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|commander@2.20.3"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|concat-map@0.0.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|console-control-strings@1.1.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|debug@4.4.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/demo-deps-from-git@1.0.0|-/make-dir@3.1.0|-/semver@6.3.1"
+        "demo-deps-from-git@1.0.0|ms@2.1.3"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/minimatch@3.1.2",
+      "ref": "demo-deps-from-git@1.0.0|delegates@1.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|detect-libc@2.0.3"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|discontinuous-range@1.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|emoji-regex@8.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|esprima@4.0.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|extend@3.0.2"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|fast-deep-equal@3.1.3"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|fast-uri@3.0.6"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|file-uri-to-path@1.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|fs-minipass@2.1.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/brace-expansion@1.1.11"
+        "demo-deps-from-git@1.0.0|fs-minipass@2.1.0|minipass@3.3.6"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/minipass@5.0.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/minizlib@2.1.2",
+      "ref": "demo-deps-from-git@1.0.0|fs-minipass@2.1.0|minipass@3.3.6",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/demo-deps-from-git@1.0.0|-/minizlib@2.1.2|-/minipass@3.3.6",
-        "-/demo-deps-from-git@1.0.0|-/yallist@4.0.0"
+        "demo-deps-from-git@1.0.0|yallist@4.0.0"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/mkdirp@1.0.4"
+      "ref": "demo-deps-from-git@1.0.0|fs.realpath@1.0.0"
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/moo@0.5.2"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/ms@2.1.3"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/nan@2.17.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/nearley@2.20.1",
+      "ref": "demo-deps-from-git@1.0.0|gauge@3.0.2",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/commander@2.20.3",
-        "-/demo-deps-from-git@1.0.0|-/moo@0.5.2",
-        "-/demo-deps-from-git@1.0.0|-/railroad-diagrams@1.0.0",
-        "-/demo-deps-from-git@1.0.0|-/randexp@0.4.6"
+        "demo-deps-from-git@1.0.0|aproba@2.0.0",
+        "demo-deps-from-git@1.0.0|color-support@1.1.3",
+        "demo-deps-from-git@1.0.0|console-control-strings@1.1.0",
+        "demo-deps-from-git@1.0.0|has-unicode@2.0.1",
+        "demo-deps-from-git@1.0.0|object-assign@4.1.1",
+        "demo-deps-from-git@1.0.0|signal-exit@3.0.7",
+        "demo-deps-from-git@1.0.0|string-width@4.2.3",
+        "demo-deps-from-git@1.0.0|strip-ansi@6.0.1",
+        "demo-deps-from-git@1.0.0|wide-align@1.1.5"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/node-fetch@2.7.0",
+      "ref": "demo-deps-from-git@1.0.0|glob@7.2.3",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/whatwg-url@5.0.0"
+        "demo-deps-from-git@1.0.0|fs.realpath@1.0.0",
+        "demo-deps-from-git@1.0.0|inflight@1.0.6",
+        "demo-deps-from-git@1.0.0|inherits@2.0.4",
+        "demo-deps-from-git@1.0.0|minimatch@3.1.2",
+        "demo-deps-from-git@1.0.0|once@1.4.0",
+        "demo-deps-from-git@1.0.0|path-is-absolute@1.0.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/nopt@5.0.0",
+      "ref": "demo-deps-from-git@1.0.0|has-unicode@2.0.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|https-proxy-agent@5.0.1",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/abbrev@1.1.1"
+        "demo-deps-from-git@1.0.0|agent-base@6.0.2",
+        "demo-deps-from-git@1.0.0|debug@4.4.0"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/npmlog@5.0.1",
+      "ref": "demo-deps-from-git@1.0.0|inflight@1.0.6",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/are-we-there-yet@2.0.0",
-        "-/demo-deps-from-git@1.0.0|-/console-control-strings@1.1.0",
-        "-/demo-deps-from-git@1.0.0|-/gauge@3.0.2",
-        "-/demo-deps-from-git@1.0.0|-/set-blocking@2.0.0"
+        "demo-deps-from-git@1.0.0|once@1.4.0",
+        "demo-deps-from-git@1.0.0|wrappy@1.0.2"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/object-assign@4.1.1"
+      "ref": "demo-deps-from-git@1.0.0|inherits@2.0.4"
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/once@1.4.0",
+      "ref": "demo-deps-from-git@1.0.0|is-fullwidth-code-point@3.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|js-yaml@3.14.1",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/wrappy@1.0.2"
+        "demo-deps-from-git@1.0.0|argparse@1.0.10",
+        "demo-deps-from-git@1.0.0|esprima@4.0.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/packageurl-js@1.2.1"
+      "ref": "demo-deps-from-git@1.0.0|json-schema-traverse@1.0.0"
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/path-is-absolute@1.0.1"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/punycode@2.3.1"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/railroad-diagrams@1.0.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/randexp@0.4.6",
+      "ref": "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/discontinuous-range@1.0.0",
-        "-/demo-deps-from-git@1.0.0|-/ret@0.1.15"
+        "demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11",
+        "demo-deps-from-git@1.0.0|bindings@1.5.0",
+        "demo-deps-from-git@1.0.0|nan@2.17.0"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/readable-stream@3.6.2",
+      "ref": "demo-deps-from-git@1.0.0|make-dir@3.1.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/inherits@2.0.4",
-        "-/demo-deps-from-git@1.0.0|-/string_decoder@1.3.0",
-        "-/demo-deps-from-git@1.0.0|-/util-deprecate@1.0.2"
+        "demo-deps-from-git@1.0.0|make-dir@3.1.0|semver@6.3.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/require-from-string@2.0.2"
+      "ref": "demo-deps-from-git@1.0.0|make-dir@3.1.0|semver@6.3.1"
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/ret@0.1.15"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/rimraf@3.0.2",
+      "ref": "demo-deps-from-git@1.0.0|minimatch@3.1.2",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/glob@7.2.3"
+        "demo-deps-from-git@1.0.0|brace-expansion@1.1.11"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/safe-buffer@5.2.1"
+      "ref": "demo-deps-from-git@1.0.0|minipass@5.0.0"
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/schemes@1.4.0",
+      "ref": "demo-deps-from-git@1.0.0|minizlib@2.1.2",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/extend@3.0.2"
+        "demo-deps-from-git@1.0.0|minizlib@2.1.2|minipass@3.3.6",
+        "demo-deps-from-git@1.0.0|yallist@4.0.0"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/semver@7.7.1"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/set-blocking@2.0.0"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/signal-exit@3.0.7"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/smtp-address-parser@1.1.0",
+      "ref": "demo-deps-from-git@1.0.0|minizlib@2.1.2|minipass@3.3.6",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/nearley@2.20.1"
+        "demo-deps-from-git@1.0.0|yallist@4.0.0"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/spdx-exceptions@2.5.0"
+      "ref": "demo-deps-from-git@1.0.0|mkdirp@1.0.4"
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/spdx-expression-parse@3.0.1",
+      "ref": "demo-deps-from-git@1.0.0|moo@0.5.2"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|ms@2.1.3"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|nan@2.17.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|nearley@2.20.1",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/spdx-exceptions@2.5.0",
-        "-/demo-deps-from-git@1.0.0|-/spdx-license-ids@3.0.21"
+        "demo-deps-from-git@1.0.0|commander@2.20.3",
+        "demo-deps-from-git@1.0.0|moo@0.5.2",
+        "demo-deps-from-git@1.0.0|railroad-diagrams@1.0.0",
+        "demo-deps-from-git@1.0.0|randexp@0.4.6"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/spdx-license-ids@3.0.21"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/sprintf-js@1.0.3"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/string_decoder@1.3.0",
+      "ref": "demo-deps-from-git@1.0.0|node-fetch@2.7.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/safe-buffer@5.2.1"
+        "demo-deps-from-git@1.0.0|whatwg-url@5.0.0"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/string-width@4.2.3",
+      "ref": "demo-deps-from-git@1.0.0|nopt@5.0.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/emoji-regex@8.0.0",
-        "-/demo-deps-from-git@1.0.0|-/is-fullwidth-code-point@3.0.0",
-        "-/demo-deps-from-git@1.0.0|-/strip-ansi@6.0.1"
+        "demo-deps-from-git@1.0.0|abbrev@1.1.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/strip-ansi@6.0.1",
+      "ref": "demo-deps-from-git@1.0.0|npmlog@5.0.1",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/ansi-regex@5.0.1"
+        "demo-deps-from-git@1.0.0|are-we-there-yet@2.0.0",
+        "demo-deps-from-git@1.0.0|console-control-strings@1.1.0",
+        "demo-deps-from-git@1.0.0|gauge@3.0.2",
+        "demo-deps-from-git@1.0.0|set-blocking@2.0.0"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/tar@6.2.1",
+      "ref": "demo-deps-from-git@1.0.0|object-assign@4.1.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|once@1.4.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/chownr@2.0.0",
-        "-/demo-deps-from-git@1.0.0|-/fs-minipass@2.1.0",
-        "-/demo-deps-from-git@1.0.0|-/minipass@5.0.0",
-        "-/demo-deps-from-git@1.0.0|-/minizlib@2.1.2",
-        "-/demo-deps-from-git@1.0.0|-/mkdirp@1.0.4",
-        "-/demo-deps-from-git@1.0.0|-/yallist@4.0.0"
+        "demo-deps-from-git@1.0.0|wrappy@1.0.2"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/tr46@0.0.3"
+      "ref": "demo-deps-from-git@1.0.0|packageurl-js@1.2.1"
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/uri-js@4.4.1",
+      "ref": "demo-deps-from-git@1.0.0|path-is-absolute@1.0.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|punycode@2.3.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|railroad-diagrams@1.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|randexp@0.4.6",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/punycode@2.3.1"
+        "demo-deps-from-git@1.0.0|discontinuous-range@1.0.0",
+        "demo-deps-from-git@1.0.0|ret@0.1.15"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/util-deprecate@1.0.2"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/webidl-conversions@3.0.1"
-    },
-    {
-      "ref": "-/demo-deps-from-git@1.0.0|-/whatwg-url@5.0.0",
+      "ref": "demo-deps-from-git@1.0.0|readable-stream@3.6.2",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/tr46@0.0.3",
-        "-/demo-deps-from-git@1.0.0|-/webidl-conversions@3.0.1"
+        "demo-deps-from-git@1.0.0|inherits@2.0.4",
+        "demo-deps-from-git@1.0.0|string_decoder@1.3.0",
+        "demo-deps-from-git@1.0.0|util-deprecate@1.0.2"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/wide-align@1.1.5",
+      "ref": "demo-deps-from-git@1.0.0|require-from-string@2.0.2"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|ret@0.1.15"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|rimraf@3.0.2",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/string-width@4.2.3"
+        "demo-deps-from-git@1.0.0|glob@7.2.3"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/wrappy@1.0.2"
+      "ref": "demo-deps-from-git@1.0.0|safe-buffer@5.2.1"
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/xmlbuilder2@3.1.1",
+      "ref": "demo-deps-from-git@1.0.0|schemes@1.4.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/js-yaml@3.14.1",
-        "-/demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10",
-        "-/demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
-        "-/demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
+        "demo-deps-from-git@1.0.0|extend@3.0.2"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|-/yallist@4.0.0"
+      "ref": "demo-deps-from-git@1.0.0|semver@7.7.1"
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.0.0",
+      "ref": "demo-deps-from-git@1.0.0|set-blocking@2.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|signal-exit@3.0.7"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|smtp-address-parser@1.1.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/ajv-formats-draft2019@1.6.1",
-        "-/demo-deps-from-git@1.0.0|-/ajv-formats@2.1.1",
-        "-/demo-deps-from-git@1.0.0|-/ajv@8.17.1",
-        "-/demo-deps-from-git@1.0.0|-/libxmljs2@0.32.0",
-        "-/demo-deps-from-git@1.0.0|-/packageurl-js@1.2.1",
-        "-/demo-deps-from-git@1.0.0|-/spdx-expression-parse@3.0.1",
-        "-/demo-deps-from-git@1.0.0|-/xmlbuilder2@3.1.1"
+        "demo-deps-from-git@1.0.0|nearley@2.20.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.1.0",
+      "ref": "demo-deps-from-git@1.0.0|spdx-exceptions@2.5.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/ajv-formats-draft2019@1.6.1",
-        "-/demo-deps-from-git@1.0.0|-/ajv-formats@2.1.1",
-        "-/demo-deps-from-git@1.0.0|-/ajv@8.17.1",
-        "-/demo-deps-from-git@1.0.0|-/libxmljs2@0.32.0",
-        "-/demo-deps-from-git@1.0.0|-/packageurl-js@1.2.1",
-        "-/demo-deps-from-git@1.0.0|-/spdx-expression-parse@3.0.1",
-        "-/demo-deps-from-git@1.0.0|-/xmlbuilder2@3.1.1"
+        "demo-deps-from-git@1.0.0|spdx-exceptions@2.5.0",
+        "demo-deps-from-git@1.0.0|spdx-license-ids@3.0.21"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.2.0",
+      "ref": "demo-deps-from-git@1.0.0|spdx-license-ids@3.0.21"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|sprintf-js@1.0.3"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|string_decoder@1.3.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/ajv-formats-draft2019@1.6.1",
-        "-/demo-deps-from-git@1.0.0|-/ajv-formats@2.1.1",
-        "-/demo-deps-from-git@1.0.0|-/ajv@8.17.1",
-        "-/demo-deps-from-git@1.0.0|-/libxmljs2@0.32.0",
-        "-/demo-deps-from-git@1.0.0|-/packageurl-js@1.2.1",
-        "-/demo-deps-from-git@1.0.0|-/spdx-expression-parse@3.0.1",
-        "-/demo-deps-from-git@1.0.0|-/xmlbuilder2@3.1.1"
+        "demo-deps-from-git@1.0.0|safe-buffer@5.2.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.3.0",
+      "ref": "demo-deps-from-git@1.0.0|string-width@4.2.3",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/ajv-formats-draft2019@1.6.1",
-        "-/demo-deps-from-git@1.0.0|-/ajv-formats@2.1.1",
-        "-/demo-deps-from-git@1.0.0|-/ajv@8.17.1",
-        "-/demo-deps-from-git@1.0.0|-/libxmljs2@0.32.0",
-        "-/demo-deps-from-git@1.0.0|-/packageurl-js@1.2.1",
-        "-/demo-deps-from-git@1.0.0|-/spdx-expression-parse@3.0.1",
-        "-/demo-deps-from-git@1.0.0|-/xmlbuilder2@3.1.1"
+        "demo-deps-from-git@1.0.0|emoji-regex@8.0.0",
+        "demo-deps-from-git@1.0.0|is-fullwidth-code-point@3.0.0",
+        "demo-deps-from-git@1.0.0|strip-ansi@6.0.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.4.0",
+      "ref": "demo-deps-from-git@1.0.0|strip-ansi@6.0.1",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/ajv-formats-draft2019@1.6.1",
-        "-/demo-deps-from-git@1.0.0|-/ajv-formats@2.1.1",
-        "-/demo-deps-from-git@1.0.0|-/ajv@8.17.1",
-        "-/demo-deps-from-git@1.0.0|-/libxmljs2@0.32.0",
-        "-/demo-deps-from-git@1.0.0|-/packageurl-js@1.2.1",
-        "-/demo-deps-from-git@1.0.0|-/spdx-expression-parse@3.0.1",
-        "-/demo-deps-from-git@1.0.0|-/xmlbuilder2@3.1.1"
+        "demo-deps-from-git@1.0.0|ansi-regex@5.0.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.5.0",
+      "ref": "demo-deps-from-git@1.0.0|tar@6.2.1",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/ajv-formats-draft2019@1.6.1",
-        "-/demo-deps-from-git@1.0.0|-/ajv-formats@2.1.1",
-        "-/demo-deps-from-git@1.0.0|-/ajv@8.17.1",
-        "-/demo-deps-from-git@1.0.0|-/libxmljs2@0.32.0",
-        "-/demo-deps-from-git@1.0.0|-/packageurl-js@1.2.1",
-        "-/demo-deps-from-git@1.0.0|-/spdx-expression-parse@3.0.1",
-        "-/demo-deps-from-git@1.0.0|-/xmlbuilder2@3.1.1"
+        "demo-deps-from-git@1.0.0|chownr@2.0.0",
+        "demo-deps-from-git@1.0.0|fs-minipass@2.1.0",
+        "demo-deps-from-git@1.0.0|minipass@5.0.0",
+        "demo-deps-from-git@1.0.0|minizlib@2.1.2",
+        "demo-deps-from-git@1.0.0|mkdirp@1.0.4",
+        "demo-deps-from-git@1.0.0|yallist@4.0.0"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11",
+      "ref": "demo-deps-from-git@1.0.0|tr46@0.0.3"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|uri-js@4.4.1",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|-/detect-libc@2.0.3",
-        "-/demo-deps-from-git@1.0.0|-/https-proxy-agent@5.0.1",
-        "-/demo-deps-from-git@1.0.0|-/make-dir@3.1.0",
-        "-/demo-deps-from-git@1.0.0|-/node-fetch@2.7.0",
-        "-/demo-deps-from-git@1.0.0|-/nopt@5.0.0",
-        "-/demo-deps-from-git@1.0.0|-/npmlog@5.0.1",
-        "-/demo-deps-from-git@1.0.0|-/rimraf@3.0.2",
-        "-/demo-deps-from-git@1.0.0|-/semver@7.7.1",
-        "-/demo-deps-from-git@1.0.0|-/tar@6.2.1"
+        "demo-deps-from-git@1.0.0|punycode@2.3.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10",
+      "ref": "demo-deps-from-git@1.0.0|util-deprecate@1.0.2"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|webidl-conversions@3.0.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|whatwg-url@5.0.0",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
-        "-/demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4",
-        "-/demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
+        "demo-deps-from-git@1.0.0|tr46@0.0.3",
+        "demo-deps-from-git@1.0.0|webidl-conversions@3.0.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
+      "ref": "demo-deps-from-git@1.0.0|wide-align@1.1.5",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
+        "demo-deps-from-git@1.0.0|string-width@4.2.3"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4",
+      "ref": "demo-deps-from-git@1.0.0|wrappy@1.0.2"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1",
       "dependsOn": [
-        "-/demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
-        "-/demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
+        "demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10",
+        "demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
+        "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8",
+        "demo-deps-from-git@1.0.0|js-yaml@3.14.1"
       ]
     },
     {
-      "ref": "-/demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
+      "ref": "demo-deps-from-git@1.0.0|yallist@4.0.0"
     }
   ]
 }

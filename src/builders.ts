@@ -557,7 +557,6 @@ export class BomBuilder {
     for (const [p, cTree] of tree) {
       const component = allComponents.get(p)
       if (component === undefined) { throw new TypeError(`missing component for ${p}`) }
-      /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to account empty strings, too */
       const parts = [pref]
       if (component.group !== undefined && component.group.length > 0) {
         parts.push(component.group, '/')

@@ -81,7 +81,7 @@
       "type": "application",
       "name": "demo-workspaces",
       "version": "0.0.0",
-      "bom-ref": "-/demo-workspaces@0.0.0",
+      "bom-ref": "demo-workspaces@0.0.0",
       "purl": "pkg:npm/demo-workspaces@0.0.0",
       "properties": [
         {
@@ -94,7 +94,7 @@
   "components": [],
   "dependencies": [
     {
-      "ref": "-/demo-workspaces@0.0.0"
+      "ref": "demo-workspaces@0.0.0"
     }
   ]
 }

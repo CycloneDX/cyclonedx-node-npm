@@ -80,7 +80,7 @@
     "component": {
       "type": "application",
       "name": "demo-package-integrity",
-      "bom-ref": "-/demo-package-integrity@-",
+      "bom-ref": "demo-package-integrity",
       "purl": "pkg:npm/demo-package-integrity",
       "properties": [
         {
@@ -95,7 +95,7 @@
       "type": "library",
       "name": "base64-js",
       "version": "1.0.1",
-      "bom-ref": "-/demo-package-integrity@-|-/base64-js@1.0.1",
+      "bom-ref": "demo-package-integrity|base64-js@1.0.1",
       "purl": "pkg:npm/base64-js@1.0.1",
       "externalReferences": [
         {
@@ -121,7 +121,7 @@
       "type": "library",
       "name": "buffer",
       "version": "5.4.3",
-      "bom-ref": "-/demo-package-integrity@-|-/buffer@5.4.3",
+      "bom-ref": "demo-package-integrity|buffer@5.4.3",
       "purl": "pkg:npm/buffer@5.4.3",
       "externalReferences": [
         {
@@ -147,7 +147,7 @@
           "type": "library",
           "name": "base64-js",
           "version": "1.3.1",
-          "bom-ref": "-/demo-package-integrity@-|-/demo-package-integrity@-|-/buffer@5.4.3|-/base64-js@1.3.1",
+          "bom-ref": "demo-package-integrity|buffer@5.4.3|base64-js@1.3.1",
           "purl": "pkg:npm/base64-js@1.3.1",
           "externalReferences": [
             {
@@ -175,7 +175,7 @@
       "type": "library",
       "name": "ieee754",
       "version": "1.1.13",
-      "bom-ref": "-/demo-package-integrity@-|-/ieee754@1.1.13",
+      "bom-ref": "demo-package-integrity|ieee754@1.1.13",
       "purl": "pkg:npm/ieee754@1.1.13",
       "externalReferences": [
         {
@@ -201,7 +201,7 @@
       "type": "library",
       "name": "ignore",
       "version": "5.1.4",
-      "bom-ref": "-/demo-package-integrity@-|-/ignore@5.1.4",
+      "bom-ref": "demo-package-integrity|ignore@5.1.4",
       "purl": "pkg:npm/ignore@5.1.4",
       "externalReferences": [
         {
@@ -226,31 +226,31 @@
   ],
   "dependencies": [
     {
-      "ref": "-/demo-package-integrity@-",
+      "ref": "demo-package-integrity",
       "dependsOn": [
-        "-/demo-package-integrity@-|-/base64-js@1.0.1",
-        "-/demo-package-integrity@-|-/buffer@5.4.3",
-        "-/demo-package-integrity@-|-/ignore@5.1.4"
+        "demo-package-integrity|base64-js@1.0.1",
+        "demo-package-integrity|buffer@5.4.3",
+        "demo-package-integrity|ignore@5.1.4"
       ]
     },
     {
-      "ref": "-/demo-package-integrity@-|-/base64-js@1.0.1"
+      "ref": "demo-package-integrity|base64-js@1.0.1"
     },
     {
-      "ref": "-/demo-package-integrity@-|-/buffer@5.4.3",
+      "ref": "demo-package-integrity|buffer@5.4.3",
       "dependsOn": [
-        "-/demo-package-integrity@-|-/demo-package-integrity@-|-/buffer@5.4.3|-/base64-js@1.3.1",
-        "-/demo-package-integrity@-|-/ieee754@1.1.13"
+        "demo-package-integrity|buffer@5.4.3|base64-js@1.3.1",
+        "demo-package-integrity|ieee754@1.1.13"
       ]
     },
     {
-      "ref": "-/demo-package-integrity@-|-/demo-package-integrity@-|-/buffer@5.4.3|-/base64-js@1.3.1"
+      "ref": "demo-package-integrity|buffer@5.4.3|base64-js@1.3.1"
     },
     {
-      "ref": "-/demo-package-integrity@-|-/ieee754@1.1.13"
+      "ref": "demo-package-integrity|ieee754@1.1.13"
     },
     {
-      "ref": "-/demo-package-integrity@-|-/ignore@5.1.4"
+      "ref": "demo-package-integrity|ignore@5.1.4"
     }
   ]
 }
