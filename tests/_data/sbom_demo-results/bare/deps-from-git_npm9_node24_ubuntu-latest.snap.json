@@ -101,7 +101,8 @@
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -129,7 +130,8 @@
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -157,7 +159,8 @@
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -185,7 +188,8 @@
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -213,7 +217,8 @@
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -241,7 +246,8 @@
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],

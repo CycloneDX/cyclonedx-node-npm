@@ -427,13 +427,14 @@ export class BomBuilder {
         /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
         this.normalizePackageJson({name: data.name, version: data.version, license: data.license})
         , type)
-      component.licenses.forEach(l => {
-        l.acknowledgement = Enums.LicenseAcknowledgement.Declared
-      })
     }
     if (component === undefined) {
       this.console.info('INFO  | creating DummyComponent for ', ppath)
       component = new DummyComponent(type, ppath)
+    } else {
+      component.licenses.forEach(l => {
+        l.acknowledgement = Enums.LicenseAcknowledgement.Declared
+      })
     }
 
     if (isExcluded) {
