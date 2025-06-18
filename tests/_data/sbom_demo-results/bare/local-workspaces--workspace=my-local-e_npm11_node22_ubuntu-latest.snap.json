@@ -82,6 +82,13 @@
       "name": "demo-workspaces",
       "version": "0.0.0",
       "bom-ref": "demo-workspaces@0.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
       "purl": "pkg:npm/demo-workspaces@0.0.0",
       "properties": [
         {
@@ -97,6 +104,13 @@
       "name": "my-local-e",
       "version": "0.1.0",
       "bom-ref": "demo-workspaces@0.0.0|my-local-e@0.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
       "purl": "pkg:npm/my-local-e@0.1.0",
       "properties": [
         {

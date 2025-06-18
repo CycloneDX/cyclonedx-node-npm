@@ -82,6 +82,13 @@
       "name": "demo-local-deps",
       "version": "0.0.0",
       "bom-ref": "demo-local-deps@0.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
       "purl": "pkg:npm/demo-local-deps@0.0.0",
       "properties": [
         {
@@ -97,6 +104,13 @@
       "name": "my-local-a",
       "version": "0.0.0",
       "bom-ref": "demo-local-deps@0.0.0|my-local-a@0.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
       "purl": "pkg:npm/my-local-a@0.0.0",
       "properties": [
         {
@@ -110,6 +124,13 @@
       "name": "my-local-b",
       "version": "0.0.0",
       "bom-ref": "demo-local-deps@0.0.0|my-local-b@0.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
       "purl": "pkg:npm/my-local-b@0.0.0",
       "properties": [
         {
@@ -123,6 +144,13 @@
       "name": "my-noname",
       "version": "0.0.0",
       "bom-ref": "demo-local-deps@0.0.0|my-noname@0.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
       "purl": "pkg:npm/my-noname@0.0.0",
       "properties": [
         {

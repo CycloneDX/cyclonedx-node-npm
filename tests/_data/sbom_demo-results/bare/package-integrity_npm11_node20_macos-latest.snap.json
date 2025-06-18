@@ -96,6 +96,13 @@
       "name": "base64-js",
       "version": "1.0.1",
       "bom-ref": "demo-package-integrity|base64-js@1.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/base64-js@1.0.1",
       "externalReferences": [
         {
@@ -122,6 +129,13 @@
       "name": "buffer",
       "version": "5.4.3",
       "bom-ref": "demo-package-integrity|buffer@5.4.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/buffer@5.4.3",
       "externalReferences": [
         {
@@ -148,6 +162,13 @@
           "name": "base64-js",
           "version": "1.3.1",
           "bom-ref": "demo-package-integrity|buffer@5.4.3|base64-js@1.3.1",
+          "licenses": [
+            {
+              "license": {
+                "id": "MIT"
+              }
+            }
+          ],
           "purl": "pkg:npm/base64-js@1.3.1",
           "externalReferences": [
             {
@@ -176,6 +197,13 @@
       "name": "ieee754",
       "version": "1.1.13",
       "bom-ref": "demo-package-integrity|ieee754@1.1.13",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
       "purl": "pkg:npm/ieee754@1.1.13",
       "externalReferences": [
         {
@@ -202,6 +230,13 @@
       "name": "ignore",
       "version": "5.1.4",
       "bom-ref": "demo-package-integrity|ignore@5.1.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/ignore@5.1.4",
       "externalReferences": [
         {

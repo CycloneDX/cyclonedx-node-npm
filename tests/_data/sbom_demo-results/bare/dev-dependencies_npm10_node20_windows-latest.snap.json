@@ -82,6 +82,13 @@
       "name": "demo-dev-dependencies",
       "version": "0.0.0",
       "bom-ref": "demo-dev-dependencies@0.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
       "purl": "pkg:npm/demo-dev-dependencies@0.0.0",
       "properties": [
         {
@@ -98,6 +105,13 @@
       "group": "@types",
       "version": "20.14.10",
       "bom-ref": "demo-dev-dependencies@0.0.0|@types/node@20.14.10",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/%40types/node@20.14.10",
       "externalReferences": [
         {
@@ -129,6 +143,13 @@
       "group": "@types",
       "version": "8.3.4",
       "bom-ref": "demo-dev-dependencies@0.0.0|@types/uuid@8.3.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/%40types/uuid@8.3.4",
       "externalReferences": [
         {
@@ -159,6 +180,13 @@
       "name": "undici-types",
       "version": "5.26.5",
       "bom-ref": "demo-dev-dependencies@0.0.0|undici-types@5.26.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/undici-types@5.26.5",
       "externalReferences": [
         {
@@ -189,6 +217,13 @@
       "name": "uuid",
       "version": "8.3.2",
       "bom-ref": "demo-dev-dependencies@0.0.0|uuid@8.3.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/uuid@8.3.2",
       "externalReferences": [
         {
@@ -220,6 +255,13 @@
       "version": "6.2.13",
       "bom-ref": "demo-dev-dependencies@0.0.0|uuidv4@6.2.13",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/uuidv4@6.2.13",
       "externalReferences": [
         {

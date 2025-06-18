@@ -82,6 +82,13 @@
       "name": "juice-shop",
       "version": "14.1.1",
       "bom-ref": "juice-shop@14.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/juice-shop@14.1.1",
       "properties": [
         {
