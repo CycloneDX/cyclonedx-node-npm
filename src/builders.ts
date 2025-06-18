@@ -369,7 +369,7 @@ export class BomBuilder {
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-call -- ack */
       dataN.version = data.version.trim()
     }
-    return data
+    return dataN
   }
 
   private makeComponentFromPackagePath(ppath: PackagePath, type: Enums.ComponentType): Models.Component {
