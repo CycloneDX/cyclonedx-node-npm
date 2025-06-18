@@ -26,8 +26,8 @@ import {type Builders, Enums, type Factories, Models, Utils} from '@cyclonedx/cy
 import normalizePackageJson from 'normalize-package-data'
 
 import {
-  isString, iteratorMap,
-  loadJsonFile,
+  isString, iteratorFilter, iteratorMap,
+  loadJsonFile, setDifference,
   structuredClonePolyfill,
   tryRemoveSecretsFromUrl
 } from './_helpers'
@@ -54,7 +54,7 @@ interface BomBuilderOptions {
 type PackagePath = string
 interface PackageData {
   name: string
-  /** ! local packages might not have a version */
+  /** !!! local packages might not have a version */
   version?: any
   funding?: any
   license?: any
@@ -68,10 +68,11 @@ interface PackageData {
   dev?: boolean
   /*** is dev-dependency AND is (transitive) optional */
   devOptional?: boolean
-  /**is not required by any dependency */
+  /** is not required by any dependency */
   extraneous?: boolean
-  /**is bundled with another package */
+  /** is bundled with another package */
   inBundle?: boolean
+  dependencies: Set<PackagePath>
 }
 
 export class BomBuilder {
@@ -144,12 +145,21 @@ export class BomBuilder {
       throw new Error(`unexpected path ${JSON.stringify(rootPath)}`)
     }
 
-    const rootComponent = this.makeComponentFromPackagePath(data.path, this.metaComponentType)
+    const allPackages = this.gatherPackages(data)
     const allComponents = new Map(iteratorMap(
-      this.gatherDependentPackages(data).entries(),
+      allPackages,
       ([p, packageData]) => [p, this.makeComponentWithPackageData(packageData, p)]
     ))
-    allComponents.set(rootPath, rootComponent)
+    let rootComponent
+    try {
+      rootComponent = this.makeComponentFromPackagePath(rootPath, this.metaComponentType)
+      allComponents.set(rootPath, rootComponent)
+    } catch (err) {
+      this.console.debug('DEBUG | failed make rootComponent, fallback to existing one.', err)
+      rootComponent = allComponents.get(rootPath)
+      if ( rootComponent === undefined) { throw new TypeError('missing rootComponent') }
+      rootComponent.type = this.metaComponentType
+    }
 
     // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
     const [relativePath, dirSep, dirSepRE] = rootPath.startsWith('/')
@@ -162,6 +172,8 @@ export class BomBuilder {
     relativePath(rootPath, p).replace(dirSepRE, '/')
         ))
     })
+
+    const pTree = this.treeBuilder.fromPaths(rootPath,allComponents.keys(), dirSep)
 
     const bom = new Models.Bom()
 
@@ -184,21 +196,21 @@ export class BomBuilder {
 
     // region components
     if (this.flattenComponents) {
-      for (const c of allComponents.values())
-      {
+      for (const c of allComponents.values()) {
         if (c === rootComponent) { continue }
         bom.components.add(c)
       }
     } else {
-      const pTree = this.treeBuilder.fromPaths(allComponents.keys(), dirSep)
       bom.components = this.nestComponents(allComponents, pTree)
+      bom.components.delete(rootComponent)
+      rootComponent.components.forEach(c => bom.components.add(c) )
       rootComponent.components.clear()
     }
     // endregion components
 
     // region dependency graph
-    // @TODO adjust bom-refs
-    // @TODO dependency graph
+    this.bomrefComponents(allComponents, pTree)
+    this.makeDependencyGraph(allComponents, allPackages)
     // endregion dependency graph
 
     return bom
@@ -278,38 +290,42 @@ export class BomBuilder {
     }
   }
 
-  private gatherDependentPackages(data: any): Map<PackagePath, PackageData> {
+  private gatherPackages(data: any): Map<PackagePath, PackageData> {
     const packages = new Map<PackagePath, PackageData>()
-    const todo: any[] = [...Object.values(data.dependencies ?? {})]
+    const todo: (typeof data)[] = [data]
     let w: any = undefined
     while ((w = todo.shift()) !== undefined) {
-      const path = w.path
-      if (isString(path)) {
-        const d = packages.get(path)
-        if (d === undefined) {
-          packages.set(path, {
-            name: w.name,
-            version: w.version,
-            resolved: w.resolved,
-            integrity: w.integrity,
-            inBundle: w.inBundle,
-            extraneous: w.extraneous,
-            optional: w.optional,
-            devOptional: w.devOptional,
-            dev: w.dev,
-          })
-        } else {
-          d.version ??= w.version
-          d.resolved ??= w.resolved
-          d.integrity ??= w.integrity
-          d.inBundle ??= w.inBundle
-          d.extraneous ??= w.extraneous
-          d.optional ??= w.optional
-          d.devOptional ??= w.devOptional
-          d.dev ??= w.dev
+      if (!isString(w.path)) { continue }
+      let d = packages.get(w.path)
+      if (d === undefined) {
+        d = {
+          name: w.name,
+          version: w.version,
+          resolved: w.resolved,
+          integrity: w.integrity,
+          inBundle: w.inBundle,
+          extraneous: w.extraneous,
+          optional: w.optional,
+          devOptional: w.devOptional,
+          dev: w.dev,
+          dependencies: new Set()
         }
+        packages.set(w.path, d)
+      } else {
+        d.version ??= w.version
+        d.resolved ??= w.resolved
+        d.integrity ??= w.integrity
+        d.inBundle ??= w.inBundle
+        d.extraneous ??= w.extraneous
+        d.optional ??= w.optional
+        d.devOptional ??= w.devOptional
+        d.dev ??= w.dev
       }
       // `dependencies` might be missing to prevent circles...
+      for (const dep of Object.values(w.dependencies ?? {}) as typeof data) {
+        if (!isString(dep.path)) { continue }
+        d.dependencies.add(dep.path)
+      }
       todo.push(...Object.values(w.dependencies ?? {}))
     }
     return packages
@@ -344,7 +360,7 @@ export class BomBuilder {
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-call -- ack */
       dataN.version = data.version.trim()
     }
-    return dataN
+    return data
   }
 
   private makeComponentFromPackagePath(ppath: PackagePath, type: Enums.ComponentType): Models.Component {
@@ -394,7 +410,8 @@ export class BomBuilder {
       }
     }
     if ( component === undefined ) {
-      component = this.componentBuilder.makeComponent(this.normalizePackageJson(data), type)
+      component = this.componentBuilder.makeComponent(
+        this.normalizePackageJson({name: data.name, version: data.version}), type)
     }
     if (component === undefined) {
       this.console.info('INFO  | creating DummyComponent for ', ppath)
@@ -528,6 +545,30 @@ export class BomBuilder {
     return children
   }
 
+  private bomrefComponents (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref: string = ''):void {
+    for (const [p, cTree] of tree) {
+      const component =   allComponents.get(p)
+      let cPref = pref
+      if (component !== undefined) {
+        component.bomRef.value = `${pref}${component.group || '-'}/${component.name}@${component.version || '-'}`
+        cPref += `${component.bomRef.value}|`
+      }
+      this.bomrefComponents(allComponents, cTree, cPref)
+    }
+  }
+
+  private makeDependencyGraph (allComponents: Map<PackagePath, Models.Component>, allPackages: Map<PackagePath, PackageData>): void {
+    for (const [p, comp] of allComponents) {
+      const pkg = allPackages.get(p)
+      if (pkg === undefined) { continue }
+      for (const depPkg of pkg.dependencies) {
+        const depComp = allComponents.get(depPkg)
+        if (depComp === undefined) { continue }
+        comp.dependencies.add(depComp.bomRef)
+      }
+    }
+  }
+
 }
 
 class DummyComponent extends Models.Component {
@@ -542,18 +583,24 @@ class DummyComponent extends Models.Component {
 type PTree = Map<PackagePath, PTree>
 
 export class TreeBuilder {
-  fromPaths (paths: Iterable<PackagePath>, dirSeparator: string): PTree {
-    const tree: PTree = new Map(Array.from(
-      new Set(paths),
-        p => [p + dirSeparator, new Map<PackagePath, PTree>()]))
-    this.nestPT(tree)
+  fromPaths (root: PackagePath, paths: Iterable<PackagePath>, dirSeparator: string): PTree {
+    root += dirSeparator
+    const upaths = new Set(iteratorMap(paths, p => `${p}${dirSeparator}`))
+    const outs =  new Set(iteratorFilter(upaths, p => !p.startsWith(root)))
+    const inTree: PTree = new Map(iteratorMap(setDifference(upaths, outs), p => [p, new Map()]))
+    this.nestPT( inTree)
+    const outTree: PTree = new Map(iteratorMap(outs, p => [p, new Map()]))
+    this.nestPT( outTree)
+    const tree = new Map()
+    outTree.forEach((v,k) => { tree.set(k, v) } )
+    inTree.forEach((v,k) => { tree.set(k, v) })
     this.renderPR(tree, '')
     return tree
   }
 
   private renderPR (tree: PTree, pref: PackagePath): void {
     // work with a copy of the tree, as we will modify it on the go
-    for (const [p, pTree] of [...tree.entries()]) {
+    for (const [p, pTree] of [...tree]) {
       tree.delete(p)
       const pFull = pref + p
       this.renderPR(pTree, pFull)
@@ -566,8 +613,9 @@ export class TreeBuilder {
       // nothing to compare ...
       return
     }
-    for (const [a, aTree] of tree) {
-      for (const [b, bTree] of tree) {
+    const treeI = [...tree]
+    for (const [a, aTree] of treeI) {
+      for (const [b, bTree] of treeI) {
         if (a === b) {
           continue
         }

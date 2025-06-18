@@ -25,16 +25,26 @@ describe('builders.TreeBuilder', () => {
   describe('fromPaths', () => {
     test.each([
       ['distinct dos-like paths', '\\',
+        'C:\\foo\\baz',
         [
           'C:\\foo\\bar',
-          'D:\\foo\\baz'
+          'C:\\foo\\bar\\bar',
+          'D:\\foo\\baz',
+          'D:\\foo\\baz\\bar',
+          'E:\\foo\\baz',
         ],
         new Map([
-          ['C:\\foo\\bar', new Map()],
-          ['D:\\foo\\baz', new Map()]
+          ['C:\\foo\\bar', new Map([
+            ['C:\\foo\\bar\\bar', new Map()]
+          ])],
+          ['D:\\foo\\baz', new Map([
+            ['D:\\foo\\baz\\bar', new Map()]
+          ])],
+          ['E:\\foo\\baz', new Map()]
         ])
       ],
       ['transitive dos-like paths', '\\',
+        'C:\\a',
         [
           'C:\\a',
           'C:\\a\\b',
@@ -53,16 +63,26 @@ describe('builders.TreeBuilder', () => {
         ])
       ],
       ['distinct paths', '/',
+        '/foo/baz',
         [
           '/foo/baz',
-          '/bar/baz'
+          '/foo/baz/bar',
+          '/bar/baz',
+          '/bar/baz/bar',
+          '/baz'
         ],
         new Map([
-          ['/foo/baz', new Map()],
-          ['/bar/baz', new Map()]
+          ['/foo/baz', new Map([
+            ['/foo/baz/bar', new Map()]
+          ])],
+          ['/bar/baz', new Map([
+            ['/bar/baz/bar', new Map()]
+          ])],
+          ['/baz', new Map()]
         ])
       ],
       ['transitive paths', '/',
+        '/a',
         [
           '/a',
           '/a/b',
@@ -80,9 +100,9 @@ describe('builders.TreeBuilder', () => {
           ])]
         ])
       ]
-    ])('%s', (purpose, pathSeparator, paths, expected) => {
+    ])('%s', (purpose, pathSeparator, root, paths, expected) => {
       const treeBuilder = new TreeBuilder()
-      const actual = treeBuilder.fromPaths(paths, pathSeparator)
+      const actual = treeBuilder.fromPaths(root, paths, pathSeparator)
       expect(actual).toMatchObject(expected)
     })
   })

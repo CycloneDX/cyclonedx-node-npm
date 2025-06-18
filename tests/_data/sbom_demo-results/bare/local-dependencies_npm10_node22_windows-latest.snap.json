@@ -79,10 +79,10 @@
     },
     "component": {
       "type": "application",
-      "name": "DummyComponent.D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
-      "bom-ref": "BomRef.4gouhivikkg.86o01vvrn1g",
-      "description": "This is a dummy component \"D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\" that fills the gap where the actual built failed.",
-      "purl": "pkg:npm/dummycomponent.d%3A%5Ca%5Ccyclonedx-node-npm%5Ccyclonedx-node-npm%5Cdemo%5Clocal-dependencies%5Cproject",
+      "name": "demo-local-deps",
+      "version": "0.0.0",
+      "bom-ref": "-/demo-local-deps@0.0.0",
+      "purl": "pkg:npm/demo-local-deps@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:path",
@@ -93,22 +93,64 @@
   },
   "components": [
     {
-      "type": "application",
-      "name": "DummyComponent.D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
-      "bom-ref": "BomRef.4gouhivikkg.86o01vvrn1g",
-      "description": "This is a dummy component \"D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\" that fills the gap where the actual built failed.",
-      "purl": "pkg:npm/dummycomponent.d%3A%5Ca%5Ccyclonedx-node-npm%5Ccyclonedx-node-npm%5Cdemo%5Clocal-dependencies%5Cproject",
+      "type": "library",
+      "name": "my-local-a",
+      "version": "0.0.0",
+      "bom-ref": "-/demo-local-deps@0.0.0|-/my-local-a@0.0.0",
+      "purl": "pkg:npm/my-local-a@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": ""
+          "value": "node_modules/my-local-a"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "my-local-b-off",
+      "version": "0.0.0",
+      "bom-ref": "-/demo-local-deps@0.0.0|-/my-local-b-off@0.0.0",
+      "purl": "pkg:npm/my-local-b-off@0.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/my-local-b-off"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "my-noname",
+      "version": "0.0.0",
+      "bom-ref": "-/demo-local-deps@0.0.0|-/my-noname@0.0.0",
+      "purl": "pkg:npm/my-noname@0.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/my-noname"
         }
       ]
     }
   ],
   "dependencies": [
     {
-      "ref": "BomRef.4gouhivikkg.86o01vvrn1g"
+      "ref": "-/demo-local-deps@0.0.0",
+      "dependsOn": [
+        "-/demo-local-deps@0.0.0|-/my-local-a@0.0.0",
+        "-/demo-local-deps@0.0.0|-/my-noname@0.0.0"
+      ]
+    },
+    {
+      "ref": "-/demo-local-deps@0.0.0|-/my-local-a@0.0.0",
+      "dependsOn": [
+        "-/demo-local-deps@0.0.0|-/my-local-b-off@0.0.0"
+      ]
+    },
+    {
+      "ref": "-/demo-local-deps@0.0.0|-/my-local-b-off@0.0.0"
+    },
+    {
+      "ref": "-/demo-local-deps@0.0.0|-/my-noname@0.0.0"
     }
   ]
 }

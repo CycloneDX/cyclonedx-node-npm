@@ -79,10 +79,10 @@
     },
     "component": {
       "type": "application",
-      "name": "DummyComponent./Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project",
-      "bom-ref": "BomRef.hp68a4f2ii.7vbce74mv5",
-      "description": "This is a dummy component \"/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project\" that fills the gap where the actual built failed.",
-      "purl": "pkg:npm/dummycomponent.%2Fusers%2Frunner%2Fwork%2Fcyclonedx-node-npm%2Fcyclonedx-node-npm%2Fdemo%2Flocal-workspaces%2Fproject",
+      "name": "demo-workspaces",
+      "version": "0.0.0",
+      "bom-ref": "-/demo-workspaces@0.0.0",
+      "purl": "pkg:npm/demo-workspaces@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:path",
@@ -93,22 +93,86 @@
   },
   "components": [
     {
-      "type": "application",
-      "name": "DummyComponent./Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project",
-      "bom-ref": "BomRef.hp68a4f2ii.7vbce74mv5",
-      "description": "This is a dummy component \"/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project\" that fills the gap where the actual built failed.",
-      "purl": "pkg:npm/dummycomponent.%2Fusers%2Frunner%2Fwork%2Fcyclonedx-node-npm%2Fcyclonedx-node-npm%2Fdemo%2Flocal-workspaces%2Fproject",
+      "type": "library",
+      "name": "my-local-a",
+      "version": "0.1.0",
+      "bom-ref": "-/demo-workspaces@0.0.0|-/my-local-a@0.1.0",
+      "purl": "pkg:npm/my-local-a@0.1.0",
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": ""
+          "value": "node_modules/my-local-a"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "my-local-b-off",
+      "version": "0.0.0",
+      "bom-ref": "-/demo-workspaces@0.0.0|-/my-local-b-off@0.0.0",
+      "purl": "pkg:npm/my-local-b-off@0.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/my-local-b-off"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "my-local-c",
+      "version": "0.23.42",
+      "bom-ref": "-/demo-workspaces@0.0.0|-/my-local-c@0.23.42",
+      "purl": "pkg:npm/my-local-c@0.23.42",
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/my-local-c"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "my-local-e",
+      "version": "0.1.0",
+      "bom-ref": "-/demo-workspaces@0.0.0|-/my-local-e@0.1.0",
+      "purl": "pkg:npm/my-local-e@0.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/my-local-e"
         }
       ]
     }
   ],
   "dependencies": [
     {
-      "ref": "BomRef.hp68a4f2ii.7vbce74mv5"
+      "ref": "-/demo-workspaces@0.0.0",
+      "dependsOn": [
+        "-/demo-workspaces@0.0.0|-/my-local-a@0.1.0",
+        "-/demo-workspaces@0.0.0|-/my-local-b-off@0.0.0",
+        "-/demo-workspaces@0.0.0|-/my-local-c@0.23.42",
+        "-/demo-workspaces@0.0.0|-/my-local-e@0.1.0"
+      ]
+    },
+    {
+      "ref": "-/demo-workspaces@0.0.0|-/my-local-a@0.1.0",
+      "dependsOn": [
+        "-/demo-workspaces@0.0.0|-/my-local-b-off@0.0.0"
+      ]
+    },
+    {
+      "ref": "-/demo-workspaces@0.0.0|-/my-local-b-off@0.0.0"
+    },
+    {
+      "ref": "-/demo-workspaces@0.0.0|-/my-local-c@0.23.42",
+      "dependsOn": [
+        "-/demo-workspaces@0.0.0|-/my-local-a@0.1.0",
+        "-/demo-workspaces@0.0.0|-/my-local-b-off@0.0.0"
+      ]
+    },
+    {
+      "ref": "-/demo-workspaces@0.0.0|-/my-local-e@0.1.0"
     }
   ]
 }

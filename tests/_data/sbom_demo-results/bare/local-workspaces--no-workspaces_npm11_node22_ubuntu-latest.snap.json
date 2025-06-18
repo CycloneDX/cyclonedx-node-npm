@@ -79,10 +79,10 @@
     },
     "component": {
       "type": "application",
-      "name": "DummyComponent./home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project",
-      "bom-ref": "BomRef.d2s78800u7o.l9p122s5q38",
-      "description": "This is a dummy component \"/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project\" that fills the gap where the actual built failed.",
-      "purl": "pkg:npm/dummycomponent.%2Fhome%2Frunner%2Fwork%2Fcyclonedx-node-npm%2Fcyclonedx-node-npm%2Fdemo%2Flocal-workspaces%2Fproject",
+      "name": "demo-workspaces",
+      "version": "0.0.0",
+      "bom-ref": "-/demo-workspaces@0.0.0",
+      "purl": "pkg:npm/demo-workspaces@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:path",
@@ -91,24 +91,10 @@
       ]
     }
   },
-  "components": [
-    {
-      "type": "application",
-      "name": "DummyComponent./home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project",
-      "bom-ref": "BomRef.d2s78800u7o.l9p122s5q38",
-      "description": "This is a dummy component \"/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project\" that fills the gap where the actual built failed.",
-      "purl": "pkg:npm/dummycomponent.%2Fhome%2Frunner%2Fwork%2Fcyclonedx-node-npm%2Fcyclonedx-node-npm%2Fdemo%2Flocal-workspaces%2Fproject",
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": ""
-        }
-      ]
-    }
-  ],
+  "components": [],
   "dependencies": [
     {
-      "ref": "BomRef.d2s78800u7o.l9p122s5q38"
+      "ref": "-/demo-workspaces@0.0.0"
     }
   ]
 }

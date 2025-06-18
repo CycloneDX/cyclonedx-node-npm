@@ -79,10 +79,10 @@
     },
     "component": {
       "type": "application",
-      "name": "DummyComponent.D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\package-with-build-id\\project",
-      "bom-ref": "BomRef.1jtqk6vuk3.362ofcst428",
-      "description": "This is a dummy component \"D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\package-with-build-id\\project\" that fills the gap where the actual built failed.",
-      "purl": "pkg:npm/dummycomponent.d%3A%5Ca%5Ccyclonedx-node-npm%5Ccyclonedx-node-npm%5Cdemo%5Cpackage-with-build-id%5Cproject",
+      "name": "demo-package-with-build-id",
+      "version": "1.0.0-123+456",
+      "bom-ref": "-/demo-package-with-build-id@1.0.0-123+456",
+      "purl": "pkg:npm/demo-package-with-build-id@1.0.0-123+456",
       "properties": [
         {
           "name": "cdx:npm:package:path",
@@ -91,24 +91,10 @@
       ]
     }
   },
-  "components": [
-    {
-      "type": "application",
-      "name": "DummyComponent.D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\package-with-build-id\\project",
-      "bom-ref": "BomRef.1jtqk6vuk3.362ofcst428",
-      "description": "This is a dummy component \"D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\package-with-build-id\\project\" that fills the gap where the actual built failed.",
-      "purl": "pkg:npm/dummycomponent.d%3A%5Ca%5Ccyclonedx-node-npm%5Ccyclonedx-node-npm%5Cdemo%5Cpackage-with-build-id%5Cproject",
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": ""
-        }
-      ]
-    }
-  ],
+  "components": [],
   "dependencies": [
     {
-      "ref": "BomRef.1jtqk6vuk3.362ofcst428"
+      "ref": "-/demo-package-with-build-id@1.0.0-123+456"
     }
   ]
 }

@@ -100,3 +100,17 @@ export function * iteratorMap <I, R> (iter: Iterable<I>, func: (e: I) => R): Gen
     yield func(item)
   }
 }
+
+export function * iteratorFilter <I> (iter: Iterable<I>, func: (e: I) => boolean): Generator<I> {
+  for (const item of iter) {
+    if (func(item)) {
+      yield item
+    }
+  }
+}
+
+/* @ts-ignore TS2550 -- Set.difference() exists in node since node2024 */
+export const setDifference: <I>(s1: Set<I>, s2: Set<any>) => Set<I> = typeof Set.prototype.difference === 'function'
+  /* @ts-ignore TS2550 */
+  ? (s1, s2) => s1.difference(s2)
+  : (s1, s2) => new Set(iteratorFilter(s1, (i) => !s2.has(i)) )

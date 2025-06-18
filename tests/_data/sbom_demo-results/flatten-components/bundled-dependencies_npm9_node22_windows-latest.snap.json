@@ -79,10 +79,10 @@
     },
     "component": {
       "type": "application",
-      "name": "DummyComponent.D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project",
-      "bom-ref": "DummyComponent.D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project",
-      "description": "This is a dummy component \"D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project\" that fills the gap where the actual built failed.",
-      "purl": "pkg:npm/dummycomponent.d%3A%5Ca%5Ccyclonedx-node-npm%5Ccyclonedx-node-npm%5Cdemo%5Cbundled-dependencies%5Cproject",
+      "name": "demo-bundled-deps",
+      "version": "0.0.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0",
+      "purl": "pkg:npm/demo-bundled-deps@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:path",
@@ -94,9 +94,35 @@
   "components": [
     {
       "type": "library",
+      "name": "bundle-dependencies",
+      "version": "1.0.2",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2",
+      "purl": "pkg:npm/bundle-dependencies@1.0.2",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "7ccf50f6125c5f56589f28ef7874e9b4566aa4b2833b681dc5186e07c30d498110bc2ea42260c31f6d37f09fed1df72e5742511948fc9fc6b10d8d009c59177c"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "ansi-regex",
       "version": "2.0.0",
-      "bom-ref": "BomRef.0co9grainp.g4r116atkn8",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/ansi-regex@2.0.0",
       "purl": "pkg:npm/ansi-regex@2.0.0",
       "properties": [
         {
@@ -111,213 +137,9 @@
     },
     {
       "type": "library",
-      "name": "escape-string-regexp",
-      "version": "1.0.5",
-      "bom-ref": "BomRef.169d155q0m.nkagm43eos8",
-      "purl": "pkg:npm/escape-string-regexp@1.0.5",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/escape-string-regexp"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "y18n",
-      "version": "3.2.0",
-      "bom-ref": "BomRef.1d5p90qs498.ujbmmh86o2",
-      "purl": "pkg:npm/y18n@3.2.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/y18n"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "spdx-license-ids",
-      "version": "1.2.0",
-      "bom-ref": "BomRef.1r851okth5g.fo21rtaijso",
-      "purl": "pkg:npm/spdx-license-ids@1.2.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/spdx-license-ids"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "is-fullwidth-code-point",
-      "version": "1.0.0",
-      "bom-ref": "BomRef.2k0s2n0n7c8.buggopioqj8",
-      "purl": "pkg:npm/is-fullwidth-code-point@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/is-fullwidth-code-point"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "window-size",
-      "version": "0.2.0",
-      "bom-ref": "BomRef.2vt18p163m8.bkfr9b8n0io",
-      "purl": "pkg:npm/window-size@0.2.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/window-size"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "os-locale",
-      "version": "1.4.0",
-      "bom-ref": "BomRef.39rci1t6sno.i5b2voqau9",
-      "purl": "pkg:npm/os-locale@1.4.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/os-locale"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "object-assign",
-      "version": "4.0.1",
-      "bom-ref": "BomRef.3em7a79qv5.2ki7vdveqt8",
-      "purl": "pkg:npm/object-assign@4.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/object-assign"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "pinkie-promise",
-      "version": "2.0.0",
-      "bom-ref": "BomRef.4adao7v42rg.rdd15ilrjn",
-      "purl": "pkg:npm/pinkie-promise@2.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/pinkie-promise"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "parse-json",
-      "version": "2.2.0",
-      "bom-ref": "BomRef.5oihf6nndd.v9evdcjgpc8",
-      "purl": "pkg:npm/parse-json@2.2.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/parse-json"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "pkg-conf",
-      "version": "1.1.1",
-      "bom-ref": "BomRef.5oqviihamgo.b4d93j7i66o",
-      "purl": "pkg:npm/pkg-conf@1.1.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/pkg-conf"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "require-main-filename",
-      "version": "1.0.1",
-      "bom-ref": "BomRef.669s6htuevo.hc3q52dntdo",
-      "purl": "pkg:npm/require-main-filename@1.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/require-main-filename"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "string-width",
-      "version": "1.0.1",
-      "bom-ref": "BomRef.763iu1h64t.3hn2enetsso",
-      "purl": "pkg:npm/string-width@1.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/string-width"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "builtin-modules",
       "version": "1.1.1",
-      "bom-ref": "BomRef.7sh7u8igmag.6m4oku9vf28",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/builtin-modules@1.1.1",
       "purl": "pkg:npm/builtin-modules@1.1.1",
       "properties": [
         {
@@ -332,9 +154,111 @@
     },
     {
       "type": "library",
+      "name": "camelcase",
+      "version": "2.1.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/camelcase@2.1.0",
+      "purl": "pkg:npm/camelcase@2.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/camelcase"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cliui",
+      "version": "3.1.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/cliui@3.1.0",
+      "purl": "pkg:npm/cliui@3.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/cliui"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "code-point-at",
+      "version": "1.0.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/code-point-at@1.0.0",
+      "purl": "pkg:npm/code-point-at@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/code-point-at"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "decamelize",
+      "version": "1.1.2",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/decamelize@1.1.2",
+      "purl": "pkg:npm/decamelize@1.1.2",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/decamelize"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "error-ex",
+      "version": "1.3.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/error-ex@1.3.0",
+      "purl": "pkg:npm/error-ex@1.3.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/error-ex"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "escape-string-regexp",
+      "version": "1.0.5",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/escape-string-regexp@1.0.5",
+      "purl": "pkg:npm/escape-string-regexp@1.0.5",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/escape-string-regexp"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "find-up",
       "version": "1.1.0",
-      "bom-ref": "BomRef.8174av86bb.qlvgcq19npg",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/find-up@1.1.0",
       "purl": "pkg:npm/find-up@1.1.0",
       "properties": [
         {
@@ -349,10 +273,10 @@
     },
     {
       "type": "library",
-      "name": "yargs-parser",
-      "version": "2.1.0",
-      "bom-ref": "BomRef.8a352uhlka8.81mpnr3pun8",
-      "purl": "pkg:npm/yargs-parser@2.1.0",
+      "name": "graceful-fs",
+      "version": "4.1.3",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/graceful-fs@4.1.3",
+      "purl": "pkg:npm/graceful-fs@4.1.3",
       "properties": [
         {
           "name": "cdx:npm:package:bundled",
@@ -360,7 +284,7 @@
         },
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/yargs-parser"
+          "value": "node_modules/bundle-dependencies/node_modules/graceful-fs"
         }
       ]
     },
@@ -368,7 +292,7 @@
       "type": "library",
       "name": "hosted-git-info",
       "version": "2.1.4",
-      "bom-ref": "BomRef.944j6kbpsog.j7g4vmqtqmg",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/hosted-git-info@2.1.4",
       "purl": "pkg:npm/hosted-git-info@2.1.4",
       "properties": [
         {
@@ -383,9 +307,672 @@
     },
     {
       "type": "library",
+      "name": "invert-kv",
+      "version": "1.0.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/invert-kv@1.0.0",
+      "purl": "pkg:npm/invert-kv@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/invert-kv"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-arrayish",
+      "version": "0.2.1",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/is-arrayish@0.2.1",
+      "purl": "pkg:npm/is-arrayish@0.2.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/is-arrayish"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-builtin-module",
+      "version": "1.0.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/is-builtin-module@1.0.0",
+      "purl": "pkg:npm/is-builtin-module@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/is-builtin-module"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-fullwidth-code-point",
+      "version": "1.0.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/is-fullwidth-code-point@1.0.0",
+      "purl": "pkg:npm/is-fullwidth-code-point@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/is-fullwidth-code-point"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-utf8",
+      "version": "0.2.1",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/is-utf8@0.2.1",
+      "purl": "pkg:npm/is-utf8@0.2.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/is-utf8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lcid",
+      "version": "1.0.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/lcid@1.0.0",
+      "purl": "pkg:npm/lcid@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/lcid"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "load-json-file",
+      "version": "1.1.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/load-json-file@1.1.0",
+      "purl": "pkg:npm/load-json-file@1.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/load-json-file"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lodash.assign",
+      "version": "4.0.3",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/lodash.assign@4.0.3",
+      "purl": "pkg:npm/lodash.assign@4.0.3",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/lodash.assign"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lodash.keys",
+      "version": "4.0.3",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/lodash.keys@4.0.3",
+      "purl": "pkg:npm/lodash.keys@4.0.3",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/lodash.keys"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lodash.rest",
+      "version": "4.0.1",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/lodash.rest@4.0.1",
+      "purl": "pkg:npm/lodash.rest@4.0.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/lodash.rest"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "normalize-package-data",
+      "version": "2.3.5",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/normalize-package-data@2.3.5",
+      "purl": "pkg:npm/normalize-package-data@2.3.5",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/normalize-package-data"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "number-is-nan",
+      "version": "1.0.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/number-is-nan@1.0.0",
+      "purl": "pkg:npm/number-is-nan@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/number-is-nan"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "object-assign",
+      "version": "4.0.1",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/object-assign@4.0.1",
+      "purl": "pkg:npm/object-assign@4.0.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/object-assign"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "os-locale",
+      "version": "1.4.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/os-locale@1.4.0",
+      "purl": "pkg:npm/os-locale@1.4.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/os-locale"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "parse-json",
+      "version": "2.2.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/parse-json@2.2.0",
+      "purl": "pkg:npm/parse-json@2.2.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/parse-json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "path-exists",
+      "version": "2.1.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/path-exists@2.1.0",
+      "purl": "pkg:npm/path-exists@2.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/path-exists"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "path-type",
+      "version": "1.1.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/path-type@1.1.0",
+      "purl": "pkg:npm/path-type@1.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/path-type"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pify",
+      "version": "2.3.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pify@2.3.0",
+      "purl": "pkg:npm/pify@2.3.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/pify"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pinkie-promise",
+      "version": "2.0.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pinkie-promise@2.0.0",
+      "purl": "pkg:npm/pinkie-promise@2.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/pinkie-promise"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pinkie",
+      "version": "2.0.4",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pinkie@2.0.4",
+      "purl": "pkg:npm/pinkie@2.0.4",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/pinkie"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pkg-conf",
+      "version": "1.1.1",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pkg-conf@1.1.1",
+      "purl": "pkg:npm/pkg-conf@1.1.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/pkg-conf"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "read-pkg-up",
+      "version": "1.0.1",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/read-pkg-up@1.0.1",
+      "purl": "pkg:npm/read-pkg-up@1.0.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/read-pkg-up"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "read-pkg",
+      "version": "1.1.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/read-pkg@1.1.0",
+      "purl": "pkg:npm/read-pkg@1.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/read-pkg"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "require-main-filename",
+      "version": "1.0.1",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/require-main-filename@1.0.1",
+      "purl": "pkg:npm/require-main-filename@1.0.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/require-main-filename"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "semver",
+      "version": "5.1.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/semver@5.1.0",
+      "purl": "pkg:npm/semver@5.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/semver"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spdx-correct",
+      "version": "1.0.2",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-correct@1.0.2",
+      "purl": "pkg:npm/spdx-correct@1.0.2",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/spdx-correct"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spdx-exceptions",
+      "version": "1.0.4",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-exceptions@1.0.4",
+      "purl": "pkg:npm/spdx-exceptions@1.0.4",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/spdx-exceptions"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spdx-expression-parse",
+      "version": "1.0.2",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-expression-parse@1.0.2",
+      "purl": "pkg:npm/spdx-expression-parse@1.0.2",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/spdx-expression-parse"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spdx-license-ids",
+      "version": "1.2.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-license-ids@1.2.0",
+      "purl": "pkg:npm/spdx-license-ids@1.2.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/spdx-license-ids"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "string-width",
+      "version": "1.0.1",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/string-width@1.0.1",
+      "purl": "pkg:npm/string-width@1.0.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/string-width"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "strip-ansi",
+      "version": "3.0.1",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/strip-ansi@3.0.1",
+      "purl": "pkg:npm/strip-ansi@3.0.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/strip-ansi"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "strip-bom",
+      "version": "2.0.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/strip-bom@2.0.0",
+      "purl": "pkg:npm/strip-bom@2.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/strip-bom"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "symbol",
+      "version": "0.2.1",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/symbol@0.2.1",
+      "purl": "pkg:npm/symbol@0.2.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/symbol"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "validate-npm-package-license",
+      "version": "3.0.1",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/validate-npm-package-license@3.0.1",
+      "purl": "pkg:npm/validate-npm-package-license@3.0.1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/validate-npm-package-license"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "window-size",
+      "version": "0.2.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/window-size@0.2.0",
+      "purl": "pkg:npm/window-size@0.2.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/window-size"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "wrap-ansi",
+      "version": "1.0.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/wrap-ansi@1.0.0",
+      "purl": "pkg:npm/wrap-ansi@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/wrap-ansi"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "y18n",
+      "version": "3.2.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/y18n@3.2.0",
+      "purl": "pkg:npm/y18n@3.2.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/y18n"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "yargs-parser",
+      "version": "2.1.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/yargs-parser@2.1.0",
+      "purl": "pkg:npm/yargs-parser@2.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/yargs-parser"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "yargs",
+      "version": "4.1.0",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/yargs@4.1.0",
+      "purl": "pkg:npm/yargs@4.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bundle-dependencies/node_modules/yargs"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "is-obj",
       "version": "3.0.0",
-      "bom-ref": "BomRef.adveghv1ok8.ecu0umhf66",
+      "bom-ref": "-/demo-bundled-deps@0.0.0|-/is-obj@3.0.0",
       "purl": "pkg:npm/is-obj@3.0.0",
       "externalReferences": [
         {
@@ -410,754 +997,292 @@
           "value": "node_modules/is-obj"
         }
       ]
-    },
-    {
-      "type": "library",
-      "name": "pinkie",
-      "version": "2.0.4",
-      "bom-ref": "BomRef.ag3ahd5eld8.dk6mufm9o6",
-      "purl": "pkg:npm/pinkie@2.0.4",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/pinkie"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "spdx-expression-parse",
-      "version": "1.0.2",
-      "bom-ref": "BomRef.ahaaht7s4r.20jk4ra8sfo",
-      "purl": "pkg:npm/spdx-expression-parse@1.0.2",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/spdx-expression-parse"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "spdx-correct",
-      "version": "1.0.2",
-      "bom-ref": "BomRef.bjui9b5dl58.ebbogdq64i8",
-      "purl": "pkg:npm/spdx-correct@1.0.2",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/spdx-correct"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "lcid",
-      "version": "1.0.0",
-      "bom-ref": "BomRef.bvkfnlmuuho.k4iup1tgr98",
-      "purl": "pkg:npm/lcid@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/lcid"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "invert-kv",
-      "version": "1.0.0",
-      "bom-ref": "BomRef.c01j7h0bugg.madml9qsebo",
-      "purl": "pkg:npm/invert-kv@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/invert-kv"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "load-json-file",
-      "version": "1.1.0",
-      "bom-ref": "BomRef.ceocad701pg.mtmbs7ocdc8",
-      "purl": "pkg:npm/load-json-file@1.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/load-json-file"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "read-pkg-up",
-      "version": "1.0.1",
-      "bom-ref": "BomRef.dg1k4dio49g.vp7v75lceno",
-      "purl": "pkg:npm/read-pkg-up@1.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/read-pkg-up"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "yargs",
-      "version": "4.1.0",
-      "bom-ref": "BomRef.dijg96ebsto.9a38lahr3lo",
-      "purl": "pkg:npm/yargs@4.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/yargs"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "graceful-fs",
-      "version": "4.1.3",
-      "bom-ref": "BomRef.dof0dbhbndo.hl0da757f8o",
-      "purl": "pkg:npm/graceful-fs@4.1.3",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/graceful-fs"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "pify",
-      "version": "2.3.0",
-      "bom-ref": "BomRef.eh8mug2jp38.qo9ghc1vlio",
-      "purl": "pkg:npm/pify@2.3.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/pify"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "wrap-ansi",
-      "version": "1.0.0",
-      "bom-ref": "BomRef.ftvl28p47m8.7ioa56asn7g",
-      "purl": "pkg:npm/wrap-ansi@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/wrap-ansi"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "number-is-nan",
-      "version": "1.0.0",
-      "bom-ref": "BomRef.gu1s276hvpo.g1b0ih5jdjo",
-      "purl": "pkg:npm/number-is-nan@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/number-is-nan"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "error-ex",
-      "version": "1.3.0",
-      "bom-ref": "BomRef.hdscgrcmgo8.ctqii7p25m",
-      "purl": "pkg:npm/error-ex@1.3.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/error-ex"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "is-utf8",
-      "version": "0.2.1",
-      "bom-ref": "BomRef.j0v3pq37as.6oq4r4nu9v",
-      "purl": "pkg:npm/is-utf8@0.2.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/is-utf8"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "camelcase",
-      "version": "2.1.0",
-      "bom-ref": "BomRef.kjbjq1fd81g.tjqi41a9ol8",
-      "purl": "pkg:npm/camelcase@2.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/camelcase"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "lodash.rest",
-      "version": "4.0.1",
-      "bom-ref": "BomRef.l0va8s9v9qg.kpnlsrke7k",
-      "purl": "pkg:npm/lodash.rest@4.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/lodash.rest"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "lodash.keys",
-      "version": "4.0.3",
-      "bom-ref": "BomRef.l6ruen64b68.74bao8feln",
-      "purl": "pkg:npm/lodash.keys@4.0.3",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/lodash.keys"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "path-type",
-      "version": "1.1.0",
-      "bom-ref": "BomRef.lhjlbv06h9o.km66u0bhvs",
-      "purl": "pkg:npm/path-type@1.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/path-type"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "path-exists",
-      "version": "2.1.0",
-      "bom-ref": "BomRef.m7qpthmrbm.jieiufv7mm",
-      "purl": "pkg:npm/path-exists@2.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/path-exists"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "semver",
-      "version": "5.1.0",
-      "bom-ref": "BomRef.m80js9b866o.9gaefj11i5g",
-      "purl": "pkg:npm/semver@5.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/semver"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "is-builtin-module",
-      "version": "1.0.0",
-      "bom-ref": "BomRef.n2o35k5i9g8.302k8slaafo",
-      "purl": "pkg:npm/is-builtin-module@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/is-builtin-module"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "code-point-at",
-      "version": "1.0.0",
-      "bom-ref": "BomRef.oa390m1otq.f66925ngjc8",
-      "purl": "pkg:npm/code-point-at@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/code-point-at"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "spdx-exceptions",
-      "version": "1.0.4",
-      "bom-ref": "BomRef.otp6arqc408.6mhv66dblo8",
-      "purl": "pkg:npm/spdx-exceptions@1.0.4",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/spdx-exceptions"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "normalize-package-data",
-      "version": "2.3.5",
-      "bom-ref": "BomRef.rcrus7unvrg.h59tfighceg",
-      "purl": "pkg:npm/normalize-package-data@2.3.5",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/normalize-package-data"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "strip-bom",
-      "version": "2.0.0",
-      "bom-ref": "BomRef.rjp1pvb0ago.7l3qorqdfb",
-      "purl": "pkg:npm/strip-bom@2.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/strip-bom"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "validate-npm-package-license",
-      "version": "3.0.1",
-      "bom-ref": "BomRef.ronlcg3ls5g.cee87oqeuq",
-      "purl": "pkg:npm/validate-npm-package-license@3.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/validate-npm-package-license"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "symbol",
-      "version": "0.2.1",
-      "bom-ref": "BomRef.rrkablqiu.61p3b33e3r",
-      "purl": "pkg:npm/symbol@0.2.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/symbol"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "strip-ansi",
-      "version": "3.0.1",
-      "bom-ref": "BomRef.s66avhmep1g.1tgpen81sto",
-      "purl": "pkg:npm/strip-ansi@3.0.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/strip-ansi"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "cliui",
-      "version": "3.1.0",
-      "bom-ref": "BomRef.s8htel03r3o.8t8cd4ocd4g",
-      "purl": "pkg:npm/cliui@3.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/cliui"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "decamelize",
-      "version": "1.1.2",
-      "bom-ref": "BomRef.scg5h3566v.fa2qvffaot",
-      "purl": "pkg:npm/decamelize@1.1.2",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/decamelize"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "is-arrayish",
-      "version": "0.2.1",
-      "bom-ref": "BomRef.unhumop08u.h9uk1nrj6o8",
-      "purl": "pkg:npm/is-arrayish@0.2.1",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/is-arrayish"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "read-pkg",
-      "version": "1.1.0",
-      "bom-ref": "BomRef.utlevsu5ogo.n3pq5dbqgv8",
-      "purl": "pkg:npm/read-pkg@1.1.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/read-pkg"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "lodash.assign",
-      "version": "4.0.3",
-      "bom-ref": "BomRef.vcou2op228o.pqk3pl3h0t",
-      "purl": "pkg:npm/lodash.assign@4.0.3",
-      "properties": [
-        {
-          "name": "cdx:npm:package:bundled",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies/node_modules/lodash.assign"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "bundle-dependencies",
-      "version": "1.0.2",
-      "bom-ref": "BomRef.vndi4so6sto.hlah1mn102",
-      "purl": "pkg:npm/bundle-dependencies@1.0.2",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz",
-          "type": "distribution",
-          "hashes": [
-            {
-              "alg": "SHA-512",
-              "content": "7ccf50f6125c5f56589f28ef7874e9b4566aa4b2833b681dc5186e07c30d498110bc2ea42260c31f6d37f09fed1df72e5742511948fc9fc6b10d8d009c59177c"
-            }
-          ],
-          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/bundle-dependencies"
-        }
-      ]
     }
   ],
   "dependencies": [
     {
-      "ref": "BomRef.0co9grainp.g4r116atkn8"
+      "ref": "-/demo-bundled-deps@0.0.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2",
+        "-/demo-bundled-deps@0.0.0|-/is-obj@3.0.0"
+      ]
     },
     {
-      "ref": "BomRef.169d155q0m.nkagm43eos8"
+      "ref": "-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/yargs@4.1.0"
+      ]
     },
     {
-      "ref": "BomRef.1d5p90qs498.ujbmmh86o2"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/ansi-regex@2.0.0"
     },
     {
-      "ref": "BomRef.1r851okth5g.fo21rtaijso"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/builtin-modules@1.1.1"
     },
     {
-      "ref": "BomRef.2k0s2n0n7c8.buggopioqj8"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/camelcase@2.1.0"
     },
     {
-      "ref": "BomRef.2vt18p163m8.bkfr9b8n0io"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/cliui@3.1.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/string-width@1.0.1",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/strip-ansi@3.0.1",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/wrap-ansi@1.0.0"
+      ]
     },
     {
-      "ref": "BomRef.39rci1t6sno.i5b2voqau9"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/code-point-at@1.0.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/number-is-nan@1.0.0"
+      ]
     },
     {
-      "ref": "BomRef.3em7a79qv5.2ki7vdveqt8"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/decamelize@1.1.2",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/escape-string-regexp@1.0.5"
+      ]
     },
     {
-      "ref": "BomRef.4adao7v42rg.rdd15ilrjn"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/error-ex@1.3.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/is-arrayish@0.2.1"
+      ]
     },
     {
-      "ref": "BomRef.5oihf6nndd.v9evdcjgpc8"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/escape-string-regexp@1.0.5"
     },
     {
-      "ref": "BomRef.5oqviihamgo.b4d93j7i66o"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/find-up@1.1.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/path-exists@2.1.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pinkie-promise@2.0.0"
+      ]
     },
     {
-      "ref": "BomRef.669s6htuevo.hc3q52dntdo"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/graceful-fs@4.1.3"
     },
     {
-      "ref": "BomRef.763iu1h64t.3hn2enetsso"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/hosted-git-info@2.1.4"
     },
     {
-      "ref": "BomRef.7sh7u8igmag.6m4oku9vf28"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/invert-kv@1.0.0"
     },
     {
-      "ref": "BomRef.8174av86bb.qlvgcq19npg"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/is-arrayish@0.2.1"
     },
     {
-      "ref": "BomRef.8a352uhlka8.81mpnr3pun8"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/is-builtin-module@1.0.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/builtin-modules@1.1.1"
+      ]
     },
     {
-      "ref": "BomRef.944j6kbpsog.j7g4vmqtqmg"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/is-fullwidth-code-point@1.0.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/number-is-nan@1.0.0"
+      ]
     },
     {
-      "ref": "BomRef.adveghv1ok8.ecu0umhf66"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/is-utf8@0.2.1"
     },
     {
-      "ref": "BomRef.ag3ahd5eld8.dk6mufm9o6"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/lcid@1.0.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/invert-kv@1.0.0"
+      ]
     },
     {
-      "ref": "BomRef.ahaaht7s4r.20jk4ra8sfo"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/load-json-file@1.1.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/graceful-fs@4.1.3",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/parse-json@2.2.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pify@2.3.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pinkie-promise@2.0.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/strip-bom@2.0.0"
+      ]
     },
     {
-      "ref": "BomRef.bjui9b5dl58.ebbogdq64i8"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/lodash.assign@4.0.3",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/lodash.keys@4.0.3",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/lodash.rest@4.0.1"
+      ]
     },
     {
-      "ref": "BomRef.bvkfnlmuuho.k4iup1tgr98"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/lodash.keys@4.0.3"
     },
     {
-      "ref": "BomRef.c01j7h0bugg.madml9qsebo"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/lodash.rest@4.0.1"
     },
     {
-      "ref": "BomRef.ceocad701pg.mtmbs7ocdc8"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/normalize-package-data@2.3.5",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/hosted-git-info@2.1.4",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/is-builtin-module@1.0.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/semver@5.1.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/validate-npm-package-license@3.0.1"
+      ]
     },
     {
-      "ref": "BomRef.dg1k4dio49g.vp7v75lceno"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/number-is-nan@1.0.0"
     },
     {
-      "ref": "BomRef.dijg96ebsto.9a38lahr3lo"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/object-assign@4.0.1"
     },
     {
-      "ref": "BomRef.dof0dbhbndo.hl0da757f8o"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/os-locale@1.4.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/lcid@1.0.0"
+      ]
     },
     {
-      "ref": "BomRef.eh8mug2jp38.qo9ghc1vlio"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/parse-json@2.2.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/error-ex@1.3.0"
+      ]
     },
     {
-      "ref": "BomRef.ftvl28p47m8.7ioa56asn7g"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/path-exists@2.1.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pinkie-promise@2.0.0"
+      ]
     },
     {
-      "ref": "BomRef.gu1s276hvpo.g1b0ih5jdjo"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/path-type@1.1.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/graceful-fs@4.1.3",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pify@2.3.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pinkie-promise@2.0.0"
+      ]
     },
     {
-      "ref": "BomRef.hdscgrcmgo8.ctqii7p25m"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pify@2.3.0"
     },
     {
-      "ref": "BomRef.j0v3pq37as.6oq4r4nu9v"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pinkie-promise@2.0.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pinkie@2.0.4"
+      ]
     },
     {
-      "ref": "BomRef.kjbjq1fd81g.tjqi41a9ol8"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pinkie@2.0.4"
     },
     {
-      "ref": "BomRef.l0va8s9v9qg.kpnlsrke7k"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pkg-conf@1.1.1",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/find-up@1.1.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/object-assign@4.0.1",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/read-pkg@1.1.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/symbol@0.2.1"
+      ]
     },
     {
-      "ref": "BomRef.l6ruen64b68.74bao8feln"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/read-pkg-up@1.0.1",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/find-up@1.1.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/read-pkg@1.1.0"
+      ]
     },
     {
-      "ref": "BomRef.lhjlbv06h9o.km66u0bhvs"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/read-pkg@1.1.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/load-json-file@1.1.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/normalize-package-data@2.3.5",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/path-type@1.1.0"
+      ]
     },
     {
-      "ref": "BomRef.m7qpthmrbm.jieiufv7mm"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/require-main-filename@1.0.1"
     },
     {
-      "ref": "BomRef.m80js9b866o.9gaefj11i5g"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/semver@5.1.0"
     },
     {
-      "ref": "BomRef.n2o35k5i9g8.302k8slaafo"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-correct@1.0.2",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-license-ids@1.2.0"
+      ]
     },
     {
-      "ref": "BomRef.oa390m1otq.f66925ngjc8"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-exceptions@1.0.4"
     },
     {
-      "ref": "BomRef.otp6arqc408.6mhv66dblo8"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-expression-parse@1.0.2",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-exceptions@1.0.4",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-license-ids@1.2.0"
+      ]
     },
     {
-      "ref": "BomRef.rcrus7unvrg.h59tfighceg"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-license-ids@1.2.0"
     },
     {
-      "ref": "BomRef.rjp1pvb0ago.7l3qorqdfb"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/string-width@1.0.1",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/code-point-at@1.0.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/is-fullwidth-code-point@1.0.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/strip-ansi@3.0.1"
+      ]
     },
     {
-      "ref": "BomRef.ronlcg3ls5g.cee87oqeuq"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/strip-ansi@3.0.1",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/ansi-regex@2.0.0"
+      ]
     },
     {
-      "ref": "BomRef.rrkablqiu.61p3b33e3r"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/strip-bom@2.0.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/is-utf8@0.2.1"
+      ]
     },
     {
-      "ref": "BomRef.s66avhmep1g.1tgpen81sto"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/symbol@0.2.1"
     },
     {
-      "ref": "BomRef.s8htel03r3o.8t8cd4ocd4g"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/validate-npm-package-license@3.0.1",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-correct@1.0.2",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/spdx-expression-parse@1.0.2"
+      ]
     },
     {
-      "ref": "BomRef.scg5h3566v.fa2qvffaot"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/window-size@0.2.0"
     },
     {
-      "ref": "BomRef.unhumop08u.h9uk1nrj6o8"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/wrap-ansi@1.0.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/string-width@1.0.1"
+      ]
     },
     {
-      "ref": "BomRef.utlevsu5ogo.n3pq5dbqgv8"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/y18n@3.2.0"
     },
     {
-      "ref": "BomRef.vcou2op228o.pqk3pl3h0t"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/yargs-parser@2.1.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/camelcase@2.1.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/lodash.assign@4.0.3"
+      ]
     },
     {
-      "ref": "BomRef.vndi4so6sto.hlah1mn102"
+      "ref": "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/yargs@4.1.0",
+      "dependsOn": [
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/camelcase@2.1.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/cliui@3.1.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/decamelize@1.1.2",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/os-locale@1.4.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/pkg-conf@1.1.1",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/read-pkg-up@1.0.1",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/require-main-filename@1.0.1",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/string-width@1.0.1",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/window-size@0.2.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/y18n@3.2.0",
+        "-/demo-bundled-deps@0.0.0|-/demo-bundled-deps@0.0.0|-/bundle-dependencies@1.0.2|-/yargs-parser@2.1.0"
+      ]
     },
     {
-      "ref": "DummyComponent.D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\bundled-dependencies\\project"
+      "ref": "-/demo-bundled-deps@0.0.0|-/is-obj@3.0.0"
     }
   ]
 }
