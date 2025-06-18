@@ -293,7 +293,7 @@ export class BomBuilder {
     }
   }
 
-
+  /* eslint-disable-next-line complexity -- ack */
   private gatherPackages(data: any): Map<PackagePath, PackageData> {
     const packages = new Map<PackagePath, PackageData>()
     const todo: Array<typeof data> = [data]
@@ -303,31 +303,22 @@ export class BomBuilder {
       /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- ack */
       const wpath = w.path
       if (!isString(wpath)) { continue }
-      let d = packages.get(wpath)
+      let d: PackageData | undefined = packages.get(wpath)
       if (d === undefined) {
-        d = {
+        packages.set(wpath, d = {
           name: w.name,
-          version: w.version,
-          resolved: w.resolved,
-          integrity: w.integrity,
-          inBundle: w.inBundle,
-          extraneous: w.extraneous,
-          optional: w.optional,
-          devOptional: w.devOptional,
-          dev: w.dev,
-          dependencies: new Set()
-        }
-        packages.set(wpath, d)
-      } else {
-        d.version ??= w.version
-        d.resolved ??= w.resolved
-        d.integrity ??= w.integrity
-        d.inBundle ??= w.inBundle
-        d.extraneous ??= w.extraneous
-        d.optional ??= w.optional
-        d.devOptional ??= w.devOptional
-        d.dev ??= w.dev
+          dependencies: new Set<PackagePath>()
+        })
       }
+      d.version ??= w.version
+      d.license ??= w.license
+      d.resolved ??= w.resolved
+      d.integrity ??= w.integrity
+      d.inBundle ??= w.inBundle
+      d.extraneous ??= w.extraneous
+      d.optional ??= w.optional
+      d.devOptional ??= w.devOptional
+      d.dev ??= w.dev
       // `dependencies` might be missing to prevent circles...
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- ack */
       const dependencies: Array<typeof data> = Object.values(w.dependencies ?? {})
@@ -434,7 +425,8 @@ export class BomBuilder {
     if ( component === undefined ) {
       component = this.componentBuilder.makeComponent(
         /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
-        this.normalizePackageJson({name: data.name, version: data.version}), type)
+        this.normalizePackageJson({name: data.name, version: data.version, license: data.license})
+        , type)
     }
     if (component === undefined) {
       this.console.info('INFO  | creating DummyComponent for ', ppath)
