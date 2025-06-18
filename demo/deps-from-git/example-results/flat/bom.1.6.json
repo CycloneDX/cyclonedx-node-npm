@@ -9,13 +9,13 @@
         {
           "type": "application",
           "name": "npm",
-          "version": "10.9.2"
+          "version": "11.4.1"
         },
         {
           "type": "library",
           "name": "cyclonedx-library",
           "group": "@cyclonedx",
-          "version": "7.1.0",
+          "version": "8.4.0",
           "author": "Jan Kowalleck",
           "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
           "licenses": [
@@ -47,7 +47,7 @@
           "type": "application",
           "name": "cyclonedx-npm",
           "group": "@cyclonedx",
-          "version": "2.1.0",
+          "version": "3.1.0",
           "author": "Jan Kowalleck",
           "description": "Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.",
           "licenses": [
@@ -102,7 +102,7 @@
       "name": "cyclonedx-library",
       "group": "@cyclonedx",
       "version": "6.0.0",
-      "bom-ref": "@cyclonedx/cyclonedx-library@6.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.0.0",
       "author": "Jan Kowalleck",
       "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
       "licenses": [
@@ -148,7 +148,7 @@
       "name": "cyclonedx-library",
       "group": "@cyclonedx",
       "version": "6.1.0",
-      "bom-ref": "@cyclonedx/cyclonedx-library@6.1.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.1.0",
       "author": "Jan Kowalleck",
       "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
       "licenses": [
@@ -194,7 +194,7 @@
       "name": "cyclonedx-library",
       "group": "@cyclonedx",
       "version": "6.2.0",
-      "bom-ref": "@cyclonedx/cyclonedx-library@6.2.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.2.0",
       "author": "Jan Kowalleck",
       "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
       "licenses": [
@@ -240,7 +240,7 @@
       "name": "cyclonedx-library",
       "group": "@cyclonedx",
       "version": "6.3.0",
-      "bom-ref": "@cyclonedx/cyclonedx-library@6.3.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.3.0",
       "author": "Jan Kowalleck",
       "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
       "licenses": [
@@ -286,7 +286,7 @@
       "name": "cyclonedx-library",
       "group": "@cyclonedx",
       "version": "6.4.0",
-      "bom-ref": "@cyclonedx/cyclonedx-library@6.4.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.4.0",
       "author": "Jan Kowalleck",
       "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
       "licenses": [
@@ -332,7 +332,7 @@
       "name": "cyclonedx-library",
       "group": "@cyclonedx",
       "version": "6.5.0",
-      "bom-ref": "@cyclonedx/cyclonedx-library@6.5.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.5.0",
       "author": "Jan Kowalleck",
       "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
       "licenses": [
@@ -378,7 +378,7 @@
       "name": "node-pre-gyp",
       "group": "@mapbox",
       "version": "1.0.11",
-      "bom-ref": "@mapbox/node-pre-gyp@1.0.11",
+      "bom-ref": "demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11",
       "author": "Dane Springmeyer",
       "description": "Node.js native addon binary install tool",
       "scope": "optional",
@@ -431,7 +431,7 @@
       "name": "dom",
       "group": "@oozcitak",
       "version": "1.15.10",
-      "bom-ref": "@oozcitak/dom@1.15.10",
+      "bom-ref": "demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10",
       "author": "Ozgur Ozcitak",
       "description": "A modern DOM implementation",
       "scope": "optional",
@@ -484,7 +484,7 @@
       "name": "infra",
       "group": "@oozcitak",
       "version": "1.0.8",
-      "bom-ref": "@oozcitak/infra@1.0.8",
+      "bom-ref": "demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
       "author": "Ozgur Ozcitak",
       "description": "An implementation of the Infra Living Standard",
       "scope": "optional",
@@ -537,7 +537,7 @@
       "name": "url",
       "group": "@oozcitak",
       "version": "1.0.4",
-      "bom-ref": "@oozcitak/url@1.0.4",
+      "bom-ref": "demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4",
       "author": "Ozgur Ozcitak",
       "description": "An implementation of the URL Living Standard",
       "scope": "optional",
@@ -590,7 +590,7 @@
       "name": "util",
       "group": "@oozcitak",
       "version": "8.3.8",
-      "bom-ref": "@oozcitak/util@8.3.8",
+      "bom-ref": "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8",
       "author": "Ozgur Ozcitak",
       "description": "Utility functions",
       "scope": "optional",
@@ -642,7 +642,7 @@
       "type": "library",
       "name": "abbrev",
       "version": "1.1.1",
-      "bom-ref": "abbrev@1.1.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|abbrev@1.1.1",
       "author": "Isaac Z. Schlueter",
       "description": "Like ruby's abbrev module, but in js",
       "scope": "optional",
@@ -694,7 +694,7 @@
       "type": "library",
       "name": "agent-base",
       "version": "6.0.2",
-      "bom-ref": "agent-base@6.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|agent-base@6.0.2",
       "author": "Nathan Rajlich",
       "description": "Turn a function into an `http.Agent` instance",
       "scope": "optional",
@@ -746,7 +746,7 @@
       "type": "library",
       "name": "ajv-formats-draft2019",
       "version": "1.6.1",
-      "bom-ref": "ajv-formats-draft2019@1.6.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
       "author": "Carlo Quinonez",
       "description": "Plugin for AJV that adds support for some of string formats adding in the draft2019 JSON Schema.",
       "scope": "optional",
@@ -798,7 +798,7 @@
       "type": "library",
       "name": "ajv-formats",
       "version": "2.1.1",
-      "bom-ref": "ajv-formats@2.1.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
       "author": "Evgeny Poberezkin",
       "description": "Format validation for Ajv v7+",
       "scope": "optional",
@@ -850,7 +850,7 @@
       "type": "library",
       "name": "ajv",
       "version": "8.17.1",
-      "bom-ref": "ajv@8.17.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|ajv@8.17.1",
       "author": "Evgeny Poberezkin",
       "description": "Another JSON Schema Validator",
       "scope": "optional",
@@ -902,7 +902,7 @@
       "type": "library",
       "name": "ansi-regex",
       "version": "5.0.1",
-      "bom-ref": "ansi-regex@5.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|ansi-regex@5.0.1",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
       "scope": "optional",
@@ -954,7 +954,7 @@
       "type": "library",
       "name": "aproba",
       "version": "2.0.0",
-      "bom-ref": "aproba@2.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|aproba@2.0.0",
       "author": "Rebecca Turner",
       "description": "A ridiculously light-weight argument validator (now browser friendly)",
       "scope": "optional",
@@ -1006,7 +1006,7 @@
       "type": "library",
       "name": "are-we-there-yet",
       "version": "2.0.0",
-      "bom-ref": "are-we-there-yet@2.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|are-we-there-yet@2.0.0",
       "author": "GitHub Inc.",
       "description": "Keep track of the overall completion of many disparate processes",
       "scope": "optional",
@@ -1058,7 +1058,7 @@
       "type": "library",
       "name": "argparse",
       "version": "1.0.10",
-      "bom-ref": "argparse@1.0.10",
+      "bom-ref": "demo-deps-from-git@1.0.0|argparse@1.0.10",
       "description": "Very powerful CLI arguments parser. Native port of argparse - python's options parsing library",
       "scope": "optional",
       "licenses": [
@@ -1109,7 +1109,7 @@
       "type": "library",
       "name": "balanced-match",
       "version": "1.0.2",
-      "bom-ref": "balanced-match@1.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|balanced-match@1.0.2",
       "author": "Julian Gruber",
       "description": "Match balanced character pairs, like \"{\" and \"}\"",
       "scope": "optional",
@@ -1161,7 +1161,7 @@
       "type": "library",
       "name": "bindings",
       "version": "1.5.0",
-      "bom-ref": "bindings@1.5.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|bindings@1.5.0",
       "author": "Nathan Rajlich",
       "description": "Helper module for loading your native module's .node file",
       "scope": "optional",
@@ -1213,7 +1213,7 @@
       "type": "library",
       "name": "brace-expansion",
       "version": "1.1.11",
-      "bom-ref": "brace-expansion@1.1.11",
+      "bom-ref": "demo-deps-from-git@1.0.0|brace-expansion@1.1.11",
       "author": "Julian Gruber",
       "description": "Brace expansion as known from sh/bash",
       "scope": "optional",
@@ -1265,7 +1265,7 @@
       "type": "library",
       "name": "chownr",
       "version": "2.0.0",
-      "bom-ref": "chownr@2.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|chownr@2.0.0",
       "author": "Isaac Z. Schlueter",
       "description": "like `chown -R`",
       "scope": "optional",
@@ -1317,7 +1317,7 @@
       "type": "library",
       "name": "color-support",
       "version": "1.1.3",
-      "bom-ref": "color-support@1.1.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|color-support@1.1.3",
       "author": "Isaac Z. Schlueter",
       "description": "A module which will endeavor to guess your terminal's level of color support.",
       "scope": "optional",
@@ -1369,7 +1369,7 @@
       "type": "library",
       "name": "commander",
       "version": "2.20.3",
-      "bom-ref": "commander@2.20.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|commander@2.20.3",
       "author": "TJ Holowaychuk",
       "description": "the complete solution for node.js command-line programs",
       "scope": "optional",
@@ -1421,7 +1421,7 @@
       "type": "library",
       "name": "concat-map",
       "version": "0.0.1",
-      "bom-ref": "concat-map@0.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|concat-map@0.0.1",
       "author": "James Halliday",
       "description": "concatenative mapdashery",
       "scope": "optional",
@@ -1473,7 +1473,7 @@
       "type": "library",
       "name": "console-control-strings",
       "version": "1.1.0",
-      "bom-ref": "console-control-strings@1.1.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|console-control-strings@1.1.0",
       "author": "Rebecca Turner",
       "description": "A library of cross-platform tested terminal/console command strings for doing things like color and cursor positioning.  This is a subset of both ansi and vt100.  All control codes included work on both Windows & Unix-like OSes, except where noted.",
       "scope": "optional",
@@ -1525,7 +1525,7 @@
       "type": "library",
       "name": "debug",
       "version": "4.3.5",
-      "bom-ref": "debug@4.3.5",
+      "bom-ref": "demo-deps-from-git@1.0.0|debug@4.3.5",
       "author": "Josh Junon",
       "description": "Lightweight debugging utility for Node.js and the browser",
       "scope": "optional",
@@ -1577,7 +1577,7 @@
       "type": "library",
       "name": "delegates",
       "version": "1.0.0",
-      "bom-ref": "delegates@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|delegates@1.0.0",
       "description": "delegate methods and accessors to another property",
       "scope": "optional",
       "licenses": [
@@ -1628,7 +1628,7 @@
       "type": "library",
       "name": "detect-libc",
       "version": "2.0.3",
-      "bom-ref": "detect-libc@2.0.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|detect-libc@2.0.3",
       "author": "Lovell Fuller",
       "description": "Node.js module to detect the C standard library (libc) implementation family and version",
       "scope": "optional",
@@ -1680,7 +1680,7 @@
       "type": "library",
       "name": "discontinuous-range",
       "version": "1.0.0",
-      "bom-ref": "discontinuous-range@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|discontinuous-range@1.0.0",
       "author": "David Tudury",
       "description": "for adding, subtracting, and indexing discontinuous ranges of numbers",
       "scope": "optional",
@@ -1732,7 +1732,7 @@
       "type": "library",
       "name": "emoji-regex",
       "version": "8.0.0",
-      "bom-ref": "emoji-regex@8.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|emoji-regex@8.0.0",
       "author": "Mathias Bynens",
       "description": "A regular expression to match all Emoji-only symbols as per the Unicode Standard.",
       "scope": "optional",
@@ -1784,7 +1784,7 @@
       "type": "library",
       "name": "esprima",
       "version": "4.0.1",
-      "bom-ref": "esprima@4.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|esprima@4.0.1",
       "author": "Ariya Hidayat",
       "description": "ECMAScript parsing infrastructure for multipurpose analysis",
       "scope": "optional",
@@ -1836,7 +1836,7 @@
       "type": "library",
       "name": "extend",
       "version": "3.0.2",
-      "bom-ref": "extend@3.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|extend@3.0.2",
       "author": "Stefan Thomas",
       "description": "Port of jQuery.extend for node.js and the browser",
       "scope": "optional",
@@ -1888,7 +1888,7 @@
       "type": "library",
       "name": "fast-deep-equal",
       "version": "3.1.3",
-      "bom-ref": "fast-deep-equal@3.1.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|fast-deep-equal@3.1.3",
       "author": "Evgeny Poberezkin",
       "description": "Fast deep equal",
       "scope": "optional",
@@ -1940,7 +1940,7 @@
       "type": "library",
       "name": "fast-uri",
       "version": "3.0.1",
-      "bom-ref": "fast-uri@3.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|fast-uri@3.0.1",
       "author": "Vincent Le Goff",
       "description": "Dependency free RFC 3986 URI toolbox",
       "scope": "optional",
@@ -1992,7 +1992,7 @@
       "type": "library",
       "name": "file-uri-to-path",
       "version": "1.0.0",
-      "bom-ref": "file-uri-to-path@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|file-uri-to-path@1.0.0",
       "author": "Nathan Rajlich",
       "description": "Convert a file: URI to a file path",
       "scope": "optional",
@@ -2044,7 +2044,7 @@
       "type": "library",
       "name": "fs-minipass",
       "version": "2.1.0",
-      "bom-ref": "fs-minipass@2.1.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|fs-minipass@2.1.0",
       "author": "Isaac Z. Schlueter",
       "description": "fs read and write streams based on minipass",
       "scope": "optional",
@@ -2096,7 +2096,7 @@
       "type": "library",
       "name": "minipass",
       "version": "3.3.6",
-      "bom-ref": "fs-minipass@2.1.0|minipass@3.3.6",
+      "bom-ref": "demo-deps-from-git@1.0.0|fs-minipass@2.1.0|minipass@3.3.6",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "scope": "optional",
@@ -2148,7 +2148,7 @@
       "type": "library",
       "name": "fs.realpath",
       "version": "1.0.0",
-      "bom-ref": "fs.realpath@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|fs.realpath@1.0.0",
       "author": "Isaac Z. Schlueter",
       "description": "Use node's fs.realpath, but fall back to the JS implementation if the native one fails",
       "scope": "optional",
@@ -2200,7 +2200,7 @@
       "type": "library",
       "name": "gauge",
       "version": "3.0.2",
-      "bom-ref": "gauge@3.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|gauge@3.0.2",
       "author": "Rebecca Turner",
       "description": "A terminal based horizontal guage",
       "scope": "optional",
@@ -2252,7 +2252,7 @@
       "type": "library",
       "name": "glob",
       "version": "7.2.3",
-      "bom-ref": "glob@7.2.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|glob@7.2.3",
       "author": "Isaac Z. Schlueter",
       "description": "a little globber",
       "scope": "optional",
@@ -2304,7 +2304,7 @@
       "type": "library",
       "name": "has-unicode",
       "version": "2.0.1",
-      "bom-ref": "has-unicode@2.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|has-unicode@2.0.1",
       "author": "Rebecca Turner",
       "description": "Try to guess if your terminal supports unicode",
       "scope": "optional",
@@ -2356,7 +2356,7 @@
       "type": "library",
       "name": "https-proxy-agent",
       "version": "5.0.1",
-      "bom-ref": "https-proxy-agent@5.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|https-proxy-agent@5.0.1",
       "author": "Nathan Rajlich",
       "description": "An HTTP(s) proxy `http.Agent` implementation for HTTPS",
       "scope": "optional",
@@ -2408,7 +2408,7 @@
       "type": "library",
       "name": "inflight",
       "version": "1.0.6",
-      "bom-ref": "inflight@1.0.6",
+      "bom-ref": "demo-deps-from-git@1.0.0|inflight@1.0.6",
       "author": "Isaac Z. Schlueter",
       "description": "Add callbacks to requests in flight to avoid async duplication",
       "scope": "optional",
@@ -2460,7 +2460,7 @@
       "type": "library",
       "name": "inherits",
       "version": "2.0.4",
-      "bom-ref": "inherits@2.0.4",
+      "bom-ref": "demo-deps-from-git@1.0.0|inherits@2.0.4",
       "description": "Browser-friendly inheritance fully compatible with standard node.js inherits()",
       "scope": "optional",
       "licenses": [
@@ -2511,7 +2511,7 @@
       "type": "library",
       "name": "is-fullwidth-code-point",
       "version": "3.0.0",
-      "bom-ref": "is-fullwidth-code-point@3.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|is-fullwidth-code-point@3.0.0",
       "author": "Sindre Sorhus",
       "description": "Check if the character represented by a given Unicode code point is fullwidth",
       "scope": "optional",
@@ -2563,7 +2563,7 @@
       "type": "library",
       "name": "js-yaml",
       "version": "3.14.1",
-      "bom-ref": "js-yaml@3.14.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|js-yaml@3.14.1",
       "author": "Vladimir Zapparov",
       "description": "YAML 1.2 parser and serializer",
       "scope": "optional",
@@ -2615,7 +2615,7 @@
       "type": "library",
       "name": "json-schema-traverse",
       "version": "1.0.0",
-      "bom-ref": "json-schema-traverse@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|json-schema-traverse@1.0.0",
       "author": "Evgeny Poberezkin",
       "description": "Traverse JSON Schema passing each schema object to callback",
       "scope": "optional",
@@ -2667,7 +2667,7 @@
       "type": "library",
       "name": "libxmljs2",
       "version": "0.32.0",
-      "bom-ref": "libxmljs2@0.32.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
       "author": "marudor",
       "description": "libxml bindings for v8 javascript engine",
       "scope": "optional",
@@ -2719,7 +2719,7 @@
       "type": "library",
       "name": "make-dir",
       "version": "3.1.0",
-      "bom-ref": "make-dir@3.1.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|make-dir@3.1.0",
       "author": "Sindre Sorhus",
       "description": "Make a directory and its parents if needed - Think `mkdir -p`",
       "scope": "optional",
@@ -2771,7 +2771,7 @@
       "type": "library",
       "name": "semver",
       "version": "6.3.1",
-      "bom-ref": "make-dir@3.1.0|semver@6.3.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|make-dir@3.1.0|semver@6.3.1",
       "author": "GitHub Inc.",
       "description": "The semantic version parser used by npm.",
       "scope": "optional",
@@ -2823,7 +2823,7 @@
       "type": "library",
       "name": "minimatch",
       "version": "3.1.2",
-      "bom-ref": "minimatch@3.1.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|minimatch@3.1.2",
       "author": "Isaac Z. Schlueter",
       "description": "a glob matcher in javascript",
       "scope": "optional",
@@ -2875,7 +2875,7 @@
       "type": "library",
       "name": "minipass",
       "version": "5.0.0",
-      "bom-ref": "minipass@5.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|minipass@5.0.0",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "scope": "optional",
@@ -2927,7 +2927,7 @@
       "type": "library",
       "name": "minizlib",
       "version": "2.1.2",
-      "bom-ref": "minizlib@2.1.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|minizlib@2.1.2",
       "author": "Isaac Z. Schlueter",
       "description": "A small fast zlib stream built on [minipass](http://npm.im/minipass) and Node.js's zlib binding.",
       "scope": "optional",
@@ -2979,7 +2979,7 @@
       "type": "library",
       "name": "minipass",
       "version": "3.3.6",
-      "bom-ref": "minizlib@2.1.2|minipass@3.3.6",
+      "bom-ref": "demo-deps-from-git@1.0.0|minizlib@2.1.2|minipass@3.3.6",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "scope": "optional",
@@ -3031,7 +3031,7 @@
       "type": "library",
       "name": "mkdirp",
       "version": "1.0.4",
-      "bom-ref": "mkdirp@1.0.4",
+      "bom-ref": "demo-deps-from-git@1.0.0|mkdirp@1.0.4",
       "description": "Recursively mkdir, like `mkdir -p`",
       "scope": "optional",
       "licenses": [
@@ -3082,7 +3082,7 @@
       "type": "library",
       "name": "moo",
       "version": "0.5.2",
-      "bom-ref": "moo@0.5.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|moo@0.5.2",
       "author": "Tim Radvan",
       "description": "Optimised tokenizer/lexer generator! 🐄 Much performance. Moo!",
       "scope": "optional",
@@ -3134,7 +3134,7 @@
       "type": "library",
       "name": "ms",
       "version": "2.1.2",
-      "bom-ref": "ms@2.1.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|ms@2.1.2",
       "description": "Tiny millisecond conversion utility",
       "scope": "optional",
       "licenses": [
@@ -3185,7 +3185,7 @@
       "type": "library",
       "name": "nan",
       "version": "2.17.0",
-      "bom-ref": "nan@2.17.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|nan@2.17.0",
       "description": "Native Abstractions for Node.js: C++ header for Node 0.8 -> 18 compatibility",
       "scope": "optional",
       "licenses": [
@@ -3236,7 +3236,7 @@
       "type": "library",
       "name": "nearley",
       "version": "2.20.1",
-      "bom-ref": "nearley@2.20.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|nearley@2.20.1",
       "author": "Hardmath123",
       "description": "Simple, fast, powerful parser toolkit for JavaScript.",
       "scope": "optional",
@@ -3288,7 +3288,7 @@
       "type": "library",
       "name": "node-fetch",
       "version": "2.7.0",
-      "bom-ref": "node-fetch@2.7.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|node-fetch@2.7.0",
       "author": "David Frank",
       "description": "A light-weight module that brings window.fetch to node.js",
       "scope": "optional",
@@ -3340,7 +3340,7 @@
       "type": "library",
       "name": "nopt",
       "version": "5.0.0",
-      "bom-ref": "nopt@5.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|nopt@5.0.0",
       "author": "Isaac Z. Schlueter",
       "description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
       "scope": "optional",
@@ -3392,7 +3392,7 @@
       "type": "library",
       "name": "npmlog",
       "version": "5.0.1",
-      "bom-ref": "npmlog@5.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|npmlog@5.0.1",
       "author": "Isaac Z. Schlueter",
       "description": "logger for npm",
       "scope": "optional",
@@ -3444,7 +3444,7 @@
       "type": "library",
       "name": "object-assign",
       "version": "4.1.1",
-      "bom-ref": "object-assign@4.1.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|object-assign@4.1.1",
       "author": "Sindre Sorhus",
       "description": "ES2015 `Object.assign()` ponyfill",
       "scope": "optional",
@@ -3496,7 +3496,7 @@
       "type": "library",
       "name": "once",
       "version": "1.4.0",
-      "bom-ref": "once@1.4.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|once@1.4.0",
       "author": "Isaac Z. Schlueter",
       "description": "Run a function exactly one time",
       "scope": "optional",
@@ -3548,7 +3548,7 @@
       "type": "library",
       "name": "packageurl-js",
       "version": "1.2.1",
-      "bom-ref": "packageurl-js@1.2.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
       "author": "the purl authors",
       "description": "JavaScript library to parse and build \"purl\" aka. package URLs. This is a microlibrary implementing the purl spec at https://github.com/package-url",
       "licenses": [
@@ -3599,7 +3599,7 @@
       "type": "library",
       "name": "path-is-absolute",
       "version": "1.0.1",
-      "bom-ref": "path-is-absolute@1.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|path-is-absolute@1.0.1",
       "author": "Sindre Sorhus",
       "description": "Node.js 0.12 path.isAbsolute() ponyfill",
       "scope": "optional",
@@ -3651,7 +3651,7 @@
       "type": "library",
       "name": "punycode",
       "version": "2.3.1",
-      "bom-ref": "punycode@2.3.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|punycode@2.3.1",
       "author": "Mathias Bynens",
       "description": "A robust Punycode converter that fully complies to RFC 3492 and RFC 5891, and works on nearly all JavaScript platforms.",
       "scope": "optional",
@@ -3703,7 +3703,7 @@
       "type": "library",
       "name": "railroad-diagrams",
       "version": "1.0.0",
-      "bom-ref": "railroad-diagrams@1.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|railroad-diagrams@1.0.0",
       "author": "Tab Atkins Jr.",
       "description": "A small JS+SVG library for drawing railroad syntax diagrams.",
       "scope": "optional",
@@ -3755,7 +3755,7 @@
       "type": "library",
       "name": "randexp",
       "version": "0.4.6",
-      "bom-ref": "randexp@0.4.6",
+      "bom-ref": "demo-deps-from-git@1.0.0|randexp@0.4.6",
       "author": "Roly Fentanes",
       "description": "Create random strings that match a given regular expression.",
       "scope": "optional",
@@ -3807,7 +3807,7 @@
       "type": "library",
       "name": "readable-stream",
       "version": "3.6.2",
-      "bom-ref": "readable-stream@3.6.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|readable-stream@3.6.2",
       "description": "Streams3, a user-land copy of the stream library from Node.js",
       "scope": "optional",
       "licenses": [
@@ -3858,7 +3858,7 @@
       "type": "library",
       "name": "require-from-string",
       "version": "2.0.2",
-      "bom-ref": "require-from-string@2.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|require-from-string@2.0.2",
       "author": "Vsevolod Strukchinsky",
       "description": "Require module from string",
       "scope": "optional",
@@ -3910,7 +3910,7 @@
       "type": "library",
       "name": "ret",
       "version": "0.1.15",
-      "bom-ref": "ret@0.1.15",
+      "bom-ref": "demo-deps-from-git@1.0.0|ret@0.1.15",
       "author": "Roly Fentanes",
       "description": "Tokenizes a string that represents a regular expression.",
       "scope": "optional",
@@ -3962,7 +3962,7 @@
       "type": "library",
       "name": "rimraf",
       "version": "3.0.2",
-      "bom-ref": "rimraf@3.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|rimraf@3.0.2",
       "author": "Isaac Z. Schlueter",
       "description": "A deep deletion module for node (like `rm -rf`)",
       "scope": "optional",
@@ -4014,7 +4014,7 @@
       "type": "library",
       "name": "safe-buffer",
       "version": "5.2.1",
-      "bom-ref": "safe-buffer@5.2.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|safe-buffer@5.2.1",
       "author": "Feross Aboukhadijeh",
       "description": "Safer Node.js Buffer API",
       "scope": "optional",
@@ -4066,7 +4066,7 @@
       "type": "library",
       "name": "schemes",
       "version": "1.4.0",
-      "bom-ref": "schemes@1.4.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|schemes@1.4.0",
       "author": "Peter Müller",
       "description": "IANA Uniform Resource Identifier (URI) Schemes list, including crowd sourced unofficial ones",
       "scope": "optional",
@@ -4118,7 +4118,7 @@
       "type": "library",
       "name": "semver",
       "version": "7.6.2",
-      "bom-ref": "semver@7.6.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|semver@7.6.2",
       "author": "GitHub Inc.",
       "description": "The semantic version parser used by npm.",
       "scope": "optional",
@@ -4170,7 +4170,7 @@
       "type": "library",
       "name": "set-blocking",
       "version": "2.0.0",
-      "bom-ref": "set-blocking@2.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|set-blocking@2.0.0",
       "author": "Ben Coe",
       "description": "set blocking stdio and stderr ensuring that terminal output does not truncate",
       "scope": "optional",
@@ -4222,7 +4222,7 @@
       "type": "library",
       "name": "signal-exit",
       "version": "3.0.7",
-      "bom-ref": "signal-exit@3.0.7",
+      "bom-ref": "demo-deps-from-git@1.0.0|signal-exit@3.0.7",
       "author": "Ben Coe",
       "description": "when you want to fire an event no matter how a process exits.",
       "scope": "optional",
@@ -4274,7 +4274,7 @@
       "type": "library",
       "name": "smtp-address-parser",
       "version": "1.1.0",
-      "bom-ref": "smtp-address-parser@1.1.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|smtp-address-parser@1.1.0",
       "author": "Gene Hightower",
       "description": "Parse an SMTP (RFC-5321) address",
       "scope": "optional",
@@ -4326,7 +4326,7 @@
       "type": "library",
       "name": "spdx-exceptions",
       "version": "2.5.0",
-      "bom-ref": "spdx-exceptions@2.5.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|spdx-exceptions@2.5.0",
       "author": "The Linux Foundation",
       "description": "list of SPDX standard license exceptions",
       "licenses": [
@@ -4377,7 +4377,7 @@
       "type": "library",
       "name": "spdx-expression-parse",
       "version": "3.0.1",
-      "bom-ref": "spdx-expression-parse@3.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
       "author": "Kyle E. Mitchell",
       "description": "parse SPDX license expressions",
       "licenses": [
@@ -4428,7 +4428,7 @@
       "type": "library",
       "name": "spdx-license-ids",
       "version": "3.0.18",
-      "bom-ref": "spdx-license-ids@3.0.18",
+      "bom-ref": "demo-deps-from-git@1.0.0|spdx-license-ids@3.0.18",
       "author": "Shinnosuke Watanabe",
       "description": "A list of SPDX license identifiers",
       "licenses": [
@@ -4479,7 +4479,7 @@
       "type": "library",
       "name": "sprintf-js",
       "version": "1.0.3",
-      "bom-ref": "sprintf-js@1.0.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|sprintf-js@1.0.3",
       "author": "Alexandru Marasteanu",
       "description": "JavaScript sprintf implementation",
       "scope": "optional",
@@ -4531,7 +4531,7 @@
       "type": "library",
       "name": "string_decoder",
       "version": "1.3.0",
-      "bom-ref": "string_decoder@1.3.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|string_decoder@1.3.0",
       "description": "The string_decoder module from Node core",
       "scope": "optional",
       "licenses": [
@@ -4582,7 +4582,7 @@
       "type": "library",
       "name": "string-width",
       "version": "4.2.3",
-      "bom-ref": "string-width@4.2.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|string-width@4.2.3",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
       "scope": "optional",
@@ -4634,7 +4634,7 @@
       "type": "library",
       "name": "strip-ansi",
       "version": "6.0.1",
-      "bom-ref": "strip-ansi@6.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|strip-ansi@6.0.1",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes from a string",
       "scope": "optional",
@@ -4686,7 +4686,7 @@
       "type": "library",
       "name": "tar",
       "version": "6.2.1",
-      "bom-ref": "tar@6.2.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|tar@6.2.1",
       "author": "GitHub Inc.",
       "description": "tar for node",
       "scope": "optional",
@@ -4738,7 +4738,7 @@
       "type": "library",
       "name": "tr46",
       "version": "0.0.3",
-      "bom-ref": "tr46@0.0.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|tr46@0.0.3",
       "author": "Sebastian Mayr",
       "description": "An implementation of the Unicode TR46 spec",
       "scope": "optional",
@@ -4790,7 +4790,7 @@
       "type": "library",
       "name": "uri-js",
       "version": "4.4.1",
-      "bom-ref": "uri-js@4.4.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|uri-js@4.4.1",
       "author": "Gary Court",
       "description": "An RFC 3986/3987 compliant, scheme extendable URI/IRI parsing/validating/resolving library for JavaScript.",
       "scope": "optional",
@@ -4842,7 +4842,7 @@
       "type": "library",
       "name": "util-deprecate",
       "version": "1.0.2",
-      "bom-ref": "util-deprecate@1.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|util-deprecate@1.0.2",
       "author": "Nathan Rajlich",
       "description": "The Node.js `util.deprecate()` function with browser support",
       "scope": "optional",
@@ -4894,7 +4894,7 @@
       "type": "library",
       "name": "webidl-conversions",
       "version": "3.0.1",
-      "bom-ref": "webidl-conversions@3.0.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|webidl-conversions@3.0.1",
       "author": "Domenic Denicola",
       "description": "Implements the WebIDL algorithms for converting to and from JavaScript values",
       "scope": "optional",
@@ -4946,7 +4946,7 @@
       "type": "library",
       "name": "whatwg-url",
       "version": "5.0.0",
-      "bom-ref": "whatwg-url@5.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|whatwg-url@5.0.0",
       "author": "Sebastian Mayr",
       "description": "An implementation of the WHATWG URL Standard's URL API and parsing machinery",
       "scope": "optional",
@@ -4998,7 +4998,7 @@
       "type": "library",
       "name": "wide-align",
       "version": "1.1.5",
-      "bom-ref": "wide-align@1.1.5",
+      "bom-ref": "demo-deps-from-git@1.0.0|wide-align@1.1.5",
       "author": "Rebecca Turner",
       "description": "A wide-character aware text alignment function for use on the console or with fixed width fonts.",
       "scope": "optional",
@@ -5050,7 +5050,7 @@
       "type": "library",
       "name": "wrappy",
       "version": "1.0.2",
-      "bom-ref": "wrappy@1.0.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|wrappy@1.0.2",
       "author": "Isaac Z. Schlueter",
       "description": "Callback wrapping utility",
       "scope": "optional",
@@ -5102,7 +5102,7 @@
       "type": "library",
       "name": "xmlbuilder2",
       "version": "3.1.1",
-      "bom-ref": "xmlbuilder2@3.1.1",
+      "bom-ref": "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1",
       "author": "Ozgur Ozcitak",
       "description": "An XML builder for node.js",
       "scope": "optional",
@@ -5154,7 +5154,7 @@
       "type": "library",
       "name": "yallist",
       "version": "4.0.0",
-      "bom-ref": "yallist@4.0.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|yallist@4.0.0",
       "author": "Isaac Z. Schlueter",
       "description": "Yet Another Linked List",
       "scope": "optional",
@@ -5205,558 +5205,558 @@
   ],
   "dependencies": [
     {
-      "ref": "@cyclonedx/cyclonedx-library@6.0.0",
-      "dependsOn": [
-        "ajv-formats-draft2019@1.6.1",
-        "ajv-formats@2.1.1",
-        "ajv@8.17.1",
-        "libxmljs2@0.32.0",
-        "packageurl-js@1.2.1",
-        "spdx-expression-parse@3.0.1",
-        "xmlbuilder2@3.1.1"
-      ]
-    },
-    {
-      "ref": "@cyclonedx/cyclonedx-library@6.1.0",
-      "dependsOn": [
-        "ajv-formats-draft2019@1.6.1",
-        "ajv-formats@2.1.1",
-        "ajv@8.17.1",
-        "libxmljs2@0.32.0",
-        "packageurl-js@1.2.1",
-        "spdx-expression-parse@3.0.1",
-        "xmlbuilder2@3.1.1"
-      ]
-    },
-    {
-      "ref": "@cyclonedx/cyclonedx-library@6.2.0",
-      "dependsOn": [
-        "ajv-formats-draft2019@1.6.1",
-        "ajv-formats@2.1.1",
-        "ajv@8.17.1",
-        "libxmljs2@0.32.0",
-        "packageurl-js@1.2.1",
-        "spdx-expression-parse@3.0.1",
-        "xmlbuilder2@3.1.1"
-      ]
-    },
-    {
-      "ref": "@cyclonedx/cyclonedx-library@6.3.0",
-      "dependsOn": [
-        "ajv-formats-draft2019@1.6.1",
-        "ajv-formats@2.1.1",
-        "ajv@8.17.1",
-        "libxmljs2@0.32.0",
-        "packageurl-js@1.2.1",
-        "spdx-expression-parse@3.0.1",
-        "xmlbuilder2@3.1.1"
-      ]
-    },
-    {
-      "ref": "@cyclonedx/cyclonedx-library@6.4.0",
-      "dependsOn": [
-        "ajv-formats-draft2019@1.6.1",
-        "ajv-formats@2.1.1",
-        "ajv@8.17.1",
-        "libxmljs2@0.32.0",
-        "packageurl-js@1.2.1",
-        "spdx-expression-parse@3.0.1",
-        "xmlbuilder2@3.1.1"
-      ]
-    },
-    {
-      "ref": "@cyclonedx/cyclonedx-library@6.5.0",
-      "dependsOn": [
-        "ajv-formats-draft2019@1.6.1",
-        "ajv-formats@2.1.1",
-        "ajv@8.17.1",
-        "libxmljs2@0.32.0",
-        "packageurl-js@1.2.1",
-        "spdx-expression-parse@3.0.1",
-        "xmlbuilder2@3.1.1"
-      ]
-    },
-    {
-      "ref": "@mapbox/node-pre-gyp@1.0.11",
-      "dependsOn": [
-        "detect-libc@2.0.3",
-        "https-proxy-agent@5.0.1",
-        "make-dir@3.1.0",
-        "node-fetch@2.7.0",
-        "nopt@5.0.0",
-        "npmlog@5.0.1",
-        "rimraf@3.0.2",
-        "semver@7.6.2",
-        "tar@6.2.1"
-      ]
-    },
-    {
-      "ref": "@oozcitak/dom@1.15.10",
-      "dependsOn": [
-        "@oozcitak/infra@1.0.8",
-        "@oozcitak/url@1.0.4",
-        "@oozcitak/util@8.3.8"
-      ]
-    },
-    {
-      "ref": "@oozcitak/infra@1.0.8",
-      "dependsOn": [
-        "@oozcitak/util@8.3.8"
-      ]
-    },
-    {
-      "ref": "@oozcitak/url@1.0.4",
-      "dependsOn": [
-        "@oozcitak/infra@1.0.8",
-        "@oozcitak/util@8.3.8"
-      ]
-    },
-    {
-      "ref": "@oozcitak/util@8.3.8"
-    },
-    {
-      "ref": "abbrev@1.1.1"
-    },
-    {
-      "ref": "agent-base@6.0.2",
-      "dependsOn": [
-        "debug@4.3.5"
-      ]
-    },
-    {
-      "ref": "ajv-formats-draft2019@1.6.1",
-      "dependsOn": [
-        "ajv@8.17.1",
-        "punycode@2.3.1",
-        "schemes@1.4.0",
-        "smtp-address-parser@1.1.0",
-        "uri-js@4.4.1"
-      ]
-    },
-    {
-      "ref": "ajv-formats@2.1.1",
-      "dependsOn": [
-        "ajv@8.17.1"
-      ]
-    },
-    {
-      "ref": "ajv@8.17.1",
-      "dependsOn": [
-        "fast-deep-equal@3.1.3",
-        "fast-uri@3.0.1",
-        "json-schema-traverse@1.0.0",
-        "require-from-string@2.0.2"
-      ]
-    },
-    {
-      "ref": "ansi-regex@5.0.1"
-    },
-    {
-      "ref": "aproba@2.0.0"
-    },
-    {
-      "ref": "are-we-there-yet@2.0.0",
-      "dependsOn": [
-        "delegates@1.0.0",
-        "readable-stream@3.6.2"
-      ]
-    },
-    {
-      "ref": "argparse@1.0.10",
-      "dependsOn": [
-        "sprintf-js@1.0.3"
-      ]
-    },
-    {
-      "ref": "balanced-match@1.0.2"
-    },
-    {
-      "ref": "bindings@1.5.0",
-      "dependsOn": [
-        "file-uri-to-path@1.0.0"
-      ]
-    },
-    {
-      "ref": "brace-expansion@1.1.11",
-      "dependsOn": [
-        "balanced-match@1.0.2",
-        "concat-map@0.0.1"
-      ]
-    },
-    {
-      "ref": "chownr@2.0.0"
-    },
-    {
-      "ref": "color-support@1.1.3"
-    },
-    {
-      "ref": "commander@2.20.3"
-    },
-    {
-      "ref": "concat-map@0.0.1"
-    },
-    {
-      "ref": "console-control-strings@1.1.0"
-    },
-    {
-      "ref": "debug@4.3.5",
-      "dependsOn": [
-        "ms@2.1.2"
-      ]
-    },
-    {
-      "ref": "delegates@1.0.0"
-    },
-    {
       "ref": "demo-deps-from-git@1.0.0",
       "dependsOn": [
-        "@cyclonedx/cyclonedx-library@6.0.0",
-        "@cyclonedx/cyclonedx-library@6.1.0",
-        "@cyclonedx/cyclonedx-library@6.2.0",
-        "@cyclonedx/cyclonedx-library@6.3.0",
-        "@cyclonedx/cyclonedx-library@6.4.0",
-        "@cyclonedx/cyclonedx-library@6.5.0"
+        "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.0.0",
+        "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.1.0",
+        "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.2.0",
+        "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.3.0",
+        "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.4.0",
+        "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.5.0"
       ]
     },
     {
-      "ref": "detect-libc@2.0.3"
-    },
-    {
-      "ref": "discontinuous-range@1.0.0"
-    },
-    {
-      "ref": "emoji-regex@8.0.0"
-    },
-    {
-      "ref": "esprima@4.0.1"
-    },
-    {
-      "ref": "extend@3.0.2"
-    },
-    {
-      "ref": "fast-deep-equal@3.1.3"
-    },
-    {
-      "ref": "fast-uri@3.0.1"
-    },
-    {
-      "ref": "file-uri-to-path@1.0.0"
-    },
-    {
-      "ref": "fs-minipass@2.1.0",
+      "ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.0.0",
       "dependsOn": [
-        "fs-minipass@2.1.0|minipass@3.3.6"
+        "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
+        "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
+        "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+        "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+        "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"
       ]
     },
     {
-      "ref": "fs-minipass@2.1.0|minipass@3.3.6",
+      "ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.1.0",
       "dependsOn": [
-        "yallist@4.0.0"
+        "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
+        "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
+        "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+        "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+        "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"
       ]
     },
     {
-      "ref": "fs.realpath@1.0.0"
-    },
-    {
-      "ref": "gauge@3.0.2",
+      "ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.2.0",
       "dependsOn": [
-        "aproba@2.0.0",
-        "color-support@1.1.3",
-        "console-control-strings@1.1.0",
-        "has-unicode@2.0.1",
-        "object-assign@4.1.1",
-        "signal-exit@3.0.7",
-        "string-width@4.2.3",
-        "strip-ansi@6.0.1",
-        "wide-align@1.1.5"
+        "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
+        "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
+        "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+        "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+        "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"
       ]
     },
     {
-      "ref": "glob@7.2.3",
+      "ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.3.0",
       "dependsOn": [
-        "fs.realpath@1.0.0",
-        "inflight@1.0.6",
-        "inherits@2.0.4",
-        "minimatch@3.1.2",
-        "once@1.4.0",
-        "path-is-absolute@1.0.1"
+        "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
+        "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
+        "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+        "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+        "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"
       ]
     },
     {
-      "ref": "has-unicode@2.0.1"
-    },
-    {
-      "ref": "https-proxy-agent@5.0.1",
+      "ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.4.0",
       "dependsOn": [
-        "agent-base@6.0.2",
-        "debug@4.3.5"
+        "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
+        "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
+        "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+        "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+        "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"
       ]
     },
     {
-      "ref": "inflight@1.0.6",
+      "ref": "demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.5.0",
       "dependsOn": [
-        "once@1.4.0",
-        "wrappy@1.0.2"
+        "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
+        "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
+        "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+        "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+        "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"
       ]
     },
     {
-      "ref": "inherits@2.0.4"
-    },
-    {
-      "ref": "is-fullwidth-code-point@3.0.0"
-    },
-    {
-      "ref": "js-yaml@3.14.1",
+      "ref": "demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11",
       "dependsOn": [
-        "argparse@1.0.10",
-        "esprima@4.0.1"
+        "demo-deps-from-git@1.0.0|detect-libc@2.0.3",
+        "demo-deps-from-git@1.0.0|https-proxy-agent@5.0.1",
+        "demo-deps-from-git@1.0.0|make-dir@3.1.0",
+        "demo-deps-from-git@1.0.0|node-fetch@2.7.0",
+        "demo-deps-from-git@1.0.0|nopt@5.0.0",
+        "demo-deps-from-git@1.0.0|npmlog@5.0.1",
+        "demo-deps-from-git@1.0.0|rimraf@3.0.2",
+        "demo-deps-from-git@1.0.0|semver@7.6.2",
+        "demo-deps-from-git@1.0.0|tar@6.2.1"
       ]
     },
     {
-      "ref": "json-schema-traverse@1.0.0"
-    },
-    {
-      "ref": "libxmljs2@0.32.0",
+      "ref": "demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10",
       "dependsOn": [
-        "@mapbox/node-pre-gyp@1.0.11",
-        "bindings@1.5.0",
-        "nan@2.17.0"
+        "demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
+        "demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4",
+        "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
       ]
     },
     {
-      "ref": "make-dir@3.1.0",
+      "ref": "demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
       "dependsOn": [
-        "make-dir@3.1.0|semver@6.3.1"
+        "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
       ]
     },
     {
-      "ref": "make-dir@3.1.0|semver@6.3.1"
-    },
-    {
-      "ref": "minimatch@3.1.2",
+      "ref": "demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4",
       "dependsOn": [
-        "brace-expansion@1.1.11"
+        "demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
+        "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
       ]
     },
     {
-      "ref": "minipass@5.0.0"
+      "ref": "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"
     },
     {
-      "ref": "minizlib@2.1.2",
+      "ref": "demo-deps-from-git@1.0.0|abbrev@1.1.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|agent-base@6.0.2",
       "dependsOn": [
-        "minizlib@2.1.2|minipass@3.3.6",
-        "yallist@4.0.0"
+        "demo-deps-from-git@1.0.0|debug@4.3.5"
       ]
     },
     {
-      "ref": "minizlib@2.1.2|minipass@3.3.6",
+      "ref": "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
       "dependsOn": [
-        "yallist@4.0.0"
+        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|punycode@2.3.1",
+        "demo-deps-from-git@1.0.0|schemes@1.4.0",
+        "demo-deps-from-git@1.0.0|smtp-address-parser@1.1.0",
+        "demo-deps-from-git@1.0.0|uri-js@4.4.1"
       ]
     },
     {
-      "ref": "mkdirp@1.0.4"
-    },
-    {
-      "ref": "moo@0.5.2"
-    },
-    {
-      "ref": "ms@2.1.2"
-    },
-    {
-      "ref": "nan@2.17.0"
-    },
-    {
-      "ref": "nearley@2.20.1",
+      "ref": "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
       "dependsOn": [
-        "commander@2.20.3",
-        "moo@0.5.2",
-        "railroad-diagrams@1.0.0",
-        "randexp@0.4.6"
+        "demo-deps-from-git@1.0.0|ajv@8.17.1"
       ]
     },
     {
-      "ref": "node-fetch@2.7.0",
+      "ref": "demo-deps-from-git@1.0.0|ajv@8.17.1",
       "dependsOn": [
-        "whatwg-url@5.0.0"
+        "demo-deps-from-git@1.0.0|fast-deep-equal@3.1.3",
+        "demo-deps-from-git@1.0.0|fast-uri@3.0.1",
+        "demo-deps-from-git@1.0.0|json-schema-traverse@1.0.0",
+        "demo-deps-from-git@1.0.0|require-from-string@2.0.2"
       ]
     },
     {
-      "ref": "nopt@5.0.0",
+      "ref": "demo-deps-from-git@1.0.0|ansi-regex@5.0.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|aproba@2.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|are-we-there-yet@2.0.0",
       "dependsOn": [
-        "abbrev@1.1.1"
+        "demo-deps-from-git@1.0.0|delegates@1.0.0",
+        "demo-deps-from-git@1.0.0|readable-stream@3.6.2"
       ]
     },
     {
-      "ref": "npmlog@5.0.1",
+      "ref": "demo-deps-from-git@1.0.0|argparse@1.0.10",
       "dependsOn": [
-        "are-we-there-yet@2.0.0",
-        "console-control-strings@1.1.0",
-        "gauge@3.0.2",
-        "set-blocking@2.0.0"
+        "demo-deps-from-git@1.0.0|sprintf-js@1.0.3"
       ]
     },
     {
-      "ref": "object-assign@4.1.1"
+      "ref": "demo-deps-from-git@1.0.0|balanced-match@1.0.2"
     },
     {
-      "ref": "once@1.4.0",
+      "ref": "demo-deps-from-git@1.0.0|bindings@1.5.0",
       "dependsOn": [
-        "wrappy@1.0.2"
+        "demo-deps-from-git@1.0.0|file-uri-to-path@1.0.0"
       ]
     },
     {
-      "ref": "packageurl-js@1.2.1"
-    },
-    {
-      "ref": "path-is-absolute@1.0.1"
-    },
-    {
-      "ref": "punycode@2.3.1"
-    },
-    {
-      "ref": "railroad-diagrams@1.0.0"
-    },
-    {
-      "ref": "randexp@0.4.6",
+      "ref": "demo-deps-from-git@1.0.0|brace-expansion@1.1.11",
       "dependsOn": [
-        "discontinuous-range@1.0.0",
-        "ret@0.1.15"
+        "demo-deps-from-git@1.0.0|balanced-match@1.0.2",
+        "demo-deps-from-git@1.0.0|concat-map@0.0.1"
       ]
     },
     {
-      "ref": "readable-stream@3.6.2",
+      "ref": "demo-deps-from-git@1.0.0|chownr@2.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|color-support@1.1.3"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|commander@2.20.3"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|concat-map@0.0.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|console-control-strings@1.1.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|debug@4.3.5",
       "dependsOn": [
-        "inherits@2.0.4",
-        "string_decoder@1.3.0",
-        "util-deprecate@1.0.2"
+        "demo-deps-from-git@1.0.0|ms@2.1.2"
       ]
     },
     {
-      "ref": "require-from-string@2.0.2"
+      "ref": "demo-deps-from-git@1.0.0|delegates@1.0.0"
     },
     {
-      "ref": "ret@0.1.15"
+      "ref": "demo-deps-from-git@1.0.0|detect-libc@2.0.3"
     },
     {
-      "ref": "rimraf@3.0.2",
+      "ref": "demo-deps-from-git@1.0.0|discontinuous-range@1.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|emoji-regex@8.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|esprima@4.0.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|extend@3.0.2"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|fast-deep-equal@3.1.3"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|fast-uri@3.0.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|file-uri-to-path@1.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|fs-minipass@2.1.0",
       "dependsOn": [
-        "glob@7.2.3"
+        "demo-deps-from-git@1.0.0|fs-minipass@2.1.0|minipass@3.3.6"
       ]
     },
     {
-      "ref": "safe-buffer@5.2.1"
-    },
-    {
-      "ref": "schemes@1.4.0",
+      "ref": "demo-deps-from-git@1.0.0|fs-minipass@2.1.0|minipass@3.3.6",
       "dependsOn": [
-        "extend@3.0.2"
+        "demo-deps-from-git@1.0.0|yallist@4.0.0"
       ]
     },
     {
-      "ref": "semver@7.6.2"
+      "ref": "demo-deps-from-git@1.0.0|fs.realpath@1.0.0"
     },
     {
-      "ref": "set-blocking@2.0.0"
-    },
-    {
-      "ref": "signal-exit@3.0.7"
-    },
-    {
-      "ref": "smtp-address-parser@1.1.0",
+      "ref": "demo-deps-from-git@1.0.0|gauge@3.0.2",
       "dependsOn": [
-        "nearley@2.20.1"
+        "demo-deps-from-git@1.0.0|aproba@2.0.0",
+        "demo-deps-from-git@1.0.0|color-support@1.1.3",
+        "demo-deps-from-git@1.0.0|console-control-strings@1.1.0",
+        "demo-deps-from-git@1.0.0|has-unicode@2.0.1",
+        "demo-deps-from-git@1.0.0|object-assign@4.1.1",
+        "demo-deps-from-git@1.0.0|signal-exit@3.0.7",
+        "demo-deps-from-git@1.0.0|string-width@4.2.3",
+        "demo-deps-from-git@1.0.0|strip-ansi@6.0.1",
+        "demo-deps-from-git@1.0.0|wide-align@1.1.5"
       ]
     },
     {
-      "ref": "spdx-exceptions@2.5.0"
-    },
-    {
-      "ref": "spdx-expression-parse@3.0.1",
+      "ref": "demo-deps-from-git@1.0.0|glob@7.2.3",
       "dependsOn": [
-        "spdx-exceptions@2.5.0",
-        "spdx-license-ids@3.0.18"
+        "demo-deps-from-git@1.0.0|fs.realpath@1.0.0",
+        "demo-deps-from-git@1.0.0|inflight@1.0.6",
+        "demo-deps-from-git@1.0.0|inherits@2.0.4",
+        "demo-deps-from-git@1.0.0|minimatch@3.1.2",
+        "demo-deps-from-git@1.0.0|once@1.4.0",
+        "demo-deps-from-git@1.0.0|path-is-absolute@1.0.1"
       ]
     },
     {
-      "ref": "spdx-license-ids@3.0.18"
+      "ref": "demo-deps-from-git@1.0.0|has-unicode@2.0.1"
     },
     {
-      "ref": "sprintf-js@1.0.3"
-    },
-    {
-      "ref": "string_decoder@1.3.0",
+      "ref": "demo-deps-from-git@1.0.0|https-proxy-agent@5.0.1",
       "dependsOn": [
-        "safe-buffer@5.2.1"
+        "demo-deps-from-git@1.0.0|agent-base@6.0.2",
+        "demo-deps-from-git@1.0.0|debug@4.3.5"
       ]
     },
     {
-      "ref": "string-width@4.2.3",
+      "ref": "demo-deps-from-git@1.0.0|inflight@1.0.6",
       "dependsOn": [
-        "emoji-regex@8.0.0",
-        "is-fullwidth-code-point@3.0.0",
-        "strip-ansi@6.0.1"
+        "demo-deps-from-git@1.0.0|once@1.4.0",
+        "demo-deps-from-git@1.0.0|wrappy@1.0.2"
       ]
     },
     {
-      "ref": "strip-ansi@6.0.1",
+      "ref": "demo-deps-from-git@1.0.0|inherits@2.0.4"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|is-fullwidth-code-point@3.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|js-yaml@3.14.1",
       "dependsOn": [
-        "ansi-regex@5.0.1"
+        "demo-deps-from-git@1.0.0|argparse@1.0.10",
+        "demo-deps-from-git@1.0.0|esprima@4.0.1"
       ]
     },
     {
-      "ref": "tar@6.2.1",
+      "ref": "demo-deps-from-git@1.0.0|json-schema-traverse@1.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
       "dependsOn": [
-        "chownr@2.0.0",
-        "fs-minipass@2.1.0",
-        "minipass@5.0.0",
-        "minizlib@2.1.2",
-        "mkdirp@1.0.4",
-        "yallist@4.0.0"
+        "demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11",
+        "demo-deps-from-git@1.0.0|bindings@1.5.0",
+        "demo-deps-from-git@1.0.0|nan@2.17.0"
       ]
     },
     {
-      "ref": "tr46@0.0.3"
-    },
-    {
-      "ref": "uri-js@4.4.1",
+      "ref": "demo-deps-from-git@1.0.0|make-dir@3.1.0",
       "dependsOn": [
-        "punycode@2.3.1"
+        "demo-deps-from-git@1.0.0|make-dir@3.1.0|semver@6.3.1"
       ]
     },
     {
-      "ref": "util-deprecate@1.0.2"
+      "ref": "demo-deps-from-git@1.0.0|make-dir@3.1.0|semver@6.3.1"
     },
     {
-      "ref": "webidl-conversions@3.0.1"
-    },
-    {
-      "ref": "whatwg-url@5.0.0",
+      "ref": "demo-deps-from-git@1.0.0|minimatch@3.1.2",
       "dependsOn": [
-        "tr46@0.0.3",
-        "webidl-conversions@3.0.1"
+        "demo-deps-from-git@1.0.0|brace-expansion@1.1.11"
       ]
     },
     {
-      "ref": "wide-align@1.1.5",
+      "ref": "demo-deps-from-git@1.0.0|minipass@5.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|minizlib@2.1.2",
       "dependsOn": [
-        "string-width@4.2.3"
+        "demo-deps-from-git@1.0.0|minizlib@2.1.2|minipass@3.3.6",
+        "demo-deps-from-git@1.0.0|yallist@4.0.0"
       ]
     },
     {
-      "ref": "wrappy@1.0.2"
-    },
-    {
-      "ref": "xmlbuilder2@3.1.1",
+      "ref": "demo-deps-from-git@1.0.0|minizlib@2.1.2|minipass@3.3.6",
       "dependsOn": [
-        "@oozcitak/dom@1.15.10",
-        "@oozcitak/infra@1.0.8",
-        "@oozcitak/util@8.3.8",
-        "js-yaml@3.14.1"
+        "demo-deps-from-git@1.0.0|yallist@4.0.0"
       ]
     },
     {
-      "ref": "yallist@4.0.0"
+      "ref": "demo-deps-from-git@1.0.0|mkdirp@1.0.4"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|moo@0.5.2"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|ms@2.1.2"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|nan@2.17.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|nearley@2.20.1",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|commander@2.20.3",
+        "demo-deps-from-git@1.0.0|moo@0.5.2",
+        "demo-deps-from-git@1.0.0|railroad-diagrams@1.0.0",
+        "demo-deps-from-git@1.0.0|randexp@0.4.6"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|node-fetch@2.7.0",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|whatwg-url@5.0.0"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|nopt@5.0.0",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|abbrev@1.1.1"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|npmlog@5.0.1",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|are-we-there-yet@2.0.0",
+        "demo-deps-from-git@1.0.0|console-control-strings@1.1.0",
+        "demo-deps-from-git@1.0.0|gauge@3.0.2",
+        "demo-deps-from-git@1.0.0|set-blocking@2.0.0"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|object-assign@4.1.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|once@1.4.0",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|wrappy@1.0.2"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|packageurl-js@1.2.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|path-is-absolute@1.0.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|punycode@2.3.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|railroad-diagrams@1.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|randexp@0.4.6",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|discontinuous-range@1.0.0",
+        "demo-deps-from-git@1.0.0|ret@0.1.15"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|readable-stream@3.6.2",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|inherits@2.0.4",
+        "demo-deps-from-git@1.0.0|string_decoder@1.3.0",
+        "demo-deps-from-git@1.0.0|util-deprecate@1.0.2"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|require-from-string@2.0.2"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|ret@0.1.15"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|rimraf@3.0.2",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|glob@7.2.3"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|safe-buffer@5.2.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|schemes@1.4.0",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|extend@3.0.2"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|semver@7.6.2"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|set-blocking@2.0.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|signal-exit@3.0.7"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|smtp-address-parser@1.1.0",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|nearley@2.20.1"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|spdx-exceptions@2.5.0"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|spdx-exceptions@2.5.0",
+        "demo-deps-from-git@1.0.0|spdx-license-ids@3.0.18"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|spdx-license-ids@3.0.18"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|sprintf-js@1.0.3"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|string_decoder@1.3.0",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|safe-buffer@5.2.1"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|string-width@4.2.3",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|emoji-regex@8.0.0",
+        "demo-deps-from-git@1.0.0|is-fullwidth-code-point@3.0.0",
+        "demo-deps-from-git@1.0.0|strip-ansi@6.0.1"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|strip-ansi@6.0.1",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|ansi-regex@5.0.1"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|tar@6.2.1",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|chownr@2.0.0",
+        "demo-deps-from-git@1.0.0|fs-minipass@2.1.0",
+        "demo-deps-from-git@1.0.0|minipass@5.0.0",
+        "demo-deps-from-git@1.0.0|minizlib@2.1.2",
+        "demo-deps-from-git@1.0.0|mkdirp@1.0.4",
+        "demo-deps-from-git@1.0.0|yallist@4.0.0"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|tr46@0.0.3"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|uri-js@4.4.1",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|punycode@2.3.1"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|util-deprecate@1.0.2"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|webidl-conversions@3.0.1"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|whatwg-url@5.0.0",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|tr46@0.0.3",
+        "demo-deps-from-git@1.0.0|webidl-conversions@3.0.1"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|wide-align@1.1.5",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|string-width@4.2.3"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|wrappy@1.0.2"
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1",
+      "dependsOn": [
+        "demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10",
+        "demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
+        "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8",
+        "demo-deps-from-git@1.0.0|js-yaml@3.14.1"
+      ]
+    },
+    {
+      "ref": "demo-deps-from-git@1.0.0|yallist@4.0.0"
     }
   ]
 }

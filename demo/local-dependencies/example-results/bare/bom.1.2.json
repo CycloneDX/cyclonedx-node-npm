@@ -7,17 +7,17 @@
     "tools": [
       {
         "name": "npm",
-        "version": "10.9.2"
+        "version": "11.4.1"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "7.1.0"
+        "version": "8.4.0"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "2.1.0"
+        "version": "3.1.0"
       }
     ],
     "component": {
@@ -58,7 +58,7 @@
       "type": "library",
       "name": "my-local-a",
       "version": "0.0.0",
-      "bom-ref": "my-local-a@0.0.0",
+      "bom-ref": "demo-local-deps@0.0.0|my-local-a@0.0.0",
       "description": "demo: my-local-a",
       "licenses": [
         {
@@ -90,7 +90,7 @@
       "type": "library",
       "name": "my-local-b-off",
       "version": "0.0.0",
-      "bom-ref": "my-local-b-off@0.0.0",
+      "bom-ref": "demo-local-deps@0.0.0|my-local-b-off@0.0.0",
       "description": "demo: my-local-b-off - a package with a different name than its dir",
       "licenses": [
         {
@@ -120,56 +120,32 @@
     },
     {
       "type": "library",
-      "name": "my-noname",
-      "version": "0.0.0",
-      "bom-ref": "my-noname@0.0.0",
-      "description": "demo: with no/empty name",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0"
-          }
-        }
-      ],
-      "purl": "pkg:npm/my-noname@0.0.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-node-npm.git#demo/local-dependencies/project/packages/my-noname",
-      "externalReferences": [
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-dependencies/project/packages/my-noname",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
-        },
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
+      "name": "DummyComponent./home/flow/Documents/Coding/node/cyclonedx-node-npm/demo/local-dependencies/project/node_modules/my-noname",
+      "version": "",
+      "bom-ref": "demo-local-deps@0.0.0|DummyComponent./home/flow/Documents/Coding/node/cyclonedx-node-npm/demo/local-dependencies/project/node_modules/my-noname",
+      "description": "This is a dummy component \"/home/flow/Documents/Coding/node/cyclonedx-node-npm/demo/local-dependencies/project/node_modules/my-noname\" that fills the gap where the actual built failed.",
+      "purl": "pkg:npm/dummycomponent.%2Fhome%2Fflow%2Fdocuments%2Fcoding%2Fnode%2Fcyclonedx-node-npm%2Fdemo%2Flocal-dependencies%2Fproject%2Fnode_modules%2Fmy-noname"
     }
   ],
   "dependencies": [
     {
       "ref": "demo-local-deps@0.0.0",
       "dependsOn": [
-        "my-local-a@0.0.0",
-        "my-noname@0.0.0"
+        "demo-local-deps@0.0.0|DummyComponent./home/flow/Documents/Coding/node/cyclonedx-node-npm/demo/local-dependencies/project/node_modules/my-noname",
+        "demo-local-deps@0.0.0|my-local-a@0.0.0"
       ]
     },
     {
-      "ref": "my-local-a@0.0.0",
+      "ref": "demo-local-deps@0.0.0|DummyComponent./home/flow/Documents/Coding/node/cyclonedx-node-npm/demo/local-dependencies/project/node_modules/my-noname"
+    },
+    {
+      "ref": "demo-local-deps@0.0.0|my-local-a@0.0.0",
       "dependsOn": [
-        "my-local-b-off@0.0.0"
+        "demo-local-deps@0.0.0|my-local-b-off@0.0.0"
       ]
     },
     {
-      "ref": "my-local-b-off@0.0.0"
-    },
-    {
-      "ref": "my-noname@0.0.0"
+      "ref": "demo-local-deps@0.0.0|my-local-b-off@0.0.0"
     }
   ]
 }

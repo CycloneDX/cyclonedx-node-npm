@@ -5,13 +5,13 @@
       <components>
         <component type="application">
           <name>npm</name>
-          <version>10.9.2</version>
+          <version>11.4.1</version>
         </component>
         <component type="library">
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>8.4.0</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -37,7 +37,7 @@
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-npm</name>
-          <version>2.1.0</version>
+          <version>3.1.0</version>
           <description>Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.</description>
           <licenses>
             <license>
@@ -92,7 +92,7 @@
     </component>
   </metadata>
   <components>
-    <component type="library" bom-ref="@types/node@20.14.10">
+    <component type="library" bom-ref="demo-dev-dependencies@0.0.0|@types/node@20.14.10">
       <group>@types</group>
       <name>node</name>
       <version>20.14.10</version>
@@ -129,12 +129,11 @@
         <property name="cdx:npm:package:path">node_modules/@types/node</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@types/uuid@8.3.4">
+    <component type="library" bom-ref="demo-dev-dependencies@0.0.0|@types/uuid@8.3.4">
       <group>@types</group>
       <name>uuid</name>
       <version>8.3.4</version>
       <description>TypeScript definitions for uuid</description>
-      <scope>optional</scope>
       <licenses>
         <license>
           <id>MIT</id>
@@ -167,7 +166,7 @@
         <property name="cdx:npm:package:path">node_modules/@types/uuid</property>
       </properties>
     </component>
-    <component type="library" bom-ref="undici-types@5.26.5">
+    <component type="library" bom-ref="demo-dev-dependencies@0.0.0|undici-types@5.26.5">
       <name>undici-types</name>
       <version>5.26.5</version>
       <description>A stand-alone types package for Undici</description>
@@ -203,11 +202,10 @@
         <property name="cdx:npm:package:path">node_modules/undici-types</property>
       </properties>
     </component>
-    <component type="library" bom-ref="uuid@8.3.2">
+    <component type="library" bom-ref="demo-dev-dependencies@0.0.0|uuid@8.3.2">
       <name>uuid</name>
       <version>8.3.2</version>
       <description>RFC4122 (v1, v4, and v5) UUIDs</description>
-      <scope>optional</scope>
       <licenses>
         <license>
           <id>MIT</id>
@@ -240,7 +238,7 @@
         <property name="cdx:npm:package:path">node_modules/uuid</property>
       </properties>
     </component>
-    <component type="library" bom-ref="uuidv4@6.2.13">
+    <component type="library" bom-ref="demo-dev-dependencies@0.0.0|uuidv4@6.2.13">
       <name>uuidv4</name>
       <version>6.2.13</version>
       <description>uuidv4 creates v4 UUIDs.</description>
@@ -278,21 +276,21 @@
     </component>
   </components>
   <dependencies>
-    <dependency ref="@types/node@20.14.10">
-      <dependency ref="undici-types@5.26.5"/>
-    </dependency>
-    <dependency ref="@types/uuid@8.3.4"/>
     <dependency ref="demo-dev-dependencies@0.0.0">
-      <dependency ref="@types/node@20.14.10"/>
-      <dependency ref="@types/uuid@8.3.4"/>
-      <dependency ref="uuid@8.3.2"/>
-      <dependency ref="uuidv4@6.2.13"/>
+      <dependency ref="demo-dev-dependencies@0.0.0|@types/node@20.14.10"/>
+      <dependency ref="demo-dev-dependencies@0.0.0|@types/uuid@8.3.4"/>
+      <dependency ref="demo-dev-dependencies@0.0.0|uuid@8.3.2"/>
+      <dependency ref="demo-dev-dependencies@0.0.0|uuidv4@6.2.13"/>
     </dependency>
-    <dependency ref="undici-types@5.26.5"/>
-    <dependency ref="uuid@8.3.2"/>
-    <dependency ref="uuidv4@6.2.13">
-      <dependency ref="@types/uuid@8.3.4"/>
-      <dependency ref="uuid@8.3.2"/>
+    <dependency ref="demo-dev-dependencies@0.0.0|@types/node@20.14.10">
+      <dependency ref="demo-dev-dependencies@0.0.0|undici-types@5.26.5"/>
+    </dependency>
+    <dependency ref="demo-dev-dependencies@0.0.0|@types/uuid@8.3.4"/>
+    <dependency ref="demo-dev-dependencies@0.0.0|undici-types@5.26.5"/>
+    <dependency ref="demo-dev-dependencies@0.0.0|uuid@8.3.2"/>
+    <dependency ref="demo-dev-dependencies@0.0.0|uuidv4@6.2.13">
+      <dependency ref="demo-dev-dependencies@0.0.0|@types/uuid@8.3.4"/>
+      <dependency ref="demo-dev-dependencies@0.0.0|uuid@8.3.2"/>
     </dependency>
   </dependencies>
 </bom>
