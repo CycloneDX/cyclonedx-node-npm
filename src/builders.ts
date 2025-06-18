@@ -293,7 +293,7 @@ export class BomBuilder {
     }
   }
 
-  /* eslint-disable-next-line complexity -- ack */
+
   private gatherPackages(data: any): Map<PackagePath, PackageData> {
     const packages = new Map<PackagePath, PackageData>()
     const todo: Array<typeof data> = [data]
@@ -329,12 +329,14 @@ export class BomBuilder {
         d.dev ??= w.dev
       }
       // `dependencies` might be missing to prevent circles...
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion, @typescript-eslint/no-unsafe-argument -- ack */
-      for (const {path: depPath} of Object.values(w.dependencies ?? {}) as typeof data) {
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- ack */
+      const dependencies: Array<typeof data> = Object.values(w.dependencies ?? {})
+      for (const {path: depPath} of dependencies) {
         if (!isString(depPath)) { continue }
         d.dependencies.add(depPath)
       }
-      todo.push(...Object.values(w.dependencies ?? {}) as typeof data)
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- fp */
+      todo.push(...dependencies)
       /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
     }
     return packages
@@ -362,45 +364,52 @@ export class BomBuilder {
   }
 
   private normalizePackageJson(data: any): normalizePackageJson.Package {
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
     const dataN = structuredClonePolyfill(data)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
     normalizePackageJson(dataN as normalizePackageJson.Input /* add debug for warnings? */)
-    if (isString(data.version)) {
-      // allow non-SemVer strings
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-call -- ack */
-      dataN.version = data.version.trim()
+
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,  @typescript-eslint/no-unsafe-member-access -- ack */
+    const version = data.version
+    if (isString(version)) {
+      // normalizer might have stripped version or sanitized it to SemVer -- we want the original
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
+      dataN.version = version.trim()
     }
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-return -- ack */
     return dataN
   }
 
   private makeComponentFromPackagePath(ppath: PackagePath, type: Enums.ComponentType): Models.Component {
-      const manifest = loadJsonFile(path.join(ppath, 'package.json'))
-      const component = this.componentBuilder.makeComponent(this.normalizePackageJson(manifest), type)
-      if (component === undefined) {
-        throw new TypeError('created no component')
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
+    const manifest = loadJsonFile(path.join(ppath, 'package.json'))
+    const component = this.componentBuilder.makeComponent(this.normalizePackageJson(manifest), type)
+    if (component === undefined) {
+      throw new TypeError('created no component')
+    }
+
+    component.licenses.forEach(l => {
+      l.acknowledgement = Enums.LicenseAcknowledgement.Declared
+    })
+
+    if ( this.gatherLicenseTexts ) {
+      component.evidence = new Models.ComponentEvidence()
+      for (const le of this.fetchLicenseEvidence(ppath) ) {
+        component.evidence.licenses.add(le)
       }
+    }
 
-      component.licenses.forEach(l => {
-        l.acknowledgement = Enums.LicenseAcknowledgement.Declared
-      })
+    // region properties
+    /* eslint-disable @typescript-eslint/no-unsafe-member-access -- needed */
+    if (manifest.private === true) {
+      component.properties.add(
+        new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
+      )
+    }
+    /* eslint-enable @typescript-eslint/no-unsafe-member-access */
+    // endregion properties
 
-      if ( this.gatherLicenseTexts ) {
-        component.evidence = new Models.ComponentEvidence()
-        for (const le of this.fetchLicenseEvidence(ppath) ) {
-          component.evidence.licenses.add(le)
-        }
-      }
-
-      // region properties
-      /* eslint-disable @typescript-eslint/no-unsafe-member-access -- needed */
-      if (manifest.private === true) {
-        component.properties.add(
-          new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
-        )
-      }
-      /* eslint-enable @typescript-eslint/no-unsafe-member-access */
-      // endregion properties
-
-      return component
+    return component
   }
 
   /* eslint-disable-next-line complexity -- ack */
@@ -424,6 +433,7 @@ export class BomBuilder {
     }
     if ( component === undefined ) {
       component = this.componentBuilder.makeComponent(
+        /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
         this.normalizePackageJson({name: data.name, version: data.version}), type)
     }
     if (component === undefined) {
@@ -601,11 +611,13 @@ export class TreeBuilder {
   fromPaths (root: PackagePath, paths: Iterable<PackagePath>, dirSeparator: string): PTree {
     root += dirSeparator
     const upaths = new Set<PackagePath>(iteratorMap(paths, p => `${p}${dirSeparator}`))
-    const outs =  new Set<PackagePath>(iteratorFilter(upaths, p => !p.startsWith(root)))
+    const outs = new Set<PackagePath>(iteratorFilter(upaths, p => !p.startsWith(root)))
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
     const inTree: PTree = new Map(iteratorMap(setDifference(upaths, outs), p => [p, new Map()]))
-    this.nestPT( inTree)
+    this.nestPT(inTree)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
     const outTree: PTree = new Map(iteratorMap(outs, p => [p, new Map()]))
-    this.nestPT( outTree)
+    this.nestPT(outTree)
     const tree: PTree = new Map()
     outTree.forEach((v,k) => { tree.set(k, v) } )
     inTree.forEach((v,k) => { tree.set(k, v) })
