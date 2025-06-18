@@ -127,7 +127,6 @@
       "name": "uuid",
       "version": "8.3.2",
       "bom-ref": "-/demo-dev-dependencies@0.0.0|-/uuid@8.3.2",
-      "scope": "optional",
       "purl": "pkg:npm/uuid@8.3.2",
       "externalReferences": [
         {
@@ -217,7 +216,6 @@
       "group": "@types",
       "version": "8.3.4",
       "bom-ref": "-/demo-dev-dependencies@0.0.0|@types/uuid@8.3.4",
-      "scope": "optional",
       "purl": "pkg:npm/%40types/uuid@8.3.4",
       "externalReferences": [
         {

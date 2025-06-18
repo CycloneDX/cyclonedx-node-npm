@@ -457,7 +457,7 @@ export class BomBuilder {
 
     // region resolved
     const rref = this.makeExtRefDistFromPachageData(data)
-    if ( rref !== undefined) {
+    if ( rref !== undefined ) {
       component.externalReferences.add(rref)
     }
     // endregion resolved
@@ -480,7 +480,7 @@ export class BomBuilder {
     const rref = new Models.ExternalReference(
       tryRemoveSecretsFromUrl(resolved),
       Enums.ExternalReferenceType.Distribution,
-      {comment: 'as detected from npm-ls property "resolved"'}
+      { comment: 'as detected from npm-ls property "resolved"' }
     )
     if (isString(integrity)) {
       try {
@@ -546,37 +546,38 @@ export class BomBuilder {
     const children = new Models.ComponentRepository()
     for (const [p, pTree] of tree) {
       const component = allComponents.get(p)
-      const components = this.nestComponents(allComponents, pTree)
-      if (component === undefined) {
-        components.forEach(c => children.add(c))
-      } else {
-        component.components = components
-        children.add(component)
-      }
+      if (component === undefined) { throw new TypeError(`missing component for ${p}`)}
+      component.components = this.nestComponents(allComponents, pTree)
+      children.add(component)
     }
     return children
   }
 
   private bomrefComponents (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref = ''):void {
     for (const [p, cTree] of tree) {
-      const component =   allComponents.get(p)
-      let cPref = pref
-      if (component !== undefined) {
-        /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to account empty strings, too */
-        component.bomRef.value = `${pref}${component.group || '-'}/${component.name}@${component.version || '-'}`
-        cPref += `${component.bomRef.value}|`
+      const component = allComponents.get(p)
+      if (component === undefined) { throw new TypeError(`missing component for ${p}`) }
+      /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to account empty strings, too */
+      const parts = [pref]
+      if (component.group !== undefined && component.group.length > 0) {
+        parts.push(component.group, '/')
       }
-      this.bomrefComponents(allComponents, cTree, cPref)
+      parts.push(component.name)
+      if (component.version !== undefined && component.version.length > 0) {
+        parts.push('@', component.version)
+      }
+      component.bomRef.value = parts.join('')
+      this.bomrefComponents(allComponents, cTree, `${component.bomRef.value}|`)
     }
   }
 
   private makeDependencyGraph (allComponents: Map<PackagePath, Models.Component>, allPackages: Map<PackagePath, PackageData>): void {
     for (const [p, comp] of allComponents) {
       const pkg = allPackages.get(p)
-      if (pkg === undefined) { continue }
+      if (pkg === undefined) { throw new TypeError(`missing pkg for ${p}`) }
       for (const depPkg of pkg.dependencies) {
         const depComp = allComponents.get(depPkg)
-        if (depComp === undefined) { continue }
+        if (depComp === undefined) { throw new TypeError(`missing depComp for ${depPkg}`) }
         comp.dependencies.add(depComp.bomRef)
       }
     }
