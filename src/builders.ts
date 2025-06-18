@@ -554,6 +554,8 @@ export class BomBuilder {
   }
 
   private bomrefComponents (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref = ''):void {
+    // prefix everything - also direct dependencies and such!
+    // it could be that an inherited/outside dependency has the same bomRef otherwise ...
     for (const [p, cTree] of tree) {
       const component = allComponents.get(p)
       if (component === undefined) { throw new TypeError(`missing component for ${p}`) }

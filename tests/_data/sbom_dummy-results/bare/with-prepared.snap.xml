@@ -128,7 +128,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/db-ui/base</url>
+          <url>git+https://github.com/db-ui/base.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -141,7 +141,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|@isaacs/cliui@8.0.2">
-      <author>Ben Coe &lt;ben@npmjs.com&gt;</author>
+      <author>Ben Coe</author>
       <group>@isaacs</group>
       <name>cliui</name>
       <version>8.0.2</version>
@@ -157,9 +157,17 @@
           <url>https://registry.npmjs.org/@isaacs/cliui/-/cliui-8.0.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/yargs/cliui/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>yargs/cliui</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/yargs/cliui.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/yargs/cliui#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -188,7 +196,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/npm/agent.git</url>
+          <url>git+https://github.com/npm/agent.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -217,9 +225,17 @@
           <url>https://registry.npmjs.org/@npmcli/fs/-/fs-3.1.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/fs/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/npm/fs.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/fs#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -227,7 +243,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|@oozcitak/dom@1.15.10">
-      <author>Ozgur Ozcitak &lt;oozcitak@gmail.com&gt;</author>
+      <author>Ozgur Ozcitak</author>
       <group>@oozcitak</group>
       <name>dom</name>
       <version>1.15.10</version>
@@ -261,7 +277,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|@oozcitak/infra@1.0.8">
-      <author>Ozgur Ozcitak &lt;oozcitak@gmail.com&gt;</author>
+      <author>Ozgur Ozcitak</author>
       <group>@oozcitak</group>
       <name>infra</name>
       <version>1.0.8</version>
@@ -295,7 +311,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|@oozcitak/url@1.0.4">
-      <author>Ozgur Ozcitak &lt;oozcitak@gmail.com&gt;</author>
+      <author>Ozgur Ozcitak</author>
       <group>@oozcitak</group>
       <name>url</name>
       <version>1.0.4</version>
@@ -329,7 +345,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|@oozcitak/util@8.3.8">
-      <author>Ozgur Ozcitak &lt;oozcitak@gmail.com&gt;</author>
+      <author>Ozgur Ozcitak</author>
       <group>@oozcitak</group>
       <name>util</name>
       <version>8.3.8</version>
@@ -411,8 +427,12 @@
           <url>https://registry.npmjs.org/@types/node/-/node-20.14.10.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node</url>
+          <url>git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
         </reference>
         <reference type="website">
@@ -440,8 +460,12 @@
           <url>https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid</url>
+          <url>git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
         </reference>
         <reference type="website">
@@ -469,9 +493,17 @@
           <url>https://registry.npmjs.org/abbrev/-/abbrev-2.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/abbrev-js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/npm/abbrev-js.git</url>
+          <url>git+https://github.com/npm/abbrev-js.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/abbrev-js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -479,7 +511,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|agent-base@7.1.3">
-      <author>Nathan Rajlich &lt;nathan@tootallnate.net&gt; (http://n8.io/)</author>
+      <author>Nathan Rajlich</author>
       <name>agent-base</name>
       <version>7.1.3</version>
       <description>Turn a function into an `http.Agent` instance</description>
@@ -494,9 +526,17 @@
           <url>https://registry.npmjs.org/agent-base/-/agent-base-7.1.3.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/TooTallNate/proxy-agents/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/TooTallNate/proxy-agents.git#packages/agent-base</url>
+          <url>git+https://github.com/TooTallNate/proxy-agents.git#packages/agent-base</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/TooTallNate/proxy-agents#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -519,9 +559,17 @@
           <url>https://registry.npmjs.org/aggregate-error/-/aggregate-error-3.1.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/aggregate-error/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/aggregate-error</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/aggregate-error.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/aggregate-error#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -529,7 +577,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1">
-      <author>Carlo Quinonez &lt;carlo@machina.bio&gt;</author>
+      <author>Carlo Quinonez</author>
       <name>ajv-formats-draft2019</name>
       <version>1.6.1</version>
       <description>Plugin for AJV that adds support for some of string formats adding in the draft2019 JSON Schema.</description>
@@ -544,9 +592,17 @@
           <url>https://registry.npmjs.org/ajv-formats-draft2019/-/ajv-formats-draft2019-1.6.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/luzlab/ajv-formats-draft2019/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/luzlab/ajv-formats-draft2019.git</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/luzlab/ajv-formats-draft2019.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/luzlab/ajv-formats-draft2019#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -604,11 +660,11 @@
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/ajv-validator/ajv/issues</url>
-          <comment>as detected from PackageJson property "bugs"</comment>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>ajv-validator/ajv</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/ajv-validator/ajv.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://ajv.js.org</url>
@@ -635,9 +691,17 @@
           <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.1.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/ansi-regex/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>chalk/ansi-regex</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/chalk/ansi-regex.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/ansi-regex#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -660,9 +724,17 @@
           <url>https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/ansi-styles/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>chalk/ansi-styles</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/chalk/ansi-styles.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/ansi-styles#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -684,9 +756,17 @@
           <url>https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodeca/argparse/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>nodeca/argparse</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/nodeca/argparse.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodeca/argparse#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -694,7 +774,7 @@
       </properties>
       <components>
         <component type="library" bom-ref="@dummy-projects/with-prepared|argparse@1.0.10|sprintf-js@1.0.3">
-          <author>Alexandru Marasteanu &lt;hello@alexei.ro&gt; (http://alexei.ro/)</author>
+          <author>Alexandru Marasteanu</author>
           <name>sprintf-js</name>
           <version>1.0.3</version>
           <description>JavaScript sprintf implementation</description>
@@ -709,9 +789,17 @@
               <url>https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/alexei/sprintf.js/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
-              <url>https://github.com/alexei/sprintf.js.git</url>
+              <url>git+https://github.com/alexei/sprintf.js.git</url>
               <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/alexei/sprintf.js#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -736,6 +824,10 @@
           <url>https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/juliangruber/balanced-match/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/juliangruber/balanced-match.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
@@ -750,7 +842,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|base64-js@1.0.1">
-      <author>T. Jameson Little &lt;t.jameson.little@gmail.com&gt;</author>
+      <author>T. Jameson Little</author>
       <name>base64-js</name>
       <version>1.0.1</version>
       <description>Base64 encoding/decoding in pure JS</description>
@@ -765,9 +857,17 @@
           <url>https://registry.npmjs.org/base64-js/-/base64-js-1.0.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/beatgammit/base64-js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/beatgammit/base64-js.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/beatgammit/base64-js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -775,7 +875,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|bindings@1.5.0">
-      <author>Nathan Rajlich &lt;nathan@tootallnate.net&gt; (http://tootallnate.net)</author>
+      <author>Nathan Rajlich</author>
       <name>bindings</name>
       <version>1.5.0</version>
       <description>Helper module for loading your native module's .node file</description>
@@ -822,8 +922,12 @@
           <url>https://registry.npmjs.org/bl/-/bl-4.1.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/rvagg/bl/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/rvagg/bl.git</url>
+          <url>git+https://github.com/rvagg/bl.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -850,6 +954,10 @@
         <reference type="distribution">
           <url>https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/juliangruber/brace-expansion/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
           <url>git://github.com/juliangruber/brace-expansion.git</url>
@@ -898,7 +1006,7 @@
       </properties>
       <components>
         <component type="library" bom-ref="@dummy-projects/with-prepared|buffer@5.7.1|base64-js@1.5.1">
-          <author>T. Jameson Little &lt;t.jameson.little@gmail.com&gt;</author>
+          <author>T. Jameson Little</author>
           <name>base64-js</name>
           <version>1.5.1</version>
           <description>Base64 encoding/decoding in pure JS</description>
@@ -948,9 +1056,17 @@
           <url>https://registry.npmjs.org/bundle-dependencies/-/bundle-dependencies-1.0.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/gajus/bundle-dependencies/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/gajus/bundle-dependencies</url>
+          <url>git+https://github.com/gajus/bundle-dependencies.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/gajus/bundle-dependencies#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -2769,9 +2885,17 @@
           <url>https://registry.npmjs.org/cacache/-/cacache-18.0.4.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/cacache/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/npm/cacache.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/cacache#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -2779,7 +2903,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|chownr@2.0.0">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>chownr</name>
       <version>2.0.0</version>
       <description>like `chown -R`</description>
@@ -2794,9 +2918,17 @@
           <url>https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/chownr/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/isaacs/chownr.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/chownr#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -2819,9 +2951,17 @@
           <url>https://registry.npmjs.org/clean-stack/-/clean-stack-2.2.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/clean-stack/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/clean-stack</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/clean-stack.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/clean-stack#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -2829,7 +2969,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|color-convert@2.0.1">
-      <author>Heather Arthur &lt;fayearthur@gmail.com&gt;</author>
+      <author>Heather Arthur</author>
       <name>color-convert</name>
       <version>2.0.1</version>
       <description>Plain color conversion functions</description>
@@ -2844,9 +2984,17 @@
           <url>https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/Qix-/color-convert/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>Qix-/color-convert</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/Qix-/color-convert.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/Qix-/color-convert#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -2854,7 +3002,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|color-name@1.1.4">
-      <author>DY &lt;dfcreative@gmail.com&gt;</author>
+      <author>DY</author>
       <name>color-name</name>
       <version>1.1.4</version>
       <description>A list of color names and its values</description>
@@ -2887,7 +3035,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|commander@2.20.3">
-      <author>TJ Holowaychuk &lt;tj@vision-media.ca&gt;</author>
+      <author>TJ Holowaychuk</author>
       <name>commander</name>
       <version>2.20.3</version>
       <description>the complete solution for node.js command-line programs</description>
@@ -2902,9 +3050,17 @@
           <url>https://registry.npmjs.org/commander/-/commander-2.20.3.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/tj/commander.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/tj/commander.js.git</url>
+          <url>git+https://github.com/tj/commander.js.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/tj/commander.js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -2912,7 +3068,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|cross-spawn@7.0.6">
-      <author>André Cruz &lt;andre@moxy.studio&gt;</author>
+      <author>André Cruz</author>
       <name>cross-spawn</name>
       <version>7.0.6</version>
       <description>Cross platform child_process#spawn and child_process#spawnSync</description>
@@ -2926,6 +3082,10 @@
         <reference type="distribution">
           <url>https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/moxystudio/node-cross-spawn/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
           <url>git+ssh://git@github.com/moxystudio/node-cross-spawn.git</url>
@@ -2941,7 +3101,7 @@
       </properties>
       <components>
         <component type="library" bom-ref="@dummy-projects/with-prepared|cross-spawn@7.0.6|isexe@2.0.0">
-          <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+          <author>Isaac Z. Schlueter</author>
           <name>isexe</name>
           <version>2.0.0</version>
           <description>Minimal module to check if a file is executable.</description>
@@ -2974,7 +3134,7 @@
           </properties>
         </component>
         <component type="library" bom-ref="@dummy-projects/with-prepared|cross-spawn@7.0.6|which@2.0.2">
-          <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me)</author>
+          <author>Isaac Z. Schlueter</author>
           <name>which</name>
           <version>2.0.2</version>
           <description>Like which(1) unix command. Find the first instance of an executable in the PATH.</description>
@@ -2989,9 +3149,17 @@
               <url>https://registry.npmjs.org/which/-/which-2.0.2.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/isaacs/node-which/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
               <url>git://github.com/isaacs/node-which.git</url>
               <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/isaacs/node-which#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -3001,7 +3169,7 @@
       </components>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|debug@4.4.0">
-      <author>Josh Junon (https://github.com/qix-)</author>
+      <author>Josh Junon</author>
       <name>debug</name>
       <version>4.4.0</version>
       <description>Lightweight debugging utility for Node.js and the browser</description>
@@ -3016,9 +3184,17 @@
           <url>https://registry.npmjs.org/debug/-/debug-4.4.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/debug-js/debug/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/debug-js/debug.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/debug-js/debug#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3041,9 +3217,17 @@
           <url>https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/decompress-response/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/decompress-response</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/decompress-response.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/decompress-response#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3051,7 +3235,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|deep-extend@0.6.0">
-      <author>Viacheslav Lotsmanov &lt;lotsmanov89@gmail.com&gt;</author>
+      <author>Viacheslav Lotsmanov</author>
       <name>deep-extend</name>
       <version>0.6.0</version>
       <description>Recursive object extending</description>
@@ -3072,7 +3256,7 @@
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/unclechu/node-deep-extend/issues</url>
-          <comment>as detected from PackageJson property "bugs"</comment>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
           <url>git://github.com/unclechu/node-deep-extend.git</url>
@@ -3088,7 +3272,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|detect-libc@2.0.3">
-      <author>Lovell Fuller &lt;npm@lovell.info&gt;</author>
+      <author>Lovell Fuller</author>
       <name>detect-libc</name>
       <version>2.0.3</version>
       <description>Node.js module to detect the C standard library (libc) implementation family and version</description>
@@ -3103,9 +3287,17 @@
           <url>https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.3.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/lovell/detect-libc/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>git://github.com/lovell/detect-libc</url>
+          <url>git://github.com/lovell/detect-libc.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/lovell/detect-libc#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3113,7 +3305,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|discontinuous-range@1.0.0">
-      <author>David Tudury &lt;david.tudury@gmail.com&gt;</author>
+      <author>David Tudury</author>
       <name>discontinuous-range</name>
       <version>1.0.0</version>
       <description>for adding, subtracting, and indexing discontinuous ranges of numbers</description>
@@ -3133,7 +3325,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/dtudury/discontinuous-range.git</url>
+          <url>git+https://github.com/dtudury/discontinuous-range.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -3161,9 +3353,17 @@
           <url>https://registry.npmjs.org/eastasianwidth/-/eastasianwidth-0.2.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/komagata/eastasianwidth/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/komagata/eastasianwidth.git</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/komagata/eastasianwidth#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3188,10 +3388,10 @@
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
-          <comment>as detected from PackageJson property "bugs"</comment>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/mathiasbynens/emoji-regex.git</url>
+          <url>git+https://github.com/mathiasbynens/emoji-regex.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -3219,9 +3419,17 @@
           <url>https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/andris9/encoding/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/andris9/encoding.git</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/andris9/encoding.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/andris9/encoding#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3229,7 +3437,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|end-of-stream@1.4.4">
-      <author>Mathias Buus &lt;mathiasbuus@gmail.com&gt;</author>
+      <author>Mathias Buus</author>
       <name>end-of-stream</name>
       <version>1.4.4</version>
       <description>Call a callback when a readable/writable/duplex stream has completed or failed.</description>
@@ -3277,9 +3485,17 @@
           <url>https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/env-paths/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/env-paths</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/env-paths.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/env-paths#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3287,7 +3503,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|err-code@2.0.3">
-      <author>IndigoUnited &lt;hello@indigounited.com&gt; (http://indigounited.com)</author>
+      <author>IndigoUnited</author>
       <name>err-code</name>
       <version>2.0.3</version>
       <description>Create an error with a code</description>
@@ -3309,6 +3525,10 @@
         <reference type="vcs">
           <url>git://github.com/IndigoUnited/js-err-code.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/IndigoUnited/js-err-code#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3336,7 +3556,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/jquery/esprima.git</url>
+          <url>git+https://github.com/jquery/esprima.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -3349,7 +3569,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|expand-template@2.0.3">
-      <author>LM &lt;ralphtheninja@riseup.net&gt;</author>
+      <author>LM</author>
       <name>expand-template</name>
       <version>2.0.3</version>
       <description>Expand placeholders in a template string</description>
@@ -3362,8 +3582,12 @@
           <url>https://registry.npmjs.org/expand-template/-/expand-template-2.0.3.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/ralphtheninja/expand-template/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/ralphtheninja/expand-template.git</url>
+          <url>git+https://github.com/ralphtheninja/expand-template.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -3409,7 +3633,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|extend@3.0.2">
-      <author>Stefan Thomas &lt;justmoon@members.fsf.org&gt; (http://www.justmoon.net)</author>
+      <author>Stefan Thomas</author>
       <name>extend</name>
       <version>3.0.2</version>
       <description>Port of jQuery.extend for node.js and the browser</description>
@@ -3424,9 +3648,17 @@
           <url>https://registry.npmjs.org/extend/-/extend-3.0.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/justmoon/node-extend/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/justmoon/node-extend.git</url>
+          <url>git+https://github.com/justmoon/node-extend.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/justmoon/node-extend#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3467,7 +3699,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|fast-uri@3.0.3">
-      <author>Vincent Le Goff &lt;vince.legoff@gmail.com&gt; (https://github.com/zekth)</author>
+      <author>Vincent Le Goff</author>
       <name>fast-uri</name>
       <version>3.0.3</version>
       <description>Dependency free RFC 3986 URI toolbox</description>
@@ -3500,7 +3732,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|file-uri-to-path@1.0.0">
-      <author>Nathan Rajlich &lt;nathan@tootallnate.net&gt; (http://n8.io/)</author>
+      <author>Nathan Rajlich</author>
       <name>file-uri-to-path</name>
       <version>1.0.0</version>
       <description>Convert a file: URI to a file path</description>
@@ -3533,7 +3765,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|foreground-child@3.3.0">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>foreground-child</name>
       <version>3.3.0</version>
       <description>Run a child as if it's the foreground process. Give it stdio. Exit when it exits.</description>
@@ -3548,9 +3780,17 @@
           <url>https://registry.npmjs.org/foreground-child/-/foreground-child-3.3.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/tapjs/foreground-child/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/tapjs/foreground-child.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/tapjs/foreground-child#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3558,7 +3798,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|fs-constants@1.0.0">
-      <author>Mathias Buus (@mafintosh)</author>
+      <author>Mathias Buus</author>
       <name>fs-constants</name>
       <version>1.0.0</version>
       <description>Require constants across node and the browser</description>
@@ -3578,7 +3818,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/mafintosh/fs-constants.git</url>
+          <url>git+https://github.com/mafintosh/fs-constants.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -3611,7 +3851,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/npm/fs-minipass.git</url>
+          <url>git+https://github.com/npm/fs-minipass.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -3639,6 +3879,10 @@
           <url>https://registry.npmjs.org/github-from-package/-/github-from-package-0.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/substack/github-from-package/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/substack/github-from-package.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
@@ -3653,7 +3897,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|glob@10.4.5">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (https://blog.izs.me/)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>glob</name>
       <version>10.4.5</version>
       <description>the most correct and second fastest glob implementation in JavaScript</description>
@@ -3668,9 +3912,17 @@
           <url>https://registry.npmjs.org/glob/-/glob-10.4.5.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/node-glob/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/isaacs/node-glob.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/node-glob#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3692,9 +3944,17 @@
           <url>https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/node-graceful-fs/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/isaacs/node-graceful-fs</url>
+          <url>git+https://github.com/isaacs/node-graceful-fs.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/node-graceful-fs#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3702,7 +3962,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|http-cache-semantics@4.1.1">
-      <author>Kornel Lesiński &lt;kornel@geekhood.net&gt; (https://kornel.ski/)</author>
+      <author>Kornel Lesiński</author>
       <name>http-cache-semantics</name>
       <version>4.1.1</version>
       <description>Parses Cache-Control and other headers. Helps building correct HTTP caches and proxies</description>
@@ -3717,9 +3977,17 @@
           <url>https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.1.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/kornelski/http-cache-semantics/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/kornelski/http-cache-semantics.git</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/kornelski/http-cache-semantics.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/kornelski/http-cache-semantics#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3727,7 +3995,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|http-proxy-agent@7.0.2">
-      <author>Nathan Rajlich &lt;nathan@tootallnate.net&gt; (http://n8.io/)</author>
+      <author>Nathan Rajlich</author>
       <name>http-proxy-agent</name>
       <version>7.0.2</version>
       <description>An HTTP(s) proxy `http.Agent` implementation for HTTP</description>
@@ -3742,9 +4010,17 @@
           <url>https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/TooTallNate/proxy-agents/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent</url>
+          <url>git+https://github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/TooTallNate/proxy-agents#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3752,7 +4028,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|https-proxy-agent@7.0.6">
-      <author>Nathan Rajlich &lt;nathan@tootallnate.net&gt; (http://n8.io/)</author>
+      <author>Nathan Rajlich</author>
       <name>https-proxy-agent</name>
       <version>7.0.6</version>
       <description>An HTTP(s) proxy `http.Agent` implementation for HTTPS</description>
@@ -3767,9 +4043,17 @@
           <url>https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/TooTallNate/proxy-agents/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent</url>
+          <url>git+https://github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/TooTallNate/proxy-agents#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3777,7 +4061,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|iconv-lite@0.6.3">
-      <author>Alexander Shtuchkin &lt;ashtuchkin@gmail.com&gt;</author>
+      <author>Alexander Shtuchkin</author>
       <name>iconv-lite</name>
       <version>0.6.3</version>
       <description>Convert character encodings in pure javascript.</description>
@@ -3794,7 +4078,7 @@
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/ashtuchkin/iconv-lite/issues</url>
-          <comment>as detected from PackageJson property "bugs"</comment>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
           <url>git://github.com/ashtuchkin/iconv-lite.git</url>
@@ -3825,9 +4109,17 @@
           <url>https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/feross/ieee754/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/feross/ieee754.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/feross/ieee754#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3858,6 +4150,10 @@
           <url>git+ssh://git@github.com/kaelzhang/node-ignore.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
+        <reference type="website">
+          <url>https://github.com/kaelzhang/node-ignore#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
       </externalReferences>
       <properties>
         <property name="cdx:npm:package:path">node_modules/ignore</property>
@@ -3884,7 +4180,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/jensyt/imurmurhash-js</url>
+          <url>git+https://github.com/jensyt/imurmurhash-js.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -3912,9 +4208,17 @@
           <url>https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/indent-string/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/indent-string</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/indent-string.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/indent-string#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3936,9 +4240,17 @@
           <url>https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/inherits/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>git://github.com/isaacs/inherits</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git://github.com/isaacs/inherits.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/inherits#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3946,7 +4258,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|ini@1.3.8">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>ini</name>
       <version>1.3.8</version>
       <description>An ini encoder/decoder for node</description>
@@ -3961,9 +4273,17 @@
           <url>https://registry.npmjs.org/ini/-/ini-1.3.8.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/ini/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/isaacs/ini.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/ini#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -3971,7 +4291,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|ip-address@9.0.5">
-      <author>Beau Gunderson &lt;beau@beaugunderson.com&gt; (https://beaugunderson.com/)</author>
+      <author>Beau Gunderson</author>
       <name>ip-address</name>
       <version>9.0.5</version>
       <description>A library for parsing IPv4 and IPv6 IP addresses in node and the browser.</description>
@@ -3986,9 +4306,17 @@
           <url>https://registry.npmjs.org/ip-address/-/ip-address-9.0.5.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/beaugunderson/ip-address/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/beaugunderson/ip-address.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/beaugunderson/ip-address#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4011,9 +4339,17 @@
           <url>https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/is-fullwidth-code-point/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/is-fullwidth-code-point</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/is-fullwidth-code-point.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/is-fullwidth-code-point#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4021,7 +4357,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|is-lambda@1.0.1">
-      <author>Thomas Watson Steen &lt;w@tson.dk&gt; (https://twitter.com/wa7son)</author>
+      <author>Thomas Watson Steen</author>
       <name>is-lambda</name>
       <version>1.0.1</version>
       <description>Detect if your code is running on an AWS Lambda server</description>
@@ -4041,7 +4377,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/watson/is-lambda.git</url>
+          <url>git+https://github.com/watson/is-lambda.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -4069,9 +4405,17 @@
           <url>https://registry.npmjs.org/is-obj/-/is-obj-3.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/is-obj/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/is-obj</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/is-obj.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/is-obj#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4079,7 +4423,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|isexe@3.1.1">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>isexe</name>
       <version>3.1.1</version>
       <description>Minimal module to check if a file is executable.</description>
@@ -4094,9 +4438,17 @@
           <url>https://registry.npmjs.org/isexe/-/isexe-3.1.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/isexe/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/isaacs/isexe</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/isaacs/isexe.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/isexe#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4104,7 +4456,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|jackspeak@3.4.3">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt;</author>
+      <author>Isaac Z. Schlueter</author>
       <name>jackspeak</name>
       <version>3.4.3</version>
       <description>A very strict and proper argument parser.</description>
@@ -4119,9 +4471,17 @@
           <url>https://registry.npmjs.org/jackspeak/-/jackspeak-3.4.3.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/jackspeak/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/isaacs/jackspeak.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/jackspeak#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4129,7 +4489,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|js-yaml@3.14.1">
-      <author>Vladimir Zapparov &lt;dervus.grim@gmail.com&gt;</author>
+      <author>Vladimir Zapparov</author>
       <name>js-yaml</name>
       <version>3.14.1</version>
       <description>YAML 1.2 parser and serializer</description>
@@ -4144,9 +4504,13 @@
           <url>https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodeca/js-yaml/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>nodeca/js-yaml</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/nodeca/js-yaml.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/nodeca/js-yaml</url>
@@ -4173,9 +4537,17 @@
           <url>https://registry.npmjs.org/jsbn/-/jsbn-1.1.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/andyperlitch/jsbn/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/andyperlitch/jsbn.git</url>
+          <url>git+https://github.com/andyperlitch/jsbn.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/andyperlitch/jsbn#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4236,8 +4608,12 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>http://github.com/marudor/libxmljs2.git</url>
+          <url>git+ssh://git@github.com/marudor/libxmljs2.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/marudor/libxmljs2#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4245,7 +4621,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|lru-cache@10.4.3">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt;</author>
+      <author>Isaac Z. Schlueter</author>
       <name>lru-cache</name>
       <version>10.4.3</version>
       <description>A cache object that deletes the least-recently-used items.</description>
@@ -4260,9 +4636,17 @@
           <url>https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/node-lru-cache/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/isaacs/node-lru-cache.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/node-lru-cache#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4285,9 +4669,17 @@
           <url>https://registry.npmjs.org/make-fetch-happen/-/make-fetch-happen-13.0.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/make-fetch-happen/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/npm/make-fetch-happen.git</url>
+          <url>git+https://github.com/npm/make-fetch-happen.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/make-fetch-happen#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4310,9 +4702,17 @@
           <url>https://registry.npmjs.org/mimic-response/-/mimic-response-3.1.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/mimic-response/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/mimic-response</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/mimic-response.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/mimic-response#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4320,7 +4720,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|minimatch@9.0.5">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>minimatch</name>
       <version>9.0.5</version>
       <description>a glob matcher in javascript</description>
@@ -4335,9 +4735,17 @@
           <url>https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/minimatch/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/isaacs/minimatch.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/minimatch#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4360,6 +4768,10 @@
           <url>https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/minimistjs/minimist/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/minimistjs/minimist.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
@@ -4374,7 +4786,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-collect@2.0.1">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (https://izs.me)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>minipass-collect</name>
       <version>2.0.1</version>
       <description>A Minipass stream that collects all the data into a single chunk</description>
@@ -4389,9 +4801,17 @@
           <url>https://registry.npmjs.org/minipass-collect/-/minipass-collect-2.0.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/minipass-collect/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/isaacs/minipass-collect</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/isaacs/minipass-collect.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/minipass-collect#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4414,9 +4834,17 @@
           <url>https://registry.npmjs.org/minipass-fetch/-/minipass-fetch-3.0.5.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/minipass-fetch/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/npm/minipass-fetch.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/minipass-fetch#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4424,7 +4852,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-flush@1.0.5">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (https://izs.me)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>minipass-flush</name>
       <version>1.0.5</version>
       <description>A Minipass stream that calls a flush function before emitting 'end'</description>
@@ -4439,9 +4867,17 @@
           <url>https://registry.npmjs.org/minipass-flush/-/minipass-flush-1.0.5.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/minipass-flush/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/isaacs/minipass-flush.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/minipass-flush#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4449,7 +4885,7 @@
       </properties>
       <components>
         <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-flush@1.0.5|minipass@3.3.6">
-          <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+          <author>Isaac Z. Schlueter</author>
           <name>minipass</name>
           <version>3.3.6</version>
           <description>minimal implementation of a PassThrough stream</description>
@@ -4464,9 +4900,17 @@
               <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/isaacs/minipass/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
               <url>git+https://github.com/isaacs/minipass.git</url>
               <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/isaacs/minipass#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -4476,7 +4920,7 @@
       </components>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-pipeline@1.2.4">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (https://izs.me)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>minipass-pipeline</name>
       <version>1.2.4</version>
       <description>create a pipeline of streams using Minipass</description>
@@ -4497,7 +4941,7 @@
       </properties>
       <components>
         <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-pipeline@1.2.4|minipass@3.3.6">
-          <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+          <author>Isaac Z. Schlueter</author>
           <name>minipass</name>
           <version>3.3.6</version>
           <description>minimal implementation of a PassThrough stream</description>
@@ -4512,9 +4956,17 @@
               <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/isaacs/minipass/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
               <url>git+https://github.com/isaacs/minipass.git</url>
               <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/isaacs/minipass#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -4524,7 +4976,7 @@
       </components>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-sized@1.0.3">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (https://izs.me)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>minipass-sized</name>
       <version>1.0.3</version>
       <description>A Minipass stream that raises an error if you get a different number of bytes than expected</description>
@@ -4539,9 +4991,17 @@
           <url>https://registry.npmjs.org/minipass-sized/-/minipass-sized-1.0.3.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/minipass-sized/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/isaacs/minipass-sized.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/minipass-sized#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4549,7 +5009,7 @@
       </properties>
       <components>
         <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-sized@1.0.3|minipass@3.3.6">
-          <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+          <author>Isaac Z. Schlueter</author>
           <name>minipass</name>
           <version>3.3.6</version>
           <description>minimal implementation of a PassThrough stream</description>
@@ -4564,9 +5024,17 @@
               <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/isaacs/minipass/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
               <url>git+https://github.com/isaacs/minipass.git</url>
               <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/isaacs/minipass#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -4576,7 +5044,7 @@
       </components>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|minipass@7.1.2">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>minipass</name>
       <version>7.1.2</version>
       <description>minimal implementation of a PassThrough stream</description>
@@ -4591,9 +5059,17 @@
           <url>https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/minipass/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/isaacs/minipass</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/isaacs/minipass.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/minipass#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4601,7 +5077,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|minizlib@2.1.2">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>minizlib</name>
       <version>2.1.2</version>
       <description>A small fast zlib stream built on [minipass](http://npm.im/minipass) and Node.js's zlib binding.</description>
@@ -4616,9 +5092,17 @@
           <url>https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/minizlib/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/isaacs/minizlib.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/minizlib#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4626,7 +5110,7 @@
       </properties>
       <components>
         <component type="library" bom-ref="@dummy-projects/with-prepared|minizlib@2.1.2|minipass@3.3.6">
-          <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+          <author>Isaac Z. Schlueter</author>
           <name>minipass</name>
           <version>3.3.6</version>
           <description>minimal implementation of a PassThrough stream</description>
@@ -4641,9 +5125,17 @@
               <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/isaacs/minipass/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
               <url>git+https://github.com/isaacs/minipass.git</url>
               <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/isaacs/minipass#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -4653,7 +5145,7 @@
       </components>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|mkdirp-classic@0.5.3">
-      <author>Mathias Buus (@mafintosh)</author>
+      <author>Mathias Buus</author>
       <name>mkdirp-classic</name>
       <version>0.5.3</version>
       <description>Mirror of mkdirp 0.5.2</description>
@@ -4673,7 +5165,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/mafintosh/mkdirp-classic.git</url>
+          <url>git+https://github.com/mafintosh/mkdirp-classic.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -4700,9 +5192,17 @@
           <url>https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/node-mkdirp/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/isaacs/node-mkdirp.git</url>
+          <url>git+https://github.com/isaacs/node-mkdirp.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/node-mkdirp#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4710,7 +5210,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|moo@0.5.2">
-      <author>Tim Radvan &lt;tim@tjvr.org&gt;</author>
+      <author>Tim Radvan</author>
       <name>moo</name>
       <version>0.5.2</version>
       <description>Optimised tokenizer/lexer generator! 🐄 Much performance. Moo!</description>
@@ -4725,9 +5225,17 @@
           <url>https://registry.npmjs.org/moo/-/moo-0.5.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/tjvr/moo/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/tjvr/moo.git</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/tjvr/moo.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/tjvr/moo#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4749,9 +5257,17 @@
           <url>https://registry.npmjs.org/ms/-/ms-2.1.3.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/vercel/ms/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>vercel/ms</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/vercel/ms.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/vercel/ms#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4773,9 +5289,17 @@
           <url>https://registry.npmjs.org/nan/-/nan-2.20.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodejs/nan/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/nodejs/nan.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodejs/nan#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4831,9 +5355,17 @@
           <url>https://registry.npmjs.org/nearley/-/nearley-2.20.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/hardmath123/nearley/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/hardmath123/nearley.git</url>
+          <url>git+https://github.com/hardmath123/nearley.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/hardmath123/nearley#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4855,9 +5387,17 @@
           <url>https://registry.npmjs.org/negotiator/-/negotiator-0.6.4.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/jshttp/negotiator/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>jshttp/negotiator</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/jshttp/negotiator.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/jshttp/negotiator#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4898,7 +5438,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|node-gyp@10.3.1">
-      <author>Nathan Rajlich &lt;nathan@tootallnate.net&gt; (http://tootallnate.net)</author>
+      <author>Nathan Rajlich</author>
       <name>node-gyp</name>
       <version>10.3.1</version>
       <description>Node.js native addon build tool</description>
@@ -4913,9 +5453,17 @@
           <url>https://registry.npmjs.org/node-gyp/-/node-gyp-10.3.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodejs/node-gyp/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/nodejs/node-gyp.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodejs/node-gyp#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4938,9 +5486,17 @@
           <url>https://registry.npmjs.org/nopt/-/nopt-7.2.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/nopt/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/npm/nopt.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/nopt#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4948,7 +5504,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|once@1.4.0">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>once</name>
       <version>1.4.0</version>
       <description>Run a function exactly one time</description>
@@ -4963,9 +5519,17 @@
           <url>https://registry.npmjs.org/once/-/once-1.4.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/once/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>git://github.com/isaacs/once</url>
+          <url>git://github.com/isaacs/once.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/once#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4988,9 +5552,17 @@
           <url>https://registry.npmjs.org/p-map/-/p-map-4.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/p-map/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/p-map</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/p-map.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/p-map#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -4998,7 +5570,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|package-json-from-dist@1.0.1">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (https://izs.me)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>package-json-from-dist</name>
       <version>1.0.1</version>
       <description>Load the local package.json from either src or dist folder</description>
@@ -5013,9 +5585,17 @@
           <url>https://registry.npmjs.org/package-json-from-dist/-/package-json-from-dist-1.0.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/package-json-from-dist/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/isaacs/package-json-from-dist.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/package-json-from-dist#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5071,9 +5651,17 @@
           <url>https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/path-key/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/path-key</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/path-key.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/path-key#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5081,7 +5669,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|path-scurry@1.11.1">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (https://blog.izs.me)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>path-scurry</name>
       <version>1.11.1</version>
       <description>walk paths fast and efficiently</description>
@@ -5096,9 +5684,17 @@
           <url>https://registry.npmjs.org/path-scurry/-/path-scurry-1.11.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/path-scurry/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>git+https://github.com/isaacs/path-scurry</url>
+          <url>git+https://github.com/isaacs/path-scurry.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/path-scurry#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5106,7 +5702,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|prebuild-install@7.1.2">
-      <author>Mathias Buus (@mafintosh)</author>
+      <author>Mathias Buus</author>
       <name>prebuild-install</name>
       <version>7.1.2</version>
       <description>A command line tool to easily install prebuilt binaries for multiple version of node/iojs on a specific platform</description>
@@ -5126,7 +5722,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/prebuild/prebuild-install.git</url>
+          <url>git+https://github.com/prebuild/prebuild-install.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -5154,9 +5750,17 @@
           <url>https://registry.npmjs.org/proc-log/-/proc-log-4.2.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/proc-log/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/npm/proc-log.git</url>
+          <url>git+https://github.com/npm/proc-log.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/proc-log#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5164,7 +5768,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|promise-retry@2.0.1">
-      <author>IndigoUnited &lt;hello@indigounited.com&gt; (http://indigounited.com)</author>
+      <author>IndigoUnited</author>
       <name>promise-retry</name>
       <version>2.0.1</version>
       <description>Retries a function that returns a promise, leveraging the power of the retry module.</description>
@@ -5187,13 +5791,17 @@
           <url>git://github.com/IndigoUnited/node-promise-retry.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
+        <reference type="website">
+          <url>https://github.com/IndigoUnited/node-promise-retry#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
       </externalReferences>
       <properties>
         <property name="cdx:npm:package:path">node_modules/promise-retry</property>
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|pump@3.0.2">
-      <author>Mathias Buus Madsen &lt;mathiasbuus@gmail.com&gt;</author>
+      <author>Mathias Buus Madsen</author>
       <name>pump</name>
       <version>3.0.2</version>
       <description>pipe streams together and close all of them if one of them closes</description>
@@ -5208,9 +5816,17 @@
           <url>https://registry.npmjs.org/pump/-/pump-3.0.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/mafintosh/pump/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/mafintosh/pump.git</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/mafintosh/pump#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5235,10 +5851,10 @@
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/mathiasbynens/punycode.js/issues</url>
-          <comment>as detected from PackageJson property "bugs"</comment>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/mathiasbynens/punycode.js.git</url>
+          <url>git+https://github.com/mathiasbynens/punycode.js.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -5271,7 +5887,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/tabatkins/railroad-diagrams.git</url>
+          <url>git+https://github.com/tabatkins/railroad-diagrams.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -5284,7 +5900,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|randexp@0.4.6">
-      <author>Roly Fentanes (https://github.com/fent)</author>
+      <author>Roly Fentanes</author>
       <name>randexp</name>
       <version>0.4.6</version>
       <description>Create random strings that match a given regular expression.</description>
@@ -5298,6 +5914,10 @@
         <reference type="distribution">
           <url>https://registry.npmjs.org/randexp/-/randexp-0.4.6.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/fent/randexp.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
           <url>git://github.com/fent/randexp.js.git</url>
@@ -5313,7 +5933,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|rc@1.2.8">
-      <author>Dominic Tarr &lt;dominic.tarr@gmail.com&gt; (dominictarr.com)</author>
+      <author>Dominic Tarr</author>
       <name>rc</name>
       <version>1.2.8</version>
       <description>hardwired configuration loader</description>
@@ -5326,9 +5946,17 @@
           <url>https://registry.npmjs.org/rc/-/rc-1.2.8.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/dominictarr/rc/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/dominictarr/rc.git</url>
+          <url>git+https://github.com/dominictarr/rc.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/dominictarr/rc#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5350,9 +5978,17 @@
           <url>https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodejs/readable-stream/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>git://github.com/nodejs/readable-stream</url>
+          <url>git://github.com/nodejs/readable-stream.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodejs/readable-stream#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5375,9 +6011,17 @@
           <url>https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/floatdrop/require-from-string/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>floatdrop/require-from-string</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/floatdrop/require-from-string.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/floatdrop/require-from-string#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5385,7 +6029,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|ret@0.1.15">
-      <author>Roly Fentanes (https://github.com/fent)</author>
+      <author>Roly Fentanes</author>
       <name>ret</name>
       <version>0.1.15</version>
       <description>Tokenizes a string that represents a regular expression.</description>
@@ -5400,9 +6044,17 @@
           <url>https://registry.npmjs.org/ret/-/ret-0.1.15.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/fent/ret.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/fent/ret.js.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/fent/ret.js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5410,7 +6062,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|retry@0.12.0">
-      <author>Tim Koschützki &lt;tim@debuggable.com&gt; (http://debuggable.com/)</author>
+      <author>Tim Koschützki</author>
       <name>retry</name>
       <version>0.12.0</version>
       <description>Abstraction for exponential and custom retry strategies for failed operations.</description>
@@ -5424,6 +6076,10 @@
         <reference type="distribution">
           <url>https://registry.npmjs.org/retry/-/retry-0.12.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/tim-kos/node-retry/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
           <url>git://github.com/tim-kos/node-retry.git</url>
@@ -5495,13 +6151,17 @@
           <url>git+https://github.com/ChALkeR/safer-buffer.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
+        <reference type="website">
+          <url>https://github.com/ChALkeR/safer-buffer#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
       </externalReferences>
       <properties>
         <property name="cdx:npm:package:path">node_modules/safer-buffer</property>
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|schemes@1.4.0">
-      <author>Peter Müller &lt;munter@fumle.dk&gt;</author>
+      <author>Peter Müller</author>
       <name>schemes</name>
       <version>1.4.0</version>
       <description>IANA Uniform Resource Identifier (URI) Schemes list, including crowd sourced unofficial ones</description>
@@ -5549,9 +6209,17 @@
           <url>https://registry.npmjs.org/semver/-/semver-7.6.3.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/node-semver/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/npm/node-semver.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/node-semver#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5574,9 +6242,17 @@
           <url>https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/kevva/shebang-command/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>kevva/shebang-command</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/kevva/shebang-command.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/kevva/shebang-command#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5599,9 +6275,17 @@
           <url>https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/shebang-regex/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/shebang-regex</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/shebang-regex.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/shebang-regex#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5609,7 +6293,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|signal-exit@4.1.0">
-      <author>Ben Coe &lt;ben@npmjs.com&gt;</author>
+      <author>Ben Coe</author>
       <name>signal-exit</name>
       <version>4.1.0</version>
       <description>when you want to fire an event no matter how a process exits.</description>
@@ -5624,9 +6308,17 @@
           <url>https://registry.npmjs.org/signal-exit/-/signal-exit-4.1.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/tapjs/signal-exit/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/tapjs/signal-exit.git</url>
+          <url>git+https://github.com/tapjs/signal-exit.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/tapjs/signal-exit#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5720,7 +6412,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/JoshGlazebrook/smart-buffer.git</url>
+          <url>git+https://github.com/JoshGlazebrook/smart-buffer.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -5733,7 +6425,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|smtp-address-parser@1.1.0">
-      <author>Gene Hightower &lt;gene@digilicious.com&gt; (https://digilicious.com/)</author>
+      <author>Gene Hightower</author>
       <name>smtp-address-parser</name>
       <version>1.1.0</version>
       <description>Parse an SMTP (RFC-5321) address</description>
@@ -5781,9 +6473,17 @@
           <url>https://registry.npmjs.org/socks-proxy-agent/-/socks-proxy-agent-8.0.5.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/TooTallNate/proxy-agents/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent</url>
+          <url>git+https://github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/TooTallNate/proxy-agents#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5811,7 +6511,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/JoshGlazebrook/socks.git</url>
+          <url>git+https://github.com/JoshGlazebrook/socks.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -5839,9 +6539,17 @@
           <url>https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.5.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/kemitchell/spdx-exceptions.json/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>kemitchell/spdx-exceptions.json</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/kemitchell/spdx-exceptions.json.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/kemitchell/spdx-exceptions.json#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5849,7 +6557,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|spdx-expression-parse@4.0.0">
-      <author>Kyle E. Mitchell &lt;kyle@kemitchell.com&gt; (https://kemitchell.com)</author>
+      <author>Kyle E. Mitchell</author>
       <name>spdx-expression-parse</name>
       <version>4.0.0</version>
       <description>parse SPDX license expressions</description>
@@ -5864,9 +6572,17 @@
           <url>https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-4.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/jslicense/spdx-expression-parse.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>jslicense/spdx-expression-parse.js</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/jslicense/spdx-expression-parse.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/jslicense/spdx-expression-parse.js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5874,7 +6590,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|spdx-license-ids@3.0.20">
-      <author>Shinnosuke Watanabe (https://github.com/shinnn)</author>
+      <author>Shinnosuke Watanabe</author>
       <name>spdx-license-ids</name>
       <version>3.0.20</version>
       <description>A list of SPDX license identifiers</description>
@@ -5889,9 +6605,17 @@
           <url>https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.20.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/jslicense/spdx-license-ids/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>jslicense/spdx-license-ids</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/jslicense/spdx-license-ids.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/jslicense/spdx-license-ids#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5899,7 +6623,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|sprintf-js@1.1.3">
-      <author>Alexandru Mărășteanu &lt;hello@alexei.ro&gt;</author>
+      <author>Alexandru Mărășteanu</author>
       <name>sprintf-js</name>
       <version>1.1.3</version>
       <description>JavaScript sprintf implementation</description>
@@ -5914,9 +6638,17 @@
           <url>https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.3.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/alexei/sprintf.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/alexei/sprintf.js.git</url>
+          <url>git+https://github.com/alexei/sprintf.js.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/alexei/sprintf.js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5939,9 +6671,17 @@
           <url>https://registry.npmjs.org/ssri/-/ssri-10.0.6.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/ssri/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/npm/ssri.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/ssri#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -5962,6 +6702,10 @@
         <reference type="distribution">
           <url>https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodejs/string_decoder/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
           <url>git://github.com/nodejs/string_decoder.git</url>
@@ -5992,9 +6736,17 @@
           <url>https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/string-width/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/string-width</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/string-width.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/string-width#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6017,9 +6769,17 @@
               <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/chalk/ansi-regex/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
-              <url>chalk/ansi-regex</url>
-              <comment>as detected from PackageJson property "repository"</comment>
+              <url>git+https://github.com/chalk/ansi-regex.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/chalk/ansi-regex#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -6044,10 +6804,10 @@
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
-              <comment>as detected from PackageJson property "bugs"</comment>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
             </reference>
             <reference type="vcs">
-              <url>https://github.com/mathiasbynens/emoji-regex.git</url>
+              <url>git+https://github.com/mathiasbynens/emoji-regex.git</url>
               <comment>as detected from PackageJson property "repository.url"</comment>
             </reference>
             <reference type="website">
@@ -6075,9 +6835,17 @@
               <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/chalk/strip-ansi/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
-              <url>chalk/strip-ansi</url>
-              <comment>as detected from PackageJson property "repository"</comment>
+              <url>git+https://github.com/chalk/strip-ansi.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/chalk/strip-ansi#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -6102,9 +6870,17 @@
           <url>https://registry.npmjs.org/string-width/-/string-width-5.1.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/string-width/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/string-width</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/string-width.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/string-width#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6127,9 +6903,17 @@
           <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/strip-ansi/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>chalk/strip-ansi</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/chalk/strip-ansi.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/strip-ansi#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6152,9 +6936,17 @@
               <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/chalk/ansi-regex/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
-              <url>chalk/ansi-regex</url>
-              <comment>as detected from PackageJson property "repository"</comment>
+              <url>git+https://github.com/chalk/ansi-regex.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/chalk/ansi-regex#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -6179,9 +6971,17 @@
           <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/strip-ansi/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>chalk/strip-ansi</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/chalk/strip-ansi.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/strip-ansi#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6204,9 +7004,17 @@
           <url>https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/strip-json-comments/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>sindresorhus/strip-json-comments</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/sindresorhus/strip-json-comments.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/strip-json-comments#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6234,7 +7042,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/mafintosh/tar-fs.git</url>
+          <url>git+https://github.com/mafintosh/tar-fs.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -6247,7 +7055,7 @@
       </properties>
       <components>
         <component type="library" bom-ref="@dummy-projects/with-prepared|tar-fs@2.1.1|chownr@1.1.4">
-          <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+          <author>Isaac Z. Schlueter</author>
           <name>chownr</name>
           <version>1.1.4</version>
           <description>like `chown -R`</description>
@@ -6262,9 +7070,17 @@
               <url>https://registry.npmjs.org/chownr/-/chownr-1.1.4.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/isaacs/chownr/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
               <url>git://github.com/isaacs/chownr.git</url>
               <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/isaacs/chownr#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -6274,7 +7090,7 @@
       </components>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|tar-stream@2.2.0">
-      <author>Mathias Buus &lt;mathiasbuus@gmail.com&gt;</author>
+      <author>Mathias Buus</author>
       <name>tar-stream</name>
       <version>2.2.0</version>
       <description>tar-stream is a streaming tar parser and generator and nothing else. It is streams2 and operates purely using streams which means you can easily extract/parse tarballs without ever hitting the file system.</description>
@@ -6322,9 +7138,17 @@
           <url>https://registry.npmjs.org/tar/-/tar-6.2.1.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/node-tar/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/isaacs/node-tar.git</url>
+          <url>git+https://github.com/isaacs/node-tar.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/node-tar#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6332,7 +7156,7 @@
       </properties>
       <components>
         <component type="library" bom-ref="@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0">
-          <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+          <author>Isaac Z. Schlueter</author>
           <name>fs-minipass</name>
           <version>2.1.0</version>
           <description>fs read and write streams based on minipass</description>
@@ -6365,7 +7189,7 @@
           </properties>
           <components>
             <component type="library" bom-ref="@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6">
-              <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+              <author>Isaac Z. Schlueter</author>
               <name>minipass</name>
               <version>3.3.6</version>
               <description>minimal implementation of a PassThrough stream</description>
@@ -6380,9 +7204,17 @@
                   <url>https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz</url>
                   <comment>as detected from npm-ls property "resolved"</comment>
                 </reference>
+                <reference type="issue-tracker">
+                  <url>https://github.com/isaacs/minipass/issues</url>
+                  <comment>as detected from PackageJson property "bugs.url"</comment>
+                </reference>
                 <reference type="vcs">
                   <url>git+https://github.com/isaacs/minipass.git</url>
                   <comment>as detected from PackageJson property "repository.url"</comment>
+                </reference>
+                <reference type="website">
+                  <url>https://github.com/isaacs/minipass#readme</url>
+                  <comment>as detected from PackageJson property "homepage"</comment>
                 </reference>
               </externalReferences>
               <properties>
@@ -6392,7 +7224,7 @@
           </components>
         </component>
         <component type="library" bom-ref="@dummy-projects/with-prepared|tar@6.2.1|minipass@5.0.0">
-          <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+          <author>Isaac Z. Schlueter</author>
           <name>minipass</name>
           <version>5.0.0</version>
           <description>minimal implementation of a PassThrough stream</description>
@@ -6407,9 +7239,17 @@
               <url>https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/isaacs/minipass/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
               <url>git+https://github.com/isaacs/minipass.git</url>
               <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/isaacs/minipass#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -6419,7 +7259,7 @@
       </components>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|tunnel-agent@0.6.0">
-      <author>Mikeal Rogers &lt;mikeal.rogers@gmail.com&gt; (http://www.futurealoof.com)</author>
+      <author>Mikeal Rogers</author>
       <name>tunnel-agent</name>
       <version>0.6.0</version>
       <description>HTTP proxy tunneling agent. Formerly part of mikeal/request, now a standalone module.</description>
@@ -6434,9 +7274,17 @@
           <url>https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.6.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/mikeal/tunnel-agent/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/mikeal/tunnel-agent</url>
+          <url>git+https://github.com/mikeal/tunnel-agent.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/mikeal/tunnel-agent#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6496,7 +7344,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/npm/unique-filename.git</url>
+          <url>git+https://github.com/npm/unique-filename.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -6524,9 +7372,17 @@
           <url>https://registry.npmjs.org/unique-slug/-/unique-slug-4.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/unique-slug/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/npm/unique-slug.git</url>
+          <url>git+https://github.com/npm/unique-slug.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/unique-slug#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6534,7 +7390,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|uri-js@4.4.1">
-      <author>Gary Court &lt;gary.court@gmail.com&gt;</author>
+      <author>Gary Court</author>
       <name>uri-js</name>
       <version>4.4.1</version>
       <description>An RFC 3986/3987 compliant, scheme extendable URI/IRI parsing/validating/resolving library for JavaScript.</description>
@@ -6554,7 +7410,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>http://github.com/garycourt/uri-js</url>
+          <url>git+ssh://git@github.com/garycourt/uri-js.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -6567,7 +7423,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|util-deprecate@1.0.2">
-      <author>Nathan Rajlich &lt;nathan@tootallnate.net&gt; (http://n8.io/)</author>
+      <author>Nathan Rajlich</author>
       <name>util-deprecate</name>
       <version>1.0.2</version>
       <description>The Node.js `util.deprecate()` function with browser support</description>
@@ -6614,9 +7470,17 @@
           <url>https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/uuidjs/uuid/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/uuidjs/uuid.git</url>
+          <url>git+https://github.com/uuidjs/uuid.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/uuidjs/uuid#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6638,9 +7502,17 @@
           <url>https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/thenativeweb/uuidv4/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/thenativeweb/uuidv4.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/thenativeweb/uuidv4#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6663,9 +7535,17 @@
           <url>https://registry.npmjs.org/which/-/which-4.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/node-which/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/npm/node-which.git</url>
+          <url>git+https://github.com/npm/node-which.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/node-which#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6688,9 +7568,17 @@
           <url>https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/wrap-ansi/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>chalk/wrap-ansi</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/chalk/wrap-ansi.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/wrap-ansi#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6713,9 +7601,17 @@
               <url>https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/chalk/ansi-regex/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
-              <url>chalk/ansi-regex</url>
-              <comment>as detected from PackageJson property "repository"</comment>
+              <url>git+https://github.com/chalk/ansi-regex.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/chalk/ansi-regex#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -6738,9 +7634,17 @@
               <url>https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/chalk/ansi-styles/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
-              <url>chalk/ansi-styles</url>
-              <comment>as detected from PackageJson property "repository"</comment>
+              <url>git+https://github.com/chalk/ansi-styles.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/chalk/ansi-styles#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -6765,10 +7669,10 @@
             </reference>
             <reference type="issue-tracker">
               <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
-              <comment>as detected from PackageJson property "bugs"</comment>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
             </reference>
             <reference type="vcs">
-              <url>https://github.com/mathiasbynens/emoji-regex.git</url>
+              <url>git+https://github.com/mathiasbynens/emoji-regex.git</url>
               <comment>as detected from PackageJson property "repository.url"</comment>
             </reference>
             <reference type="website">
@@ -6796,9 +7700,17 @@
               <url>https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/sindresorhus/string-width/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
-              <url>sindresorhus/string-width</url>
-              <comment>as detected from PackageJson property "repository"</comment>
+              <url>git+https://github.com/sindresorhus/string-width.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/sindresorhus/string-width#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -6821,9 +7733,17 @@
               <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz</url>
               <comment>as detected from npm-ls property "resolved"</comment>
             </reference>
+            <reference type="issue-tracker">
+              <url>https://github.com/chalk/strip-ansi/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
             <reference type="vcs">
-              <url>chalk/strip-ansi</url>
-              <comment>as detected from PackageJson property "repository"</comment>
+              <url>git+https://github.com/chalk/strip-ansi.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/chalk/strip-ansi#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
           <properties>
@@ -6848,9 +7768,17 @@
           <url>https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-8.1.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/wrap-ansi/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>chalk/wrap-ansi</url>
-          <comment>as detected from PackageJson property "repository"</comment>
+          <url>git+https://github.com/chalk/wrap-ansi.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/wrap-ansi#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>
@@ -6858,7 +7786,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|wrappy@1.0.2">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>wrappy</name>
       <version>1.0.2</version>
       <description>Callback wrapping utility</description>
@@ -6878,7 +7806,7 @@
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>https://github.com/npm/wrappy</url>
+          <url>git+https://github.com/npm/wrappy.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
@@ -6891,7 +7819,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|xmlbuilder2@3.1.1">
-      <author>Ozgur Ozcitak &lt;oozcitak@gmail.com&gt;</author>
+      <author>Ozgur Ozcitak</author>
       <name>xmlbuilder2</name>
       <version>3.1.1</version>
       <description>An XML builder for node.js</description>
@@ -6924,7 +7852,7 @@
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|yallist@4.0.0">
-      <author>Isaac Z. Schlueter &lt;i@izs.me&gt; (http://blog.izs.me/)</author>
+      <author>Isaac Z. Schlueter</author>
       <name>yallist</name>
       <version>4.0.0</version>
       <description>Yet Another Linked List</description>
@@ -6939,9 +7867,17 @@
           <url>https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/yallist/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/isaacs/yallist.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/yallist#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <properties>

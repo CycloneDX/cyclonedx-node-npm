@@ -171,7 +171,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/db-ui/base",
+          "url": "git+https://github.com/db-ui/base.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -194,7 +194,7 @@
       "group": "@isaacs",
       "version": "8.0.2",
       "bom-ref": "@dummy-projects/with-prepared|@isaacs/cliui@8.0.2",
-      "author": "Ben Coe <ben@npmjs.com>",
+      "author": "Ben Coe",
       "description": "easily create complex multi-column command-line-interfaces",
       "licenses": [
         {
@@ -212,9 +212,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "yargs/cliui",
+          "url": "https://github.com/yargs/cliui/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/yargs/cliui.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/yargs/cliui#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -253,7 +263,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/npm/agent.git",
+          "url": "git+https://github.com/npm/agent.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -294,9 +304,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/npm/fs/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/npm/fs.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/fs#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -312,7 +332,7 @@
       "group": "@oozcitak",
       "version": "1.15.10",
       "bom-ref": "@dummy-projects/with-prepared|@oozcitak/dom@1.15.10",
-      "author": "Ozgur Ozcitak <oozcitak@gmail.com>",
+      "author": "Ozgur Ozcitak",
       "description": "A modern DOM implementation",
       "licenses": [
         {
@@ -358,7 +378,7 @@
       "group": "@oozcitak",
       "version": "1.0.8",
       "bom-ref": "@dummy-projects/with-prepared|@oozcitak/infra@1.0.8",
-      "author": "Ozgur Ozcitak <oozcitak@gmail.com>",
+      "author": "Ozgur Ozcitak",
       "description": "An implementation of the Infra Living Standard",
       "licenses": [
         {
@@ -404,7 +424,7 @@
       "group": "@oozcitak",
       "version": "1.0.4",
       "bom-ref": "@dummy-projects/with-prepared|@oozcitak/url@1.0.4",
-      "author": "Ozgur Ozcitak <oozcitak@gmail.com>",
+      "author": "Ozgur Ozcitak",
       "description": "An implementation of the URL Living Standard",
       "licenses": [
         {
@@ -450,7 +470,7 @@
       "group": "@oozcitak",
       "version": "8.3.8",
       "bom-ref": "@dummy-projects/with-prepared|@oozcitak/util@8.3.8",
-      "author": "Ozgur Ozcitak <oozcitak@gmail.com>",
+      "author": "Ozgur Ozcitak",
       "description": "Utility functions",
       "licenses": [
         {
@@ -558,7 +578,12 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
         },
@@ -598,7 +623,12 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
         },
@@ -638,9 +668,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/npm/abbrev-js.git",
+          "url": "https://github.com/npm/abbrev-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/abbrev-js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/abbrev-js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -655,7 +695,7 @@
       "name": "agent-base",
       "version": "7.1.3",
       "bom-ref": "@dummy-projects/with-prepared|agent-base@7.1.3",
-      "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+      "author": "Nathan Rajlich",
       "description": "Turn a function into an `http.Agent` instance",
       "licenses": [
         {
@@ -673,9 +713,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/TooTallNate/proxy-agents.git#packages/agent-base",
+          "url": "https://github.com/TooTallNate/proxy-agents/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/TooTallNate/proxy-agents.git#packages/agent-base",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/TooTallNate/proxy-agents#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -708,9 +758,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/aggregate-error",
+          "url": "https://github.com/sindresorhus/aggregate-error/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/aggregate-error.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/aggregate-error#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -725,7 +785,7 @@
       "name": "ajv-formats-draft2019",
       "version": "1.6.1",
       "bom-ref": "@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1",
-      "author": "Carlo Quinonez <carlo@machina.bio>",
+      "author": "Carlo Quinonez",
       "description": "Plugin for AJV that adds support for some of string formats adding in the draft2019 JSON Schema.",
       "licenses": [
         {
@@ -743,9 +803,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/luzlab/ajv-formats-draft2019.git",
+          "url": "https://github.com/luzlab/ajv-formats-draft2019/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/luzlab/ajv-formats-draft2019.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/luzlab/ajv-formats-draft2019#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -825,12 +895,12 @@
         {
           "url": "https://github.com/ajv-validator/ajv/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "ajv-validator/ajv",
+          "url": "git+https://github.com/ajv-validator/ajv.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://ajv.js.org",
@@ -868,9 +938,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "chalk/ansi-regex",
+          "url": "https://github.com/chalk/ansi-regex/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/ansi-regex.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/ansi-regex#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -903,9 +983,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "chalk/ansi-styles",
+          "url": "https://github.com/chalk/ansi-styles/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/ansi-styles.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/ansi-styles#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -937,9 +1027,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "nodeca/argparse",
+          "url": "https://github.com/nodeca/argparse/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/nodeca/argparse.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/nodeca/argparse#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -954,7 +1054,7 @@
           "name": "sprintf-js",
           "version": "1.0.3",
           "bom-ref": "@dummy-projects/with-prepared|argparse@1.0.10|sprintf-js@1.0.3",
-          "author": "Alexandru Marasteanu <hello@alexei.ro> (http://alexei.ro/)",
+          "author": "Alexandru Marasteanu",
           "description": "JavaScript sprintf implementation",
           "licenses": [
             {
@@ -972,9 +1072,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
-              "url": "https://github.com/alexei/sprintf.js.git",
+              "url": "https://github.com/alexei/sprintf.js/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/alexei/sprintf.js.git",
               "type": "vcs",
               "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/alexei/sprintf.js#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -1009,6 +1119,11 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/juliangruber/balanced-match/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/juliangruber/balanced-match.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
@@ -1031,7 +1146,7 @@
       "name": "base64-js",
       "version": "1.0.1",
       "bom-ref": "@dummy-projects/with-prepared|base64-js@1.0.1",
-      "author": "T. Jameson Little <t.jameson.little@gmail.com>",
+      "author": "T. Jameson Little",
       "description": "Base64 encoding/decoding in pure JS",
       "licenses": [
         {
@@ -1049,9 +1164,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/beatgammit/base64-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/beatgammit/base64-js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/beatgammit/base64-js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -1066,7 +1191,7 @@
       "name": "bindings",
       "version": "1.5.0",
       "bom-ref": "@dummy-projects/with-prepared|bindings@1.5.0",
-      "author": "Nathan Rajlich <nathan@tootallnate.net> (http://tootallnate.net)",
+      "author": "Nathan Rajlich",
       "description": "Helper module for loading your native module's .node file",
       "licenses": [
         {
@@ -1128,7 +1253,12 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/rvagg/bl.git",
+          "url": "https://github.com/rvagg/bl/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/rvagg/bl.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -1166,6 +1296,11 @@
           "url": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
+        },
+        {
+          "url": "https://github.com/juliangruber/brace-expansion/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
           "url": "git://github.com/juliangruber/brace-expansion.git",
@@ -1235,7 +1370,7 @@
           "name": "base64-js",
           "version": "1.5.1",
           "bom-ref": "@dummy-projects/with-prepared|buffer@5.7.1|base64-js@1.5.1",
-          "author": "T. Jameson Little <t.jameson.little@gmail.com>",
+          "author": "T. Jameson Little",
           "description": "Base64 encoding/decoding in pure JS",
           "licenses": [
             {
@@ -1300,9 +1435,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/gajus/bundle-dependencies",
+          "url": "https://github.com/gajus/bundle-dependencies/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/gajus/bundle-dependencies.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/gajus/bundle-dependencies#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -3881,9 +4026,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/npm/cacache/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/npm/cacache.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/cacache#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -3898,7 +4053,7 @@
       "name": "chownr",
       "version": "2.0.0",
       "bom-ref": "@dummy-projects/with-prepared|chownr@2.0.0",
-      "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+      "author": "Isaac Z. Schlueter",
       "description": "like `chown -R`",
       "licenses": [
         {
@@ -3916,9 +4071,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/isaacs/chownr/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/isaacs/chownr.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/chownr#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -3951,9 +4116,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/clean-stack",
+          "url": "https://github.com/sindresorhus/clean-stack/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/clean-stack.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/clean-stack#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -3968,7 +4143,7 @@
       "name": "color-convert",
       "version": "2.0.1",
       "bom-ref": "@dummy-projects/with-prepared|color-convert@2.0.1",
-      "author": "Heather Arthur <fayearthur@gmail.com>",
+      "author": "Heather Arthur",
       "description": "Plain color conversion functions",
       "licenses": [
         {
@@ -3986,9 +4161,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "Qix-/color-convert",
+          "url": "https://github.com/Qix-/color-convert/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/Qix-/color-convert.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/Qix-/color-convert#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -4003,7 +4188,7 @@
       "name": "color-name",
       "version": "1.1.4",
       "bom-ref": "@dummy-projects/with-prepared|color-name@1.1.4",
-      "author": "DY <dfcreative@gmail.com>",
+      "author": "DY",
       "description": "A list of color names and its values",
       "licenses": [
         {
@@ -4048,7 +4233,7 @@
       "name": "commander",
       "version": "2.20.3",
       "bom-ref": "@dummy-projects/with-prepared|commander@2.20.3",
-      "author": "TJ Holowaychuk <tj@vision-media.ca>",
+      "author": "TJ Holowaychuk",
       "description": "the complete solution for node.js command-line programs",
       "licenses": [
         {
@@ -4066,9 +4251,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/tj/commander.js.git",
+          "url": "https://github.com/tj/commander.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/tj/commander.js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/tj/commander.js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -4083,7 +4278,7 @@
       "name": "cross-spawn",
       "version": "7.0.6",
       "bom-ref": "@dummy-projects/with-prepared|cross-spawn@7.0.6",
-      "author": "André Cruz <andre@moxy.studio>",
+      "author": "André Cruz",
       "description": "Cross platform child_process#spawn and child_process#spawnSync",
       "licenses": [
         {
@@ -4099,6 +4294,11 @@
           "url": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
+        },
+        {
+          "url": "https://github.com/moxystudio/node-cross-spawn/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
           "url": "git+ssh://git@github.com/moxystudio/node-cross-spawn.git",
@@ -4123,7 +4323,7 @@
           "name": "isexe",
           "version": "2.0.0",
           "bom-ref": "@dummy-projects/with-prepared|cross-spawn@7.0.6|isexe@2.0.0",
-          "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+          "author": "Isaac Z. Schlueter",
           "description": "Minimal module to check if a file is executable.",
           "licenses": [
             {
@@ -4168,7 +4368,7 @@
           "name": "which",
           "version": "2.0.2",
           "bom-ref": "@dummy-projects/with-prepared|cross-spawn@7.0.6|which@2.0.2",
-          "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me)",
+          "author": "Isaac Z. Schlueter",
           "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
           "licenses": [
             {
@@ -4186,9 +4386,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
+              "url": "https://github.com/isaacs/node-which/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
               "url": "git://github.com/isaacs/node-which.git",
               "type": "vcs",
               "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/isaacs/node-which#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -4205,7 +4415,7 @@
       "name": "debug",
       "version": "4.4.0",
       "bom-ref": "@dummy-projects/with-prepared|debug@4.4.0",
-      "author": "Josh Junon (https://github.com/qix-)",
+      "author": "Josh Junon",
       "description": "Lightweight debugging utility for Node.js and the browser",
       "licenses": [
         {
@@ -4223,9 +4433,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/debug-js/debug/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/debug-js/debug.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/debug-js/debug#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -4258,9 +4478,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/decompress-response",
+          "url": "https://github.com/sindresorhus/decompress-response/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/decompress-response.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/decompress-response#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -4275,7 +4505,7 @@
       "name": "deep-extend",
       "version": "0.6.0",
       "bom-ref": "@dummy-projects/with-prepared|deep-extend@0.6.0",
-      "author": "Viacheslav Lotsmanov <lotsmanov89@gmail.com>",
+      "author": "Viacheslav Lotsmanov",
       "description": "Recursive object extending",
       "licenses": [
         {
@@ -4302,7 +4532,7 @@
         {
           "url": "https://github.com/unclechu/node-deep-extend/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
           "url": "git://github.com/unclechu/node-deep-extend.git",
@@ -4327,7 +4557,7 @@
       "name": "detect-libc",
       "version": "2.0.3",
       "bom-ref": "@dummy-projects/with-prepared|detect-libc@2.0.3",
-      "author": "Lovell Fuller <npm@lovell.info>",
+      "author": "Lovell Fuller",
       "description": "Node.js module to detect the C standard library (libc) implementation family and version",
       "licenses": [
         {
@@ -4345,9 +4575,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "git://github.com/lovell/detect-libc",
+          "url": "https://github.com/lovell/detect-libc/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/lovell/detect-libc.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/lovell/detect-libc#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -4362,7 +4602,7 @@
       "name": "discontinuous-range",
       "version": "1.0.0",
       "bom-ref": "@dummy-projects/with-prepared|discontinuous-range@1.0.0",
-      "author": "David Tudury <david.tudury@gmail.com>",
+      "author": "David Tudury",
       "description": "for adding, subtracting, and indexing discontinuous ranges of numbers",
       "licenses": [
         {
@@ -4385,7 +4625,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/dtudury/discontinuous-range.git",
+          "url": "git+https://github.com/dtudury/discontinuous-range.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -4425,9 +4665,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/komagata/eastasianwidth/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/komagata/eastasianwidth.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/komagata/eastasianwidth#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -4462,10 +4712,10 @@
         {
           "url": "https://github.com/mathiasbynens/emoji-regex/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/mathiasbynens/emoji-regex.git",
+          "url": "git+https://github.com/mathiasbynens/emoji-regex.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -4505,9 +4755,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/andris9/encoding.git",
+          "url": "https://github.com/andris9/encoding/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/andris9/encoding.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/andris9/encoding#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -4522,7 +4782,7 @@
       "name": "end-of-stream",
       "version": "1.4.4",
       "bom-ref": "@dummy-projects/with-prepared|end-of-stream@1.4.4",
-      "author": "Mathias Buus <mathiasbuus@gmail.com>",
+      "author": "Mathias Buus",
       "description": "Call a callback when a readable/writable/duplex stream has completed or failed.",
       "licenses": [
         {
@@ -4585,9 +4845,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/env-paths",
+          "url": "https://github.com/sindresorhus/env-paths/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/env-paths.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/env-paths#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -4602,7 +4872,7 @@
       "name": "err-code",
       "version": "2.0.3",
       "bom-ref": "@dummy-projects/with-prepared|err-code@2.0.3",
-      "author": "IndigoUnited <hello@indigounited.com> (http://indigounited.com)",
+      "author": "IndigoUnited",
       "description": "Create an error with a code",
       "licenses": [
         {
@@ -4628,6 +4898,11 @@
           "url": "git://github.com/IndigoUnited/js-err-code.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/IndigoUnited/js-err-code#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -4665,7 +4940,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/jquery/esprima.git",
+          "url": "git+https://github.com/jquery/esprima.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -4687,7 +4962,7 @@
       "name": "expand-template",
       "version": "2.0.3",
       "bom-ref": "@dummy-projects/with-prepared|expand-template@2.0.3",
-      "author": "LM <ralphtheninja@riseup.net>",
+      "author": "LM",
       "description": "Expand placeholders in a template string",
       "licenses": [
         {
@@ -4703,7 +4978,12 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/ralphtheninja/expand-template.git",
+          "url": "https://github.com/ralphtheninja/expand-template/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/ralphtheninja/expand-template.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -4770,7 +5050,7 @@
       "name": "extend",
       "version": "3.0.2",
       "bom-ref": "@dummy-projects/with-prepared|extend@3.0.2",
-      "author": "Stefan Thomas <justmoon@members.fsf.org> (http://www.justmoon.net)",
+      "author": "Stefan Thomas",
       "description": "Port of jQuery.extend for node.js and the browser",
       "licenses": [
         {
@@ -4788,9 +5068,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/justmoon/node-extend.git",
+          "url": "https://github.com/justmoon/node-extend/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/justmoon/node-extend.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/justmoon/node-extend#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -4850,7 +5140,7 @@
       "name": "fast-uri",
       "version": "3.0.3",
       "bom-ref": "@dummy-projects/with-prepared|fast-uri@3.0.3",
-      "author": "Vincent Le Goff <vince.legoff@gmail.com> (https://github.com/zekth)",
+      "author": "Vincent Le Goff",
       "description": "Dependency free RFC 3986 URI toolbox",
       "licenses": [
         {
@@ -4895,7 +5185,7 @@
       "name": "file-uri-to-path",
       "version": "1.0.0",
       "bom-ref": "@dummy-projects/with-prepared|file-uri-to-path@1.0.0",
-      "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+      "author": "Nathan Rajlich",
       "description": "Convert a file: URI to a file path",
       "licenses": [
         {
@@ -4940,7 +5230,7 @@
       "name": "foreground-child",
       "version": "3.3.0",
       "bom-ref": "@dummy-projects/with-prepared|foreground-child@3.3.0",
-      "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+      "author": "Isaac Z. Schlueter",
       "description": "Run a child as if it's the foreground process. Give it stdio. Exit when it exits.",
       "licenses": [
         {
@@ -4958,9 +5248,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/tapjs/foreground-child/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/tapjs/foreground-child.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/tapjs/foreground-child#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -4975,7 +5275,7 @@
       "name": "fs-constants",
       "version": "1.0.0",
       "bom-ref": "@dummy-projects/with-prepared|fs-constants@1.0.0",
-      "author": "Mathias Buus (@mafintosh)",
+      "author": "Mathias Buus",
       "description": "Require constants across node and the browser",
       "licenses": [
         {
@@ -4998,7 +5298,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/mafintosh/fs-constants.git",
+          "url": "git+https://github.com/mafintosh/fs-constants.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -5043,7 +5343,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/npm/fs-minipass.git",
+          "url": "git+https://github.com/npm/fs-minipass.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -5083,6 +5383,11 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/substack/github-from-package/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/substack/github-from-package.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
@@ -5105,7 +5410,7 @@
       "name": "glob",
       "version": "10.4.5",
       "bom-ref": "@dummy-projects/with-prepared|glob@10.4.5",
-      "author": "Isaac Z. Schlueter <i@izs.me> (https://blog.izs.me/)",
+      "author": "Isaac Z. Schlueter",
       "description": "the most correct and second fastest glob implementation in JavaScript",
       "licenses": [
         {
@@ -5123,9 +5428,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/isaacs/node-glob/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/isaacs/node-glob.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/node-glob#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5157,9 +5472,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/isaacs/node-graceful-fs",
+          "url": "https://github.com/isaacs/node-graceful-fs/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/node-graceful-fs.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/node-graceful-fs#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5174,7 +5499,7 @@
       "name": "http-cache-semantics",
       "version": "4.1.1",
       "bom-ref": "@dummy-projects/with-prepared|http-cache-semantics@4.1.1",
-      "author": "Kornel Lesiński <kornel@geekhood.net> (https://kornel.ski/)",
+      "author": "Kornel Lesiński",
       "description": "Parses Cache-Control and other headers. Helps building correct HTTP caches and proxies",
       "licenses": [
         {
@@ -5192,9 +5517,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/kornelski/http-cache-semantics.git",
+          "url": "https://github.com/kornelski/http-cache-semantics/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/kornelski/http-cache-semantics.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/kornelski/http-cache-semantics#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5209,7 +5544,7 @@
       "name": "http-proxy-agent",
       "version": "7.0.2",
       "bom-ref": "@dummy-projects/with-prepared|http-proxy-agent@7.0.2",
-      "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+      "author": "Nathan Rajlich",
       "description": "An HTTP(s) proxy `http.Agent` implementation for HTTP",
       "licenses": [
         {
@@ -5227,9 +5562,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent",
+          "url": "https://github.com/TooTallNate/proxy-agents/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/TooTallNate/proxy-agents#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5244,7 +5589,7 @@
       "name": "https-proxy-agent",
       "version": "7.0.6",
       "bom-ref": "@dummy-projects/with-prepared|https-proxy-agent@7.0.6",
-      "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+      "author": "Nathan Rajlich",
       "description": "An HTTP(s) proxy `http.Agent` implementation for HTTPS",
       "licenses": [
         {
@@ -5262,9 +5607,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent",
+          "url": "https://github.com/TooTallNate/proxy-agents/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/TooTallNate/proxy-agents#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5279,7 +5634,7 @@
       "name": "iconv-lite",
       "version": "0.6.3",
       "bom-ref": "@dummy-projects/with-prepared|iconv-lite@0.6.3",
-      "author": "Alexander Shtuchkin <ashtuchkin@gmail.com>",
+      "author": "Alexander Shtuchkin",
       "description": "Convert character encodings in pure javascript.",
       "licenses": [
         {
@@ -5299,7 +5654,7 @@
         {
           "url": "https://github.com/ashtuchkin/iconv-lite/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
           "url": "git://github.com/ashtuchkin/iconv-lite.git",
@@ -5342,9 +5697,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/feross/ieee754/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/feross/ieee754.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/feross/ieee754#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5385,6 +5750,11 @@
           "url": "git+ssh://git@github.com/kaelzhang/node-ignore.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/kaelzhang/node-ignore#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5422,7 +5792,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/jensyt/imurmurhash-js",
+          "url": "git+https://github.com/jensyt/imurmurhash-js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -5462,9 +5832,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/indent-string",
+          "url": "https://github.com/sindresorhus/indent-string/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/indent-string.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/indent-string#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5496,9 +5876,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "git://github.com/isaacs/inherits",
+          "url": "https://github.com/isaacs/inherits/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/isaacs/inherits.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/inherits#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5513,7 +5903,7 @@
       "name": "ini",
       "version": "1.3.8",
       "bom-ref": "@dummy-projects/with-prepared|ini@1.3.8",
-      "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+      "author": "Isaac Z. Schlueter",
       "description": "An ini encoder/decoder for node",
       "licenses": [
         {
@@ -5531,9 +5921,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/isaacs/ini/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/isaacs/ini.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/ini#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5548,7 +5948,7 @@
       "name": "ip-address",
       "version": "9.0.5",
       "bom-ref": "@dummy-projects/with-prepared|ip-address@9.0.5",
-      "author": "Beau Gunderson <beau@beaugunderson.com> (https://beaugunderson.com/)",
+      "author": "Beau Gunderson",
       "description": "A library for parsing IPv4 and IPv6 IP addresses in node and the browser.",
       "licenses": [
         {
@@ -5566,9 +5966,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/beaugunderson/ip-address/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/beaugunderson/ip-address.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/beaugunderson/ip-address#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5601,9 +6011,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/is-fullwidth-code-point",
+          "url": "https://github.com/sindresorhus/is-fullwidth-code-point/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/is-fullwidth-code-point.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/is-fullwidth-code-point#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5618,7 +6038,7 @@
       "name": "is-lambda",
       "version": "1.0.1",
       "bom-ref": "@dummy-projects/with-prepared|is-lambda@1.0.1",
-      "author": "Thomas Watson Steen <w@tson.dk> (https://twitter.com/wa7son)",
+      "author": "Thomas Watson Steen",
       "description": "Detect if your code is running on an AWS Lambda server",
       "licenses": [
         {
@@ -5641,7 +6061,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/watson/is-lambda.git",
+          "url": "git+https://github.com/watson/is-lambda.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -5681,9 +6101,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/is-obj",
+          "url": "https://github.com/sindresorhus/is-obj/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/is-obj.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/is-obj#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5698,7 +6128,7 @@
       "name": "isexe",
       "version": "3.1.1",
       "bom-ref": "@dummy-projects/with-prepared|isexe@3.1.1",
-      "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+      "author": "Isaac Z. Schlueter",
       "description": "Minimal module to check if a file is executable.",
       "licenses": [
         {
@@ -5716,9 +6146,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/isaacs/isexe",
+          "url": "https://github.com/isaacs/isexe/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/isexe.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/isexe#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5733,7 +6173,7 @@
       "name": "jackspeak",
       "version": "3.4.3",
       "bom-ref": "@dummy-projects/with-prepared|jackspeak@3.4.3",
-      "author": "Isaac Z. Schlueter <i@izs.me>",
+      "author": "Isaac Z. Schlueter",
       "description": "A very strict and proper argument parser.",
       "licenses": [
         {
@@ -5751,9 +6191,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/isaacs/jackspeak/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/jackspeak.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/jackspeak#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5768,7 +6218,7 @@
       "name": "js-yaml",
       "version": "3.14.1",
       "bom-ref": "@dummy-projects/with-prepared|js-yaml@3.14.1",
-      "author": "Vladimir Zapparov <dervus.grim@gmail.com>",
+      "author": "Vladimir Zapparov",
       "description": "YAML 1.2 parser and serializer",
       "licenses": [
         {
@@ -5786,9 +6236,14 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "nodeca/js-yaml",
+          "url": "https://github.com/nodeca/js-yaml/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/nodeca/js-yaml.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/nodeca/js-yaml",
@@ -5826,9 +6281,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/andyperlitch/jsbn.git",
+          "url": "https://github.com/andyperlitch/jsbn/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/andyperlitch/jsbn.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/andyperlitch/jsbn#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5911,9 +6376,14 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "http://github.com/marudor/libxmljs2.git",
+          "url": "git+ssh://git@github.com/marudor/libxmljs2.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/marudor/libxmljs2#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5928,7 +6398,7 @@
       "name": "lru-cache",
       "version": "10.4.3",
       "bom-ref": "@dummy-projects/with-prepared|lru-cache@10.4.3",
-      "author": "Isaac Z. Schlueter <i@izs.me>",
+      "author": "Isaac Z. Schlueter",
       "description": "A cache object that deletes the least-recently-used items.",
       "licenses": [
         {
@@ -5946,9 +6416,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/isaacs/node-lru-cache/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/isaacs/node-lru-cache.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/node-lru-cache#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -5981,9 +6461,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/npm/make-fetch-happen.git",
+          "url": "https://github.com/npm/make-fetch-happen/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/make-fetch-happen.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/make-fetch-happen#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6016,9 +6506,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/mimic-response",
+          "url": "https://github.com/sindresorhus/mimic-response/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/mimic-response.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/mimic-response#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6033,7 +6533,7 @@
       "name": "minimatch",
       "version": "9.0.5",
       "bom-ref": "@dummy-projects/with-prepared|minimatch@9.0.5",
-      "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me)",
+      "author": "Isaac Z. Schlueter",
       "description": "a glob matcher in javascript",
       "licenses": [
         {
@@ -6051,9 +6551,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/isaacs/minimatch/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/isaacs/minimatch.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/minimatch#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6086,6 +6596,11 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/minimistjs/minimist/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/minimistjs/minimist.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
@@ -6108,7 +6623,7 @@
       "name": "minipass-collect",
       "version": "2.0.1",
       "bom-ref": "@dummy-projects/with-prepared|minipass-collect@2.0.1",
-      "author": "Isaac Z. Schlueter <i@izs.me> (https://izs.me)",
+      "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that collects all the data into a single chunk",
       "licenses": [
         {
@@ -6126,9 +6641,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/isaacs/minipass-collect",
+          "url": "https://github.com/isaacs/minipass-collect/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/minipass-collect.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/minipass-collect#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6161,9 +6686,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/npm/minipass-fetch/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/npm/minipass-fetch.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/minipass-fetch#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6178,7 +6713,7 @@
       "name": "minipass-flush",
       "version": "1.0.5",
       "bom-ref": "@dummy-projects/with-prepared|minipass-flush@1.0.5",
-      "author": "Isaac Z. Schlueter <i@izs.me> (https://izs.me)",
+      "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that calls a flush function before emitting 'end'",
       "licenses": [
         {
@@ -6196,9 +6731,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/isaacs/minipass-flush/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/minipass-flush.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/minipass-flush#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6213,7 +6758,7 @@
           "name": "minipass",
           "version": "3.3.6",
           "bom-ref": "@dummy-projects/with-prepared|minipass-flush@1.0.5|minipass@3.3.6",
-          "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+          "author": "Isaac Z. Schlueter",
           "description": "minimal implementation of a PassThrough stream",
           "licenses": [
             {
@@ -6231,9 +6776,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
+              "url": "https://github.com/isaacs/minipass/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
               "url": "git+https://github.com/isaacs/minipass.git",
               "type": "vcs",
               "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/isaacs/minipass#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -6250,7 +6805,7 @@
       "name": "minipass-pipeline",
       "version": "1.2.4",
       "bom-ref": "@dummy-projects/with-prepared|minipass-pipeline@1.2.4",
-      "author": "Isaac Z. Schlueter <i@izs.me> (https://izs.me)",
+      "author": "Isaac Z. Schlueter",
       "description": "create a pipeline of streams using Minipass",
       "licenses": [
         {
@@ -6280,7 +6835,7 @@
           "name": "minipass",
           "version": "3.3.6",
           "bom-ref": "@dummy-projects/with-prepared|minipass-pipeline@1.2.4|minipass@3.3.6",
-          "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+          "author": "Isaac Z. Schlueter",
           "description": "minimal implementation of a PassThrough stream",
           "licenses": [
             {
@@ -6298,9 +6853,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
+              "url": "https://github.com/isaacs/minipass/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
               "url": "git+https://github.com/isaacs/minipass.git",
               "type": "vcs",
               "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/isaacs/minipass#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -6317,7 +6882,7 @@
       "name": "minipass-sized",
       "version": "1.0.3",
       "bom-ref": "@dummy-projects/with-prepared|minipass-sized@1.0.3",
-      "author": "Isaac Z. Schlueter <i@izs.me> (https://izs.me)",
+      "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that raises an error if you get a different number of bytes than expected",
       "licenses": [
         {
@@ -6335,9 +6900,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/isaacs/minipass-sized/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/minipass-sized.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/minipass-sized#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6352,7 +6927,7 @@
           "name": "minipass",
           "version": "3.3.6",
           "bom-ref": "@dummy-projects/with-prepared|minipass-sized@1.0.3|minipass@3.3.6",
-          "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+          "author": "Isaac Z. Schlueter",
           "description": "minimal implementation of a PassThrough stream",
           "licenses": [
             {
@@ -6370,9 +6945,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
+              "url": "https://github.com/isaacs/minipass/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
               "url": "git+https://github.com/isaacs/minipass.git",
               "type": "vcs",
               "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/isaacs/minipass#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -6389,7 +6974,7 @@
       "name": "minipass",
       "version": "7.1.2",
       "bom-ref": "@dummy-projects/with-prepared|minipass@7.1.2",
-      "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+      "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "licenses": [
         {
@@ -6407,9 +6992,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/isaacs/minipass",
+          "url": "https://github.com/isaacs/minipass/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/minipass.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/minipass#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6424,7 +7019,7 @@
       "name": "minizlib",
       "version": "2.1.2",
       "bom-ref": "@dummy-projects/with-prepared|minizlib@2.1.2",
-      "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+      "author": "Isaac Z. Schlueter",
       "description": "A small fast zlib stream built on [minipass](http://npm.im/minipass) and Node.js's zlib binding.",
       "licenses": [
         {
@@ -6442,9 +7037,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/isaacs/minizlib/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/minizlib.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/minizlib#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6459,7 +7064,7 @@
           "name": "minipass",
           "version": "3.3.6",
           "bom-ref": "@dummy-projects/with-prepared|minizlib@2.1.2|minipass@3.3.6",
-          "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+          "author": "Isaac Z. Schlueter",
           "description": "minimal implementation of a PassThrough stream",
           "licenses": [
             {
@@ -6477,9 +7082,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
+              "url": "https://github.com/isaacs/minipass/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
               "url": "git+https://github.com/isaacs/minipass.git",
               "type": "vcs",
               "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/isaacs/minipass#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -6496,7 +7111,7 @@
       "name": "mkdirp-classic",
       "version": "0.5.3",
       "bom-ref": "@dummy-projects/with-prepared|mkdirp-classic@0.5.3",
-      "author": "Mathias Buus (@mafintosh)",
+      "author": "Mathias Buus",
       "description": "Mirror of mkdirp 0.5.2",
       "licenses": [
         {
@@ -6519,7 +7134,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/mafintosh/mkdirp-classic.git",
+          "url": "git+https://github.com/mafintosh/mkdirp-classic.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -6558,9 +7173,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/isaacs/node-mkdirp.git",
+          "url": "https://github.com/isaacs/node-mkdirp/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/node-mkdirp.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/node-mkdirp#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6575,7 +7200,7 @@
       "name": "moo",
       "version": "0.5.2",
       "bom-ref": "@dummy-projects/with-prepared|moo@0.5.2",
-      "author": "Tim Radvan <tim@tjvr.org>",
+      "author": "Tim Radvan",
       "description": "Optimised tokenizer/lexer generator! 🐄 Much performance. Moo!",
       "licenses": [
         {
@@ -6593,9 +7218,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/tjvr/moo.git",
+          "url": "https://github.com/tjvr/moo/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/tjvr/moo.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/tjvr/moo#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6627,9 +7262,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "vercel/ms",
+          "url": "https://github.com/vercel/ms/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/vercel/ms.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/vercel/ms#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6661,9 +7306,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/nodejs/nan/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/nodejs/nan.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/nodejs/nan#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6741,9 +7396,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/hardmath123/nearley.git",
+          "url": "https://github.com/hardmath123/nearley/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/hardmath123/nearley.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/hardmath123/nearley#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6775,9 +7440,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "jshttp/negotiator",
+          "url": "https://github.com/jshttp/negotiator/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/jshttp/negotiator.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jshttp/negotiator#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6837,7 +7512,7 @@
       "name": "node-gyp",
       "version": "10.3.1",
       "bom-ref": "@dummy-projects/with-prepared|node-gyp@10.3.1",
-      "author": "Nathan Rajlich <nathan@tootallnate.net> (http://tootallnate.net)",
+      "author": "Nathan Rajlich",
       "description": "Node.js native addon build tool",
       "licenses": [
         {
@@ -6855,9 +7530,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/nodejs/node-gyp/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/nodejs/node-gyp.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/nodejs/node-gyp#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6890,9 +7575,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/npm/nopt/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/npm/nopt.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/nopt#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6907,7 +7602,7 @@
       "name": "once",
       "version": "1.4.0",
       "bom-ref": "@dummy-projects/with-prepared|once@1.4.0",
-      "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+      "author": "Isaac Z. Schlueter",
       "description": "Run a function exactly one time",
       "licenses": [
         {
@@ -6925,9 +7620,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "git://github.com/isaacs/once",
+          "url": "https://github.com/isaacs/once/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/isaacs/once.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/once#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6960,9 +7665,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/p-map",
+          "url": "https://github.com/sindresorhus/p-map/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/p-map.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/p-map#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -6977,7 +7692,7 @@
       "name": "package-json-from-dist",
       "version": "1.0.1",
       "bom-ref": "@dummy-projects/with-prepared|package-json-from-dist@1.0.1",
-      "author": "Isaac Z. Schlueter <i@izs.me> (https://izs.me)",
+      "author": "Isaac Z. Schlueter",
       "description": "Load the local package.json from either src or dist folder",
       "licenses": [
         {
@@ -6995,9 +7710,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/isaacs/package-json-from-dist/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/package-json-from-dist.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/package-json-from-dist#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7075,9 +7800,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/path-key",
+          "url": "https://github.com/sindresorhus/path-key/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/path-key.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/path-key#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7092,7 +7827,7 @@
       "name": "path-scurry",
       "version": "1.11.1",
       "bom-ref": "@dummy-projects/with-prepared|path-scurry@1.11.1",
-      "author": "Isaac Z. Schlueter <i@izs.me> (https://blog.izs.me)",
+      "author": "Isaac Z. Schlueter",
       "description": "walk paths fast and efficiently",
       "licenses": [
         {
@@ -7110,9 +7845,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "git+https://github.com/isaacs/path-scurry",
+          "url": "https://github.com/isaacs/path-scurry/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/path-scurry.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/path-scurry#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7127,7 +7872,7 @@
       "name": "prebuild-install",
       "version": "7.1.2",
       "bom-ref": "@dummy-projects/with-prepared|prebuild-install@7.1.2",
-      "author": "Mathias Buus (@mafintosh)",
+      "author": "Mathias Buus",
       "description": "A command line tool to easily install prebuilt binaries for multiple version of node/iojs on a specific platform",
       "licenses": [
         {
@@ -7150,7 +7895,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/prebuild/prebuild-install.git",
+          "url": "git+https://github.com/prebuild/prebuild-install.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -7190,9 +7935,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/npm/proc-log.git",
+          "url": "https://github.com/npm/proc-log/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/proc-log.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/proc-log#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7207,7 +7962,7 @@
       "name": "promise-retry",
       "version": "2.0.1",
       "bom-ref": "@dummy-projects/with-prepared|promise-retry@2.0.1",
-      "author": "IndigoUnited <hello@indigounited.com> (http://indigounited.com)",
+      "author": "IndigoUnited",
       "description": "Retries a function that returns a promise, leveraging the power of the retry module.",
       "licenses": [
         {
@@ -7233,6 +7988,11 @@
           "url": "git://github.com/IndigoUnited/node-promise-retry.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/IndigoUnited/node-promise-retry#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7247,7 +8007,7 @@
       "name": "pump",
       "version": "3.0.2",
       "bom-ref": "@dummy-projects/with-prepared|pump@3.0.2",
-      "author": "Mathias Buus Madsen <mathiasbuus@gmail.com>",
+      "author": "Mathias Buus Madsen",
       "description": "pipe streams together and close all of them if one of them closes",
       "licenses": [
         {
@@ -7265,9 +8025,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/mafintosh/pump/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/mafintosh/pump.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mafintosh/pump#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7302,10 +8072,10 @@
         {
           "url": "https://github.com/mathiasbynens/punycode.js/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/mathiasbynens/punycode.js.git",
+          "url": "git+https://github.com/mathiasbynens/punycode.js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -7350,7 +8120,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/tabatkins/railroad-diagrams.git",
+          "url": "git+https://github.com/tabatkins/railroad-diagrams.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -7372,7 +8142,7 @@
       "name": "randexp",
       "version": "0.4.6",
       "bom-ref": "@dummy-projects/with-prepared|randexp@0.4.6",
-      "author": "Roly Fentanes (https://github.com/fent)",
+      "author": "Roly Fentanes",
       "description": "Create random strings that match a given regular expression.",
       "licenses": [
         {
@@ -7388,6 +8158,11 @@
           "url": "https://registry.npmjs.org/randexp/-/randexp-0.4.6.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
+        },
+        {
+          "url": "https://github.com/fent/randexp.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
           "url": "git://github.com/fent/randexp.js.git",
@@ -7412,7 +8187,7 @@
       "name": "rc",
       "version": "1.2.8",
       "bom-ref": "@dummy-projects/with-prepared|rc@1.2.8",
-      "author": "Dominic Tarr <dominic.tarr@gmail.com> (dominictarr.com)",
+      "author": "Dominic Tarr",
       "description": "hardwired configuration loader",
       "licenses": [
         {
@@ -7428,9 +8203,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/dominictarr/rc.git",
+          "url": "https://github.com/dominictarr/rc/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/dominictarr/rc.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/dominictarr/rc#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7462,9 +8247,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "git://github.com/nodejs/readable-stream",
+          "url": "https://github.com/nodejs/readable-stream/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/nodejs/readable-stream.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/nodejs/readable-stream#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7497,9 +8292,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "floatdrop/require-from-string",
+          "url": "https://github.com/floatdrop/require-from-string/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/floatdrop/require-from-string.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/floatdrop/require-from-string#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7514,7 +8319,7 @@
       "name": "ret",
       "version": "0.1.15",
       "bom-ref": "@dummy-projects/with-prepared|ret@0.1.15",
-      "author": "Roly Fentanes (https://github.com/fent)",
+      "author": "Roly Fentanes",
       "description": "Tokenizes a string that represents a regular expression.",
       "licenses": [
         {
@@ -7532,9 +8337,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/fent/ret.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/fent/ret.js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fent/ret.js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7549,7 +8364,7 @@
       "name": "retry",
       "version": "0.12.0",
       "bom-ref": "@dummy-projects/with-prepared|retry@0.12.0",
-      "author": "Tim Koschützki <tim@debuggable.com> (http://debuggable.com/)",
+      "author": "Tim Koschützki",
       "description": "Abstraction for exponential and custom retry strategies for failed operations.",
       "licenses": [
         {
@@ -7565,6 +8380,11 @@
           "url": "https://registry.npmjs.org/retry/-/retry-0.12.0.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
+        },
+        {
+          "url": "https://github.com/tim-kos/node-retry/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
           "url": "git://github.com/tim-kos/node-retry.git",
@@ -7660,6 +8480,11 @@
           "url": "git+https://github.com/ChALkeR/safer-buffer.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ChALkeR/safer-buffer#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7674,7 +8499,7 @@
       "name": "schemes",
       "version": "1.4.0",
       "bom-ref": "@dummy-projects/with-prepared|schemes@1.4.0",
-      "author": "Peter Müller <munter@fumle.dk>",
+      "author": "Peter Müller",
       "description": "IANA Uniform Resource Identifier (URI) Schemes list, including crowd sourced unofficial ones",
       "licenses": [
         {
@@ -7737,9 +8562,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/npm/node-semver/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/npm/node-semver.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/node-semver#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7772,9 +8607,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "kevva/shebang-command",
+          "url": "https://github.com/kevva/shebang-command/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/kevva/shebang-command.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/kevva/shebang-command#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7807,9 +8652,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/shebang-regex",
+          "url": "https://github.com/sindresorhus/shebang-regex/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/shebang-regex.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/shebang-regex#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7824,7 +8679,7 @@
       "name": "signal-exit",
       "version": "4.1.0",
       "bom-ref": "@dummy-projects/with-prepared|signal-exit@4.1.0",
-      "author": "Ben Coe <ben@npmjs.com>",
+      "author": "Ben Coe",
       "description": "when you want to fire an event no matter how a process exits.",
       "licenses": [
         {
@@ -7842,9 +8697,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/tapjs/signal-exit.git",
+          "url": "https://github.com/tapjs/signal-exit/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/tapjs/signal-exit.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/tapjs/signal-exit#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -7972,7 +8837,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/JoshGlazebrook/smart-buffer.git",
+          "url": "git+https://github.com/JoshGlazebrook/smart-buffer.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -7994,7 +8859,7 @@
       "name": "smtp-address-parser",
       "version": "1.1.0",
       "bom-ref": "@dummy-projects/with-prepared|smtp-address-parser@1.1.0",
-      "author": "Gene Hightower <gene@digilicious.com> (https://digilicious.com/)",
+      "author": "Gene Hightower",
       "description": "Parse an SMTP (RFC-5321) address",
       "licenses": [
         {
@@ -8057,9 +8922,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent",
+          "url": "https://github.com/TooTallNate/proxy-agents/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/TooTallNate/proxy-agents#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -8097,7 +8972,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/JoshGlazebrook/socks.git",
+          "url": "git+https://github.com/JoshGlazebrook/socks.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -8137,9 +9012,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "kemitchell/spdx-exceptions.json",
+          "url": "https://github.com/kemitchell/spdx-exceptions.json/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/kemitchell/spdx-exceptions.json.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/kemitchell/spdx-exceptions.json#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -8154,7 +9039,7 @@
       "name": "spdx-expression-parse",
       "version": "4.0.0",
       "bom-ref": "@dummy-projects/with-prepared|spdx-expression-parse@4.0.0",
-      "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com)",
+      "author": "Kyle E. Mitchell",
       "description": "parse SPDX license expressions",
       "licenses": [
         {
@@ -8172,9 +9057,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "jslicense/spdx-expression-parse.js",
+          "url": "https://github.com/jslicense/spdx-expression-parse.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/jslicense/spdx-expression-parse.js.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jslicense/spdx-expression-parse.js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -8189,7 +9084,7 @@
       "name": "spdx-license-ids",
       "version": "3.0.20",
       "bom-ref": "@dummy-projects/with-prepared|spdx-license-ids@3.0.20",
-      "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+      "author": "Shinnosuke Watanabe",
       "description": "A list of SPDX license identifiers",
       "licenses": [
         {
@@ -8207,9 +9102,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "jslicense/spdx-license-ids",
+          "url": "https://github.com/jslicense/spdx-license-ids/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/jslicense/spdx-license-ids.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jslicense/spdx-license-ids#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -8224,7 +9129,7 @@
       "name": "sprintf-js",
       "version": "1.1.3",
       "bom-ref": "@dummy-projects/with-prepared|sprintf-js@1.1.3",
-      "author": "Alexandru Mărășteanu <hello@alexei.ro>",
+      "author": "Alexandru Mărășteanu",
       "description": "JavaScript sprintf implementation",
       "licenses": [
         {
@@ -8242,9 +9147,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/alexei/sprintf.js.git",
+          "url": "https://github.com/alexei/sprintf.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/alexei/sprintf.js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/alexei/sprintf.js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -8277,9 +9192,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/npm/ssri/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/npm/ssri.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/ssri#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -8309,6 +9234,11 @@
           "url": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
+        },
+        {
+          "url": "https://github.com/nodejs/string_decoder/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
           "url": "git://github.com/nodejs/string_decoder.git",
@@ -8351,9 +9281,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/string-width",
+          "url": "https://github.com/sindresorhus/string-width/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/string-width.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/string-width#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -8386,9 +9326,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
-              "url": "chalk/ansi-regex",
+              "url": "https://github.com/chalk/ansi-regex/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/chalk/ansi-regex.git",
               "type": "vcs",
-              "comment": "as detected from PackageJson property \"repository\""
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/chalk/ansi-regex#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -8423,10 +9373,10 @@
             {
               "url": "https://github.com/mathiasbynens/emoji-regex/issues",
               "type": "issue-tracker",
-              "comment": "as detected from PackageJson property \"bugs\""
+              "comment": "as detected from PackageJson property \"bugs.url\""
             },
             {
-              "url": "https://github.com/mathiasbynens/emoji-regex.git",
+              "url": "git+https://github.com/mathiasbynens/emoji-regex.git",
               "type": "vcs",
               "comment": "as detected from PackageJson property \"repository.url\""
             },
@@ -8466,9 +9416,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
-              "url": "chalk/strip-ansi",
+              "url": "https://github.com/chalk/strip-ansi/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/chalk/strip-ansi.git",
               "type": "vcs",
-              "comment": "as detected from PackageJson property \"repository\""
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/chalk/strip-ansi#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -8503,9 +9463,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/string-width",
+          "url": "https://github.com/sindresorhus/string-width/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/string-width.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/string-width#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -8538,9 +9508,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "chalk/strip-ansi",
+          "url": "https://github.com/chalk/strip-ansi/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/strip-ansi.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/strip-ansi#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -8573,9 +9553,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
-              "url": "chalk/ansi-regex",
+              "url": "https://github.com/chalk/ansi-regex/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/chalk/ansi-regex.git",
               "type": "vcs",
-              "comment": "as detected from PackageJson property \"repository\""
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/chalk/ansi-regex#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -8610,9 +9600,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "chalk/strip-ansi",
+          "url": "https://github.com/chalk/strip-ansi/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/strip-ansi.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/strip-ansi#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -8645,9 +9645,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "sindresorhus/strip-json-comments",
+          "url": "https://github.com/sindresorhus/strip-json-comments/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/strip-json-comments.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/strip-json-comments#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -8685,7 +9695,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/mafintosh/tar-fs.git",
+          "url": "git+https://github.com/mafintosh/tar-fs.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -8707,7 +9717,7 @@
           "name": "chownr",
           "version": "1.1.4",
           "bom-ref": "@dummy-projects/with-prepared|tar-fs@2.1.1|chownr@1.1.4",
-          "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+          "author": "Isaac Z. Schlueter",
           "description": "like `chown -R`",
           "licenses": [
             {
@@ -8725,9 +9735,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
+              "url": "https://github.com/isaacs/chownr/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
               "url": "git://github.com/isaacs/chownr.git",
               "type": "vcs",
               "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/isaacs/chownr#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -8744,7 +9764,7 @@
       "name": "tar-stream",
       "version": "2.2.0",
       "bom-ref": "@dummy-projects/with-prepared|tar-stream@2.2.0",
-      "author": "Mathias Buus <mathiasbuus@gmail.com>",
+      "author": "Mathias Buus",
       "description": "tar-stream is a streaming tar parser and generator and nothing else. It is streams2 and operates purely using streams which means you can easily extract/parse tarballs without ever hitting the file system.",
       "licenses": [
         {
@@ -8807,9 +9827,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/isaacs/node-tar.git",
+          "url": "https://github.com/isaacs/node-tar/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/node-tar.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/node-tar#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -8824,7 +9854,7 @@
           "name": "fs-minipass",
           "version": "2.1.0",
           "bom-ref": "@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0",
-          "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+          "author": "Isaac Z. Schlueter",
           "description": "fs read and write streams based on minipass",
           "licenses": [
             {
@@ -8869,7 +9899,7 @@
               "name": "minipass",
               "version": "3.3.6",
               "bom-ref": "@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6",
-              "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+              "author": "Isaac Z. Schlueter",
               "description": "minimal implementation of a PassThrough stream",
               "licenses": [
                 {
@@ -8887,9 +9917,19 @@
                   "comment": "as detected from npm-ls property \"resolved\""
                 },
                 {
+                  "url": "https://github.com/isaacs/minipass/issues",
+                  "type": "issue-tracker",
+                  "comment": "as detected from PackageJson property \"bugs.url\""
+                },
+                {
                   "url": "git+https://github.com/isaacs/minipass.git",
                   "type": "vcs",
                   "comment": "as detected from PackageJson property \"repository.url\""
+                },
+                {
+                  "url": "https://github.com/isaacs/minipass#readme",
+                  "type": "website",
+                  "comment": "as detected from PackageJson property \"homepage\""
                 }
               ],
               "properties": [
@@ -8906,7 +9946,7 @@
           "name": "minipass",
           "version": "5.0.0",
           "bom-ref": "@dummy-projects/with-prepared|tar@6.2.1|minipass@5.0.0",
-          "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+          "author": "Isaac Z. Schlueter",
           "description": "minimal implementation of a PassThrough stream",
           "licenses": [
             {
@@ -8924,9 +9964,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
+              "url": "https://github.com/isaacs/minipass/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
               "url": "git+https://github.com/isaacs/minipass.git",
               "type": "vcs",
               "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/isaacs/minipass#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -8943,7 +9993,7 @@
       "name": "tunnel-agent",
       "version": "0.6.0",
       "bom-ref": "@dummy-projects/with-prepared|tunnel-agent@0.6.0",
-      "author": "Mikeal Rogers <mikeal.rogers@gmail.com> (http://www.futurealoof.com)",
+      "author": "Mikeal Rogers",
       "description": "HTTP proxy tunneling agent. Formerly part of mikeal/request, now a standalone module.",
       "licenses": [
         {
@@ -8961,9 +10011,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/mikeal/tunnel-agent",
+          "url": "https://github.com/mikeal/tunnel-agent/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/mikeal/tunnel-agent.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mikeal/tunnel-agent#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -9045,7 +10105,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/npm/unique-filename.git",
+          "url": "git+https://github.com/npm/unique-filename.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -9085,9 +10145,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/npm/unique-slug.git",
+          "url": "https://github.com/npm/unique-slug/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/unique-slug.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/unique-slug#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -9102,7 +10172,7 @@
       "name": "uri-js",
       "version": "4.4.1",
       "bom-ref": "@dummy-projects/with-prepared|uri-js@4.4.1",
-      "author": "Gary Court <gary.court@gmail.com>",
+      "author": "Gary Court",
       "description": "An RFC 3986/3987 compliant, scheme extendable URI/IRI parsing/validating/resolving library for JavaScript.",
       "licenses": [
         {
@@ -9125,7 +10195,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "http://github.com/garycourt/uri-js",
+          "url": "git+ssh://git@github.com/garycourt/uri-js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -9147,7 +10217,7 @@
       "name": "util-deprecate",
       "version": "1.0.2",
       "bom-ref": "@dummy-projects/with-prepared|util-deprecate@1.0.2",
-      "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+      "author": "Nathan Rajlich",
       "description": "The Node.js `util.deprecate()` function with browser support",
       "licenses": [
         {
@@ -9209,9 +10279,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/uuidjs/uuid.git",
+          "url": "https://github.com/uuidjs/uuid/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/uuidjs/uuid.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/uuidjs/uuid#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -9243,9 +10323,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/thenativeweb/uuidv4/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/thenativeweb/uuidv4.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/thenativeweb/uuidv4#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -9278,9 +10368,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "https://github.com/npm/node-which.git",
+          "url": "https://github.com/npm/node-which/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/node-which.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/node-which#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -9313,9 +10413,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "chalk/wrap-ansi",
+          "url": "https://github.com/chalk/wrap-ansi/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/wrap-ansi.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/wrap-ansi#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -9348,9 +10458,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
-              "url": "chalk/ansi-regex",
+              "url": "https://github.com/chalk/ansi-regex/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/chalk/ansi-regex.git",
               "type": "vcs",
-              "comment": "as detected from PackageJson property \"repository\""
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/chalk/ansi-regex#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -9383,9 +10503,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
-              "url": "chalk/ansi-styles",
+              "url": "https://github.com/chalk/ansi-styles/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/chalk/ansi-styles.git",
               "type": "vcs",
-              "comment": "as detected from PackageJson property \"repository\""
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/chalk/ansi-styles#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -9420,10 +10550,10 @@
             {
               "url": "https://github.com/mathiasbynens/emoji-regex/issues",
               "type": "issue-tracker",
-              "comment": "as detected from PackageJson property \"bugs\""
+              "comment": "as detected from PackageJson property \"bugs.url\""
             },
             {
-              "url": "https://github.com/mathiasbynens/emoji-regex.git",
+              "url": "git+https://github.com/mathiasbynens/emoji-regex.git",
               "type": "vcs",
               "comment": "as detected from PackageJson property \"repository.url\""
             },
@@ -9463,9 +10593,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
-              "url": "sindresorhus/string-width",
+              "url": "https://github.com/sindresorhus/string-width/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/sindresorhus/string-width.git",
               "type": "vcs",
-              "comment": "as detected from PackageJson property \"repository\""
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/sindresorhus/string-width#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -9498,9 +10638,19 @@
               "comment": "as detected from npm-ls property \"resolved\""
             },
             {
-              "url": "chalk/strip-ansi",
+              "url": "https://github.com/chalk/strip-ansi/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/chalk/strip-ansi.git",
               "type": "vcs",
-              "comment": "as detected from PackageJson property \"repository\""
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/chalk/strip-ansi#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
             }
           ],
           "properties": [
@@ -9535,9 +10685,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
-          "url": "chalk/wrap-ansi",
+          "url": "https://github.com/chalk/wrap-ansi/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/wrap-ansi.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/wrap-ansi#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
@@ -9552,7 +10712,7 @@
       "name": "wrappy",
       "version": "1.0.2",
       "bom-ref": "@dummy-projects/with-prepared|wrappy@1.0.2",
-      "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+      "author": "Isaac Z. Schlueter",
       "description": "Callback wrapping utility",
       "licenses": [
         {
@@ -9575,7 +10735,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/npm/wrappy",
+          "url": "git+https://github.com/npm/wrappy.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -9597,7 +10757,7 @@
       "name": "xmlbuilder2",
       "version": "3.1.1",
       "bom-ref": "@dummy-projects/with-prepared|xmlbuilder2@3.1.1",
-      "author": "Ozgur Ozcitak <oozcitak@gmail.com>",
+      "author": "Ozgur Ozcitak",
       "description": "An XML builder for node.js",
       "licenses": [
         {
@@ -9642,7 +10802,7 @@
       "name": "yallist",
       "version": "4.0.0",
       "bom-ref": "@dummy-projects/with-prepared|yallist@4.0.0",
-      "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+      "author": "Isaac Z. Schlueter",
       "description": "Yet Another Linked List",
       "licenses": [
         {
@@ -9660,9 +10820,19 @@
           "comment": "as detected from npm-ls property \"resolved\""
         },
         {
+          "url": "https://github.com/isaacs/yallist/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/yallist.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/yallist#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "properties": [
