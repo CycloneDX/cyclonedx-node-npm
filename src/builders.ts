@@ -150,6 +150,7 @@ export class BomBuilder {
       allPackages,
       ([p, packageData]) => [p, this.makeComponentWithPackageData(packageData, p)]
     ))
+    /* eslint-disable-next-line @typescript-eslint/init-declarations -- ack */
     let rootComponent
     try {
       rootComponent = this.makeComponentFromPackagePath(rootPath, this.metaComponentType)
@@ -162,9 +163,11 @@ export class BomBuilder {
     }
 
     // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
+    /* eslint-disable @typescript-eslint/unbound-method -- ack */
     const [relativePath, dirSep, dirSepRE] = rootPath.startsWith('/')
       ? [path.posix.relative, '/', /\//g]
       : [path.win32.relative, '\\', /\\/g]
+    /* eslint-enable @typescript-eslint/unbound-method */
     allComponents.forEach((c, p) => {
       c.purl = this.makePurl(c)
       c.properties.add(new Models.Property(
@@ -290,13 +293,17 @@ export class BomBuilder {
     }
   }
 
+  /* eslint-disable-next-line complexity -- ack */
   private gatherPackages(data: any): Map<PackagePath, PackageData> {
     const packages = new Map<PackagePath, PackageData>()
-    const todo: (typeof data)[] = [data]
+    const todo: Array<typeof data> = [data]
     let w: any = undefined
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
     while ((w = todo.shift()) !== undefined) {
-      if (!isString(w.path)) { continue }
-      let d = packages.get(w.path)
+      /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- ack */
+      const wpath = w.path
+      if (!isString(wpath)) { continue }
+      let d = packages.get(wpath)
       if (d === undefined) {
         d = {
           name: w.name,
@@ -310,7 +317,7 @@ export class BomBuilder {
           dev: w.dev,
           dependencies: new Set()
         }
-        packages.set(w.path, d)
+        packages.set(wpath, d)
       } else {
         d.version ??= w.version
         d.resolved ??= w.resolved
@@ -322,11 +329,13 @@ export class BomBuilder {
         d.dev ??= w.dev
       }
       // `dependencies` might be missing to prevent circles...
-      for (const dep of Object.values(w.dependencies ?? {}) as typeof data) {
-        if (!isString(dep.path)) { continue }
-        d.dependencies.add(dep.path)
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion, @typescript-eslint/no-unsafe-argument -- ack */
+      for (const {path: depPath} of Object.values(w.dependencies ?? {}) as typeof data) {
+        if (!isString(depPath)) { continue }
+        d.dependencies.add(depPath)
       }
-      todo.push(...Object.values(w.dependencies ?? {}))
+      todo.push(...Object.values(w.dependencies ?? {}) as typeof data)
+      /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
     }
     return packages
   }
@@ -382,25 +391,29 @@ export class BomBuilder {
       }
 
       // region properties
+      /* eslint-disable @typescript-eslint/no-unsafe-member-access -- needed */
       if (manifest.private === true) {
         component.properties.add(
           new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
         )
       }
+      /* eslint-enable @typescript-eslint/no-unsafe-member-access */
       // endregion properties
 
       return component
   }
 
+  /* eslint-disable-next-line complexity -- ack */
   private makeComponentWithPackageData(data: PackageData, ppath: PackagePath, type: Enums.ComponentType = Enums.ComponentType.Library): Models.Component {
-    const isOptional = data.optional || data.devOptional
+    const isOptional = data.optional === true || data.devOptional === false
     let isExcluded= false
 
-    let component
+    let component: Models.Component | undefined = undefined
     if (!this.packageLockOnly) {
       try {
         component = this.makeComponentFromPackagePath(ppath, type)
       } catch (err: any) {
+        /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
         if (err.code === 'ENOENT' && isOptional) {
           // an optional dependency that was probably excluded
           isExcluded = true
@@ -459,8 +472,7 @@ export class BomBuilder {
    */
   private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
-  private makeExtRefDistFromPachageData(data: PackageData)
-  {
+  private makeExtRefDistFromPachageData (data: PackageData): Models.ExternalReference | undefined {
     const {resolved, integrity} = data
     if (!isString(resolved) || this.resolvedRE_ignore.test(resolved)) {
       return undefined
@@ -545,11 +557,12 @@ export class BomBuilder {
     return children
   }
 
-  private bomrefComponents (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref: string = ''):void {
+  private bomrefComponents (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref = ''):void {
     for (const [p, cTree] of tree) {
       const component =   allComponents.get(p)
       let cPref = pref
       if (component !== undefined) {
+        /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- need to account empty strings, too */
         component.bomRef.value = `${pref}${component.group || '-'}/${component.name}@${component.version || '-'}`
         cPref += `${component.bomRef.value}|`
       }
@@ -585,13 +598,13 @@ type PTree = Map<PackagePath, PTree>
 export class TreeBuilder {
   fromPaths (root: PackagePath, paths: Iterable<PackagePath>, dirSeparator: string): PTree {
     root += dirSeparator
-    const upaths = new Set(iteratorMap(paths, p => `${p}${dirSeparator}`))
-    const outs =  new Set(iteratorFilter(upaths, p => !p.startsWith(root)))
+    const upaths = new Set<PackagePath>(iteratorMap(paths, p => `${p}${dirSeparator}`))
+    const outs =  new Set<PackagePath>(iteratorFilter(upaths, p => !p.startsWith(root)))
     const inTree: PTree = new Map(iteratorMap(setDifference(upaths, outs), p => [p, new Map()]))
     this.nestPT( inTree)
     const outTree: PTree = new Map(iteratorMap(outs, p => [p, new Map()]))
     this.nestPT( outTree)
-    const tree = new Map()
+    const tree: PTree = new Map()
     outTree.forEach((v,k) => { tree.set(k, v) } )
     inTree.forEach((v,k) => { tree.set(k, v) })
     this.renderPR(tree, '')
