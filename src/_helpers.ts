@@ -95,13 +95,13 @@ export function versionCompare (a: Version, b: Version): CompareResult {
 }
 // endregion version compare
 
-export function * iteratorMap <I, R> (iter: Iterable<I>, func: (e: I) => R): Generator<R> {
+export function * iterableMap <I, R> (iter: Iterable<I>, func: (e: I) => R): Generator<R> {
   for (const item of iter) {
     yield func(item)
   }
 }
 
-export function * iteratorFilter <I> (iter: Iterable<I>, func: (e: I) => boolean): Generator<I> {
+export function * iterableFilter <I> (iter: Iterable<I>, func: (e: I) => boolean): Generator<I> {
   for (const item of iter) {
     if (func(item)) {
       yield item
@@ -115,5 +115,5 @@ export function * iteratorFilter <I> (iter: Iterable<I>, func: (e: I) => boolean
 export const setDifference: <I>(s1: Set<I>, s2: Set<any>) => Set<I> = typeof Set.prototype.difference === 'function'
   /* @ts-expect-error TS2550 */
   ? (s1, s2) => s1.difference(s2)
-  : (s1, s2) => new Set(iteratorFilter(s1, (i) => !s2.has(i)) )
+  : (s1, s2) => new Set(iterableFilter(s1, (i) => !s2.has(i)) )
 /* eslint-enable @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call */

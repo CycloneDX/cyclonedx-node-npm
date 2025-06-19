@@ -22,11 +22,11 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { existsSync } from 'node:fs'
 import path from 'node:path'
 
-import {type Builders, Enums, type Factories, Models, Utils} from '@cyclonedx/cyclonedx-library'
+import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
 import normalizePackageJson from 'normalize-package-data'
 
 import {
-  isString, iteratorFilter, iteratorMap,
+  isString, iterableFilter, iterableMap,
   loadJsonFile, setDifference,
   structuredClonePolyfill,
   tryRemoveSecretsFromUrl
@@ -194,7 +194,7 @@ export class BomBuilder {
         throw new Error(
           /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
           `npm-ls exited with errors: ${runError.status ?? 'noStatus'} ${runError.signal ?? 'noSignal'}`,
-          {cause: runError})
+          { cause: runError })
       }
       this.console.debug('DEBUG | npm-ls exited with errors that are to be ignored.')
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access -- ack */
@@ -221,7 +221,7 @@ export class BomBuilder {
     }
 
     const allPackages = this.gatherPackages(data)
-    const allComponents = new Map(iteratorMap(
+    const allComponents = new Map(iterableMap(
       allPackages,
       ([p, packageData]) => [p, this.makeComponentWithPackageData(packageData, p)]
     ))
@@ -287,11 +287,41 @@ export class BomBuilder {
     // endregion components
 
     // region dependency graph
-    this.bomrefComponents(allComponents, pTree)
+    this.adjustNestedBomRefs(allComponents, pTree)
     this.makeDependencyGraph(allComponents, allPackages)
     // endregion dependency graph
 
     return bom
+  }
+
+  private adjustNestedBomRefs (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref = ''):void {
+    // prefix everything - also direct dependencies and such!
+    // it could be that an inherited/outside dependency has the same bomRef otherwise ...
+    for (const [p, cTree] of tree) {
+      const component = allComponents.get(p)
+      if (component === undefined) { throw new TypeError(`missing component for ${p}`) }
+      const parts = [pref]
+      if (component.group !== undefined && component.group.length > 0) {
+        parts.push(component.group, '/')
+      }
+      parts.push(component.name)
+      if (component.version !== undefined && component.version.length > 0) {
+        parts.push('@', component.version)
+      }
+      component.bomRef.value = parts.join('')
+      this.adjustNestedBomRefs(allComponents, cTree, `${component.bomRef.value}|`)
+    }
+  }
+
+  private nestComponents (allComponents: Map<PackagePath, Models.Component>, tree: PTree): Models.ComponentRepository {
+    const children = new Models.ComponentRepository()
+    for (const [p, pTree] of tree) {
+      const component = allComponents.get(p)
+      if (component === undefined) { throw new TypeError(`missing component for ${p}`)}
+      component.components = this.nestComponents(allComponents, pTree)
+      children.add(component)
+    }
+    return children
   }
 
   /* eslint-disable-next-line complexity -- ack */
@@ -323,7 +353,7 @@ export class BomBuilder {
       // `dependencies` might be missing to prevent circles...
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- ack */
       const dependencies: Array<typeof data> = Object.values(w.dependencies ?? {})
-      for (const {path: depPath} of dependencies) {
+      for (const { path: depPath } of dependencies) {
         if (!isString(depPath)) { continue }
         d.dependencies.add(depPath)
       }
@@ -425,9 +455,14 @@ export class BomBuilder {
     }
     if ( component === undefined ) {
       component = this.componentBuilder.makeComponent(
-        /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
-        this.normalizePackageJson({name: data.name, version: data.version, license: data.license})
-        , type)
+        this.normalizePackageJson({
+          name: data.name,
+          /* eslint-disable @typescript-eslint/no-unsafe-assignment -- ack */
+          version: data.version,
+          license: data.license
+          /* eslint-enable @typescript-eslint/no-unsafe-assignment */
+        }),
+        type)
     }
     if (component === undefined) {
       this.console.info('INFO  | creating DummyComponent for ', ppath)
@@ -480,7 +515,7 @@ export class BomBuilder {
   private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
   private makeExtRefDistFromPachageData (data: PackageData): Models.ExternalReference | undefined {
-    const {resolved, integrity} = data
+    const { resolved, integrity } = data
     if (!isString(resolved) || this.resolvedRE_ignore.test(resolved)) {
       return undefined
     }
@@ -549,36 +584,6 @@ export class BomBuilder {
     }
   }
 
-  private nestComponents (allComponents: Map<PackagePath, Models.Component>, tree: PTree): Models.ComponentRepository {
-    const children = new Models.ComponentRepository()
-    for (const [p, pTree] of tree) {
-      const component = allComponents.get(p)
-      if (component === undefined) { throw new TypeError(`missing component for ${p}`)}
-      component.components = this.nestComponents(allComponents, pTree)
-      children.add(component)
-    }
-    return children
-  }
-
-  private bomrefComponents (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref = ''):void {
-    // prefix everything - also direct dependencies and such!
-    // it could be that an inherited/outside dependency has the same bomRef otherwise ...
-    for (const [p, cTree] of tree) {
-      const component = allComponents.get(p)
-      if (component === undefined) { throw new TypeError(`missing component for ${p}`) }
-      const parts = [pref]
-      if (component.group !== undefined && component.group.length > 0) {
-        parts.push(component.group, '/')
-      }
-      parts.push(component.name)
-      if (component.version !== undefined && component.version.length > 0) {
-        parts.push('@', component.version)
-      }
-      component.bomRef.value = parts.join('')
-      this.bomrefComponents(allComponents, cTree, `${component.bomRef.value}|`)
-    }
-  }
-
   private makeDependencyGraph (allComponents: Map<PackagePath, Models.Component>, allPackages: Map<PackagePath, PackageData>): void {
     for (const [p, comp] of allComponents) {
       const pkg = allPackages.get(p)
@@ -607,13 +612,13 @@ type PTree = Map<PackagePath, PTree>
 export class TreeBuilder {
   fromPaths (root: PackagePath, paths: Iterable<PackagePath>, dirSeparator: string): PTree {
     root += dirSeparator
-    const upaths = new Set<PackagePath>(iteratorMap(paths, p => `${p}${dirSeparator}`))
-    const outs = new Set<PackagePath>(iteratorFilter(upaths, p => !p.startsWith(root)))
+    const upaths = new Set<PackagePath>(iterableMap(paths, p => `${p}${dirSeparator}`))
+    const outs = new Set<PackagePath>(iterableFilter(upaths, p => !p.startsWith(root)))
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
-    const inTree: PTree = new Map(iteratorMap(setDifference(upaths, outs), p => [p, new Map()]))
+    const inTree: PTree = new Map(iterableMap(setDifference(upaths, outs), p => [p, new Map()]))
     this.nestPT(inTree)
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
-    const outTree: PTree = new Map(iteratorMap(outs, p => [p, new Map()]))
+    const outTree: PTree = new Map(iterableMap(outs, p => [p, new Map()]))
     this.nestPT(outTree)
     const tree: PTree = new Map()
     outTree.forEach((v,k) => { tree.set(k, v) } )
@@ -640,9 +645,7 @@ export class TreeBuilder {
     const treeI = [...tree]
     for (const [a, aTree] of treeI) {
       for (const [b, bTree] of treeI) {
-        if (a === b) {
-          continue
-        }
+        if (a === b) { continue }
         if (b.startsWith(a)) {
           aTree.set(b.slice(a.length), bTree)
           tree.delete(b)
