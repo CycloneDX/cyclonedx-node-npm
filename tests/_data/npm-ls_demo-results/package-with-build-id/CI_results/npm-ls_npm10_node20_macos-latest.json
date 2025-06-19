@@ -7,7 +7,7 @@
   "repository": "gist:44e29a0bc4a002ec3413d9f5c2c1962f",
   "_id": "demo-package-with-build-id@1.0.0-123+456",
   "extraneous": false,
-  "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/package-with-build-id/project",
+  "path": "/.../cyclonedx-node-npm/demo/package-with-build-id/project",
   "_dependencies": {},
   "devDependencies": {},
   "peerDependencies": {}
