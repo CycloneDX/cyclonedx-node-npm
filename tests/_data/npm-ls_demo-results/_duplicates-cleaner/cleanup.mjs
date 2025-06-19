@@ -20,7 +20,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 'use strict'
 
 import { createHash } from 'node:crypto'
-import {createReadStream, existsSync, readdirSync, readFileSync, statSync, unlinkSync, writeFileSync} from 'node:fs'
+import { createReadStream, existsSync, readdirSync, readFileSync, statSync, unlinkSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
