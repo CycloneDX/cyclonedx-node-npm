@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { spawnSync } = require('node:child_process')
-const { existsSync, readFileSync, writeFileSync } = require('node:fs')
+const { existsSync, mkdirSync, readFileSync, writeFileSync } = require('node:fs')
 const { dirname, join } = require('node:path')
 
 const { describe, expect, test } = require('@jest/globals')
@@ -45,7 +45,12 @@ describe('integration.cli.from-setups', () => {
       },
       {
         subject: 'flat',
-        args: [],
+        args: ['--flatten-components'],
+        dummyProject: ['with-prepared']
+      },
+      {
+        subject: 'package-lock-only',
+        args: ['--package-lock-only'],
         dummyProject: ['with-prepared']
       },
       {
@@ -92,6 +97,7 @@ describe('integration.cli.from-setups', () => {
       const actualOutput = makeReproducible(format, readFileSync(outFile, 'utf8'))
 
       if (UPDATE_SNAPSHOTS) {
+        mkdirSync(dirname(expectedOutSnap), { recursive: true })
         writeFileSync(expectedOutSnap, actualOutput, 'utf8')
       }
 
@@ -165,6 +171,7 @@ describe('integration.cli.from-setups', () => {
       const actualOutput = makeReproducible(format, readFileSync(outFile, 'utf8'))
 
       if (UPDATE_SNAPSHOTS) {
+        mkdirSync(dirname(expectedOutSnap), { recursive: true })
         writeFileSync(expectedOutSnap, actualOutput, 'utf8')
       }
 
