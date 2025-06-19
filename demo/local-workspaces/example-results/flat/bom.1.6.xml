@@ -5,13 +5,13 @@
       <components>
         <component type="application">
           <name>npm</name>
-          <version>10.9.2</version>
+          <version>11.4.1</version>
         </component>
         <component type="library">
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>8.4.0</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -37,7 +37,7 @@
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-npm</name>
-          <version>2.1.0</version>
+          <version>3.1.0</version>
           <description>Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.</description>
           <licenses>
             <license>
@@ -84,7 +84,7 @@
     </component>
   </metadata>
   <components>
-    <component type="library" bom-ref="my-local-a@0.1.0">
+    <component type="library" bom-ref="demo-workspaces@0.0.0|my-local-a@0.1.0">
       <name>my-local-a</name>
       <version>0.1.0</version>
       <description>demo: my-local-a</description>
@@ -105,7 +105,7 @@
         <property name="cdx:npm:package:private">true</property>
       </properties>
     </component>
-    <component type="library" bom-ref="my-local-b-off@0.0.0">
+    <component type="library" bom-ref="demo-workspaces@0.0.0|my-local-b-off@0.0.0">
       <name>my-local-b-off</name>
       <version>0.0.0</version>
       <description>demo: my-local-b-off - a package with a different name than its dir</description>
@@ -126,7 +126,7 @@
         <property name="cdx:npm:package:private">true</property>
       </properties>
     </component>
-    <component type="library" bom-ref="my-local-c@0.23.42">
+    <component type="library" bom-ref="demo-workspaces@0.0.0|my-local-c@0.23.42">
       <name>my-local-c</name>
       <version>0.23.42</version>
       <description>demo: my-local-c</description>
@@ -147,7 +147,7 @@
         <property name="cdx:npm:package:private">true</property>
       </properties>
     </component>
-    <component type="library" bom-ref="my-local-e@0.1.0">
+    <component type="library" bom-ref="demo-workspaces@0.0.0|my-local-e@0.1.0">
       <name>my-local-e</name>
       <version>0.1.0</version>
       <description>demo: my-local-e - a standalone package that is not dependency of root nor any other workspace</description>
@@ -171,19 +171,19 @@
   </components>
   <dependencies>
     <dependency ref="demo-workspaces@0.0.0">
-      <dependency ref="my-local-a@0.1.0"/>
-      <dependency ref="my-local-b-off@0.0.0"/>
-      <dependency ref="my-local-c@0.23.42"/>
-      <dependency ref="my-local-e@0.1.0"/>
+      <dependency ref="demo-workspaces@0.0.0|my-local-a@0.1.0"/>
+      <dependency ref="demo-workspaces@0.0.0|my-local-b-off@0.0.0"/>
+      <dependency ref="demo-workspaces@0.0.0|my-local-c@0.23.42"/>
+      <dependency ref="demo-workspaces@0.0.0|my-local-e@0.1.0"/>
     </dependency>
-    <dependency ref="my-local-a@0.1.0">
-      <dependency ref="my-local-b-off@0.0.0"/>
+    <dependency ref="demo-workspaces@0.0.0|my-local-a@0.1.0">
+      <dependency ref="demo-workspaces@0.0.0|my-local-b-off@0.0.0"/>
     </dependency>
-    <dependency ref="my-local-b-off@0.0.0"/>
-    <dependency ref="my-local-c@0.23.42">
-      <dependency ref="my-local-a@0.1.0"/>
-      <dependency ref="my-local-b-off@0.0.0"/>
+    <dependency ref="demo-workspaces@0.0.0|my-local-b-off@0.0.0"/>
+    <dependency ref="demo-workspaces@0.0.0|my-local-c@0.23.42">
+      <dependency ref="demo-workspaces@0.0.0|my-local-a@0.1.0"/>
+      <dependency ref="demo-workspaces@0.0.0|my-local-b-off@0.0.0"/>
     </dependency>
-    <dependency ref="my-local-e@0.1.0"/>
+    <dependency ref="demo-workspaces@0.0.0|my-local-e@0.1.0"/>
   </dependencies>
 </bom>

@@ -7,24 +7,24 @@
     "tools": [
       {
         "name": "npm",
-        "version": "10.9.2"
+        "version": "11.4.1"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "7.1.0"
+        "version": "8.4.0"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "2.1.0"
+        "version": "3.1.0"
       }
     ],
     "component": {
       "type": "application",
       "name": "demo-package-integrity",
       "version": "",
-      "bom-ref": "-/demo-package-integrity@-",
+      "bom-ref": "demo-package-integrity",
       "description": "demo: package-integrity -- packages with different integrity information.",
       "purl": "pkg:npm/demo-package-integrity?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-node-npm.git",
       "externalReferences": [
@@ -61,7 +61,7 @@
       "type": "library",
       "name": "base64-js",
       "version": "1.0.1",
-      "bom-ref": "base64-js@1.0.1",
+      "bom-ref": "demo-package-integrity|base64-js@1.0.1",
       "author": "T. Jameson Little",
       "description": "Base64 encoding/decoding in pure JS",
       "licenses": [
@@ -111,7 +111,7 @@
       "type": "library",
       "name": "buffer",
       "version": "5.4.3",
-      "bom-ref": "buffer@5.4.3",
+      "bom-ref": "demo-package-integrity|buffer@5.4.3",
       "author": "Feross Aboukhadijeh",
       "description": "Node.js Buffer API, for the browser",
       "licenses": [
@@ -161,7 +161,7 @@
       "type": "library",
       "name": "base64-js",
       "version": "1.3.1",
-      "bom-ref": "buffer@5.4.3|base64-js@1.3.1",
+      "bom-ref": "demo-package-integrity|buffer@5.4.3|base64-js@1.3.1",
       "author": "T. Jameson Little",
       "description": "Base64 encoding/decoding in pure JS",
       "licenses": [
@@ -211,7 +211,7 @@
       "type": "library",
       "name": "ieee754",
       "version": "1.1.13",
-      "bom-ref": "ieee754@1.1.13",
+      "bom-ref": "demo-package-integrity|ieee754@1.1.13",
       "author": "Feross Aboukhadijeh",
       "description": "Read/write IEEE754 floating point numbers from/to a Buffer or array-like object",
       "licenses": [
@@ -261,7 +261,7 @@
       "type": "library",
       "name": "ignore",
       "version": "5.1.4",
-      "bom-ref": "ignore@5.1.4",
+      "bom-ref": "demo-package-integrity|ignore@5.1.4",
       "author": "kael",
       "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.",
       "licenses": [
@@ -310,31 +310,31 @@
   ],
   "dependencies": [
     {
-      "ref": "-/demo-package-integrity@-",
+      "ref": "demo-package-integrity",
       "dependsOn": [
-        "base64-js@1.0.1",
-        "buffer@5.4.3",
-        "ignore@5.1.4"
+        "demo-package-integrity|base64-js@1.0.1",
+        "demo-package-integrity|buffer@5.4.3",
+        "demo-package-integrity|ignore@5.1.4"
       ]
     },
     {
-      "ref": "base64-js@1.0.1"
+      "ref": "demo-package-integrity|base64-js@1.0.1"
     },
     {
-      "ref": "buffer@5.4.3",
+      "ref": "demo-package-integrity|buffer@5.4.3",
       "dependsOn": [
-        "buffer@5.4.3|base64-js@1.3.1",
-        "ieee754@1.1.13"
+        "demo-package-integrity|buffer@5.4.3|base64-js@1.3.1",
+        "demo-package-integrity|ieee754@1.1.13"
       ]
     },
     {
-      "ref": "buffer@5.4.3|base64-js@1.3.1"
+      "ref": "demo-package-integrity|buffer@5.4.3|base64-js@1.3.1"
     },
     {
-      "ref": "ieee754@1.1.13"
+      "ref": "demo-package-integrity|ieee754@1.1.13"
     },
     {
-      "ref": "ignore@5.1.4"
+      "ref": "demo-package-integrity|ignore@5.1.4"
     }
   ]
 }

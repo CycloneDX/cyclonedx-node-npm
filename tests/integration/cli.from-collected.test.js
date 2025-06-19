@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { mkdirSync, readFileSync, writeFileSync } = require('node:fs')
-const { join } = require('node:path')
+const { dirname, join } = require('node:path')
 
 const { describe, expect, test } = require('@jest/globals')
 
@@ -99,6 +99,7 @@ describe('integration.cli.from-collected', () => {
         const actualOutput = makeReproducible('json', readFileSync(outFile, 'utf8'))
 
         if (UPDATE_SNAPSHOTS) {
+          mkdirSync(dirname(expectedOutSnap), { recursive: true })
           writeFileSync(expectedOutSnap, actualOutput, 'utf8')
         }
 

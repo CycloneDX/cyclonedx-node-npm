@@ -5,7 +5,7 @@
   "description": "demo: dependencies from git",
   "_id": "demo-deps-from-git@1.0.0",
   "extraneous": false,
-  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project",
+  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project",
   "_dependencies": {
     "lib0": "git://github.com/CycloneDX/cyclonedx-javascript-library.git#v6.0.0",
     "lib1": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git#semver:6.1.0",
@@ -45,7 +45,7 @@
       },
       "_id": "@cyclonedx/cyclonedx-library@6.0.0",
       "extraneous": false,
-      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/lib0",
+      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/lib0",
       "_dependencies": {
         "packageurl-js": ">=0.0.6 <0.0.8 || ^1",
         "spdx-expression-parse": "^3.0.1",
@@ -70,7 +70,7 @@
           },
           "_id": "ajv-formats-draft2019@1.6.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats-draft2019",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats-draft2019",
           "_dependencies": {
             "punycode": "^2.1.1",
             "schemes": "^1.4.0",
@@ -91,7 +91,7 @@
               },
               "_id": "ajv@8.17.1",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
               "_dependencies": {
                 "fast-deep-equal": "^3.1.3",
                 "fast-uri": "^3.0.1",
@@ -113,7 +113,7 @@
               },
               "_id": "punycode@2.3.1",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/punycode",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/punycode",
               "_dependencies": {},
               "devDependencies": {},
               "peerDependencies": {}
@@ -127,7 +127,7 @@
               "optional": true,
               "_id": "schemes@1.4.0",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/schemes",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/schemes",
               "_dependencies": {
                 "extend": "^3.0.0"
               },
@@ -143,7 +143,7 @@
                   "optional": true,
                   "_id": "extend@3.0.2",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/extend",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/extend",
                   "_dependencies": {},
                   "devDependencies": {},
                   "peerDependencies": {}
@@ -162,7 +162,7 @@
               },
               "_id": "smtp-address-parser@1.1.0",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/smtp-address-parser",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/smtp-address-parser",
               "_dependencies": {
                 "nearley": "^2.20.1"
               },
@@ -188,7 +188,7 @@
                   },
                   "_id": "nearley@2.20.1",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/nearley",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/nearley",
                   "_dependencies": {
                     "commander": "^2.19.0",
                     "moo": "^0.5.0",
@@ -207,7 +207,7 @@
                       "optional": true,
                       "_id": "commander@2.20.3",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/commander",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/commander",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -221,7 +221,7 @@
                       "optional": true,
                       "_id": "moo@0.5.2",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/moo",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/moo",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -235,7 +235,7 @@
                       "optional": true,
                       "_id": "railroad-diagrams@1.0.0",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/railroad-diagrams",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/railroad-diagrams",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -252,7 +252,7 @@
                       },
                       "_id": "randexp@0.4.6",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/randexp",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/randexp",
                       "_dependencies": {
                         "discontinuous-range": "1.0.0",
                         "ret": "~0.1.10"
@@ -269,7 +269,7 @@
                           "optional": true,
                           "_id": "discontinuous-range@1.0.0",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/discontinuous-range",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/discontinuous-range",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -286,7 +286,7 @@
                           },
                           "_id": "ret@0.1.15",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ret",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ret",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -306,7 +306,7 @@
               "optional": true,
               "_id": "uri-js@4.4.1",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/uri-js",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/uri-js",
               "_dependencies": {
                 "punycode": "^2.1.0"
               },
@@ -324,7 +324,7 @@
                   },
                   "_id": "punycode@2.3.1",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/punycode",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/punycode",
                   "_dependencies": {},
                   "devDependencies": {},
                   "peerDependencies": {}
@@ -350,7 +350,7 @@
           },
           "_id": "ajv-formats@2.1.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats",
           "_dependencies": {
             "ajv": "^8.0.0"
           },
@@ -368,7 +368,7 @@
               },
               "_id": "ajv@8.17.1",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
               "_dependencies": {
                 "fast-deep-equal": "^3.1.3",
                 "fast-uri": "^3.0.1",
@@ -393,7 +393,7 @@
           },
           "_id": "ajv@8.17.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
           "_dependencies": {
             "fast-deep-equal": "^3.1.3",
             "fast-uri": "^3.0.1",
@@ -412,7 +412,7 @@
               "optional": true,
               "_id": "fast-deep-equal@3.1.3",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/fast-deep-equal",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/fast-deep-equal",
               "_dependencies": {},
               "devDependencies": {},
               "peerDependencies": {}
@@ -436,7 +436,7 @@
               "optional": true,
               "_id": "fast-uri@3.0.6",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/fast-uri",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/fast-uri",
               "_dependencies": {},
               "devDependencies": {},
               "peerDependencies": {}
@@ -450,7 +450,7 @@
               "optional": true,
               "_id": "json-schema-traverse@1.0.0",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/json-schema-traverse",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/json-schema-traverse",
               "_dependencies": {},
               "devDependencies": {},
               "peerDependencies": {}
@@ -467,7 +467,7 @@
               },
               "_id": "require-from-string@2.0.2",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/require-from-string",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/require-from-string",
               "_dependencies": {},
               "devDependencies": {},
               "peerDependencies": {}
@@ -487,7 +487,7 @@
           },
           "_id": "libxmljs2@0.32.0",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/libxmljs2",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/libxmljs2",
           "_dependencies": {
             "@mapbox/node-pre-gyp": "^1.0.10",
             "bindings": "~1.5.0",
@@ -508,7 +508,7 @@
               },
               "_id": "@mapbox/node-pre-gyp@1.0.11",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@mapbox/node-pre-gyp",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@mapbox/node-pre-gyp",
               "_dependencies": {
                 "detect-libc": "^2.0.0",
                 "https-proxy-agent": "^5.0.0",
@@ -535,7 +535,7 @@
                   },
                   "_id": "detect-libc@2.0.4",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/detect-libc",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/detect-libc",
                   "_dependencies": {},
                   "devDependencies": {},
                   "peerDependencies": {}
@@ -552,7 +552,7 @@
                   },
                   "_id": "https-proxy-agent@5.0.1",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/https-proxy-agent",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/https-proxy-agent",
                   "_dependencies": {
                     "agent-base": "6",
                     "debug": "4"
@@ -572,7 +572,7 @@
                       },
                       "_id": "agent-base@6.0.2",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/agent-base",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/agent-base",
                       "_dependencies": {
                         "debug": "4"
                       },
@@ -595,7 +595,7 @@
                           },
                           "_id": "debug@4.4.1",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/debug",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/debug",
                           "_dependencies": {
                             "ms": "^2.1.3"
                           },
@@ -621,7 +621,7 @@
                       },
                       "_id": "debug@4.4.1",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/debug",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/debug",
                       "_dependencies": {
                         "ms": "^2.1.3"
                       },
@@ -637,7 +637,7 @@
                           "optional": true,
                           "_id": "ms@2.1.3",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ms",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ms",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -661,7 +661,7 @@
                   },
                   "_id": "make-dir@3.1.0",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/make-dir",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/make-dir",
                   "_dependencies": {
                     "semver": "^6.0.0"
                   },
@@ -680,7 +680,7 @@
                       },
                       "_id": "semver@6.3.1",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/make-dir/node_modules/semver",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/make-dir/node_modules/semver",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -707,7 +707,7 @@
                   },
                   "_id": "node-fetch@2.7.0",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/node-fetch",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/node-fetch",
                   "_dependencies": {
                     "whatwg-url": "^5.0.0"
                   },
@@ -723,7 +723,7 @@
                       "optional": true,
                       "_id": "whatwg-url@5.0.0",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/whatwg-url",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/whatwg-url",
                       "_dependencies": {
                         "tr46": "~0.0.3",
                         "webidl-conversions": "^3.0.0"
@@ -740,7 +740,7 @@
                           "optional": true,
                           "_id": "tr46@0.0.3",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/tr46",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/tr46",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -754,7 +754,7 @@
                           "optional": true,
                           "_id": "webidl-conversions@3.0.1",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/webidl-conversions",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/webidl-conversions",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -778,7 +778,7 @@
                   },
                   "_id": "nopt@5.0.0",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/nopt",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/nopt",
                   "_dependencies": {
                     "abbrev": "1"
                   },
@@ -794,7 +794,7 @@
                       "optional": true,
                       "_id": "abbrev@1.1.1",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/abbrev",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/abbrev",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -811,7 +811,7 @@
                   "optional": true,
                   "_id": "npmlog@5.0.1",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/npmlog",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/npmlog",
                   "_dependencies": {
                     "are-we-there-yet": "^2.0.0",
                     "console-control-strings": "^1.1.0",
@@ -834,7 +834,7 @@
                       },
                       "_id": "are-we-there-yet@2.0.0",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/are-we-there-yet",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/are-we-there-yet",
                       "_dependencies": {
                         "delegates": "^1.0.0",
                         "readable-stream": "^3.6.0"
@@ -851,7 +851,7 @@
                           "optional": true,
                           "_id": "delegates@1.0.0",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/delegates",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/delegates",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -868,7 +868,7 @@
                           },
                           "_id": "readable-stream@3.6.2",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/readable-stream",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/readable-stream",
                           "_dependencies": {
                             "inherits": "^2.0.3",
                             "string_decoder": "^1.1.1",
@@ -885,7 +885,7 @@
                               "optional": true,
                               "_id": "inherits@2.0.4",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/inherits",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/inherits",
                               "_dependencies": {},
                               "devDependencies": {},
                               "peerDependencies": {}
@@ -899,7 +899,7 @@
                               "optional": true,
                               "_id": "string_decoder@1.3.0",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/string_decoder",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/string_decoder",
                               "_dependencies": {
                                 "safe-buffer": "~5.2.0"
                               },
@@ -929,7 +929,7 @@
                                   "optional": true,
                                   "_id": "safe-buffer@5.2.1",
                                   "extraneous": false,
-                                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/safe-buffer",
+                                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/safe-buffer",
                                   "_dependencies": {},
                                   "devDependencies": {},
                                   "peerDependencies": {}
@@ -945,7 +945,7 @@
                               "optional": true,
                               "_id": "util-deprecate@1.0.2",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/util-deprecate",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/util-deprecate",
                               "_dependencies": {},
                               "devDependencies": {},
                               "peerDependencies": {}
@@ -963,7 +963,7 @@
                       "optional": true,
                       "_id": "console-control-strings@1.1.0",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/console-control-strings",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/console-control-strings",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -981,7 +981,7 @@
                       },
                       "_id": "gauge@3.0.2",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/gauge",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/gauge",
                       "_dependencies": {
                         "aproba": "^1.0.3 || ^2.0.0",
                         "color-support": "^1.1.2",
@@ -1005,7 +1005,7 @@
                           "optional": true,
                           "_id": "aproba@2.0.0",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/aproba",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/aproba",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -1022,7 +1022,7 @@
                           },
                           "_id": "color-support@1.1.3",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/color-support",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/color-support",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -1035,7 +1035,7 @@
                           "optional": true,
                           "_id": "console-control-strings@1.1.0",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/console-control-strings",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/console-control-strings",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -1049,7 +1049,7 @@
                           "optional": true,
                           "_id": "has-unicode@2.0.1",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/has-unicode",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/has-unicode",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -1066,7 +1066,7 @@
                           },
                           "_id": "object-assign@4.1.1",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/object-assign",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/object-assign",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -1080,7 +1080,7 @@
                           "optional": true,
                           "_id": "signal-exit@3.0.7",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/signal-exit",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/signal-exit",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -1097,7 +1097,7 @@
                           },
                           "_id": "string-width@4.2.3",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/string-width",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/string-width",
                           "_dependencies": {
                             "emoji-regex": "^8.0.0",
                             "is-fullwidth-code-point": "^3.0.0",
@@ -1115,7 +1115,7 @@
                               "optional": true,
                               "_id": "emoji-regex@8.0.0",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/emoji-regex",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/emoji-regex",
                               "_dependencies": {},
                               "devDependencies": {},
                               "peerDependencies": {}
@@ -1132,7 +1132,7 @@
                               },
                               "_id": "is-fullwidth-code-point@3.0.0",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/is-fullwidth-code-point",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/is-fullwidth-code-point",
                               "_dependencies": {},
                               "devDependencies": {},
                               "peerDependencies": {}
@@ -1148,7 +1148,7 @@
                               },
                               "_id": "strip-ansi@6.0.1",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/strip-ansi",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/strip-ansi",
                               "_dependencies": {
                                 "ansi-regex": "^5.0.1"
                               },
@@ -1169,7 +1169,7 @@
                           },
                           "_id": "strip-ansi@6.0.1",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/strip-ansi",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/strip-ansi",
                           "_dependencies": {
                             "ansi-regex": "^5.0.1"
                           },
@@ -1188,7 +1188,7 @@
                               },
                               "_id": "ansi-regex@5.0.1",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ansi-regex",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ansi-regex",
                               "_dependencies": {},
                               "devDependencies": {},
                               "peerDependencies": {}
@@ -1204,7 +1204,7 @@
                           "optional": true,
                           "_id": "wide-align@1.1.5",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/wide-align",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/wide-align",
                           "_dependencies": {
                             "string-width": "^1.0.2 || 2 || 3 || 4"
                           },
@@ -1222,7 +1222,7 @@
                               },
                               "_id": "string-width@4.2.3",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/string-width",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/string-width",
                               "_dependencies": {
                                 "emoji-regex": "^8.0.0",
                                 "is-fullwidth-code-point": "^3.0.0",
@@ -1244,7 +1244,7 @@
                       "optional": true,
                       "_id": "set-blocking@2.0.0",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/set-blocking",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/set-blocking",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -1267,7 +1267,7 @@
                   },
                   "_id": "rimraf@3.0.2",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/rimraf",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/rimraf",
                   "_dependencies": {
                     "glob": "^7.1.3"
                   },
@@ -1290,7 +1290,7 @@
                       },
                       "_id": "glob@7.2.3",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/glob",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/glob",
                       "_dependencies": {
                         "fs.realpath": "^1.0.0",
                         "inflight": "^1.0.4",
@@ -1311,7 +1311,7 @@
                           "optional": true,
                           "_id": "fs.realpath@1.0.0",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/fs.realpath",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/fs.realpath",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -1326,7 +1326,7 @@
                           "optional": true,
                           "_id": "inflight@1.0.6",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/inflight",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/inflight",
                           "_dependencies": {
                             "once": "^1.3.0",
                             "wrappy": "1"
@@ -1342,7 +1342,7 @@
                               "optional": true,
                               "_id": "once@1.4.0",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/once",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/once",
                               "_dependencies": {
                                 "wrappy": "1"
                               },
@@ -1358,7 +1358,7 @@
                               "optional": true,
                               "_id": "wrappy@1.0.2",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/wrappy",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/wrappy",
                               "_dependencies": {},
                               "devDependencies": {},
                               "peerDependencies": {}
@@ -1374,7 +1374,7 @@
                           "optional": true,
                           "_id": "inherits@2.0.4",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/inherits",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/inherits",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -1391,7 +1391,7 @@
                           },
                           "_id": "minimatch@3.1.2",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/minimatch",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/minimatch",
                           "_dependencies": {
                             "brace-expansion": "^1.1.7"
                           },
@@ -1407,7 +1407,7 @@
                               "optional": true,
                               "_id": "brace-expansion@1.1.11",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/brace-expansion",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/brace-expansion",
                               "_dependencies": {
                                 "balanced-match": "^1.0.0",
                                 "concat-map": "0.0.1"
@@ -1424,7 +1424,7 @@
                                   "optional": true,
                                   "_id": "balanced-match@1.0.2",
                                   "extraneous": false,
-                                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/balanced-match",
+                                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/balanced-match",
                                   "_dependencies": {},
                                   "devDependencies": {},
                                   "peerDependencies": {}
@@ -1438,7 +1438,7 @@
                                   "optional": true,
                                   "_id": "concat-map@0.0.1",
                                   "extraneous": false,
-                                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/concat-map",
+                                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/concat-map",
                                   "_dependencies": {},
                                   "devDependencies": {},
                                   "peerDependencies": {}
@@ -1456,7 +1456,7 @@
                           "optional": true,
                           "_id": "once@1.4.0",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/once",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/once",
                           "_dependencies": {
                             "wrappy": "1"
                           },
@@ -1471,7 +1471,7 @@
                               "optional": true,
                               "_id": "wrappy@1.0.2",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/wrappy",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/wrappy",
                               "_dependencies": {},
                               "devDependencies": {},
                               "peerDependencies": {}
@@ -1490,7 +1490,7 @@
                           },
                           "_id": "path-is-absolute@1.0.1",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/path-is-absolute",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/path-is-absolute",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -1514,7 +1514,7 @@
                   },
                   "_id": "semver@7.7.2",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/semver",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/semver",
                   "_dependencies": {},
                   "devDependencies": {},
                   "peerDependencies": {}
@@ -1531,7 +1531,7 @@
                   },
                   "_id": "tar@6.2.1",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/tar",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/tar",
                   "_dependencies": {
                     "chownr": "^2.0.0",
                     "fs-minipass": "^2.0.0",
@@ -1555,7 +1555,7 @@
                       },
                       "_id": "chownr@2.0.0",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/chownr",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/chownr",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -1572,7 +1572,7 @@
                       },
                       "_id": "fs-minipass@2.1.0",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/fs-minipass",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/fs-minipass",
                       "_dependencies": {
                         "minipass": "^3.0.0"
                       },
@@ -1591,7 +1591,7 @@
                           },
                           "_id": "minipass@3.3.6",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/fs-minipass/node_modules/minipass",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/fs-minipass/node_modules/minipass",
                           "_dependencies": {
                             "yallist": "^4.0.0"
                           },
@@ -1606,7 +1606,7 @@
                               "optional": true,
                               "_id": "yallist@4.0.0",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/yallist",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/yallist",
                               "_dependencies": {},
                               "devDependencies": {},
                               "peerDependencies": {}
@@ -1627,7 +1627,7 @@
                       },
                       "_id": "minipass@5.0.0",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/minipass",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/minipass",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -1644,7 +1644,7 @@
                       },
                       "_id": "minizlib@2.1.2",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/minizlib",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/minizlib",
                       "_dependencies": {
                         "minipass": "^3.0.0",
                         "yallist": "^4.0.0"
@@ -1664,7 +1664,7 @@
                           },
                           "_id": "minipass@3.3.6",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/minizlib/node_modules/minipass",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/minizlib/node_modules/minipass",
                           "_dependencies": {
                             "yallist": "^4.0.0"
                           },
@@ -1679,7 +1679,7 @@
                               "optional": true,
                               "_id": "yallist@4.0.0",
                               "extraneous": false,
-                              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/yallist",
+                              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/yallist",
                               "_dependencies": {},
                               "devDependencies": {},
                               "peerDependencies": {}
@@ -1694,7 +1694,7 @@
                           "optional": true,
                           "_id": "yallist@4.0.0",
                           "extraneous": false,
-                          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/yallist",
+                          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/yallist",
                           "_dependencies": {},
                           "devDependencies": {},
                           "peerDependencies": {}
@@ -1716,7 +1716,7 @@
                       },
                       "_id": "mkdirp@1.0.4",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/mkdirp",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/mkdirp",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -1730,7 +1730,7 @@
                       "optional": true,
                       "_id": "yallist@4.0.0",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/yallist",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/yallist",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -1748,7 +1748,7 @@
               "optional": true,
               "_id": "bindings@1.5.0",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/bindings",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/bindings",
               "_dependencies": {
                 "file-uri-to-path": "1.0.0"
               },
@@ -1764,7 +1764,7 @@
                   "optional": true,
                   "_id": "file-uri-to-path@1.0.0",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/file-uri-to-path",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/file-uri-to-path",
                   "_dependencies": {},
                   "devDependencies": {},
                   "peerDependencies": {}
@@ -1780,7 +1780,7 @@
               "optional": true,
               "_id": "nan@2.17.0",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/nan",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/nan",
               "_dependencies": {},
               "devDependencies": {},
               "peerDependencies": {}
@@ -1795,7 +1795,7 @@
           "integrity": "sha512-cZ6/MzuXaoFd16/k0WnwtI298UCaDHe/XlSh85SeOKbGZ1hq0xvNbx3ILyCMyk7uFQxl6scF3Aucj6/EO9NwcA==",
           "_id": "packageurl-js@1.2.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/packageurl-js",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/packageurl-js",
           "_dependencies": {},
           "devDependencies": {},
           "peerDependencies": {}
@@ -1808,7 +1808,7 @@
           "integrity": "sha512-cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==",
           "_id": "spdx-expression-parse@3.0.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-expression-parse",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-expression-parse",
           "_dependencies": {
             "spdx-exceptions": "^2.1.0",
             "spdx-license-ids": "^3.0.0"
@@ -1824,7 +1824,7 @@
               "integrity": "sha512-PiU42r+xO4UbUS1buo3LPJkjlO7430Xn5SVAhdpzzsPHsjbYVflnnFdATgabnLude+Cqu25p6N+g2lw/PFsa4w==",
               "_id": "spdx-exceptions@2.5.0",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-exceptions",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-exceptions",
               "_dependencies": {},
               "devDependencies": {},
               "peerDependencies": {}
@@ -1837,7 +1837,7 @@
               "integrity": "sha512-Bvg/8F5XephndSK3JffaRqdT+gyhfqIPwDHpX80tJrF8QQRYMo8sNMeaZ2Dp5+jhwKnUmIOyFFQfHRkjJm5nXg==",
               "_id": "spdx-license-ids@3.0.21",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-license-ids",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-license-ids",
               "_dependencies": {},
               "devDependencies": {},
               "peerDependencies": {}
@@ -1856,7 +1856,7 @@
           },
           "_id": "xmlbuilder2@3.1.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/xmlbuilder2",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/xmlbuilder2",
           "_dependencies": {
             "@oozcitak/dom": "1.15.10",
             "@oozcitak/infra": "1.0.8",
@@ -1878,7 +1878,7 @@
               },
               "_id": "@oozcitak/dom@1.15.10",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/dom",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/dom",
               "_dependencies": {
                 "@oozcitak/infra": "1.0.8",
                 "@oozcitak/url": "1.0.4",
@@ -1898,7 +1898,7 @@
                   },
                   "_id": "@oozcitak/infra@1.0.8",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/infra",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/infra",
                   "_dependencies": {
                     "@oozcitak/util": "8.3.8"
                   },
@@ -1917,7 +1917,7 @@
                   },
                   "_id": "@oozcitak/url@1.0.4",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/url",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/url",
                   "_dependencies": {
                     "@oozcitak/infra": "1.0.8",
                     "@oozcitak/util": "8.3.8"
@@ -1936,7 +1936,7 @@
                       },
                       "_id": "@oozcitak/infra@1.0.8",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/infra",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/infra",
                       "_dependencies": {
                         "@oozcitak/util": "8.3.8"
                       },
@@ -1954,7 +1954,7 @@
                       },
                       "_id": "@oozcitak/util@8.3.8",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/util",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/util",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -1972,7 +1972,7 @@
                   },
                   "_id": "@oozcitak/util@8.3.8",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/util",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/util",
                   "_dependencies": {},
                   "devDependencies": {},
                   "peerDependencies": {}
@@ -1991,7 +1991,7 @@
               },
               "_id": "@oozcitak/infra@1.0.8",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/infra",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/infra",
               "_dependencies": {
                 "@oozcitak/util": "8.3.8"
               },
@@ -2009,7 +2009,7 @@
                   },
                   "_id": "@oozcitak/util@8.3.8",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/util",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/util",
                   "_dependencies": {},
                   "devDependencies": {},
                   "peerDependencies": {}
@@ -2028,7 +2028,7 @@
               },
               "_id": "@oozcitak/util@8.3.8",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/util",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/@oozcitak/util",
               "_dependencies": {},
               "devDependencies": {},
               "peerDependencies": {}
@@ -2045,7 +2045,7 @@
               },
               "_id": "js-yaml@3.14.1",
               "extraneous": false,
-              "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/js-yaml",
+              "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/js-yaml",
               "_dependencies": {
                 "argparse": "^1.0.7",
                 "esprima": "^4.0.0"
@@ -2062,7 +2062,7 @@
                   "optional": true,
                   "_id": "argparse@1.0.10",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/argparse",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/argparse",
                   "_dependencies": {
                     "sprintf-js": "~1.0.2"
                   },
@@ -2078,7 +2078,7 @@
                       "optional": true,
                       "_id": "sprintf-js@1.0.3",
                       "extraneous": false,
-                      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/sprintf-js",
+                      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/sprintf-js",
                       "_dependencies": {},
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -2101,7 +2101,7 @@
                   },
                   "_id": "esprima@4.0.1",
                   "extraneous": false,
-                  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/esprima",
+                  "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/esprima",
                   "_dependencies": {},
                   "devDependencies": {},
                   "peerDependencies": {}
@@ -2140,7 +2140,7 @@
       },
       "_id": "@cyclonedx/cyclonedx-library@6.1.0",
       "extraneous": false,
-      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/lib1",
+      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/lib1",
       "_dependencies": {
         "packageurl-js": ">=0.0.6 <0.0.8 || ^1",
         "spdx-expression-parse": "^3.0.1",
@@ -2164,7 +2164,7 @@
           },
           "_id": "ajv-formats-draft2019@1.6.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats-draft2019",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats-draft2019",
           "_dependencies": {
             "punycode": "^2.1.1",
             "schemes": "^1.4.0",
@@ -2189,7 +2189,7 @@
           },
           "_id": "ajv-formats@2.1.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats",
           "_dependencies": {
             "ajv": "^8.0.0"
           },
@@ -2207,7 +2207,7 @@
           },
           "_id": "ajv@8.17.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
           "_dependencies": {
             "fast-deep-equal": "^3.1.3",
             "fast-uri": "^3.0.1",
@@ -2229,7 +2229,7 @@
           },
           "_id": "libxmljs2@0.32.0",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/libxmljs2",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/libxmljs2",
           "_dependencies": {
             "@mapbox/node-pre-gyp": "^1.0.10",
             "bindings": "~1.5.0",
@@ -2245,7 +2245,7 @@
           "integrity": "sha512-cZ6/MzuXaoFd16/k0WnwtI298UCaDHe/XlSh85SeOKbGZ1hq0xvNbx3ILyCMyk7uFQxl6scF3Aucj6/EO9NwcA==",
           "_id": "packageurl-js@1.2.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/packageurl-js",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/packageurl-js",
           "_dependencies": {},
           "devDependencies": {},
           "peerDependencies": {}
@@ -2257,7 +2257,7 @@
           "integrity": "sha512-cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==",
           "_id": "spdx-expression-parse@3.0.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-expression-parse",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-expression-parse",
           "_dependencies": {
             "spdx-exceptions": "^2.1.0",
             "spdx-license-ids": "^3.0.0"
@@ -2276,7 +2276,7 @@
           },
           "_id": "xmlbuilder2@3.1.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/xmlbuilder2",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/xmlbuilder2",
           "_dependencies": {
             "@oozcitak/dom": "1.15.10",
             "@oozcitak/infra": "1.0.8",
@@ -2316,7 +2316,7 @@
       },
       "_id": "@cyclonedx/cyclonedx-library@6.2.0",
       "extraneous": false,
-      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/lib2",
+      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/lib2",
       "_dependencies": {
         "packageurl-js": ">=0.0.6 <0.0.8 || ^1",
         "spdx-expression-parse": "^3.0.1 || ^4",
@@ -2340,7 +2340,7 @@
           },
           "_id": "ajv-formats-draft2019@1.6.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats-draft2019",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats-draft2019",
           "_dependencies": {
             "punycode": "^2.1.1",
             "schemes": "^1.4.0",
@@ -2365,7 +2365,7 @@
           },
           "_id": "ajv-formats@2.1.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats",
           "_dependencies": {
             "ajv": "^8.0.0"
           },
@@ -2383,7 +2383,7 @@
           },
           "_id": "ajv@8.17.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
           "_dependencies": {
             "fast-deep-equal": "^3.1.3",
             "fast-uri": "^3.0.1",
@@ -2405,7 +2405,7 @@
           },
           "_id": "libxmljs2@0.32.0",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/libxmljs2",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/libxmljs2",
           "_dependencies": {
             "@mapbox/node-pre-gyp": "^1.0.10",
             "bindings": "~1.5.0",
@@ -2421,7 +2421,7 @@
           "integrity": "sha512-cZ6/MzuXaoFd16/k0WnwtI298UCaDHe/XlSh85SeOKbGZ1hq0xvNbx3ILyCMyk7uFQxl6scF3Aucj6/EO9NwcA==",
           "_id": "packageurl-js@1.2.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/packageurl-js",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/packageurl-js",
           "_dependencies": {},
           "devDependencies": {},
           "peerDependencies": {}
@@ -2433,7 +2433,7 @@
           "integrity": "sha512-cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==",
           "_id": "spdx-expression-parse@3.0.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-expression-parse",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-expression-parse",
           "_dependencies": {
             "spdx-exceptions": "^2.1.0",
             "spdx-license-ids": "^3.0.0"
@@ -2452,7 +2452,7 @@
           },
           "_id": "xmlbuilder2@3.1.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/xmlbuilder2",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/xmlbuilder2",
           "_dependencies": {
             "@oozcitak/dom": "1.15.10",
             "@oozcitak/infra": "1.0.8",
@@ -2492,7 +2492,7 @@
       },
       "_id": "@cyclonedx/cyclonedx-library@6.3.0",
       "extraneous": false,
-      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/lib3",
+      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/lib3",
       "_dependencies": {
         "packageurl-js": ">=0.0.6 <0.0.8 || ^1",
         "spdx-expression-parse": "^3.0.1 || ^4",
@@ -2516,7 +2516,7 @@
           },
           "_id": "ajv-formats-draft2019@1.6.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats-draft2019",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats-draft2019",
           "_dependencies": {
             "punycode": "^2.1.1",
             "schemes": "^1.4.0",
@@ -2541,7 +2541,7 @@
           },
           "_id": "ajv-formats@2.1.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats",
           "_dependencies": {
             "ajv": "^8.0.0"
           },
@@ -2559,7 +2559,7 @@
           },
           "_id": "ajv@8.17.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
           "_dependencies": {
             "fast-deep-equal": "^3.1.3",
             "fast-uri": "^3.0.1",
@@ -2581,7 +2581,7 @@
           },
           "_id": "libxmljs2@0.32.0",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/libxmljs2",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/libxmljs2",
           "_dependencies": {
             "@mapbox/node-pre-gyp": "^1.0.10",
             "bindings": "~1.5.0",
@@ -2597,7 +2597,7 @@
           "integrity": "sha512-cZ6/MzuXaoFd16/k0WnwtI298UCaDHe/XlSh85SeOKbGZ1hq0xvNbx3ILyCMyk7uFQxl6scF3Aucj6/EO9NwcA==",
           "_id": "packageurl-js@1.2.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/packageurl-js",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/packageurl-js",
           "_dependencies": {},
           "devDependencies": {},
           "peerDependencies": {}
@@ -2609,7 +2609,7 @@
           "integrity": "sha512-cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==",
           "_id": "spdx-expression-parse@3.0.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-expression-parse",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-expression-parse",
           "_dependencies": {
             "spdx-exceptions": "^2.1.0",
             "spdx-license-ids": "^3.0.0"
@@ -2628,7 +2628,7 @@
           },
           "_id": "xmlbuilder2@3.1.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/xmlbuilder2",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/xmlbuilder2",
           "_dependencies": {
             "@oozcitak/dom": "1.15.10",
             "@oozcitak/infra": "1.0.8",
@@ -2664,7 +2664,7 @@
       },
       "_id": "@cyclonedx/cyclonedx-library@6.4.0",
       "extraneous": false,
-      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/lib4",
+      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/lib4",
       "_dependencies": {
         "packageurl-js": ">=0.0.6 <0.0.8 || ^1",
         "spdx-expression-parse": "^3.0.1 || ^4",
@@ -2688,7 +2688,7 @@
           },
           "_id": "ajv-formats-draft2019@1.6.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats-draft2019",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats-draft2019",
           "_dependencies": {
             "punycode": "^2.1.1",
             "schemes": "^1.4.0",
@@ -2713,7 +2713,7 @@
           },
           "_id": "ajv-formats@2.1.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats",
           "_dependencies": {
             "ajv": "^8.0.0"
           },
@@ -2731,7 +2731,7 @@
           },
           "_id": "ajv@8.17.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
           "_dependencies": {
             "fast-deep-equal": "^3.1.3",
             "fast-uri": "^3.0.1",
@@ -2753,7 +2753,7 @@
           },
           "_id": "libxmljs2@0.32.0",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/libxmljs2",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/libxmljs2",
           "_dependencies": {
             "@mapbox/node-pre-gyp": "^1.0.10",
             "bindings": "~1.5.0",
@@ -2769,7 +2769,7 @@
           "integrity": "sha512-cZ6/MzuXaoFd16/k0WnwtI298UCaDHe/XlSh85SeOKbGZ1hq0xvNbx3ILyCMyk7uFQxl6scF3Aucj6/EO9NwcA==",
           "_id": "packageurl-js@1.2.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/packageurl-js",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/packageurl-js",
           "_dependencies": {},
           "devDependencies": {},
           "peerDependencies": {}
@@ -2781,7 +2781,7 @@
           "integrity": "sha512-cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==",
           "_id": "spdx-expression-parse@3.0.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-expression-parse",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-expression-parse",
           "_dependencies": {
             "spdx-exceptions": "^2.1.0",
             "spdx-license-ids": "^3.0.0"
@@ -2800,7 +2800,7 @@
           },
           "_id": "xmlbuilder2@3.1.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/xmlbuilder2",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/xmlbuilder2",
           "_dependencies": {
             "@oozcitak/dom": "1.15.10",
             "@oozcitak/infra": "1.0.8",
@@ -2836,7 +2836,7 @@
       },
       "_id": "@cyclonedx/cyclonedx-library@6.5.0",
       "extraneous": false,
-      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/lib5",
+      "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/lib5",
       "_dependencies": {
         "packageurl-js": ">=0.0.6 <0.0.8 || ^1",
         "spdx-expression-parse": "^3.0.1 || ^4",
@@ -2860,7 +2860,7 @@
           },
           "_id": "ajv-formats-draft2019@1.6.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats-draft2019",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats-draft2019",
           "_dependencies": {
             "punycode": "^2.1.1",
             "schemes": "^1.4.0",
@@ -2885,7 +2885,7 @@
           },
           "_id": "ajv-formats@2.1.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv-formats",
           "_dependencies": {
             "ajv": "^8.0.0"
           },
@@ -2903,7 +2903,7 @@
           },
           "_id": "ajv@8.17.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
           "_dependencies": {
             "fast-deep-equal": "^3.1.3",
             "fast-uri": "^3.0.1",
@@ -2925,7 +2925,7 @@
           },
           "_id": "libxmljs2@0.32.0",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/libxmljs2",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/libxmljs2",
           "_dependencies": {
             "@mapbox/node-pre-gyp": "^1.0.10",
             "bindings": "~1.5.0",
@@ -2941,7 +2941,7 @@
           "integrity": "sha512-cZ6/MzuXaoFd16/k0WnwtI298UCaDHe/XlSh85SeOKbGZ1hq0xvNbx3ILyCMyk7uFQxl6scF3Aucj6/EO9NwcA==",
           "_id": "packageurl-js@1.2.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/packageurl-js",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/packageurl-js",
           "_dependencies": {},
           "devDependencies": {},
           "peerDependencies": {}
@@ -2953,7 +2953,7 @@
           "integrity": "sha512-cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==",
           "_id": "spdx-expression-parse@3.0.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-expression-parse",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-expression-parse",
           "_dependencies": {
             "spdx-exceptions": "^2.1.0",
             "spdx-license-ids": "^3.0.0"
@@ -2972,7 +2972,7 @@
           },
           "_id": "xmlbuilder2@3.1.1",
           "extraneous": false,
-          "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/deps-from-git/project/node_modules/xmlbuilder2",
+          "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/xmlbuilder2",
           "_dependencies": {
             "@oozcitak/dom": "1.15.10",
             "@oozcitak/infra": "1.0.8",

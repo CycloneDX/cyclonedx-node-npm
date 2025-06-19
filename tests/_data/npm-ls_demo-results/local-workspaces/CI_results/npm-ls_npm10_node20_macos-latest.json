@@ -10,7 +10,7 @@
   ],
   "_id": "demo-workspaces@0.0.0",
   "extraneous": false,
-  "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project",
+  "path": "/.../cyclonedx-node-npm/demo/local-workspaces/project",
   "_dependencies": {
     "my-local-a": "*"
   },
@@ -25,7 +25,7 @@
       "license": "Apache-2.0",
       "_id": "my-local-a@0.1.0",
       "extraneous": false,
-      "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-a",
+      "path": "/.../cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-a",
       "_dependencies": {
         "my-local-b-off": "*"
       },
@@ -38,7 +38,7 @@
           "license": "Apache-2.0",
           "_id": "my-local-b-off@0.0.0",
           "extraneous": false,
-          "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-b-off",
+          "path": "/.../cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-b-off",
           "_dependencies": {},
           "devDependencies": {},
           "peerDependencies": {}
@@ -53,7 +53,7 @@
       "license": "Apache-2.0",
       "_id": "my-local-b-off@0.0.0",
       "extraneous": false,
-      "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-b-off",
+      "path": "/.../cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-b-off",
       "_dependencies": {},
       "devDependencies": {},
       "peerDependencies": {}
@@ -66,7 +66,7 @@
       "license": "Apache-2.0",
       "_id": "my-local-c@0.23.42",
       "extraneous": false,
-      "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-c",
+      "path": "/.../cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-c",
       "_dependencies": {
         "my-local-a": "*",
         "my-local-b-off": "*"
@@ -80,7 +80,7 @@
           "license": "Apache-2.0",
           "_id": "my-local-a@0.1.0",
           "extraneous": false,
-          "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-a",
+          "path": "/.../cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-a",
           "_dependencies": {
             "my-local-b-off": "*"
           },
@@ -93,7 +93,7 @@
           "license": "Apache-2.0",
           "_id": "my-local-b-off@0.0.0",
           "extraneous": false,
-          "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-b-off",
+          "path": "/.../cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-b-off",
           "_dependencies": {},
           "devDependencies": {},
           "peerDependencies": {}
@@ -108,7 +108,7 @@
       "license": "Apache-2.0",
       "_id": "my-local-e@0.1.0",
       "extraneous": false,
-      "path": "/Users/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-e",
+      "path": "/.../cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-e",
       "_dependencies": {},
       "devDependencies": {},
       "peerDependencies": {}

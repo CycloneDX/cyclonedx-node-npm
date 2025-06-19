@@ -4,12 +4,12 @@
     <tools>
       <tool>
         <name>npm</name>
-        <version>10.9.2</version>
+        <version>11.4.1</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>7.1.0</version>
+        <version>8.4.0</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
@@ -28,7 +28,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>2.1.0</version>
+        <version>3.1.0</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-node-npm/issues</url>
@@ -57,7 +57,7 @@
     </component>
   </metadata>
   <components>
-    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@6.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.0.0">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx</group>
       <name>cyclonedx-library</name>
@@ -91,7 +91,7 @@
         <property name="cdx:npm:package:path">node_modules/lib0</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@6.1.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.1.0">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx</group>
       <name>cyclonedx-library</name>
@@ -125,7 +125,7 @@
         <property name="cdx:npm:package:path">node_modules/lib1</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@6.2.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.2.0">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx</group>
       <name>cyclonedx-library</name>
@@ -159,7 +159,7 @@
         <property name="cdx:npm:package:path">node_modules/lib2</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@6.3.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.3.0">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx</group>
       <name>cyclonedx-library</name>
@@ -193,7 +193,7 @@
         <property name="cdx:npm:package:path">node_modules/lib3</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@6.4.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.4.0">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx</group>
       <name>cyclonedx-library</name>
@@ -227,7 +227,7 @@
         <property name="cdx:npm:package:path">node_modules/lib4</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@6.5.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.5.0">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx</group>
       <name>cyclonedx-library</name>
@@ -261,7 +261,7 @@
         <property name="cdx:npm:package:path">node_modules/lib5</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@mapbox/node-pre-gyp@1.0.11">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11">
       <author>Dane Springmeyer</author>
       <group>@mapbox</group>
       <name>node-pre-gyp</name>
@@ -299,7 +299,7 @@
         <property name="cdx:npm:package:path">node_modules/@mapbox/node-pre-gyp</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@oozcitak/dom@1.15.10">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10">
       <author>Ozgur Ozcitak</author>
       <group>@oozcitak</group>
       <name>dom</name>
@@ -337,7 +337,7 @@
         <property name="cdx:npm:package:path">node_modules/@oozcitak/dom</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@oozcitak/infra@1.0.8">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8">
       <author>Ozgur Ozcitak</author>
       <group>@oozcitak</group>
       <name>infra</name>
@@ -375,7 +375,7 @@
         <property name="cdx:npm:package:path">node_modules/@oozcitak/infra</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@oozcitak/url@1.0.4">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4">
       <author>Ozgur Ozcitak</author>
       <group>@oozcitak</group>
       <name>url</name>
@@ -413,7 +413,7 @@
         <property name="cdx:npm:package:path">node_modules/@oozcitak/url</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@oozcitak/util@8.3.8">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8">
       <author>Ozgur Ozcitak</author>
       <group>@oozcitak</group>
       <name>util</name>
@@ -451,7 +451,7 @@
         <property name="cdx:npm:package:path">node_modules/@oozcitak/util</property>
       </properties>
     </component>
-    <component type="library" bom-ref="abbrev@1.1.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|abbrev@1.1.1">
       <author>Isaac Z. Schlueter</author>
       <name>abbrev</name>
       <version>1.1.1</version>
@@ -488,7 +488,7 @@
         <property name="cdx:npm:package:path">node_modules/abbrev</property>
       </properties>
     </component>
-    <component type="library" bom-ref="agent-base@6.0.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|agent-base@6.0.2">
       <author>Nathan Rajlich</author>
       <name>agent-base</name>
       <version>6.0.2</version>
@@ -525,7 +525,7 @@
         <property name="cdx:npm:package:path">node_modules/agent-base</property>
       </properties>
     </component>
-    <component type="library" bom-ref="ajv-formats-draft2019@1.6.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1">
       <author>Carlo Quinonez</author>
       <name>ajv-formats-draft2019</name>
       <version>1.6.1</version>
@@ -562,7 +562,7 @@
         <property name="cdx:npm:package:path">node_modules/ajv-formats-draft2019</property>
       </properties>
     </component>
-    <component type="library" bom-ref="ajv-formats@2.1.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|ajv-formats@2.1.1">
       <author>Evgeny Poberezkin</author>
       <name>ajv-formats</name>
       <version>2.1.1</version>
@@ -599,7 +599,7 @@
         <property name="cdx:npm:package:path">node_modules/ajv-formats</property>
       </properties>
     </component>
-    <component type="library" bom-ref="ajv@8.17.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|ajv@8.17.1">
       <author>Evgeny Poberezkin</author>
       <name>ajv</name>
       <version>8.17.1</version>
@@ -636,7 +636,7 @@
         <property name="cdx:npm:package:path">node_modules/ajv</property>
       </properties>
     </component>
-    <component type="library" bom-ref="ansi-regex@5.0.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|ansi-regex@5.0.1">
       <author>Sindre Sorhus</author>
       <name>ansi-regex</name>
       <version>5.0.1</version>
@@ -673,7 +673,7 @@
         <property name="cdx:npm:package:path">node_modules/ansi-regex</property>
       </properties>
     </component>
-    <component type="library" bom-ref="aproba@2.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|aproba@2.0.0">
       <author>Rebecca Turner</author>
       <name>aproba</name>
       <version>2.0.0</version>
@@ -710,7 +710,7 @@
         <property name="cdx:npm:package:path">node_modules/aproba</property>
       </properties>
     </component>
-    <component type="library" bom-ref="are-we-there-yet@2.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|are-we-there-yet@2.0.0">
       <author>GitHub Inc.</author>
       <name>are-we-there-yet</name>
       <version>2.0.0</version>
@@ -747,7 +747,7 @@
         <property name="cdx:npm:package:path">node_modules/are-we-there-yet</property>
       </properties>
     </component>
-    <component type="library" bom-ref="argparse@1.0.10">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|argparse@1.0.10">
       <name>argparse</name>
       <version>1.0.10</version>
       <description>Very powerful CLI arguments parser. Native port of argparse - python's options parsing library</description>
@@ -783,7 +783,7 @@
         <property name="cdx:npm:package:path">node_modules/argparse</property>
       </properties>
     </component>
-    <component type="library" bom-ref="balanced-match@1.0.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|balanced-match@1.0.2">
       <author>Julian Gruber</author>
       <name>balanced-match</name>
       <version>1.0.2</version>
@@ -820,7 +820,7 @@
         <property name="cdx:npm:package:path">node_modules/balanced-match</property>
       </properties>
     </component>
-    <component type="library" bom-ref="bindings@1.5.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|bindings@1.5.0">
       <author>Nathan Rajlich</author>
       <name>bindings</name>
       <version>1.5.0</version>
@@ -857,7 +857,7 @@
         <property name="cdx:npm:package:path">node_modules/bindings</property>
       </properties>
     </component>
-    <component type="library" bom-ref="brace-expansion@1.1.11">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|brace-expansion@1.1.11">
       <author>Julian Gruber</author>
       <name>brace-expansion</name>
       <version>1.1.11</version>
@@ -894,7 +894,7 @@
         <property name="cdx:npm:package:path">node_modules/brace-expansion</property>
       </properties>
     </component>
-    <component type="library" bom-ref="chownr@2.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|chownr@2.0.0">
       <author>Isaac Z. Schlueter</author>
       <name>chownr</name>
       <version>2.0.0</version>
@@ -931,7 +931,7 @@
         <property name="cdx:npm:package:path">node_modules/chownr</property>
       </properties>
     </component>
-    <component type="library" bom-ref="color-support@1.1.3">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|color-support@1.1.3">
       <author>Isaac Z. Schlueter</author>
       <name>color-support</name>
       <version>1.1.3</version>
@@ -968,7 +968,7 @@
         <property name="cdx:npm:package:path">node_modules/color-support</property>
       </properties>
     </component>
-    <component type="library" bom-ref="commander@2.20.3">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|commander@2.20.3">
       <author>TJ Holowaychuk</author>
       <name>commander</name>
       <version>2.20.3</version>
@@ -1005,7 +1005,7 @@
         <property name="cdx:npm:package:path">node_modules/commander</property>
       </properties>
     </component>
-    <component type="library" bom-ref="concat-map@0.0.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|concat-map@0.0.1">
       <author>James Halliday</author>
       <name>concat-map</name>
       <version>0.0.1</version>
@@ -1042,7 +1042,7 @@
         <property name="cdx:npm:package:path">node_modules/concat-map</property>
       </properties>
     </component>
-    <component type="library" bom-ref="console-control-strings@1.1.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|console-control-strings@1.1.0">
       <author>Rebecca Turner</author>
       <name>console-control-strings</name>
       <version>1.1.0</version>
@@ -1079,7 +1079,7 @@
         <property name="cdx:npm:package:path">node_modules/console-control-strings</property>
       </properties>
     </component>
-    <component type="library" bom-ref="debug@4.3.5">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|debug@4.3.5">
       <author>Josh Junon</author>
       <name>debug</name>
       <version>4.3.5</version>
@@ -1116,7 +1116,7 @@
         <property name="cdx:npm:package:path">node_modules/debug</property>
       </properties>
     </component>
-    <component type="library" bom-ref="delegates@1.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|delegates@1.0.0">
       <name>delegates</name>
       <version>1.0.0</version>
       <description>delegate methods and accessors to another property</description>
@@ -1152,7 +1152,7 @@
         <property name="cdx:npm:package:path">node_modules/delegates</property>
       </properties>
     </component>
-    <component type="library" bom-ref="detect-libc@2.0.3">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|detect-libc@2.0.3">
       <author>Lovell Fuller</author>
       <name>detect-libc</name>
       <version>2.0.3</version>
@@ -1189,7 +1189,7 @@
         <property name="cdx:npm:package:path">node_modules/detect-libc</property>
       </properties>
     </component>
-    <component type="library" bom-ref="discontinuous-range@1.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|discontinuous-range@1.0.0">
       <author>David Tudury</author>
       <name>discontinuous-range</name>
       <version>1.0.0</version>
@@ -1226,7 +1226,7 @@
         <property name="cdx:npm:package:path">node_modules/discontinuous-range</property>
       </properties>
     </component>
-    <component type="library" bom-ref="emoji-regex@8.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|emoji-regex@8.0.0">
       <author>Mathias Bynens</author>
       <name>emoji-regex</name>
       <version>8.0.0</version>
@@ -1263,7 +1263,7 @@
         <property name="cdx:npm:package:path">node_modules/emoji-regex</property>
       </properties>
     </component>
-    <component type="library" bom-ref="esprima@4.0.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|esprima@4.0.1">
       <author>Ariya Hidayat</author>
       <name>esprima</name>
       <version>4.0.1</version>
@@ -1300,7 +1300,7 @@
         <property name="cdx:npm:package:path">node_modules/esprima</property>
       </properties>
     </component>
-    <component type="library" bom-ref="extend@3.0.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|extend@3.0.2">
       <author>Stefan Thomas</author>
       <name>extend</name>
       <version>3.0.2</version>
@@ -1337,7 +1337,7 @@
         <property name="cdx:npm:package:path">node_modules/extend</property>
       </properties>
     </component>
-    <component type="library" bom-ref="fast-deep-equal@3.1.3">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|fast-deep-equal@3.1.3">
       <author>Evgeny Poberezkin</author>
       <name>fast-deep-equal</name>
       <version>3.1.3</version>
@@ -1374,7 +1374,7 @@
         <property name="cdx:npm:package:path">node_modules/fast-deep-equal</property>
       </properties>
     </component>
-    <component type="library" bom-ref="fast-uri@3.0.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|fast-uri@3.0.1">
       <author>Vincent Le Goff</author>
       <name>fast-uri</name>
       <version>3.0.1</version>
@@ -1411,7 +1411,7 @@
         <property name="cdx:npm:package:path">node_modules/fast-uri</property>
       </properties>
     </component>
-    <component type="library" bom-ref="file-uri-to-path@1.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|file-uri-to-path@1.0.0">
       <author>Nathan Rajlich</author>
       <name>file-uri-to-path</name>
       <version>1.0.0</version>
@@ -1448,7 +1448,7 @@
         <property name="cdx:npm:package:path">node_modules/file-uri-to-path</property>
       </properties>
     </component>
-    <component type="library" bom-ref="fs-minipass@2.1.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|fs-minipass@2.1.0">
       <author>Isaac Z. Schlueter</author>
       <name>fs-minipass</name>
       <version>2.1.0</version>
@@ -1485,7 +1485,7 @@
         <property name="cdx:npm:package:path">node_modules/fs-minipass</property>
       </properties>
     </component>
-    <component type="library" bom-ref="fs-minipass@2.1.0|minipass@3.3.6">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|fs-minipass@2.1.0|minipass@3.3.6">
       <author>Isaac Z. Schlueter</author>
       <name>minipass</name>
       <version>3.3.6</version>
@@ -1522,7 +1522,7 @@
         <property name="cdx:npm:package:path">node_modules/fs-minipass/node_modules/minipass</property>
       </properties>
     </component>
-    <component type="library" bom-ref="fs.realpath@1.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|fs.realpath@1.0.0">
       <author>Isaac Z. Schlueter</author>
       <name>fs.realpath</name>
       <version>1.0.0</version>
@@ -1559,7 +1559,7 @@
         <property name="cdx:npm:package:path">node_modules/fs.realpath</property>
       </properties>
     </component>
-    <component type="library" bom-ref="gauge@3.0.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|gauge@3.0.2">
       <author>Rebecca Turner</author>
       <name>gauge</name>
       <version>3.0.2</version>
@@ -1596,7 +1596,7 @@
         <property name="cdx:npm:package:path">node_modules/gauge</property>
       </properties>
     </component>
-    <component type="library" bom-ref="glob@7.2.3">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|glob@7.2.3">
       <author>Isaac Z. Schlueter</author>
       <name>glob</name>
       <version>7.2.3</version>
@@ -1633,7 +1633,7 @@
         <property name="cdx:npm:package:path">node_modules/glob</property>
       </properties>
     </component>
-    <component type="library" bom-ref="has-unicode@2.0.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|has-unicode@2.0.1">
       <author>Rebecca Turner</author>
       <name>has-unicode</name>
       <version>2.0.1</version>
@@ -1670,7 +1670,7 @@
         <property name="cdx:npm:package:path">node_modules/has-unicode</property>
       </properties>
     </component>
-    <component type="library" bom-ref="https-proxy-agent@5.0.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|https-proxy-agent@5.0.1">
       <author>Nathan Rajlich</author>
       <name>https-proxy-agent</name>
       <version>5.0.1</version>
@@ -1707,7 +1707,7 @@
         <property name="cdx:npm:package:path">node_modules/https-proxy-agent</property>
       </properties>
     </component>
-    <component type="library" bom-ref="inflight@1.0.6">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|inflight@1.0.6">
       <author>Isaac Z. Schlueter</author>
       <name>inflight</name>
       <version>1.0.6</version>
@@ -1744,7 +1744,7 @@
         <property name="cdx:npm:package:path">node_modules/inflight</property>
       </properties>
     </component>
-    <component type="library" bom-ref="inherits@2.0.4">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|inherits@2.0.4">
       <name>inherits</name>
       <version>2.0.4</version>
       <description>Browser-friendly inheritance fully compatible with standard node.js inherits()</description>
@@ -1780,7 +1780,7 @@
         <property name="cdx:npm:package:path">node_modules/inherits</property>
       </properties>
     </component>
-    <component type="library" bom-ref="is-fullwidth-code-point@3.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|is-fullwidth-code-point@3.0.0">
       <author>Sindre Sorhus</author>
       <name>is-fullwidth-code-point</name>
       <version>3.0.0</version>
@@ -1817,7 +1817,7 @@
         <property name="cdx:npm:package:path">node_modules/is-fullwidth-code-point</property>
       </properties>
     </component>
-    <component type="library" bom-ref="js-yaml@3.14.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|js-yaml@3.14.1">
       <author>Vladimir Zapparov</author>
       <name>js-yaml</name>
       <version>3.14.1</version>
@@ -1854,7 +1854,7 @@
         <property name="cdx:npm:package:path">node_modules/js-yaml</property>
       </properties>
     </component>
-    <component type="library" bom-ref="json-schema-traverse@1.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|json-schema-traverse@1.0.0">
       <author>Evgeny Poberezkin</author>
       <name>json-schema-traverse</name>
       <version>1.0.0</version>
@@ -1891,7 +1891,7 @@
         <property name="cdx:npm:package:path">node_modules/json-schema-traverse</property>
       </properties>
     </component>
-    <component type="library" bom-ref="libxmljs2@0.32.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|libxmljs2@0.32.0">
       <author>marudor</author>
       <name>libxmljs2</name>
       <version>0.32.0</version>
@@ -1928,7 +1928,7 @@
         <property name="cdx:npm:package:path">node_modules/libxmljs2</property>
       </properties>
     </component>
-    <component type="library" bom-ref="make-dir@3.1.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|make-dir@3.1.0">
       <author>Sindre Sorhus</author>
       <name>make-dir</name>
       <version>3.1.0</version>
@@ -1965,7 +1965,7 @@
         <property name="cdx:npm:package:path">node_modules/make-dir</property>
       </properties>
     </component>
-    <component type="library" bom-ref="make-dir@3.1.0|semver@6.3.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|make-dir@3.1.0|semver@6.3.1">
       <author>GitHub Inc.</author>
       <name>semver</name>
       <version>6.3.1</version>
@@ -2002,7 +2002,7 @@
         <property name="cdx:npm:package:path">node_modules/make-dir/node_modules/semver</property>
       </properties>
     </component>
-    <component type="library" bom-ref="minimatch@3.1.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|minimatch@3.1.2">
       <author>Isaac Z. Schlueter</author>
       <name>minimatch</name>
       <version>3.1.2</version>
@@ -2039,7 +2039,7 @@
         <property name="cdx:npm:package:path">node_modules/minimatch</property>
       </properties>
     </component>
-    <component type="library" bom-ref="minipass@5.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|minipass@5.0.0">
       <author>Isaac Z. Schlueter</author>
       <name>minipass</name>
       <version>5.0.0</version>
@@ -2076,7 +2076,7 @@
         <property name="cdx:npm:package:path">node_modules/minipass</property>
       </properties>
     </component>
-    <component type="library" bom-ref="minizlib@2.1.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|minizlib@2.1.2">
       <author>Isaac Z. Schlueter</author>
       <name>minizlib</name>
       <version>2.1.2</version>
@@ -2113,7 +2113,7 @@
         <property name="cdx:npm:package:path">node_modules/minizlib</property>
       </properties>
     </component>
-    <component type="library" bom-ref="minizlib@2.1.2|minipass@3.3.6">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|minizlib@2.1.2|minipass@3.3.6">
       <author>Isaac Z. Schlueter</author>
       <name>minipass</name>
       <version>3.3.6</version>
@@ -2150,7 +2150,7 @@
         <property name="cdx:npm:package:path">node_modules/minizlib/node_modules/minipass</property>
       </properties>
     </component>
-    <component type="library" bom-ref="mkdirp@1.0.4">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|mkdirp@1.0.4">
       <name>mkdirp</name>
       <version>1.0.4</version>
       <description>Recursively mkdir, like `mkdir -p`</description>
@@ -2186,7 +2186,7 @@
         <property name="cdx:npm:package:path">node_modules/mkdirp</property>
       </properties>
     </component>
-    <component type="library" bom-ref="moo@0.5.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|moo@0.5.2">
       <author>Tim Radvan</author>
       <name>moo</name>
       <version>0.5.2</version>
@@ -2223,7 +2223,7 @@
         <property name="cdx:npm:package:path">node_modules/moo</property>
       </properties>
     </component>
-    <component type="library" bom-ref="ms@2.1.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|ms@2.1.2">
       <name>ms</name>
       <version>2.1.2</version>
       <description>Tiny millisecond conversion utility</description>
@@ -2259,7 +2259,7 @@
         <property name="cdx:npm:package:path">node_modules/ms</property>
       </properties>
     </component>
-    <component type="library" bom-ref="nan@2.17.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|nan@2.17.0">
       <name>nan</name>
       <version>2.17.0</version>
       <description>Native Abstractions for Node.js: C++ header for Node 0.8 -&gt; 18 compatibility</description>
@@ -2295,7 +2295,7 @@
         <property name="cdx:npm:package:path">node_modules/nan</property>
       </properties>
     </component>
-    <component type="library" bom-ref="nearley@2.20.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|nearley@2.20.1">
       <author>Hardmath123</author>
       <name>nearley</name>
       <version>2.20.1</version>
@@ -2332,7 +2332,7 @@
         <property name="cdx:npm:package:path">node_modules/nearley</property>
       </properties>
     </component>
-    <component type="library" bom-ref="node-fetch@2.7.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|node-fetch@2.7.0">
       <author>David Frank</author>
       <name>node-fetch</name>
       <version>2.7.0</version>
@@ -2369,7 +2369,7 @@
         <property name="cdx:npm:package:path">node_modules/node-fetch</property>
       </properties>
     </component>
-    <component type="library" bom-ref="nopt@5.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|nopt@5.0.0">
       <author>Isaac Z. Schlueter</author>
       <name>nopt</name>
       <version>5.0.0</version>
@@ -2406,7 +2406,7 @@
         <property name="cdx:npm:package:path">node_modules/nopt</property>
       </properties>
     </component>
-    <component type="library" bom-ref="npmlog@5.0.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|npmlog@5.0.1">
       <author>Isaac Z. Schlueter</author>
       <name>npmlog</name>
       <version>5.0.1</version>
@@ -2443,7 +2443,7 @@
         <property name="cdx:npm:package:path">node_modules/npmlog</property>
       </properties>
     </component>
-    <component type="library" bom-ref="object-assign@4.1.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|object-assign@4.1.1">
       <author>Sindre Sorhus</author>
       <name>object-assign</name>
       <version>4.1.1</version>
@@ -2480,7 +2480,7 @@
         <property name="cdx:npm:package:path">node_modules/object-assign</property>
       </properties>
     </component>
-    <component type="library" bom-ref="once@1.4.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|once@1.4.0">
       <author>Isaac Z. Schlueter</author>
       <name>once</name>
       <version>1.4.0</version>
@@ -2517,7 +2517,7 @@
         <property name="cdx:npm:package:path">node_modules/once</property>
       </properties>
     </component>
-    <component type="library" bom-ref="packageurl-js@1.2.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|packageurl-js@1.2.1">
       <author>the purl authors</author>
       <name>packageurl-js</name>
       <version>1.2.1</version>
@@ -2553,7 +2553,7 @@
         <property name="cdx:npm:package:path">node_modules/packageurl-js</property>
       </properties>
     </component>
-    <component type="library" bom-ref="path-is-absolute@1.0.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|path-is-absolute@1.0.1">
       <author>Sindre Sorhus</author>
       <name>path-is-absolute</name>
       <version>1.0.1</version>
@@ -2590,7 +2590,7 @@
         <property name="cdx:npm:package:path">node_modules/path-is-absolute</property>
       </properties>
     </component>
-    <component type="library" bom-ref="punycode@2.3.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|punycode@2.3.1">
       <author>Mathias Bynens</author>
       <name>punycode</name>
       <version>2.3.1</version>
@@ -2627,7 +2627,7 @@
         <property name="cdx:npm:package:path">node_modules/punycode</property>
       </properties>
     </component>
-    <component type="library" bom-ref="railroad-diagrams@1.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|railroad-diagrams@1.0.0">
       <author>Tab Atkins Jr.</author>
       <name>railroad-diagrams</name>
       <version>1.0.0</version>
@@ -2664,7 +2664,7 @@
         <property name="cdx:npm:package:path">node_modules/railroad-diagrams</property>
       </properties>
     </component>
-    <component type="library" bom-ref="randexp@0.4.6">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|randexp@0.4.6">
       <author>Roly Fentanes</author>
       <name>randexp</name>
       <version>0.4.6</version>
@@ -2701,7 +2701,7 @@
         <property name="cdx:npm:package:path">node_modules/randexp</property>
       </properties>
     </component>
-    <component type="library" bom-ref="readable-stream@3.6.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|readable-stream@3.6.2">
       <name>readable-stream</name>
       <version>3.6.2</version>
       <description>Streams3, a user-land copy of the stream library from Node.js</description>
@@ -2737,7 +2737,7 @@
         <property name="cdx:npm:package:path">node_modules/readable-stream</property>
       </properties>
     </component>
-    <component type="library" bom-ref="require-from-string@2.0.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|require-from-string@2.0.2">
       <author>Vsevolod Strukchinsky</author>
       <name>require-from-string</name>
       <version>2.0.2</version>
@@ -2774,7 +2774,7 @@
         <property name="cdx:npm:package:path">node_modules/require-from-string</property>
       </properties>
     </component>
-    <component type="library" bom-ref="ret@0.1.15">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|ret@0.1.15">
       <author>Roly Fentanes</author>
       <name>ret</name>
       <version>0.1.15</version>
@@ -2811,7 +2811,7 @@
         <property name="cdx:npm:package:path">node_modules/ret</property>
       </properties>
     </component>
-    <component type="library" bom-ref="rimraf@3.0.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|rimraf@3.0.2">
       <author>Isaac Z. Schlueter</author>
       <name>rimraf</name>
       <version>3.0.2</version>
@@ -2848,7 +2848,7 @@
         <property name="cdx:npm:package:path">node_modules/rimraf</property>
       </properties>
     </component>
-    <component type="library" bom-ref="safe-buffer@5.2.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|safe-buffer@5.2.1">
       <author>Feross Aboukhadijeh</author>
       <name>safe-buffer</name>
       <version>5.2.1</version>
@@ -2885,7 +2885,7 @@
         <property name="cdx:npm:package:path">node_modules/safe-buffer</property>
       </properties>
     </component>
-    <component type="library" bom-ref="schemes@1.4.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|schemes@1.4.0">
       <author>Peter Müller</author>
       <name>schemes</name>
       <version>1.4.0</version>
@@ -2922,7 +2922,7 @@
         <property name="cdx:npm:package:path">node_modules/schemes</property>
       </properties>
     </component>
-    <component type="library" bom-ref="semver@7.6.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|semver@7.6.2">
       <author>GitHub Inc.</author>
       <name>semver</name>
       <version>7.6.2</version>
@@ -2959,7 +2959,7 @@
         <property name="cdx:npm:package:path">node_modules/semver</property>
       </properties>
     </component>
-    <component type="library" bom-ref="set-blocking@2.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|set-blocking@2.0.0">
       <author>Ben Coe</author>
       <name>set-blocking</name>
       <version>2.0.0</version>
@@ -2996,7 +2996,7 @@
         <property name="cdx:npm:package:path">node_modules/set-blocking</property>
       </properties>
     </component>
-    <component type="library" bom-ref="signal-exit@3.0.7">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|signal-exit@3.0.7">
       <author>Ben Coe</author>
       <name>signal-exit</name>
       <version>3.0.7</version>
@@ -3033,7 +3033,7 @@
         <property name="cdx:npm:package:path">node_modules/signal-exit</property>
       </properties>
     </component>
-    <component type="library" bom-ref="smtp-address-parser@1.1.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|smtp-address-parser@1.1.0">
       <author>Gene Hightower</author>
       <name>smtp-address-parser</name>
       <version>1.1.0</version>
@@ -3070,7 +3070,7 @@
         <property name="cdx:npm:package:path">node_modules/smtp-address-parser</property>
       </properties>
     </component>
-    <component type="library" bom-ref="spdx-exceptions@2.5.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|spdx-exceptions@2.5.0">
       <author>The Linux Foundation</author>
       <name>spdx-exceptions</name>
       <version>2.5.0</version>
@@ -3106,7 +3106,7 @@
         <property name="cdx:npm:package:path">node_modules/spdx-exceptions</property>
       </properties>
     </component>
-    <component type="library" bom-ref="spdx-expression-parse@3.0.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1">
       <author>Kyle E. Mitchell</author>
       <name>spdx-expression-parse</name>
       <version>3.0.1</version>
@@ -3142,7 +3142,7 @@
         <property name="cdx:npm:package:path">node_modules/spdx-expression-parse</property>
       </properties>
     </component>
-    <component type="library" bom-ref="spdx-license-ids@3.0.18">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|spdx-license-ids@3.0.18">
       <author>Shinnosuke Watanabe</author>
       <name>spdx-license-ids</name>
       <version>3.0.18</version>
@@ -3178,7 +3178,7 @@
         <property name="cdx:npm:package:path">node_modules/spdx-license-ids</property>
       </properties>
     </component>
-    <component type="library" bom-ref="sprintf-js@1.0.3">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|sprintf-js@1.0.3">
       <author>Alexandru Marasteanu</author>
       <name>sprintf-js</name>
       <version>1.0.3</version>
@@ -3215,7 +3215,7 @@
         <property name="cdx:npm:package:path">node_modules/sprintf-js</property>
       </properties>
     </component>
-    <component type="library" bom-ref="string_decoder@1.3.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|string_decoder@1.3.0">
       <name>string_decoder</name>
       <version>1.3.0</version>
       <description>The string_decoder module from Node core</description>
@@ -3251,7 +3251,7 @@
         <property name="cdx:npm:package:path">node_modules/string_decoder</property>
       </properties>
     </component>
-    <component type="library" bom-ref="string-width@4.2.3">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|string-width@4.2.3">
       <author>Sindre Sorhus</author>
       <name>string-width</name>
       <version>4.2.3</version>
@@ -3288,7 +3288,7 @@
         <property name="cdx:npm:package:path">node_modules/string-width</property>
       </properties>
     </component>
-    <component type="library" bom-ref="strip-ansi@6.0.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|strip-ansi@6.0.1">
       <author>Sindre Sorhus</author>
       <name>strip-ansi</name>
       <version>6.0.1</version>
@@ -3325,7 +3325,7 @@
         <property name="cdx:npm:package:path">node_modules/strip-ansi</property>
       </properties>
     </component>
-    <component type="library" bom-ref="tar@6.2.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|tar@6.2.1">
       <author>GitHub Inc.</author>
       <name>tar</name>
       <version>6.2.1</version>
@@ -3362,7 +3362,7 @@
         <property name="cdx:npm:package:path">node_modules/tar</property>
       </properties>
     </component>
-    <component type="library" bom-ref="tr46@0.0.3">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|tr46@0.0.3">
       <author>Sebastian Mayr</author>
       <name>tr46</name>
       <version>0.0.3</version>
@@ -3399,7 +3399,7 @@
         <property name="cdx:npm:package:path">node_modules/tr46</property>
       </properties>
     </component>
-    <component type="library" bom-ref="uri-js@4.4.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|uri-js@4.4.1">
       <author>Gary Court</author>
       <name>uri-js</name>
       <version>4.4.1</version>
@@ -3436,7 +3436,7 @@
         <property name="cdx:npm:package:path">node_modules/uri-js</property>
       </properties>
     </component>
-    <component type="library" bom-ref="util-deprecate@1.0.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|util-deprecate@1.0.2">
       <author>Nathan Rajlich</author>
       <name>util-deprecate</name>
       <version>1.0.2</version>
@@ -3473,7 +3473,7 @@
         <property name="cdx:npm:package:path">node_modules/util-deprecate</property>
       </properties>
     </component>
-    <component type="library" bom-ref="webidl-conversions@3.0.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|webidl-conversions@3.0.1">
       <author>Domenic Denicola</author>
       <name>webidl-conversions</name>
       <version>3.0.1</version>
@@ -3510,7 +3510,7 @@
         <property name="cdx:npm:package:path">node_modules/webidl-conversions</property>
       </properties>
     </component>
-    <component type="library" bom-ref="whatwg-url@5.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|whatwg-url@5.0.0">
       <author>Sebastian Mayr</author>
       <name>whatwg-url</name>
       <version>5.0.0</version>
@@ -3547,7 +3547,7 @@
         <property name="cdx:npm:package:path">node_modules/whatwg-url</property>
       </properties>
     </component>
-    <component type="library" bom-ref="wide-align@1.1.5">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|wide-align@1.1.5">
       <author>Rebecca Turner</author>
       <name>wide-align</name>
       <version>1.1.5</version>
@@ -3584,7 +3584,7 @@
         <property name="cdx:npm:package:path">node_modules/wide-align</property>
       </properties>
     </component>
-    <component type="library" bom-ref="wrappy@1.0.2">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|wrappy@1.0.2">
       <author>Isaac Z. Schlueter</author>
       <name>wrappy</name>
       <version>1.0.2</version>
@@ -3621,7 +3621,7 @@
         <property name="cdx:npm:package:path">node_modules/wrappy</property>
       </properties>
     </component>
-    <component type="library" bom-ref="xmlbuilder2@3.1.1">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1">
       <author>Ozgur Ozcitak</author>
       <name>xmlbuilder2</name>
       <version>3.1.1</version>
@@ -3658,7 +3658,7 @@
         <property name="cdx:npm:package:path">node_modules/xmlbuilder2</property>
       </properties>
     </component>
-    <component type="library" bom-ref="yallist@4.0.0">
+    <component type="library" bom-ref="demo-deps-from-git@1.0.0|yallist@4.0.0">
       <author>Isaac Z. Schlueter</author>
       <name>yallist</name>
       <version>4.0.0</version>
@@ -3697,308 +3697,308 @@
     </component>
   </components>
   <dependencies>
-    <dependency ref="@cyclonedx/cyclonedx-library@6.0.0">
-      <dependency ref="ajv-formats-draft2019@1.6.1"/>
-      <dependency ref="ajv-formats@2.1.1"/>
-      <dependency ref="ajv@8.17.1"/>
-      <dependency ref="libxmljs2@0.32.0"/>
-      <dependency ref="packageurl-js@1.2.1"/>
-      <dependency ref="spdx-expression-parse@3.0.1"/>
-      <dependency ref="xmlbuilder2@3.1.1"/>
-    </dependency>
-    <dependency ref="@cyclonedx/cyclonedx-library@6.1.0">
-      <dependency ref="ajv-formats-draft2019@1.6.1"/>
-      <dependency ref="ajv-formats@2.1.1"/>
-      <dependency ref="ajv@8.17.1"/>
-      <dependency ref="libxmljs2@0.32.0"/>
-      <dependency ref="packageurl-js@1.2.1"/>
-      <dependency ref="spdx-expression-parse@3.0.1"/>
-      <dependency ref="xmlbuilder2@3.1.1"/>
-    </dependency>
-    <dependency ref="@cyclonedx/cyclonedx-library@6.2.0">
-      <dependency ref="ajv-formats-draft2019@1.6.1"/>
-      <dependency ref="ajv-formats@2.1.1"/>
-      <dependency ref="ajv@8.17.1"/>
-      <dependency ref="libxmljs2@0.32.0"/>
-      <dependency ref="packageurl-js@1.2.1"/>
-      <dependency ref="spdx-expression-parse@3.0.1"/>
-      <dependency ref="xmlbuilder2@3.1.1"/>
-    </dependency>
-    <dependency ref="@cyclonedx/cyclonedx-library@6.3.0">
-      <dependency ref="ajv-formats-draft2019@1.6.1"/>
-      <dependency ref="ajv-formats@2.1.1"/>
-      <dependency ref="ajv@8.17.1"/>
-      <dependency ref="libxmljs2@0.32.0"/>
-      <dependency ref="packageurl-js@1.2.1"/>
-      <dependency ref="spdx-expression-parse@3.0.1"/>
-      <dependency ref="xmlbuilder2@3.1.1"/>
-    </dependency>
-    <dependency ref="@cyclonedx/cyclonedx-library@6.4.0">
-      <dependency ref="ajv-formats-draft2019@1.6.1"/>
-      <dependency ref="ajv-formats@2.1.1"/>
-      <dependency ref="ajv@8.17.1"/>
-      <dependency ref="libxmljs2@0.32.0"/>
-      <dependency ref="packageurl-js@1.2.1"/>
-      <dependency ref="spdx-expression-parse@3.0.1"/>
-      <dependency ref="xmlbuilder2@3.1.1"/>
-    </dependency>
-    <dependency ref="@cyclonedx/cyclonedx-library@6.5.0">
-      <dependency ref="ajv-formats-draft2019@1.6.1"/>
-      <dependency ref="ajv-formats@2.1.1"/>
-      <dependency ref="ajv@8.17.1"/>
-      <dependency ref="libxmljs2@0.32.0"/>
-      <dependency ref="packageurl-js@1.2.1"/>
-      <dependency ref="spdx-expression-parse@3.0.1"/>
-      <dependency ref="xmlbuilder2@3.1.1"/>
-    </dependency>
-    <dependency ref="@mapbox/node-pre-gyp@1.0.11">
-      <dependency ref="detect-libc@2.0.3"/>
-      <dependency ref="https-proxy-agent@5.0.1"/>
-      <dependency ref="make-dir@3.1.0"/>
-      <dependency ref="node-fetch@2.7.0"/>
-      <dependency ref="nopt@5.0.0"/>
-      <dependency ref="npmlog@5.0.1"/>
-      <dependency ref="rimraf@3.0.2"/>
-      <dependency ref="semver@7.6.2"/>
-      <dependency ref="tar@6.2.1"/>
-    </dependency>
-    <dependency ref="@oozcitak/dom@1.15.10">
-      <dependency ref="@oozcitak/infra@1.0.8"/>
-      <dependency ref="@oozcitak/url@1.0.4"/>
-      <dependency ref="@oozcitak/util@8.3.8"/>
-    </dependency>
-    <dependency ref="@oozcitak/infra@1.0.8">
-      <dependency ref="@oozcitak/util@8.3.8"/>
-    </dependency>
-    <dependency ref="@oozcitak/url@1.0.4">
-      <dependency ref="@oozcitak/infra@1.0.8"/>
-      <dependency ref="@oozcitak/util@8.3.8"/>
-    </dependency>
-    <dependency ref="@oozcitak/util@8.3.8"/>
-    <dependency ref="abbrev@1.1.1"/>
-    <dependency ref="agent-base@6.0.2">
-      <dependency ref="debug@4.3.5"/>
-    </dependency>
-    <dependency ref="ajv-formats-draft2019@1.6.1">
-      <dependency ref="ajv@8.17.1"/>
-      <dependency ref="punycode@2.3.1"/>
-      <dependency ref="schemes@1.4.0"/>
-      <dependency ref="smtp-address-parser@1.1.0"/>
-      <dependency ref="uri-js@4.4.1"/>
-    </dependency>
-    <dependency ref="ajv-formats@2.1.1">
-      <dependency ref="ajv@8.17.1"/>
-    </dependency>
-    <dependency ref="ajv@8.17.1">
-      <dependency ref="fast-deep-equal@3.1.3"/>
-      <dependency ref="fast-uri@3.0.1"/>
-      <dependency ref="json-schema-traverse@1.0.0"/>
-      <dependency ref="require-from-string@2.0.2"/>
-    </dependency>
-    <dependency ref="ansi-regex@5.0.1"/>
-    <dependency ref="aproba@2.0.0"/>
-    <dependency ref="are-we-there-yet@2.0.0">
-      <dependency ref="delegates@1.0.0"/>
-      <dependency ref="readable-stream@3.6.2"/>
-    </dependency>
-    <dependency ref="argparse@1.0.10">
-      <dependency ref="sprintf-js@1.0.3"/>
-    </dependency>
-    <dependency ref="balanced-match@1.0.2"/>
-    <dependency ref="bindings@1.5.0">
-      <dependency ref="file-uri-to-path@1.0.0"/>
-    </dependency>
-    <dependency ref="brace-expansion@1.1.11">
-      <dependency ref="balanced-match@1.0.2"/>
-      <dependency ref="concat-map@0.0.1"/>
-    </dependency>
-    <dependency ref="chownr@2.0.0"/>
-    <dependency ref="color-support@1.1.3"/>
-    <dependency ref="commander@2.20.3"/>
-    <dependency ref="concat-map@0.0.1"/>
-    <dependency ref="console-control-strings@1.1.0"/>
-    <dependency ref="debug@4.3.5">
-      <dependency ref="ms@2.1.2"/>
-    </dependency>
-    <dependency ref="delegates@1.0.0"/>
     <dependency ref="demo-deps-from-git@1.0.0">
-      <dependency ref="@cyclonedx/cyclonedx-library@6.0.0"/>
-      <dependency ref="@cyclonedx/cyclonedx-library@6.1.0"/>
-      <dependency ref="@cyclonedx/cyclonedx-library@6.2.0"/>
-      <dependency ref="@cyclonedx/cyclonedx-library@6.3.0"/>
-      <dependency ref="@cyclonedx/cyclonedx-library@6.4.0"/>
-      <dependency ref="@cyclonedx/cyclonedx-library@6.5.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.1.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.2.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.3.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.4.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.5.0"/>
     </dependency>
-    <dependency ref="detect-libc@2.0.3"/>
-    <dependency ref="discontinuous-range@1.0.0"/>
-    <dependency ref="emoji-regex@8.0.0"/>
-    <dependency ref="esprima@4.0.1"/>
-    <dependency ref="extend@3.0.2"/>
-    <dependency ref="fast-deep-equal@3.1.3"/>
-    <dependency ref="fast-uri@3.0.1"/>
-    <dependency ref="file-uri-to-path@1.0.0"/>
-    <dependency ref="fs-minipass@2.1.0">
-      <dependency ref="fs-minipass@2.1.0|minipass@3.3.6"/>
+    <dependency ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.0.0">
+      <dependency ref="demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ajv-formats@2.1.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ajv@8.17.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|libxmljs2@0.32.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|packageurl-js@1.2.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"/>
     </dependency>
-    <dependency ref="fs-minipass@2.1.0|minipass@3.3.6">
-      <dependency ref="yallist@4.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.1.0">
+      <dependency ref="demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ajv-formats@2.1.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ajv@8.17.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|libxmljs2@0.32.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|packageurl-js@1.2.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"/>
     </dependency>
-    <dependency ref="fs.realpath@1.0.0"/>
-    <dependency ref="gauge@3.0.2">
-      <dependency ref="aproba@2.0.0"/>
-      <dependency ref="color-support@1.1.3"/>
-      <dependency ref="console-control-strings@1.1.0"/>
-      <dependency ref="has-unicode@2.0.1"/>
-      <dependency ref="object-assign@4.1.1"/>
-      <dependency ref="signal-exit@3.0.7"/>
-      <dependency ref="string-width@4.2.3"/>
-      <dependency ref="strip-ansi@6.0.1"/>
-      <dependency ref="wide-align@1.1.5"/>
+    <dependency ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.2.0">
+      <dependency ref="demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ajv-formats@2.1.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ajv@8.17.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|libxmljs2@0.32.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|packageurl-js@1.2.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"/>
     </dependency>
-    <dependency ref="glob@7.2.3">
-      <dependency ref="fs.realpath@1.0.0"/>
-      <dependency ref="inflight@1.0.6"/>
-      <dependency ref="inherits@2.0.4"/>
-      <dependency ref="minimatch@3.1.2"/>
-      <dependency ref="once@1.4.0"/>
-      <dependency ref="path-is-absolute@1.0.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.3.0">
+      <dependency ref="demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ajv-formats@2.1.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ajv@8.17.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|libxmljs2@0.32.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|packageurl-js@1.2.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"/>
     </dependency>
-    <dependency ref="has-unicode@2.0.1"/>
-    <dependency ref="https-proxy-agent@5.0.1">
-      <dependency ref="agent-base@6.0.2"/>
-      <dependency ref="debug@4.3.5"/>
+    <dependency ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.4.0">
+      <dependency ref="demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ajv-formats@2.1.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ajv@8.17.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|libxmljs2@0.32.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|packageurl-js@1.2.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"/>
     </dependency>
-    <dependency ref="inflight@1.0.6">
-      <dependency ref="once@1.4.0"/>
-      <dependency ref="wrappy@1.0.2"/>
+    <dependency ref="demo-deps-from-git@1.0.0|@cyclonedx/cyclonedx-library@6.5.0">
+      <dependency ref="demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ajv-formats@2.1.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ajv@8.17.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|libxmljs2@0.32.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|packageurl-js@1.2.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1"/>
     </dependency>
-    <dependency ref="inherits@2.0.4"/>
-    <dependency ref="is-fullwidth-code-point@3.0.0"/>
-    <dependency ref="js-yaml@3.14.1">
-      <dependency ref="argparse@1.0.10"/>
-      <dependency ref="esprima@4.0.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11">
+      <dependency ref="demo-deps-from-git@1.0.0|detect-libc@2.0.3"/>
+      <dependency ref="demo-deps-from-git@1.0.0|https-proxy-agent@5.0.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|make-dir@3.1.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|node-fetch@2.7.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|nopt@5.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|npmlog@5.0.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|rimraf@3.0.2"/>
+      <dependency ref="demo-deps-from-git@1.0.0|semver@7.6.2"/>
+      <dependency ref="demo-deps-from-git@1.0.0|tar@6.2.1"/>
     </dependency>
-    <dependency ref="json-schema-traverse@1.0.0"/>
-    <dependency ref="libxmljs2@0.32.0">
-      <dependency ref="@mapbox/node-pre-gyp@1.0.11"/>
-      <dependency ref="bindings@1.5.0"/>
-      <dependency ref="nan@2.17.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10">
+      <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8"/>
+      <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4"/>
+      <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"/>
     </dependency>
-    <dependency ref="make-dir@3.1.0">
-      <dependency ref="make-dir@3.1.0|semver@6.3.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8">
+      <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"/>
     </dependency>
-    <dependency ref="make-dir@3.1.0|semver@6.3.1"/>
-    <dependency ref="minimatch@3.1.2">
-      <dependency ref="brace-expansion@1.1.11"/>
+    <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4">
+      <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8"/>
+      <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"/>
     </dependency>
-    <dependency ref="minipass@5.0.0"/>
-    <dependency ref="minizlib@2.1.2">
-      <dependency ref="minizlib@2.1.2|minipass@3.3.6"/>
-      <dependency ref="yallist@4.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"/>
+    <dependency ref="demo-deps-from-git@1.0.0|abbrev@1.1.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|agent-base@6.0.2">
+      <dependency ref="demo-deps-from-git@1.0.0|debug@4.3.5"/>
     </dependency>
-    <dependency ref="minizlib@2.1.2|minipass@3.3.6">
-      <dependency ref="yallist@4.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1">
+      <dependency ref="demo-deps-from-git@1.0.0|ajv@8.17.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|punycode@2.3.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|schemes@1.4.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|smtp-address-parser@1.1.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|uri-js@4.4.1"/>
     </dependency>
-    <dependency ref="mkdirp@1.0.4"/>
-    <dependency ref="moo@0.5.2"/>
-    <dependency ref="ms@2.1.2"/>
-    <dependency ref="nan@2.17.0"/>
-    <dependency ref="nearley@2.20.1">
-      <dependency ref="commander@2.20.3"/>
-      <dependency ref="moo@0.5.2"/>
-      <dependency ref="railroad-diagrams@1.0.0"/>
-      <dependency ref="randexp@0.4.6"/>
+    <dependency ref="demo-deps-from-git@1.0.0|ajv-formats@2.1.1">
+      <dependency ref="demo-deps-from-git@1.0.0|ajv@8.17.1"/>
     </dependency>
-    <dependency ref="node-fetch@2.7.0">
-      <dependency ref="whatwg-url@5.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|ajv@8.17.1">
+      <dependency ref="demo-deps-from-git@1.0.0|fast-deep-equal@3.1.3"/>
+      <dependency ref="demo-deps-from-git@1.0.0|fast-uri@3.0.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|json-schema-traverse@1.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|require-from-string@2.0.2"/>
     </dependency>
-    <dependency ref="nopt@5.0.0">
-      <dependency ref="abbrev@1.1.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|ansi-regex@5.0.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|aproba@2.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|are-we-there-yet@2.0.0">
+      <dependency ref="demo-deps-from-git@1.0.0|delegates@1.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|readable-stream@3.6.2"/>
     </dependency>
-    <dependency ref="npmlog@5.0.1">
-      <dependency ref="are-we-there-yet@2.0.0"/>
-      <dependency ref="console-control-strings@1.1.0"/>
-      <dependency ref="gauge@3.0.2"/>
-      <dependency ref="set-blocking@2.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|argparse@1.0.10">
+      <dependency ref="demo-deps-from-git@1.0.0|sprintf-js@1.0.3"/>
     </dependency>
-    <dependency ref="object-assign@4.1.1"/>
-    <dependency ref="once@1.4.0">
-      <dependency ref="wrappy@1.0.2"/>
+    <dependency ref="demo-deps-from-git@1.0.0|balanced-match@1.0.2"/>
+    <dependency ref="demo-deps-from-git@1.0.0|bindings@1.5.0">
+      <dependency ref="demo-deps-from-git@1.0.0|file-uri-to-path@1.0.0"/>
     </dependency>
-    <dependency ref="packageurl-js@1.2.1"/>
-    <dependency ref="path-is-absolute@1.0.1"/>
-    <dependency ref="punycode@2.3.1"/>
-    <dependency ref="railroad-diagrams@1.0.0"/>
-    <dependency ref="randexp@0.4.6">
-      <dependency ref="discontinuous-range@1.0.0"/>
-      <dependency ref="ret@0.1.15"/>
+    <dependency ref="demo-deps-from-git@1.0.0|brace-expansion@1.1.11">
+      <dependency ref="demo-deps-from-git@1.0.0|balanced-match@1.0.2"/>
+      <dependency ref="demo-deps-from-git@1.0.0|concat-map@0.0.1"/>
     </dependency>
-    <dependency ref="readable-stream@3.6.2">
-      <dependency ref="inherits@2.0.4"/>
-      <dependency ref="string_decoder@1.3.0"/>
-      <dependency ref="util-deprecate@1.0.2"/>
+    <dependency ref="demo-deps-from-git@1.0.0|chownr@2.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|color-support@1.1.3"/>
+    <dependency ref="demo-deps-from-git@1.0.0|commander@2.20.3"/>
+    <dependency ref="demo-deps-from-git@1.0.0|concat-map@0.0.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|console-control-strings@1.1.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|debug@4.3.5">
+      <dependency ref="demo-deps-from-git@1.0.0|ms@2.1.2"/>
     </dependency>
-    <dependency ref="require-from-string@2.0.2"/>
-    <dependency ref="ret@0.1.15"/>
-    <dependency ref="rimraf@3.0.2">
-      <dependency ref="glob@7.2.3"/>
+    <dependency ref="demo-deps-from-git@1.0.0|delegates@1.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|detect-libc@2.0.3"/>
+    <dependency ref="demo-deps-from-git@1.0.0|discontinuous-range@1.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|emoji-regex@8.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|esprima@4.0.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|extend@3.0.2"/>
+    <dependency ref="demo-deps-from-git@1.0.0|fast-deep-equal@3.1.3"/>
+    <dependency ref="demo-deps-from-git@1.0.0|fast-uri@3.0.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|file-uri-to-path@1.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|fs-minipass@2.1.0">
+      <dependency ref="demo-deps-from-git@1.0.0|fs-minipass@2.1.0|minipass@3.3.6"/>
     </dependency>
-    <dependency ref="safe-buffer@5.2.1"/>
-    <dependency ref="schemes@1.4.0">
-      <dependency ref="extend@3.0.2"/>
+    <dependency ref="demo-deps-from-git@1.0.0|fs-minipass@2.1.0|minipass@3.3.6">
+      <dependency ref="demo-deps-from-git@1.0.0|yallist@4.0.0"/>
     </dependency>
-    <dependency ref="semver@7.6.2"/>
-    <dependency ref="set-blocking@2.0.0"/>
-    <dependency ref="signal-exit@3.0.7"/>
-    <dependency ref="smtp-address-parser@1.1.0">
-      <dependency ref="nearley@2.20.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|fs.realpath@1.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|gauge@3.0.2">
+      <dependency ref="demo-deps-from-git@1.0.0|aproba@2.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|color-support@1.1.3"/>
+      <dependency ref="demo-deps-from-git@1.0.0|console-control-strings@1.1.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|has-unicode@2.0.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|object-assign@4.1.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|signal-exit@3.0.7"/>
+      <dependency ref="demo-deps-from-git@1.0.0|string-width@4.2.3"/>
+      <dependency ref="demo-deps-from-git@1.0.0|strip-ansi@6.0.1"/>
+      <dependency ref="demo-deps-from-git@1.0.0|wide-align@1.1.5"/>
     </dependency>
-    <dependency ref="spdx-exceptions@2.5.0"/>
-    <dependency ref="spdx-expression-parse@3.0.1">
-      <dependency ref="spdx-exceptions@2.5.0"/>
-      <dependency ref="spdx-license-ids@3.0.18"/>
+    <dependency ref="demo-deps-from-git@1.0.0|glob@7.2.3">
+      <dependency ref="demo-deps-from-git@1.0.0|fs.realpath@1.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|inflight@1.0.6"/>
+      <dependency ref="demo-deps-from-git@1.0.0|inherits@2.0.4"/>
+      <dependency ref="demo-deps-from-git@1.0.0|minimatch@3.1.2"/>
+      <dependency ref="demo-deps-from-git@1.0.0|once@1.4.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|path-is-absolute@1.0.1"/>
     </dependency>
-    <dependency ref="spdx-license-ids@3.0.18"/>
-    <dependency ref="sprintf-js@1.0.3"/>
-    <dependency ref="string_decoder@1.3.0">
-      <dependency ref="safe-buffer@5.2.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|has-unicode@2.0.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|https-proxy-agent@5.0.1">
+      <dependency ref="demo-deps-from-git@1.0.0|agent-base@6.0.2"/>
+      <dependency ref="demo-deps-from-git@1.0.0|debug@4.3.5"/>
     </dependency>
-    <dependency ref="string-width@4.2.3">
-      <dependency ref="emoji-regex@8.0.0"/>
-      <dependency ref="is-fullwidth-code-point@3.0.0"/>
-      <dependency ref="strip-ansi@6.0.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|inflight@1.0.6">
+      <dependency ref="demo-deps-from-git@1.0.0|once@1.4.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|wrappy@1.0.2"/>
     </dependency>
-    <dependency ref="strip-ansi@6.0.1">
-      <dependency ref="ansi-regex@5.0.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|inherits@2.0.4"/>
+    <dependency ref="demo-deps-from-git@1.0.0|is-fullwidth-code-point@3.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|js-yaml@3.14.1">
+      <dependency ref="demo-deps-from-git@1.0.0|argparse@1.0.10"/>
+      <dependency ref="demo-deps-from-git@1.0.0|esprima@4.0.1"/>
     </dependency>
-    <dependency ref="tar@6.2.1">
-      <dependency ref="chownr@2.0.0"/>
-      <dependency ref="fs-minipass@2.1.0"/>
-      <dependency ref="minipass@5.0.0"/>
-      <dependency ref="minizlib@2.1.2"/>
-      <dependency ref="mkdirp@1.0.4"/>
-      <dependency ref="yallist@4.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|json-schema-traverse@1.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|libxmljs2@0.32.0">
+      <dependency ref="demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11"/>
+      <dependency ref="demo-deps-from-git@1.0.0|bindings@1.5.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|nan@2.17.0"/>
     </dependency>
-    <dependency ref="tr46@0.0.3"/>
-    <dependency ref="uri-js@4.4.1">
-      <dependency ref="punycode@2.3.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|make-dir@3.1.0">
+      <dependency ref="demo-deps-from-git@1.0.0|make-dir@3.1.0|semver@6.3.1"/>
     </dependency>
-    <dependency ref="util-deprecate@1.0.2"/>
-    <dependency ref="webidl-conversions@3.0.1"/>
-    <dependency ref="whatwg-url@5.0.0">
-      <dependency ref="tr46@0.0.3"/>
-      <dependency ref="webidl-conversions@3.0.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|make-dir@3.1.0|semver@6.3.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|minimatch@3.1.2">
+      <dependency ref="demo-deps-from-git@1.0.0|brace-expansion@1.1.11"/>
     </dependency>
-    <dependency ref="wide-align@1.1.5">
-      <dependency ref="string-width@4.2.3"/>
+    <dependency ref="demo-deps-from-git@1.0.0|minipass@5.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|minizlib@2.1.2">
+      <dependency ref="demo-deps-from-git@1.0.0|minizlib@2.1.2|minipass@3.3.6"/>
+      <dependency ref="demo-deps-from-git@1.0.0|yallist@4.0.0"/>
     </dependency>
-    <dependency ref="wrappy@1.0.2"/>
-    <dependency ref="xmlbuilder2@3.1.1">
-      <dependency ref="@oozcitak/dom@1.15.10"/>
-      <dependency ref="@oozcitak/infra@1.0.8"/>
-      <dependency ref="@oozcitak/util@8.3.8"/>
-      <dependency ref="js-yaml@3.14.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|minizlib@2.1.2|minipass@3.3.6">
+      <dependency ref="demo-deps-from-git@1.0.0|yallist@4.0.0"/>
     </dependency>
-    <dependency ref="yallist@4.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|mkdirp@1.0.4"/>
+    <dependency ref="demo-deps-from-git@1.0.0|moo@0.5.2"/>
+    <dependency ref="demo-deps-from-git@1.0.0|ms@2.1.2"/>
+    <dependency ref="demo-deps-from-git@1.0.0|nan@2.17.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|nearley@2.20.1">
+      <dependency ref="demo-deps-from-git@1.0.0|commander@2.20.3"/>
+      <dependency ref="demo-deps-from-git@1.0.0|moo@0.5.2"/>
+      <dependency ref="demo-deps-from-git@1.0.0|railroad-diagrams@1.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|randexp@0.4.6"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|node-fetch@2.7.0">
+      <dependency ref="demo-deps-from-git@1.0.0|whatwg-url@5.0.0"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|nopt@5.0.0">
+      <dependency ref="demo-deps-from-git@1.0.0|abbrev@1.1.1"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|npmlog@5.0.1">
+      <dependency ref="demo-deps-from-git@1.0.0|are-we-there-yet@2.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|console-control-strings@1.1.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|gauge@3.0.2"/>
+      <dependency ref="demo-deps-from-git@1.0.0|set-blocking@2.0.0"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|object-assign@4.1.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|once@1.4.0">
+      <dependency ref="demo-deps-from-git@1.0.0|wrappy@1.0.2"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|packageurl-js@1.2.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|path-is-absolute@1.0.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|punycode@2.3.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|railroad-diagrams@1.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|randexp@0.4.6">
+      <dependency ref="demo-deps-from-git@1.0.0|discontinuous-range@1.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|ret@0.1.15"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|readable-stream@3.6.2">
+      <dependency ref="demo-deps-from-git@1.0.0|inherits@2.0.4"/>
+      <dependency ref="demo-deps-from-git@1.0.0|string_decoder@1.3.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|util-deprecate@1.0.2"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|require-from-string@2.0.2"/>
+    <dependency ref="demo-deps-from-git@1.0.0|ret@0.1.15"/>
+    <dependency ref="demo-deps-from-git@1.0.0|rimraf@3.0.2">
+      <dependency ref="demo-deps-from-git@1.0.0|glob@7.2.3"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|safe-buffer@5.2.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|schemes@1.4.0">
+      <dependency ref="demo-deps-from-git@1.0.0|extend@3.0.2"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|semver@7.6.2"/>
+    <dependency ref="demo-deps-from-git@1.0.0|set-blocking@2.0.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|signal-exit@3.0.7"/>
+    <dependency ref="demo-deps-from-git@1.0.0|smtp-address-parser@1.1.0">
+      <dependency ref="demo-deps-from-git@1.0.0|nearley@2.20.1"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|spdx-exceptions@2.5.0"/>
+    <dependency ref="demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1">
+      <dependency ref="demo-deps-from-git@1.0.0|spdx-exceptions@2.5.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|spdx-license-ids@3.0.18"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|spdx-license-ids@3.0.18"/>
+    <dependency ref="demo-deps-from-git@1.0.0|sprintf-js@1.0.3"/>
+    <dependency ref="demo-deps-from-git@1.0.0|string_decoder@1.3.0">
+      <dependency ref="demo-deps-from-git@1.0.0|safe-buffer@5.2.1"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|string-width@4.2.3">
+      <dependency ref="demo-deps-from-git@1.0.0|emoji-regex@8.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|is-fullwidth-code-point@3.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|strip-ansi@6.0.1"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|strip-ansi@6.0.1">
+      <dependency ref="demo-deps-from-git@1.0.0|ansi-regex@5.0.1"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|tar@6.2.1">
+      <dependency ref="demo-deps-from-git@1.0.0|chownr@2.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|fs-minipass@2.1.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|minipass@5.0.0"/>
+      <dependency ref="demo-deps-from-git@1.0.0|minizlib@2.1.2"/>
+      <dependency ref="demo-deps-from-git@1.0.0|mkdirp@1.0.4"/>
+      <dependency ref="demo-deps-from-git@1.0.0|yallist@4.0.0"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|tr46@0.0.3"/>
+    <dependency ref="demo-deps-from-git@1.0.0|uri-js@4.4.1">
+      <dependency ref="demo-deps-from-git@1.0.0|punycode@2.3.1"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|util-deprecate@1.0.2"/>
+    <dependency ref="demo-deps-from-git@1.0.0|webidl-conversions@3.0.1"/>
+    <dependency ref="demo-deps-from-git@1.0.0|whatwg-url@5.0.0">
+      <dependency ref="demo-deps-from-git@1.0.0|tr46@0.0.3"/>
+      <dependency ref="demo-deps-from-git@1.0.0|webidl-conversions@3.0.1"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|wide-align@1.1.5">
+      <dependency ref="demo-deps-from-git@1.0.0|string-width@4.2.3"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|wrappy@1.0.2"/>
+    <dependency ref="demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1">
+      <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10"/>
+      <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8"/>
+      <dependency ref="demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8"/>
+      <dependency ref="demo-deps-from-git@1.0.0|js-yaml@3.14.1"/>
+    </dependency>
+    <dependency ref="demo-deps-from-git@1.0.0|yallist@4.0.0"/>
   </dependencies>
 </bom>

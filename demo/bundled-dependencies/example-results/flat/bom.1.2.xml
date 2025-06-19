@@ -4,17 +4,17 @@
     <tools>
       <tool>
         <name>npm</name>
-        <version>10.9.2</version>
+        <version>11.4.1</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>7.1.0</version>
+        <version>8.4.0</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>2.1.0</version>
+        <version>3.1.0</version>
       </tool>
     </tools>
     <component type="application" bom-ref="demo-bundled-deps@0.0.0">
@@ -44,7 +44,7 @@
     </component>
   </metadata>
   <components>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2">
       <author>Gajus Kuizinas</author>
       <name>bundle-dependencies</name>
       <version>1.0.2</version>
@@ -74,7 +74,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|ansi-regex@2.0.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|ansi-regex@2.0.0">
       <author>Sindre Sorhus</author>
       <name>ansi-regex</name>
       <version>2.0.0</version>
@@ -84,8 +84,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ansi-regex@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fansi-regex.git</purl>
+      <purl>pkg:npm/ansi-regex@2.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/ansi-regex/-/ansi-regex-2.0.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/ansi-regex/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -100,7 +104,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|builtin-modules@1.1.1">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|builtin-modules@1.1.1">
       <author>Sindre Sorhus</author>
       <name>builtin-modules</name>
       <version>1.1.1</version>
@@ -110,8 +114,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/builtin-modules@1.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fbuiltin-modules.git</purl>
+      <purl>pkg:npm/builtin-modules@1.1.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/builtin-modules/-/builtin-modules-1.1.1.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/builtin-modules/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -126,7 +134,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|camelcase@2.1.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|camelcase@2.1.0">
       <author>Sindre Sorhus</author>
       <name>camelcase</name>
       <version>2.1.0</version>
@@ -136,8 +144,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/camelcase@2.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fcamelcase.git</purl>
+      <purl>pkg:npm/camelcase@2.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/camelcase/-/camelcase-2.1.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/camelcase/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -152,7 +164,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|cliui@3.1.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|cliui@3.1.0">
       <author>Ben Coe</author>
       <name>cliui</name>
       <version>3.1.0</version>
@@ -162,8 +174,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/cliui@3.1.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fbcoe%2Fcliui.git</purl>
+      <purl>pkg:npm/cliui@3.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/cliui/-/cliui-3.1.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/bcoe/cliui/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -178,7 +194,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|code-point-at@1.0.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|code-point-at@1.0.0">
       <author>Sindre Sorhus</author>
       <name>code-point-at</name>
       <version>1.0.0</version>
@@ -188,8 +204,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/code-point-at@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fcode-point-at.git</purl>
+      <purl>pkg:npm/code-point-at@1.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/code-point-at/-/code-point-at-1.0.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/code-point-at/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -204,7 +224,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|decamelize@1.1.2">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|decamelize@1.1.2">
       <author>Sindre Sorhus</author>
       <name>decamelize</name>
       <version>1.1.2</version>
@@ -214,8 +234,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/decamelize@1.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fdecamelize.git</purl>
+      <purl>pkg:npm/decamelize@1.1.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/decamelize/-/decamelize-1.1.2.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/decamelize/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -230,7 +254,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|error-ex@1.3.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|error-ex@1.3.0">
       <name>error-ex</name>
       <version>1.3.0</version>
       <description>Easy error subclassing and stack customization</description>
@@ -239,8 +263,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/error-ex@1.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fqix-%2Fnode-error-ex.git</purl>
+      <purl>pkg:npm/error-ex@1.3.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/error-ex/-/error-ex-1.3.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/qix-/node-error-ex/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -255,7 +283,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|escape-string-regexp@1.0.5">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|escape-string-regexp@1.0.5">
       <author>Sindre Sorhus</author>
       <name>escape-string-regexp</name>
       <version>1.0.5</version>
@@ -265,8 +293,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/escape-string-regexp@1.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fescape-string-regexp.git</purl>
+      <purl>pkg:npm/escape-string-regexp@1.0.5</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/escape-string-regexp/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -281,7 +313,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|find-up@1.1.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|find-up@1.1.0">
       <author>Sindre Sorhus</author>
       <name>find-up</name>
       <version>1.1.0</version>
@@ -291,8 +323,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/find-up@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Ffind-up.git</purl>
+      <purl>pkg:npm/find-up@1.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/find-up/-/find-up-1.1.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/find-up/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -307,7 +343,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|graceful-fs@4.1.3">
       <name>graceful-fs</name>
       <version>4.1.3</version>
       <description>A drop-in replacement for fs, making various improvements.</description>
@@ -316,8 +352,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/graceful-fs@4.1.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-graceful-fs.git</purl>
+      <purl>pkg:npm/graceful-fs@4.1.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.3.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-graceful-fs/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -332,7 +372,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|hosted-git-info@2.1.4">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|hosted-git-info@2.1.4">
       <author>Rebecca Turner</author>
       <name>hosted-git-info</name>
       <version>2.1.4</version>
@@ -342,8 +382,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/hosted-git-info@2.1.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fhosted-git-info.git</purl>
+      <purl>pkg:npm/hosted-git-info@2.1.4</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.1.4.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/hosted-git-info/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -358,7 +402,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|invert-kv@1.0.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|invert-kv@1.0.0">
       <author>Sindre Sorhus</author>
       <name>invert-kv</name>
       <version>1.0.0</version>
@@ -368,8 +412,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/invert-kv@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Finvert-kv.git</purl>
+      <purl>pkg:npm/invert-kv@1.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/invert-kv/-/invert-kv-1.0.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/invert-kv/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -384,7 +432,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|is-arrayish@0.2.1">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|is-arrayish@0.2.1">
       <author>Qix</author>
       <name>is-arrayish</name>
       <version>0.2.1</version>
@@ -394,8 +442,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-arrayish@0.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fqix-%2Fnode-is-arrayish.git</purl>
+      <purl>pkg:npm/is-arrayish@0.2.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/qix-/node-is-arrayish/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -410,7 +462,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|is-builtin-module@1.0.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|is-builtin-module@1.0.0">
       <author>Sindre Sorhus</author>
       <name>is-builtin-module</name>
       <version>1.0.0</version>
@@ -420,8 +472,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-builtin-module@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fis-builtin-module.git</purl>
+      <purl>pkg:npm/is-builtin-module@1.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/is-builtin-module/-/is-builtin-module-1.0.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/is-builtin-module/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -436,7 +492,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0">
       <author>Sindre Sorhus</author>
       <name>is-fullwidth-code-point</name>
       <version>1.0.0</version>
@@ -446,8 +502,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-fullwidth-code-point@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fis-fullwidth-code-point.git</purl>
+      <purl>pkg:npm/is-fullwidth-code-point@1.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/is-fullwidth-code-point/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -462,7 +522,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|is-utf8@0.2.1">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|is-utf8@0.2.1">
       <author>wayfind</author>
       <name>is-utf8</name>
       <version>0.2.1</version>
@@ -472,8 +532,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-utf8@0.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fwayfind%2Fis-utf8.git</purl>
+      <purl>pkg:npm/is-utf8@0.2.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/is-utf8/-/is-utf8-0.2.1.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/wayfind/is-utf8/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -488,7 +552,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|lcid@1.0.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|lcid@1.0.0">
       <author>Sindre Sorhus</author>
       <name>lcid</name>
       <version>1.0.0</version>
@@ -498,8 +562,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lcid@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Flcid.git</purl>
+      <purl>pkg:npm/lcid@1.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/lcid/-/lcid-1.0.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/lcid/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -514,7 +582,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|load-json-file@1.1.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|load-json-file@1.1.0">
       <author>Sindre Sorhus</author>
       <name>load-json-file</name>
       <version>1.1.0</version>
@@ -524,8 +592,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/load-json-file@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fload-json-file.git</purl>
+      <purl>pkg:npm/load-json-file@1.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/load-json-file/-/load-json-file-1.1.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/load-json-file/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -540,7 +612,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|lodash.assign@4.0.3">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|lodash.assign@4.0.3">
       <author>John-David Dalton</author>
       <name>lodash.assign</name>
       <version>4.0.3</version>
@@ -550,8 +622,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lodash.assign@4.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flodash%2Flodash.git</purl>
+      <purl>pkg:npm/lodash.assign@4.0.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/lodash.assign/-/lodash.assign-4.0.3.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/lodash/lodash/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -566,7 +642,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|lodash.keys@4.0.3">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|lodash.keys@4.0.3">
       <author>John-David Dalton</author>
       <name>lodash.keys</name>
       <version>4.0.3</version>
@@ -576,8 +652,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lodash.keys@4.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flodash%2Flodash.git</purl>
+      <purl>pkg:npm/lodash.keys@4.0.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/lodash.keys/-/lodash.keys-4.0.3.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/lodash/lodash/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -592,7 +672,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|lodash.rest@4.0.1">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|lodash.rest@4.0.1">
       <author>John-David Dalton</author>
       <name>lodash.rest</name>
       <version>4.0.1</version>
@@ -602,8 +682,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lodash.rest@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flodash%2Flodash.git</purl>
+      <purl>pkg:npm/lodash.rest@4.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/lodash.rest/-/lodash.rest-4.0.1.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/lodash/lodash/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -618,7 +702,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|normalize-package-data@2.3.5">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|normalize-package-data@2.3.5">
       <author>Meryn Stol</author>
       <name>normalize-package-data</name>
       <version>2.3.5</version>
@@ -628,8 +712,12 @@
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/normalize-package-data@2.3.5?vcs_url=git%3A%2F%2Fgithub.com%2Fnpm%2Fnormalize-package-data.git</purl>
+      <purl>pkg:npm/normalize-package-data@2.3.5</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.3.5.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/normalize-package-data/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -644,7 +732,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|number-is-nan@1.0.0">
       <author>Sindre Sorhus</author>
       <name>number-is-nan</name>
       <version>1.0.0</version>
@@ -654,8 +742,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/number-is-nan@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fnumber-is-nan.git</purl>
+      <purl>pkg:npm/number-is-nan@1.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/number-is-nan/-/number-is-nan-1.0.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/number-is-nan/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -670,7 +762,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|object-assign@4.0.1">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|object-assign@4.0.1">
       <author>Sindre Sorhus</author>
       <name>object-assign</name>
       <version>4.0.1</version>
@@ -680,8 +772,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/object-assign@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fobject-assign.git</purl>
+      <purl>pkg:npm/object-assign@4.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/object-assign/-/object-assign-4.0.1.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/object-assign/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -696,7 +792,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|os-locale@1.4.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|os-locale@1.4.0">
       <author>Sindre Sorhus</author>
       <name>os-locale</name>
       <version>1.4.0</version>
@@ -706,8 +802,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/os-locale@1.4.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fos-locale.git</purl>
+      <purl>pkg:npm/os-locale@1.4.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/os-locale/-/os-locale-1.4.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/os-locale/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -722,7 +822,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|parse-json@2.2.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|parse-json@2.2.0">
       <author>Sindre Sorhus</author>
       <name>parse-json</name>
       <version>2.2.0</version>
@@ -732,8 +832,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/parse-json@2.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fparse-json.git</purl>
+      <purl>pkg:npm/parse-json@2.2.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/parse-json/-/parse-json-2.2.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/parse-json/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -748,7 +852,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|path-exists@2.1.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|path-exists@2.1.0">
       <author>Sindre Sorhus</author>
       <name>path-exists</name>
       <version>2.1.0</version>
@@ -758,8 +862,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/path-exists@2.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpath-exists.git</purl>
+      <purl>pkg:npm/path-exists@2.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/path-exists/-/path-exists-2.1.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/path-exists/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -774,7 +882,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|path-type@1.1.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|path-type@1.1.0">
       <author>Sindre Sorhus</author>
       <name>path-type</name>
       <version>1.1.0</version>
@@ -784,8 +892,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/path-type@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpath-type.git</purl>
+      <purl>pkg:npm/path-type@1.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/path-type/-/path-type-1.1.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/path-type/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -800,7 +912,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|pify@2.3.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pify@2.3.0">
       <author>Sindre Sorhus</author>
       <name>pify</name>
       <version>2.3.0</version>
@@ -810,8 +922,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/pify@2.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpify.git</purl>
+      <purl>pkg:npm/pify@2.3.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/pify/-/pify-2.3.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/pify/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -826,7 +942,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pinkie-promise@2.0.0">
       <author>Vsevolod Strukchinsky</author>
       <name>pinkie-promise</name>
       <version>2.0.0</version>
@@ -836,8 +952,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/pinkie-promise@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ffloatdrop%2Fpinkie-promise.git</purl>
+      <purl>pkg:npm/pinkie-promise@2.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/floatdrop/pinkie-promise/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -852,7 +972,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|pinkie@2.0.4">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pinkie@2.0.4">
       <author>Vsevolod Strukchinsky</author>
       <name>pinkie</name>
       <version>2.0.4</version>
@@ -862,8 +982,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/pinkie@2.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ffloatdrop%2Fpinkie.git</purl>
+      <purl>pkg:npm/pinkie@2.0.4</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/floatdrop/pinkie/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -878,7 +1002,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|pkg-conf@1.1.1">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pkg-conf@1.1.1">
       <author>Sindre Sorhus</author>
       <name>pkg-conf</name>
       <version>1.1.1</version>
@@ -888,8 +1012,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/pkg-conf@1.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpkg-conf.git</purl>
+      <purl>pkg:npm/pkg-conf@1.1.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/pkg-conf/-/pkg-conf-1.1.1.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/pkg-conf/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -904,7 +1032,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|read-pkg-up@1.0.1">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|read-pkg-up@1.0.1">
       <author>Sindre Sorhus</author>
       <name>read-pkg-up</name>
       <version>1.0.1</version>
@@ -914,8 +1042,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/read-pkg-up@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fread-pkg-up.git</purl>
+      <purl>pkg:npm/read-pkg-up@1.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/read-pkg-up/-/read-pkg-up-1.0.1.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/read-pkg-up/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -930,7 +1062,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|read-pkg@1.1.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|read-pkg@1.1.0">
       <author>Sindre Sorhus</author>
       <name>read-pkg</name>
       <version>1.1.0</version>
@@ -940,8 +1072,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/read-pkg@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fread-pkg.git</purl>
+      <purl>pkg:npm/read-pkg@1.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/read-pkg/-/read-pkg-1.1.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/read-pkg/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -956,7 +1092,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|require-main-filename@1.0.1">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|require-main-filename@1.0.1">
       <author>Ben Coe</author>
       <name>require-main-filename</name>
       <version>1.0.1</version>
@@ -966,8 +1102,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/require-main-filename@1.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fyargs%2Frequire-main-filename.git</purl>
+      <purl>pkg:npm/require-main-filename@1.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/require-main-filename/-/require-main-filename-1.0.1.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/yargs/require-main-filename/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -982,7 +1122,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|semver@5.1.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|semver@5.1.0">
       <name>semver</name>
       <version>5.1.0</version>
       <description>The semantic version parser used by npm.</description>
@@ -991,8 +1131,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/semver@5.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git</purl>
+      <purl>pkg:npm/semver@5.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/semver/-/semver-5.1.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-semver/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1007,7 +1151,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-correct@1.0.2">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-correct@1.0.2">
       <author>Kyle E. Mitchell</author>
       <name>spdx-correct</name>
       <version>1.0.2</version>
@@ -1017,8 +1161,12 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-correct@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fspdx-correct.js.git</purl>
+      <purl>pkg:npm/spdx-correct@1.0.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/spdx-correct/-/spdx-correct-1.0.2.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/kemitchell/spdx-correct.js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1033,7 +1181,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-exceptions@1.0.4">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-exceptions@1.0.4">
       <author>The Linux Foundation</author>
       <name>spdx-exceptions</name>
       <version>1.0.4</version>
@@ -1043,8 +1191,12 @@
           <id>CC-BY-3.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-exceptions@1.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fspdx-exceptions.json.git</purl>
+      <purl>pkg:npm/spdx-exceptions@1.0.4</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-1.0.4.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/kemitchell/spdx-exceptions.json/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1059,7 +1211,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2">
       <author>Kyle E. Mitchell</author>
       <name>spdx-expression-parse</name>
       <version>1.0.2</version>
@@ -1067,8 +1219,12 @@
       <licenses>
         <expression>(MIT AND CC-BY-3.0)</expression>
       </licenses>
-      <purl>pkg:npm/spdx-expression-parse@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fspdx-expression-parse.js.git</purl>
+      <purl>pkg:npm/spdx-expression-parse@1.0.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-1.0.2.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/kemitchell/spdx-expression-parse.js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1083,7 +1239,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-license-ids@1.2.0">
       <author>Shinnosuke Watanabe</author>
       <name>spdx-license-ids</name>
       <version>1.2.0</version>
@@ -1093,8 +1249,12 @@
           <id>Unlicense</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-license-ids@1.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fshinnn%2Fspdx-license-ids.git</purl>
+      <purl>pkg:npm/spdx-license-ids@1.2.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-1.2.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/shinnn/spdx-license-ids/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1109,7 +1269,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|string-width@1.0.1">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|string-width@1.0.1">
       <author>Sindre Sorhus</author>
       <name>string-width</name>
       <version>1.0.1</version>
@@ -1119,8 +1279,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/string-width@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fstring-width.git</purl>
+      <purl>pkg:npm/string-width@1.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/string-width/-/string-width-1.0.1.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/string-width/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1135,7 +1299,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|strip-ansi@3.0.1">
       <author>Sindre Sorhus</author>
       <name>strip-ansi</name>
       <version>3.0.1</version>
@@ -1145,8 +1309,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/strip-ansi@3.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git</purl>
+      <purl>pkg:npm/strip-ansi@3.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/strip-ansi/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1161,7 +1329,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|strip-bom@2.0.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|strip-bom@2.0.0">
       <author>Sindre Sorhus</author>
       <name>strip-bom</name>
       <version>2.0.0</version>
@@ -1171,8 +1339,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/strip-bom@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fstrip-bom.git</purl>
+      <purl>pkg:npm/strip-bom@2.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/strip-bom/-/strip-bom-2.0.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/strip-bom/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1187,7 +1359,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|symbol@0.2.1">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|symbol@0.2.1">
       <author>Sean McArthur</author>
       <name>symbol</name>
       <version>0.2.1</version>
@@ -1197,8 +1369,12 @@
           <name>MPLv2.0</name>
         </license>
       </licenses>
-      <purl>pkg:npm/symbol@0.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Fseanmonstar%2Fsymbol.git</purl>
+      <purl>pkg:npm/symbol@0.2.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/symbol/-/symbol-0.2.1.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/seanmonstar/symbol/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1213,7 +1389,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1">
       <author>Kyle E. Mitchell</author>
       <name>validate-npm-package-license</name>
       <version>3.0.1</version>
@@ -1223,8 +1399,12 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/validate-npm-package-license@3.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fvalidate-npm-package-license.js.git</purl>
+      <purl>pkg:npm/validate-npm-package-license@3.0.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.1.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/kemitchell/validate-npm-package-license.js/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1239,7 +1419,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|window-size@0.2.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|window-size@0.2.0">
       <author>Jon Schlinkert</author>
       <name>window-size</name>
       <version>0.2.0</version>
@@ -1249,8 +1429,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/window-size@0.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjonschlinkert%2Fwindow-size.git</purl>
+      <purl>pkg:npm/window-size@0.2.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/window-size/-/window-size-0.2.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/jonschlinkert/window-size/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1265,7 +1449,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|wrap-ansi@1.0.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|wrap-ansi@1.0.0">
       <author>Sindre Sorhus</author>
       <name>wrap-ansi</name>
       <version>1.0.0</version>
@@ -1275,8 +1459,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/wrap-ansi@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fwrap-ansi.git</purl>
+      <purl>pkg:npm/wrap-ansi@1.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/wrap-ansi/-/wrap-ansi-1.0.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/wrap-ansi/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1291,7 +1479,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|y18n@3.2.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|y18n@3.2.0">
       <author>Ben Coe</author>
       <name>y18n</name>
       <version>3.2.0</version>
@@ -1301,8 +1489,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/y18n@3.2.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fbcoe%2Fy18n.git</purl>
+      <purl>pkg:npm/y18n@3.2.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/y18n/-/y18n-3.2.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/bcoe/y18n/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1317,7 +1509,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|yargs-parser@2.1.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|yargs-parser@2.1.0">
       <author>Ben Coe</author>
       <name>yargs-parser</name>
       <version>2.1.0</version>
@@ -1327,8 +1519,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/yargs-parser@2.1.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fyargs%2Fyargs-parser.git</purl>
+      <purl>pkg:npm/yargs-parser@2.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/yargs-parser/-/yargs-parser-2.1.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/yargs/yargs-parser/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1343,7 +1539,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2|yargs@4.1.0">
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|yargs@4.1.0">
       <name>yargs</name>
       <version>4.1.0</version>
       <description>Light-weight option parsing with an argv hash. No optstrings attached.</description>
@@ -1352,8 +1548,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/yargs@4.1.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fbcoe%2Fyargs.git</purl>
+      <purl>pkg:npm/yargs@4.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>http://registry.npmjs.org/yargs/-/yargs-4.1.0.tgz</url>
+          <comment>as detected from PackageJson property "dist.tarball" and property "dist.shasum"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/bcoe/yargs/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1368,153 +1568,185 @@
         </reference>
       </externalReferences>
     </component>
+    <component type="library" bom-ref="demo-bundled-deps@0.0.0|is-obj@3.0.0">
+      <author>Sindre Sorhus</author>
+      <name>is-obj</name>
+      <version>3.0.0</version>
+      <description>Check if a value is an object</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/is-obj@3.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/is-obj/-/is-obj-3.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved" and property "integrity"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/is-obj/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/is-obj.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/is-obj#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
   </components>
   <dependencies>
-    <dependency ref="bundle-dependencies@1.0.2">
-      <dependency ref="bundle-dependencies@1.0.2|yargs@4.1.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|ansi-regex@2.0.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|builtin-modules@1.1.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|camelcase@2.1.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|cliui@3.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|wrap-ansi@1.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|code-point-at@1.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|decamelize@1.1.2">
-      <dependency ref="bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|error-ex@1.3.0">
-      <dependency ref="bundle-dependencies@1.0.2|is-arrayish@0.2.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"/>
-    <dependency ref="bundle-dependencies@1.0.2|find-up@1.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|path-exists@2.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
-    <dependency ref="bundle-dependencies@1.0.2|hosted-git-info@2.1.4"/>
-    <dependency ref="bundle-dependencies@1.0.2|invert-kv@1.0.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|is-arrayish@0.2.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|is-builtin-module@1.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|builtin-modules@1.1.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|is-utf8@0.2.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|lcid@1.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|invert-kv@1.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|load-json-file@1.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
-      <dependency ref="bundle-dependencies@1.0.2|parse-json@2.2.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|pify@2.3.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|strip-bom@2.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|lodash.assign@4.0.3">
-      <dependency ref="bundle-dependencies@1.0.2|lodash.keys@4.0.3"/>
-      <dependency ref="bundle-dependencies@1.0.2|lodash.rest@4.0.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|lodash.keys@4.0.3"/>
-    <dependency ref="bundle-dependencies@1.0.2|lodash.rest@4.0.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|normalize-package-data@2.3.5">
-      <dependency ref="bundle-dependencies@1.0.2|hosted-git-info@2.1.4"/>
-      <dependency ref="bundle-dependencies@1.0.2|is-builtin-module@1.0.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|semver@5.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|object-assign@4.0.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|os-locale@1.4.0">
-      <dependency ref="bundle-dependencies@1.0.2|lcid@1.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|parse-json@2.2.0">
-      <dependency ref="bundle-dependencies@1.0.2|error-ex@1.3.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|path-exists@2.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|path-type@1.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
-      <dependency ref="bundle-dependencies@1.0.2|pify@2.3.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|pify@2.3.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|pinkie@2.0.4"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|pinkie@2.0.4"/>
-    <dependency ref="bundle-dependencies@1.0.2|pkg-conf@1.1.1">
-      <dependency ref="bundle-dependencies@1.0.2|find-up@1.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|object-assign@4.0.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|read-pkg@1.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|symbol@0.2.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|read-pkg-up@1.0.1">
-      <dependency ref="bundle-dependencies@1.0.2|find-up@1.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|read-pkg@1.1.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|read-pkg@1.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|load-json-file@1.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|normalize-package-data@2.3.5"/>
-      <dependency ref="bundle-dependencies@1.0.2|path-type@1.1.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|require-main-filename@1.0.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|semver@5.1.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|spdx-correct@1.0.2">
-      <dependency ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"/>
-    <dependency ref="bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2">
-      <dependency ref="bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"/>
-      <dependency ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1">
-      <dependency ref="bundle-dependencies@1.0.2|code-point-at@1.0.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1">
-      <dependency ref="bundle-dependencies@1.0.2|ansi-regex@2.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|strip-bom@2.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|is-utf8@0.2.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|symbol@0.2.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1">
-      <dependency ref="bundle-dependencies@1.0.2|spdx-correct@1.0.2"/>
-      <dependency ref="bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|window-size@0.2.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|wrap-ansi@1.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|y18n@3.2.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|yargs-parser@2.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|camelcase@2.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|lodash.assign@4.0.3"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|yargs@4.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|camelcase@2.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|cliui@3.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|decamelize@1.1.2"/>
-      <dependency ref="bundle-dependencies@1.0.2|os-locale@1.4.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|pkg-conf@1.1.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|read-pkg-up@1.0.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|require-main-filename@1.0.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|window-size@0.2.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|y18n@3.2.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|yargs-parser@2.1.0"/>
-    </dependency>
     <dependency ref="demo-bundled-deps@0.0.0">
-      <dependency ref="bundle-dependencies@1.0.2"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2"/>
+      <dependency ref="demo-bundled-deps@0.0.0|is-obj@3.0.0"/>
     </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|yargs@4.1.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|ansi-regex@2.0.0"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|builtin-modules@1.1.1"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|camelcase@2.1.0"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|cliui@3.1.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|string-width@1.0.1"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|strip-ansi@3.0.1"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|wrap-ansi@1.0.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|code-point-at@1.0.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|decamelize@1.1.2">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|error-ex@1.3.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|is-arrayish@0.2.1"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|find-up@1.1.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|path-exists@2.1.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|hosted-git-info@2.1.4"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|invert-kv@1.0.0"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|is-arrayish@0.2.1"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|is-builtin-module@1.0.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|builtin-modules@1.1.1"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|is-utf8@0.2.1"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|lcid@1.0.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|invert-kv@1.0.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|load-json-file@1.1.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|parse-json@2.2.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pify@2.3.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|strip-bom@2.0.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|lodash.assign@4.0.3">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|lodash.keys@4.0.3"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|lodash.rest@4.0.1"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|lodash.keys@4.0.3"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|lodash.rest@4.0.1"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|normalize-package-data@2.3.5">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|hosted-git-info@2.1.4"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|is-builtin-module@1.0.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|semver@5.1.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|object-assign@4.0.1"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|os-locale@1.4.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|lcid@1.0.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|parse-json@2.2.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|error-ex@1.3.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|path-exists@2.1.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|path-type@1.1.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pify@2.3.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pify@2.3.0"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pinkie-promise@2.0.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pinkie@2.0.4"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pinkie@2.0.4"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pkg-conf@1.1.1">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|find-up@1.1.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|object-assign@4.0.1"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|read-pkg@1.1.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|symbol@0.2.1"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|read-pkg-up@1.0.1">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|find-up@1.1.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|read-pkg@1.1.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|read-pkg@1.1.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|load-json-file@1.1.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|normalize-package-data@2.3.5"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|path-type@1.1.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|require-main-filename@1.0.1"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|semver@5.1.0"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-correct@1.0.2">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|string-width@1.0.1">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|code-point-at@1.0.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|strip-ansi@3.0.1"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|strip-ansi@3.0.1">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|ansi-regex@2.0.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|strip-bom@2.0.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|is-utf8@0.2.1"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|symbol@0.2.1"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-correct@1.0.2"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|window-size@0.2.0"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|wrap-ansi@1.0.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|string-width@1.0.1"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|y18n@3.2.0"/>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|yargs-parser@2.1.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|camelcase@2.1.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|lodash.assign@4.0.3"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|yargs@4.1.0">
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|camelcase@2.1.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|cliui@3.1.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|decamelize@1.1.2"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|os-locale@1.4.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|pkg-conf@1.1.1"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|read-pkg-up@1.0.1"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|require-main-filename@1.0.1"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|string-width@1.0.1"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|window-size@0.2.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|y18n@3.2.0"/>
+      <dependency ref="demo-bundled-deps@0.0.0|bundle-dependencies@1.0.2|yargs-parser@2.1.0"/>
+    </dependency>
+    <dependency ref="demo-bundled-deps@0.0.0|is-obj@3.0.0"/>
   </dependencies>
 </bom>

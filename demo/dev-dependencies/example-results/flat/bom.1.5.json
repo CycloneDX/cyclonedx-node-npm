@@ -9,13 +9,13 @@
         {
           "type": "application",
           "name": "npm",
-          "version": "10.9.2"
+          "version": "11.4.1"
         },
         {
           "type": "library",
           "name": "cyclonedx-library",
           "group": "@cyclonedx",
-          "version": "7.1.0",
+          "version": "8.4.0",
           "author": "Jan Kowalleck",
           "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
           "licenses": [
@@ -47,7 +47,7 @@
           "type": "application",
           "name": "cyclonedx-npm",
           "group": "@cyclonedx",
-          "version": "2.1.0",
+          "version": "3.1.0",
           "author": "Jan Kowalleck",
           "description": "Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.",
           "licenses": [
@@ -126,7 +126,7 @@
       "name": "node",
       "group": "@types",
       "version": "20.14.10",
-      "bom-ref": "@types/node@20.14.10",
+      "bom-ref": "demo-dev-dependencies@0.0.0|@types/node@20.14.10",
       "description": "TypeScript definitions for node",
       "licenses": [
         {
@@ -180,9 +180,8 @@
       "name": "uuid",
       "group": "@types",
       "version": "8.3.4",
-      "bom-ref": "@types/uuid@8.3.4",
+      "bom-ref": "demo-dev-dependencies@0.0.0|@types/uuid@8.3.4",
       "description": "TypeScript definitions for uuid",
-      "scope": "optional",
       "licenses": [
         {
           "license": {
@@ -234,7 +233,7 @@
       "type": "library",
       "name": "undici-types",
       "version": "5.26.5",
-      "bom-ref": "undici-types@5.26.5",
+      "bom-ref": "demo-dev-dependencies@0.0.0|undici-types@5.26.5",
       "description": "A stand-alone types package for Undici",
       "licenses": [
         {
@@ -287,9 +286,8 @@
       "type": "library",
       "name": "uuid",
       "version": "8.3.2",
-      "bom-ref": "uuid@8.3.2",
+      "bom-ref": "demo-dev-dependencies@0.0.0|uuid@8.3.2",
       "description": "RFC4122 (v1, v4, and v5) UUIDs",
-      "scope": "optional",
       "licenses": [
         {
           "license": {
@@ -341,7 +339,7 @@
       "type": "library",
       "name": "uuidv4",
       "version": "6.2.13",
-      "bom-ref": "uuidv4@6.2.13",
+      "bom-ref": "demo-dev-dependencies@0.0.0|uuidv4@6.2.13",
       "description": "uuidv4 creates v4 UUIDs.",
       "scope": "optional",
       "licenses": [
@@ -390,34 +388,34 @@
   ],
   "dependencies": [
     {
-      "ref": "@types/node@20.14.10",
-      "dependsOn": [
-        "undici-types@5.26.5"
-      ]
-    },
-    {
-      "ref": "@types/uuid@8.3.4"
-    },
-    {
       "ref": "demo-dev-dependencies@0.0.0",
       "dependsOn": [
-        "@types/node@20.14.10",
-        "@types/uuid@8.3.4",
-        "uuid@8.3.2",
-        "uuidv4@6.2.13"
+        "demo-dev-dependencies@0.0.0|@types/node@20.14.10",
+        "demo-dev-dependencies@0.0.0|@types/uuid@8.3.4",
+        "demo-dev-dependencies@0.0.0|uuid@8.3.2",
+        "demo-dev-dependencies@0.0.0|uuidv4@6.2.13"
       ]
     },
     {
-      "ref": "undici-types@5.26.5"
-    },
-    {
-      "ref": "uuid@8.3.2"
-    },
-    {
-      "ref": "uuidv4@6.2.13",
+      "ref": "demo-dev-dependencies@0.0.0|@types/node@20.14.10",
       "dependsOn": [
-        "@types/uuid@8.3.4",
-        "uuid@8.3.2"
+        "demo-dev-dependencies@0.0.0|undici-types@5.26.5"
+      ]
+    },
+    {
+      "ref": "demo-dev-dependencies@0.0.0|@types/uuid@8.3.4"
+    },
+    {
+      "ref": "demo-dev-dependencies@0.0.0|undici-types@5.26.5"
+    },
+    {
+      "ref": "demo-dev-dependencies@0.0.0|uuid@8.3.2"
+    },
+    {
+      "ref": "demo-dev-dependencies@0.0.0|uuidv4@6.2.13",
+      "dependsOn": [
+        "demo-dev-dependencies@0.0.0|@types/uuid@8.3.4",
+        "demo-dev-dependencies@0.0.0|uuid@8.3.2"
       ]
     }
   ]

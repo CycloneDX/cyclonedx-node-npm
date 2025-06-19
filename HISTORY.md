@@ -6,6 +6,17 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* BREAKING Changes
+  * SBOM results might have slightly changed (via [#1307])
+* Fixed
+  * External dependency edge-cases are now properly nested (via [#1307])
+* Changed
+  * SBOM result's `purl` is prefixed with parent-component's one to ensure uniqueness (via [#1307])
+  * Uses only trusted data from `npm-ls` internally (via [#1307])  
+    No changes in data quality are expected.
+
+[#1307]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1307
+
 ## 3.1.0 - 2025-06-16
 
 * Changed
