@@ -17,6 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+/* c8 ignore start */
+
 /**
  * CDX properties' names - specific to this very tool.
  * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md | npm property taxonomy}
@@ -37,3 +39,5 @@ export const enum PropertyValueBool {
   True = 'true',
   False = 'false',
 }
+
+/* c8 ignore stop */
