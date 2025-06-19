@@ -20,7 +20,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 'use strict'
 
 import { createHash } from 'node:crypto'
-import { createReadStream, readdirSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs'
+import {createReadStream, existsSync, readdirSync, readFileSync, statSync, unlinkSync, writeFileSync} from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -34,29 +34,28 @@ const files = {}
 
 for (const dirDemoResE of readdirSync(dirDemoRes)) {
   const dirResults = join(dirDemoRes, dirDemoResE, 'CI_results')
-  try {
-    for (const dirResultsE of readdirSync(dirResults)) {
-      const fnameMatch = fnamePattern.exec(dirResultsE)
-      if (!fnameMatch) {
-        continue
-      }
-      let _t = files
-      if (!Object.hasOwn(_t, fnameMatch.groups.args)) {
-        _t[fnameMatch.groups.args] = {}
-      }
-      _t = _t[fnameMatch.groups.args]
-      if (!Object.hasOwn(_t, fnameMatch.groups.npm)) {
-        _t[fnameMatch.groups.npm] = {}
-      }
-      _t = _t[fnameMatch.groups.npm]
-      if (!Object.hasOwn(_t, fnameMatch.groups.os)) {
-        _t[fnameMatch.groups.os] = []
-      }
-      _t = _t[fnameMatch.groups.os]
-      _t.push(join(dirResults, dirResultsE))
-    }
-  } catch (e) {
+  if (!existsSync(dirResults) || !statSync(dirResults).isDirectory()) {
     continue
+  }
+  for (const dirResultsE of readdirSync(dirResults)) {
+    const fnameMatch = fnamePattern.exec(dirResultsE)
+    if (!fnameMatch) {
+      continue
+    }
+    let _t = files
+    if (!Object.hasOwn(_t, fnameMatch.groups.args)) {
+      _t[fnameMatch.groups.args] = {}
+    }
+    _t = _t[fnameMatch.groups.args]
+    if (!Object.hasOwn(_t, fnameMatch.groups.npm)) {
+      _t[fnameMatch.groups.npm] = {}
+    }
+    _t = _t[fnameMatch.groups.npm]
+    if (!Object.hasOwn(_t, fnameMatch.groups.os)) {
+      _t[fnameMatch.groups.os] = []
+    }
+    _t = _t[fnameMatch.groups.os]
+    _t.push(join(dirResults, dirResultsE))
   }
 }
 
@@ -73,7 +72,7 @@ for (const filesByAs of Object.values(files)) {
         }
         fileHashes.add(fileHash)
         console.info('KEEP:', fileHash, filePath)
-        fixupPaths(filePath)
+        await fixupPaths(filePath)
       }
     }
   }
@@ -102,7 +101,7 @@ function hashFile (fp) {
 async function fixupPaths (fp) {
   const fc = await readFileSync(fp, 'utf8')
   await writeFileSync(fp, fc
+    .replaceAll(':\\\\a\\\\cyclonedx-node-npm\\\\', ':\\\\...\\\\')
     .replaceAll('/Users/runner/work/cyclonedx-node-npm/', '/.../')
-    .replaceAll(':\\a\\cyclonedx-node-npm\\', ':\\...\\')
   )
 }
