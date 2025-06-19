@@ -45,7 +45,7 @@ describe('integration.cli.from-setups', () => {
       },
       {
         subject: 'flat',
-        args: [],
+        args: ['--flatten-components'],
         dummyProject: ['with-prepared']
       },
       {
