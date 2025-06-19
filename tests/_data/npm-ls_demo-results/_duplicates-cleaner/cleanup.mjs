@@ -20,7 +20,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 'use strict'
 
 import { createHash } from 'node:crypto'
-import {createReadStream, readdirSync, readFileSync, unlinkSync, writeFileSync} from 'node:fs'
+import { createReadStream, readdirSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -103,6 +103,6 @@ async function fixupPaths (fp) {
   const fc = await readFileSync(fp, 'utf8')
   await writeFileSync(fp, fc
     .replaceAll('/Users/runner/work/cyclonedx-node-npm/', '/.../')
-    .replaceAll(':\\a\\cyclonedx-node-npm\\', 'D:\\...\\')
+    .replaceAll(':\\a\\cyclonedx-node-npm\\', ':\\...\\')
   )
 }
