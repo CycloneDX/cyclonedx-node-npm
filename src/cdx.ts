@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-/* c8 ignore start */
+/* c8 ignore start -- const enums are not compiled to any code */
 
 /**
  * CDX properties' names - specific to this very tool.
