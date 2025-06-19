@@ -101,7 +101,8 @@ function hashFile (fp) {
 async function fixupPaths (fp) {
   const fc = await readFileSync(fp, 'utf8')
   await writeFileSync(fp, fc
-    .replaceAll(':\\\\a\\\\cyclonedx-node-npm\\\\', ':\\\\...\\\\')
-    .replaceAll('/Users/runner/work/cyclonedx-node-npm/', '/.../')
+    .replaceAll(':\\\\a\\\\cyclonedx-node-npm\\\\', ':\\\\...\\\\') // windows
+    .replaceAll('/Users/runner/work/cyclonedx-node-npm/', '/.../') // macos
+    .replaceAll('/home/runner/work/cyclonedx-node-npm/', '/.../') // linux
   )
 }
