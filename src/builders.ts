@@ -136,7 +136,7 @@ export class BomBuilder {
     )
   }
 
-  private fetchNpmLs(projectDir: string, process_: NodeJS.Process): any {
+  private fetchNpmLs (projectDir: string, process_: NodeJS.Process): any {
     const args: string[] = [
       'ls',
       // format as parsable json
@@ -206,12 +206,11 @@ export class BomBuilder {
     } catch (jsonParseError) {
       throw new Error(
         'failed to parse npm-ls response',
-        {cause: jsonParseError})
+        { cause: jsonParseError })
     }
   }
 
-
-  private buildFromNpmLs(data: any, npmVersion: string): Models.Bom {
+  private buildFromNpmLs (data: any, npmVersion: string): Models.Bom {
     this.console.info('INFO  | building BOM ...')
 
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- ack */
@@ -287,14 +286,14 @@ export class BomBuilder {
     // endregion components
 
     // region dependency graph
-    this.adjustNestedBomRefs(allComponents, pTree)
+    this.setNestedBomRefs(allComponents, pTree)
     this.makeDependencyGraph(allComponents, allPackages)
     // endregion dependency graph
 
     return bom
   }
 
-  private adjustNestedBomRefs (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref = ''):void {
+  private setNestedBomRefs (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref = ''): void {
     // prefix everything - also direct dependencies and such!
     // it could be that an inherited/outside dependency has the same bomRef otherwise ...
     for (const [p, cTree] of tree) {
@@ -309,7 +308,7 @@ export class BomBuilder {
         parts.push('@', component.version)
       }
       component.bomRef.value = parts.join('')
-      this.adjustNestedBomRefs(allComponents, cTree, `${component.bomRef.value}|`)
+      this.setNestedBomRefs(allComponents, cTree, `${component.bomRef.value}|`)
     }
   }
 
@@ -367,7 +366,7 @@ export class BomBuilder {
   private * fetchLicenseEvidence (dirPath: string): Generator<Models.License> {
     const files = this.leGatherer.getFileAttachments(
       dirPath,
-      (error: Error): void => {
+      error => {
         /* c8 ignore next 2 */
         this.console.info(`INFO  | ${error.message}`)
         this.console.debug(`DEBUG | ${error.message} -`, error)
