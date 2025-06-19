@@ -136,89 +136,6 @@ export class BomBuilder {
     )
   }
 
-  buildFromNpmLs(data: any, npmVersion: string): Models.Bom {
-    this.console.info('INFO  | building BOM ...')
-
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- ack */
-    const rootPath = data.path
-    if (!isString(rootPath) || rootPath.length === 0) {
-      throw new Error(`unexpected path ${JSON.stringify(rootPath)}`)
-    }
-
-    const allPackages = this.gatherPackages(data)
-    const allComponents = new Map(iteratorMap(
-      allPackages,
-      ([p, packageData]) => [p, this.makeComponentWithPackageData(packageData, p)]
-    ))
-    /* eslint-disable-next-line @typescript-eslint/init-declarations -- ack */
-    let rootComponent
-    try {
-      rootComponent = this.makeComponentFromPackagePath(rootPath, this.metaComponentType)
-      allComponents.set(rootPath, rootComponent)
-    } catch (err) {
-      this.console.debug('DEBUG | failed make rootComponent, fallback to existing one.', err)
-      rootComponent = allComponents.get(rootPath)
-      if ( rootComponent === undefined) { throw new TypeError('missing rootComponent') }
-      rootComponent.type = this.metaComponentType
-    }
-
-    // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
-    /* eslint-disable @typescript-eslint/unbound-method -- ack */
-    const [relativePath, dirSep, dirSepRE] = rootPath.startsWith('/')
-      ? [path.posix.relative, '/', /\//g]
-      : [path.win32.relative, '\\', /\\/g]
-    /* eslint-enable @typescript-eslint/unbound-method */
-    allComponents.forEach((c, p) => {
-      c.purl = this.makePurl(c)
-      c.properties.add(new Models.Property(
-        PropertyNames.PackageInstallPath,
-    relativePath(rootPath, p).replace(dirSepRE, '/')
-        ))
-    })
-
-    const pTree = this.treeBuilder.fromPaths(rootPath,allComponents.keys(), dirSep)
-
-    const bom = new Models.Bom()
-
-    // region metadata
-    bom.metadata.component = rootComponent
-    bom.metadata.tools.components.add(new Models.Component(
-      Enums.ComponentType.Application, 'npm', {
-        version: npmVersion
-        // omit `group` and `externalReferences`, because we cannot be sure about the used tool's actual origin
-        // omit `hashes`, because unfortunately there is no agreed process of generating them
-      }))
-    for (const toolC of this.makeToolCs()) {
-      bom.metadata.tools.components.add(toolC)
-    }
-    if (!this.reproducible) {
-      bom.serialNumber = Utils.BomUtility.randomSerialNumber()
-      bom.metadata.timestamp = new Date()
-    }
-    // endregion metadata
-
-    // region components
-    if (this.flattenComponents) {
-      for (const c of allComponents.values()) {
-        if (c === rootComponent) { continue }
-        bom.components.add(c)
-      }
-    } else {
-      bom.components = this.nestComponents(allComponents, pTree)
-      bom.components.delete(rootComponent)
-      rootComponent.components.forEach(c => bom.components.add(c) )
-      rootComponent.components.clear()
-    }
-    // endregion components
-
-    // region dependency graph
-    this.bomrefComponents(allComponents, pTree)
-    this.makeDependencyGraph(allComponents, allPackages)
-    // endregion dependency graph
-
-    return bom
-  }
-
   private fetchNpmLs(projectDir: string, process_: NodeJS.Process): any {
     const args: string[] = [
       'ls',
@@ -291,6 +208,90 @@ export class BomBuilder {
         'failed to parse npm-ls response',
         {cause: jsonParseError})
     }
+  }
+
+
+  private buildFromNpmLs(data: any, npmVersion: string): Models.Bom {
+    this.console.info('INFO  | building BOM ...')
+
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- ack */
+    const rootPath = data.path
+    if (!isString(rootPath) || rootPath.length === 0) {
+      throw new Error(`unexpected path ${JSON.stringify(rootPath)}`)
+    }
+
+    const allPackages = this.gatherPackages(data)
+    const allComponents = new Map(iteratorMap(
+      allPackages,
+      ([p, packageData]) => [p, this.makeComponentWithPackageData(packageData, p)]
+    ))
+    /* eslint-disable-next-line @typescript-eslint/init-declarations -- ack */
+    let rootComponent
+    try {
+      rootComponent = this.makeComponentFromPackagePath(rootPath, this.metaComponentType)
+      allComponents.set(rootPath, rootComponent)
+    } catch (err) {
+      this.console.debug('DEBUG | failed make rootComponent, fallback to existing one.', err)
+      rootComponent = allComponents.get(rootPath)
+      if ( rootComponent === undefined) { throw new TypeError('missing rootComponent') }
+      rootComponent.type = this.metaComponentType
+    }
+
+    // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
+    /* eslint-disable @typescript-eslint/unbound-method -- ack */
+    const [relativePath, dirSep, dirSepRE] = rootPath.startsWith('/')
+      ? [path.posix.relative, '/', /\//g]
+      : [path.win32.relative, '\\', /\\/g]
+    /* eslint-enable @typescript-eslint/unbound-method */
+    allComponents.forEach((c, p) => {
+      c.purl = this.makePurl(c)
+      c.properties.add(new Models.Property(
+        PropertyNames.PackageInstallPath,
+        relativePath(rootPath, p).replace(dirSepRE, '/')
+      ))
+    })
+
+    const pTree = this.treeBuilder.fromPaths(rootPath,allComponents.keys(), dirSep)
+
+    const bom = new Models.Bom()
+
+    // region metadata
+    bom.metadata.component = rootComponent
+    bom.metadata.tools.components.add(new Models.Component(
+      Enums.ComponentType.Application, 'npm', {
+        version: npmVersion
+        // omit `group` and `externalReferences`, because we cannot be sure about the used tool's actual origin
+        // omit `hashes`, because unfortunately there is no agreed process of generating them
+      }))
+    for (const toolC of this.makeToolCs()) {
+      bom.metadata.tools.components.add(toolC)
+    }
+    if (!this.reproducible) {
+      bom.serialNumber = Utils.BomUtility.randomSerialNumber()
+      bom.metadata.timestamp = new Date()
+    }
+    // endregion metadata
+
+    // region components
+    if (this.flattenComponents) {
+      for (const c of allComponents.values()) {
+        if (c === rootComponent) { continue }
+        bom.components.add(c)
+      }
+    } else {
+      bom.components = this.nestComponents(allComponents, pTree)
+      bom.components.delete(rootComponent)
+      rootComponent.components.forEach(c => bom.components.add(c) )
+      rootComponent.components.clear()
+    }
+    // endregion components
+
+    // region dependency graph
+    this.bomrefComponents(allComponents, pTree)
+    this.makeDependencyGraph(allComponents, allPackages)
+    // endregion dependency graph
+
+    return bom
   }
 
   /* eslint-disable-next-line complexity -- ack */
