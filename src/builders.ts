@@ -23,12 +23,12 @@ import { existsSync } from 'node:fs'
 import path from 'node:path'
 
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
-import normalizePackageJson from 'normalize-package-data'
 
 import {
-  isString, iterableFilter, iterableMap,
-  loadJsonFile, setDifference,
-  structuredClonePolyfill,
+  isString,
+  iterableFilter, iterableMap,
+  loadJsonFile, normalizePackageManifest,
+  setDifference,
   tryRemoveSecretsFromUrl
 } from './_helpers'
 import { PropertyNames, PropertyValueBool } from './cdx'
@@ -384,27 +384,12 @@ export class BomBuilder {
     }
   }
 
-  private normalizePackageJson(data: any): normalizePackageJson.Package {
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
-    const dataN = structuredClonePolyfill(data)
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
-    normalizePackageJson(dataN as normalizePackageJson.Input /* add debug for warnings? */)
-
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,  @typescript-eslint/no-unsafe-member-access -- ack */
-    const version = data.version
-    if (isString(version)) {
-      // normalizer might have stripped version or sanitized it to SemVer -- we want the original
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
-      dataN.version = version.trim()
-    }
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-return -- ack */
-    return dataN
-  }
-
   private makeComponentFromPackagePath(ppath: PackagePath, type: Enums.ComponentType): Models.Component {
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
     const manifest = loadJsonFile(path.join(ppath, 'package.json'))
-    const component = this.componentBuilder.makeComponent(this.normalizePackageJson(manifest), type)
+    normalizePackageManifest(manifest)
+
+    const component = this.componentBuilder.makeComponent(manifest, type)
     if (component === undefined) {
       throw new TypeError('created no component')
     }
@@ -421,13 +406,13 @@ export class BomBuilder {
     }
 
     // region properties
-    /* eslint-disable @typescript-eslint/no-unsafe-member-access -- needed */
+
     if (manifest.private === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
       )
     }
-    /* eslint-enable @typescript-eslint/no-unsafe-member-access */
+
     // endregion properties
 
     return component
@@ -453,15 +438,15 @@ export class BomBuilder {
       }
     }
     if ( component === undefined ) {
-      component = this.componentBuilder.makeComponent(
-        this.normalizePackageJson({
-          name: data.name,
-          /* eslint-disable @typescript-eslint/no-unsafe-assignment -- ack */
-          version: data.version,
-          license: data.license
-          /* eslint-enable @typescript-eslint/no-unsafe-assignment */
-        }),
-        type)
+      const manifest = {
+        name: data.name,
+        /* eslint-disable @typescript-eslint/no-unsafe-assignment -- ack */
+        version: data.version,
+        license: data.license
+        /* eslint-enable @typescript-eslint/no-unsafe-assignment */
+      }
+      normalizePackageManifest(manifest)
+      component = this.componentBuilder.makeComponent(manifest, type)
     }
     if (component === undefined) {
       this.console.info('INFO  | creating DummyComponent for ', ppath)
@@ -571,12 +556,10 @@ export class BomBuilder {
     /* eslint-enable no-labels */
 
     for (const [packageJsonPath, cType] of packageJsonPaths) {
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
-      const packageData = loadJsonFile(packageJsonPath) ?? {}
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
-      normalizePackageJson(packageData as normalizePackageJson.Input /* add debug for warnings? */)
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
-      const toolC = this.componentBuilder.makeComponent(packageData as normalizePackageJson.Package, cType)
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
+      const packageData = loadJsonFile(packageJsonPath)
+      normalizePackageManifest(packageData)
+      const toolC = this.componentBuilder.makeComponent(packageData, cType)
       if (toolC !== undefined) {
         yield toolC
       }
