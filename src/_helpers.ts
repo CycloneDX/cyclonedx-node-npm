@@ -19,6 +19,8 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { readFileSync, writeSync } from 'node:fs'
 
+import normalizePackageData from 'normalize-package-data'
+
 export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
   ? structuredClone
   : function <T>(value: T): T {
@@ -94,3 +96,41 @@ export function versionCompare (a: Version, b: Version): CompareResult {
   return 0
 }
 // endregion version compare
+
+export function * iterableMap <I, R> (iter: Iterable<I>, func: (e: I) => R): Generator<R> {
+  for (const item of iter) {
+    yield func(item)
+  }
+}
+
+export function * iterableFilter <I> (iter: Iterable<I>, func: (e: I) => boolean): Generator<I> {
+  for (const item of iter) {
+    if (func(item)) {
+      yield item
+    }
+  }
+}
+
+/* eslint-disable @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call
+-- ack */
+/* @ts-expect-error TS2550 -- Set.difference() exists in node since node2024 */
+export const setDifference: <I>(s1: Set<I>, s2: Set<any>) => Set<I> = typeof Set.prototype.difference === 'function'
+  /* @ts-expect-error TS2550 */
+  ? (s1, s2) => s1.difference(s2)
+  : (s1, s2) => new Set(iterableFilter(s1, (i) => !s2.has(i)) )
+/* eslint-enable @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call */
+
+
+export function normalizePackageManifest (data: any): asserts data is normalizePackageData.Package {
+  /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access -- ack*/
+  const oVersion = data.version
+
+  /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
+  normalizePackageData(data as normalizePackageData.Input /* add debug for warnings? */)
+
+  if (isString(oVersion)) {
+    // normalizer might have stripped version or sanitized it to SemVer -- we want the original
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
+    data.version = oVersion.trim()
+  }
+}

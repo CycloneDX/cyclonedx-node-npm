@@ -7,12 +7,12 @@
     "tools": [
       {
         "name": "npm",
-        "version": "10.9.2"
+        "version": "11.4.1"
       },
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "7.1.0",
+        "version": "8.4.0",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
@@ -34,7 +34,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-npm",
-        "version": "2.1.0",
+        "version": "3.1.0",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -92,7 +92,7 @@
       "type": "library",
       "name": "my-local-a",
       "version": "0.1.0",
-      "bom-ref": "my-local-a@0.1.0",
+      "bom-ref": "demo-workspaces@0.0.0|my-local-a@0.1.0",
       "description": "demo: my-local-a",
       "licenses": [
         {
@@ -124,7 +124,7 @@
       "type": "library",
       "name": "my-local-b-off",
       "version": "0.0.0",
-      "bom-ref": "my-local-b-off@0.0.0",
+      "bom-ref": "demo-workspaces@0.0.0|my-local-b-off@0.0.0",
       "description": "demo: my-local-b-off - a package with a different name than its dir",
       "licenses": [
         {
@@ -156,7 +156,7 @@
       "type": "library",
       "name": "my-local-c",
       "version": "0.23.42",
-      "bom-ref": "my-local-c@0.23.42",
+      "bom-ref": "demo-workspaces@0.0.0|my-local-c@0.23.42",
       "description": "demo: my-local-c",
       "licenses": [
         {
@@ -188,7 +188,7 @@
       "type": "library",
       "name": "my-local-e",
       "version": "0.1.0",
-      "bom-ref": "my-local-e@0.1.0",
+      "bom-ref": "demo-workspaces@0.0.0|my-local-e@0.1.0",
       "description": "demo: my-local-e - a standalone package that is not dependency of root nor any other workspace",
       "licenses": [
         {
@@ -221,30 +221,30 @@
     {
       "ref": "demo-workspaces@0.0.0",
       "dependsOn": [
-        "my-local-a@0.1.0",
-        "my-local-b-off@0.0.0",
-        "my-local-c@0.23.42",
-        "my-local-e@0.1.0"
+        "demo-workspaces@0.0.0|my-local-a@0.1.0",
+        "demo-workspaces@0.0.0|my-local-b-off@0.0.0",
+        "demo-workspaces@0.0.0|my-local-c@0.23.42",
+        "demo-workspaces@0.0.0|my-local-e@0.1.0"
       ]
     },
     {
-      "ref": "my-local-a@0.1.0",
+      "ref": "demo-workspaces@0.0.0|my-local-a@0.1.0",
       "dependsOn": [
-        "my-local-b-off@0.0.0"
+        "demo-workspaces@0.0.0|my-local-b-off@0.0.0"
       ]
     },
     {
-      "ref": "my-local-b-off@0.0.0"
+      "ref": "demo-workspaces@0.0.0|my-local-b-off@0.0.0"
     },
     {
-      "ref": "my-local-c@0.23.42",
+      "ref": "demo-workspaces@0.0.0|my-local-c@0.23.42",
       "dependsOn": [
-        "my-local-a@0.1.0",
-        "my-local-b-off@0.0.0"
+        "demo-workspaces@0.0.0|my-local-a@0.1.0",
+        "demo-workspaces@0.0.0|my-local-b-off@0.0.0"
       ]
     },
     {
-      "ref": "my-local-e@0.1.0"
+      "ref": "demo-workspaces@0.0.0|my-local-e@0.1.0"
     }
   ]
 }

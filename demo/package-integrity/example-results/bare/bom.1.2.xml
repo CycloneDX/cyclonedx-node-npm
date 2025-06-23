@@ -4,20 +4,20 @@
     <tools>
       <tool>
         <name>npm</name>
-        <version>10.9.2</version>
+        <version>11.4.1</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>7.1.0</version>
+        <version>8.4.0</version>
       </tool>
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-npm</name>
-        <version>2.1.0</version>
+        <version>3.1.0</version>
       </tool>
     </tools>
-    <component type="application" bom-ref="-/demo-package-integrity@-">
+    <component type="application" bom-ref="demo-package-integrity">
       <name>demo-package-integrity</name>
       <version/>
       <description>demo: package-integrity -- packages with different integrity information.</description>
@@ -39,7 +39,7 @@
     </component>
   </metadata>
   <components>
-    <component type="library" bom-ref="base64-js@1.0.1">
+    <component type="library" bom-ref="demo-package-integrity|base64-js@1.0.1">
       <author>T. Jameson Little</author>
       <name>base64-js</name>
       <version>1.0.1</version>
@@ -69,7 +69,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="buffer@5.4.3">
+    <component type="library" bom-ref="demo-package-integrity|buffer@5.4.3">
       <author>Feross Aboukhadijeh</author>
       <name>buffer</name>
       <version>5.4.3</version>
@@ -99,7 +99,7 @@
         </reference>
       </externalReferences>
       <components>
-        <component type="library" bom-ref="buffer@5.4.3|base64-js@1.3.1">
+        <component type="library" bom-ref="demo-package-integrity|buffer@5.4.3|base64-js@1.3.1">
           <author>T. Jameson Little</author>
           <name>base64-js</name>
           <version>1.3.1</version>
@@ -131,7 +131,7 @@
         </component>
       </components>
     </component>
-    <component type="library" bom-ref="ieee754@1.1.13">
+    <component type="library" bom-ref="demo-package-integrity|ieee754@1.1.13">
       <author>Feross Aboukhadijeh</author>
       <name>ieee754</name>
       <version>1.1.13</version>
@@ -161,7 +161,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="ignore@5.1.4">
+    <component type="library" bom-ref="demo-package-integrity|ignore@5.1.4">
       <author>kael</author>
       <name>ignore</name>
       <version>5.1.4</version>
@@ -193,18 +193,18 @@
     </component>
   </components>
   <dependencies>
-    <dependency ref="-/demo-package-integrity@-">
-      <dependency ref="base64-js@1.0.1"/>
-      <dependency ref="buffer@5.4.3"/>
-      <dependency ref="ignore@5.1.4"/>
+    <dependency ref="demo-package-integrity">
+      <dependency ref="demo-package-integrity|base64-js@1.0.1"/>
+      <dependency ref="demo-package-integrity|buffer@5.4.3"/>
+      <dependency ref="demo-package-integrity|ignore@5.1.4"/>
     </dependency>
-    <dependency ref="base64-js@1.0.1"/>
-    <dependency ref="buffer@5.4.3">
-      <dependency ref="buffer@5.4.3|base64-js@1.3.1"/>
-      <dependency ref="ieee754@1.1.13"/>
+    <dependency ref="demo-package-integrity|base64-js@1.0.1"/>
+    <dependency ref="demo-package-integrity|buffer@5.4.3">
+      <dependency ref="demo-package-integrity|buffer@5.4.3|base64-js@1.3.1"/>
+      <dependency ref="demo-package-integrity|ieee754@1.1.13"/>
     </dependency>
-    <dependency ref="buffer@5.4.3|base64-js@1.3.1"/>
-    <dependency ref="ieee754@1.1.13"/>
-    <dependency ref="ignore@5.1.4"/>
+    <dependency ref="demo-package-integrity|buffer@5.4.3|base64-js@1.3.1"/>
+    <dependency ref="demo-package-integrity|ieee754@1.1.13"/>
+    <dependency ref="demo-package-integrity|ignore@5.1.4"/>
   </dependencies>
 </bom>

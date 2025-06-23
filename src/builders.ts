@@ -23,16 +23,16 @@ import { existsSync } from 'node:fs'
 import path from 'node:path'
 
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
-import normalizePackageJson from 'normalize-package-data'
 
 import {
   isString,
-  loadJsonFile,
-  structuredClonePolyfill,
+  iterableFilter, iterableMap,
+  loadJsonFile, normalizePackageManifest,
+  setDifference,
   tryRemoveSecretsFromUrl
 } from './_helpers'
-import { PropertyNames, PropertyValueBool } from './cdx'
 import type { NpmRunner } from './npmRunner'
+import { PropertyNames, PropertyValueBool } from './properties'
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
@@ -50,8 +50,30 @@ interface BomBuilderOptions {
   workspaces?: BomBuilder['workspaces']
 }
 
-type cPath = string
-type AllComponents = Map<cPath, Models.Component>
+// is the dir/path in which a package resides
+type PackagePath = string
+interface PackageData {
+  name: string
+  /** !!! local packages might not have a version */
+  version?: any
+  funding?: any
+  license?: any
+  /** where was the package downloaded from? */
+  resolved?: string
+  /** kind-of checksum of that resolved version */
+  integrity?: string
+  /** is (transitive) optional */
+  optional?: boolean
+  /** is dev-dependency */
+  dev?: boolean
+  /*** is dev-dependency AND is (transitive) optional */
+  devOptional?: boolean
+  /** is not required by any dependency */
+  extraneous?: boolean
+  /** is bundled with another package */
+  inBundle?: boolean
+  dependencies: Set<PackagePath>
+}
 
 export class BomBuilder {
   npmRunner: NpmRunner
@@ -75,13 +97,14 @@ export class BomBuilder {
 
   console: Console
 
+
   /* eslint-disable-next-line @typescript-eslint/max-params -- ack */
   constructor (
     npmRunner: NpmRunner,
     componentBuilder: BomBuilder['componentBuilder'],
     treeBuilder: BomBuilder['treeBuilder'],
     purlFactory: BomBuilder['purlFactory'],
-    leFetcher: BomBuilder['leGatherer'],
+    leGatherer: BomBuilder['leGatherer'],
     options: BomBuilderOptions,
     console_: BomBuilder['console']
   ) {
@@ -89,7 +112,7 @@ export class BomBuilder {
     this.componentBuilder = componentBuilder
     this.treeBuilder = treeBuilder
     this.purlFactory = purlFactory
-    this.leGatherer = leFetcher
+    this.leGatherer = leGatherer
 
     this.ignoreNpmErrors = options.ignoreNpmErrors ?? false
     this.metaComponentType = options.metaComponentType ?? Enums.ComponentType.Library
@@ -187,261 +210,261 @@ export class BomBuilder {
     }
   }
 
-  buildFromNpmLs (data: any, npmVersion: string): Models.Bom {
+  private buildFromNpmLs (data: any, npmVersion: string): Models.Bom {
     this.console.info('INFO  | building BOM ...')
 
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- ack */
-    const dataPath = data.path
-    if(!isString(dataPath) || dataPath.length === 0)
-    {
-      throw new Error(`unexpected path ${JSON.stringify(dataPath)}`)
+    const rootPath = data.path
+    if (!isString(rootPath) || rootPath.length === 0) {
+      throw new Error(`unexpected path ${JSON.stringify(rootPath)}`)
     }
 
-    // region all components & dependencies
+    const allPackages = this.gatherPackages(data)
+    const allComponents = new Map(iterableMap(
+      allPackages,
+      ([p, packageData]) => [p, this.makeComponentWithPackageData(packageData, p)]
+    ))
+    /* eslint-disable-next-line @typescript-eslint/init-declarations -- ack */
+    let rootComponent
+    try {
+      rootComponent = this.makeComponentFromPackagePath(rootPath, this.metaComponentType)
+      allComponents.set(rootPath, rootComponent)
+    } catch (err) {
+      this.console.debug('DEBUG | failed make rootComponent, fallback to existing one.', err)
+      rootComponent = allComponents.get(rootPath)
+      if ( rootComponent === undefined) { throw new TypeError('missing rootComponent') }
+      rootComponent.type = this.metaComponentType
+    }
 
-    /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
-     * as we need to enforce a proper root component to enable all features of SBOM */
-    const rootComponent: Models.Component = this.makeComponent(data, this.metaComponentType) ||
-      new DummyComponent(this.metaComponentType, 'RootComponent')
-    const allComponents: AllComponents = new Map([[dataPath, rootComponent]])
-    this.gatherDependencies(allComponents, data, rootComponent.dependencies)
-    this.finalizePathProperties(dataPath, allComponents.values())
+    // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
+    /* eslint-disable @typescript-eslint/unbound-method -- ack */
+    const [relativePath, dirSep, dirSepRE] = rootPath.startsWith('/')
+      ? [path.posix.relative, '/', /\//g]
+      : [path.win32.relative, '\\', /\\/g]
+    /* eslint-enable @typescript-eslint/unbound-method */
+    allComponents.forEach((c, p) => {
+      c.purl = this.makePurl(c)
+      c.properties.add(new Models.Property(
+        PropertyNames.PackageInstallPath,
+        relativePath(rootPath, p).replace(dirSepRE, '/')
+      ))
+    })
 
-    // endregion all components & dependencies
+    const pTree = this.treeBuilder.fromPaths(rootPath,allComponents.keys(), dirSep)
 
     const bom = new Models.Bom()
 
     // region metadata
-
     bom.metadata.component = rootComponent
-
     bom.metadata.tools.components.add(new Models.Component(
       Enums.ComponentType.Application, 'npm', {
         version: npmVersion
-      // omit `group` and `externalReferences`, because we cannot be sure about the used tool's actual origin
-      // omit `hashes`, because unfortunately there is no agreed process of generating them
+        // omit `group` and `externalReferences`, because we cannot be sure about the used tool's actual origin
+        // omit `hashes`, because unfortunately there is no agreed process of generating them
       }))
     for (const toolC of this.makeToolCs()) {
       bom.metadata.tools.components.add(toolC)
     }
-
     if (!this.reproducible) {
       bom.serialNumber = Utils.BomUtility.randomSerialNumber()
       bom.metadata.timestamp = new Date()
     }
-
     // endregion metadata
 
     // region components
-
-    bom.components = this.nestComponents(
-      // remove rootComponent - so the elements that are nested below it are just returned.
-      new Map(Array.from(allComponents.entries()).filter(([, c]) => c !== rootComponent)),
-      this.treeBuilder.fromPaths(
-        new Set(allComponents.keys()),
-        // do not depend on `path.sep` -- this would be runtime-dependent, not input-dependent
-        dataPath.startsWith('/') ? '/' : '\\'
-      )
-    )
-    bom.components.forEach(c => { this.adjustNestedBomRefs(c, '') })
-    rootComponent.components.clear()
-
     if (this.flattenComponents) {
-      for (const component of allComponents.values()) {
-        component.components.clear()
-        if (component !== rootComponent) {
-          bom.components.add(component)
-        }
+      for (const c of allComponents.values()) {
+        if (c === rootComponent) { continue }
+        bom.components.add(c)
       }
+    } else {
+      bom.components = this.nestComponents(allComponents, pTree)
+      bom.components.delete(rootComponent)
+      rootComponent.components.forEach(c => bom.components.add(c) )
+      rootComponent.components.clear()
     }
-
     // endregion components
+
+    // region dependency graph
+    this.setNestedBomRefs(allComponents, pTree)
+    this.makeDependencyGraph(allComponents, allPackages)
+    // endregion dependency graph
 
     return bom
   }
 
-  private adjustNestedBomRefs (component: Models.Component, pref: string): void {
-    if (component.bomRef.value === undefined) {
-      return
+  private setNestedBomRefs (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref = ''): void {
+    // prefix everything - also direct dependencies and such!
+    // it could be that an inherited/outside dependency has the same bomRef otherwise ...
+    for (const [p, cTree] of tree) {
+      const component = allComponents.get(p)
+      if (component === undefined) { throw new TypeError(`missing component for ${p}`) }
+      const parts = [pref]
+      if (component.group !== undefined && component.group.length > 0) {
+        parts.push(component.group, '/')
+      }
+      parts.push(component.name)
+      if (component.version !== undefined && component.version.length > 0) {
+        parts.push('@', component.version)
+      }
+      component.bomRef.value = parts.join('')
+      this.setNestedBomRefs(allComponents, cTree, `${component.bomRef.value}|`)
     }
-    component.bomRef.value = pref + component.bomRef.value
-    const fill = component.bomRef.value + '|'
-    component.components.forEach(c => { this.adjustNestedBomRefs(c, fill) })
   }
 
-  private nestComponents (allComponents: AllComponents, tree: PTree): Models.ComponentRepository {
+  private nestComponents (allComponents: Map<PackagePath, Models.Component>, tree: PTree): Models.ComponentRepository {
     const children = new Models.ComponentRepository()
     for (const [p, pTree] of tree) {
       const component = allComponents.get(p)
-      const components = this.nestComponents(allComponents, pTree)
-      if (component === undefined) {
-        components.forEach(c => children.add(c))
-      } else {
-        component.components = components
-        children.add(component)
-      }
+      if (component === undefined) { throw new TypeError(`missing component for ${p}`)}
+      component.components = this.nestComponents(allComponents, pTree)
+      children.add(component)
     }
     return children
   }
 
-  private gatherDependencies (allComponents: AllComponents, data: NonNullable<any>, directDepRefs: Set<Models.BomRef>): void {
-    /* One and the same component may appear multiple times in the tree,
-     * but only one occurrence has all the direct dependencies.
-     * So we work only on the one `data` that actually has dependencies.
-     */
-    /* One and the same component may appear multiple times in the tree,
-     * but only the most top-level has a complete set with all `dependencies` *and* `resolved`.
-     * This detail might cause implementation changes: run over the top level first, then go into nested dependencies.
-     */
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-argument -- ack */
-    for (const [depName, depData] of Object.entries(data.dependencies ?? {}) as Iterable<[string, NonNullable<any>]>) {
-      if (depData === null || typeof depData !== 'object') {
-        // cannot build
-        this.console.debug('DEBUG | skip malformed component %j in %j', depName, depData)
-        continue // for-loop
+  /* eslint-disable-next-line complexity -- ack */
+  private gatherPackages(data: any): Map<PackagePath, PackageData> {
+    const packages = new Map<PackagePath, PackageData>()
+    const todo: Array<typeof data> = [data]
+    let w: any = undefined
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
+    while ((w = todo.shift()) !== undefined) {
+      /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- ack */
+      const wpath = w.path
+      if (!isString(wpath)) { continue }
+      let d: PackageData | undefined = packages.get(wpath)
+      if (d === undefined) {
+        packages.set(wpath, d = {
+          name: w.name,
+          dependencies: new Set<PackagePath>()
+        })
       }
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access -- ack */
-      const depPath = depData.path
-      if (!isString(depPath) || depPath.length === 0) {
-        // might be an optional dependency that was not installed
-        // skip, as it was not installed anyway
-        this.console.debug('DEBUG | skip missing component %j in %j', depName, depPath)
-        continue // for-loop
+      d.version ??= w.version
+      d.license ??= w.license
+      d.resolved ??= w.resolved
+      d.integrity ??= w.integrity
+      d.inBundle ??= w.inBundle
+      d.extraneous ??= w.extraneous
+      d.optional ??= w.optional
+      d.devOptional ??= w.devOptional
+      d.dev ??= w.dev
+      // `dependencies` might be missing to prevent circles...
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- ack */
+      const dependencies: Array<typeof data> = Object.values(w.dependencies ?? {})
+      for (const { path: depPath } of dependencies) {
+        if (!isString(depPath)) { continue }
+        d.dependencies.add(depPath)
       }
-
-      let dep = allComponents.get(depPath)
-      if (dep === undefined) {
-        const _dep = this.makeComponent(depData)
-        if (_dep === false) {
-          // shall be skipped
-          this.console.debug('DEBUG | skip impossible component %j in %j', depName, depPath)
-          continue // for-loop
-        }
-        dep = _dep ??
-          new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${depName}`)
-        if (dep instanceof DummyComponent) {
-          this.console.warn('WARN  | InterferedDependency %j in %j', depName, depPath)
-        } else {
-          this.console.debug('DEBUG | built component %j in %j: %j', depName, depPath, dep)
-        }
-        this.console.info('INFO  | add component for %j in %j', depName, depPath)
-        allComponents.set(depPath, dep)
-      }
-      directDepRefs.add(dep.bomRef)
-
-      this.gatherDependencies(allComponents, depData, dep.dependencies)
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- fp */
+      todo.push(...dependencies)
+      /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
     }
+    return packages
   }
 
-  /**
-   * Some combinations/versions of `npm-install`/`npm-ls` are insufficient,
-   * they fail to load package details or miss details.
-   * So here is a poly-fill that loads ALL the package's data.
-   */
-  private enhancedPackageData<T>(data: T & { path: string }): T {
-    if (!path.isAbsolute(data.path)) {
-      this.console.debug('DEBUG | skip loading package manifest in %j', data.path)
-      return data
-    }
-    const packageJsonPath = path.join(data.path, 'package.json')
-    try {
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- false-positive */
-      return Object.assign(
-        loadJsonFile(packageJsonPath) ?? {},
-        data
-      ) as T
-    } catch (err) {
-      this.console.debug('DEBUG | failed loading package manifest %j: %s', packageJsonPath, err)
-      return data
-    }
-  }
-
-  /**
-   * Ignore pattern for `resolved`.
-   * - ignore: well, just ignore it ... i guess.
-   * - file: local dist cannot be shipped and therefore should be ignored.
-   */
-  private readonly resolvedRE_ignore = /^(?:ignore|file):/i
-
-  /* eslint-disable-next-line complexity -- ack*/
-  private makeComponent (data: any & { path: string }, type?: Enums.ComponentType): Models.Component | false | undefined {
-    /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- needed */
-
-    const isOptional = data.optional === true
-    if (isOptional && this.omitDependencyTypes.has('optional')) {
-      this.console.debug('DEBUG | omit optional component: %j %j', data.name, data._id)
-      return false
-    }
-
-    const isDev = data.dev === true
-    if (isDev && this.omitDependencyTypes.has('dev')) {
-      this.console.debug('DEBUG | omit dev component: %j %j', data.name, data._id)
-      return false
-    }
-
-    // attention: `data.devOptional` are not to be skipped with devs, since they are still required by optionals.
-    const isDevOptional = data.devOptional === true
-    if (isDevOptional && this.omitDependencyTypes.has('dev') && this.omitDependencyTypes.has('optional')) {
-      this.console.debug('DEBUG | omit devOptional component: %j %j', data.name, data._id)
-      return false
-    }
-
-    // work with a deep copy, because `normalizePackageJson()` might modify the data
-    let _dataC = structuredClonePolyfill(data)
-    if (!this.packageLockOnly) {
-      _dataC = this.enhancedPackageData(_dataC)
-    }
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
-    normalizePackageJson(_dataC as normalizePackageJson.Input /* add debug for warnings? */)
-    // region fix normalizations
-    if (isString(data.version)) {
-      // allow non-SemVer strings
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-call -- ack */
-      _dataC.version = data.version.trim()
-    }
-    // endregion fix normalizations
-
-    const component = this.componentBuilder.makeComponent(
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
-      _dataC as normalizePackageJson.Package,
-      type
+  private * fetchLicenseEvidence (dirPath: string): Generator<Models.License> {
+    const files = this.leGatherer.getFileAttachments(
+      dirPath,
+      error => {
+        /* c8 ignore next 2 */
+        this.console.info(`INFO  | ${error.message}`)
+        this.console.debug(`DEBUG | ${error.message} -`, error)
+      }
     )
+    try {
+      for (const {file, text} of files) {
+        yield new Models.NamedLicense(`file: ${file}`, {text})
+      }
+    }
+    /* c8 ignore next 3 */
+    catch (e) {
+      // generator will not throw before first `.nest()` is called ...
+      this.console.warn('WARN  | collecting license evidence in', dirPath, 'failed:', e)
+    }
+  }
+
+  private makeComponentFromPackagePath(ppath: PackagePath, type: Enums.ComponentType): Models.Component {
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
+    const manifest = loadJsonFile(path.join(ppath, 'package.json'))
+    normalizePackageManifest(manifest)
+
+    const component = this.componentBuilder.makeComponent(manifest, type)
     if (component === undefined) {
-      this.console.debug('DEBUG | skip broken component: %j %j', data.name, data._id)
-      return undefined
+      throw new TypeError('created no component')
     }
 
     component.licenses.forEach(l => {
       l.acknowledgement = Enums.LicenseAcknowledgement.Declared
     })
 
-    if (this.gatherLicenseTexts) {
-      if (this.packageLockOnly) {
-        this.console.warn('WARN  | Adding license text is ignored (package-lock-only is configured!) for %j', data.name)
-      } else {
-        component.evidence = new Models.ComponentEvidence()
-        /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- false-positive */
-        for (const license of this.fetchLicenseEvidence(data.path)) {
-            // only create a evidence if a license attachment is found
-            component.evidence ??= new Models.ComponentEvidence();
-            component.evidence.licenses.add(license)
-        }
+    if ( this.gatherLicenseTexts ) {
+      component.evidence = new Models.ComponentEvidence()
+      for (const le of this.fetchLicenseEvidence(ppath) ) {
+        component.evidence.licenses.add(le)
       }
-    }
-
-    if (isOptional || isDevOptional) {
-      component.scope = Enums.ComponentScope.Optional
     }
 
     // region properties
 
-    if (isString(data.path)) {
+    if (manifest.private === true) {
       component.properties.add(
-        /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- false-positive */
-        new Models.Property(PropertyNames.PackageInstallPath, data.path)
+        new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
       )
     }
-    if (isDev || isDevOptional) {
+
+    // endregion properties
+
+    return component
+  }
+
+  /* eslint-disable-next-line complexity -- ack */
+  private makeComponentWithPackageData(data: PackageData, ppath: PackagePath, type: Enums.ComponentType = Enums.ComponentType.Library): Models.Component {
+    const isOptional = data.optional === true || data.devOptional === false
+    let isExcluded= false
+
+    let component: Models.Component | undefined = undefined
+    if (!this.packageLockOnly) {
+      try {
+        component = this.makeComponentFromPackagePath(ppath, type)
+      } catch (err: any) {
+        /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
+        if (err.code === 'ENOENT' && isOptional) {
+          // an optional dependency that was probably excluded
+          isExcluded = true
+        } else {
+          this.console.debug('DEBUG | creating DummyComponent for ', ppath, err)
+        }
+      }
+    }
+    if ( component === undefined ) {
+      const manifest = {
+        name: data.name,
+        /* eslint-disable @typescript-eslint/no-unsafe-assignment -- ack */
+        version: data.version,
+        license: data.license
+        /* eslint-enable @typescript-eslint/no-unsafe-assignment */
+      }
+      normalizePackageManifest(manifest)
+      component = this.componentBuilder.makeComponent(manifest, type)
+    }
+    if (component === undefined) {
+      this.console.info('INFO  | creating DummyComponent for ', ppath)
+      component = new DummyComponent(type, ppath)
+    } else {
+      component.licenses.forEach(l => {
+        l.acknowledgement = Enums.LicenseAcknowledgement.Declared
+      })
+    }
+
+    if (isExcluded) {
+      component.scope = Enums.ComponentScope.Excluded
+    } else if (isOptional) {
+      component.scope = Enums.ComponentScope.Optional
+    }
+
+    // region properties
+    if (data.dev === true || data.devOptional ===  true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
       )
@@ -451,54 +474,49 @@ export class BomBuilder {
         new Models.Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
       )
     }
-    if (data.private === true || _dataC.private === true) {
-      component.properties.add(
-        new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
-      )
-    }
     if (data.inBundle === true) {
       component.properties.add(
         new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
       )
     }
-
     // endregion properties
 
-    const resolved = data.resolved
-    if (isString(resolved) && !this.resolvedRE_ignore.test(resolved)) {
-      const hashes = new Models.HashDictionary()
-      const integrity = data.integrity
-      if (isString(integrity)) {
-        try {
-          hashes.set(...Utils.NpmjsUtility.parsePackageIntegrity(integrity))
-        } catch { /* pass */}
-      }
-      component.externalReferences.add(
-        new Models.ExternalReference(
-          tryRemoveSecretsFromUrl(resolved),
-          Enums.ExternalReferenceType.Distribution,
-          {
-            hashes,
-            comment: 'as detected from npm-ls property "resolved"' +
-              (hashes.size > 0 ? ' and property "integrity"' : '')
-          }
-        )
-      )
+    // region resolved
+    const rref = this.makeExtRefDistFromPachageData(data)
+    if ( rref !== undefined ) {
+      component.externalReferences.add(rref)
     }
-
-    /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
-
-    // even private packages may have a PURL for identification
-    component.purl = this.makePurl(component)
-
-    /* eslint-disable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing
-       -- since empty-string handling is needed */
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access -- ack */
-    component.bomRef.value = (isString(data._id) ? data._id : undefined) ||
-      `${component.group || '-'}/${component.name}@${component.version || '-'}`
-    /* eslint-enable @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing */
+    // endregion resolved
 
     return component
+  }
+
+  /**
+   * Ignore pattern for `resolved`.
+   * - ignore: well, just ignore it ... i guess.
+   * - file: local dist cannot be shipped and therefore should be ignored.
+   */
+  private readonly resolvedRE_ignore = /^(?:ignore|file):/i
+
+  private makeExtRefDistFromPachageData (data: PackageData): Models.ExternalReference | undefined {
+    const { resolved, integrity } = data
+    if (!isString(resolved) || this.resolvedRE_ignore.test(resolved)) {
+      return undefined
+    }
+    const rref = new Models.ExternalReference(
+      tryRemoveSecretsFromUrl(resolved),
+      Enums.ExternalReferenceType.Distribution,
+      { comment: 'as detected from npm-ls property "resolved"' }
+    )
+    if (isString(integrity)) {
+      try {
+        // actually not the hash of the file, but more of an integrity-check -- lets use it anyway.
+        // see https://blog.npmjs.org/post/172999548390/new-pgp-machinery
+        rref.hashes.set(...Utils.NpmjsUtility.parsePackageIntegrity(integrity))
+        rref.comment += ' and property "integrity"'
+      } catch { /* pass */ }
+    }
+    return rref
   }
 
   private makePurl (component: Models.Component): ReturnType<BomBuilder['purlFactory']['makeFromComponent']> {
@@ -513,31 +531,6 @@ export class BomBuilder {
     }
 
     return purl
-  }
-
-  private finalizePathProperties (rootPath: any, components: IterableIterator<Models.Component>): void {
-    if (!isString(rootPath) || rootPath === '') {
-      return
-    }
-    /* eslint-disable @typescript-eslint/unbound-method -- needed */
-    // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
-    const [relativePath, dirSepRE] = rootPath.startsWith('/')
-      ? [path.posix.relative, /\//g]
-      : [path.win32.relative, /\\/g]
-    /* eslint-enable @typescript-eslint/unbound-method */
-    for (const component of components) {
-      for (const property of component.properties) {
-        /* eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison -- false positive */
-        if (property.name !== PropertyNames.PackageInstallPath) {
-          continue
-        }
-        if (property.value === '') {
-          component.properties.delete(property)
-          continue
-        }
-        property.value = relativePath(rootPath, property.value).replace(dirSepRE, '/')
-      }
-    }
   }
 
   private * makeToolCs (): Generator<Models.Component> {
@@ -563,42 +556,32 @@ export class BomBuilder {
     /* eslint-enable no-labels */
 
     for (const [packageJsonPath, cType] of packageJsonPaths) {
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
-      const packageData = loadJsonFile(packageJsonPath) ?? {}
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
-      normalizePackageJson(packageData as normalizePackageJson.Input /* add debug for warnings? */)
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
-      const toolC = this.componentBuilder.makeComponent(packageData  as normalizePackageJson.Package, cType)
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
+      const packageData = loadJsonFile(packageJsonPath)
+      normalizePackageManifest(packageData)
+      const toolC = this.componentBuilder.makeComponent(packageData, cType)
       if (toolC !== undefined) {
         yield toolC
       }
     }
   }
 
-  private * fetchLicenseEvidence (dirPath: string): Generator<Models.License> {
-    const files = this.leGatherer.getFileAttachments(
-      dirPath,
-      (error: Error): void => {
-        /* c8 ignore next 2 */
-        this.console.info(`INFO  | ${error.message}`)
-        this.console.debug(`DEBUG | ${error.message} -`, error)
+  private makeDependencyGraph (allComponents: Map<PackagePath, Models.Component>, allPackages: Map<PackagePath, PackageData>): void {
+    for (const [p, comp] of allComponents) {
+      const pkg = allPackages.get(p)
+      if (pkg === undefined) { throw new TypeError(`missing pkg for ${p}`) }
+      for (const depPkg of pkg.dependencies) {
+        const depComp = allComponents.get(depPkg)
+        if (depComp === undefined) { throw new TypeError(`missing depComp for ${depPkg}`) }
+        comp.dependencies.add(depComp.bomRef)
       }
-    )
-    try {
-      for (const {file, text} of files) {
-        yield new Models.NamedLicense(`file: ${file}`, {text})
-      }
-    }
-    /* c8 ignore next 3 */
-    catch (e) {
-      // generator will not throw before first `.nest()` is called ...
-      this.console.warn('WARN  | collecting license evidence in', dirPath, 'failed:', e)
     }
   }
+
 }
 
 class DummyComponent extends Models.Component {
-  constructor (type: Models.Component['type'], name: Models.Component['name']) {
+  constructor(type: Models.Component['type'], name: Models.Component['name']) {
     super(type, `DummyComponent.${name}`, {
       bomRef: `DummyComponent.${name}`,
       description: `This is a dummy component "${name}" that fills the gap where the actual built failed.`
@@ -606,20 +589,29 @@ class DummyComponent extends Models.Component {
   }
 }
 
-type PTree = Map<string, PTree>
+type PTree = Map<PackagePath, PTree>
 
 export class TreeBuilder {
-  fromPaths (paths: Set<string>, dirSeparator: string): PTree {
-    const tree: PTree = new Map(Array.from(
-      paths,
-        p => [p + dirSeparator, new Map<string, PTree>()]))
-    this.nestPT(tree)
+  fromPaths (root: PackagePath, paths: Iterable<PackagePath>, dirSeparator: string): PTree {
+    root += dirSeparator
+    const upaths = new Set<PackagePath>(iterableMap(paths, p => `${p}${dirSeparator}`))
+    const outs = new Set<PackagePath>(iterableFilter(upaths, p => !p.startsWith(root)))
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
+    const inTree: PTree = new Map(iterableMap(setDifference(upaths, outs), p => [p, new Map()]))
+    this.nestPT(inTree)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
+    const outTree: PTree = new Map(iterableMap(outs, p => [p, new Map()]))
+    this.nestPT(outTree)
+    const tree: PTree = new Map()
+    outTree.forEach((v,k) => { tree.set(k, v) } )
+    inTree.forEach((v,k) => { tree.set(k, v) })
     this.renderPR(tree, '')
     return tree
   }
 
-  private renderPR (tree: PTree, pref: string): void {
-    for (const [p, pTree] of [...tree.entries()]) {
+  private renderPR (tree: PTree, pref: PackagePath): void {
+    // work with a copy of the tree, as we will modify it on the go
+    for (const [p, pTree] of [...tree]) {
       tree.delete(p)
       const pFull = pref + p
       this.renderPR(pTree, pFull)
@@ -627,16 +619,15 @@ export class TreeBuilder {
     }
   }
 
-  private nestPT (tree: PTree): void {
+  private nestPT(tree: PTree): void {
     if (tree.size < 2) {
       // nothing to compare ...
       return
     }
-    for (const [a, aTree] of tree) {
-      for (const [b, bTree] of tree) {
-        if (a === b) {
-          continue
-        }
+    const treeI = [...tree]
+    for (const [a, aTree] of treeI) {
+      for (const [b, bTree] of treeI) {
+        if (a === b) { continue }
         if (b.startsWith(a)) {
           aTree.set(b.slice(a.length), bTree)
           tree.delete(b)

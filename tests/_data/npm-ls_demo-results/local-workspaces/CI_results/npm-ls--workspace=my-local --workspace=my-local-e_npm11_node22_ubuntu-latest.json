@@ -10,7 +10,7 @@
   ],
   "_id": "demo-workspaces@0.0.0",
   "extraneous": false,
-  "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project",
+  "path": "/.../cyclonedx-node-npm/demo/local-workspaces/project",
   "_dependencies": {
     "my-local-a": "*"
   },
@@ -25,7 +25,7 @@
       "license": "Apache-2.0",
       "_id": "my-local-e@0.1.0",
       "extraneous": false,
-      "path": "/home/runner/work/cyclonedx-node-npm/cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-e",
+      "path": "/.../cyclonedx-node-npm/demo/local-workspaces/project/node_modules/my-local-e",
       "_dependencies": {},
       "devDependencies": {},
       "peerDependencies": {}

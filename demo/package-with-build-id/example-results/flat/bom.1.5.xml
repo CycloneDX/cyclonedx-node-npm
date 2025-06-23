@@ -5,13 +5,13 @@
       <components>
         <component type="application">
           <name>npm</name>
-          <version>10.9.2</version>
+          <version>11.4.1</version>
         </component>
         <component type="library">
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>8.4.0</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -37,7 +37,7 @@
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-npm</name>
-          <version>2.1.0</version>
+          <version>3.1.0</version>
           <description>Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.</description>
           <licenses>
             <license>

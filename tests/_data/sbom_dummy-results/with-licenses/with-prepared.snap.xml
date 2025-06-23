@@ -61,7 +61,7 @@
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="@dummy-projects/with-prepared@-">
+    <component type="application" bom-ref="@dummy-projects/with-prepared">
       <group>@dummy-projects</group>
       <name>with-prepared</name>
       <purl>pkg:npm/%40dummy-projects/with-prepared</purl>
@@ -80,7 +80,7 @@
     </component>
   </metadata>
   <components>
-    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@7.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx</group>
       <name>cyclonedx-library</name>
@@ -126,7 +126,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="@db-ui/base@0.29.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@db-ui/base@0.29.2">
       <author>Maximilian Franzke</author>
       <group>@db-ui</group>
       <name>base</name>
@@ -168,7 +168,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="@isaacs/cliui@8.0.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@isaacs/cliui@8.0.2">
       <author>Ben Coe</author>
       <group>@isaacs</group>
       <name>cliui</name>
@@ -210,7 +210,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="@npmcli/agent@2.2.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@npmcli/agent@2.2.2">
       <author>GitHub Inc.</author>
       <group>@npmcli</group>
       <name>agent</name>
@@ -245,7 +245,7 @@
       </properties>
       <evidence/>
     </component>
-    <component type="library" bom-ref="@npmcli/fs@3.1.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@npmcli/fs@3.1.1">
       <author>GitHub Inc.</author>
       <group>@npmcli</group>
       <name>fs</name>
@@ -287,7 +287,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="@oozcitak/dom@1.15.10">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@oozcitak/dom@1.15.10">
       <author>Ozgur Ozcitak</author>
       <group>@oozcitak</group>
       <name>dom</name>
@@ -329,7 +329,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="@oozcitak/infra@1.0.8">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@oozcitak/infra@1.0.8">
       <author>Ozgur Ozcitak</author>
       <group>@oozcitak</group>
       <name>infra</name>
@@ -340,8 +340,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40oozcitak/infra@1.0.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Foozcitak%2Finfra.git</purl>
+      <purl>pkg:npm/%40oozcitak/infra@1.0.8</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@oozcitak/infra/-/infra-1.0.8.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/infra/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -367,7 +371,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="@oozcitak/url@1.0.4">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@oozcitak/url@1.0.4">
       <author>Ozgur Ozcitak</author>
       <group>@oozcitak</group>
       <name>url</name>
@@ -409,7 +413,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="@oozcitak/util@8.3.8">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@oozcitak/util@8.3.8">
       <author>Ozgur Ozcitak</author>
       <group>@oozcitak</group>
       <name>util</name>
@@ -420,8 +424,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40oozcitak/util@8.3.8?vcs_url=git%3A%2F%2Fgithub.com%2Foozcitak%2Futil.git</purl>
+      <purl>pkg:npm/%40oozcitak/util@8.3.8</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@oozcitak/util/-/util-8.3.8.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/util/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -447,7 +455,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="@pkgjs/parseargs@0.11.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@pkgjs/parseargs@0.11.0">
       <group>@pkgjs</group>
       <name>parseargs</name>
       <version>0.11.0</version>
@@ -488,7 +496,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="@types/node@20.14.10">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@types/node@20.14.10">
       <group>@types</group>
       <name>node</name>
       <version>20.14.10</version>
@@ -529,7 +537,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="@types/uuid@8.3.4">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@types/uuid@8.3.4">
       <group>@types</group>
       <name>uuid</name>
       <version>8.3.4</version>
@@ -570,7 +578,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="abbrev@2.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|abbrev@2.0.0">
       <author>GitHub Inc.</author>
       <name>abbrev</name>
       <version>2.0.0</version>
@@ -611,7 +619,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="agent-base@7.1.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|agent-base@7.1.3">
       <author>Nathan Rajlich</author>
       <name>agent-base</name>
       <version>7.1.3</version>
@@ -652,7 +660,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="aggregate-error@3.1.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|aggregate-error@3.1.0">
       <author>Sindre Sorhus</author>
       <name>aggregate-error</name>
       <version>3.1.0</version>
@@ -693,7 +701,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ajv-formats-draft2019@1.6.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1">
       <author>Carlo Quinonez</author>
       <name>ajv-formats-draft2019</name>
       <version>1.6.1</version>
@@ -734,7 +742,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ajv-formats@3.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ajv-formats@3.0.1">
       <author>Evgeny Poberezkin</author>
       <name>ajv-formats</name>
       <version>3.0.1</version>
@@ -775,7 +783,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ajv@8.17.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ajv@8.17.1">
       <author>Evgeny Poberezkin</author>
       <name>ajv</name>
       <version>8.17.1</version>
@@ -785,8 +793,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ajv@8.17.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fajv-validator%2Fajv.git</purl>
+      <purl>pkg:npm/ajv@8.17.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/ajv-validator/ajv/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -812,7 +824,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ansi-regex@6.1.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ansi-regex@6.1.0">
       <author>Sindre Sorhus</author>
       <name>ansi-regex</name>
       <version>6.1.0</version>
@@ -853,7 +865,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ansi-styles@6.2.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ansi-styles@6.2.1">
       <author>Sindre Sorhus</author>
       <name>ansi-styles</name>
       <version>6.2.1</version>
@@ -894,7 +906,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="argparse@1.0.10">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|argparse@1.0.10">
       <name>argparse</name>
       <version>1.0.10</version>
       <description>Very powerful CLI arguments parser. Native port of argparse - python's options parsing library</description>
@@ -926,7 +938,7 @@
         <property name="cdx:npm:package:path">node_modules/argparse</property>
       </properties>
       <components>
-        <component type="library" bom-ref="argparse@1.0.10|sprintf-js@1.0.3">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|argparse@1.0.10|sprintf-js@1.0.3">
           <author>Alexandru Marasteanu</author>
           <name>sprintf-js</name>
           <version>1.0.3</version>
@@ -977,7 +989,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="balanced-match@1.0.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|balanced-match@1.0.2">
       <author>Julian Gruber</author>
       <name>balanced-match</name>
       <version>1.0.2</version>
@@ -1018,7 +1030,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="base64-js@1.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|base64-js@1.0.1">
       <author>T. Jameson Little</author>
       <name>base64-js</name>
       <version>1.0.1</version>
@@ -1059,7 +1071,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="bindings@1.5.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|bindings@1.5.0">
       <author>Nathan Rajlich</author>
       <name>bindings</name>
       <version>1.5.0</version>
@@ -1100,7 +1112,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="bl@4.1.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|bl@4.1.0">
       <name>bl</name>
       <version>4.1.0</version>
       <description>Buffer List: collect buffers and access with a standard readable Buffer interface, streamable too!</description>
@@ -1140,7 +1152,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="brace-expansion@2.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|brace-expansion@2.0.1">
       <author>Julian Gruber</author>
       <name>brace-expansion</name>
       <version>2.0.1</version>
@@ -1181,7 +1193,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="buffer@5.7.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|buffer@5.7.1">
       <author>Feross Aboukhadijeh</author>
       <name>buffer</name>
       <version>5.7.1</version>
@@ -1191,8 +1203,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/buffer@5.7.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git</purl>
+      <purl>pkg:npm/buffer@5.7.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/feross/buffer/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -1210,7 +1226,7 @@
         <property name="cdx:npm:package:path">node_modules/buffer</property>
       </properties>
       <components>
-        <component type="library" bom-ref="buffer@5.7.1|base64-js@1.5.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|buffer@5.7.1|base64-js@1.5.1">
           <author>T. Jameson Little</author>
           <name>base64-js</name>
           <version>1.5.1</version>
@@ -1261,7 +1277,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="bundle-dependencies@1.0.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2">
       <author>Gajus Kuizinas</author>
       <name>bundle-dependencies</name>
       <version>1.0.2</version>
@@ -1294,7 +1310,7 @@
         <property name="cdx:npm:package:path">node_modules/bundle-dependencies</property>
       </properties>
       <components>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|ansi-regex@2.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|ansi-regex@2.0.0">
           <author>Sindre Sorhus</author>
           <name>ansi-regex</name>
           <version>2.0.0</version>
@@ -1338,7 +1354,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|builtin-modules@1.1.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|builtin-modules@1.1.1">
           <author>Sindre Sorhus</author>
           <name>builtin-modules</name>
           <version>1.1.1</version>
@@ -1382,7 +1398,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|camelcase@2.1.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|camelcase@2.1.0">
           <author>Sindre Sorhus</author>
           <name>camelcase</name>
           <version>2.1.0</version>
@@ -1426,7 +1442,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|cliui@3.1.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|cliui@3.1.0">
           <author>Ben Coe</author>
           <name>cliui</name>
           <version>3.1.0</version>
@@ -1470,7 +1486,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|code-point-at@1.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|code-point-at@1.0.0">
           <author>Sindre Sorhus</author>
           <name>code-point-at</name>
           <version>1.0.0</version>
@@ -1514,7 +1530,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|decamelize@1.1.2">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|decamelize@1.1.2">
           <author>Sindre Sorhus</author>
           <name>decamelize</name>
           <version>1.1.2</version>
@@ -1558,7 +1574,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|error-ex@1.3.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|error-ex@1.3.0">
           <name>error-ex</name>
           <version>1.3.0</version>
           <description>Easy error subclassing and stack customization</description>
@@ -1601,7 +1617,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|escape-string-regexp@1.0.5">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|escape-string-regexp@1.0.5">
           <author>Sindre Sorhus</author>
           <name>escape-string-regexp</name>
           <version>1.0.5</version>
@@ -1645,7 +1661,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|find-up@1.1.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|find-up@1.1.0">
           <author>Sindre Sorhus</author>
           <name>find-up</name>
           <version>1.1.0</version>
@@ -1689,7 +1705,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|graceful-fs@4.1.3">
           <name>graceful-fs</name>
           <version>4.1.3</version>
           <description>A drop-in replacement for fs, making various improvements.</description>
@@ -1732,7 +1748,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|hosted-git-info@2.1.4">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|hosted-git-info@2.1.4">
           <author>Rebecca Turner</author>
           <name>hosted-git-info</name>
           <version>2.1.4</version>
@@ -1776,7 +1792,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|invert-kv@1.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|invert-kv@1.0.0">
           <author>Sindre Sorhus</author>
           <name>invert-kv</name>
           <version>1.0.0</version>
@@ -1813,7 +1829,7 @@
           </properties>
           <evidence/>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|is-arrayish@0.2.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-arrayish@0.2.1">
           <author>Qix</author>
           <name>is-arrayish</name>
           <version>0.2.1</version>
@@ -1857,7 +1873,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|is-builtin-module@1.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-builtin-module@1.0.0">
           <author>Sindre Sorhus</author>
           <name>is-builtin-module</name>
           <version>1.0.0</version>
@@ -1901,7 +1917,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0">
           <author>Sindre Sorhus</author>
           <name>is-fullwidth-code-point</name>
           <version>1.0.0</version>
@@ -1945,7 +1961,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|is-utf8@0.2.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-utf8@0.2.1">
           <author>wayfind</author>
           <name>is-utf8</name>
           <version>0.2.1</version>
@@ -1989,7 +2005,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|lcid@1.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lcid@1.0.0">
           <author>Sindre Sorhus</author>
           <name>lcid</name>
           <version>1.0.0</version>
@@ -2033,7 +2049,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|load-json-file@1.1.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|load-json-file@1.1.0">
           <author>Sindre Sorhus</author>
           <name>load-json-file</name>
           <version>1.1.0</version>
@@ -2077,7 +2093,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|lodash.assign@4.0.3">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.assign@4.0.3">
           <author>John-David Dalton</author>
           <name>lodash.assign</name>
           <version>4.0.3</version>
@@ -2121,7 +2137,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|lodash.keys@4.0.3">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.keys@4.0.3">
           <author>John-David Dalton</author>
           <name>lodash.keys</name>
           <version>4.0.3</version>
@@ -2165,7 +2181,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|lodash.rest@4.0.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.rest@4.0.1">
           <author>John-David Dalton</author>
           <name>lodash.rest</name>
           <version>4.0.1</version>
@@ -2209,7 +2225,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|normalize-package-data@2.3.5">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|normalize-package-data@2.3.5">
           <author>Meryn Stol</author>
           <name>normalize-package-data</name>
           <version>2.3.5</version>
@@ -2253,7 +2269,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|number-is-nan@1.0.0">
           <author>Sindre Sorhus</author>
           <name>number-is-nan</name>
           <version>1.0.0</version>
@@ -2297,7 +2313,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|object-assign@4.0.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|object-assign@4.0.1">
           <author>Sindre Sorhus</author>
           <name>object-assign</name>
           <version>4.0.1</version>
@@ -2341,7 +2357,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|os-locale@1.4.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|os-locale@1.4.0">
           <author>Sindre Sorhus</author>
           <name>os-locale</name>
           <version>1.4.0</version>
@@ -2385,7 +2401,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|parse-json@2.2.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|parse-json@2.2.0">
           <author>Sindre Sorhus</author>
           <name>parse-json</name>
           <version>2.2.0</version>
@@ -2429,7 +2445,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|path-exists@2.1.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|path-exists@2.1.0">
           <author>Sindre Sorhus</author>
           <name>path-exists</name>
           <version>2.1.0</version>
@@ -2473,7 +2489,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|path-type@1.1.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|path-type@1.1.0">
           <author>Sindre Sorhus</author>
           <name>path-type</name>
           <version>1.1.0</version>
@@ -2517,7 +2533,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|pify@2.3.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pify@2.3.0">
           <author>Sindre Sorhus</author>
           <name>pify</name>
           <version>2.3.0</version>
@@ -2561,7 +2577,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie-promise@2.0.0">
           <author>Vsevolod Strukchinsky</author>
           <name>pinkie-promise</name>
           <version>2.0.0</version>
@@ -2605,7 +2621,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|pinkie@2.0.4">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie@2.0.4">
           <author>Vsevolod Strukchinsky</author>
           <name>pinkie</name>
           <version>2.0.4</version>
@@ -2649,7 +2665,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|pkg-conf@1.1.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pkg-conf@1.1.1">
           <author>Sindre Sorhus</author>
           <name>pkg-conf</name>
           <version>1.1.1</version>
@@ -2693,7 +2709,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|read-pkg-up@1.0.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg-up@1.0.1">
           <author>Sindre Sorhus</author>
           <name>read-pkg-up</name>
           <version>1.0.1</version>
@@ -2737,7 +2753,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|read-pkg@1.1.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg@1.1.0">
           <author>Sindre Sorhus</author>
           <name>read-pkg</name>
           <version>1.1.0</version>
@@ -2781,7 +2797,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|require-main-filename@1.0.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|require-main-filename@1.0.1">
           <author>Ben Coe</author>
           <name>require-main-filename</name>
           <version>1.0.1</version>
@@ -2825,7 +2841,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|semver@5.1.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|semver@5.1.0">
           <name>semver</name>
           <version>5.1.0</version>
           <description>The semantic version parser used by npm.</description>
@@ -2868,7 +2884,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-correct@1.0.2">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-correct@1.0.2">
           <author>Kyle E. Mitchell</author>
           <name>spdx-correct</name>
           <version>1.0.2</version>
@@ -2912,7 +2928,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-exceptions@1.0.4">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-exceptions@1.0.4">
           <author>The Linux Foundation</author>
           <name>spdx-exceptions</name>
           <version>1.0.4</version>
@@ -2949,7 +2965,7 @@
           </properties>
           <evidence/>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2">
           <author>Kyle E. Mitchell</author>
           <name>spdx-expression-parse</name>
           <version>1.0.2</version>
@@ -2991,7 +3007,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-license-ids@1.2.0">
           <author>Shinnosuke Watanabe</author>
           <name>spdx-license-ids</name>
           <version>1.2.0</version>
@@ -3035,7 +3051,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|string-width@1.0.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|string-width@1.0.1">
           <author>Sindre Sorhus</author>
           <name>string-width</name>
           <version>1.0.1</version>
@@ -3079,7 +3095,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-ansi@3.0.1">
           <author>Sindre Sorhus</author>
           <name>strip-ansi</name>
           <version>3.0.1</version>
@@ -3123,7 +3139,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|strip-bom@2.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-bom@2.0.0">
           <author>Sindre Sorhus</author>
           <name>strip-bom</name>
           <version>2.0.0</version>
@@ -3167,7 +3183,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|symbol@0.2.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|symbol@0.2.1">
           <author>Sean McArthur</author>
           <name>symbol</name>
           <version>0.2.1</version>
@@ -3211,7 +3227,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1">
           <author>Kyle E. Mitchell</author>
           <name>validate-npm-package-license</name>
           <version>3.0.1</version>
@@ -3255,7 +3271,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|window-size@0.2.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|window-size@0.2.0">
           <author>Jon Schlinkert</author>
           <name>window-size</name>
           <version>0.2.0</version>
@@ -3299,7 +3315,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|wrap-ansi@1.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|wrap-ansi@1.0.0">
           <author>Sindre Sorhus</author>
           <name>wrap-ansi</name>
           <version>1.0.0</version>
@@ -3343,7 +3359,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|y18n@3.2.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|y18n@3.2.0">
           <author>Ben Coe</author>
           <name>y18n</name>
           <version>3.2.0</version>
@@ -3380,7 +3396,7 @@
           </properties>
           <evidence/>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|yargs-parser@2.1.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|yargs-parser@2.1.0">
           <author>Ben Coe</author>
           <name>yargs-parser</name>
           <version>2.1.0</version>
@@ -3424,7 +3440,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="bundle-dependencies@1.0.2|yargs@4.1.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|yargs@4.1.0">
           <name>yargs</name>
           <version>4.1.0</version>
           <description>Light-weight option parsing with an argv hash. No optstrings attached.</description>
@@ -3477,7 +3493,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="cacache@18.0.4">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|cacache@18.0.4">
       <author>GitHub Inc.</author>
       <name>cacache</name>
       <version>18.0.4</version>
@@ -3518,7 +3534,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="chownr@2.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|chownr@2.0.0">
       <author>Isaac Z. Schlueter</author>
       <name>chownr</name>
       <version>2.0.0</version>
@@ -3559,7 +3575,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="clean-stack@2.2.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|clean-stack@2.2.0">
       <author>Sindre Sorhus</author>
       <name>clean-stack</name>
       <version>2.2.0</version>
@@ -3600,7 +3616,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="color-convert@2.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|color-convert@2.0.1">
       <author>Heather Arthur</author>
       <name>color-convert</name>
       <version>2.0.1</version>
@@ -3641,7 +3657,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="color-name@1.1.4">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|color-name@1.1.4">
       <author>DY</author>
       <name>color-name</name>
       <version>1.1.4</version>
@@ -3682,7 +3698,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="commander@2.20.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|commander@2.20.3">
       <author>TJ Holowaychuk</author>
       <name>commander</name>
       <version>2.20.3</version>
@@ -3723,7 +3739,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="cross-spawn@7.0.6">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|cross-spawn@7.0.6">
       <author>André Cruz</author>
       <name>cross-spawn</name>
       <version>7.0.6</version>
@@ -3756,7 +3772,7 @@
         <property name="cdx:npm:package:path">node_modules/cross-spawn</property>
       </properties>
       <components>
-        <component type="library" bom-ref="cross-spawn@7.0.6|isexe@2.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|cross-spawn@7.0.6|isexe@2.0.0">
           <author>Isaac Z. Schlueter</author>
           <name>isexe</name>
           <version>2.0.0</version>
@@ -3797,7 +3813,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="cross-spawn@7.0.6|which@2.0.2">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|cross-spawn@7.0.6|which@2.0.2">
           <author>Isaac Z. Schlueter</author>
           <name>which</name>
           <version>2.0.2</version>
@@ -3848,7 +3864,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="debug@4.4.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|debug@4.4.0">
       <author>Josh Junon</author>
       <name>debug</name>
       <version>4.4.0</version>
@@ -3889,7 +3905,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="decompress-response@6.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|decompress-response@6.0.0">
       <author>Sindre Sorhus</author>
       <name>decompress-response</name>
       <version>6.0.0</version>
@@ -3930,7 +3946,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="deep-extend@0.6.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|deep-extend@0.6.0">
       <author>Viacheslav Lotsmanov</author>
       <name>deep-extend</name>
       <version>0.6.0</version>
@@ -3975,7 +3991,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="detect-libc@2.0.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|detect-libc@2.0.3">
       <author>Lovell Fuller</author>
       <name>detect-libc</name>
       <version>2.0.3</version>
@@ -4016,7 +4032,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="discontinuous-range@1.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|discontinuous-range@1.0.0">
       <author>David Tudury</author>
       <name>discontinuous-range</name>
       <version>1.0.0</version>
@@ -4057,7 +4073,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="eastasianwidth@0.2.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|eastasianwidth@0.2.0">
       <author>Masaki Komagata</author>
       <name>eastasianwidth</name>
       <version>0.2.0</version>
@@ -4091,7 +4107,7 @@
       </properties>
       <evidence/>
     </component>
-    <component type="library" bom-ref="emoji-regex@9.2.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|emoji-regex@9.2.2">
       <author>Mathias Bynens</author>
       <name>emoji-regex</name>
       <version>9.2.2</version>
@@ -4132,7 +4148,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="encoding@0.1.13">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|encoding@0.1.13">
       <author>Andris Reinman</author>
       <name>encoding</name>
       <version>0.1.13</version>
@@ -4173,7 +4189,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="end-of-stream@1.4.4">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|end-of-stream@1.4.4">
       <author>Mathias Buus</author>
       <name>end-of-stream</name>
       <version>1.4.4</version>
@@ -4214,7 +4230,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="env-paths@2.2.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|env-paths@2.2.1">
       <author>Sindre Sorhus</author>
       <name>env-paths</name>
       <version>2.2.1</version>
@@ -4255,7 +4271,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="err-code@2.0.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|err-code@2.0.3">
       <author>IndigoUnited</author>
       <name>err-code</name>
       <version>2.0.3</version>
@@ -4289,7 +4305,7 @@
       </properties>
       <evidence/>
     </component>
-    <component type="library" bom-ref="esprima@4.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|esprima@4.0.1">
       <author>Ariya Hidayat</author>
       <name>esprima</name>
       <version>4.0.1</version>
@@ -4330,7 +4346,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="expand-template@2.0.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|expand-template@2.0.3">
       <author>LM</author>
       <name>expand-template</name>
       <version>2.0.3</version>
@@ -4369,7 +4385,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="exponential-backoff@3.1.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|exponential-backoff@3.1.1">
       <author>Sami Sayegh</author>
       <name>exponential-backoff</name>
       <version>3.1.1</version>
@@ -4410,7 +4426,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="extend@3.0.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|extend@3.0.2">
       <author>Stefan Thomas</author>
       <name>extend</name>
       <version>3.0.2</version>
@@ -4451,7 +4467,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="fast-deep-equal@3.1.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|fast-deep-equal@3.1.3">
       <author>Evgeny Poberezkin</author>
       <name>fast-deep-equal</name>
       <version>3.1.3</version>
@@ -4492,7 +4508,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="fast-uri@3.0.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|fast-uri@3.0.3">
       <author>Vincent Le Goff</author>
       <name>fast-uri</name>
       <version>3.0.3</version>
@@ -4533,7 +4549,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="file-uri-to-path@1.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|file-uri-to-path@1.0.0">
       <author>Nathan Rajlich</author>
       <name>file-uri-to-path</name>
       <version>1.0.0</version>
@@ -4574,7 +4590,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="foreground-child@3.3.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|foreground-child@3.3.0">
       <author>Isaac Z. Schlueter</author>
       <name>foreground-child</name>
       <version>3.3.0</version>
@@ -4615,7 +4631,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="fs-constants@1.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|fs-constants@1.0.0">
       <author>Mathias Buus</author>
       <name>fs-constants</name>
       <version>1.0.0</version>
@@ -4656,7 +4672,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="fs-minipass@3.0.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|fs-minipass@3.0.3">
       <author>GitHub Inc.</author>
       <name>fs-minipass</name>
       <version>3.0.3</version>
@@ -4697,7 +4713,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="github-from-package@0.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|github-from-package@0.0.0">
       <author>James Halliday</author>
       <name>github-from-package</name>
       <version>0.0.0</version>
@@ -4738,7 +4754,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="glob@10.4.5">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|glob@10.4.5">
       <author>Isaac Z. Schlueter</author>
       <name>glob</name>
       <version>10.4.5</version>
@@ -4779,7 +4795,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="graceful-fs@4.2.11">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|graceful-fs@4.2.11">
       <name>graceful-fs</name>
       <version>4.2.11</version>
       <description>A drop-in replacement for fs, making various improvements.</description>
@@ -4819,7 +4835,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="http-cache-semantics@4.1.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|http-cache-semantics@4.1.1">
       <author>Kornel Lesiński</author>
       <name>http-cache-semantics</name>
       <version>4.1.1</version>
@@ -4860,7 +4876,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="http-proxy-agent@7.0.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|http-proxy-agent@7.0.2">
       <author>Nathan Rajlich</author>
       <name>http-proxy-agent</name>
       <version>7.0.2</version>
@@ -4901,7 +4917,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="https-proxy-agent@7.0.6">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|https-proxy-agent@7.0.6">
       <author>Nathan Rajlich</author>
       <name>https-proxy-agent</name>
       <version>7.0.6</version>
@@ -4942,7 +4958,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="iconv-lite@0.6.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|iconv-lite@0.6.3">
       <author>Alexander Shtuchkin</author>
       <name>iconv-lite</name>
       <version>0.6.3</version>
@@ -4983,7 +4999,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ieee754@1.2.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ieee754@1.2.1">
       <author>Feross Aboukhadijeh</author>
       <name>ieee754</name>
       <version>1.2.1</version>
@@ -5024,7 +5040,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ignore@5.3.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ignore@5.3.2">
       <author>kael</author>
       <name>ignore</name>
       <version>5.3.2</version>
@@ -5065,7 +5081,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="imurmurhash@0.1.4">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|imurmurhash@0.1.4">
       <author>Jens Taylor</author>
       <name>imurmurhash</name>
       <version>0.1.4</version>
@@ -5099,7 +5115,7 @@
       </properties>
       <evidence/>
     </component>
-    <component type="library" bom-ref="indent-string@4.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|indent-string@4.0.0">
       <author>Sindre Sorhus</author>
       <name>indent-string</name>
       <version>4.0.0</version>
@@ -5140,7 +5156,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="inherits@2.0.4">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|inherits@2.0.4">
       <name>inherits</name>
       <version>2.0.4</version>
       <description>Browser-friendly inheritance fully compatible with standard node.js inherits()</description>
@@ -5149,8 +5165,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git</purl>
+      <purl>pkg:npm/inherits@2.0.4</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/inherits/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5176,7 +5196,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ini@1.3.8">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ini@1.3.8">
       <author>Isaac Z. Schlueter</author>
       <name>ini</name>
       <version>1.3.8</version>
@@ -5217,7 +5237,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ip-address@9.0.5">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ip-address@9.0.5">
       <author>Beau Gunderson</author>
       <name>ip-address</name>
       <version>9.0.5</version>
@@ -5258,7 +5278,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="is-fullwidth-code-point@3.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|is-fullwidth-code-point@3.0.0">
       <author>Sindre Sorhus</author>
       <name>is-fullwidth-code-point</name>
       <version>3.0.0</version>
@@ -5299,7 +5319,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="is-lambda@1.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|is-lambda@1.0.1">
       <author>Thomas Watson Steen</author>
       <name>is-lambda</name>
       <version>1.0.1</version>
@@ -5340,7 +5360,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="is-obj@3.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|is-obj@3.0.0">
       <author>Sindre Sorhus</author>
       <name>is-obj</name>
       <version>3.0.0</version>
@@ -5381,7 +5401,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="isexe@3.1.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|isexe@3.1.1">
       <author>Isaac Z. Schlueter</author>
       <name>isexe</name>
       <version>3.1.1</version>
@@ -5422,7 +5442,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="jackspeak@3.4.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|jackspeak@3.4.3">
       <author>Isaac Z. Schlueter</author>
       <name>jackspeak</name>
       <version>3.4.3</version>
@@ -5463,7 +5483,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="js-yaml@3.14.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|js-yaml@3.14.1">
       <author>Vladimir Zapparov</author>
       <name>js-yaml</name>
       <version>3.14.1</version>
@@ -5504,7 +5524,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="jsbn@1.1.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|jsbn@1.1.0">
       <author>Tom Wu</author>
       <name>jsbn</name>
       <version>1.1.0</version>
@@ -5545,7 +5565,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="json-schema-traverse@1.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|json-schema-traverse@1.0.0">
       <author>Evgeny Poberezkin</author>
       <name>json-schema-traverse</name>
       <version>1.0.0</version>
@@ -5586,7 +5606,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="libxmljs2@0.35.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|libxmljs2@0.35.0">
       <author>marudor</author>
       <name>libxmljs2</name>
       <version>0.35.0</version>
@@ -5627,7 +5647,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="lru-cache@10.4.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|lru-cache@10.4.3">
       <author>Isaac Z. Schlueter</author>
       <name>lru-cache</name>
       <version>10.4.3</version>
@@ -5668,7 +5688,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="make-fetch-happen@13.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|make-fetch-happen@13.0.1">
       <author>GitHub Inc.</author>
       <name>make-fetch-happen</name>
       <version>13.0.1</version>
@@ -5709,7 +5729,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="mimic-response@3.1.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|mimic-response@3.1.0">
       <author>Sindre Sorhus</author>
       <name>mimic-response</name>
       <version>3.1.0</version>
@@ -5750,7 +5770,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="minimatch@9.0.5">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|minimatch@9.0.5">
       <author>Isaac Z. Schlueter</author>
       <name>minimatch</name>
       <version>9.0.5</version>
@@ -5791,7 +5811,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="minimist@1.2.8">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|minimist@1.2.8">
       <author>James Halliday</author>
       <name>minimist</name>
       <version>1.2.8</version>
@@ -5832,7 +5852,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="minipass-collect@2.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-collect@2.0.1">
       <author>Isaac Z. Schlueter</author>
       <name>minipass-collect</name>
       <version>2.0.1</version>
@@ -5873,7 +5893,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="minipass-fetch@3.0.5">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-fetch@3.0.5">
       <author>GitHub Inc.</author>
       <name>minipass-fetch</name>
       <version>3.0.5</version>
@@ -5914,7 +5934,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="minipass-flush@1.0.5">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-flush@1.0.5">
       <author>Isaac Z. Schlueter</author>
       <name>minipass-flush</name>
       <version>1.0.5</version>
@@ -5924,8 +5944,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-flush@1.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass-flush.git</purl>
+      <purl>pkg:npm/minipass-flush@1.0.5</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/minipass-flush/-/minipass-flush-1.0.5.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass-flush/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -5943,7 +5967,7 @@
         <property name="cdx:npm:package:path">node_modules/minipass-flush</property>
       </properties>
       <components>
-        <component type="library" bom-ref="minipass-flush@1.0.5|minipass@3.3.6">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-flush@1.0.5|minipass@3.3.6">
           <author>Isaac Z. Schlueter</author>
           <name>minipass</name>
           <version>3.3.6</version>
@@ -5994,7 +6018,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="minipass-pipeline@1.2.4">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-pipeline@1.2.4">
       <author>Isaac Z. Schlueter</author>
       <name>minipass-pipeline</name>
       <version>1.2.4</version>
@@ -6005,11 +6029,17 @@
         </license>
       </licenses>
       <purl>pkg:npm/minipass-pipeline@1.2.4</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/minipass-pipeline/-/minipass-pipeline-1.2.4.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+      </externalReferences>
       <properties>
         <property name="cdx:npm:package:path">node_modules/minipass-pipeline</property>
       </properties>
       <components>
-        <component type="library" bom-ref="minipass-pipeline@1.2.4|minipass@3.3.6">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-pipeline@1.2.4|minipass@3.3.6">
           <author>Isaac Z. Schlueter</author>
           <name>minipass</name>
           <version>3.3.6</version>
@@ -6060,7 +6090,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="minipass-sized@1.0.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-sized@1.0.3">
       <author>Isaac Z. Schlueter</author>
       <name>minipass-sized</name>
       <version>1.0.3</version>
@@ -6093,7 +6123,7 @@
         <property name="cdx:npm:package:path">node_modules/minipass-sized</property>
       </properties>
       <components>
-        <component type="library" bom-ref="minipass-sized@1.0.3|minipass@3.3.6">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|minipass-sized@1.0.3|minipass@3.3.6">
           <author>Isaac Z. Schlueter</author>
           <name>minipass</name>
           <version>3.3.6</version>
@@ -6144,7 +6174,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="minipass@7.1.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|minipass@7.1.2">
       <author>Isaac Z. Schlueter</author>
       <name>minipass</name>
       <version>7.1.2</version>
@@ -6185,7 +6215,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="minizlib@2.1.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|minizlib@2.1.2">
       <author>Isaac Z. Schlueter</author>
       <name>minizlib</name>
       <version>2.1.2</version>
@@ -6195,8 +6225,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minizlib@2.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminizlib.git</purl>
+      <purl>pkg:npm/minizlib@2.1.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minizlib/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6214,7 +6248,7 @@
         <property name="cdx:npm:package:path">node_modules/minizlib</property>
       </properties>
       <components>
-        <component type="library" bom-ref="minizlib@2.1.2|minipass@3.3.6">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|minizlib@2.1.2|minipass@3.3.6">
           <author>Isaac Z. Schlueter</author>
           <name>minipass</name>
           <version>3.3.6</version>
@@ -6265,7 +6299,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="mkdirp-classic@0.5.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|mkdirp-classic@0.5.3">
       <author>Mathias Buus</author>
       <name>mkdirp-classic</name>
       <version>0.5.3</version>
@@ -6306,7 +6340,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="mkdirp@1.0.4">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|mkdirp@1.0.4">
       <name>mkdirp</name>
       <version>1.0.4</version>
       <description>Recursively mkdir, like `mkdir -p`</description>
@@ -6346,7 +6380,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="moo@0.5.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|moo@0.5.2">
       <author>Tim Radvan</author>
       <name>moo</name>
       <version>0.5.2</version>
@@ -6387,7 +6421,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ms@2.1.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ms@2.1.3">
       <name>ms</name>
       <version>2.1.3</version>
       <description>Tiny millisecond conversion utility</description>
@@ -6427,7 +6461,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="nan@2.20.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|nan@2.20.0">
       <name>nan</name>
       <version>2.20.0</version>
       <description>Native Abstractions for Node.js: C++ header for Node 0.8 -&gt; 22 compatibility</description>
@@ -6467,7 +6501,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="napi-build-utils@1.0.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|napi-build-utils@1.0.2">
       <author>Jim Schlight</author>
       <name>napi-build-utils</name>
       <version>1.0.2</version>
@@ -6508,7 +6542,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="nearley@2.20.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|nearley@2.20.1">
       <author>Hardmath123</author>
       <name>nearley</name>
       <version>2.20.1</version>
@@ -6549,7 +6583,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="negotiator@0.6.4">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|negotiator@0.6.4">
       <name>negotiator</name>
       <version>0.6.4</version>
       <description>HTTP content negotiation</description>
@@ -6589,7 +6623,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="node-abi@3.71.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|node-abi@3.71.0">
       <author>Lukas Geiger</author>
       <name>node-abi</name>
       <version>3.71.0</version>
@@ -6630,7 +6664,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="node-gyp@10.3.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|node-gyp@10.3.1">
       <author>Nathan Rajlich</author>
       <name>node-gyp</name>
       <version>10.3.1</version>
@@ -6671,7 +6705,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="nopt@7.2.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|nopt@7.2.1">
       <author>GitHub Inc.</author>
       <name>nopt</name>
       <version>7.2.1</version>
@@ -6712,7 +6746,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="once@1.4.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|once@1.4.0">
       <author>Isaac Z. Schlueter</author>
       <name>once</name>
       <version>1.4.0</version>
@@ -6722,8 +6756,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/once@1.4.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fonce.git</purl>
+      <purl>pkg:npm/once@1.4.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/once/-/once-1.4.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/once/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -6749,7 +6787,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="p-map@4.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|p-map@4.0.0">
       <author>Sindre Sorhus</author>
       <name>p-map</name>
       <version>4.0.0</version>
@@ -6790,7 +6828,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="package-json-from-dist@1.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|package-json-from-dist@1.0.1">
       <author>Isaac Z. Schlueter</author>
       <name>package-json-from-dist</name>
       <version>1.0.1</version>
@@ -6831,7 +6869,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="packageurl-js@2.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|packageurl-js@2.0.1">
       <author>the purl authors</author>
       <name>packageurl-js</name>
       <version>2.0.1</version>
@@ -6872,7 +6910,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="path-key@3.1.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|path-key@3.1.1">
       <author>Sindre Sorhus</author>
       <name>path-key</name>
       <version>3.1.1</version>
@@ -6913,7 +6951,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="path-scurry@1.11.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|path-scurry@1.11.1">
       <author>Isaac Z. Schlueter</author>
       <name>path-scurry</name>
       <version>1.11.1</version>
@@ -6954,7 +6992,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="prebuild-install@7.1.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|prebuild-install@7.1.2">
       <author>Mathias Buus</author>
       <name>prebuild-install</name>
       <version>7.1.2</version>
@@ -6995,7 +7033,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="proc-log@4.2.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|proc-log@4.2.0">
       <author>GitHub Inc.</author>
       <name>proc-log</name>
       <version>4.2.0</version>
@@ -7005,8 +7043,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/proc-log@4.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fproc-log.git</purl>
+      <purl>pkg:npm/proc-log@4.2.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/proc-log/-/proc-log-4.2.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/proc-log/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7032,7 +7074,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="promise-retry@2.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|promise-retry@2.0.1">
       <author>IndigoUnited</author>
       <name>promise-retry</name>
       <version>2.0.1</version>
@@ -7073,7 +7115,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pump@3.0.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|pump@3.0.2">
       <author>Mathias Buus Madsen</author>
       <name>pump</name>
       <version>3.0.2</version>
@@ -7114,7 +7156,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="punycode@2.3.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|punycode@2.3.1">
       <author>Mathias Bynens</author>
       <name>punycode</name>
       <version>2.3.1</version>
@@ -7155,7 +7197,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="railroad-diagrams@1.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|railroad-diagrams@1.0.0">
       <author>Tab Atkins Jr.</author>
       <name>railroad-diagrams</name>
       <version>1.0.0</version>
@@ -7189,7 +7231,7 @@
       </properties>
       <evidence/>
     </component>
-    <component type="library" bom-ref="randexp@0.4.6">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|randexp@0.4.6">
       <author>Roly Fentanes</author>
       <name>randexp</name>
       <version>0.4.6</version>
@@ -7230,7 +7272,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="rc@1.2.8">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|rc@1.2.8">
       <author>Dominic Tarr</author>
       <name>rc</name>
       <version>1.2.8</version>
@@ -7273,7 +7315,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="readable-stream@3.6.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|readable-stream@3.6.2">
       <name>readable-stream</name>
       <version>3.6.2</version>
       <description>Streams3, a user-land copy of the stream library from Node.js</description>
@@ -7282,8 +7324,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git</purl>
+      <purl>pkg:npm/readable-stream@3.6.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/readable-stream/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7309,7 +7355,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="require-from-string@2.0.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|require-from-string@2.0.2">
       <author>Vsevolod Strukchinsky</author>
       <name>require-from-string</name>
       <version>2.0.2</version>
@@ -7350,7 +7396,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ret@0.1.15">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ret@0.1.15">
       <author>Roly Fentanes</author>
       <name>ret</name>
       <version>0.1.15</version>
@@ -7391,7 +7437,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="retry@0.12.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|retry@0.12.0">
       <author>Tim Koschützki</author>
       <name>retry</name>
       <version>0.12.0</version>
@@ -7432,7 +7478,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="safe-buffer@5.2.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|safe-buffer@5.2.1">
       <author>Feross Aboukhadijeh</author>
       <name>safe-buffer</name>
       <version>5.2.1</version>
@@ -7442,8 +7488,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git</purl>
+      <purl>pkg:npm/safe-buffer@5.2.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/feross/safe-buffer/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7469,7 +7519,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="safer-buffer@2.1.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|safer-buffer@2.1.2">
       <author>Nikita Skovoroda</author>
       <name>safer-buffer</name>
       <version>2.1.2</version>
@@ -7510,7 +7560,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="schemes@1.4.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|schemes@1.4.0">
       <author>Peter Müller</author>
       <name>schemes</name>
       <version>1.4.0</version>
@@ -7544,7 +7594,7 @@
       </properties>
       <evidence/>
     </component>
-    <component type="library" bom-ref="semver@7.6.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|semver@7.6.3">
       <author>GitHub Inc.</author>
       <name>semver</name>
       <version>7.6.3</version>
@@ -7554,8 +7604,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/semver@7.6.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git</purl>
+      <purl>pkg:npm/semver@7.6.3</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/semver/-/semver-7.6.3.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-semver/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -7581,7 +7635,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="shebang-command@2.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|shebang-command@2.0.0">
       <author>Kevin Mårtensson</author>
       <name>shebang-command</name>
       <version>2.0.0</version>
@@ -7622,7 +7676,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="shebang-regex@3.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|shebang-regex@3.0.0">
       <author>Sindre Sorhus</author>
       <name>shebang-regex</name>
       <version>3.0.0</version>
@@ -7663,7 +7717,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="signal-exit@4.1.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|signal-exit@4.1.0">
       <author>Ben Coe</author>
       <name>signal-exit</name>
       <version>4.1.0</version>
@@ -7704,7 +7758,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="simple-concat@1.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|simple-concat@1.0.1">
       <author>Feross Aboukhadijeh</author>
       <name>simple-concat</name>
       <version>1.0.1</version>
@@ -7745,7 +7799,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="simple-get@4.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|simple-get@4.0.1">
       <author>Feross Aboukhadijeh</author>
       <name>simple-get</name>
       <version>4.0.1</version>
@@ -7786,7 +7840,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="smart-buffer@4.2.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|smart-buffer@4.2.0">
       <author>Josh Glazebrook</author>
       <name>smart-buffer</name>
       <version>4.2.0</version>
@@ -7827,7 +7881,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="smtp-address-parser@1.1.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|smtp-address-parser@1.1.0">
       <author>Gene Hightower</author>
       <name>smtp-address-parser</name>
       <version>1.1.0</version>
@@ -7868,7 +7922,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="socks-proxy-agent@8.0.5">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|socks-proxy-agent@8.0.5">
       <author>Nathan Rajlich</author>
       <name>socks-proxy-agent</name>
       <version>8.0.5</version>
@@ -7909,7 +7963,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="socks@2.8.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|socks@2.8.3">
       <author>Josh Glazebrook</author>
       <name>socks</name>
       <version>2.8.3</version>
@@ -7950,7 +8004,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="spdx-exceptions@2.5.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|spdx-exceptions@2.5.0">
       <author>The Linux Foundation</author>
       <name>spdx-exceptions</name>
       <version>2.5.0</version>
@@ -7984,7 +8038,7 @@
       </properties>
       <evidence/>
     </component>
-    <component type="library" bom-ref="spdx-expression-parse@4.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|spdx-expression-parse@4.0.0">
       <author>Kyle E. Mitchell</author>
       <name>spdx-expression-parse</name>
       <version>4.0.0</version>
@@ -8025,7 +8079,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="spdx-license-ids@3.0.20">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|spdx-license-ids@3.0.20">
       <author>Shinnosuke Watanabe</author>
       <name>spdx-license-ids</name>
       <version>3.0.20</version>
@@ -8059,7 +8113,7 @@
       </properties>
       <evidence/>
     </component>
-    <component type="library" bom-ref="sprintf-js@1.1.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|sprintf-js@1.1.3">
       <author>Alexandru Mărășteanu</author>
       <name>sprintf-js</name>
       <version>1.1.3</version>
@@ -8100,7 +8154,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="ssri@10.0.6">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ssri@10.0.6">
       <author>GitHub Inc.</author>
       <name>ssri</name>
       <version>10.0.6</version>
@@ -8110,8 +8164,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ssri@10.0.6?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fssri.git</purl>
+      <purl>pkg:npm/ssri@10.0.6</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/ssri/-/ssri-10.0.6.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/npm/ssri/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8137,7 +8195,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="string_decoder@1.3.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|string_decoder@1.3.0">
       <name>string_decoder</name>
       <version>1.3.0</version>
       <description>The string_decoder module from Node core</description>
@@ -8177,7 +8235,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="string-width@4.2.3">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|string-width@4.2.3">
       <author>Sindre Sorhus</author>
       <name>string-width</name>
       <version>4.2.3</version>
@@ -8210,7 +8268,7 @@
         <property name="cdx:npm:package:path">node_modules/string-width-cjs</property>
       </properties>
       <components>
-        <component type="library" bom-ref="string-width@4.2.3|ansi-regex@5.0.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|string-width@4.2.3|ansi-regex@5.0.1">
           <author>Sindre Sorhus</author>
           <name>ansi-regex</name>
           <version>5.0.1</version>
@@ -8251,7 +8309,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="string-width@4.2.3|emoji-regex@8.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|string-width@4.2.3|emoji-regex@8.0.0">
           <author>Mathias Bynens</author>
           <name>emoji-regex</name>
           <version>8.0.0</version>
@@ -8292,7 +8350,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="string-width@4.2.3|strip-ansi@6.0.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|string-width@4.2.3|strip-ansi@6.0.1">
           <author>Sindre Sorhus</author>
           <name>strip-ansi</name>
           <version>6.0.1</version>
@@ -8343,7 +8401,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="string-width@5.1.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|string-width@5.1.2">
       <author>Sindre Sorhus</author>
       <name>string-width</name>
       <version>5.1.2</version>
@@ -8384,7 +8442,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="strip-ansi@6.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|strip-ansi@6.0.1">
       <author>Sindre Sorhus</author>
       <name>strip-ansi</name>
       <version>6.0.1</version>
@@ -8417,7 +8475,7 @@
         <property name="cdx:npm:package:path">node_modules/strip-ansi-cjs</property>
       </properties>
       <components>
-        <component type="library" bom-ref="strip-ansi@6.0.1|ansi-regex@5.0.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|strip-ansi@6.0.1|ansi-regex@5.0.1">
           <author>Sindre Sorhus</author>
           <name>ansi-regex</name>
           <version>5.0.1</version>
@@ -8468,7 +8526,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="strip-ansi@7.1.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|strip-ansi@7.1.0">
       <author>Sindre Sorhus</author>
       <name>strip-ansi</name>
       <version>7.1.0</version>
@@ -8478,8 +8536,12 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/strip-ansi@7.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git</purl>
+      <purl>pkg:npm/strip-ansi@7.1.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/strip-ansi/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8505,7 +8567,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="strip-json-comments@2.0.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|strip-json-comments@2.0.1">
       <author>Sindre Sorhus</author>
       <name>strip-json-comments</name>
       <version>2.0.1</version>
@@ -8546,7 +8608,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="tar-fs@2.1.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|tar-fs@2.1.1">
       <author>Mathias Buus</author>
       <name>tar-fs</name>
       <version>2.1.1</version>
@@ -8579,7 +8641,7 @@
         <property name="cdx:npm:package:path">node_modules/tar-fs</property>
       </properties>
       <components>
-        <component type="library" bom-ref="tar-fs@2.1.1|chownr@1.1.4">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|tar-fs@2.1.1|chownr@1.1.4">
           <author>Isaac Z. Schlueter</author>
           <name>chownr</name>
           <version>1.1.4</version>
@@ -8630,7 +8692,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="tar-stream@2.2.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|tar-stream@2.2.0">
       <author>Mathias Buus</author>
       <name>tar-stream</name>
       <version>2.2.0</version>
@@ -8671,7 +8733,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="tar@6.2.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|tar@6.2.1">
       <author>GitHub Inc.</author>
       <name>tar</name>
       <version>6.2.1</version>
@@ -8681,8 +8743,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/tar@6.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-tar.git</purl>
+      <purl>pkg:npm/tar@6.2.1</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/tar/-/tar-6.2.1.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-tar/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -8700,7 +8766,7 @@
         <property name="cdx:npm:package:path">node_modules/tar</property>
       </properties>
       <components>
-        <component type="library" bom-ref="tar@6.2.1|fs-minipass@2.1.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0">
           <author>Isaac Z. Schlueter</author>
           <name>fs-minipass</name>
           <version>2.1.0</version>
@@ -8733,7 +8799,7 @@
             <property name="cdx:npm:package:path">node_modules/tar/node_modules/fs-minipass</property>
           </properties>
           <components>
-            <component type="library" bom-ref="tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6">
+            <component type="library" bom-ref="@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6">
               <author>Isaac Z. Schlueter</author>
               <name>minipass</name>
               <version>3.3.6</version>
@@ -8784,7 +8850,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="tar@6.2.1|minipass@5.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|tar@6.2.1|minipass@5.0.0">
           <author>Isaac Z. Schlueter</author>
           <name>minipass</name>
           <version>5.0.0</version>
@@ -8835,7 +8901,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="tunnel-agent@0.6.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|tunnel-agent@0.6.0">
       <author>Mikeal Rogers</author>
       <name>tunnel-agent</name>
       <version>0.6.0</version>
@@ -8876,7 +8942,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="undici-types@5.26.5">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|undici-types@5.26.5">
       <name>undici-types</name>
       <version>5.26.5</version>
       <description>A stand-alone types package for Undici</description>
@@ -8909,7 +8975,7 @@
       </properties>
       <evidence/>
     </component>
-    <component type="library" bom-ref="unique-filename@3.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|unique-filename@3.0.0">
       <author>GitHub Inc.</author>
       <name>unique-filename</name>
       <version>3.0.0</version>
@@ -8950,7 +9016,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="unique-slug@4.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|unique-slug@4.0.0">
       <author>GitHub Inc.</author>
       <name>unique-slug</name>
       <version>4.0.0</version>
@@ -8991,7 +9057,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="uri-js@4.4.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|uri-js@4.4.1">
       <author>Gary Court</author>
       <name>uri-js</name>
       <version>4.4.1</version>
@@ -9032,7 +9098,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="util-deprecate@1.0.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|util-deprecate@1.0.2">
       <author>Nathan Rajlich</author>
       <name>util-deprecate</name>
       <version>1.0.2</version>
@@ -9073,7 +9139,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="uuid@8.3.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|uuid@8.3.2">
       <name>uuid</name>
       <version>8.3.2</version>
       <description>RFC4122 (v1, v4, and v5) UUIDs</description>
@@ -9113,7 +9179,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="uuidv4@6.2.13">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|uuidv4@6.2.13">
       <name>uuidv4</name>
       <version>6.2.13</version>
       <description>uuidv4 creates v4 UUIDs.</description>
@@ -9153,7 +9219,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="which@4.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|which@4.0.0">
       <author>GitHub Inc.</author>
       <name>which</name>
       <version>4.0.0</version>
@@ -9194,7 +9260,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="wrap-ansi@7.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0">
       <author>Sindre Sorhus</author>
       <name>wrap-ansi</name>
       <version>7.0.0</version>
@@ -9227,7 +9293,7 @@
         <property name="cdx:npm:package:path">node_modules/wrap-ansi-cjs</property>
       </properties>
       <components>
-        <component type="library" bom-ref="wrap-ansi@7.0.0|ansi-regex@5.0.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|ansi-regex@5.0.1">
           <author>Sindre Sorhus</author>
           <name>ansi-regex</name>
           <version>5.0.1</version>
@@ -9268,7 +9334,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="wrap-ansi@7.0.0|ansi-styles@4.3.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|ansi-styles@4.3.0">
           <author>Sindre Sorhus</author>
           <name>ansi-styles</name>
           <version>4.3.0</version>
@@ -9309,7 +9375,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="wrap-ansi@7.0.0|emoji-regex@8.0.0">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|emoji-regex@8.0.0">
           <author>Mathias Bynens</author>
           <name>emoji-regex</name>
           <version>8.0.0</version>
@@ -9350,7 +9416,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="wrap-ansi@7.0.0|string-width@4.2.3">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|string-width@4.2.3">
           <author>Sindre Sorhus</author>
           <name>string-width</name>
           <version>4.2.3</version>
@@ -9391,7 +9457,7 @@
             </licenses>
           </evidence>
         </component>
-        <component type="library" bom-ref="wrap-ansi@7.0.0|strip-ansi@6.0.1">
+        <component type="library" bom-ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|strip-ansi@6.0.1">
           <author>Sindre Sorhus</author>
           <name>strip-ansi</name>
           <version>6.0.1</version>
@@ -9401,8 +9467,12 @@
               <id>MIT</id>
             </license>
           </licenses>
-          <purl>pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git</purl>
+          <purl>pkg:npm/strip-ansi@6.0.1</purl>
           <externalReferences>
+            <reference type="distribution">
+              <url>https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz</url>
+              <comment>as detected from npm-ls property "resolved"</comment>
+            </reference>
             <reference type="issue-tracker">
               <url>https://github.com/chalk/strip-ansi/issues</url>
               <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -9438,7 +9508,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="wrap-ansi@8.1.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|wrap-ansi@8.1.0">
       <author>Sindre Sorhus</author>
       <name>wrap-ansi</name>
       <version>8.1.0</version>
@@ -9479,7 +9549,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="wrappy@1.0.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|wrappy@1.0.2">
       <author>Isaac Z. Schlueter</author>
       <name>wrappy</name>
       <version>1.0.2</version>
@@ -9520,7 +9590,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="xmlbuilder2@3.1.1">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|xmlbuilder2@3.1.1">
       <author>Ozgur Ozcitak</author>
       <name>xmlbuilder2</name>
       <version>3.1.1</version>
@@ -9561,7 +9631,7 @@
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="yallist@4.0.0">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|yallist@4.0.0">
       <author>Isaac Z. Schlueter</author>
       <name>yallist</name>
       <version>4.0.0</version>
@@ -9571,8 +9641,12 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/yallist@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fyallist.git</purl>
+      <purl>pkg:npm/yallist@4.0.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/yallist/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -9600,659 +9674,659 @@
     </component>
   </components>
   <dependencies>
-    <dependency ref="@cyclonedx/cyclonedx-library@7.0.0">
-      <dependency ref="ajv-formats-draft2019@1.6.1"/>
-      <dependency ref="ajv-formats@3.0.1"/>
-      <dependency ref="ajv@8.17.1"/>
-      <dependency ref="libxmljs2@0.35.0"/>
-      <dependency ref="packageurl-js@2.0.1"/>
-      <dependency ref="spdx-expression-parse@4.0.0"/>
-      <dependency ref="xmlbuilder2@3.1.1"/>
-    </dependency>
-    <dependency ref="@db-ui/base@0.29.2"/>
-    <dependency ref="@dummy-projects/with-prepared@-">
-      <dependency ref="@cyclonedx/cyclonedx-library@7.0.0"/>
-      <dependency ref="@db-ui/base@0.29.2"/>
-      <dependency ref="@types/node@20.14.10"/>
-      <dependency ref="@types/uuid@8.3.4"/>
-      <dependency ref="base64-js@1.0.1"/>
-      <dependency ref="buffer@5.7.1"/>
-      <dependency ref="bundle-dependencies@1.0.2"/>
-      <dependency ref="ignore@5.3.2"/>
-      <dependency ref="is-obj@3.0.0"/>
-      <dependency ref="uuid@8.3.2"/>
-      <dependency ref="uuidv4@6.2.13"/>
-    </dependency>
-    <dependency ref="@isaacs/cliui@8.0.2">
-      <dependency ref="string-width@4.2.3"/>
-      <dependency ref="string-width@5.1.2"/>
-      <dependency ref="strip-ansi@6.0.1"/>
-      <dependency ref="strip-ansi@7.1.0"/>
-      <dependency ref="wrap-ansi@7.0.0"/>
-      <dependency ref="wrap-ansi@8.1.0"/>
-    </dependency>
-    <dependency ref="@npmcli/agent@2.2.2">
-      <dependency ref="agent-base@7.1.3"/>
-      <dependency ref="http-proxy-agent@7.0.2"/>
-      <dependency ref="https-proxy-agent@7.0.6"/>
-      <dependency ref="lru-cache@10.4.3"/>
-      <dependency ref="socks-proxy-agent@8.0.5"/>
-    </dependency>
-    <dependency ref="@npmcli/fs@3.1.1">
-      <dependency ref="semver@7.6.3"/>
-    </dependency>
-    <dependency ref="@oozcitak/dom@1.15.10">
-      <dependency ref="@oozcitak/infra@1.0.8"/>
-      <dependency ref="@oozcitak/url@1.0.4"/>
-      <dependency ref="@oozcitak/util@8.3.8"/>
-    </dependency>
-    <dependency ref="@oozcitak/infra@1.0.8">
-      <dependency ref="@oozcitak/util@8.3.8"/>
-    </dependency>
-    <dependency ref="@oozcitak/url@1.0.4">
-      <dependency ref="@oozcitak/infra@1.0.8"/>
-      <dependency ref="@oozcitak/util@8.3.8"/>
-    </dependency>
-    <dependency ref="@oozcitak/util@8.3.8"/>
-    <dependency ref="@pkgjs/parseargs@0.11.0"/>
-    <dependency ref="@types/node@20.14.10">
-      <dependency ref="undici-types@5.26.5"/>
-    </dependency>
-    <dependency ref="@types/uuid@8.3.4"/>
-    <dependency ref="abbrev@2.0.0"/>
-    <dependency ref="agent-base@7.1.3"/>
-    <dependency ref="aggregate-error@3.1.0">
-      <dependency ref="clean-stack@2.2.0"/>
-      <dependency ref="indent-string@4.0.0"/>
-    </dependency>
-    <dependency ref="ajv-formats-draft2019@1.6.1">
-      <dependency ref="ajv@8.17.1"/>
-      <dependency ref="punycode@2.3.1"/>
-      <dependency ref="schemes@1.4.0"/>
-      <dependency ref="smtp-address-parser@1.1.0"/>
-      <dependency ref="uri-js@4.4.1"/>
-    </dependency>
-    <dependency ref="ajv-formats@3.0.1">
-      <dependency ref="ajv@8.17.1"/>
-    </dependency>
-    <dependency ref="ajv@8.17.1">
-      <dependency ref="fast-deep-equal@3.1.3"/>
-      <dependency ref="fast-uri@3.0.3"/>
-      <dependency ref="json-schema-traverse@1.0.0"/>
-      <dependency ref="require-from-string@2.0.2"/>
-    </dependency>
-    <dependency ref="ansi-regex@6.1.0"/>
-    <dependency ref="ansi-styles@6.2.1"/>
-    <dependency ref="argparse@1.0.10">
-      <dependency ref="argparse@1.0.10|sprintf-js@1.0.3"/>
-    </dependency>
-    <dependency ref="argparse@1.0.10|sprintf-js@1.0.3"/>
-    <dependency ref="balanced-match@1.0.2"/>
-    <dependency ref="base64-js@1.0.1"/>
-    <dependency ref="bindings@1.5.0">
-      <dependency ref="file-uri-to-path@1.0.0"/>
-    </dependency>
-    <dependency ref="bl@4.1.0">
-      <dependency ref="buffer@5.7.1"/>
-      <dependency ref="inherits@2.0.4"/>
-      <dependency ref="readable-stream@3.6.2"/>
-    </dependency>
-    <dependency ref="brace-expansion@2.0.1">
-      <dependency ref="balanced-match@1.0.2"/>
-    </dependency>
-    <dependency ref="buffer@5.7.1">
-      <dependency ref="buffer@5.7.1|base64-js@1.5.1"/>
-      <dependency ref="ieee754@1.2.1"/>
-    </dependency>
-    <dependency ref="buffer@5.7.1|base64-js@1.5.1"/>
-    <dependency ref="bundle-dependencies@1.0.2">
-      <dependency ref="bundle-dependencies@1.0.2|yargs@4.1.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|ansi-regex@2.0.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|builtin-modules@1.1.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|camelcase@2.1.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|cliui@3.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|wrap-ansi@1.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|code-point-at@1.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|decamelize@1.1.2">
-      <dependency ref="bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|error-ex@1.3.0">
-      <dependency ref="bundle-dependencies@1.0.2|is-arrayish@0.2.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"/>
-    <dependency ref="bundle-dependencies@1.0.2|find-up@1.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|path-exists@2.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
-    <dependency ref="bundle-dependencies@1.0.2|hosted-git-info@2.1.4"/>
-    <dependency ref="bundle-dependencies@1.0.2|invert-kv@1.0.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|is-arrayish@0.2.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|is-builtin-module@1.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|builtin-modules@1.1.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|is-utf8@0.2.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|lcid@1.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|invert-kv@1.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|load-json-file@1.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
-      <dependency ref="bundle-dependencies@1.0.2|parse-json@2.2.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|pify@2.3.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|strip-bom@2.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|lodash.assign@4.0.3">
-      <dependency ref="bundle-dependencies@1.0.2|lodash.keys@4.0.3"/>
-      <dependency ref="bundle-dependencies@1.0.2|lodash.rest@4.0.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|lodash.keys@4.0.3"/>
-    <dependency ref="bundle-dependencies@1.0.2|lodash.rest@4.0.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|normalize-package-data@2.3.5">
-      <dependency ref="bundle-dependencies@1.0.2|hosted-git-info@2.1.4"/>
-      <dependency ref="bundle-dependencies@1.0.2|is-builtin-module@1.0.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|semver@5.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|object-assign@4.0.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|os-locale@1.4.0">
-      <dependency ref="bundle-dependencies@1.0.2|lcid@1.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|parse-json@2.2.0">
-      <dependency ref="bundle-dependencies@1.0.2|error-ex@1.3.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|path-exists@2.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|path-type@1.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
-      <dependency ref="bundle-dependencies@1.0.2|pify@2.3.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|pify@2.3.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|pinkie-promise@2.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|pinkie@2.0.4"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|pinkie@2.0.4"/>
-    <dependency ref="bundle-dependencies@1.0.2|pkg-conf@1.1.1">
-      <dependency ref="bundle-dependencies@1.0.2|find-up@1.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|object-assign@4.0.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|read-pkg@1.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|symbol@0.2.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|read-pkg-up@1.0.1">
-      <dependency ref="bundle-dependencies@1.0.2|find-up@1.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|read-pkg@1.1.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|read-pkg@1.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|load-json-file@1.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|normalize-package-data@2.3.5"/>
-      <dependency ref="bundle-dependencies@1.0.2|path-type@1.1.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|require-main-filename@1.0.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|semver@5.1.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|spdx-correct@1.0.2">
-      <dependency ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"/>
-    <dependency ref="bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2">
-      <dependency ref="bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"/>
-      <dependency ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1">
-      <dependency ref="bundle-dependencies@1.0.2|code-point-at@1.0.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|strip-ansi@3.0.1">
-      <dependency ref="bundle-dependencies@1.0.2|ansi-regex@2.0.0"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|strip-bom@2.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|is-utf8@0.2.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|symbol@0.2.1"/>
-    <dependency ref="bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1">
-      <dependency ref="bundle-dependencies@1.0.2|spdx-correct@1.0.2"/>
-      <dependency ref="bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|window-size@0.2.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|wrap-ansi@1.0.0">
-      <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|y18n@3.2.0"/>
-    <dependency ref="bundle-dependencies@1.0.2|yargs-parser@2.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|camelcase@2.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|lodash.assign@4.0.3"/>
-    </dependency>
-    <dependency ref="bundle-dependencies@1.0.2|yargs@4.1.0">
-      <dependency ref="bundle-dependencies@1.0.2|camelcase@2.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|cliui@3.1.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|decamelize@1.1.2"/>
-      <dependency ref="bundle-dependencies@1.0.2|os-locale@1.4.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|pkg-conf@1.1.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|read-pkg-up@1.0.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|require-main-filename@1.0.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|string-width@1.0.1"/>
-      <dependency ref="bundle-dependencies@1.0.2|window-size@0.2.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|y18n@3.2.0"/>
-      <dependency ref="bundle-dependencies@1.0.2|yargs-parser@2.1.0"/>
-    </dependency>
-    <dependency ref="cacache@18.0.4">
-      <dependency ref="@npmcli/fs@3.1.1"/>
-      <dependency ref="fs-minipass@3.0.3"/>
-      <dependency ref="glob@10.4.5"/>
-      <dependency ref="lru-cache@10.4.3"/>
-      <dependency ref="minipass-collect@2.0.1"/>
-      <dependency ref="minipass-flush@1.0.5"/>
-      <dependency ref="minipass-pipeline@1.2.4"/>
-      <dependency ref="minipass@7.1.2"/>
-      <dependency ref="p-map@4.0.0"/>
-      <dependency ref="ssri@10.0.6"/>
-      <dependency ref="tar@6.2.1"/>
-      <dependency ref="unique-filename@3.0.0"/>
-    </dependency>
-    <dependency ref="chownr@2.0.0"/>
-    <dependency ref="clean-stack@2.2.0"/>
-    <dependency ref="color-convert@2.0.1">
-      <dependency ref="color-name@1.1.4"/>
-    </dependency>
-    <dependency ref="color-name@1.1.4"/>
-    <dependency ref="commander@2.20.3"/>
-    <dependency ref="cross-spawn@7.0.6">
-      <dependency ref="cross-spawn@7.0.6|which@2.0.2"/>
-      <dependency ref="path-key@3.1.1"/>
-      <dependency ref="shebang-command@2.0.0"/>
-    </dependency>
-    <dependency ref="cross-spawn@7.0.6|isexe@2.0.0"/>
-    <dependency ref="cross-spawn@7.0.6|which@2.0.2">
-      <dependency ref="cross-spawn@7.0.6|isexe@2.0.0"/>
-    </dependency>
-    <dependency ref="debug@4.4.0">
-      <dependency ref="ms@2.1.3"/>
-    </dependency>
-    <dependency ref="decompress-response@6.0.0">
-      <dependency ref="mimic-response@3.1.0"/>
-    </dependency>
-    <dependency ref="deep-extend@0.6.0"/>
-    <dependency ref="detect-libc@2.0.3"/>
-    <dependency ref="discontinuous-range@1.0.0"/>
-    <dependency ref="eastasianwidth@0.2.0"/>
-    <dependency ref="emoji-regex@9.2.2"/>
-    <dependency ref="encoding@0.1.13">
-      <dependency ref="iconv-lite@0.6.3"/>
-    </dependency>
-    <dependency ref="end-of-stream@1.4.4">
-      <dependency ref="once@1.4.0"/>
-    </dependency>
-    <dependency ref="env-paths@2.2.1"/>
-    <dependency ref="err-code@2.0.3"/>
-    <dependency ref="esprima@4.0.1"/>
-    <dependency ref="expand-template@2.0.3"/>
-    <dependency ref="exponential-backoff@3.1.1"/>
-    <dependency ref="extend@3.0.2"/>
-    <dependency ref="fast-deep-equal@3.1.3"/>
-    <dependency ref="fast-uri@3.0.3"/>
-    <dependency ref="file-uri-to-path@1.0.0"/>
-    <dependency ref="foreground-child@3.3.0">
-      <dependency ref="cross-spawn@7.0.6"/>
-      <dependency ref="signal-exit@4.1.0"/>
-    </dependency>
-    <dependency ref="fs-constants@1.0.0"/>
-    <dependency ref="fs-minipass@3.0.3">
-      <dependency ref="minipass@7.1.2"/>
-    </dependency>
-    <dependency ref="github-from-package@0.0.0"/>
-    <dependency ref="glob@10.4.5">
-      <dependency ref="foreground-child@3.3.0"/>
-      <dependency ref="jackspeak@3.4.3"/>
-      <dependency ref="minimatch@9.0.5"/>
-      <dependency ref="minipass@7.1.2"/>
-      <dependency ref="package-json-from-dist@1.0.1"/>
-      <dependency ref="path-scurry@1.11.1"/>
-    </dependency>
-    <dependency ref="graceful-fs@4.2.11"/>
-    <dependency ref="http-cache-semantics@4.1.1"/>
-    <dependency ref="http-proxy-agent@7.0.2">
-      <dependency ref="agent-base@7.1.3"/>
-      <dependency ref="debug@4.4.0"/>
-    </dependency>
-    <dependency ref="https-proxy-agent@7.0.6">
-      <dependency ref="agent-base@7.1.3"/>
-      <dependency ref="debug@4.4.0"/>
-    </dependency>
-    <dependency ref="iconv-lite@0.6.3">
-      <dependency ref="safer-buffer@2.1.2"/>
-    </dependency>
-    <dependency ref="ieee754@1.2.1"/>
-    <dependency ref="ignore@5.3.2"/>
-    <dependency ref="imurmurhash@0.1.4"/>
-    <dependency ref="indent-string@4.0.0"/>
-    <dependency ref="inherits@2.0.4"/>
-    <dependency ref="ini@1.3.8"/>
-    <dependency ref="ip-address@9.0.5">
-      <dependency ref="jsbn@1.1.0"/>
-      <dependency ref="sprintf-js@1.1.3"/>
-    </dependency>
-    <dependency ref="is-fullwidth-code-point@3.0.0"/>
-    <dependency ref="is-lambda@1.0.1"/>
-    <dependency ref="is-obj@3.0.0"/>
-    <dependency ref="isexe@3.1.1"/>
-    <dependency ref="jackspeak@3.4.3">
-      <dependency ref="@isaacs/cliui@8.0.2"/>
-      <dependency ref="@pkgjs/parseargs@0.11.0"/>
-    </dependency>
-    <dependency ref="js-yaml@3.14.1">
-      <dependency ref="argparse@1.0.10"/>
-      <dependency ref="esprima@4.0.1"/>
-    </dependency>
-    <dependency ref="jsbn@1.1.0"/>
-    <dependency ref="json-schema-traverse@1.0.0"/>
-    <dependency ref="libxmljs2@0.35.0">
-      <dependency ref="bindings@1.5.0"/>
-      <dependency ref="nan@2.20.0"/>
-      <dependency ref="node-gyp@10.3.1"/>
-      <dependency ref="prebuild-install@7.1.2"/>
-    </dependency>
-    <dependency ref="lru-cache@10.4.3"/>
-    <dependency ref="make-fetch-happen@13.0.1">
-      <dependency ref="@npmcli/agent@2.2.2"/>
-      <dependency ref="cacache@18.0.4"/>
-      <dependency ref="http-cache-semantics@4.1.1"/>
-      <dependency ref="is-lambda@1.0.1"/>
-      <dependency ref="minipass-fetch@3.0.5"/>
-      <dependency ref="minipass-flush@1.0.5"/>
-      <dependency ref="minipass-pipeline@1.2.4"/>
-      <dependency ref="minipass@7.1.2"/>
-      <dependency ref="negotiator@0.6.4"/>
-      <dependency ref="proc-log@4.2.0"/>
-      <dependency ref="promise-retry@2.0.1"/>
-      <dependency ref="ssri@10.0.6"/>
-    </dependency>
-    <dependency ref="mimic-response@3.1.0"/>
-    <dependency ref="minimatch@9.0.5">
-      <dependency ref="brace-expansion@2.0.1"/>
-    </dependency>
-    <dependency ref="minimist@1.2.8"/>
-    <dependency ref="minipass-collect@2.0.1">
-      <dependency ref="minipass@7.1.2"/>
-    </dependency>
-    <dependency ref="minipass-fetch@3.0.5">
-      <dependency ref="encoding@0.1.13"/>
-      <dependency ref="minipass-sized@1.0.3"/>
-      <dependency ref="minipass@7.1.2"/>
-      <dependency ref="minizlib@2.1.2"/>
-    </dependency>
-    <dependency ref="minipass-flush@1.0.5">
-      <dependency ref="minipass-flush@1.0.5|minipass@3.3.6"/>
-    </dependency>
-    <dependency ref="minipass-flush@1.0.5|minipass@3.3.6">
-      <dependency ref="yallist@4.0.0"/>
-    </dependency>
-    <dependency ref="minipass-pipeline@1.2.4">
-      <dependency ref="minipass-pipeline@1.2.4|minipass@3.3.6"/>
-    </dependency>
-    <dependency ref="minipass-pipeline@1.2.4|minipass@3.3.6">
-      <dependency ref="yallist@4.0.0"/>
-    </dependency>
-    <dependency ref="minipass-sized@1.0.3">
-      <dependency ref="minipass-sized@1.0.3|minipass@3.3.6"/>
-    </dependency>
-    <dependency ref="minipass-sized@1.0.3|minipass@3.3.6">
-      <dependency ref="yallist@4.0.0"/>
-    </dependency>
-    <dependency ref="minipass@7.1.2"/>
-    <dependency ref="minizlib@2.1.2">
-      <dependency ref="minizlib@2.1.2|minipass@3.3.6"/>
-      <dependency ref="yallist@4.0.0"/>
-    </dependency>
-    <dependency ref="minizlib@2.1.2|minipass@3.3.6">
-      <dependency ref="yallist@4.0.0"/>
-    </dependency>
-    <dependency ref="mkdirp-classic@0.5.3"/>
-    <dependency ref="mkdirp@1.0.4"/>
-    <dependency ref="moo@0.5.2"/>
-    <dependency ref="ms@2.1.3"/>
-    <dependency ref="nan@2.20.0"/>
-    <dependency ref="napi-build-utils@1.0.2"/>
-    <dependency ref="nearley@2.20.1">
-      <dependency ref="commander@2.20.3"/>
-      <dependency ref="moo@0.5.2"/>
-      <dependency ref="railroad-diagrams@1.0.0"/>
-      <dependency ref="randexp@0.4.6"/>
-    </dependency>
-    <dependency ref="negotiator@0.6.4"/>
-    <dependency ref="node-abi@3.71.0">
-      <dependency ref="semver@7.6.3"/>
-    </dependency>
-    <dependency ref="node-gyp@10.3.1">
-      <dependency ref="env-paths@2.2.1"/>
-      <dependency ref="exponential-backoff@3.1.1"/>
-      <dependency ref="glob@10.4.5"/>
-      <dependency ref="graceful-fs@4.2.11"/>
-      <dependency ref="make-fetch-happen@13.0.1"/>
-      <dependency ref="nopt@7.2.1"/>
-      <dependency ref="proc-log@4.2.0"/>
-      <dependency ref="semver@7.6.3"/>
-      <dependency ref="tar@6.2.1"/>
-      <dependency ref="which@4.0.0"/>
-    </dependency>
-    <dependency ref="nopt@7.2.1">
-      <dependency ref="abbrev@2.0.0"/>
-    </dependency>
-    <dependency ref="once@1.4.0">
-      <dependency ref="wrappy@1.0.2"/>
-    </dependency>
-    <dependency ref="p-map@4.0.0">
-      <dependency ref="aggregate-error@3.1.0"/>
-    </dependency>
-    <dependency ref="package-json-from-dist@1.0.1"/>
-    <dependency ref="packageurl-js@2.0.1"/>
-    <dependency ref="path-key@3.1.1"/>
-    <dependency ref="path-scurry@1.11.1">
-      <dependency ref="lru-cache@10.4.3"/>
-      <dependency ref="minipass@7.1.2"/>
-    </dependency>
-    <dependency ref="prebuild-install@7.1.2">
-      <dependency ref="detect-libc@2.0.3"/>
-      <dependency ref="expand-template@2.0.3"/>
-      <dependency ref="github-from-package@0.0.0"/>
-      <dependency ref="minimist@1.2.8"/>
-      <dependency ref="mkdirp-classic@0.5.3"/>
-      <dependency ref="napi-build-utils@1.0.2"/>
-      <dependency ref="node-abi@3.71.0"/>
-      <dependency ref="pump@3.0.2"/>
-      <dependency ref="rc@1.2.8"/>
-      <dependency ref="simple-get@4.0.1"/>
-      <dependency ref="tar-fs@2.1.1"/>
-      <dependency ref="tunnel-agent@0.6.0"/>
-    </dependency>
-    <dependency ref="proc-log@4.2.0"/>
-    <dependency ref="promise-retry@2.0.1">
-      <dependency ref="err-code@2.0.3"/>
-      <dependency ref="retry@0.12.0"/>
-    </dependency>
-    <dependency ref="pump@3.0.2">
-      <dependency ref="end-of-stream@1.4.4"/>
-      <dependency ref="once@1.4.0"/>
-    </dependency>
-    <dependency ref="punycode@2.3.1"/>
-    <dependency ref="railroad-diagrams@1.0.0"/>
-    <dependency ref="randexp@0.4.6">
-      <dependency ref="discontinuous-range@1.0.0"/>
-      <dependency ref="ret@0.1.15"/>
-    </dependency>
-    <dependency ref="rc@1.2.8">
-      <dependency ref="deep-extend@0.6.0"/>
-      <dependency ref="ini@1.3.8"/>
-      <dependency ref="minimist@1.2.8"/>
-      <dependency ref="strip-json-comments@2.0.1"/>
-    </dependency>
-    <dependency ref="readable-stream@3.6.2">
-      <dependency ref="inherits@2.0.4"/>
-      <dependency ref="string_decoder@1.3.0"/>
-      <dependency ref="util-deprecate@1.0.2"/>
-    </dependency>
-    <dependency ref="require-from-string@2.0.2"/>
-    <dependency ref="ret@0.1.15"/>
-    <dependency ref="retry@0.12.0"/>
-    <dependency ref="safe-buffer@5.2.1"/>
-    <dependency ref="safer-buffer@2.1.2"/>
-    <dependency ref="schemes@1.4.0">
-      <dependency ref="extend@3.0.2"/>
-    </dependency>
-    <dependency ref="semver@7.6.3"/>
-    <dependency ref="shebang-command@2.0.0">
-      <dependency ref="shebang-regex@3.0.0"/>
-    </dependency>
-    <dependency ref="shebang-regex@3.0.0"/>
-    <dependency ref="signal-exit@4.1.0"/>
-    <dependency ref="simple-concat@1.0.1"/>
-    <dependency ref="simple-get@4.0.1">
-      <dependency ref="decompress-response@6.0.0"/>
-      <dependency ref="once@1.4.0"/>
-      <dependency ref="simple-concat@1.0.1"/>
-    </dependency>
-    <dependency ref="smart-buffer@4.2.0"/>
-    <dependency ref="smtp-address-parser@1.1.0">
-      <dependency ref="nearley@2.20.1"/>
-    </dependency>
-    <dependency ref="socks-proxy-agent@8.0.5">
-      <dependency ref="agent-base@7.1.3"/>
-      <dependency ref="debug@4.4.0"/>
-      <dependency ref="socks@2.8.3"/>
-    </dependency>
-    <dependency ref="socks@2.8.3">
-      <dependency ref="ip-address@9.0.5"/>
-      <dependency ref="smart-buffer@4.2.0"/>
-    </dependency>
-    <dependency ref="spdx-exceptions@2.5.0"/>
-    <dependency ref="spdx-expression-parse@4.0.0">
-      <dependency ref="spdx-exceptions@2.5.0"/>
-      <dependency ref="spdx-license-ids@3.0.20"/>
-    </dependency>
-    <dependency ref="spdx-license-ids@3.0.20"/>
-    <dependency ref="sprintf-js@1.1.3"/>
-    <dependency ref="ssri@10.0.6">
-      <dependency ref="minipass@7.1.2"/>
-    </dependency>
-    <dependency ref="string_decoder@1.3.0">
-      <dependency ref="safe-buffer@5.2.1"/>
-    </dependency>
-    <dependency ref="string-width@4.2.3">
-      <dependency ref="is-fullwidth-code-point@3.0.0"/>
-      <dependency ref="string-width@4.2.3|emoji-regex@8.0.0"/>
-      <dependency ref="string-width@4.2.3|strip-ansi@6.0.1"/>
-    </dependency>
-    <dependency ref="string-width@4.2.3|ansi-regex@5.0.1"/>
-    <dependency ref="string-width@4.2.3|emoji-regex@8.0.0"/>
-    <dependency ref="string-width@4.2.3|strip-ansi@6.0.1">
-      <dependency ref="string-width@4.2.3|ansi-regex@5.0.1"/>
-    </dependency>
-    <dependency ref="string-width@5.1.2">
-      <dependency ref="eastasianwidth@0.2.0"/>
-      <dependency ref="emoji-regex@9.2.2"/>
-      <dependency ref="strip-ansi@7.1.0"/>
-    </dependency>
-    <dependency ref="strip-ansi@6.0.1">
-      <dependency ref="strip-ansi@6.0.1|ansi-regex@5.0.1"/>
-    </dependency>
-    <dependency ref="strip-ansi@6.0.1|ansi-regex@5.0.1"/>
-    <dependency ref="strip-ansi@7.1.0">
-      <dependency ref="ansi-regex@6.1.0"/>
-    </dependency>
-    <dependency ref="strip-json-comments@2.0.1"/>
-    <dependency ref="tar-fs@2.1.1">
-      <dependency ref="mkdirp-classic@0.5.3"/>
-      <dependency ref="pump@3.0.2"/>
-      <dependency ref="tar-fs@2.1.1|chownr@1.1.4"/>
-      <dependency ref="tar-stream@2.2.0"/>
-    </dependency>
-    <dependency ref="tar-fs@2.1.1|chownr@1.1.4"/>
-    <dependency ref="tar-stream@2.2.0">
-      <dependency ref="bl@4.1.0"/>
-      <dependency ref="end-of-stream@1.4.4"/>
-      <dependency ref="fs-constants@1.0.0"/>
-      <dependency ref="inherits@2.0.4"/>
-      <dependency ref="readable-stream@3.6.2"/>
-    </dependency>
-    <dependency ref="tar@6.2.1">
-      <dependency ref="chownr@2.0.0"/>
-      <dependency ref="minizlib@2.1.2"/>
-      <dependency ref="mkdirp@1.0.4"/>
-      <dependency ref="tar@6.2.1|fs-minipass@2.1.0"/>
-      <dependency ref="tar@6.2.1|minipass@5.0.0"/>
-      <dependency ref="yallist@4.0.0"/>
-    </dependency>
-    <dependency ref="tar@6.2.1|fs-minipass@2.1.0">
-      <dependency ref="tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6"/>
-    </dependency>
-    <dependency ref="tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6">
-      <dependency ref="yallist@4.0.0"/>
-    </dependency>
-    <dependency ref="tar@6.2.1|minipass@5.0.0"/>
-    <dependency ref="tunnel-agent@0.6.0">
-      <dependency ref="safe-buffer@5.2.1"/>
-    </dependency>
-    <dependency ref="undici-types@5.26.5"/>
-    <dependency ref="unique-filename@3.0.0">
-      <dependency ref="unique-slug@4.0.0"/>
-    </dependency>
-    <dependency ref="unique-slug@4.0.0">
-      <dependency ref="imurmurhash@0.1.4"/>
-    </dependency>
-    <dependency ref="uri-js@4.4.1">
-      <dependency ref="punycode@2.3.1"/>
-    </dependency>
-    <dependency ref="util-deprecate@1.0.2"/>
-    <dependency ref="uuid@8.3.2"/>
-    <dependency ref="uuidv4@6.2.13">
-      <dependency ref="@types/uuid@8.3.4"/>
-      <dependency ref="uuid@8.3.2"/>
-    </dependency>
-    <dependency ref="which@4.0.0">
-      <dependency ref="isexe@3.1.1"/>
-    </dependency>
-    <dependency ref="wrap-ansi@7.0.0">
-      <dependency ref="wrap-ansi@7.0.0|ansi-styles@4.3.0"/>
-      <dependency ref="wrap-ansi@7.0.0|string-width@4.2.3"/>
-      <dependency ref="wrap-ansi@7.0.0|strip-ansi@6.0.1"/>
-    </dependency>
-    <dependency ref="wrap-ansi@7.0.0|ansi-regex@5.0.1"/>
-    <dependency ref="wrap-ansi@7.0.0|ansi-styles@4.3.0">
-      <dependency ref="color-convert@2.0.1"/>
-    </dependency>
-    <dependency ref="wrap-ansi@7.0.0|emoji-regex@8.0.0"/>
-    <dependency ref="wrap-ansi@7.0.0|string-width@4.2.3">
-      <dependency ref="is-fullwidth-code-point@3.0.0"/>
-      <dependency ref="wrap-ansi@7.0.0|emoji-regex@8.0.0"/>
-      <dependency ref="wrap-ansi@7.0.0|strip-ansi@6.0.1"/>
-    </dependency>
-    <dependency ref="wrap-ansi@7.0.0|strip-ansi@6.0.1">
-      <dependency ref="wrap-ansi@7.0.0|ansi-regex@5.0.1"/>
-    </dependency>
-    <dependency ref="wrap-ansi@8.1.0">
-      <dependency ref="ansi-styles@6.2.1"/>
-      <dependency ref="string-width@5.1.2"/>
-      <dependency ref="strip-ansi@7.1.0"/>
-    </dependency>
-    <dependency ref="wrappy@1.0.2"/>
-    <dependency ref="xmlbuilder2@3.1.1">
-      <dependency ref="@oozcitak/dom@1.15.10"/>
-      <dependency ref="@oozcitak/infra@1.0.8"/>
-      <dependency ref="@oozcitak/util@8.3.8"/>
-      <dependency ref="js-yaml@3.14.1"/>
-    </dependency>
-    <dependency ref="yallist@4.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared">
+      <dependency ref="@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|@db-ui/base@0.29.2"/>
+      <dependency ref="@dummy-projects/with-prepared|@types/node@20.14.10"/>
+      <dependency ref="@dummy-projects/with-prepared|@types/uuid@8.3.4"/>
+      <dependency ref="@dummy-projects/with-prepared|base64-js@1.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|buffer@5.7.1"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2"/>
+      <dependency ref="@dummy-projects/with-prepared|ignore@5.3.2"/>
+      <dependency ref="@dummy-projects/with-prepared|is-obj@3.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|uuid@8.3.2"/>
+      <dependency ref="@dummy-projects/with-prepared|uuidv4@6.2.13"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0">
+      <dependency ref="@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="@dummy-projects/with-prepared|ajv-formats@3.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|ajv@8.17.1"/>
+      <dependency ref="@dummy-projects/with-prepared|libxmljs2@0.35.0"/>
+      <dependency ref="@dummy-projects/with-prepared|packageurl-js@2.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|spdx-expression-parse@4.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|xmlbuilder2@3.1.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|@db-ui/base@0.29.2"/>
+    <dependency ref="@dummy-projects/with-prepared|@isaacs/cliui@8.0.2">
+      <dependency ref="@dummy-projects/with-prepared|string-width@4.2.3"/>
+      <dependency ref="@dummy-projects/with-prepared|string-width@5.1.2"/>
+      <dependency ref="@dummy-projects/with-prepared|strip-ansi@6.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|strip-ansi@7.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|wrap-ansi@8.1.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|@npmcli/agent@2.2.2">
+      <dependency ref="@dummy-projects/with-prepared|agent-base@7.1.3"/>
+      <dependency ref="@dummy-projects/with-prepared|http-proxy-agent@7.0.2"/>
+      <dependency ref="@dummy-projects/with-prepared|https-proxy-agent@7.0.6"/>
+      <dependency ref="@dummy-projects/with-prepared|lru-cache@10.4.3"/>
+      <dependency ref="@dummy-projects/with-prepared|socks-proxy-agent@8.0.5"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|@npmcli/fs@3.1.1">
+      <dependency ref="@dummy-projects/with-prepared|semver@7.6.3"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|@oozcitak/dom@1.15.10">
+      <dependency ref="@dummy-projects/with-prepared|@oozcitak/infra@1.0.8"/>
+      <dependency ref="@dummy-projects/with-prepared|@oozcitak/url@1.0.4"/>
+      <dependency ref="@dummy-projects/with-prepared|@oozcitak/util@8.3.8"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|@oozcitak/infra@1.0.8">
+      <dependency ref="@dummy-projects/with-prepared|@oozcitak/util@8.3.8"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|@oozcitak/url@1.0.4">
+      <dependency ref="@dummy-projects/with-prepared|@oozcitak/infra@1.0.8"/>
+      <dependency ref="@dummy-projects/with-prepared|@oozcitak/util@8.3.8"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|@oozcitak/util@8.3.8"/>
+    <dependency ref="@dummy-projects/with-prepared|@pkgjs/parseargs@0.11.0"/>
+    <dependency ref="@dummy-projects/with-prepared|@types/node@20.14.10">
+      <dependency ref="@dummy-projects/with-prepared|undici-types@5.26.5"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|@types/uuid@8.3.4"/>
+    <dependency ref="@dummy-projects/with-prepared|abbrev@2.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|agent-base@7.1.3"/>
+    <dependency ref="@dummy-projects/with-prepared|aggregate-error@3.1.0">
+      <dependency ref="@dummy-projects/with-prepared|clean-stack@2.2.0"/>
+      <dependency ref="@dummy-projects/with-prepared|indent-string@4.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1">
+      <dependency ref="@dummy-projects/with-prepared|ajv@8.17.1"/>
+      <dependency ref="@dummy-projects/with-prepared|punycode@2.3.1"/>
+      <dependency ref="@dummy-projects/with-prepared|schemes@1.4.0"/>
+      <dependency ref="@dummy-projects/with-prepared|smtp-address-parser@1.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|uri-js@4.4.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|ajv-formats@3.0.1">
+      <dependency ref="@dummy-projects/with-prepared|ajv@8.17.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|ajv@8.17.1">
+      <dependency ref="@dummy-projects/with-prepared|fast-deep-equal@3.1.3"/>
+      <dependency ref="@dummy-projects/with-prepared|fast-uri@3.0.3"/>
+      <dependency ref="@dummy-projects/with-prepared|json-schema-traverse@1.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|require-from-string@2.0.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|ansi-regex@6.1.0"/>
+    <dependency ref="@dummy-projects/with-prepared|ansi-styles@6.2.1"/>
+    <dependency ref="@dummy-projects/with-prepared|argparse@1.0.10">
+      <dependency ref="@dummy-projects/with-prepared|argparse@1.0.10|sprintf-js@1.0.3"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|argparse@1.0.10|sprintf-js@1.0.3"/>
+    <dependency ref="@dummy-projects/with-prepared|balanced-match@1.0.2"/>
+    <dependency ref="@dummy-projects/with-prepared|base64-js@1.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|bindings@1.5.0">
+      <dependency ref="@dummy-projects/with-prepared|file-uri-to-path@1.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bl@4.1.0">
+      <dependency ref="@dummy-projects/with-prepared|buffer@5.7.1"/>
+      <dependency ref="@dummy-projects/with-prepared|inherits@2.0.4"/>
+      <dependency ref="@dummy-projects/with-prepared|readable-stream@3.6.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|brace-expansion@2.0.1">
+      <dependency ref="@dummy-projects/with-prepared|balanced-match@1.0.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|buffer@5.7.1">
+      <dependency ref="@dummy-projects/with-prepared|buffer@5.7.1|base64-js@1.5.1"/>
+      <dependency ref="@dummy-projects/with-prepared|ieee754@1.2.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|buffer@5.7.1|base64-js@1.5.1"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|yargs@4.1.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|ansi-regex@2.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|builtin-modules@1.1.1"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|camelcase@2.1.0"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|cliui@3.1.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|string-width@1.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-ansi@3.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|wrap-ansi@1.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|code-point-at@1.0.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|decamelize@1.1.2">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|error-ex@1.3.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-arrayish@0.2.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|find-up@1.1.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|path-exists@2.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|hosted-git-info@2.1.4"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|invert-kv@1.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-arrayish@0.2.1"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-builtin-module@1.0.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|builtin-modules@1.1.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-utf8@0.2.1"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lcid@1.0.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|invert-kv@1.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|load-json-file@1.1.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|parse-json@2.2.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pify@2.3.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-bom@2.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.assign@4.0.3">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.keys@4.0.3"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.rest@4.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.keys@4.0.3"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.rest@4.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|normalize-package-data@2.3.5">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|hosted-git-info@2.1.4"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-builtin-module@1.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|semver@5.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|number-is-nan@1.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|object-assign@4.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|os-locale@1.4.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lcid@1.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|parse-json@2.2.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|error-ex@1.3.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|path-exists@2.1.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|path-type@1.1.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|graceful-fs@4.1.3"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pify@2.3.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie-promise@2.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pify@2.3.0"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie-promise@2.0.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie@2.0.4"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie@2.0.4"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pkg-conf@1.1.1">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|find-up@1.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|object-assign@4.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg@1.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|symbol@0.2.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg-up@1.0.1">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|find-up@1.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg@1.1.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg@1.1.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|load-json-file@1.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|normalize-package-data@2.3.5"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|path-type@1.1.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|require-main-filename@1.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|semver@5.1.0"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-correct@1.0.2">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|string-width@1.0.1">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|code-point-at@1.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-ansi@3.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-ansi@3.0.1">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|ansi-regex@2.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-bom@2.0.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-utf8@0.2.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|symbol@0.2.1"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-correct@1.0.2"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|window-size@0.2.0"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|wrap-ansi@1.0.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|string-width@1.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|y18n@3.2.0"/>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|yargs-parser@2.1.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|camelcase@2.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.assign@4.0.3"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|yargs@4.1.0">
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|camelcase@2.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|cliui@3.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|decamelize@1.1.2"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|os-locale@1.4.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pkg-conf@1.1.1"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg-up@1.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|require-main-filename@1.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|string-width@1.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|window-size@0.2.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|y18n@3.2.0"/>
+      <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2|yargs-parser@2.1.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|cacache@18.0.4">
+      <dependency ref="@dummy-projects/with-prepared|@npmcli/fs@3.1.1"/>
+      <dependency ref="@dummy-projects/with-prepared|fs-minipass@3.0.3"/>
+      <dependency ref="@dummy-projects/with-prepared|glob@10.4.5"/>
+      <dependency ref="@dummy-projects/with-prepared|lru-cache@10.4.3"/>
+      <dependency ref="@dummy-projects/with-prepared|minipass-collect@2.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|minipass-flush@1.0.5"/>
+      <dependency ref="@dummy-projects/with-prepared|minipass-pipeline@1.2.4"/>
+      <dependency ref="@dummy-projects/with-prepared|minipass@7.1.2"/>
+      <dependency ref="@dummy-projects/with-prepared|p-map@4.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|ssri@10.0.6"/>
+      <dependency ref="@dummy-projects/with-prepared|tar@6.2.1"/>
+      <dependency ref="@dummy-projects/with-prepared|unique-filename@3.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|chownr@2.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|clean-stack@2.2.0"/>
+    <dependency ref="@dummy-projects/with-prepared|color-convert@2.0.1">
+      <dependency ref="@dummy-projects/with-prepared|color-name@1.1.4"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|color-name@1.1.4"/>
+    <dependency ref="@dummy-projects/with-prepared|commander@2.20.3"/>
+    <dependency ref="@dummy-projects/with-prepared|cross-spawn@7.0.6">
+      <dependency ref="@dummy-projects/with-prepared|cross-spawn@7.0.6|which@2.0.2"/>
+      <dependency ref="@dummy-projects/with-prepared|path-key@3.1.1"/>
+      <dependency ref="@dummy-projects/with-prepared|shebang-command@2.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|cross-spawn@7.0.6|isexe@2.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|cross-spawn@7.0.6|which@2.0.2">
+      <dependency ref="@dummy-projects/with-prepared|cross-spawn@7.0.6|isexe@2.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|debug@4.4.0">
+      <dependency ref="@dummy-projects/with-prepared|ms@2.1.3"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|decompress-response@6.0.0">
+      <dependency ref="@dummy-projects/with-prepared|mimic-response@3.1.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|deep-extend@0.6.0"/>
+    <dependency ref="@dummy-projects/with-prepared|detect-libc@2.0.3"/>
+    <dependency ref="@dummy-projects/with-prepared|discontinuous-range@1.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|eastasianwidth@0.2.0"/>
+    <dependency ref="@dummy-projects/with-prepared|emoji-regex@9.2.2"/>
+    <dependency ref="@dummy-projects/with-prepared|encoding@0.1.13">
+      <dependency ref="@dummy-projects/with-prepared|iconv-lite@0.6.3"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|end-of-stream@1.4.4">
+      <dependency ref="@dummy-projects/with-prepared|once@1.4.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|env-paths@2.2.1"/>
+    <dependency ref="@dummy-projects/with-prepared|err-code@2.0.3"/>
+    <dependency ref="@dummy-projects/with-prepared|esprima@4.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|expand-template@2.0.3"/>
+    <dependency ref="@dummy-projects/with-prepared|exponential-backoff@3.1.1"/>
+    <dependency ref="@dummy-projects/with-prepared|extend@3.0.2"/>
+    <dependency ref="@dummy-projects/with-prepared|fast-deep-equal@3.1.3"/>
+    <dependency ref="@dummy-projects/with-prepared|fast-uri@3.0.3"/>
+    <dependency ref="@dummy-projects/with-prepared|file-uri-to-path@1.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|foreground-child@3.3.0">
+      <dependency ref="@dummy-projects/with-prepared|cross-spawn@7.0.6"/>
+      <dependency ref="@dummy-projects/with-prepared|signal-exit@4.1.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|fs-constants@1.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|fs-minipass@3.0.3">
+      <dependency ref="@dummy-projects/with-prepared|minipass@7.1.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|github-from-package@0.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|glob@10.4.5">
+      <dependency ref="@dummy-projects/with-prepared|foreground-child@3.3.0"/>
+      <dependency ref="@dummy-projects/with-prepared|jackspeak@3.4.3"/>
+      <dependency ref="@dummy-projects/with-prepared|minimatch@9.0.5"/>
+      <dependency ref="@dummy-projects/with-prepared|minipass@7.1.2"/>
+      <dependency ref="@dummy-projects/with-prepared|package-json-from-dist@1.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|path-scurry@1.11.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|graceful-fs@4.2.11"/>
+    <dependency ref="@dummy-projects/with-prepared|http-cache-semantics@4.1.1"/>
+    <dependency ref="@dummy-projects/with-prepared|http-proxy-agent@7.0.2">
+      <dependency ref="@dummy-projects/with-prepared|agent-base@7.1.3"/>
+      <dependency ref="@dummy-projects/with-prepared|debug@4.4.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|https-proxy-agent@7.0.6">
+      <dependency ref="@dummy-projects/with-prepared|agent-base@7.1.3"/>
+      <dependency ref="@dummy-projects/with-prepared|debug@4.4.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|iconv-lite@0.6.3">
+      <dependency ref="@dummy-projects/with-prepared|safer-buffer@2.1.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|ieee754@1.2.1"/>
+    <dependency ref="@dummy-projects/with-prepared|ignore@5.3.2"/>
+    <dependency ref="@dummy-projects/with-prepared|imurmurhash@0.1.4"/>
+    <dependency ref="@dummy-projects/with-prepared|indent-string@4.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|inherits@2.0.4"/>
+    <dependency ref="@dummy-projects/with-prepared|ini@1.3.8"/>
+    <dependency ref="@dummy-projects/with-prepared|ip-address@9.0.5">
+      <dependency ref="@dummy-projects/with-prepared|jsbn@1.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|sprintf-js@1.1.3"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|is-fullwidth-code-point@3.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|is-lambda@1.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|is-obj@3.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|isexe@3.1.1"/>
+    <dependency ref="@dummy-projects/with-prepared|jackspeak@3.4.3">
+      <dependency ref="@dummy-projects/with-prepared|@isaacs/cliui@8.0.2"/>
+      <dependency ref="@dummy-projects/with-prepared|@pkgjs/parseargs@0.11.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|js-yaml@3.14.1">
+      <dependency ref="@dummy-projects/with-prepared|argparse@1.0.10"/>
+      <dependency ref="@dummy-projects/with-prepared|esprima@4.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|jsbn@1.1.0"/>
+    <dependency ref="@dummy-projects/with-prepared|json-schema-traverse@1.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|libxmljs2@0.35.0">
+      <dependency ref="@dummy-projects/with-prepared|bindings@1.5.0"/>
+      <dependency ref="@dummy-projects/with-prepared|nan@2.20.0"/>
+      <dependency ref="@dummy-projects/with-prepared|node-gyp@10.3.1"/>
+      <dependency ref="@dummy-projects/with-prepared|prebuild-install@7.1.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|lru-cache@10.4.3"/>
+    <dependency ref="@dummy-projects/with-prepared|make-fetch-happen@13.0.1">
+      <dependency ref="@dummy-projects/with-prepared|@npmcli/agent@2.2.2"/>
+      <dependency ref="@dummy-projects/with-prepared|cacache@18.0.4"/>
+      <dependency ref="@dummy-projects/with-prepared|http-cache-semantics@4.1.1"/>
+      <dependency ref="@dummy-projects/with-prepared|is-lambda@1.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|minipass-fetch@3.0.5"/>
+      <dependency ref="@dummy-projects/with-prepared|minipass-flush@1.0.5"/>
+      <dependency ref="@dummy-projects/with-prepared|minipass-pipeline@1.2.4"/>
+      <dependency ref="@dummy-projects/with-prepared|minipass@7.1.2"/>
+      <dependency ref="@dummy-projects/with-prepared|negotiator@0.6.4"/>
+      <dependency ref="@dummy-projects/with-prepared|proc-log@4.2.0"/>
+      <dependency ref="@dummy-projects/with-prepared|promise-retry@2.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|ssri@10.0.6"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|mimic-response@3.1.0"/>
+    <dependency ref="@dummy-projects/with-prepared|minimatch@9.0.5">
+      <dependency ref="@dummy-projects/with-prepared|brace-expansion@2.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|minimist@1.2.8"/>
+    <dependency ref="@dummy-projects/with-prepared|minipass-collect@2.0.1">
+      <dependency ref="@dummy-projects/with-prepared|minipass@7.1.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|minipass-fetch@3.0.5">
+      <dependency ref="@dummy-projects/with-prepared|encoding@0.1.13"/>
+      <dependency ref="@dummy-projects/with-prepared|minipass-sized@1.0.3"/>
+      <dependency ref="@dummy-projects/with-prepared|minipass@7.1.2"/>
+      <dependency ref="@dummy-projects/with-prepared|minizlib@2.1.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|minipass-flush@1.0.5">
+      <dependency ref="@dummy-projects/with-prepared|minipass-flush@1.0.5|minipass@3.3.6"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|minipass-flush@1.0.5|minipass@3.3.6">
+      <dependency ref="@dummy-projects/with-prepared|yallist@4.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|minipass-pipeline@1.2.4">
+      <dependency ref="@dummy-projects/with-prepared|minipass-pipeline@1.2.4|minipass@3.3.6"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|minipass-pipeline@1.2.4|minipass@3.3.6">
+      <dependency ref="@dummy-projects/with-prepared|yallist@4.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|minipass-sized@1.0.3">
+      <dependency ref="@dummy-projects/with-prepared|minipass-sized@1.0.3|minipass@3.3.6"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|minipass-sized@1.0.3|minipass@3.3.6">
+      <dependency ref="@dummy-projects/with-prepared|yallist@4.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|minipass@7.1.2"/>
+    <dependency ref="@dummy-projects/with-prepared|minizlib@2.1.2">
+      <dependency ref="@dummy-projects/with-prepared|minizlib@2.1.2|minipass@3.3.6"/>
+      <dependency ref="@dummy-projects/with-prepared|yallist@4.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|minizlib@2.1.2|minipass@3.3.6">
+      <dependency ref="@dummy-projects/with-prepared|yallist@4.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|mkdirp-classic@0.5.3"/>
+    <dependency ref="@dummy-projects/with-prepared|mkdirp@1.0.4"/>
+    <dependency ref="@dummy-projects/with-prepared|moo@0.5.2"/>
+    <dependency ref="@dummy-projects/with-prepared|ms@2.1.3"/>
+    <dependency ref="@dummy-projects/with-prepared|nan@2.20.0"/>
+    <dependency ref="@dummy-projects/with-prepared|napi-build-utils@1.0.2"/>
+    <dependency ref="@dummy-projects/with-prepared|nearley@2.20.1">
+      <dependency ref="@dummy-projects/with-prepared|commander@2.20.3"/>
+      <dependency ref="@dummy-projects/with-prepared|moo@0.5.2"/>
+      <dependency ref="@dummy-projects/with-prepared|railroad-diagrams@1.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|randexp@0.4.6"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|negotiator@0.6.4"/>
+    <dependency ref="@dummy-projects/with-prepared|node-abi@3.71.0">
+      <dependency ref="@dummy-projects/with-prepared|semver@7.6.3"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|node-gyp@10.3.1">
+      <dependency ref="@dummy-projects/with-prepared|env-paths@2.2.1"/>
+      <dependency ref="@dummy-projects/with-prepared|exponential-backoff@3.1.1"/>
+      <dependency ref="@dummy-projects/with-prepared|glob@10.4.5"/>
+      <dependency ref="@dummy-projects/with-prepared|graceful-fs@4.2.11"/>
+      <dependency ref="@dummy-projects/with-prepared|make-fetch-happen@13.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|nopt@7.2.1"/>
+      <dependency ref="@dummy-projects/with-prepared|proc-log@4.2.0"/>
+      <dependency ref="@dummy-projects/with-prepared|semver@7.6.3"/>
+      <dependency ref="@dummy-projects/with-prepared|tar@6.2.1"/>
+      <dependency ref="@dummy-projects/with-prepared|which@4.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|nopt@7.2.1">
+      <dependency ref="@dummy-projects/with-prepared|abbrev@2.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|once@1.4.0">
+      <dependency ref="@dummy-projects/with-prepared|wrappy@1.0.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|p-map@4.0.0">
+      <dependency ref="@dummy-projects/with-prepared|aggregate-error@3.1.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|package-json-from-dist@1.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|packageurl-js@2.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|path-key@3.1.1"/>
+    <dependency ref="@dummy-projects/with-prepared|path-scurry@1.11.1">
+      <dependency ref="@dummy-projects/with-prepared|lru-cache@10.4.3"/>
+      <dependency ref="@dummy-projects/with-prepared|minipass@7.1.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|prebuild-install@7.1.2">
+      <dependency ref="@dummy-projects/with-prepared|detect-libc@2.0.3"/>
+      <dependency ref="@dummy-projects/with-prepared|expand-template@2.0.3"/>
+      <dependency ref="@dummy-projects/with-prepared|github-from-package@0.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|minimist@1.2.8"/>
+      <dependency ref="@dummy-projects/with-prepared|mkdirp-classic@0.5.3"/>
+      <dependency ref="@dummy-projects/with-prepared|napi-build-utils@1.0.2"/>
+      <dependency ref="@dummy-projects/with-prepared|node-abi@3.71.0"/>
+      <dependency ref="@dummy-projects/with-prepared|pump@3.0.2"/>
+      <dependency ref="@dummy-projects/with-prepared|rc@1.2.8"/>
+      <dependency ref="@dummy-projects/with-prepared|simple-get@4.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|tar-fs@2.1.1"/>
+      <dependency ref="@dummy-projects/with-prepared|tunnel-agent@0.6.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|proc-log@4.2.0"/>
+    <dependency ref="@dummy-projects/with-prepared|promise-retry@2.0.1">
+      <dependency ref="@dummy-projects/with-prepared|err-code@2.0.3"/>
+      <dependency ref="@dummy-projects/with-prepared|retry@0.12.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|pump@3.0.2">
+      <dependency ref="@dummy-projects/with-prepared|end-of-stream@1.4.4"/>
+      <dependency ref="@dummy-projects/with-prepared|once@1.4.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|punycode@2.3.1"/>
+    <dependency ref="@dummy-projects/with-prepared|railroad-diagrams@1.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|randexp@0.4.6">
+      <dependency ref="@dummy-projects/with-prepared|discontinuous-range@1.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|ret@0.1.15"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|rc@1.2.8">
+      <dependency ref="@dummy-projects/with-prepared|deep-extend@0.6.0"/>
+      <dependency ref="@dummy-projects/with-prepared|ini@1.3.8"/>
+      <dependency ref="@dummy-projects/with-prepared|minimist@1.2.8"/>
+      <dependency ref="@dummy-projects/with-prepared|strip-json-comments@2.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|readable-stream@3.6.2">
+      <dependency ref="@dummy-projects/with-prepared|inherits@2.0.4"/>
+      <dependency ref="@dummy-projects/with-prepared|string_decoder@1.3.0"/>
+      <dependency ref="@dummy-projects/with-prepared|util-deprecate@1.0.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|require-from-string@2.0.2"/>
+    <dependency ref="@dummy-projects/with-prepared|ret@0.1.15"/>
+    <dependency ref="@dummy-projects/with-prepared|retry@0.12.0"/>
+    <dependency ref="@dummy-projects/with-prepared|safe-buffer@5.2.1"/>
+    <dependency ref="@dummy-projects/with-prepared|safer-buffer@2.1.2"/>
+    <dependency ref="@dummy-projects/with-prepared|schemes@1.4.0">
+      <dependency ref="@dummy-projects/with-prepared|extend@3.0.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|semver@7.6.3"/>
+    <dependency ref="@dummy-projects/with-prepared|shebang-command@2.0.0">
+      <dependency ref="@dummy-projects/with-prepared|shebang-regex@3.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|shebang-regex@3.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|signal-exit@4.1.0"/>
+    <dependency ref="@dummy-projects/with-prepared|simple-concat@1.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|simple-get@4.0.1">
+      <dependency ref="@dummy-projects/with-prepared|decompress-response@6.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|once@1.4.0"/>
+      <dependency ref="@dummy-projects/with-prepared|simple-concat@1.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|smart-buffer@4.2.0"/>
+    <dependency ref="@dummy-projects/with-prepared|smtp-address-parser@1.1.0">
+      <dependency ref="@dummy-projects/with-prepared|nearley@2.20.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|socks-proxy-agent@8.0.5">
+      <dependency ref="@dummy-projects/with-prepared|agent-base@7.1.3"/>
+      <dependency ref="@dummy-projects/with-prepared|debug@4.4.0"/>
+      <dependency ref="@dummy-projects/with-prepared|socks@2.8.3"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|socks@2.8.3">
+      <dependency ref="@dummy-projects/with-prepared|ip-address@9.0.5"/>
+      <dependency ref="@dummy-projects/with-prepared|smart-buffer@4.2.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|spdx-exceptions@2.5.0"/>
+    <dependency ref="@dummy-projects/with-prepared|spdx-expression-parse@4.0.0">
+      <dependency ref="@dummy-projects/with-prepared|spdx-exceptions@2.5.0"/>
+      <dependency ref="@dummy-projects/with-prepared|spdx-license-ids@3.0.20"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|spdx-license-ids@3.0.20"/>
+    <dependency ref="@dummy-projects/with-prepared|sprintf-js@1.1.3"/>
+    <dependency ref="@dummy-projects/with-prepared|ssri@10.0.6">
+      <dependency ref="@dummy-projects/with-prepared|minipass@7.1.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|string_decoder@1.3.0">
+      <dependency ref="@dummy-projects/with-prepared|safe-buffer@5.2.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|string-width@4.2.3">
+      <dependency ref="@dummy-projects/with-prepared|is-fullwidth-code-point@3.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|string-width@4.2.3|emoji-regex@8.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|string-width@4.2.3|strip-ansi@6.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|string-width@4.2.3|ansi-regex@5.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|string-width@4.2.3|emoji-regex@8.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|string-width@4.2.3|strip-ansi@6.0.1">
+      <dependency ref="@dummy-projects/with-prepared|string-width@4.2.3|ansi-regex@5.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|string-width@5.1.2">
+      <dependency ref="@dummy-projects/with-prepared|eastasianwidth@0.2.0"/>
+      <dependency ref="@dummy-projects/with-prepared|emoji-regex@9.2.2"/>
+      <dependency ref="@dummy-projects/with-prepared|strip-ansi@7.1.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|strip-ansi@6.0.1">
+      <dependency ref="@dummy-projects/with-prepared|strip-ansi@6.0.1|ansi-regex@5.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|strip-ansi@6.0.1|ansi-regex@5.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|strip-ansi@7.1.0">
+      <dependency ref="@dummy-projects/with-prepared|ansi-regex@6.1.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|strip-json-comments@2.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|tar-fs@2.1.1">
+      <dependency ref="@dummy-projects/with-prepared|mkdirp-classic@0.5.3"/>
+      <dependency ref="@dummy-projects/with-prepared|pump@3.0.2"/>
+      <dependency ref="@dummy-projects/with-prepared|tar-fs@2.1.1|chownr@1.1.4"/>
+      <dependency ref="@dummy-projects/with-prepared|tar-stream@2.2.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|tar-fs@2.1.1|chownr@1.1.4"/>
+    <dependency ref="@dummy-projects/with-prepared|tar-stream@2.2.0">
+      <dependency ref="@dummy-projects/with-prepared|bl@4.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|end-of-stream@1.4.4"/>
+      <dependency ref="@dummy-projects/with-prepared|fs-constants@1.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|inherits@2.0.4"/>
+      <dependency ref="@dummy-projects/with-prepared|readable-stream@3.6.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|tar@6.2.1">
+      <dependency ref="@dummy-projects/with-prepared|chownr@2.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|minizlib@2.1.2"/>
+      <dependency ref="@dummy-projects/with-prepared|mkdirp@1.0.4"/>
+      <dependency ref="@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0"/>
+      <dependency ref="@dummy-projects/with-prepared|tar@6.2.1|minipass@5.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|yallist@4.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0">
+      <dependency ref="@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6">
+      <dependency ref="@dummy-projects/with-prepared|yallist@4.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|tar@6.2.1|minipass@5.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|tunnel-agent@0.6.0">
+      <dependency ref="@dummy-projects/with-prepared|safe-buffer@5.2.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|undici-types@5.26.5"/>
+    <dependency ref="@dummy-projects/with-prepared|unique-filename@3.0.0">
+      <dependency ref="@dummy-projects/with-prepared|unique-slug@4.0.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|unique-slug@4.0.0">
+      <dependency ref="@dummy-projects/with-prepared|imurmurhash@0.1.4"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|uri-js@4.4.1">
+      <dependency ref="@dummy-projects/with-prepared|punycode@2.3.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|util-deprecate@1.0.2"/>
+    <dependency ref="@dummy-projects/with-prepared|uuid@8.3.2"/>
+    <dependency ref="@dummy-projects/with-prepared|uuidv4@6.2.13">
+      <dependency ref="@dummy-projects/with-prepared|@types/uuid@8.3.4"/>
+      <dependency ref="@dummy-projects/with-prepared|uuid@8.3.2"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|which@4.0.0">
+      <dependency ref="@dummy-projects/with-prepared|isexe@3.1.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0">
+      <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|ansi-styles@4.3.0"/>
+      <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|string-width@4.2.3"/>
+      <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|strip-ansi@6.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|ansi-regex@5.0.1"/>
+    <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|ansi-styles@4.3.0">
+      <dependency ref="@dummy-projects/with-prepared|color-convert@2.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|emoji-regex@8.0.0"/>
+    <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|string-width@4.2.3">
+      <dependency ref="@dummy-projects/with-prepared|is-fullwidth-code-point@3.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|emoji-regex@8.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|strip-ansi@6.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|strip-ansi@6.0.1">
+      <dependency ref="@dummy-projects/with-prepared|wrap-ansi@7.0.0|ansi-regex@5.0.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|wrap-ansi@8.1.0">
+      <dependency ref="@dummy-projects/with-prepared|ansi-styles@6.2.1"/>
+      <dependency ref="@dummy-projects/with-prepared|string-width@5.1.2"/>
+      <dependency ref="@dummy-projects/with-prepared|strip-ansi@7.1.0"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|wrappy@1.0.2"/>
+    <dependency ref="@dummy-projects/with-prepared|xmlbuilder2@3.1.1">
+      <dependency ref="@dummy-projects/with-prepared|@oozcitak/dom@1.15.10"/>
+      <dependency ref="@dummy-projects/with-prepared|@oozcitak/infra@1.0.8"/>
+      <dependency ref="@dummy-projects/with-prepared|@oozcitak/util@8.3.8"/>
+      <dependency ref="@dummy-projects/with-prepared|js-yaml@3.14.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|yallist@4.0.0"/>
   </dependencies>
 </bom>

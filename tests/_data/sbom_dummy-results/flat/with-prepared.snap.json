@@ -81,7 +81,7 @@
       "type": "application",
       "name": "with-prepared",
       "group": "@dummy-projects",
-      "bom-ref": "@dummy-projects/with-prepared@-",
+      "bom-ref": "@dummy-projects/with-prepared",
       "purl": "pkg:npm/%40dummy-projects/with-prepared",
       "properties": [
         {
@@ -101,7 +101,7 @@
       "name": "cyclonedx-library",
       "group": "@cyclonedx",
       "version": "7.0.0",
-      "bom-ref": "@cyclonedx/cyclonedx-library@7.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0",
       "author": "Jan Kowalleck",
       "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
       "licenses": [
@@ -147,7 +147,7 @@
       "name": "base",
       "group": "@db-ui",
       "version": "0.29.2",
-      "bom-ref": "@db-ui/base@0.29.2",
+      "bom-ref": "@dummy-projects/with-prepared|@db-ui/base@0.29.2",
       "author": "Maximilian Franzke",
       "description": "Provides basic tokens and assets based on the DB Design System.",
       "licenses": [
@@ -193,7 +193,7 @@
       "name": "cliui",
       "group": "@isaacs",
       "version": "8.0.2",
-      "bom-ref": "@isaacs/cliui@8.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|@isaacs/cliui@8.0.2",
       "author": "Ben Coe",
       "description": "easily create complex multi-column command-line-interfaces",
       "licenses": [
@@ -239,7 +239,7 @@
       "name": "agent",
       "group": "@npmcli",
       "version": "2.2.2",
-      "bom-ref": "@npmcli/agent@2.2.2",
+      "bom-ref": "@dummy-projects/with-prepared|@npmcli/agent@2.2.2",
       "author": "GitHub Inc.",
       "description": "the http/https agent used by the npm cli",
       "licenses": [
@@ -285,7 +285,7 @@
       "name": "fs",
       "group": "@npmcli",
       "version": "3.1.1",
-      "bom-ref": "@npmcli/fs@3.1.1",
+      "bom-ref": "@dummy-projects/with-prepared|@npmcli/fs@3.1.1",
       "author": "GitHub Inc.",
       "description": "filesystem utilities for the npm cli",
       "licenses": [
@@ -331,7 +331,7 @@
       "name": "dom",
       "group": "@oozcitak",
       "version": "1.15.10",
-      "bom-ref": "@oozcitak/dom@1.15.10",
+      "bom-ref": "@dummy-projects/with-prepared|@oozcitak/dom@1.15.10",
       "author": "Ozgur Ozcitak",
       "description": "A modern DOM implementation",
       "licenses": [
@@ -377,7 +377,7 @@
       "name": "infra",
       "group": "@oozcitak",
       "version": "1.0.8",
-      "bom-ref": "@oozcitak/infra@1.0.8",
+      "bom-ref": "@dummy-projects/with-prepared|@oozcitak/infra@1.0.8",
       "author": "Ozgur Ozcitak",
       "description": "An implementation of the Infra Living Standard",
       "licenses": [
@@ -388,8 +388,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40oozcitak/infra@1.0.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Foozcitak%2Finfra.git",
+      "purl": "pkg:npm/%40oozcitak/infra@1.0.8",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@oozcitak/infra/-/infra-1.0.8.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "http://github.com/oozcitak/infra/issues",
           "type": "issue-tracker",
@@ -418,7 +423,7 @@
       "name": "url",
       "group": "@oozcitak",
       "version": "1.0.4",
-      "bom-ref": "@oozcitak/url@1.0.4",
+      "bom-ref": "@dummy-projects/with-prepared|@oozcitak/url@1.0.4",
       "author": "Ozgur Ozcitak",
       "description": "An implementation of the URL Living Standard",
       "licenses": [
@@ -464,7 +469,7 @@
       "name": "util",
       "group": "@oozcitak",
       "version": "8.3.8",
-      "bom-ref": "@oozcitak/util@8.3.8",
+      "bom-ref": "@dummy-projects/with-prepared|@oozcitak/util@8.3.8",
       "author": "Ozgur Ozcitak",
       "description": "Utility functions",
       "licenses": [
@@ -475,8 +480,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40oozcitak/util@8.3.8?vcs_url=git%3A%2F%2Fgithub.com%2Foozcitak%2Futil.git",
+      "purl": "pkg:npm/%40oozcitak/util@8.3.8",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@oozcitak/util/-/util-8.3.8.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "http://github.com/oozcitak/util/issues",
           "type": "issue-tracker",
@@ -505,7 +515,7 @@
       "name": "parseargs",
       "group": "@pkgjs",
       "version": "0.11.0",
-      "bom-ref": "@pkgjs/parseargs@0.11.0",
+      "bom-ref": "@dummy-projects/with-prepared|@pkgjs/parseargs@0.11.0",
       "description": "Polyfill of future proposal for `util.parseArgs()`",
       "licenses": [
         {
@@ -550,7 +560,7 @@
       "name": "node",
       "group": "@types",
       "version": "20.14.10",
-      "bom-ref": "@types/node@20.14.10",
+      "bom-ref": "@dummy-projects/with-prepared|@types/node@20.14.10",
       "description": "TypeScript definitions for node",
       "licenses": [
         {
@@ -595,7 +605,7 @@
       "name": "uuid",
       "group": "@types",
       "version": "8.3.4",
-      "bom-ref": "@types/uuid@8.3.4",
+      "bom-ref": "@dummy-projects/with-prepared|@types/uuid@8.3.4",
       "description": "TypeScript definitions for uuid",
       "licenses": [
         {
@@ -639,7 +649,7 @@
       "type": "library",
       "name": "abbrev",
       "version": "2.0.0",
-      "bom-ref": "abbrev@2.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|abbrev@2.0.0",
       "author": "GitHub Inc.",
       "description": "Like ruby's abbrev module, but in js",
       "licenses": [
@@ -684,7 +694,7 @@
       "type": "library",
       "name": "agent-base",
       "version": "7.1.3",
-      "bom-ref": "agent-base@7.1.3",
+      "bom-ref": "@dummy-projects/with-prepared|agent-base@7.1.3",
       "author": "Nathan Rajlich",
       "description": "Turn a function into an `http.Agent` instance",
       "licenses": [
@@ -729,7 +739,7 @@
       "type": "library",
       "name": "aggregate-error",
       "version": "3.1.0",
-      "bom-ref": "aggregate-error@3.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|aggregate-error@3.1.0",
       "author": "Sindre Sorhus",
       "description": "Create an error from multiple errors",
       "licenses": [
@@ -774,7 +784,7 @@
       "type": "library",
       "name": "ajv-formats-draft2019",
       "version": "1.6.1",
-      "bom-ref": "ajv-formats-draft2019@1.6.1",
+      "bom-ref": "@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1",
       "author": "Carlo Quinonez",
       "description": "Plugin for AJV that adds support for some of string formats adding in the draft2019 JSON Schema.",
       "licenses": [
@@ -819,7 +829,7 @@
       "type": "library",
       "name": "ajv-formats",
       "version": "3.0.1",
-      "bom-ref": "ajv-formats@3.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|ajv-formats@3.0.1",
       "author": "Evgeny Poberezkin",
       "description": "Format validation for Ajv v7+",
       "licenses": [
@@ -864,7 +874,7 @@
       "type": "library",
       "name": "ajv",
       "version": "8.17.1",
-      "bom-ref": "ajv@8.17.1",
+      "bom-ref": "@dummy-projects/with-prepared|ajv@8.17.1",
       "author": "Evgeny Poberezkin",
       "description": "Another JSON Schema Validator",
       "licenses": [
@@ -875,8 +885,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/ajv@8.17.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fajv-validator%2Fajv.git",
+      "purl": "pkg:npm/ajv@8.17.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/ajv-validator/ajv/issues",
           "type": "issue-tracker",
@@ -904,7 +919,7 @@
       "type": "library",
       "name": "ansi-regex",
       "version": "6.1.0",
-      "bom-ref": "ansi-regex@6.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|ansi-regex@6.1.0",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
       "licenses": [
@@ -949,7 +964,7 @@
       "type": "library",
       "name": "ansi-styles",
       "version": "6.2.1",
-      "bom-ref": "ansi-styles@6.2.1",
+      "bom-ref": "@dummy-projects/with-prepared|ansi-styles@6.2.1",
       "author": "Sindre Sorhus",
       "description": "ANSI escape codes for styling strings in the terminal",
       "licenses": [
@@ -994,7 +1009,7 @@
       "type": "library",
       "name": "argparse",
       "version": "1.0.10",
-      "bom-ref": "argparse@1.0.10",
+      "bom-ref": "@dummy-projects/with-prepared|argparse@1.0.10",
       "description": "Very powerful CLI arguments parser. Native port of argparse - python's options parsing library",
       "licenses": [
         {
@@ -1038,7 +1053,7 @@
       "type": "library",
       "name": "sprintf-js",
       "version": "1.0.3",
-      "bom-ref": "argparse@1.0.10|sprintf-js@1.0.3",
+      "bom-ref": "@dummy-projects/with-prepared|argparse@1.0.10|sprintf-js@1.0.3",
       "author": "Alexandru Marasteanu",
       "description": "JavaScript sprintf implementation",
       "licenses": [
@@ -1083,7 +1098,7 @@
       "type": "library",
       "name": "balanced-match",
       "version": "1.0.2",
-      "bom-ref": "balanced-match@1.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|balanced-match@1.0.2",
       "author": "Julian Gruber",
       "description": "Match balanced character pairs, like \"{\" and \"}\"",
       "licenses": [
@@ -1128,7 +1143,7 @@
       "type": "library",
       "name": "base64-js",
       "version": "1.0.1",
-      "bom-ref": "base64-js@1.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|base64-js@1.0.1",
       "author": "T. Jameson Little",
       "description": "Base64 encoding/decoding in pure JS",
       "licenses": [
@@ -1173,7 +1188,7 @@
       "type": "library",
       "name": "bindings",
       "version": "1.5.0",
-      "bom-ref": "bindings@1.5.0",
+      "bom-ref": "@dummy-projects/with-prepared|bindings@1.5.0",
       "author": "Nathan Rajlich",
       "description": "Helper module for loading your native module's .node file",
       "licenses": [
@@ -1218,7 +1233,7 @@
       "type": "library",
       "name": "bl",
       "version": "4.1.0",
-      "bom-ref": "bl@4.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|bl@4.1.0",
       "description": "Buffer List: collect buffers and access with a standard readable Buffer interface, streamable too!",
       "licenses": [
         {
@@ -1262,7 +1277,7 @@
       "type": "library",
       "name": "brace-expansion",
       "version": "2.0.1",
-      "bom-ref": "brace-expansion@2.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|brace-expansion@2.0.1",
       "author": "Julian Gruber",
       "description": "Brace expansion as known from sh/bash",
       "licenses": [
@@ -1307,7 +1322,7 @@
       "type": "library",
       "name": "buffer",
       "version": "5.7.1",
-      "bom-ref": "buffer@5.7.1",
+      "bom-ref": "@dummy-projects/with-prepared|buffer@5.7.1",
       "author": "Feross Aboukhadijeh",
       "description": "Node.js Buffer API, for the browser",
       "licenses": [
@@ -1318,8 +1333,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/buffer@5.7.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git",
+      "purl": "pkg:npm/buffer@5.7.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/feross/buffer/issues",
           "type": "issue-tracker",
@@ -1347,7 +1367,7 @@
       "type": "library",
       "name": "base64-js",
       "version": "1.5.1",
-      "bom-ref": "buffer@5.7.1|base64-js@1.5.1",
+      "bom-ref": "@dummy-projects/with-prepared|buffer@5.7.1|base64-js@1.5.1",
       "author": "T. Jameson Little",
       "description": "Base64 encoding/decoding in pure JS",
       "licenses": [
@@ -1392,7 +1412,7 @@
       "type": "library",
       "name": "bundle-dependencies",
       "version": "1.0.2",
-      "bom-ref": "bundle-dependencies@1.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2",
       "author": "Gajus Kuizinas",
       "description": "Generates bundledDependencies package.json value using values of the dependencies property.",
       "licenses": [
@@ -1437,7 +1457,7 @@
       "type": "library",
       "name": "ansi-regex",
       "version": "2.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|ansi-regex@2.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|ansi-regex@2.0.0",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
       "licenses": [
@@ -1488,7 +1508,7 @@
       "type": "library",
       "name": "builtin-modules",
       "version": "1.1.1",
-      "bom-ref": "bundle-dependencies@1.0.2|builtin-modules@1.1.1",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|builtin-modules@1.1.1",
       "author": "Sindre Sorhus",
       "description": "List of the Node.js builtin modules",
       "licenses": [
@@ -1539,7 +1559,7 @@
       "type": "library",
       "name": "camelcase",
       "version": "2.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|camelcase@2.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|camelcase@2.1.0",
       "author": "Sindre Sorhus",
       "description": "Convert a dash/dot/underscore/space separated string to camelCase: foo-bar → fooBar",
       "licenses": [
@@ -1590,7 +1610,7 @@
       "type": "library",
       "name": "cliui",
       "version": "3.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|cliui@3.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|cliui@3.1.0",
       "author": "Ben Coe",
       "description": "easily create complex multi-column command-line-interfaces",
       "licenses": [
@@ -1641,7 +1661,7 @@
       "type": "library",
       "name": "code-point-at",
       "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|code-point-at@1.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|code-point-at@1.0.0",
       "author": "Sindre Sorhus",
       "description": "ES2015 String#codePointAt() ponyfill",
       "licenses": [
@@ -1692,7 +1712,7 @@
       "type": "library",
       "name": "decamelize",
       "version": "1.1.2",
-      "bom-ref": "bundle-dependencies@1.0.2|decamelize@1.1.2",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|decamelize@1.1.2",
       "author": "Sindre Sorhus",
       "description": "Convert a camelized string into a lowercased one with a custom separator: unicornRainbow → unicorn_rainbow",
       "licenses": [
@@ -1743,7 +1763,7 @@
       "type": "library",
       "name": "error-ex",
       "version": "1.3.0",
-      "bom-ref": "bundle-dependencies@1.0.2|error-ex@1.3.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|error-ex@1.3.0",
       "description": "Easy error subclassing and stack customization",
       "licenses": [
         {
@@ -1793,7 +1813,7 @@
       "type": "library",
       "name": "escape-string-regexp",
       "version": "1.0.5",
-      "bom-ref": "bundle-dependencies@1.0.2|escape-string-regexp@1.0.5",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|escape-string-regexp@1.0.5",
       "author": "Sindre Sorhus",
       "description": "Escape RegExp special characters",
       "licenses": [
@@ -1844,7 +1864,7 @@
       "type": "library",
       "name": "find-up",
       "version": "1.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|find-up@1.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|find-up@1.1.0",
       "author": "Sindre Sorhus",
       "description": "Find a file by walking up parent directories",
       "licenses": [
@@ -1895,7 +1915,7 @@
       "type": "library",
       "name": "graceful-fs",
       "version": "4.1.3",
-      "bom-ref": "bundle-dependencies@1.0.2|graceful-fs@4.1.3",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|graceful-fs@4.1.3",
       "description": "A drop-in replacement for fs, making various improvements.",
       "licenses": [
         {
@@ -1945,7 +1965,7 @@
       "type": "library",
       "name": "hosted-git-info",
       "version": "2.1.4",
-      "bom-ref": "bundle-dependencies@1.0.2|hosted-git-info@2.1.4",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|hosted-git-info@2.1.4",
       "author": "Rebecca Turner",
       "description": "Provides metadata and conversions from repository urls for Github, Bitbucket and Gitlab",
       "licenses": [
@@ -1996,7 +2016,7 @@
       "type": "library",
       "name": "invert-kv",
       "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|invert-kv@1.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|invert-kv@1.0.0",
       "author": "Sindre Sorhus",
       "description": "Invert the key/value of an object. Example: {foo: 'bar'} → {bar: 'foo'}",
       "licenses": [
@@ -2047,7 +2067,7 @@
       "type": "library",
       "name": "is-arrayish",
       "version": "0.2.1",
-      "bom-ref": "bundle-dependencies@1.0.2|is-arrayish@0.2.1",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-arrayish@0.2.1",
       "author": "Qix",
       "description": "Determines if an object can be used as an array",
       "licenses": [
@@ -2098,7 +2118,7 @@
       "type": "library",
       "name": "is-builtin-module",
       "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|is-builtin-module@1.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-builtin-module@1.0.0",
       "author": "Sindre Sorhus",
       "description": "Check if a string matches the name of a Node.js builtin module",
       "licenses": [
@@ -2149,7 +2169,7 @@
       "type": "library",
       "name": "is-fullwidth-code-point",
       "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0",
       "author": "Sindre Sorhus",
       "description": "Check if the character represented by a given Unicode code point is fullwidth",
       "licenses": [
@@ -2200,7 +2220,7 @@
       "type": "library",
       "name": "is-utf8",
       "version": "0.2.1",
-      "bom-ref": "bundle-dependencies@1.0.2|is-utf8@0.2.1",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-utf8@0.2.1",
       "author": "wayfind",
       "description": "Detect if a buffer is utf8 encoded.",
       "licenses": [
@@ -2251,7 +2271,7 @@
       "type": "library",
       "name": "lcid",
       "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|lcid@1.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lcid@1.0.0",
       "author": "Sindre Sorhus",
       "description": "Mapping between standard locale identifiers and Windows locale identifiers (LCID)",
       "licenses": [
@@ -2302,7 +2322,7 @@
       "type": "library",
       "name": "load-json-file",
       "version": "1.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|load-json-file@1.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|load-json-file@1.1.0",
       "author": "Sindre Sorhus",
       "description": "Read and parse a JSON file",
       "licenses": [
@@ -2353,7 +2373,7 @@
       "type": "library",
       "name": "lodash.assign",
       "version": "4.0.3",
-      "bom-ref": "bundle-dependencies@1.0.2|lodash.assign@4.0.3",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.assign@4.0.3",
       "author": "John-David Dalton",
       "description": "The lodash method `_.assign` exported as a module.",
       "licenses": [
@@ -2404,7 +2424,7 @@
       "type": "library",
       "name": "lodash.keys",
       "version": "4.0.3",
-      "bom-ref": "bundle-dependencies@1.0.2|lodash.keys@4.0.3",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.keys@4.0.3",
       "author": "John-David Dalton",
       "description": "The lodash method `_.keys` exported as a module.",
       "licenses": [
@@ -2455,7 +2475,7 @@
       "type": "library",
       "name": "lodash.rest",
       "version": "4.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|lodash.rest@4.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.rest@4.0.1",
       "author": "John-David Dalton",
       "description": "The lodash method `_.rest` exported as a module.",
       "licenses": [
@@ -2506,7 +2526,7 @@
       "type": "library",
       "name": "normalize-package-data",
       "version": "2.3.5",
-      "bom-ref": "bundle-dependencies@1.0.2|normalize-package-data@2.3.5",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|normalize-package-data@2.3.5",
       "author": "Meryn Stol",
       "description": "Normalizes data that can be found in package.json files.",
       "licenses": [
@@ -2557,7 +2577,7 @@
       "type": "library",
       "name": "number-is-nan",
       "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|number-is-nan@1.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|number-is-nan@1.0.0",
       "author": "Sindre Sorhus",
       "description": "ES6 Number.isNaN() ponyfill",
       "licenses": [
@@ -2608,7 +2628,7 @@
       "type": "library",
       "name": "object-assign",
       "version": "4.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|object-assign@4.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|object-assign@4.0.1",
       "author": "Sindre Sorhus",
       "description": "ES6 Object.assign() ponyfill",
       "licenses": [
@@ -2659,7 +2679,7 @@
       "type": "library",
       "name": "os-locale",
       "version": "1.4.0",
-      "bom-ref": "bundle-dependencies@1.0.2|os-locale@1.4.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|os-locale@1.4.0",
       "author": "Sindre Sorhus",
       "description": "Get the system locale",
       "licenses": [
@@ -2710,7 +2730,7 @@
       "type": "library",
       "name": "parse-json",
       "version": "2.2.0",
-      "bom-ref": "bundle-dependencies@1.0.2|parse-json@2.2.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|parse-json@2.2.0",
       "author": "Sindre Sorhus",
       "description": "Parse JSON with more helpful errors",
       "licenses": [
@@ -2761,7 +2781,7 @@
       "type": "library",
       "name": "path-exists",
       "version": "2.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|path-exists@2.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|path-exists@2.1.0",
       "author": "Sindre Sorhus",
       "description": "Check if a path exists",
       "licenses": [
@@ -2812,7 +2832,7 @@
       "type": "library",
       "name": "path-type",
       "version": "1.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|path-type@1.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|path-type@1.1.0",
       "author": "Sindre Sorhus",
       "description": "Check if a path is a file, directory, or symlink",
       "licenses": [
@@ -2863,7 +2883,7 @@
       "type": "library",
       "name": "pify",
       "version": "2.3.0",
-      "bom-ref": "bundle-dependencies@1.0.2|pify@2.3.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pify@2.3.0",
       "author": "Sindre Sorhus",
       "description": "Promisify a callback-style function",
       "licenses": [
@@ -2914,7 +2934,7 @@
       "type": "library",
       "name": "pinkie-promise",
       "version": "2.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|pinkie-promise@2.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie-promise@2.0.0",
       "author": "Vsevolod Strukchinsky",
       "description": "ES2015 Promise ponyfill",
       "licenses": [
@@ -2965,7 +2985,7 @@
       "type": "library",
       "name": "pinkie",
       "version": "2.0.4",
-      "bom-ref": "bundle-dependencies@1.0.2|pinkie@2.0.4",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie@2.0.4",
       "author": "Vsevolod Strukchinsky",
       "description": "Itty bitty little widdle twinkie pinkie ES2015 Promise implementation",
       "licenses": [
@@ -3016,7 +3036,7 @@
       "type": "library",
       "name": "pkg-conf",
       "version": "1.1.1",
-      "bom-ref": "bundle-dependencies@1.0.2|pkg-conf@1.1.1",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pkg-conf@1.1.1",
       "author": "Sindre Sorhus",
       "description": "Get namespaced config from the closest package.json",
       "licenses": [
@@ -3067,7 +3087,7 @@
       "type": "library",
       "name": "read-pkg-up",
       "version": "1.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|read-pkg-up@1.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg-up@1.0.1",
       "author": "Sindre Sorhus",
       "description": "Read the closest package.json file",
       "licenses": [
@@ -3118,7 +3138,7 @@
       "type": "library",
       "name": "read-pkg",
       "version": "1.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|read-pkg@1.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg@1.1.0",
       "author": "Sindre Sorhus",
       "description": "Read a package.json file",
       "licenses": [
@@ -3169,7 +3189,7 @@
       "type": "library",
       "name": "require-main-filename",
       "version": "1.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|require-main-filename@1.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|require-main-filename@1.0.1",
       "author": "Ben Coe",
       "description": "shim for require.main.filename() that works in as many environments as possible",
       "licenses": [
@@ -3220,7 +3240,7 @@
       "type": "library",
       "name": "semver",
       "version": "5.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|semver@5.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|semver@5.1.0",
       "description": "The semantic version parser used by npm.",
       "licenses": [
         {
@@ -3270,7 +3290,7 @@
       "type": "library",
       "name": "spdx-correct",
       "version": "1.0.2",
-      "bom-ref": "bundle-dependencies@1.0.2|spdx-correct@1.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-correct@1.0.2",
       "author": "Kyle E. Mitchell",
       "description": "correct invalid SPDX identifiers",
       "licenses": [
@@ -3321,7 +3341,7 @@
       "type": "library",
       "name": "spdx-exceptions",
       "version": "1.0.4",
-      "bom-ref": "bundle-dependencies@1.0.2|spdx-exceptions@1.0.4",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-exceptions@1.0.4",
       "author": "The Linux Foundation",
       "description": "list of SPDX standard license exceptions",
       "licenses": [
@@ -3372,7 +3392,7 @@
       "type": "library",
       "name": "spdx-expression-parse",
       "version": "1.0.2",
-      "bom-ref": "bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2",
       "author": "Kyle E. Mitchell",
       "description": "parse SPDX license expressions",
       "licenses": [
@@ -3421,7 +3441,7 @@
       "type": "library",
       "name": "spdx-license-ids",
       "version": "1.2.0",
-      "bom-ref": "bundle-dependencies@1.0.2|spdx-license-ids@1.2.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-license-ids@1.2.0",
       "author": "Shinnosuke Watanabe",
       "description": "A list of SPDX license identifiers",
       "licenses": [
@@ -3472,7 +3492,7 @@
       "type": "library",
       "name": "string-width",
       "version": "1.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|string-width@1.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|string-width@1.0.1",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
       "licenses": [
@@ -3523,7 +3543,7 @@
       "type": "library",
       "name": "strip-ansi",
       "version": "3.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|strip-ansi@3.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-ansi@3.0.1",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes",
       "licenses": [
@@ -3574,7 +3594,7 @@
       "type": "library",
       "name": "strip-bom",
       "version": "2.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|strip-bom@2.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-bom@2.0.0",
       "author": "Sindre Sorhus",
       "description": "Strip UTF-8 byte order mark (BOM) from a string/buffer",
       "licenses": [
@@ -3625,7 +3645,7 @@
       "type": "library",
       "name": "symbol",
       "version": "0.2.1",
-      "bom-ref": "bundle-dependencies@1.0.2|symbol@0.2.1",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|symbol@0.2.1",
       "author": "Sean McArthur",
       "description": "ES6 Symbols in your ES5.",
       "licenses": [
@@ -3676,7 +3696,7 @@
       "type": "library",
       "name": "validate-npm-package-license",
       "version": "3.0.1",
-      "bom-ref": "bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1",
       "author": "Kyle E. Mitchell",
       "description": "Give me a string and I'll tell you if it's a valid npm package license string",
       "licenses": [
@@ -3727,7 +3747,7 @@
       "type": "library",
       "name": "window-size",
       "version": "0.2.0",
-      "bom-ref": "bundle-dependencies@1.0.2|window-size@0.2.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|window-size@0.2.0",
       "author": "Jon Schlinkert",
       "description": "Reliable way to to get the height and width of the terminal/console in a node.js environment.",
       "licenses": [
@@ -3778,7 +3798,7 @@
       "type": "library",
       "name": "wrap-ansi",
       "version": "1.0.0",
-      "bom-ref": "bundle-dependencies@1.0.2|wrap-ansi@1.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|wrap-ansi@1.0.0",
       "author": "Sindre Sorhus",
       "description": "Wordwrap a string with ANSI escape codes",
       "licenses": [
@@ -3829,7 +3849,7 @@
       "type": "library",
       "name": "y18n",
       "version": "3.2.0",
-      "bom-ref": "bundle-dependencies@1.0.2|y18n@3.2.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|y18n@3.2.0",
       "author": "Ben Coe",
       "description": "the bare-bones internationalization library used by yargs",
       "licenses": [
@@ -3880,7 +3900,7 @@
       "type": "library",
       "name": "yargs-parser",
       "version": "2.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|yargs-parser@2.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|yargs-parser@2.1.0",
       "author": "Ben Coe",
       "description": "the mighty option parser used by yargs",
       "licenses": [
@@ -3931,7 +3951,7 @@
       "type": "library",
       "name": "yargs",
       "version": "4.1.0",
-      "bom-ref": "bundle-dependencies@1.0.2|yargs@4.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|yargs@4.1.0",
       "description": "Light-weight option parsing with an argv hash. No optstrings attached.",
       "licenses": [
         {
@@ -3981,7 +4001,7 @@
       "type": "library",
       "name": "cacache",
       "version": "18.0.4",
-      "bom-ref": "cacache@18.0.4",
+      "bom-ref": "@dummy-projects/with-prepared|cacache@18.0.4",
       "author": "GitHub Inc.",
       "description": "Fast, fault-tolerant, cross-platform, disk-based, data-agnostic, content-addressable cache.",
       "licenses": [
@@ -4026,7 +4046,7 @@
       "type": "library",
       "name": "chownr",
       "version": "2.0.0",
-      "bom-ref": "chownr@2.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|chownr@2.0.0",
       "author": "Isaac Z. Schlueter",
       "description": "like `chown -R`",
       "licenses": [
@@ -4071,7 +4091,7 @@
       "type": "library",
       "name": "clean-stack",
       "version": "2.2.0",
-      "bom-ref": "clean-stack@2.2.0",
+      "bom-ref": "@dummy-projects/with-prepared|clean-stack@2.2.0",
       "author": "Sindre Sorhus",
       "description": "Clean up error stack traces",
       "licenses": [
@@ -4116,7 +4136,7 @@
       "type": "library",
       "name": "color-convert",
       "version": "2.0.1",
-      "bom-ref": "color-convert@2.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|color-convert@2.0.1",
       "author": "Heather Arthur",
       "description": "Plain color conversion functions",
       "licenses": [
@@ -4161,7 +4181,7 @@
       "type": "library",
       "name": "color-name",
       "version": "1.1.4",
-      "bom-ref": "color-name@1.1.4",
+      "bom-ref": "@dummy-projects/with-prepared|color-name@1.1.4",
       "author": "DY",
       "description": "A list of color names and its values",
       "licenses": [
@@ -4206,7 +4226,7 @@
       "type": "library",
       "name": "commander",
       "version": "2.20.3",
-      "bom-ref": "commander@2.20.3",
+      "bom-ref": "@dummy-projects/with-prepared|commander@2.20.3",
       "author": "TJ Holowaychuk",
       "description": "the complete solution for node.js command-line programs",
       "licenses": [
@@ -4251,7 +4271,7 @@
       "type": "library",
       "name": "cross-spawn",
       "version": "7.0.6",
-      "bom-ref": "cross-spawn@7.0.6",
+      "bom-ref": "@dummy-projects/with-prepared|cross-spawn@7.0.6",
       "author": "André Cruz",
       "description": "Cross platform child_process#spawn and child_process#spawnSync",
       "licenses": [
@@ -4296,7 +4316,7 @@
       "type": "library",
       "name": "isexe",
       "version": "2.0.0",
-      "bom-ref": "cross-spawn@7.0.6|isexe@2.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|cross-spawn@7.0.6|isexe@2.0.0",
       "author": "Isaac Z. Schlueter",
       "description": "Minimal module to check if a file is executable.",
       "licenses": [
@@ -4341,7 +4361,7 @@
       "type": "library",
       "name": "which",
       "version": "2.0.2",
-      "bom-ref": "cross-spawn@7.0.6|which@2.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|cross-spawn@7.0.6|which@2.0.2",
       "author": "Isaac Z. Schlueter",
       "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
       "licenses": [
@@ -4386,7 +4406,7 @@
       "type": "library",
       "name": "debug",
       "version": "4.4.0",
-      "bom-ref": "debug@4.4.0",
+      "bom-ref": "@dummy-projects/with-prepared|debug@4.4.0",
       "author": "Josh Junon",
       "description": "Lightweight debugging utility for Node.js and the browser",
       "licenses": [
@@ -4431,7 +4451,7 @@
       "type": "library",
       "name": "decompress-response",
       "version": "6.0.0",
-      "bom-ref": "decompress-response@6.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|decompress-response@6.0.0",
       "author": "Sindre Sorhus",
       "description": "Decompress a HTTP response if needed",
       "licenses": [
@@ -4476,7 +4496,7 @@
       "type": "library",
       "name": "deep-extend",
       "version": "0.6.0",
-      "bom-ref": "deep-extend@0.6.0",
+      "bom-ref": "@dummy-projects/with-prepared|deep-extend@0.6.0",
       "author": "Viacheslav Lotsmanov",
       "description": "Recursive object extending",
       "licenses": [
@@ -4528,7 +4548,7 @@
       "type": "library",
       "name": "detect-libc",
       "version": "2.0.3",
-      "bom-ref": "detect-libc@2.0.3",
+      "bom-ref": "@dummy-projects/with-prepared|detect-libc@2.0.3",
       "author": "Lovell Fuller",
       "description": "Node.js module to detect the C standard library (libc) implementation family and version",
       "licenses": [
@@ -4573,7 +4593,7 @@
       "type": "library",
       "name": "discontinuous-range",
       "version": "1.0.0",
-      "bom-ref": "discontinuous-range@1.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|discontinuous-range@1.0.0",
       "author": "David Tudury",
       "description": "for adding, subtracting, and indexing discontinuous ranges of numbers",
       "licenses": [
@@ -4618,7 +4638,7 @@
       "type": "library",
       "name": "eastasianwidth",
       "version": "0.2.0",
-      "bom-ref": "eastasianwidth@0.2.0",
+      "bom-ref": "@dummy-projects/with-prepared|eastasianwidth@0.2.0",
       "author": "Masaki Komagata",
       "description": "Get East Asian Width from a character.",
       "licenses": [
@@ -4663,7 +4683,7 @@
       "type": "library",
       "name": "emoji-regex",
       "version": "9.2.2",
-      "bom-ref": "emoji-regex@9.2.2",
+      "bom-ref": "@dummy-projects/with-prepared|emoji-regex@9.2.2",
       "author": "Mathias Bynens",
       "description": "A regular expression to match all Emoji-only symbols as per the Unicode Standard.",
       "licenses": [
@@ -4708,7 +4728,7 @@
       "type": "library",
       "name": "encoding",
       "version": "0.1.13",
-      "bom-ref": "encoding@0.1.13",
+      "bom-ref": "@dummy-projects/with-prepared|encoding@0.1.13",
       "author": "Andris Reinman",
       "description": "Convert encodings, uses iconv-lite",
       "licenses": [
@@ -4753,7 +4773,7 @@
       "type": "library",
       "name": "end-of-stream",
       "version": "1.4.4",
-      "bom-ref": "end-of-stream@1.4.4",
+      "bom-ref": "@dummy-projects/with-prepared|end-of-stream@1.4.4",
       "author": "Mathias Buus",
       "description": "Call a callback when a readable/writable/duplex stream has completed or failed.",
       "licenses": [
@@ -4798,7 +4818,7 @@
       "type": "library",
       "name": "env-paths",
       "version": "2.2.1",
-      "bom-ref": "env-paths@2.2.1",
+      "bom-ref": "@dummy-projects/with-prepared|env-paths@2.2.1",
       "author": "Sindre Sorhus",
       "description": "Get paths for storing things like data, config, cache, etc",
       "licenses": [
@@ -4843,7 +4863,7 @@
       "type": "library",
       "name": "err-code",
       "version": "2.0.3",
-      "bom-ref": "err-code@2.0.3",
+      "bom-ref": "@dummy-projects/with-prepared|err-code@2.0.3",
       "author": "IndigoUnited",
       "description": "Create an error with a code",
       "licenses": [
@@ -4888,7 +4908,7 @@
       "type": "library",
       "name": "esprima",
       "version": "4.0.1",
-      "bom-ref": "esprima@4.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|esprima@4.0.1",
       "author": "Ariya Hidayat",
       "description": "ECMAScript parsing infrastructure for multipurpose analysis",
       "licenses": [
@@ -4933,7 +4953,7 @@
       "type": "library",
       "name": "expand-template",
       "version": "2.0.3",
-      "bom-ref": "expand-template@2.0.3",
+      "bom-ref": "@dummy-projects/with-prepared|expand-template@2.0.3",
       "author": "LM",
       "description": "Expand placeholders in a template string",
       "licenses": [
@@ -4976,7 +4996,7 @@
       "type": "library",
       "name": "exponential-backoff",
       "version": "3.1.1",
-      "bom-ref": "exponential-backoff@3.1.1",
+      "bom-ref": "@dummy-projects/with-prepared|exponential-backoff@3.1.1",
       "author": "Sami Sayegh",
       "description": "A utility that allows retrying a function with an exponential delay between attempts.",
       "licenses": [
@@ -5021,7 +5041,7 @@
       "type": "library",
       "name": "extend",
       "version": "3.0.2",
-      "bom-ref": "extend@3.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|extend@3.0.2",
       "author": "Stefan Thomas",
       "description": "Port of jQuery.extend for node.js and the browser",
       "licenses": [
@@ -5066,7 +5086,7 @@
       "type": "library",
       "name": "fast-deep-equal",
       "version": "3.1.3",
-      "bom-ref": "fast-deep-equal@3.1.3",
+      "bom-ref": "@dummy-projects/with-prepared|fast-deep-equal@3.1.3",
       "author": "Evgeny Poberezkin",
       "description": "Fast deep equal",
       "licenses": [
@@ -5111,7 +5131,7 @@
       "type": "library",
       "name": "fast-uri",
       "version": "3.0.3",
-      "bom-ref": "fast-uri@3.0.3",
+      "bom-ref": "@dummy-projects/with-prepared|fast-uri@3.0.3",
       "author": "Vincent Le Goff",
       "description": "Dependency free RFC 3986 URI toolbox",
       "licenses": [
@@ -5156,7 +5176,7 @@
       "type": "library",
       "name": "file-uri-to-path",
       "version": "1.0.0",
-      "bom-ref": "file-uri-to-path@1.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|file-uri-to-path@1.0.0",
       "author": "Nathan Rajlich",
       "description": "Convert a file: URI to a file path",
       "licenses": [
@@ -5201,7 +5221,7 @@
       "type": "library",
       "name": "foreground-child",
       "version": "3.3.0",
-      "bom-ref": "foreground-child@3.3.0",
+      "bom-ref": "@dummy-projects/with-prepared|foreground-child@3.3.0",
       "author": "Isaac Z. Schlueter",
       "description": "Run a child as if it's the foreground process. Give it stdio. Exit when it exits.",
       "licenses": [
@@ -5246,7 +5266,7 @@
       "type": "library",
       "name": "fs-constants",
       "version": "1.0.0",
-      "bom-ref": "fs-constants@1.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|fs-constants@1.0.0",
       "author": "Mathias Buus",
       "description": "Require constants across node and the browser",
       "licenses": [
@@ -5291,7 +5311,7 @@
       "type": "library",
       "name": "fs-minipass",
       "version": "3.0.3",
-      "bom-ref": "fs-minipass@3.0.3",
+      "bom-ref": "@dummy-projects/with-prepared|fs-minipass@3.0.3",
       "author": "GitHub Inc.",
       "description": "fs read and write streams based on minipass",
       "licenses": [
@@ -5336,7 +5356,7 @@
       "type": "library",
       "name": "github-from-package",
       "version": "0.0.0",
-      "bom-ref": "github-from-package@0.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|github-from-package@0.0.0",
       "author": "James Halliday",
       "description": "return the github url from a package.json file",
       "licenses": [
@@ -5381,7 +5401,7 @@
       "type": "library",
       "name": "glob",
       "version": "10.4.5",
-      "bom-ref": "glob@10.4.5",
+      "bom-ref": "@dummy-projects/with-prepared|glob@10.4.5",
       "author": "Isaac Z. Schlueter",
       "description": "the most correct and second fastest glob implementation in JavaScript",
       "licenses": [
@@ -5426,7 +5446,7 @@
       "type": "library",
       "name": "graceful-fs",
       "version": "4.2.11",
-      "bom-ref": "graceful-fs@4.2.11",
+      "bom-ref": "@dummy-projects/with-prepared|graceful-fs@4.2.11",
       "description": "A drop-in replacement for fs, making various improvements.",
       "licenses": [
         {
@@ -5470,7 +5490,7 @@
       "type": "library",
       "name": "http-cache-semantics",
       "version": "4.1.1",
-      "bom-ref": "http-cache-semantics@4.1.1",
+      "bom-ref": "@dummy-projects/with-prepared|http-cache-semantics@4.1.1",
       "author": "Kornel Lesiński",
       "description": "Parses Cache-Control and other headers. Helps building correct HTTP caches and proxies",
       "licenses": [
@@ -5515,7 +5535,7 @@
       "type": "library",
       "name": "http-proxy-agent",
       "version": "7.0.2",
-      "bom-ref": "http-proxy-agent@7.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|http-proxy-agent@7.0.2",
       "author": "Nathan Rajlich",
       "description": "An HTTP(s) proxy `http.Agent` implementation for HTTP",
       "licenses": [
@@ -5560,7 +5580,7 @@
       "type": "library",
       "name": "https-proxy-agent",
       "version": "7.0.6",
-      "bom-ref": "https-proxy-agent@7.0.6",
+      "bom-ref": "@dummy-projects/with-prepared|https-proxy-agent@7.0.6",
       "author": "Nathan Rajlich",
       "description": "An HTTP(s) proxy `http.Agent` implementation for HTTPS",
       "licenses": [
@@ -5605,7 +5625,7 @@
       "type": "library",
       "name": "iconv-lite",
       "version": "0.6.3",
-      "bom-ref": "iconv-lite@0.6.3",
+      "bom-ref": "@dummy-projects/with-prepared|iconv-lite@0.6.3",
       "author": "Alexander Shtuchkin",
       "description": "Convert character encodings in pure javascript.",
       "licenses": [
@@ -5650,7 +5670,7 @@
       "type": "library",
       "name": "ieee754",
       "version": "1.2.1",
-      "bom-ref": "ieee754@1.2.1",
+      "bom-ref": "@dummy-projects/with-prepared|ieee754@1.2.1",
       "author": "Feross Aboukhadijeh",
       "description": "Read/write IEEE754 floating point numbers from/to a Buffer or array-like object",
       "licenses": [
@@ -5695,7 +5715,7 @@
       "type": "library",
       "name": "ignore",
       "version": "5.3.2",
-      "bom-ref": "ignore@5.3.2",
+      "bom-ref": "@dummy-projects/with-prepared|ignore@5.3.2",
       "author": "kael",
       "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.",
       "licenses": [
@@ -5740,7 +5760,7 @@
       "type": "library",
       "name": "imurmurhash",
       "version": "0.1.4",
-      "bom-ref": "imurmurhash@0.1.4",
+      "bom-ref": "@dummy-projects/with-prepared|imurmurhash@0.1.4",
       "author": "Jens Taylor",
       "description": "An incremental implementation of MurmurHash3",
       "licenses": [
@@ -5785,7 +5805,7 @@
       "type": "library",
       "name": "indent-string",
       "version": "4.0.0",
-      "bom-ref": "indent-string@4.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|indent-string@4.0.0",
       "author": "Sindre Sorhus",
       "description": "Indent each line in a string",
       "licenses": [
@@ -5830,7 +5850,7 @@
       "type": "library",
       "name": "inherits",
       "version": "2.0.4",
-      "bom-ref": "inherits@2.0.4",
+      "bom-ref": "@dummy-projects/with-prepared|inherits@2.0.4",
       "description": "Browser-friendly inheritance fully compatible with standard node.js inherits()",
       "licenses": [
         {
@@ -5840,8 +5860,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git",
+      "purl": "pkg:npm/inherits@2.0.4",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/inherits/issues",
           "type": "issue-tracker",
@@ -5869,7 +5894,7 @@
       "type": "library",
       "name": "ini",
       "version": "1.3.8",
-      "bom-ref": "ini@1.3.8",
+      "bom-ref": "@dummy-projects/with-prepared|ini@1.3.8",
       "author": "Isaac Z. Schlueter",
       "description": "An ini encoder/decoder for node",
       "licenses": [
@@ -5914,7 +5939,7 @@
       "type": "library",
       "name": "ip-address",
       "version": "9.0.5",
-      "bom-ref": "ip-address@9.0.5",
+      "bom-ref": "@dummy-projects/with-prepared|ip-address@9.0.5",
       "author": "Beau Gunderson",
       "description": "A library for parsing IPv4 and IPv6 IP addresses in node and the browser.",
       "licenses": [
@@ -5959,7 +5984,7 @@
       "type": "library",
       "name": "is-fullwidth-code-point",
       "version": "3.0.0",
-      "bom-ref": "is-fullwidth-code-point@3.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|is-fullwidth-code-point@3.0.0",
       "author": "Sindre Sorhus",
       "description": "Check if the character represented by a given Unicode code point is fullwidth",
       "licenses": [
@@ -6004,7 +6029,7 @@
       "type": "library",
       "name": "is-lambda",
       "version": "1.0.1",
-      "bom-ref": "is-lambda@1.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|is-lambda@1.0.1",
       "author": "Thomas Watson Steen",
       "description": "Detect if your code is running on an AWS Lambda server",
       "licenses": [
@@ -6049,7 +6074,7 @@
       "type": "library",
       "name": "is-obj",
       "version": "3.0.0",
-      "bom-ref": "is-obj@3.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|is-obj@3.0.0",
       "author": "Sindre Sorhus",
       "description": "Check if a value is an object",
       "licenses": [
@@ -6094,7 +6119,7 @@
       "type": "library",
       "name": "isexe",
       "version": "3.1.1",
-      "bom-ref": "isexe@3.1.1",
+      "bom-ref": "@dummy-projects/with-prepared|isexe@3.1.1",
       "author": "Isaac Z. Schlueter",
       "description": "Minimal module to check if a file is executable.",
       "licenses": [
@@ -6139,7 +6164,7 @@
       "type": "library",
       "name": "jackspeak",
       "version": "3.4.3",
-      "bom-ref": "jackspeak@3.4.3",
+      "bom-ref": "@dummy-projects/with-prepared|jackspeak@3.4.3",
       "author": "Isaac Z. Schlueter",
       "description": "A very strict and proper argument parser.",
       "licenses": [
@@ -6184,7 +6209,7 @@
       "type": "library",
       "name": "js-yaml",
       "version": "3.14.1",
-      "bom-ref": "js-yaml@3.14.1",
+      "bom-ref": "@dummy-projects/with-prepared|js-yaml@3.14.1",
       "author": "Vladimir Zapparov",
       "description": "YAML 1.2 parser and serializer",
       "licenses": [
@@ -6229,7 +6254,7 @@
       "type": "library",
       "name": "jsbn",
       "version": "1.1.0",
-      "bom-ref": "jsbn@1.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|jsbn@1.1.0",
       "author": "Tom Wu",
       "description": "The jsbn library is a fast, portable implementation of large-number math in pure JavaScript, enabling public-key crypto and other applications on desktop and mobile browsers.",
       "licenses": [
@@ -6274,7 +6299,7 @@
       "type": "library",
       "name": "json-schema-traverse",
       "version": "1.0.0",
-      "bom-ref": "json-schema-traverse@1.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|json-schema-traverse@1.0.0",
       "author": "Evgeny Poberezkin",
       "description": "Traverse JSON Schema passing each schema object to callback",
       "licenses": [
@@ -6319,7 +6344,7 @@
       "type": "library",
       "name": "libxmljs2",
       "version": "0.35.0",
-      "bom-ref": "libxmljs2@0.35.0",
+      "bom-ref": "@dummy-projects/with-prepared|libxmljs2@0.35.0",
       "author": "marudor",
       "description": "libxml bindings for v8 javascript engine",
       "licenses": [
@@ -6364,7 +6389,7 @@
       "type": "library",
       "name": "lru-cache",
       "version": "10.4.3",
-      "bom-ref": "lru-cache@10.4.3",
+      "bom-ref": "@dummy-projects/with-prepared|lru-cache@10.4.3",
       "author": "Isaac Z. Schlueter",
       "description": "A cache object that deletes the least-recently-used items.",
       "licenses": [
@@ -6409,7 +6434,7 @@
       "type": "library",
       "name": "make-fetch-happen",
       "version": "13.0.1",
-      "bom-ref": "make-fetch-happen@13.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|make-fetch-happen@13.0.1",
       "author": "GitHub Inc.",
       "description": "Opinionated, caching, retrying fetch client",
       "licenses": [
@@ -6454,7 +6479,7 @@
       "type": "library",
       "name": "mimic-response",
       "version": "3.1.0",
-      "bom-ref": "mimic-response@3.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|mimic-response@3.1.0",
       "author": "Sindre Sorhus",
       "description": "Mimic a Node.js HTTP response stream",
       "licenses": [
@@ -6499,7 +6524,7 @@
       "type": "library",
       "name": "minimatch",
       "version": "9.0.5",
-      "bom-ref": "minimatch@9.0.5",
+      "bom-ref": "@dummy-projects/with-prepared|minimatch@9.0.5",
       "author": "Isaac Z. Schlueter",
       "description": "a glob matcher in javascript",
       "licenses": [
@@ -6544,7 +6569,7 @@
       "type": "library",
       "name": "minimist",
       "version": "1.2.8",
-      "bom-ref": "minimist@1.2.8",
+      "bom-ref": "@dummy-projects/with-prepared|minimist@1.2.8",
       "author": "James Halliday",
       "description": "parse argument options",
       "licenses": [
@@ -6589,7 +6614,7 @@
       "type": "library",
       "name": "minipass-collect",
       "version": "2.0.1",
-      "bom-ref": "minipass-collect@2.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|minipass-collect@2.0.1",
       "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that collects all the data into a single chunk",
       "licenses": [
@@ -6634,7 +6659,7 @@
       "type": "library",
       "name": "minipass-fetch",
       "version": "3.0.5",
-      "bom-ref": "minipass-fetch@3.0.5",
+      "bom-ref": "@dummy-projects/with-prepared|minipass-fetch@3.0.5",
       "author": "GitHub Inc.",
       "description": "An implementation of window.fetch in Node.js using Minipass streams",
       "licenses": [
@@ -6679,7 +6704,7 @@
       "type": "library",
       "name": "minipass-flush",
       "version": "1.0.5",
-      "bom-ref": "minipass-flush@1.0.5",
+      "bom-ref": "@dummy-projects/with-prepared|minipass-flush@1.0.5",
       "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that calls a flush function before emitting 'end'",
       "licenses": [
@@ -6690,8 +6715,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-flush@1.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass-flush.git",
+      "purl": "pkg:npm/minipass-flush@1.0.5",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/minipass-flush/-/minipass-flush-1.0.5.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/minipass-flush/issues",
           "type": "issue-tracker",
@@ -6719,7 +6749,7 @@
       "type": "library",
       "name": "minipass",
       "version": "3.3.6",
-      "bom-ref": "minipass-flush@1.0.5|minipass@3.3.6",
+      "bom-ref": "@dummy-projects/with-prepared|minipass-flush@1.0.5|minipass@3.3.6",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "licenses": [
@@ -6764,7 +6794,7 @@
       "type": "library",
       "name": "minipass-pipeline",
       "version": "1.2.4",
-      "bom-ref": "minipass-pipeline@1.2.4",
+      "bom-ref": "@dummy-projects/with-prepared|minipass-pipeline@1.2.4",
       "author": "Isaac Z. Schlueter",
       "description": "create a pipeline of streams using Minipass",
       "licenses": [
@@ -6776,6 +6806,13 @@
         }
       ],
       "purl": "pkg:npm/minipass-pipeline@1.2.4",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/minipass-pipeline/-/minipass-pipeline-1.2.4.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        }
+      ],
       "properties": [
         {
           "name": "cdx:npm:package:path",
@@ -6787,7 +6824,7 @@
       "type": "library",
       "name": "minipass",
       "version": "3.3.6",
-      "bom-ref": "minipass-pipeline@1.2.4|minipass@3.3.6",
+      "bom-ref": "@dummy-projects/with-prepared|minipass-pipeline@1.2.4|minipass@3.3.6",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "licenses": [
@@ -6832,7 +6869,7 @@
       "type": "library",
       "name": "minipass-sized",
       "version": "1.0.3",
-      "bom-ref": "minipass-sized@1.0.3",
+      "bom-ref": "@dummy-projects/with-prepared|minipass-sized@1.0.3",
       "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that raises an error if you get a different number of bytes than expected",
       "licenses": [
@@ -6877,7 +6914,7 @@
       "type": "library",
       "name": "minipass",
       "version": "3.3.6",
-      "bom-ref": "minipass-sized@1.0.3|minipass@3.3.6",
+      "bom-ref": "@dummy-projects/with-prepared|minipass-sized@1.0.3|minipass@3.3.6",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "licenses": [
@@ -6922,7 +6959,7 @@
       "type": "library",
       "name": "minipass",
       "version": "7.1.2",
-      "bom-ref": "minipass@7.1.2",
+      "bom-ref": "@dummy-projects/with-prepared|minipass@7.1.2",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "licenses": [
@@ -6967,7 +7004,7 @@
       "type": "library",
       "name": "minizlib",
       "version": "2.1.2",
-      "bom-ref": "minizlib@2.1.2",
+      "bom-ref": "@dummy-projects/with-prepared|minizlib@2.1.2",
       "author": "Isaac Z. Schlueter",
       "description": "A small fast zlib stream built on [minipass](http://npm.im/minipass) and Node.js's zlib binding.",
       "licenses": [
@@ -6978,8 +7015,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/minizlib@2.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminizlib.git",
+      "purl": "pkg:npm/minizlib@2.1.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/minizlib/issues",
           "type": "issue-tracker",
@@ -7007,7 +7049,7 @@
       "type": "library",
       "name": "minipass",
       "version": "3.3.6",
-      "bom-ref": "minizlib@2.1.2|minipass@3.3.6",
+      "bom-ref": "@dummy-projects/with-prepared|minizlib@2.1.2|minipass@3.3.6",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "licenses": [
@@ -7052,7 +7094,7 @@
       "type": "library",
       "name": "mkdirp-classic",
       "version": "0.5.3",
-      "bom-ref": "mkdirp-classic@0.5.3",
+      "bom-ref": "@dummy-projects/with-prepared|mkdirp-classic@0.5.3",
       "author": "Mathias Buus",
       "description": "Mirror of mkdirp 0.5.2",
       "licenses": [
@@ -7097,7 +7139,7 @@
       "type": "library",
       "name": "mkdirp",
       "version": "1.0.4",
-      "bom-ref": "mkdirp@1.0.4",
+      "bom-ref": "@dummy-projects/with-prepared|mkdirp@1.0.4",
       "description": "Recursively mkdir, like `mkdir -p`",
       "licenses": [
         {
@@ -7141,7 +7183,7 @@
       "type": "library",
       "name": "moo",
       "version": "0.5.2",
-      "bom-ref": "moo@0.5.2",
+      "bom-ref": "@dummy-projects/with-prepared|moo@0.5.2",
       "author": "Tim Radvan",
       "description": "Optimised tokenizer/lexer generator! 🐄 Much performance. Moo!",
       "licenses": [
@@ -7186,7 +7228,7 @@
       "type": "library",
       "name": "ms",
       "version": "2.1.3",
-      "bom-ref": "ms@2.1.3",
+      "bom-ref": "@dummy-projects/with-prepared|ms@2.1.3",
       "description": "Tiny millisecond conversion utility",
       "licenses": [
         {
@@ -7230,7 +7272,7 @@
       "type": "library",
       "name": "nan",
       "version": "2.20.0",
-      "bom-ref": "nan@2.20.0",
+      "bom-ref": "@dummy-projects/with-prepared|nan@2.20.0",
       "description": "Native Abstractions for Node.js: C++ header for Node 0.8 -> 22 compatibility",
       "licenses": [
         {
@@ -7274,7 +7316,7 @@
       "type": "library",
       "name": "napi-build-utils",
       "version": "1.0.2",
-      "bom-ref": "napi-build-utils@1.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|napi-build-utils@1.0.2",
       "author": "Jim Schlight",
       "description": "A set of utilities to assist developers of tools that build N-API native add-ons",
       "licenses": [
@@ -7319,7 +7361,7 @@
       "type": "library",
       "name": "nearley",
       "version": "2.20.1",
-      "bom-ref": "nearley@2.20.1",
+      "bom-ref": "@dummy-projects/with-prepared|nearley@2.20.1",
       "author": "Hardmath123",
       "description": "Simple, fast, powerful parser toolkit for JavaScript.",
       "licenses": [
@@ -7364,7 +7406,7 @@
       "type": "library",
       "name": "negotiator",
       "version": "0.6.4",
-      "bom-ref": "negotiator@0.6.4",
+      "bom-ref": "@dummy-projects/with-prepared|negotiator@0.6.4",
       "description": "HTTP content negotiation",
       "licenses": [
         {
@@ -7408,7 +7450,7 @@
       "type": "library",
       "name": "node-abi",
       "version": "3.71.0",
-      "bom-ref": "node-abi@3.71.0",
+      "bom-ref": "@dummy-projects/with-prepared|node-abi@3.71.0",
       "author": "Lukas Geiger",
       "description": "Get the Node ABI for a given target and runtime, and vice versa.",
       "licenses": [
@@ -7453,7 +7495,7 @@
       "type": "library",
       "name": "node-gyp",
       "version": "10.3.1",
-      "bom-ref": "node-gyp@10.3.1",
+      "bom-ref": "@dummy-projects/with-prepared|node-gyp@10.3.1",
       "author": "Nathan Rajlich",
       "description": "Node.js native addon build tool",
       "licenses": [
@@ -7498,7 +7540,7 @@
       "type": "library",
       "name": "nopt",
       "version": "7.2.1",
-      "bom-ref": "nopt@7.2.1",
+      "bom-ref": "@dummy-projects/with-prepared|nopt@7.2.1",
       "author": "GitHub Inc.",
       "description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
       "licenses": [
@@ -7543,7 +7585,7 @@
       "type": "library",
       "name": "once",
       "version": "1.4.0",
-      "bom-ref": "once@1.4.0",
+      "bom-ref": "@dummy-projects/with-prepared|once@1.4.0",
       "author": "Isaac Z. Schlueter",
       "description": "Run a function exactly one time",
       "licenses": [
@@ -7554,8 +7596,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/once@1.4.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fonce.git",
+      "purl": "pkg:npm/once@1.4.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/once/issues",
           "type": "issue-tracker",
@@ -7583,7 +7630,7 @@
       "type": "library",
       "name": "p-map",
       "version": "4.0.0",
-      "bom-ref": "p-map@4.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|p-map@4.0.0",
       "author": "Sindre Sorhus",
       "description": "Map over promises concurrently",
       "licenses": [
@@ -7628,7 +7675,7 @@
       "type": "library",
       "name": "package-json-from-dist",
       "version": "1.0.1",
-      "bom-ref": "package-json-from-dist@1.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|package-json-from-dist@1.0.1",
       "author": "Isaac Z. Schlueter",
       "description": "Load the local package.json from either src or dist folder",
       "licenses": [
@@ -7673,7 +7720,7 @@
       "type": "library",
       "name": "packageurl-js",
       "version": "2.0.1",
-      "bom-ref": "packageurl-js@2.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|packageurl-js@2.0.1",
       "author": "the purl authors",
       "description": "JavaScript library to parse and build \"purl\" aka. package URLs. This is a microlibrary implementing the purl spec at https://github.com/package-url",
       "licenses": [
@@ -7718,7 +7765,7 @@
       "type": "library",
       "name": "path-key",
       "version": "3.1.1",
-      "bom-ref": "path-key@3.1.1",
+      "bom-ref": "@dummy-projects/with-prepared|path-key@3.1.1",
       "author": "Sindre Sorhus",
       "description": "Get the PATH environment variable key cross-platform",
       "licenses": [
@@ -7763,7 +7810,7 @@
       "type": "library",
       "name": "path-scurry",
       "version": "1.11.1",
-      "bom-ref": "path-scurry@1.11.1",
+      "bom-ref": "@dummy-projects/with-prepared|path-scurry@1.11.1",
       "author": "Isaac Z. Schlueter",
       "description": "walk paths fast and efficiently",
       "licenses": [
@@ -7808,7 +7855,7 @@
       "type": "library",
       "name": "prebuild-install",
       "version": "7.1.2",
-      "bom-ref": "prebuild-install@7.1.2",
+      "bom-ref": "@dummy-projects/with-prepared|prebuild-install@7.1.2",
       "author": "Mathias Buus",
       "description": "A command line tool to easily install prebuilt binaries for multiple version of node/iojs on a specific platform",
       "licenses": [
@@ -7853,7 +7900,7 @@
       "type": "library",
       "name": "proc-log",
       "version": "4.2.0",
-      "bom-ref": "proc-log@4.2.0",
+      "bom-ref": "@dummy-projects/with-prepared|proc-log@4.2.0",
       "author": "GitHub Inc.",
       "description": "just emit 'log' events on the process object",
       "licenses": [
@@ -7864,8 +7911,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/proc-log@4.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fproc-log.git",
+      "purl": "pkg:npm/proc-log@4.2.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/proc-log/-/proc-log-4.2.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/proc-log/issues",
           "type": "issue-tracker",
@@ -7893,7 +7945,7 @@
       "type": "library",
       "name": "promise-retry",
       "version": "2.0.1",
-      "bom-ref": "promise-retry@2.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|promise-retry@2.0.1",
       "author": "IndigoUnited",
       "description": "Retries a function that returns a promise, leveraging the power of the retry module.",
       "licenses": [
@@ -7938,7 +7990,7 @@
       "type": "library",
       "name": "pump",
       "version": "3.0.2",
-      "bom-ref": "pump@3.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|pump@3.0.2",
       "author": "Mathias Buus Madsen",
       "description": "pipe streams together and close all of them if one of them closes",
       "licenses": [
@@ -7983,7 +8035,7 @@
       "type": "library",
       "name": "punycode",
       "version": "2.3.1",
-      "bom-ref": "punycode@2.3.1",
+      "bom-ref": "@dummy-projects/with-prepared|punycode@2.3.1",
       "author": "Mathias Bynens",
       "description": "A robust Punycode converter that fully complies to RFC 3492 and RFC 5891, and works on nearly all JavaScript platforms.",
       "licenses": [
@@ -8028,7 +8080,7 @@
       "type": "library",
       "name": "railroad-diagrams",
       "version": "1.0.0",
-      "bom-ref": "railroad-diagrams@1.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|railroad-diagrams@1.0.0",
       "author": "Tab Atkins Jr.",
       "description": "A small JS+SVG library for drawing railroad syntax diagrams.",
       "licenses": [
@@ -8073,7 +8125,7 @@
       "type": "library",
       "name": "randexp",
       "version": "0.4.6",
-      "bom-ref": "randexp@0.4.6",
+      "bom-ref": "@dummy-projects/with-prepared|randexp@0.4.6",
       "author": "Roly Fentanes",
       "description": "Create random strings that match a given regular expression.",
       "licenses": [
@@ -8118,7 +8170,7 @@
       "type": "library",
       "name": "rc",
       "version": "1.2.8",
-      "bom-ref": "rc@1.2.8",
+      "bom-ref": "@dummy-projects/with-prepared|rc@1.2.8",
       "author": "Dominic Tarr",
       "description": "hardwired configuration loader",
       "licenses": [
@@ -8161,7 +8213,7 @@
       "type": "library",
       "name": "readable-stream",
       "version": "3.6.2",
-      "bom-ref": "readable-stream@3.6.2",
+      "bom-ref": "@dummy-projects/with-prepared|readable-stream@3.6.2",
       "description": "Streams3, a user-land copy of the stream library from Node.js",
       "licenses": [
         {
@@ -8171,8 +8223,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git",
+      "purl": "pkg:npm/readable-stream@3.6.2",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/nodejs/readable-stream/issues",
           "type": "issue-tracker",
@@ -8200,7 +8257,7 @@
       "type": "library",
       "name": "require-from-string",
       "version": "2.0.2",
-      "bom-ref": "require-from-string@2.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|require-from-string@2.0.2",
       "author": "Vsevolod Strukchinsky",
       "description": "Require module from string",
       "licenses": [
@@ -8245,7 +8302,7 @@
       "type": "library",
       "name": "ret",
       "version": "0.1.15",
-      "bom-ref": "ret@0.1.15",
+      "bom-ref": "@dummy-projects/with-prepared|ret@0.1.15",
       "author": "Roly Fentanes",
       "description": "Tokenizes a string that represents a regular expression.",
       "licenses": [
@@ -8290,7 +8347,7 @@
       "type": "library",
       "name": "retry",
       "version": "0.12.0",
-      "bom-ref": "retry@0.12.0",
+      "bom-ref": "@dummy-projects/with-prepared|retry@0.12.0",
       "author": "Tim Koschützki",
       "description": "Abstraction for exponential and custom retry strategies for failed operations.",
       "licenses": [
@@ -8335,7 +8392,7 @@
       "type": "library",
       "name": "safe-buffer",
       "version": "5.2.1",
-      "bom-ref": "safe-buffer@5.2.1",
+      "bom-ref": "@dummy-projects/with-prepared|safe-buffer@5.2.1",
       "author": "Feross Aboukhadijeh",
       "description": "Safer Node.js Buffer API",
       "licenses": [
@@ -8346,8 +8403,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git",
+      "purl": "pkg:npm/safe-buffer@5.2.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/feross/safe-buffer/issues",
           "type": "issue-tracker",
@@ -8375,7 +8437,7 @@
       "type": "library",
       "name": "safer-buffer",
       "version": "2.1.2",
-      "bom-ref": "safer-buffer@2.1.2",
+      "bom-ref": "@dummy-projects/with-prepared|safer-buffer@2.1.2",
       "author": "Nikita Skovoroda",
       "description": "Modern Buffer API polyfill without footguns",
       "licenses": [
@@ -8420,7 +8482,7 @@
       "type": "library",
       "name": "schemes",
       "version": "1.4.0",
-      "bom-ref": "schemes@1.4.0",
+      "bom-ref": "@dummy-projects/with-prepared|schemes@1.4.0",
       "author": "Peter Müller",
       "description": "IANA Uniform Resource Identifier (URI) Schemes list, including crowd sourced unofficial ones",
       "licenses": [
@@ -8465,7 +8527,7 @@
       "type": "library",
       "name": "semver",
       "version": "7.6.3",
-      "bom-ref": "semver@7.6.3",
+      "bom-ref": "@dummy-projects/with-prepared|semver@7.6.3",
       "author": "GitHub Inc.",
       "description": "The semantic version parser used by npm.",
       "licenses": [
@@ -8476,8 +8538,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/semver@7.6.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git",
+      "purl": "pkg:npm/semver@7.6.3",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/semver/-/semver-7.6.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/node-semver/issues",
           "type": "issue-tracker",
@@ -8505,7 +8572,7 @@
       "type": "library",
       "name": "shebang-command",
       "version": "2.0.0",
-      "bom-ref": "shebang-command@2.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|shebang-command@2.0.0",
       "author": "Kevin Mårtensson",
       "description": "Get the command from a shebang",
       "licenses": [
@@ -8550,7 +8617,7 @@
       "type": "library",
       "name": "shebang-regex",
       "version": "3.0.0",
-      "bom-ref": "shebang-regex@3.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|shebang-regex@3.0.0",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching a shebang line",
       "licenses": [
@@ -8595,7 +8662,7 @@
       "type": "library",
       "name": "signal-exit",
       "version": "4.1.0",
-      "bom-ref": "signal-exit@4.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|signal-exit@4.1.0",
       "author": "Ben Coe",
       "description": "when you want to fire an event no matter how a process exits.",
       "licenses": [
@@ -8640,7 +8707,7 @@
       "type": "library",
       "name": "simple-concat",
       "version": "1.0.1",
-      "bom-ref": "simple-concat@1.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|simple-concat@1.0.1",
       "author": "Feross Aboukhadijeh",
       "description": "Super-minimalist version of `concat-stream`. Less than 15 lines!",
       "licenses": [
@@ -8685,7 +8752,7 @@
       "type": "library",
       "name": "simple-get",
       "version": "4.0.1",
-      "bom-ref": "simple-get@4.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|simple-get@4.0.1",
       "author": "Feross Aboukhadijeh",
       "description": "Simplest way to make http get requests. Supports HTTPS, redirects, gzip/deflate, streams in < 100 lines.",
       "licenses": [
@@ -8730,7 +8797,7 @@
       "type": "library",
       "name": "smart-buffer",
       "version": "4.2.0",
-      "bom-ref": "smart-buffer@4.2.0",
+      "bom-ref": "@dummy-projects/with-prepared|smart-buffer@4.2.0",
       "author": "Josh Glazebrook",
       "description": "smart-buffer is a Buffer wrapper that adds automatic read & write offset tracking, string operations, data insertions, and more.",
       "licenses": [
@@ -8775,7 +8842,7 @@
       "type": "library",
       "name": "smtp-address-parser",
       "version": "1.1.0",
-      "bom-ref": "smtp-address-parser@1.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|smtp-address-parser@1.1.0",
       "author": "Gene Hightower",
       "description": "Parse an SMTP (RFC-5321) address",
       "licenses": [
@@ -8820,7 +8887,7 @@
       "type": "library",
       "name": "socks-proxy-agent",
       "version": "8.0.5",
-      "bom-ref": "socks-proxy-agent@8.0.5",
+      "bom-ref": "@dummy-projects/with-prepared|socks-proxy-agent@8.0.5",
       "author": "Nathan Rajlich",
       "description": "A SOCKS proxy `http.Agent` implementation for HTTP and HTTPS",
       "licenses": [
@@ -8865,7 +8932,7 @@
       "type": "library",
       "name": "socks",
       "version": "2.8.3",
-      "bom-ref": "socks@2.8.3",
+      "bom-ref": "@dummy-projects/with-prepared|socks@2.8.3",
       "author": "Josh Glazebrook",
       "description": "Fully featured SOCKS proxy client supporting SOCKSv4, SOCKSv4a, and SOCKSv5. Includes Bind and Associate functionality.",
       "licenses": [
@@ -8910,7 +8977,7 @@
       "type": "library",
       "name": "spdx-exceptions",
       "version": "2.5.0",
-      "bom-ref": "spdx-exceptions@2.5.0",
+      "bom-ref": "@dummy-projects/with-prepared|spdx-exceptions@2.5.0",
       "author": "The Linux Foundation",
       "description": "list of SPDX standard license exceptions",
       "licenses": [
@@ -8955,7 +9022,7 @@
       "type": "library",
       "name": "spdx-expression-parse",
       "version": "4.0.0",
-      "bom-ref": "spdx-expression-parse@4.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|spdx-expression-parse@4.0.0",
       "author": "Kyle E. Mitchell",
       "description": "parse SPDX license expressions",
       "licenses": [
@@ -9000,7 +9067,7 @@
       "type": "library",
       "name": "spdx-license-ids",
       "version": "3.0.20",
-      "bom-ref": "spdx-license-ids@3.0.20",
+      "bom-ref": "@dummy-projects/with-prepared|spdx-license-ids@3.0.20",
       "author": "Shinnosuke Watanabe",
       "description": "A list of SPDX license identifiers",
       "licenses": [
@@ -9045,7 +9112,7 @@
       "type": "library",
       "name": "sprintf-js",
       "version": "1.1.3",
-      "bom-ref": "sprintf-js@1.1.3",
+      "bom-ref": "@dummy-projects/with-prepared|sprintf-js@1.1.3",
       "author": "Alexandru Mărășteanu",
       "description": "JavaScript sprintf implementation",
       "licenses": [
@@ -9090,7 +9157,7 @@
       "type": "library",
       "name": "ssri",
       "version": "10.0.6",
-      "bom-ref": "ssri@10.0.6",
+      "bom-ref": "@dummy-projects/with-prepared|ssri@10.0.6",
       "author": "GitHub Inc.",
       "description": "Standard Subresource Integrity library -- parses, serializes, generates, and verifies integrity metadata according to the SRI spec.",
       "licenses": [
@@ -9101,8 +9168,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/ssri@10.0.6?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fssri.git",
+      "purl": "pkg:npm/ssri@10.0.6",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/ssri/-/ssri-10.0.6.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/npm/ssri/issues",
           "type": "issue-tracker",
@@ -9130,7 +9202,7 @@
       "type": "library",
       "name": "string_decoder",
       "version": "1.3.0",
-      "bom-ref": "string_decoder@1.3.0",
+      "bom-ref": "@dummy-projects/with-prepared|string_decoder@1.3.0",
       "description": "The string_decoder module from Node core",
       "licenses": [
         {
@@ -9174,7 +9246,7 @@
       "type": "library",
       "name": "string-width",
       "version": "4.2.3",
-      "bom-ref": "string-width@4.2.3",
+      "bom-ref": "@dummy-projects/with-prepared|string-width@4.2.3",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
       "licenses": [
@@ -9219,7 +9291,7 @@
       "type": "library",
       "name": "ansi-regex",
       "version": "5.0.1",
-      "bom-ref": "string-width@4.2.3|ansi-regex@5.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|string-width@4.2.3|ansi-regex@5.0.1",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
       "licenses": [
@@ -9264,7 +9336,7 @@
       "type": "library",
       "name": "emoji-regex",
       "version": "8.0.0",
-      "bom-ref": "string-width@4.2.3|emoji-regex@8.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|string-width@4.2.3|emoji-regex@8.0.0",
       "author": "Mathias Bynens",
       "description": "A regular expression to match all Emoji-only symbols as per the Unicode Standard.",
       "licenses": [
@@ -9309,7 +9381,7 @@
       "type": "library",
       "name": "strip-ansi",
       "version": "6.0.1",
-      "bom-ref": "string-width@4.2.3|strip-ansi@6.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|string-width@4.2.3|strip-ansi@6.0.1",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes from a string",
       "licenses": [
@@ -9354,7 +9426,7 @@
       "type": "library",
       "name": "string-width",
       "version": "5.1.2",
-      "bom-ref": "string-width@5.1.2",
+      "bom-ref": "@dummy-projects/with-prepared|string-width@5.1.2",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
       "licenses": [
@@ -9399,7 +9471,7 @@
       "type": "library",
       "name": "strip-ansi",
       "version": "6.0.1",
-      "bom-ref": "strip-ansi@6.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|strip-ansi@6.0.1",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes from a string",
       "licenses": [
@@ -9444,7 +9516,7 @@
       "type": "library",
       "name": "ansi-regex",
       "version": "5.0.1",
-      "bom-ref": "strip-ansi@6.0.1|ansi-regex@5.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|strip-ansi@6.0.1|ansi-regex@5.0.1",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
       "licenses": [
@@ -9489,7 +9561,7 @@
       "type": "library",
       "name": "strip-ansi",
       "version": "7.1.0",
-      "bom-ref": "strip-ansi@7.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|strip-ansi@7.1.0",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes from a string",
       "licenses": [
@@ -9500,8 +9572,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/strip-ansi@7.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git",
+      "purl": "pkg:npm/strip-ansi@7.1.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/chalk/strip-ansi/issues",
           "type": "issue-tracker",
@@ -9529,7 +9606,7 @@
       "type": "library",
       "name": "strip-json-comments",
       "version": "2.0.1",
-      "bom-ref": "strip-json-comments@2.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|strip-json-comments@2.0.1",
       "author": "Sindre Sorhus",
       "description": "Strip comments from JSON. Lets you use comments in your JSON files!",
       "licenses": [
@@ -9574,7 +9651,7 @@
       "type": "library",
       "name": "tar-fs",
       "version": "2.1.1",
-      "bom-ref": "tar-fs@2.1.1",
+      "bom-ref": "@dummy-projects/with-prepared|tar-fs@2.1.1",
       "author": "Mathias Buus",
       "description": "filesystem bindings for tar-stream",
       "licenses": [
@@ -9619,7 +9696,7 @@
       "type": "library",
       "name": "chownr",
       "version": "1.1.4",
-      "bom-ref": "tar-fs@2.1.1|chownr@1.1.4",
+      "bom-ref": "@dummy-projects/with-prepared|tar-fs@2.1.1|chownr@1.1.4",
       "author": "Isaac Z. Schlueter",
       "description": "like `chown -R`",
       "licenses": [
@@ -9664,7 +9741,7 @@
       "type": "library",
       "name": "tar-stream",
       "version": "2.2.0",
-      "bom-ref": "tar-stream@2.2.0",
+      "bom-ref": "@dummy-projects/with-prepared|tar-stream@2.2.0",
       "author": "Mathias Buus",
       "description": "tar-stream is a streaming tar parser and generator and nothing else. It is streams2 and operates purely using streams which means you can easily extract/parse tarballs without ever hitting the file system.",
       "licenses": [
@@ -9709,7 +9786,7 @@
       "type": "library",
       "name": "tar",
       "version": "6.2.1",
-      "bom-ref": "tar@6.2.1",
+      "bom-ref": "@dummy-projects/with-prepared|tar@6.2.1",
       "author": "GitHub Inc.",
       "description": "tar for node",
       "licenses": [
@@ -9720,8 +9797,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/tar@6.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-tar.git",
+      "purl": "pkg:npm/tar@6.2.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/tar/-/tar-6.2.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/node-tar/issues",
           "type": "issue-tracker",
@@ -9749,7 +9831,7 @@
       "type": "library",
       "name": "fs-minipass",
       "version": "2.1.0",
-      "bom-ref": "tar@6.2.1|fs-minipass@2.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0",
       "author": "Isaac Z. Schlueter",
       "description": "fs read and write streams based on minipass",
       "licenses": [
@@ -9794,7 +9876,7 @@
       "type": "library",
       "name": "minipass",
       "version": "3.3.6",
-      "bom-ref": "tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6",
+      "bom-ref": "@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "licenses": [
@@ -9839,7 +9921,7 @@
       "type": "library",
       "name": "minipass",
       "version": "5.0.0",
-      "bom-ref": "tar@6.2.1|minipass@5.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|tar@6.2.1|minipass@5.0.0",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "licenses": [
@@ -9884,7 +9966,7 @@
       "type": "library",
       "name": "tunnel-agent",
       "version": "0.6.0",
-      "bom-ref": "tunnel-agent@0.6.0",
+      "bom-ref": "@dummy-projects/with-prepared|tunnel-agent@0.6.0",
       "author": "Mikeal Rogers",
       "description": "HTTP proxy tunneling agent. Formerly part of mikeal/request, now a standalone module.",
       "licenses": [
@@ -9929,7 +10011,7 @@
       "type": "library",
       "name": "undici-types",
       "version": "5.26.5",
-      "bom-ref": "undici-types@5.26.5",
+      "bom-ref": "@dummy-projects/with-prepared|undici-types@5.26.5",
       "description": "A stand-alone types package for Undici",
       "licenses": [
         {
@@ -9973,7 +10055,7 @@
       "type": "library",
       "name": "unique-filename",
       "version": "3.0.0",
-      "bom-ref": "unique-filename@3.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|unique-filename@3.0.0",
       "author": "GitHub Inc.",
       "description": "Generate a unique filename for use in temporary directories or caches.",
       "licenses": [
@@ -10018,7 +10100,7 @@
       "type": "library",
       "name": "unique-slug",
       "version": "4.0.0",
-      "bom-ref": "unique-slug@4.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|unique-slug@4.0.0",
       "author": "GitHub Inc.",
       "description": "Generate a unique character string suitible for use in files and URLs.",
       "licenses": [
@@ -10063,7 +10145,7 @@
       "type": "library",
       "name": "uri-js",
       "version": "4.4.1",
-      "bom-ref": "uri-js@4.4.1",
+      "bom-ref": "@dummy-projects/with-prepared|uri-js@4.4.1",
       "author": "Gary Court",
       "description": "An RFC 3986/3987 compliant, scheme extendable URI/IRI parsing/validating/resolving library for JavaScript.",
       "licenses": [
@@ -10108,7 +10190,7 @@
       "type": "library",
       "name": "util-deprecate",
       "version": "1.0.2",
-      "bom-ref": "util-deprecate@1.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|util-deprecate@1.0.2",
       "author": "Nathan Rajlich",
       "description": "The Node.js `util.deprecate()` function with browser support",
       "licenses": [
@@ -10153,7 +10235,7 @@
       "type": "library",
       "name": "uuid",
       "version": "8.3.2",
-      "bom-ref": "uuid@8.3.2",
+      "bom-ref": "@dummy-projects/with-prepared|uuid@8.3.2",
       "description": "RFC4122 (v1, v4, and v5) UUIDs",
       "licenses": [
         {
@@ -10197,7 +10279,7 @@
       "type": "library",
       "name": "uuidv4",
       "version": "6.2.13",
-      "bom-ref": "uuidv4@6.2.13",
+      "bom-ref": "@dummy-projects/with-prepared|uuidv4@6.2.13",
       "description": "uuidv4 creates v4 UUIDs.",
       "licenses": [
         {
@@ -10241,7 +10323,7 @@
       "type": "library",
       "name": "which",
       "version": "4.0.0",
-      "bom-ref": "which@4.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|which@4.0.0",
       "author": "GitHub Inc.",
       "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
       "licenses": [
@@ -10286,7 +10368,7 @@
       "type": "library",
       "name": "wrap-ansi",
       "version": "7.0.0",
-      "bom-ref": "wrap-ansi@7.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|wrap-ansi@7.0.0",
       "author": "Sindre Sorhus",
       "description": "Wordwrap a string with ANSI escape codes",
       "licenses": [
@@ -10331,7 +10413,7 @@
       "type": "library",
       "name": "ansi-regex",
       "version": "5.0.1",
-      "bom-ref": "wrap-ansi@7.0.0|ansi-regex@5.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|wrap-ansi@7.0.0|ansi-regex@5.0.1",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
       "licenses": [
@@ -10376,7 +10458,7 @@
       "type": "library",
       "name": "ansi-styles",
       "version": "4.3.0",
-      "bom-ref": "wrap-ansi@7.0.0|ansi-styles@4.3.0",
+      "bom-ref": "@dummy-projects/with-prepared|wrap-ansi@7.0.0|ansi-styles@4.3.0",
       "author": "Sindre Sorhus",
       "description": "ANSI escape codes for styling strings in the terminal",
       "licenses": [
@@ -10421,7 +10503,7 @@
       "type": "library",
       "name": "emoji-regex",
       "version": "8.0.0",
-      "bom-ref": "wrap-ansi@7.0.0|emoji-regex@8.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|wrap-ansi@7.0.0|emoji-regex@8.0.0",
       "author": "Mathias Bynens",
       "description": "A regular expression to match all Emoji-only symbols as per the Unicode Standard.",
       "licenses": [
@@ -10466,7 +10548,7 @@
       "type": "library",
       "name": "string-width",
       "version": "4.2.3",
-      "bom-ref": "wrap-ansi@7.0.0|string-width@4.2.3",
+      "bom-ref": "@dummy-projects/with-prepared|wrap-ansi@7.0.0|string-width@4.2.3",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
       "licenses": [
@@ -10511,7 +10593,7 @@
       "type": "library",
       "name": "strip-ansi",
       "version": "6.0.1",
-      "bom-ref": "wrap-ansi@7.0.0|strip-ansi@6.0.1",
+      "bom-ref": "@dummy-projects/with-prepared|wrap-ansi@7.0.0|strip-ansi@6.0.1",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes from a string",
       "licenses": [
@@ -10522,8 +10604,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git",
+      "purl": "pkg:npm/strip-ansi@6.0.1",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/chalk/strip-ansi/issues",
           "type": "issue-tracker",
@@ -10551,7 +10638,7 @@
       "type": "library",
       "name": "wrap-ansi",
       "version": "8.1.0",
-      "bom-ref": "wrap-ansi@8.1.0",
+      "bom-ref": "@dummy-projects/with-prepared|wrap-ansi@8.1.0",
       "author": "Sindre Sorhus",
       "description": "Wordwrap a string with ANSI escape codes",
       "licenses": [
@@ -10596,7 +10683,7 @@
       "type": "library",
       "name": "wrappy",
       "version": "1.0.2",
-      "bom-ref": "wrappy@1.0.2",
+      "bom-ref": "@dummy-projects/with-prepared|wrappy@1.0.2",
       "author": "Isaac Z. Schlueter",
       "description": "Callback wrapping utility",
       "licenses": [
@@ -10641,7 +10728,7 @@
       "type": "library",
       "name": "xmlbuilder2",
       "version": "3.1.1",
-      "bom-ref": "xmlbuilder2@3.1.1",
+      "bom-ref": "@dummy-projects/with-prepared|xmlbuilder2@3.1.1",
       "author": "Ozgur Ozcitak",
       "description": "An XML builder for node.js",
       "licenses": [
@@ -10686,7 +10773,7 @@
       "type": "library",
       "name": "yallist",
       "version": "4.0.0",
-      "bom-ref": "yallist@4.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|yallist@4.0.0",
       "author": "Isaac Z. Schlueter",
       "description": "Yet Another Linked List",
       "licenses": [
@@ -10697,8 +10784,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/yallist@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fyallist.git",
+      "purl": "pkg:npm/yallist@4.0.0",
       "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
+          "type": "distribution",
+          "comment": "as detected from npm-ls property \"resolved\""
+        },
         {
           "url": "https://github.com/isaacs/yallist/issues",
           "type": "issue-tracker",
@@ -10725,1245 +10817,1245 @@
   ],
   "dependencies": [
     {
-      "ref": "@cyclonedx/cyclonedx-library@7.0.0",
+      "ref": "@dummy-projects/with-prepared",
       "dependsOn": [
-        "ajv-formats-draft2019@1.6.1",
-        "ajv-formats@3.0.1",
-        "ajv@8.17.1",
-        "libxmljs2@0.35.0",
-        "packageurl-js@2.0.1",
-        "spdx-expression-parse@4.0.0",
-        "xmlbuilder2@3.1.1"
+        "@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0",
+        "@dummy-projects/with-prepared|@db-ui/base@0.29.2",
+        "@dummy-projects/with-prepared|@types/node@20.14.10",
+        "@dummy-projects/with-prepared|@types/uuid@8.3.4",
+        "@dummy-projects/with-prepared|base64-js@1.0.1",
+        "@dummy-projects/with-prepared|buffer@5.7.1",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2",
+        "@dummy-projects/with-prepared|ignore@5.3.2",
+        "@dummy-projects/with-prepared|is-obj@3.0.0",
+        "@dummy-projects/with-prepared|uuid@8.3.2",
+        "@dummy-projects/with-prepared|uuidv4@6.2.13"
       ]
     },
     {
-      "ref": "@db-ui/base@0.29.2"
-    },
-    {
-      "ref": "@dummy-projects/with-prepared@-",
+      "ref": "@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0",
       "dependsOn": [
-        "@cyclonedx/cyclonedx-library@7.0.0",
-        "@db-ui/base@0.29.2",
-        "@types/node@20.14.10",
-        "@types/uuid@8.3.4",
-        "base64-js@1.0.1",
-        "buffer@5.7.1",
-        "bundle-dependencies@1.0.2",
-        "ignore@5.3.2",
-        "is-obj@3.0.0",
-        "uuid@8.3.2",
-        "uuidv4@6.2.13"
+        "@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1",
+        "@dummy-projects/with-prepared|ajv-formats@3.0.1",
+        "@dummy-projects/with-prepared|ajv@8.17.1",
+        "@dummy-projects/with-prepared|libxmljs2@0.35.0",
+        "@dummy-projects/with-prepared|packageurl-js@2.0.1",
+        "@dummy-projects/with-prepared|spdx-expression-parse@4.0.0",
+        "@dummy-projects/with-prepared|xmlbuilder2@3.1.1"
       ]
+    },
+    {
+      "ref": "@dummy-projects/with-prepared|@db-ui/base@0.29.2"
     },
     {
-      "ref": "@isaacs/cliui@8.0.2",
+      "ref": "@dummy-projects/with-prepared|@isaacs/cliui@8.0.2",
       "dependsOn": [
-        "string-width@4.2.3",
-        "string-width@5.1.2",
-        "strip-ansi@6.0.1",
-        "strip-ansi@7.1.0",
-        "wrap-ansi@7.0.0",
-        "wrap-ansi@8.1.0"
+        "@dummy-projects/with-prepared|string-width@4.2.3",
+        "@dummy-projects/with-prepared|string-width@5.1.2",
+        "@dummy-projects/with-prepared|strip-ansi@6.0.1",
+        "@dummy-projects/with-prepared|strip-ansi@7.1.0",
+        "@dummy-projects/with-prepared|wrap-ansi@7.0.0",
+        "@dummy-projects/with-prepared|wrap-ansi@8.1.0"
       ]
     },
     {
-      "ref": "@npmcli/agent@2.2.2",
+      "ref": "@dummy-projects/with-prepared|@npmcli/agent@2.2.2",
       "dependsOn": [
-        "agent-base@7.1.3",
-        "http-proxy-agent@7.0.2",
-        "https-proxy-agent@7.0.6",
-        "lru-cache@10.4.3",
-        "socks-proxy-agent@8.0.5"
+        "@dummy-projects/with-prepared|agent-base@7.1.3",
+        "@dummy-projects/with-prepared|http-proxy-agent@7.0.2",
+        "@dummy-projects/with-prepared|https-proxy-agent@7.0.6",
+        "@dummy-projects/with-prepared|lru-cache@10.4.3",
+        "@dummy-projects/with-prepared|socks-proxy-agent@8.0.5"
       ]
     },
     {
-      "ref": "@npmcli/fs@3.1.1",
+      "ref": "@dummy-projects/with-prepared|@npmcli/fs@3.1.1",
       "dependsOn": [
-        "semver@7.6.3"
+        "@dummy-projects/with-prepared|semver@7.6.3"
       ]
     },
     {
-      "ref": "@oozcitak/dom@1.15.10",
+      "ref": "@dummy-projects/with-prepared|@oozcitak/dom@1.15.10",
       "dependsOn": [
-        "@oozcitak/infra@1.0.8",
-        "@oozcitak/url@1.0.4",
-        "@oozcitak/util@8.3.8"
+        "@dummy-projects/with-prepared|@oozcitak/infra@1.0.8",
+        "@dummy-projects/with-prepared|@oozcitak/url@1.0.4",
+        "@dummy-projects/with-prepared|@oozcitak/util@8.3.8"
       ]
     },
     {
-      "ref": "@oozcitak/infra@1.0.8",
+      "ref": "@dummy-projects/with-prepared|@oozcitak/infra@1.0.8",
       "dependsOn": [
-        "@oozcitak/util@8.3.8"
+        "@dummy-projects/with-prepared|@oozcitak/util@8.3.8"
       ]
     },
     {
-      "ref": "@oozcitak/url@1.0.4",
+      "ref": "@dummy-projects/with-prepared|@oozcitak/url@1.0.4",
       "dependsOn": [
-        "@oozcitak/infra@1.0.8",
-        "@oozcitak/util@8.3.8"
+        "@dummy-projects/with-prepared|@oozcitak/infra@1.0.8",
+        "@dummy-projects/with-prepared|@oozcitak/util@8.3.8"
       ]
     },
     {
-      "ref": "@oozcitak/util@8.3.8"
+      "ref": "@dummy-projects/with-prepared|@oozcitak/util@8.3.8"
     },
     {
-      "ref": "@pkgjs/parseargs@0.11.0"
+      "ref": "@dummy-projects/with-prepared|@pkgjs/parseargs@0.11.0"
     },
     {
-      "ref": "@types/node@20.14.10",
+      "ref": "@dummy-projects/with-prepared|@types/node@20.14.10",
       "dependsOn": [
-        "undici-types@5.26.5"
+        "@dummy-projects/with-prepared|undici-types@5.26.5"
       ]
     },
     {
-      "ref": "@types/uuid@8.3.4"
+      "ref": "@dummy-projects/with-prepared|@types/uuid@8.3.4"
     },
     {
-      "ref": "abbrev@2.0.0"
+      "ref": "@dummy-projects/with-prepared|abbrev@2.0.0"
     },
     {
-      "ref": "agent-base@7.1.3"
+      "ref": "@dummy-projects/with-prepared|agent-base@7.1.3"
     },
     {
-      "ref": "aggregate-error@3.1.0",
+      "ref": "@dummy-projects/with-prepared|aggregate-error@3.1.0",
       "dependsOn": [
-        "clean-stack@2.2.0",
-        "indent-string@4.0.0"
+        "@dummy-projects/with-prepared|clean-stack@2.2.0",
+        "@dummy-projects/with-prepared|indent-string@4.0.0"
       ]
     },
     {
-      "ref": "ajv-formats-draft2019@1.6.1",
+      "ref": "@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1",
       "dependsOn": [
-        "ajv@8.17.1",
-        "punycode@2.3.1",
-        "schemes@1.4.0",
-        "smtp-address-parser@1.1.0",
-        "uri-js@4.4.1"
+        "@dummy-projects/with-prepared|ajv@8.17.1",
+        "@dummy-projects/with-prepared|punycode@2.3.1",
+        "@dummy-projects/with-prepared|schemes@1.4.0",
+        "@dummy-projects/with-prepared|smtp-address-parser@1.1.0",
+        "@dummy-projects/with-prepared|uri-js@4.4.1"
       ]
     },
     {
-      "ref": "ajv-formats@3.0.1",
+      "ref": "@dummy-projects/with-prepared|ajv-formats@3.0.1",
       "dependsOn": [
-        "ajv@8.17.1"
+        "@dummy-projects/with-prepared|ajv@8.17.1"
       ]
     },
     {
-      "ref": "ajv@8.17.1",
+      "ref": "@dummy-projects/with-prepared|ajv@8.17.1",
       "dependsOn": [
-        "fast-deep-equal@3.1.3",
-        "fast-uri@3.0.3",
-        "json-schema-traverse@1.0.0",
-        "require-from-string@2.0.2"
+        "@dummy-projects/with-prepared|fast-deep-equal@3.1.3",
+        "@dummy-projects/with-prepared|fast-uri@3.0.3",
+        "@dummy-projects/with-prepared|json-schema-traverse@1.0.0",
+        "@dummy-projects/with-prepared|require-from-string@2.0.2"
       ]
     },
     {
-      "ref": "ansi-regex@6.1.0"
+      "ref": "@dummy-projects/with-prepared|ansi-regex@6.1.0"
     },
     {
-      "ref": "ansi-styles@6.2.1"
+      "ref": "@dummy-projects/with-prepared|ansi-styles@6.2.1"
     },
     {
-      "ref": "argparse@1.0.10",
+      "ref": "@dummy-projects/with-prepared|argparse@1.0.10",
       "dependsOn": [
-        "argparse@1.0.10|sprintf-js@1.0.3"
+        "@dummy-projects/with-prepared|argparse@1.0.10|sprintf-js@1.0.3"
       ]
     },
     {
-      "ref": "argparse@1.0.10|sprintf-js@1.0.3"
+      "ref": "@dummy-projects/with-prepared|argparse@1.0.10|sprintf-js@1.0.3"
     },
     {
-      "ref": "balanced-match@1.0.2"
+      "ref": "@dummy-projects/with-prepared|balanced-match@1.0.2"
     },
     {
-      "ref": "base64-js@1.0.1"
+      "ref": "@dummy-projects/with-prepared|base64-js@1.0.1"
     },
     {
-      "ref": "bindings@1.5.0",
+      "ref": "@dummy-projects/with-prepared|bindings@1.5.0",
       "dependsOn": [
-        "file-uri-to-path@1.0.0"
+        "@dummy-projects/with-prepared|file-uri-to-path@1.0.0"
       ]
     },
     {
-      "ref": "bl@4.1.0",
+      "ref": "@dummy-projects/with-prepared|bl@4.1.0",
       "dependsOn": [
-        "buffer@5.7.1",
-        "inherits@2.0.4",
-        "readable-stream@3.6.2"
+        "@dummy-projects/with-prepared|buffer@5.7.1",
+        "@dummy-projects/with-prepared|inherits@2.0.4",
+        "@dummy-projects/with-prepared|readable-stream@3.6.2"
       ]
     },
     {
-      "ref": "brace-expansion@2.0.1",
+      "ref": "@dummy-projects/with-prepared|brace-expansion@2.0.1",
       "dependsOn": [
-        "balanced-match@1.0.2"
+        "@dummy-projects/with-prepared|balanced-match@1.0.2"
       ]
     },
     {
-      "ref": "buffer@5.7.1",
+      "ref": "@dummy-projects/with-prepared|buffer@5.7.1",
       "dependsOn": [
-        "buffer@5.7.1|base64-js@1.5.1",
-        "ieee754@1.2.1"
+        "@dummy-projects/with-prepared|buffer@5.7.1|base64-js@1.5.1",
+        "@dummy-projects/with-prepared|ieee754@1.2.1"
       ]
     },
     {
-      "ref": "buffer@5.7.1|base64-js@1.5.1"
+      "ref": "@dummy-projects/with-prepared|buffer@5.7.1|base64-js@1.5.1"
     },
     {
-      "ref": "bundle-dependencies@1.0.2",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|yargs@4.1.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|yargs@4.1.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|ansi-regex@2.0.0"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|ansi-regex@2.0.0"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|builtin-modules@1.1.1"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|builtin-modules@1.1.1"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|camelcase@2.1.0"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|camelcase@2.1.0"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|cliui@3.1.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|cliui@3.1.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|string-width@1.0.1",
-        "bundle-dependencies@1.0.2|strip-ansi@3.0.1",
-        "bundle-dependencies@1.0.2|wrap-ansi@1.0.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|string-width@1.0.1",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-ansi@3.0.1",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|wrap-ansi@1.0.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|code-point-at@1.0.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|code-point-at@1.0.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|number-is-nan@1.0.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|number-is-nan@1.0.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|decamelize@1.1.2",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|decamelize@1.1.2",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|error-ex@1.3.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|error-ex@1.3.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|is-arrayish@0.2.1"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-arrayish@0.2.1"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|escape-string-regexp@1.0.5"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|find-up@1.1.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|find-up@1.1.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|path-exists@2.1.0",
-        "bundle-dependencies@1.0.2|pinkie-promise@2.0.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|path-exists@2.1.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie-promise@2.0.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|graceful-fs@4.1.3"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|graceful-fs@4.1.3"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|hosted-git-info@2.1.4"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|hosted-git-info@2.1.4"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|invert-kv@1.0.0"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|invert-kv@1.0.0"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|is-arrayish@0.2.1"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-arrayish@0.2.1"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|is-builtin-module@1.0.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-builtin-module@1.0.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|builtin-modules@1.1.1"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|builtin-modules@1.1.1"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|number-is-nan@1.0.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|number-is-nan@1.0.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|is-utf8@0.2.1"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-utf8@0.2.1"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|lcid@1.0.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lcid@1.0.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|invert-kv@1.0.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|invert-kv@1.0.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|load-json-file@1.1.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|load-json-file@1.1.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|graceful-fs@4.1.3",
-        "bundle-dependencies@1.0.2|parse-json@2.2.0",
-        "bundle-dependencies@1.0.2|pify@2.3.0",
-        "bundle-dependencies@1.0.2|pinkie-promise@2.0.0",
-        "bundle-dependencies@1.0.2|strip-bom@2.0.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|graceful-fs@4.1.3",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|parse-json@2.2.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pify@2.3.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie-promise@2.0.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-bom@2.0.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|lodash.assign@4.0.3",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.assign@4.0.3",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|lodash.keys@4.0.3",
-        "bundle-dependencies@1.0.2|lodash.rest@4.0.1"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.keys@4.0.3",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.rest@4.0.1"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|lodash.keys@4.0.3"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.keys@4.0.3"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|lodash.rest@4.0.1"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.rest@4.0.1"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|normalize-package-data@2.3.5",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|normalize-package-data@2.3.5",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|hosted-git-info@2.1.4",
-        "bundle-dependencies@1.0.2|is-builtin-module@1.0.0",
-        "bundle-dependencies@1.0.2|semver@5.1.0",
-        "bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|hosted-git-info@2.1.4",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-builtin-module@1.0.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|semver@5.1.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|number-is-nan@1.0.0"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|number-is-nan@1.0.0"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|object-assign@4.0.1"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|object-assign@4.0.1"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|os-locale@1.4.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|os-locale@1.4.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|lcid@1.0.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lcid@1.0.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|parse-json@2.2.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|parse-json@2.2.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|error-ex@1.3.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|error-ex@1.3.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|path-exists@2.1.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|path-exists@2.1.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|pinkie-promise@2.0.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie-promise@2.0.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|path-type@1.1.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|path-type@1.1.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|graceful-fs@4.1.3",
-        "bundle-dependencies@1.0.2|pify@2.3.0",
-        "bundle-dependencies@1.0.2|pinkie-promise@2.0.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|graceful-fs@4.1.3",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pify@2.3.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie-promise@2.0.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|pify@2.3.0"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pify@2.3.0"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|pinkie-promise@2.0.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie-promise@2.0.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|pinkie@2.0.4"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie@2.0.4"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|pinkie@2.0.4"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pinkie@2.0.4"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|pkg-conf@1.1.1",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pkg-conf@1.1.1",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|find-up@1.1.0",
-        "bundle-dependencies@1.0.2|object-assign@4.0.1",
-        "bundle-dependencies@1.0.2|read-pkg@1.1.0",
-        "bundle-dependencies@1.0.2|symbol@0.2.1"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|find-up@1.1.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|object-assign@4.0.1",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg@1.1.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|symbol@0.2.1"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|read-pkg-up@1.0.1",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg-up@1.0.1",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|find-up@1.1.0",
-        "bundle-dependencies@1.0.2|read-pkg@1.1.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|find-up@1.1.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg@1.1.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|read-pkg@1.1.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg@1.1.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|load-json-file@1.1.0",
-        "bundle-dependencies@1.0.2|normalize-package-data@2.3.5",
-        "bundle-dependencies@1.0.2|path-type@1.1.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|load-json-file@1.1.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|normalize-package-data@2.3.5",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|path-type@1.1.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|require-main-filename@1.0.1"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|require-main-filename@1.0.1"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|semver@5.1.0"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|semver@5.1.0"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|spdx-correct@1.0.2",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-correct@1.0.2",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-exceptions@1.0.4"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|spdx-exceptions@1.0.4",
-        "bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-exceptions@1.0.4",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-license-ids@1.2.0"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|string-width@1.0.1",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|string-width@1.0.1",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|code-point-at@1.0.0",
-        "bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0",
-        "bundle-dependencies@1.0.2|strip-ansi@3.0.1"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|code-point-at@1.0.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-fullwidth-code-point@1.0.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-ansi@3.0.1"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|strip-ansi@3.0.1",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-ansi@3.0.1",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|ansi-regex@2.0.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|ansi-regex@2.0.0"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|strip-bom@2.0.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|strip-bom@2.0.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|is-utf8@0.2.1"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|is-utf8@0.2.1"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|symbol@0.2.1"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|symbol@0.2.1"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|validate-npm-package-license@3.0.1",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|spdx-correct@1.0.2",
-        "bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-correct@1.0.2",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|spdx-expression-parse@1.0.2"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|window-size@0.2.0"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|window-size@0.2.0"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|wrap-ansi@1.0.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|wrap-ansi@1.0.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|string-width@1.0.1"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|string-width@1.0.1"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|y18n@3.2.0"
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|y18n@3.2.0"
     },
     {
-      "ref": "bundle-dependencies@1.0.2|yargs-parser@2.1.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|yargs-parser@2.1.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|camelcase@2.1.0",
-        "bundle-dependencies@1.0.2|lodash.assign@4.0.3"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|camelcase@2.1.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|lodash.assign@4.0.3"
       ]
     },
     {
-      "ref": "bundle-dependencies@1.0.2|yargs@4.1.0",
+      "ref": "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|yargs@4.1.0",
       "dependsOn": [
-        "bundle-dependencies@1.0.2|camelcase@2.1.0",
-        "bundle-dependencies@1.0.2|cliui@3.1.0",
-        "bundle-dependencies@1.0.2|decamelize@1.1.2",
-        "bundle-dependencies@1.0.2|os-locale@1.4.0",
-        "bundle-dependencies@1.0.2|pkg-conf@1.1.1",
-        "bundle-dependencies@1.0.2|read-pkg-up@1.0.1",
-        "bundle-dependencies@1.0.2|require-main-filename@1.0.1",
-        "bundle-dependencies@1.0.2|string-width@1.0.1",
-        "bundle-dependencies@1.0.2|window-size@0.2.0",
-        "bundle-dependencies@1.0.2|y18n@3.2.0",
-        "bundle-dependencies@1.0.2|yargs-parser@2.1.0"
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|camelcase@2.1.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|cliui@3.1.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|decamelize@1.1.2",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|os-locale@1.4.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|pkg-conf@1.1.1",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|read-pkg-up@1.0.1",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|require-main-filename@1.0.1",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|string-width@1.0.1",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|window-size@0.2.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|y18n@3.2.0",
+        "@dummy-projects/with-prepared|bundle-dependencies@1.0.2|yargs-parser@2.1.0"
       ]
     },
     {
-      "ref": "cacache@18.0.4",
+      "ref": "@dummy-projects/with-prepared|cacache@18.0.4",
       "dependsOn": [
-        "@npmcli/fs@3.1.1",
-        "fs-minipass@3.0.3",
-        "glob@10.4.5",
-        "lru-cache@10.4.3",
-        "minipass-collect@2.0.1",
-        "minipass-flush@1.0.5",
-        "minipass-pipeline@1.2.4",
-        "minipass@7.1.2",
-        "p-map@4.0.0",
-        "ssri@10.0.6",
-        "tar@6.2.1",
-        "unique-filename@3.0.0"
+        "@dummy-projects/with-prepared|@npmcli/fs@3.1.1",
+        "@dummy-projects/with-prepared|fs-minipass@3.0.3",
+        "@dummy-projects/with-prepared|glob@10.4.5",
+        "@dummy-projects/with-prepared|lru-cache@10.4.3",
+        "@dummy-projects/with-prepared|minipass-collect@2.0.1",
+        "@dummy-projects/with-prepared|minipass-flush@1.0.5",
+        "@dummy-projects/with-prepared|minipass-pipeline@1.2.4",
+        "@dummy-projects/with-prepared|minipass@7.1.2",
+        "@dummy-projects/with-prepared|p-map@4.0.0",
+        "@dummy-projects/with-prepared|ssri@10.0.6",
+        "@dummy-projects/with-prepared|tar@6.2.1",
+        "@dummy-projects/with-prepared|unique-filename@3.0.0"
       ]
     },
     {
-      "ref": "chownr@2.0.0"
+      "ref": "@dummy-projects/with-prepared|chownr@2.0.0"
     },
     {
-      "ref": "clean-stack@2.2.0"
+      "ref": "@dummy-projects/with-prepared|clean-stack@2.2.0"
     },
     {
-      "ref": "color-convert@2.0.1",
+      "ref": "@dummy-projects/with-prepared|color-convert@2.0.1",
       "dependsOn": [
-        "color-name@1.1.4"
+        "@dummy-projects/with-prepared|color-name@1.1.4"
       ]
     },
     {
-      "ref": "color-name@1.1.4"
+      "ref": "@dummy-projects/with-prepared|color-name@1.1.4"
     },
     {
-      "ref": "commander@2.20.3"
+      "ref": "@dummy-projects/with-prepared|commander@2.20.3"
     },
     {
-      "ref": "cross-spawn@7.0.6",
+      "ref": "@dummy-projects/with-prepared|cross-spawn@7.0.6",
       "dependsOn": [
-        "cross-spawn@7.0.6|which@2.0.2",
-        "path-key@3.1.1",
-        "shebang-command@2.0.0"
+        "@dummy-projects/with-prepared|cross-spawn@7.0.6|which@2.0.2",
+        "@dummy-projects/with-prepared|path-key@3.1.1",
+        "@dummy-projects/with-prepared|shebang-command@2.0.0"
       ]
     },
     {
-      "ref": "cross-spawn@7.0.6|isexe@2.0.0"
+      "ref": "@dummy-projects/with-prepared|cross-spawn@7.0.6|isexe@2.0.0"
     },
     {
-      "ref": "cross-spawn@7.0.6|which@2.0.2",
+      "ref": "@dummy-projects/with-prepared|cross-spawn@7.0.6|which@2.0.2",
       "dependsOn": [
-        "cross-spawn@7.0.6|isexe@2.0.0"
+        "@dummy-projects/with-prepared|cross-spawn@7.0.6|isexe@2.0.0"
       ]
     },
     {
-      "ref": "debug@4.4.0",
+      "ref": "@dummy-projects/with-prepared|debug@4.4.0",
       "dependsOn": [
-        "ms@2.1.3"
+        "@dummy-projects/with-prepared|ms@2.1.3"
       ]
     },
     {
-      "ref": "decompress-response@6.0.0",
+      "ref": "@dummy-projects/with-prepared|decompress-response@6.0.0",
       "dependsOn": [
-        "mimic-response@3.1.0"
+        "@dummy-projects/with-prepared|mimic-response@3.1.0"
       ]
     },
     {
-      "ref": "deep-extend@0.6.0"
+      "ref": "@dummy-projects/with-prepared|deep-extend@0.6.0"
     },
     {
-      "ref": "detect-libc@2.0.3"
+      "ref": "@dummy-projects/with-prepared|detect-libc@2.0.3"
     },
     {
-      "ref": "discontinuous-range@1.0.0"
+      "ref": "@dummy-projects/with-prepared|discontinuous-range@1.0.0"
     },
     {
-      "ref": "eastasianwidth@0.2.0"
+      "ref": "@dummy-projects/with-prepared|eastasianwidth@0.2.0"
     },
     {
-      "ref": "emoji-regex@9.2.2"
+      "ref": "@dummy-projects/with-prepared|emoji-regex@9.2.2"
     },
     {
-      "ref": "encoding@0.1.13",
+      "ref": "@dummy-projects/with-prepared|encoding@0.1.13",
       "dependsOn": [
-        "iconv-lite@0.6.3"
+        "@dummy-projects/with-prepared|iconv-lite@0.6.3"
       ]
     },
     {
-      "ref": "end-of-stream@1.4.4",
+      "ref": "@dummy-projects/with-prepared|end-of-stream@1.4.4",
       "dependsOn": [
-        "once@1.4.0"
+        "@dummy-projects/with-prepared|once@1.4.0"
       ]
     },
     {
-      "ref": "env-paths@2.2.1"
+      "ref": "@dummy-projects/with-prepared|env-paths@2.2.1"
     },
     {
-      "ref": "err-code@2.0.3"
+      "ref": "@dummy-projects/with-prepared|err-code@2.0.3"
     },
     {
-      "ref": "esprima@4.0.1"
+      "ref": "@dummy-projects/with-prepared|esprima@4.0.1"
     },
     {
-      "ref": "expand-template@2.0.3"
+      "ref": "@dummy-projects/with-prepared|expand-template@2.0.3"
     },
     {
-      "ref": "exponential-backoff@3.1.1"
+      "ref": "@dummy-projects/with-prepared|exponential-backoff@3.1.1"
     },
     {
-      "ref": "extend@3.0.2"
+      "ref": "@dummy-projects/with-prepared|extend@3.0.2"
     },
     {
-      "ref": "fast-deep-equal@3.1.3"
+      "ref": "@dummy-projects/with-prepared|fast-deep-equal@3.1.3"
     },
     {
-      "ref": "fast-uri@3.0.3"
+      "ref": "@dummy-projects/with-prepared|fast-uri@3.0.3"
     },
     {
-      "ref": "file-uri-to-path@1.0.0"
+      "ref": "@dummy-projects/with-prepared|file-uri-to-path@1.0.0"
     },
     {
-      "ref": "foreground-child@3.3.0",
+      "ref": "@dummy-projects/with-prepared|foreground-child@3.3.0",
       "dependsOn": [
-        "cross-spawn@7.0.6",
-        "signal-exit@4.1.0"
+        "@dummy-projects/with-prepared|cross-spawn@7.0.6",
+        "@dummy-projects/with-prepared|signal-exit@4.1.0"
       ]
     },
     {
-      "ref": "fs-constants@1.0.0"
+      "ref": "@dummy-projects/with-prepared|fs-constants@1.0.0"
     },
     {
-      "ref": "fs-minipass@3.0.3",
+      "ref": "@dummy-projects/with-prepared|fs-minipass@3.0.3",
       "dependsOn": [
-        "minipass@7.1.2"
+        "@dummy-projects/with-prepared|minipass@7.1.2"
       ]
     },
     {
-      "ref": "github-from-package@0.0.0"
+      "ref": "@dummy-projects/with-prepared|github-from-package@0.0.0"
     },
     {
-      "ref": "glob@10.4.5",
+      "ref": "@dummy-projects/with-prepared|glob@10.4.5",
       "dependsOn": [
-        "foreground-child@3.3.0",
-        "jackspeak@3.4.3",
-        "minimatch@9.0.5",
-        "minipass@7.1.2",
-        "package-json-from-dist@1.0.1",
-        "path-scurry@1.11.1"
+        "@dummy-projects/with-prepared|foreground-child@3.3.0",
+        "@dummy-projects/with-prepared|jackspeak@3.4.3",
+        "@dummy-projects/with-prepared|minimatch@9.0.5",
+        "@dummy-projects/with-prepared|minipass@7.1.2",
+        "@dummy-projects/with-prepared|package-json-from-dist@1.0.1",
+        "@dummy-projects/with-prepared|path-scurry@1.11.1"
       ]
     },
     {
-      "ref": "graceful-fs@4.2.11"
+      "ref": "@dummy-projects/with-prepared|graceful-fs@4.2.11"
     },
     {
-      "ref": "http-cache-semantics@4.1.1"
+      "ref": "@dummy-projects/with-prepared|http-cache-semantics@4.1.1"
     },
     {
-      "ref": "http-proxy-agent@7.0.2",
+      "ref": "@dummy-projects/with-prepared|http-proxy-agent@7.0.2",
       "dependsOn": [
-        "agent-base@7.1.3",
-        "debug@4.4.0"
+        "@dummy-projects/with-prepared|agent-base@7.1.3",
+        "@dummy-projects/with-prepared|debug@4.4.0"
       ]
     },
     {
-      "ref": "https-proxy-agent@7.0.6",
+      "ref": "@dummy-projects/with-prepared|https-proxy-agent@7.0.6",
       "dependsOn": [
-        "agent-base@7.1.3",
-        "debug@4.4.0"
+        "@dummy-projects/with-prepared|agent-base@7.1.3",
+        "@dummy-projects/with-prepared|debug@4.4.0"
       ]
     },
     {
-      "ref": "iconv-lite@0.6.3",
+      "ref": "@dummy-projects/with-prepared|iconv-lite@0.6.3",
       "dependsOn": [
-        "safer-buffer@2.1.2"
+        "@dummy-projects/with-prepared|safer-buffer@2.1.2"
       ]
     },
     {
-      "ref": "ieee754@1.2.1"
+      "ref": "@dummy-projects/with-prepared|ieee754@1.2.1"
     },
     {
-      "ref": "ignore@5.3.2"
+      "ref": "@dummy-projects/with-prepared|ignore@5.3.2"
     },
     {
-      "ref": "imurmurhash@0.1.4"
+      "ref": "@dummy-projects/with-prepared|imurmurhash@0.1.4"
     },
     {
-      "ref": "indent-string@4.0.0"
+      "ref": "@dummy-projects/with-prepared|indent-string@4.0.0"
     },
     {
-      "ref": "inherits@2.0.4"
+      "ref": "@dummy-projects/with-prepared|inherits@2.0.4"
     },
     {
-      "ref": "ini@1.3.8"
+      "ref": "@dummy-projects/with-prepared|ini@1.3.8"
     },
     {
-      "ref": "ip-address@9.0.5",
+      "ref": "@dummy-projects/with-prepared|ip-address@9.0.5",
       "dependsOn": [
-        "jsbn@1.1.0",
-        "sprintf-js@1.1.3"
+        "@dummy-projects/with-prepared|jsbn@1.1.0",
+        "@dummy-projects/with-prepared|sprintf-js@1.1.3"
       ]
     },
     {
-      "ref": "is-fullwidth-code-point@3.0.0"
+      "ref": "@dummy-projects/with-prepared|is-fullwidth-code-point@3.0.0"
     },
     {
-      "ref": "is-lambda@1.0.1"
+      "ref": "@dummy-projects/with-prepared|is-lambda@1.0.1"
     },
     {
-      "ref": "is-obj@3.0.0"
+      "ref": "@dummy-projects/with-prepared|is-obj@3.0.0"
     },
     {
-      "ref": "isexe@3.1.1"
+      "ref": "@dummy-projects/with-prepared|isexe@3.1.1"
     },
     {
-      "ref": "jackspeak@3.4.3",
+      "ref": "@dummy-projects/with-prepared|jackspeak@3.4.3",
       "dependsOn": [
-        "@isaacs/cliui@8.0.2",
-        "@pkgjs/parseargs@0.11.0"
+        "@dummy-projects/with-prepared|@isaacs/cliui@8.0.2",
+        "@dummy-projects/with-prepared|@pkgjs/parseargs@0.11.0"
       ]
     },
     {
-      "ref": "js-yaml@3.14.1",
+      "ref": "@dummy-projects/with-prepared|js-yaml@3.14.1",
       "dependsOn": [
-        "argparse@1.0.10",
-        "esprima@4.0.1"
+        "@dummy-projects/with-prepared|argparse@1.0.10",
+        "@dummy-projects/with-prepared|esprima@4.0.1"
       ]
     },
     {
-      "ref": "jsbn@1.1.0"
+      "ref": "@dummy-projects/with-prepared|jsbn@1.1.0"
     },
     {
-      "ref": "json-schema-traverse@1.0.0"
+      "ref": "@dummy-projects/with-prepared|json-schema-traverse@1.0.0"
     },
     {
-      "ref": "libxmljs2@0.35.0",
+      "ref": "@dummy-projects/with-prepared|libxmljs2@0.35.0",
       "dependsOn": [
-        "bindings@1.5.0",
-        "nan@2.20.0",
-        "node-gyp@10.3.1",
-        "prebuild-install@7.1.2"
+        "@dummy-projects/with-prepared|bindings@1.5.0",
+        "@dummy-projects/with-prepared|nan@2.20.0",
+        "@dummy-projects/with-prepared|node-gyp@10.3.1",
+        "@dummy-projects/with-prepared|prebuild-install@7.1.2"
       ]
     },
     {
-      "ref": "lru-cache@10.4.3"
+      "ref": "@dummy-projects/with-prepared|lru-cache@10.4.3"
     },
     {
-      "ref": "make-fetch-happen@13.0.1",
+      "ref": "@dummy-projects/with-prepared|make-fetch-happen@13.0.1",
       "dependsOn": [
-        "@npmcli/agent@2.2.2",
-        "cacache@18.0.4",
-        "http-cache-semantics@4.1.1",
-        "is-lambda@1.0.1",
-        "minipass-fetch@3.0.5",
-        "minipass-flush@1.0.5",
-        "minipass-pipeline@1.2.4",
-        "minipass@7.1.2",
-        "negotiator@0.6.4",
-        "proc-log@4.2.0",
-        "promise-retry@2.0.1",
-        "ssri@10.0.6"
+        "@dummy-projects/with-prepared|@npmcli/agent@2.2.2",
+        "@dummy-projects/with-prepared|cacache@18.0.4",
+        "@dummy-projects/with-prepared|http-cache-semantics@4.1.1",
+        "@dummy-projects/with-prepared|is-lambda@1.0.1",
+        "@dummy-projects/with-prepared|minipass-fetch@3.0.5",
+        "@dummy-projects/with-prepared|minipass-flush@1.0.5",
+        "@dummy-projects/with-prepared|minipass-pipeline@1.2.4",
+        "@dummy-projects/with-prepared|minipass@7.1.2",
+        "@dummy-projects/with-prepared|negotiator@0.6.4",
+        "@dummy-projects/with-prepared|proc-log@4.2.0",
+        "@dummy-projects/with-prepared|promise-retry@2.0.1",
+        "@dummy-projects/with-prepared|ssri@10.0.6"
       ]
     },
     {
-      "ref": "mimic-response@3.1.0"
+      "ref": "@dummy-projects/with-prepared|mimic-response@3.1.0"
     },
     {
-      "ref": "minimatch@9.0.5",
+      "ref": "@dummy-projects/with-prepared|minimatch@9.0.5",
       "dependsOn": [
-        "brace-expansion@2.0.1"
+        "@dummy-projects/with-prepared|brace-expansion@2.0.1"
       ]
     },
     {
-      "ref": "minimist@1.2.8"
+      "ref": "@dummy-projects/with-prepared|minimist@1.2.8"
     },
     {
-      "ref": "minipass-collect@2.0.1",
+      "ref": "@dummy-projects/with-prepared|minipass-collect@2.0.1",
       "dependsOn": [
-        "minipass@7.1.2"
+        "@dummy-projects/with-prepared|minipass@7.1.2"
       ]
     },
     {
-      "ref": "minipass-fetch@3.0.5",
+      "ref": "@dummy-projects/with-prepared|minipass-fetch@3.0.5",
       "dependsOn": [
-        "encoding@0.1.13",
-        "minipass-sized@1.0.3",
-        "minipass@7.1.2",
-        "minizlib@2.1.2"
+        "@dummy-projects/with-prepared|encoding@0.1.13",
+        "@dummy-projects/with-prepared|minipass-sized@1.0.3",
+        "@dummy-projects/with-prepared|minipass@7.1.2",
+        "@dummy-projects/with-prepared|minizlib@2.1.2"
       ]
     },
     {
-      "ref": "minipass-flush@1.0.5",
+      "ref": "@dummy-projects/with-prepared|minipass-flush@1.0.5",
       "dependsOn": [
-        "minipass-flush@1.0.5|minipass@3.3.6"
+        "@dummy-projects/with-prepared|minipass-flush@1.0.5|minipass@3.3.6"
       ]
     },
     {
-      "ref": "minipass-flush@1.0.5|minipass@3.3.6",
+      "ref": "@dummy-projects/with-prepared|minipass-flush@1.0.5|minipass@3.3.6",
       "dependsOn": [
-        "yallist@4.0.0"
+        "@dummy-projects/with-prepared|yallist@4.0.0"
       ]
     },
     {
-      "ref": "minipass-pipeline@1.2.4",
+      "ref": "@dummy-projects/with-prepared|minipass-pipeline@1.2.4",
       "dependsOn": [
-        "minipass-pipeline@1.2.4|minipass@3.3.6"
+        "@dummy-projects/with-prepared|minipass-pipeline@1.2.4|minipass@3.3.6"
       ]
     },
     {
-      "ref": "minipass-pipeline@1.2.4|minipass@3.3.6",
+      "ref": "@dummy-projects/with-prepared|minipass-pipeline@1.2.4|minipass@3.3.6",
       "dependsOn": [
-        "yallist@4.0.0"
+        "@dummy-projects/with-prepared|yallist@4.0.0"
       ]
     },
     {
-      "ref": "minipass-sized@1.0.3",
+      "ref": "@dummy-projects/with-prepared|minipass-sized@1.0.3",
       "dependsOn": [
-        "minipass-sized@1.0.3|minipass@3.3.6"
+        "@dummy-projects/with-prepared|minipass-sized@1.0.3|minipass@3.3.6"
       ]
     },
     {
-      "ref": "minipass-sized@1.0.3|minipass@3.3.6",
+      "ref": "@dummy-projects/with-prepared|minipass-sized@1.0.3|minipass@3.3.6",
       "dependsOn": [
-        "yallist@4.0.0"
+        "@dummy-projects/with-prepared|yallist@4.0.0"
       ]
     },
     {
-      "ref": "minipass@7.1.2"
+      "ref": "@dummy-projects/with-prepared|minipass@7.1.2"
     },
     {
-      "ref": "minizlib@2.1.2",
+      "ref": "@dummy-projects/with-prepared|minizlib@2.1.2",
       "dependsOn": [
-        "minizlib@2.1.2|minipass@3.3.6",
-        "yallist@4.0.0"
+        "@dummy-projects/with-prepared|minizlib@2.1.2|minipass@3.3.6",
+        "@dummy-projects/with-prepared|yallist@4.0.0"
       ]
     },
     {
-      "ref": "minizlib@2.1.2|minipass@3.3.6",
+      "ref": "@dummy-projects/with-prepared|minizlib@2.1.2|minipass@3.3.6",
       "dependsOn": [
-        "yallist@4.0.0"
+        "@dummy-projects/with-prepared|yallist@4.0.0"
       ]
     },
     {
-      "ref": "mkdirp-classic@0.5.3"
+      "ref": "@dummy-projects/with-prepared|mkdirp-classic@0.5.3"
     },
     {
-      "ref": "mkdirp@1.0.4"
+      "ref": "@dummy-projects/with-prepared|mkdirp@1.0.4"
     },
     {
-      "ref": "moo@0.5.2"
+      "ref": "@dummy-projects/with-prepared|moo@0.5.2"
     },
     {
-      "ref": "ms@2.1.3"
+      "ref": "@dummy-projects/with-prepared|ms@2.1.3"
     },
     {
-      "ref": "nan@2.20.0"
+      "ref": "@dummy-projects/with-prepared|nan@2.20.0"
     },
     {
-      "ref": "napi-build-utils@1.0.2"
+      "ref": "@dummy-projects/with-prepared|napi-build-utils@1.0.2"
     },
     {
-      "ref": "nearley@2.20.1",
+      "ref": "@dummy-projects/with-prepared|nearley@2.20.1",
       "dependsOn": [
-        "commander@2.20.3",
-        "moo@0.5.2",
-        "railroad-diagrams@1.0.0",
-        "randexp@0.4.6"
+        "@dummy-projects/with-prepared|commander@2.20.3",
+        "@dummy-projects/with-prepared|moo@0.5.2",
+        "@dummy-projects/with-prepared|railroad-diagrams@1.0.0",
+        "@dummy-projects/with-prepared|randexp@0.4.6"
       ]
     },
     {
-      "ref": "negotiator@0.6.4"
+      "ref": "@dummy-projects/with-prepared|negotiator@0.6.4"
     },
     {
-      "ref": "node-abi@3.71.0",
+      "ref": "@dummy-projects/with-prepared|node-abi@3.71.0",
       "dependsOn": [
-        "semver@7.6.3"
+        "@dummy-projects/with-prepared|semver@7.6.3"
       ]
     },
     {
-      "ref": "node-gyp@10.3.1",
+      "ref": "@dummy-projects/with-prepared|node-gyp@10.3.1",
       "dependsOn": [
-        "env-paths@2.2.1",
-        "exponential-backoff@3.1.1",
-        "glob@10.4.5",
-        "graceful-fs@4.2.11",
-        "make-fetch-happen@13.0.1",
-        "nopt@7.2.1",
-        "proc-log@4.2.0",
-        "semver@7.6.3",
-        "tar@6.2.1",
-        "which@4.0.0"
+        "@dummy-projects/with-prepared|env-paths@2.2.1",
+        "@dummy-projects/with-prepared|exponential-backoff@3.1.1",
+        "@dummy-projects/with-prepared|glob@10.4.5",
+        "@dummy-projects/with-prepared|graceful-fs@4.2.11",
+        "@dummy-projects/with-prepared|make-fetch-happen@13.0.1",
+        "@dummy-projects/with-prepared|nopt@7.2.1",
+        "@dummy-projects/with-prepared|proc-log@4.2.0",
+        "@dummy-projects/with-prepared|semver@7.6.3",
+        "@dummy-projects/with-prepared|tar@6.2.1",
+        "@dummy-projects/with-prepared|which@4.0.0"
       ]
     },
     {
-      "ref": "nopt@7.2.1",
+      "ref": "@dummy-projects/with-prepared|nopt@7.2.1",
       "dependsOn": [
-        "abbrev@2.0.0"
+        "@dummy-projects/with-prepared|abbrev@2.0.0"
       ]
     },
     {
-      "ref": "once@1.4.0",
+      "ref": "@dummy-projects/with-prepared|once@1.4.0",
       "dependsOn": [
-        "wrappy@1.0.2"
+        "@dummy-projects/with-prepared|wrappy@1.0.2"
       ]
     },
     {
-      "ref": "p-map@4.0.0",
+      "ref": "@dummy-projects/with-prepared|p-map@4.0.0",
       "dependsOn": [
-        "aggregate-error@3.1.0"
+        "@dummy-projects/with-prepared|aggregate-error@3.1.0"
       ]
     },
     {
-      "ref": "package-json-from-dist@1.0.1"
+      "ref": "@dummy-projects/with-prepared|package-json-from-dist@1.0.1"
     },
     {
-      "ref": "packageurl-js@2.0.1"
+      "ref": "@dummy-projects/with-prepared|packageurl-js@2.0.1"
     },
     {
-      "ref": "path-key@3.1.1"
+      "ref": "@dummy-projects/with-prepared|path-key@3.1.1"
     },
     {
-      "ref": "path-scurry@1.11.1",
+      "ref": "@dummy-projects/with-prepared|path-scurry@1.11.1",
       "dependsOn": [
-        "lru-cache@10.4.3",
-        "minipass@7.1.2"
+        "@dummy-projects/with-prepared|lru-cache@10.4.3",
+        "@dummy-projects/with-prepared|minipass@7.1.2"
       ]
     },
     {
-      "ref": "prebuild-install@7.1.2",
+      "ref": "@dummy-projects/with-prepared|prebuild-install@7.1.2",
       "dependsOn": [
-        "detect-libc@2.0.3",
-        "expand-template@2.0.3",
-        "github-from-package@0.0.0",
-        "minimist@1.2.8",
-        "mkdirp-classic@0.5.3",
-        "napi-build-utils@1.0.2",
-        "node-abi@3.71.0",
-        "pump@3.0.2",
-        "rc@1.2.8",
-        "simple-get@4.0.1",
-        "tar-fs@2.1.1",
-        "tunnel-agent@0.6.0"
+        "@dummy-projects/with-prepared|detect-libc@2.0.3",
+        "@dummy-projects/with-prepared|expand-template@2.0.3",
+        "@dummy-projects/with-prepared|github-from-package@0.0.0",
+        "@dummy-projects/with-prepared|minimist@1.2.8",
+        "@dummy-projects/with-prepared|mkdirp-classic@0.5.3",
+        "@dummy-projects/with-prepared|napi-build-utils@1.0.2",
+        "@dummy-projects/with-prepared|node-abi@3.71.0",
+        "@dummy-projects/with-prepared|pump@3.0.2",
+        "@dummy-projects/with-prepared|rc@1.2.8",
+        "@dummy-projects/with-prepared|simple-get@4.0.1",
+        "@dummy-projects/with-prepared|tar-fs@2.1.1",
+        "@dummy-projects/with-prepared|tunnel-agent@0.6.0"
       ]
     },
     {
-      "ref": "proc-log@4.2.0"
+      "ref": "@dummy-projects/with-prepared|proc-log@4.2.0"
     },
     {
-      "ref": "promise-retry@2.0.1",
+      "ref": "@dummy-projects/with-prepared|promise-retry@2.0.1",
       "dependsOn": [
-        "err-code@2.0.3",
-        "retry@0.12.0"
+        "@dummy-projects/with-prepared|err-code@2.0.3",
+        "@dummy-projects/with-prepared|retry@0.12.0"
       ]
     },
     {
-      "ref": "pump@3.0.2",
+      "ref": "@dummy-projects/with-prepared|pump@3.0.2",
       "dependsOn": [
-        "end-of-stream@1.4.4",
-        "once@1.4.0"
+        "@dummy-projects/with-prepared|end-of-stream@1.4.4",
+        "@dummy-projects/with-prepared|once@1.4.0"
       ]
     },
     {
-      "ref": "punycode@2.3.1"
+      "ref": "@dummy-projects/with-prepared|punycode@2.3.1"
     },
     {
-      "ref": "railroad-diagrams@1.0.0"
+      "ref": "@dummy-projects/with-prepared|railroad-diagrams@1.0.0"
     },
     {
-      "ref": "randexp@0.4.6",
+      "ref": "@dummy-projects/with-prepared|randexp@0.4.6",
       "dependsOn": [
-        "discontinuous-range@1.0.0",
-        "ret@0.1.15"
+        "@dummy-projects/with-prepared|discontinuous-range@1.0.0",
+        "@dummy-projects/with-prepared|ret@0.1.15"
       ]
     },
     {
-      "ref": "rc@1.2.8",
+      "ref": "@dummy-projects/with-prepared|rc@1.2.8",
       "dependsOn": [
-        "deep-extend@0.6.0",
-        "ini@1.3.8",
-        "minimist@1.2.8",
-        "strip-json-comments@2.0.1"
+        "@dummy-projects/with-prepared|deep-extend@0.6.0",
+        "@dummy-projects/with-prepared|ini@1.3.8",
+        "@dummy-projects/with-prepared|minimist@1.2.8",
+        "@dummy-projects/with-prepared|strip-json-comments@2.0.1"
       ]
     },
     {
-      "ref": "readable-stream@3.6.2",
+      "ref": "@dummy-projects/with-prepared|readable-stream@3.6.2",
       "dependsOn": [
-        "inherits@2.0.4",
-        "string_decoder@1.3.0",
-        "util-deprecate@1.0.2"
+        "@dummy-projects/with-prepared|inherits@2.0.4",
+        "@dummy-projects/with-prepared|string_decoder@1.3.0",
+        "@dummy-projects/with-prepared|util-deprecate@1.0.2"
       ]
     },
     {
-      "ref": "require-from-string@2.0.2"
+      "ref": "@dummy-projects/with-prepared|require-from-string@2.0.2"
     },
     {
-      "ref": "ret@0.1.15"
+      "ref": "@dummy-projects/with-prepared|ret@0.1.15"
     },
     {
-      "ref": "retry@0.12.0"
+      "ref": "@dummy-projects/with-prepared|retry@0.12.0"
     },
     {
-      "ref": "safe-buffer@5.2.1"
+      "ref": "@dummy-projects/with-prepared|safe-buffer@5.2.1"
     },
     {
-      "ref": "safer-buffer@2.1.2"
+      "ref": "@dummy-projects/with-prepared|safer-buffer@2.1.2"
     },
     {
-      "ref": "schemes@1.4.0",
+      "ref": "@dummy-projects/with-prepared|schemes@1.4.0",
       "dependsOn": [
-        "extend@3.0.2"
+        "@dummy-projects/with-prepared|extend@3.0.2"
       ]
     },
     {
-      "ref": "semver@7.6.3"
+      "ref": "@dummy-projects/with-prepared|semver@7.6.3"
     },
     {
-      "ref": "shebang-command@2.0.0",
+      "ref": "@dummy-projects/with-prepared|shebang-command@2.0.0",
       "dependsOn": [
-        "shebang-regex@3.0.0"
+        "@dummy-projects/with-prepared|shebang-regex@3.0.0"
       ]
     },
     {
-      "ref": "shebang-regex@3.0.0"
+      "ref": "@dummy-projects/with-prepared|shebang-regex@3.0.0"
     },
     {
-      "ref": "signal-exit@4.1.0"
+      "ref": "@dummy-projects/with-prepared|signal-exit@4.1.0"
     },
     {
-      "ref": "simple-concat@1.0.1"
+      "ref": "@dummy-projects/with-prepared|simple-concat@1.0.1"
     },
     {
-      "ref": "simple-get@4.0.1",
+      "ref": "@dummy-projects/with-prepared|simple-get@4.0.1",
       "dependsOn": [
-        "decompress-response@6.0.0",
-        "once@1.4.0",
-        "simple-concat@1.0.1"
+        "@dummy-projects/with-prepared|decompress-response@6.0.0",
+        "@dummy-projects/with-prepared|once@1.4.0",
+        "@dummy-projects/with-prepared|simple-concat@1.0.1"
       ]
     },
     {
-      "ref": "smart-buffer@4.2.0"
+      "ref": "@dummy-projects/with-prepared|smart-buffer@4.2.0"
     },
     {
-      "ref": "smtp-address-parser@1.1.0",
+      "ref": "@dummy-projects/with-prepared|smtp-address-parser@1.1.0",
       "dependsOn": [
-        "nearley@2.20.1"
+        "@dummy-projects/with-prepared|nearley@2.20.1"
       ]
     },
     {
-      "ref": "socks-proxy-agent@8.0.5",
+      "ref": "@dummy-projects/with-prepared|socks-proxy-agent@8.0.5",
       "dependsOn": [
-        "agent-base@7.1.3",
-        "debug@4.4.0",
-        "socks@2.8.3"
+        "@dummy-projects/with-prepared|agent-base@7.1.3",
+        "@dummy-projects/with-prepared|debug@4.4.0",
+        "@dummy-projects/with-prepared|socks@2.8.3"
       ]
     },
     {
-      "ref": "socks@2.8.3",
+      "ref": "@dummy-projects/with-prepared|socks@2.8.3",
       "dependsOn": [
-        "ip-address@9.0.5",
-        "smart-buffer@4.2.0"
+        "@dummy-projects/with-prepared|ip-address@9.0.5",
+        "@dummy-projects/with-prepared|smart-buffer@4.2.0"
       ]
     },
     {
-      "ref": "spdx-exceptions@2.5.0"
+      "ref": "@dummy-projects/with-prepared|spdx-exceptions@2.5.0"
     },
     {
-      "ref": "spdx-expression-parse@4.0.0",
+      "ref": "@dummy-projects/with-prepared|spdx-expression-parse@4.0.0",
       "dependsOn": [
-        "spdx-exceptions@2.5.0",
-        "spdx-license-ids@3.0.20"
+        "@dummy-projects/with-prepared|spdx-exceptions@2.5.0",
+        "@dummy-projects/with-prepared|spdx-license-ids@3.0.20"
       ]
     },
     {
-      "ref": "spdx-license-ids@3.0.20"
+      "ref": "@dummy-projects/with-prepared|spdx-license-ids@3.0.20"
     },
     {
-      "ref": "sprintf-js@1.1.3"
+      "ref": "@dummy-projects/with-prepared|sprintf-js@1.1.3"
     },
     {
-      "ref": "ssri@10.0.6",
+      "ref": "@dummy-projects/with-prepared|ssri@10.0.6",
       "dependsOn": [
-        "minipass@7.1.2"
+        "@dummy-projects/with-prepared|minipass@7.1.2"
       ]
     },
     {
-      "ref": "string_decoder@1.3.0",
+      "ref": "@dummy-projects/with-prepared|string_decoder@1.3.0",
       "dependsOn": [
-        "safe-buffer@5.2.1"
+        "@dummy-projects/with-prepared|safe-buffer@5.2.1"
       ]
     },
     {
-      "ref": "string-width@4.2.3",
+      "ref": "@dummy-projects/with-prepared|string-width@4.2.3",
       "dependsOn": [
-        "is-fullwidth-code-point@3.0.0",
-        "string-width@4.2.3|emoji-regex@8.0.0",
-        "string-width@4.2.3|strip-ansi@6.0.1"
+        "@dummy-projects/with-prepared|is-fullwidth-code-point@3.0.0",
+        "@dummy-projects/with-prepared|string-width@4.2.3|emoji-regex@8.0.0",
+        "@dummy-projects/with-prepared|string-width@4.2.3|strip-ansi@6.0.1"
       ]
     },
     {
-      "ref": "string-width@4.2.3|ansi-regex@5.0.1"
+      "ref": "@dummy-projects/with-prepared|string-width@4.2.3|ansi-regex@5.0.1"
     },
     {
-      "ref": "string-width@4.2.3|emoji-regex@8.0.0"
+      "ref": "@dummy-projects/with-prepared|string-width@4.2.3|emoji-regex@8.0.0"
     },
     {
-      "ref": "string-width@4.2.3|strip-ansi@6.0.1",
+      "ref": "@dummy-projects/with-prepared|string-width@4.2.3|strip-ansi@6.0.1",
       "dependsOn": [
-        "string-width@4.2.3|ansi-regex@5.0.1"
+        "@dummy-projects/with-prepared|string-width@4.2.3|ansi-regex@5.0.1"
       ]
     },
     {
-      "ref": "string-width@5.1.2",
+      "ref": "@dummy-projects/with-prepared|string-width@5.1.2",
       "dependsOn": [
-        "eastasianwidth@0.2.0",
-        "emoji-regex@9.2.2",
-        "strip-ansi@7.1.0"
+        "@dummy-projects/with-prepared|eastasianwidth@0.2.0",
+        "@dummy-projects/with-prepared|emoji-regex@9.2.2",
+        "@dummy-projects/with-prepared|strip-ansi@7.1.0"
       ]
     },
     {
-      "ref": "strip-ansi@6.0.1",
+      "ref": "@dummy-projects/with-prepared|strip-ansi@6.0.1",
       "dependsOn": [
-        "strip-ansi@6.0.1|ansi-regex@5.0.1"
+        "@dummy-projects/with-prepared|strip-ansi@6.0.1|ansi-regex@5.0.1"
       ]
     },
     {
-      "ref": "strip-ansi@6.0.1|ansi-regex@5.0.1"
+      "ref": "@dummy-projects/with-prepared|strip-ansi@6.0.1|ansi-regex@5.0.1"
     },
     {
-      "ref": "strip-ansi@7.1.0",
+      "ref": "@dummy-projects/with-prepared|strip-ansi@7.1.0",
       "dependsOn": [
-        "ansi-regex@6.1.0"
+        "@dummy-projects/with-prepared|ansi-regex@6.1.0"
       ]
     },
     {
-      "ref": "strip-json-comments@2.0.1"
+      "ref": "@dummy-projects/with-prepared|strip-json-comments@2.0.1"
     },
     {
-      "ref": "tar-fs@2.1.1",
+      "ref": "@dummy-projects/with-prepared|tar-fs@2.1.1",
       "dependsOn": [
-        "mkdirp-classic@0.5.3",
-        "pump@3.0.2",
-        "tar-fs@2.1.1|chownr@1.1.4",
-        "tar-stream@2.2.0"
+        "@dummy-projects/with-prepared|mkdirp-classic@0.5.3",
+        "@dummy-projects/with-prepared|pump@3.0.2",
+        "@dummy-projects/with-prepared|tar-fs@2.1.1|chownr@1.1.4",
+        "@dummy-projects/with-prepared|tar-stream@2.2.0"
       ]
     },
     {
-      "ref": "tar-fs@2.1.1|chownr@1.1.4"
+      "ref": "@dummy-projects/with-prepared|tar-fs@2.1.1|chownr@1.1.4"
     },
     {
-      "ref": "tar-stream@2.2.0",
+      "ref": "@dummy-projects/with-prepared|tar-stream@2.2.0",
       "dependsOn": [
-        "bl@4.1.0",
-        "end-of-stream@1.4.4",
-        "fs-constants@1.0.0",
-        "inherits@2.0.4",
-        "readable-stream@3.6.2"
+        "@dummy-projects/with-prepared|bl@4.1.0",
+        "@dummy-projects/with-prepared|end-of-stream@1.4.4",
+        "@dummy-projects/with-prepared|fs-constants@1.0.0",
+        "@dummy-projects/with-prepared|inherits@2.0.4",
+        "@dummy-projects/with-prepared|readable-stream@3.6.2"
       ]
     },
     {
-      "ref": "tar@6.2.1",
+      "ref": "@dummy-projects/with-prepared|tar@6.2.1",
       "dependsOn": [
-        "chownr@2.0.0",
-        "minizlib@2.1.2",
-        "mkdirp@1.0.4",
-        "tar@6.2.1|fs-minipass@2.1.0",
-        "tar@6.2.1|minipass@5.0.0",
-        "yallist@4.0.0"
+        "@dummy-projects/with-prepared|chownr@2.0.0",
+        "@dummy-projects/with-prepared|minizlib@2.1.2",
+        "@dummy-projects/with-prepared|mkdirp@1.0.4",
+        "@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0",
+        "@dummy-projects/with-prepared|tar@6.2.1|minipass@5.0.0",
+        "@dummy-projects/with-prepared|yallist@4.0.0"
       ]
     },
     {
-      "ref": "tar@6.2.1|fs-minipass@2.1.0",
+      "ref": "@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0",
       "dependsOn": [
-        "tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6"
+        "@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6"
       ]
     },
     {
-      "ref": "tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6",
+      "ref": "@dummy-projects/with-prepared|tar@6.2.1|fs-minipass@2.1.0|minipass@3.3.6",
       "dependsOn": [
-        "yallist@4.0.0"
+        "@dummy-projects/with-prepared|yallist@4.0.0"
       ]
     },
     {
-      "ref": "tar@6.2.1|minipass@5.0.0"
+      "ref": "@dummy-projects/with-prepared|tar@6.2.1|minipass@5.0.0"
     },
     {
-      "ref": "tunnel-agent@0.6.0",
+      "ref": "@dummy-projects/with-prepared|tunnel-agent@0.6.0",
       "dependsOn": [
-        "safe-buffer@5.2.1"
+        "@dummy-projects/with-prepared|safe-buffer@5.2.1"
       ]
     },
     {
-      "ref": "undici-types@5.26.5"
+      "ref": "@dummy-projects/with-prepared|undici-types@5.26.5"
     },
     {
-      "ref": "unique-filename@3.0.0",
+      "ref": "@dummy-projects/with-prepared|unique-filename@3.0.0",
       "dependsOn": [
-        "unique-slug@4.0.0"
+        "@dummy-projects/with-prepared|unique-slug@4.0.0"
       ]
     },
     {
-      "ref": "unique-slug@4.0.0",
+      "ref": "@dummy-projects/with-prepared|unique-slug@4.0.0",
       "dependsOn": [
-        "imurmurhash@0.1.4"
+        "@dummy-projects/with-prepared|imurmurhash@0.1.4"
       ]
     },
     {
-      "ref": "uri-js@4.4.1",
+      "ref": "@dummy-projects/with-prepared|uri-js@4.4.1",
       "dependsOn": [
-        "punycode@2.3.1"
+        "@dummy-projects/with-prepared|punycode@2.3.1"
       ]
     },
     {
-      "ref": "util-deprecate@1.0.2"
+      "ref": "@dummy-projects/with-prepared|util-deprecate@1.0.2"
     },
     {
-      "ref": "uuid@8.3.2"
+      "ref": "@dummy-projects/with-prepared|uuid@8.3.2"
     },
     {
-      "ref": "uuidv4@6.2.13",
+      "ref": "@dummy-projects/with-prepared|uuidv4@6.2.13",
       "dependsOn": [
-        "@types/uuid@8.3.4",
-        "uuid@8.3.2"
+        "@dummy-projects/with-prepared|@types/uuid@8.3.4",
+        "@dummy-projects/with-prepared|uuid@8.3.2"
       ]
     },
     {
-      "ref": "which@4.0.0",
+      "ref": "@dummy-projects/with-prepared|which@4.0.0",
       "dependsOn": [
-        "isexe@3.1.1"
+        "@dummy-projects/with-prepared|isexe@3.1.1"
       ]
     },
     {
-      "ref": "wrap-ansi@7.0.0",
+      "ref": "@dummy-projects/with-prepared|wrap-ansi@7.0.0",
       "dependsOn": [
-        "wrap-ansi@7.0.0|ansi-styles@4.3.0",
-        "wrap-ansi@7.0.0|string-width@4.2.3",
-        "wrap-ansi@7.0.0|strip-ansi@6.0.1"
+        "@dummy-projects/with-prepared|wrap-ansi@7.0.0|ansi-styles@4.3.0",
+        "@dummy-projects/with-prepared|wrap-ansi@7.0.0|string-width@4.2.3",
+        "@dummy-projects/with-prepared|wrap-ansi@7.0.0|strip-ansi@6.0.1"
       ]
     },
     {
-      "ref": "wrap-ansi@7.0.0|ansi-regex@5.0.1"
+      "ref": "@dummy-projects/with-prepared|wrap-ansi@7.0.0|ansi-regex@5.0.1"
     },
     {
-      "ref": "wrap-ansi@7.0.0|ansi-styles@4.3.0",
+      "ref": "@dummy-projects/with-prepared|wrap-ansi@7.0.0|ansi-styles@4.3.0",
       "dependsOn": [
-        "color-convert@2.0.1"
+        "@dummy-projects/with-prepared|color-convert@2.0.1"
       ]
     },
     {
-      "ref": "wrap-ansi@7.0.0|emoji-regex@8.0.0"
+      "ref": "@dummy-projects/with-prepared|wrap-ansi@7.0.0|emoji-regex@8.0.0"
     },
     {
-      "ref": "wrap-ansi@7.0.0|string-width@4.2.3",
+      "ref": "@dummy-projects/with-prepared|wrap-ansi@7.0.0|string-width@4.2.3",
       "dependsOn": [
-        "is-fullwidth-code-point@3.0.0",
-        "wrap-ansi@7.0.0|emoji-regex@8.0.0",
-        "wrap-ansi@7.0.0|strip-ansi@6.0.1"
+        "@dummy-projects/with-prepared|is-fullwidth-code-point@3.0.0",
+        "@dummy-projects/with-prepared|wrap-ansi@7.0.0|emoji-regex@8.0.0",
+        "@dummy-projects/with-prepared|wrap-ansi@7.0.0|strip-ansi@6.0.1"
       ]
     },
     {
-      "ref": "wrap-ansi@7.0.0|strip-ansi@6.0.1",
+      "ref": "@dummy-projects/with-prepared|wrap-ansi@7.0.0|strip-ansi@6.0.1",
       "dependsOn": [
-        "wrap-ansi@7.0.0|ansi-regex@5.0.1"
+        "@dummy-projects/with-prepared|wrap-ansi@7.0.0|ansi-regex@5.0.1"
       ]
     },
     {
-      "ref": "wrap-ansi@8.1.0",
+      "ref": "@dummy-projects/with-prepared|wrap-ansi@8.1.0",
       "dependsOn": [
-        "ansi-styles@6.2.1",
-        "string-width@5.1.2",
-        "strip-ansi@7.1.0"
+        "@dummy-projects/with-prepared|ansi-styles@6.2.1",
+        "@dummy-projects/with-prepared|string-width@5.1.2",
+        "@dummy-projects/with-prepared|strip-ansi@7.1.0"
       ]
     },
     {
-      "ref": "wrappy@1.0.2"
+      "ref": "@dummy-projects/with-prepared|wrappy@1.0.2"
     },
     {
-      "ref": "xmlbuilder2@3.1.1",
+      "ref": "@dummy-projects/with-prepared|xmlbuilder2@3.1.1",
       "dependsOn": [
-        "@oozcitak/dom@1.15.10",
-        "@oozcitak/infra@1.0.8",
-        "@oozcitak/util@8.3.8",
-        "js-yaml@3.14.1"
+        "@dummy-projects/with-prepared|@oozcitak/dom@1.15.10",
+        "@dummy-projects/with-prepared|@oozcitak/infra@1.0.8",
+        "@dummy-projects/with-prepared|@oozcitak/util@8.3.8",
+        "@dummy-projects/with-prepared|js-yaml@3.14.1"
       ]
     },
     {
-      "ref": "yallist@4.0.0"
+      "ref": "@dummy-projects/with-prepared|yallist@4.0.0"
     }
   ]
 }
