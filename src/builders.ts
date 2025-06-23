@@ -31,8 +31,8 @@ import {
   setDifference,
   tryRemoveSecretsFromUrl
 } from './_helpers'
-import { PropertyNames, PropertyValueBool } from './cdx'
 import type { NpmRunner } from './npmRunner'
+import { PropertyNames, PropertyValueBool } from './properties'
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
