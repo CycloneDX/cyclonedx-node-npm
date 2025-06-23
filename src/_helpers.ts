@@ -45,7 +45,6 @@ export async function writeAllSync (fd: number, data: string): Promise<number> {
     } catch (error:any) {
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
       if (error.code !== 'EAGAIN') {
-        /* eslint-disable-next-line @typescript-eslint/only-throw-error -- ack */
         throw error // forward
       }
       /* eslint-disable-next-line promise/avoid-new -- needed */
@@ -89,7 +88,7 @@ export function versionCompare (a: Version, b: Version): CompareResult {
     }
     if (ai > bi) {
       // A > B
-      return +1
+      return 1
     }
   }
   // A == B

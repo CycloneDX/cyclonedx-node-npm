@@ -385,7 +385,6 @@ export async function run (process_: NodeJS.Process): Promise<number> {
       } else {
         myConsole.debug('DEBUG | unexpected error. details: ', err)
         myConsole.error('ERROR | unexpected error')
-        /* eslint-disable-next-line @typescript-eslint/only-throw-error -- forward */
         throw err
       }
     }
