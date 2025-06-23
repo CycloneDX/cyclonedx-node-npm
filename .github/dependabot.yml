@@ -3,7 +3,9 @@
 version: 2
 updates:
   - package-ecosystem: 'npm'
-    directory: '/'
+    directories:
+      - '/.'
+      - '/tools/code-style'
     schedule:
       interval: 'weekly'
       day: 'saturday'
