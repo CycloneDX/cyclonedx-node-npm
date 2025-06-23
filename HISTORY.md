@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file.
 * Fixed
   * External dependency edge-cases are now properly nested (via [#1307])
 * Changed
-  * SBOM result's `purl` is prefixed with parent-component's one to ensure uniqueness (via [#1307])
+  * SBOM result's `bom-ref` is prefixed with parent-component's one to ensure uniqueness (via [#1307])
   * Uses only trusted data from `npm-ls` internally (via [#1307])  
     No changes in data quality are expected.
 
