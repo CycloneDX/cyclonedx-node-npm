@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 4.0.0 - 2025-06-23
+
 * BREAKING Changes
   * SBOM results might have slightly changed (via [#1307])
 * Fixed
