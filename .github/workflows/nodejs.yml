@@ -119,7 +119,7 @@ jobs:
       - name: setup tools
         run: npm run -- dev-setup:tools:test-dependencies --ignore-scripts --loglevel=silly
       - name: test
-        run: npm run -- test:dependencies -q
+        run: npm run -- test:dependencies -d
 
   test-jest:
     needs: [ 'build' ]
