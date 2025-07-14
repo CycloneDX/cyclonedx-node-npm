@@ -115,15 +115,9 @@ jobs:
           # cache: "npm"
           # cache-dependency-path: "**/package-lock.json"
       - name: setup project
-        run: |
-          npm install --ignore-scripts --loglevel=silly
+        run: npm install --ignore-scripts --loglevel=silly
       - name: setup tools
-        run: |
-          echo "::group::install test-dependencies deps"
-          npm run -- dev-setup:tools:test-dependencies --ignore-scripts --loglevel=silly
-          echo "::endgroup::"
-      - name: make reports dir
-        run: mkdir -p "$REPORTS_DIR"
+        run: npm run -- dev-setup:tools:test-dependencies --ignore-scripts --loglevel=silly
       - name: test
         run: npm run -- test:dependencies -q
 
