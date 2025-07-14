@@ -102,8 +102,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-      - name: install build tools
-        run: npm i --ignore-scripts
+      - name: setup project
+        run: |
+          npm install --ignore-scripts --include=optional --loglevel=silly
+      - name: install tools
+        run: >
+          echo "::group::install code-style deps"
+          npm run -- dev-setup:tools:code-style --ignore-scripts --loglevel=silly
+          echo "::endgroup::"
+          echo "::group::install test-dependencies deps"
+          npm run -- dev-setup:tools:test-dependencies --ignore-scripts --loglevel=silly
+          echo "::endgroup::"
       # no explicit npm build. if a build is required, it should be configured as prepublish/prepublishOnly script of npm.
       - name: login to NPMJS
         run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
