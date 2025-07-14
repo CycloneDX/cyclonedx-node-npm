@@ -75,7 +75,7 @@ jobs:
       - name: setup tools
         run: |
           echo "::group::install code-style deps"
-          npm run -- dev-setup:code-style --ignore-scripts --loglevel=silly
+          npm run -- dev-setup:tools:code-style --ignore-scripts --loglevel=silly
           echo "::endgroup::"
       - name: make reports dir
         run: mkdir -p "$REPORTS_DIR"
@@ -98,6 +98,34 @@ jobs:
           name: ${{ env.STANDARD_REPORTS_ARTIFACT }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
+
+  test-dependencies:
+    name: test dependencies
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          # cache: "npm"
+          # cache-dependency-path: "**/package-lock.json"
+      - name: setup project
+        run: |
+          npm install --ignore-scripts --loglevel=silly
+      - name: setup tools
+        run: |
+          echo "::group::install test-dependencies deps"
+          npm run -- dev-setup:tools:test-dependencies --ignore-scripts --loglevel=silly
+          echo "::endgroup::"
+      - name: make reports dir
+        run: mkdir -p "$REPORTS_DIR"
+      - name: test
+        run: npm run -- test:dependencies -q
 
   test-jest:
     needs: [ 'build' ]

@@ -104,7 +104,9 @@
   "exports": "./index.js",
   "scripts": {
     "dev-setup": "npm i && run-p --aggregate-output -lc dev-setup:\\*",
-    "dev-setup:code-style": "npm --prefix tools/code-style install",
+    "dev-setup:tools": "run-p --aggregate-output -lc dev-setup:tools:\\*",
+    "dev-setup:tools:code-style": "npm --prefix tools/code-style install",
+    "dev-setup:tools:test-dependencies": "npm --prefix tools/test-dependencies install",
     "prepublish": "npm run build",
     "prepublishOnly": "run-s -lc build setup-tests test:jest",
     "lint": "tsc --noEmit",
@@ -116,6 +118,7 @@
     "test": "run-p --aggregate-output -lc test:\\*",
     "test:jest": "c8 jest",
     "test:standard": "npm --prefix tools/code-style exec -- eslint .",
+    "test:dependencies": "npm --prefix tools/test-dependencies exec -- knip --include dependencies,unlisted,unresolved --production",
     "dogfooding:npx": "npx .",
     "dogfooding:npm-exec": "npm exec .",
     "dogfooding:direct": "node -- bin/cyclonedx-npm-cli.js"

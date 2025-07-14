@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema-jsonc.json",
+  "entry": [
+    "src/cli.ts!",
+    "bin/**!"
+  ],
+  "project": [
+    "src/**!",
+    "tests/**",
+    "!tests/_data/dummy_projects/**",
+    "!tests/_data/*-results/**"
+  ],
+  "ignore": [
+    "tools/**"
+  ]
+}
