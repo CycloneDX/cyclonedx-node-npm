@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "@cyclonedx/cyclonedx-webpack-plugin/tools/test-dependencies",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20.18"
+  },
+  "dependencies": {
+    "knip": "5.61.3"
+  }
+}
