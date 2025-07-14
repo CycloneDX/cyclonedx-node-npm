@@ -12,5 +12,9 @@
   ],
   "ignore": [
     "tools/**"
+  ],
+  "ignoreDependencies": [
+    // needed to force the installation of the optional dependency of a 3rd party package:
+    "xmlbuilder2"
   ]
 }
