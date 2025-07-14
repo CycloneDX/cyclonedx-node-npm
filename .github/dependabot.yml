@@ -5,8 +5,8 @@ updates:
   - package-ecosystem: 'npm'
     directories:
       - '/'
-      - '/tools/code-style'
-      - '/tools/test-dependencies'
+      - '/tools/code-style/'
+      - '/tools/test-dependencies/'
     schedule:
       interval: 'weekly'
       day: 'saturday'
