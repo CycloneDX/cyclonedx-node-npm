@@ -41,9 +41,12 @@ updates:
           - '@eslint/*'
           - 'eslint-*'
           - '@eslint-community/*'
+          - 'typescript-eslint'
           - '@typescript-eslint/*'
           - '@types/eslint'
           - '@types/eslint*'
+          - 'neostandard'
+          - 'globals'
       jest:
         patterns:
           - 'jest'
