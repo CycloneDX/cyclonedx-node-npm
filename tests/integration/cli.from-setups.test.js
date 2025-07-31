@@ -57,6 +57,21 @@ describe('integration.cli.from-setups', () => {
         subject: 'with-licenses',
         args: ['--gather-license-texts'],
         dummyProject: ['with-prepared']
+      },
+      {
+        subject: 'omit-dev',
+        args: ['--omit=dev'],
+        dummyProject: ['with-prepared']
+      },
+      {
+        subject: 'omit-optional',
+        args: ['--omit=optional'],
+        dummyProject: ['with-prepared']
+      },
+      {
+        subject: 'omit-peer',
+        args: ['--omit=peer'],
+        dummyProject: ['with-prepared']
       }
     ]
 

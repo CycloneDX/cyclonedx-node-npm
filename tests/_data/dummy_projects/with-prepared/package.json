@@ -13,6 +13,15 @@
     "ignore": "^5.1.4",
     "is-obj": "3.0.0"
   },
+  "peerDependencies": {
+    "uuid": "8.3.2",
+    "@types/uuid": "8.3.4"
+  },
+  "peerDependenciesMeta": {
+    "@types/uuid": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@types/node": "20.14.10",
     "@types/uuid": "8.3.4",
