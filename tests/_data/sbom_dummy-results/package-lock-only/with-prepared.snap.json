@@ -764,6 +764,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/base64-js"
         }

@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/refs/heads/master/src/schemas/json/package.json",
   "private": true,
   "name": "@dummy-projects/with-prepared",
   "optionalDependencies": {
@@ -13,6 +14,9 @@
     "ignore": "^5.1.4",
     "is-obj": "3.0.0"
   },
+  "bundleDependencies": [
+    "base64-js"
+  ],
   "peerDependencies": {
     "uuid": "8.3.2",
     "@types/uuid": "8.3.4"

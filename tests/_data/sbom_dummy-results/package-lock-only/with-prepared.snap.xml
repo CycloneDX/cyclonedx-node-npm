@@ -517,6 +517,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:bundled">true</property>
         <property name="cdx:npm:package:path">node_modules/base64-js</property>
       </properties>
     </component>
