@@ -5631,51 +5631,6 @@
     },
     {
       "type": "library",
-      "name": "ignore",
-      "version": "5.3.2",
-      "bom-ref": "@dummy-projects/with-prepared|ignore@5.3.2",
-      "author": "kael",
-      "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/ignore@5.3.2",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "https://github.com/kaelzhang/node-ignore/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+ssh://git@github.com/kaelzhang/node-ignore.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/kaelzhang/node-ignore#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/ignore"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "imurmurhash",
       "version": "0.1.4",
       "bom-ref": "@dummy-projects/with-prepared|imurmurhash@0.1.4",
@@ -10630,7 +10585,6 @@
         "@dummy-projects/with-prepared|base64-js@1.0.1",
         "@dummy-projects/with-prepared|buffer@5.7.1",
         "@dummy-projects/with-prepared|bundle-dependencies@1.0.2",
-        "@dummy-projects/with-prepared|ignore@5.3.2",
         "@dummy-projects/with-prepared|is-obj@3.0.0"
       ]
     },
@@ -11242,9 +11196,6 @@
     },
     {
       "ref": "@dummy-projects/with-prepared|ieee754@1.2.1"
-    },
-    {
-      "ref": "@dummy-projects/with-prepared|ignore@5.3.2"
     },
     {
       "ref": "@dummy-projects/with-prepared|imurmurhash@0.1.4"

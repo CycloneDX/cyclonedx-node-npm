@@ -4126,20 +4126,20 @@
         <property name="cdx:npm:package:path">node_modules/ieee754</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@dummy-projects/with-prepared|ignore@5.3.2">
+    <component type="library" bom-ref="@dummy-projects/with-prepared|ignore@5.1.4">
       <author>kael</author>
       <name>ignore</name>
-      <version>5.3.2</version>
+      <version>5.1.4</version>
       <description>Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.</description>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ignore@5.3.2</purl>
+      <purl>pkg:npm/ignore@5.1.4</purl>
       <externalReferences>
         <reference type="distribution">
-          <url>https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz</url>
+          <url>https://registry.npmjs.org/ignore/-/ignore-5.1.4.tgz</url>
           <comment>as detected from npm-ls property "resolved"</comment>
         </reference>
         <reference type="issue-tracker">
@@ -7894,7 +7894,7 @@
       <dependency ref="@dummy-projects/with-prepared|base64-js@1.0.1"/>
       <dependency ref="@dummy-projects/with-prepared|buffer@5.7.1"/>
       <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2"/>
-      <dependency ref="@dummy-projects/with-prepared|ignore@5.3.2"/>
+      <dependency ref="@dummy-projects/with-prepared|ignore@5.1.4"/>
       <dependency ref="@dummy-projects/with-prepared|is-obj@3.0.0"/>
       <dependency ref="@dummy-projects/with-prepared|uuid@8.3.2"/>
       <dependency ref="@dummy-projects/with-prepared|uuidv4@6.2.13"/>
@@ -8221,7 +8221,7 @@
       <dependency ref="@dummy-projects/with-prepared|safer-buffer@2.1.2"/>
     </dependency>
     <dependency ref="@dummy-projects/with-prepared|ieee754@1.2.1"/>
-    <dependency ref="@dummy-projects/with-prepared|ignore@5.3.2"/>
+    <dependency ref="@dummy-projects/with-prepared|ignore@5.1.4"/>
     <dependency ref="@dummy-projects/with-prepared|imurmurhash@0.1.4"/>
     <dependency ref="@dummy-projects/with-prepared|indent-string@4.0.0"/>
     <dependency ref="@dummy-projects/with-prepared|inherits@2.0.4"/>

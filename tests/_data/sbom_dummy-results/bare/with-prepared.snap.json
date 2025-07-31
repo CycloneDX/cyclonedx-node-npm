@@ -5722,8 +5722,8 @@
     {
       "type": "library",
       "name": "ignore",
-      "version": "5.3.2",
-      "bom-ref": "@dummy-projects/with-prepared|ignore@5.3.2",
+      "version": "5.1.4",
+      "bom-ref": "@dummy-projects/with-prepared|ignore@5.1.4",
       "author": "kael",
       "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.",
       "licenses": [
@@ -5734,10 +5734,10 @@
           }
         }
       ],
-      "purl": "pkg:npm/ignore@5.3.2",
+      "purl": "pkg:npm/ignore@5.1.4",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz",
+          "url": "https://registry.npmjs.org/ignore/-/ignore-5.1.4.tgz",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         },
@@ -10854,7 +10854,7 @@
         "@dummy-projects/with-prepared|base64-js@1.0.1",
         "@dummy-projects/with-prepared|buffer@5.7.1",
         "@dummy-projects/with-prepared|bundle-dependencies@1.0.2",
-        "@dummy-projects/with-prepared|ignore@5.3.2",
+        "@dummy-projects/with-prepared|ignore@5.1.4",
         "@dummy-projects/with-prepared|is-obj@3.0.0",
         "@dummy-projects/with-prepared|uuid@8.3.2",
         "@dummy-projects/with-prepared|uuidv4@6.2.13"
@@ -11479,7 +11479,7 @@
       "ref": "@dummy-projects/with-prepared|ieee754@1.2.1"
     },
     {
-      "ref": "@dummy-projects/with-prepared|ignore@5.3.2"
+      "ref": "@dummy-projects/with-prepared|ignore@5.1.4"
     },
     {
       "ref": "@dummy-projects/with-prepared|imurmurhash@0.1.4"
