@@ -58,6 +58,7 @@ describe('integration.cli.from-setups', () => {
         args: ['--gather-license-texts'],
         dummyProject: ['with-prepared']
       },
+      // region omit
       {
         subject: 'omit-dev',
         args: ['--omit=dev'],
@@ -72,7 +73,28 @@ describe('integration.cli.from-setups', () => {
         subject: 'omit-peer',
         args: ['--omit=peer'],
         dummyProject: ['with-prepared']
-      }
+      },
+      {
+        subject: 'omit-dev-optional',
+        args: ['--omit=dev', '--omit=optional'],
+        dummyProject: ['with-prepared']
+      },
+      {
+        subject: 'omit-dev-peer',
+        args: ['--omit=dev', '--omit=peer'],
+        dummyProject: ['with-prepared']
+      },
+      {
+        subject: 'omit-optional-peer',
+        args: ['--omit=optional', '--omit=peer'],
+        dummyProject: ['with-prepared']
+      },
+      {
+        subject: 'omit-dev-optional-peer',
+        args: ['--omit=dev', '--omit=optional', '--omit=peer'],
+        dummyProject: ['with-prepared']
+      },
+      // endregion omit
     ]
 
     function runTest (subject, project, format, additionalCliArgs = []) {
