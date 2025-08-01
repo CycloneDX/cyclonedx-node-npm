@@ -482,7 +482,7 @@ export class BomBuilder {
     // endregion properties
 
     // region resolved
-    const rref = this.makeExtRefDistFromPachageData(data)
+    const rref = this.makeExtRefDistFromPackageData(data)
     if ( rref !== undefined ) {
       component.externalReferences.add(rref)
     }
@@ -498,7 +498,7 @@ export class BomBuilder {
    */
   private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
-  private makeExtRefDistFromPachageData (data: PackageData): Models.ExternalReference | undefined {
+  private makeExtRefDistFromPackageData (data: PackageData): Models.ExternalReference | undefined {
     const { resolved, integrity } = data
     if (!isString(resolved) || this.resolvedRE_ignore.test(resolved)) {
       return undefined
