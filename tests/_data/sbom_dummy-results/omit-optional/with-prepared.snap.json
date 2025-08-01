@@ -10303,50 +10303,6 @@
     },
     {
       "type": "library",
-      "name": "uuidv4",
-      "version": "6.2.13",
-      "bom-ref": "@dummy-projects/with-prepared|uuidv4@6.2.13",
-      "description": "uuidv4 creates v4 UUIDs.",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/uuidv4@6.2.13",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "https://github.com/thenativeweb/uuidv4/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git://github.com/thenativeweb/uuidv4.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/thenativeweb/uuidv4#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/uuidv4"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "which",
       "version": "4.0.0",
       "bom-ref": "@dummy-projects/with-prepared|which@4.0.0",
@@ -10856,8 +10812,7 @@
         "@dummy-projects/with-prepared|bundle-dependencies@1.0.2",
         "@dummy-projects/with-prepared|ignore@5.1.4",
         "@dummy-projects/with-prepared|is-obj@3.0.0",
-        "@dummy-projects/with-prepared|uuid@8.3.2",
-        "@dummy-projects/with-prepared|uuidv4@6.2.13"
+        "@dummy-projects/with-prepared|uuid@8.3.2"
       ]
     },
     {
@@ -12014,13 +11969,6 @@
     },
     {
       "ref": "@dummy-projects/with-prepared|uuid@8.3.2"
-    },
-    {
-      "ref": "@dummy-projects/with-prepared|uuidv4@6.2.13",
-      "dependsOn": [
-        "@dummy-projects/with-prepared|@types/uuid@8.3.4",
-        "@dummy-projects/with-prepared|uuid@8.3.2"
-      ]
     },
     {
       "ref": "@dummy-projects/with-prepared|which@4.0.0",

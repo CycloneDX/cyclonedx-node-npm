@@ -557,96 +557,6 @@
     },
     {
       "type": "library",
-      "name": "node",
-      "group": "@types",
-      "version": "20.14.10",
-      "bom-ref": "@dummy-projects/with-prepared|@types/node@20.14.10",
-      "description": "TypeScript definitions for node",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/%40types/node@20.14.10#types/node",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/@types/node/-/node-20.14.10.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
-        },
-        {
-          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/@types/node"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "uuid",
-      "group": "@types",
-      "version": "8.3.4",
-      "bom-ref": "@dummy-projects/with-prepared|@types/uuid@8.3.4",
-      "description": "TypeScript definitions for uuid",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/%40types/uuid@8.3.4#types/uuid",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
-        },
-        {
-          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/uuid",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/@types/uuid"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "abbrev",
       "version": "2.0.0",
       "bom-ref": "@dummy-projects/with-prepared|abbrev@2.0.0",
@@ -5721,51 +5631,6 @@
     },
     {
       "type": "library",
-      "name": "ignore",
-      "version": "5.1.4",
-      "bom-ref": "@dummy-projects/with-prepared|ignore@5.1.4",
-      "author": "kael",
-      "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/ignore@5.1.4",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/ignore/-/ignore-5.1.4.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "https://github.com/kaelzhang/node-ignore/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+ssh://git@github.com/kaelzhang/node-ignore.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/kaelzhang/node-ignore#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/ignore"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "imurmurhash",
       "version": "0.1.4",
       "bom-ref": "@dummy-projects/with-prepared|imurmurhash@0.1.4",
@@ -10035,50 +9900,6 @@
     },
     {
       "type": "library",
-      "name": "undici-types",
-      "version": "5.26.5",
-      "bom-ref": "@dummy-projects/with-prepared|undici-types@5.26.5",
-      "description": "A stand-alone types package for Undici",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/undici-types@5.26.5",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "https://github.com/nodejs/undici/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/nodejs/undici.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://undici.nodejs.org",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/undici-types"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "unique-filename",
       "version": "3.0.0",
       "bom-ref": "@dummy-projects/with-prepared|unique-filename@3.0.0",
@@ -10254,94 +10075,6 @@
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/util-deprecate"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "uuid",
-      "version": "8.3.2",
-      "bom-ref": "@dummy-projects/with-prepared|uuid@8.3.2",
-      "description": "RFC4122 (v1, v4, and v5) UUIDs",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/uuid@8.3.2",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "https://github.com/uuidjs/uuid/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/uuidjs/uuid.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/uuidjs/uuid#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/uuid"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "uuidv4",
-      "version": "6.2.13",
-      "bom-ref": "@dummy-projects/with-prepared|uuidv4@6.2.13",
-      "description": "uuidv4 creates v4 UUIDs.",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/uuidv4@6.2.13",
-      "externalReferences": [
-        {
-          "url": "https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz",
-          "type": "distribution",
-          "comment": "as detected from npm-ls property \"resolved\""
-        },
-        {
-          "url": "https://github.com/thenativeweb/uuidv4/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git://github.com/thenativeweb/uuidv4.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/thenativeweb/uuidv4#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/uuidv4"
         }
       ]
     },
@@ -10849,15 +10582,10 @@
       "dependsOn": [
         "@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0",
         "@dummy-projects/with-prepared|@db-ui/base@0.29.2",
-        "@dummy-projects/with-prepared|@types/node@20.14.10",
-        "@dummy-projects/with-prepared|@types/uuid@8.3.4",
         "@dummy-projects/with-prepared|base64-js@1.0.1",
         "@dummy-projects/with-prepared|buffer@5.7.1",
         "@dummy-projects/with-prepared|bundle-dependencies@1.0.2",
-        "@dummy-projects/with-prepared|ignore@5.1.4",
-        "@dummy-projects/with-prepared|is-obj@3.0.0",
-        "@dummy-projects/with-prepared|uuid@8.3.2",
-        "@dummy-projects/with-prepared|uuidv4@6.2.13"
+        "@dummy-projects/with-prepared|is-obj@3.0.0"
       ]
     },
     {
@@ -10928,15 +10656,6 @@
     },
     {
       "ref": "@dummy-projects/with-prepared|@pkgjs/parseargs@0.11.0"
-    },
-    {
-      "ref": "@dummy-projects/with-prepared|@types/node@20.14.10",
-      "dependsOn": [
-        "@dummy-projects/with-prepared|undici-types@5.26.5"
-      ]
-    },
-    {
-      "ref": "@dummy-projects/with-prepared|@types/uuid@8.3.4"
     },
     {
       "ref": "@dummy-projects/with-prepared|abbrev@2.0.0"
@@ -11479,9 +11198,6 @@
       "ref": "@dummy-projects/with-prepared|ieee754@1.2.1"
     },
     {
-      "ref": "@dummy-projects/with-prepared|ignore@5.1.4"
-    },
-    {
       "ref": "@dummy-projects/with-prepared|imurmurhash@0.1.4"
     },
     {
@@ -11989,9 +11705,6 @@
       ]
     },
     {
-      "ref": "@dummy-projects/with-prepared|undici-types@5.26.5"
-    },
-    {
       "ref": "@dummy-projects/with-prepared|unique-filename@3.0.0",
       "dependsOn": [
         "@dummy-projects/with-prepared|unique-slug@4.0.0"
@@ -12011,16 +11724,6 @@
     },
     {
       "ref": "@dummy-projects/with-prepared|util-deprecate@1.0.2"
-    },
-    {
-      "ref": "@dummy-projects/with-prepared|uuid@8.3.2"
-    },
-    {
-      "ref": "@dummy-projects/with-prepared|uuidv4@6.2.13",
-      "dependsOn": [
-        "@dummy-projects/with-prepared|@types/uuid@8.3.4",
-        "@dummy-projects/with-prepared|uuid@8.3.2"
-      ]
     },
     {
       "ref": "@dummy-projects/with-prepared|which@4.0.0",

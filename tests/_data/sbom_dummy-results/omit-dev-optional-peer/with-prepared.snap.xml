@@ -411,72 +411,6 @@
         <property name="cdx:npm:package:path">node_modules/@pkgjs/parseargs</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@dummy-projects/with-prepared|@types/node@20.14.10">
-      <group>@types</group>
-      <name>node</name>
-      <version>20.14.10</version>
-      <description>TypeScript definitions for node</description>
-      <licenses>
-        <license acknowledgement="declared">
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:npm/%40types/node@20.14.10#types/node</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/@types/node/-/node-20.14.10.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
-          <comment>as detected from PackageJson property "bugs.url"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node</url>
-          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
-        </reference>
-        <reference type="website">
-          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node</url>
-          <comment>as detected from PackageJson property "homepage"</comment>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="cdx:npm:package:path">node_modules/@types/node</property>
-      </properties>
-    </component>
-    <component type="library" bom-ref="@dummy-projects/with-prepared|@types/uuid@8.3.4">
-      <group>@types</group>
-      <name>uuid</name>
-      <version>8.3.4</version>
-      <description>TypeScript definitions for uuid</description>
-      <licenses>
-        <license acknowledgement="declared">
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:npm/%40types/uuid@8.3.4#types/uuid</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
-          <comment>as detected from PackageJson property "bugs.url"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid</url>
-          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
-        </reference>
-        <reference type="website">
-          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/uuid</url>
-          <comment>as detected from PackageJson property "homepage"</comment>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="cdx:npm:package:path">node_modules/@types/uuid</property>
-      </properties>
-    </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|abbrev@2.0.0">
       <author>GitHub Inc.</author>
       <name>abbrev</name>
@@ -4126,39 +4060,6 @@
         <property name="cdx:npm:package:path">node_modules/ieee754</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@dummy-projects/with-prepared|ignore@5.1.4">
-      <author>kael</author>
-      <name>ignore</name>
-      <version>5.1.4</version>
-      <description>Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.</description>
-      <licenses>
-        <license acknowledgement="declared">
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:npm/ignore@5.1.4</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/ignore/-/ignore-5.1.4.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/kaelzhang/node-ignore/issues</url>
-          <comment>as detected from PackageJson property "bugs.url"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git+ssh://git@github.com/kaelzhang/node-ignore.git</url>
-          <comment>as detected from PackageJson property "repository.url"</comment>
-        </reference>
-        <reference type="website">
-          <url>https://github.com/kaelzhang/node-ignore#readme</url>
-          <comment>as detected from PackageJson property "homepage"</comment>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="cdx:npm:package:path">node_modules/ignore</property>
-      </properties>
-    </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|imurmurhash@0.1.4">
       <author>Jens Taylor</author>
       <name>imurmurhash</name>
@@ -7291,38 +7192,6 @@
         <property name="cdx:npm:package:path">node_modules/tunnel-agent</property>
       </properties>
     </component>
-    <component type="library" bom-ref="@dummy-projects/with-prepared|undici-types@5.26.5">
-      <name>undici-types</name>
-      <version>5.26.5</version>
-      <description>A stand-alone types package for Undici</description>
-      <licenses>
-        <license acknowledgement="declared">
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:npm/undici-types@5.26.5</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/nodejs/undici/issues</url>
-          <comment>as detected from PackageJson property "bugs.url"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git+https://github.com/nodejs/undici.git</url>
-          <comment>as detected from PackageJson property "repository.url"</comment>
-        </reference>
-        <reference type="website">
-          <url>https://undici.nodejs.org</url>
-          <comment>as detected from PackageJson property "homepage"</comment>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="cdx:npm:package:path">node_modules/undici-types</property>
-      </properties>
-    </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|unique-filename@3.0.0">
       <author>GitHub Inc.</author>
       <name>unique-filename</name>
@@ -7453,70 +7322,6 @@
       </externalReferences>
       <properties>
         <property name="cdx:npm:package:path">node_modules/util-deprecate</property>
-      </properties>
-    </component>
-    <component type="library" bom-ref="@dummy-projects/with-prepared|uuid@8.3.2">
-      <name>uuid</name>
-      <version>8.3.2</version>
-      <description>RFC4122 (v1, v4, and v5) UUIDs</description>
-      <licenses>
-        <license acknowledgement="declared">
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:npm/uuid@8.3.2</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/uuidjs/uuid/issues</url>
-          <comment>as detected from PackageJson property "bugs.url"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git+https://github.com/uuidjs/uuid.git</url>
-          <comment>as detected from PackageJson property "repository.url"</comment>
-        </reference>
-        <reference type="website">
-          <url>https://github.com/uuidjs/uuid#readme</url>
-          <comment>as detected from PackageJson property "homepage"</comment>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="cdx:npm:package:path">node_modules/uuid</property>
-      </properties>
-    </component>
-    <component type="library" bom-ref="@dummy-projects/with-prepared|uuidv4@6.2.13">
-      <name>uuidv4</name>
-      <version>6.2.13</version>
-      <description>uuidv4 creates v4 UUIDs.</description>
-      <licenses>
-        <license acknowledgement="declared">
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:npm/uuidv4@6.2.13</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://registry.npmjs.org/uuidv4/-/uuidv4-6.2.13.tgz</url>
-          <comment>as detected from npm-ls property "resolved"</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/thenativeweb/uuidv4/issues</url>
-          <comment>as detected from PackageJson property "bugs.url"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git://github.com/thenativeweb/uuidv4.git</url>
-          <comment>as detected from PackageJson property "repository.url"</comment>
-        </reference>
-        <reference type="website">
-          <url>https://github.com/thenativeweb/uuidv4#readme</url>
-          <comment>as detected from PackageJson property "homepage"</comment>
-        </reference>
-      </externalReferences>
-      <properties>
-        <property name="cdx:npm:package:path">node_modules/uuidv4</property>
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|which@4.0.0">
@@ -7889,15 +7694,10 @@
     <dependency ref="@dummy-projects/with-prepared">
       <dependency ref="@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0"/>
       <dependency ref="@dummy-projects/with-prepared|@db-ui/base@0.29.2"/>
-      <dependency ref="@dummy-projects/with-prepared|@types/node@20.14.10"/>
-      <dependency ref="@dummy-projects/with-prepared|@types/uuid@8.3.4"/>
       <dependency ref="@dummy-projects/with-prepared|base64-js@1.0.1"/>
       <dependency ref="@dummy-projects/with-prepared|buffer@5.7.1"/>
       <dependency ref="@dummy-projects/with-prepared|bundle-dependencies@1.0.2"/>
-      <dependency ref="@dummy-projects/with-prepared|ignore@5.1.4"/>
       <dependency ref="@dummy-projects/with-prepared|is-obj@3.0.0"/>
-      <dependency ref="@dummy-projects/with-prepared|uuid@8.3.2"/>
-      <dependency ref="@dummy-projects/with-prepared|uuidv4@6.2.13"/>
     </dependency>
     <dependency ref="@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0">
       <dependency ref="@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1"/>
@@ -7941,10 +7741,6 @@
     </dependency>
     <dependency ref="@dummy-projects/with-prepared|@oozcitak/util@8.3.8"/>
     <dependency ref="@dummy-projects/with-prepared|@pkgjs/parseargs@0.11.0"/>
-    <dependency ref="@dummy-projects/with-prepared|@types/node@20.14.10">
-      <dependency ref="@dummy-projects/with-prepared|undici-types@5.26.5"/>
-    </dependency>
-    <dependency ref="@dummy-projects/with-prepared|@types/uuid@8.3.4"/>
     <dependency ref="@dummy-projects/with-prepared|abbrev@2.0.0"/>
     <dependency ref="@dummy-projects/with-prepared|agent-base@7.1.3"/>
     <dependency ref="@dummy-projects/with-prepared|aggregate-error@3.1.0">
@@ -8221,7 +8017,6 @@
       <dependency ref="@dummy-projects/with-prepared|safer-buffer@2.1.2"/>
     </dependency>
     <dependency ref="@dummy-projects/with-prepared|ieee754@1.2.1"/>
-    <dependency ref="@dummy-projects/with-prepared|ignore@5.1.4"/>
     <dependency ref="@dummy-projects/with-prepared|imurmurhash@0.1.4"/>
     <dependency ref="@dummy-projects/with-prepared|indent-string@4.0.0"/>
     <dependency ref="@dummy-projects/with-prepared|inherits@2.0.4"/>
@@ -8490,7 +8285,6 @@
     <dependency ref="@dummy-projects/with-prepared|tunnel-agent@0.6.0">
       <dependency ref="@dummy-projects/with-prepared|safe-buffer@5.2.1"/>
     </dependency>
-    <dependency ref="@dummy-projects/with-prepared|undici-types@5.26.5"/>
     <dependency ref="@dummy-projects/with-prepared|unique-filename@3.0.0">
       <dependency ref="@dummy-projects/with-prepared|unique-slug@4.0.0"/>
     </dependency>
@@ -8501,11 +8295,6 @@
       <dependency ref="@dummy-projects/with-prepared|punycode@2.3.1"/>
     </dependency>
     <dependency ref="@dummy-projects/with-prepared|util-deprecate@1.0.2"/>
-    <dependency ref="@dummy-projects/with-prepared|uuid@8.3.2"/>
-    <dependency ref="@dummy-projects/with-prepared|uuidv4@6.2.13">
-      <dependency ref="@dummy-projects/with-prepared|@types/uuid@8.3.4"/>
-      <dependency ref="@dummy-projects/with-prepared|uuid@8.3.2"/>
-    </dependency>
     <dependency ref="@dummy-projects/with-prepared|which@4.0.0">
       <dependency ref="@dummy-projects/with-prepared|isexe@3.1.1"/>
     </dependency>

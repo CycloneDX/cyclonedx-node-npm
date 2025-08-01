@@ -764,6 +764,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/base64-js"
         }
@@ -3210,23 +3214,35 @@
     {
       "type": "library",
       "name": "ignore",
-      "version": "5.3.2",
-      "bom-ref": "@dummy-projects/with-prepared|ignore@5.3.2",
-      "purl": "pkg:npm/ignore@5.3.2",
+      "version": "5.1.4",
+      "bom-ref": "@dummy-projects/with-prepared|ignore@5.1.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ignore@5.1.4",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz",
+          "url": "https://registry.npmjs.org/ignore/-/ignore-5.1.4.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "86c053354a904c3c245ad71d608da2d3a63f9d4044b0d10324a8d676280bbde832f240ee2404bcb91969924710a721172f467fa630f2e4706632344227682afa"
+              "content": "3336d449a8644d6d6eec9a4a2a363b2c20117757d4e56dab2ddc6533891d91acae0b06489a392996e17d08cd5a2dec18260b8f0ea7b02da9b5f18e8053af40f0"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:development",
+          "value": "true"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/ignore"
@@ -6325,7 +6341,7 @@
         "@dummy-projects/with-prepared|base64-js@1.0.1",
         "@dummy-projects/with-prepared|buffer@5.7.1",
         "@dummy-projects/with-prepared|bundle-dependencies@1.0.2",
-        "@dummy-projects/with-prepared|ignore@5.3.2",
+        "@dummy-projects/with-prepared|ignore@5.1.4",
         "@dummy-projects/with-prepared|is-obj@3.0.0",
         "@dummy-projects/with-prepared|uuid@8.3.2",
         "@dummy-projects/with-prepared|uuidv4@6.2.13"
@@ -6950,7 +6966,7 @@
       "ref": "@dummy-projects/with-prepared|ieee754@1.2.1"
     },
     {
-      "ref": "@dummy-projects/with-prepared|ignore@5.3.2"
+      "ref": "@dummy-projects/with-prepared|ignore@5.1.4"
     },
     {
       "ref": "@dummy-projects/with-prepared|imurmurhash@0.1.4"

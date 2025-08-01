@@ -13,3 +13,6 @@
 !/LICENCE.mit
 !/LICENSES/
 !/LICENSES/*
+
+!/docs/
+!/docs/*.md

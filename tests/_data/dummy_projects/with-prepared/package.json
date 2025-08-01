@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/refs/heads/master/src/schemas/json/package.json",
   "private": true,
   "name": "@dummy-projects/with-prepared",
   "optionalDependencies": {
@@ -6,16 +7,28 @@
   },
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "7.0.0",
-    "@db-ui/base": "^0.29.2",
+    "@db-ui/base": "0.29.2",
     "base64-js": "1.0.1",
     "buffer": "^5.4.3",
     "bundle-dependencies": "1.0.2",
-    "ignore": "^5.1.4",
     "is-obj": "3.0.0"
+  },
+  "bundleDependencies": [
+    "base64-js"
+  ],
+  "peerDependencies": {
+    "uuid": "8.3.2",
+    "@types/uuid": "8.3.4"
+  },
+  "peerDependenciesMeta": {
+    "@types/uuid": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@types/node": "20.14.10",
     "@types/uuid": "8.3.4",
-    "uuid": "8.3.2"
+    "uuid": "8.3.2",
+    "ignore": "5.1.4"
   }
 }
