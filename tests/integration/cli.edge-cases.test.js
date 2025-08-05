@@ -27,7 +27,7 @@ const { makeReproducible } = require('../_helper')
 const {
   NPM_LOWEST_SUPPORTED,
   UPDATE_SNAPSHOTS,
-  cliWrapper,
+  cliWrapperPath,
   demoResultsRoot,
   dummyProjectsRoot,
   latestCdxSpecVersion,
@@ -209,7 +209,7 @@ describe('integration.cli.edge-cases', () => {
     ])('%s', async (purpose, cdxArgs, expectedError) => {
       const res = spawnSync(
         process.execPath,
-        ['--', cliWrapper, ...cdxArgs],
+        ['--', cliWrapperPath, ...cdxArgs],
         {
           cwd: join(dummyProjectsRoot, 'with-lockfile'),
           stdio: ['ignore', 'ignore', 'pipe'],

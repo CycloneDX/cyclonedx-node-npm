@@ -21,7 +21,7 @@ const { spawnSync } = require('node:child_process')
 
 const { describe, expect, test } = require('@jest/globals')
 
-const { cliWrapper, projectRootPath } = require('./')
+const { cliWrapperPath, projectRootPath } = require('./')
 
 describe('integration.cli.dogfooding', () => {
   const cliRunTestTimeout = 15000
@@ -29,7 +29,7 @@ describe('integration.cli.dogfooding', () => {
   test.each(['JSON', 'XML'])('dogfooding %s', (format) => {
     const res = spawnSync(
       process.execPath,
-      ['--', cliWrapper, '--output-format', format, '--ignore-npm-errors'],
+      ['--', cliWrapperPath, '--output-format', format, '--ignore-npm-errors'],
       {
         cwd: projectRootPath,
         stdio: ['ignore', 'inherit', 'pipe'],

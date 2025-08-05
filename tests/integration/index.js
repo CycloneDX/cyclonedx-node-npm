@@ -98,7 +98,7 @@ function runCLI (args, logFileBase, cwd, env) {
   return { res, outFile, errFile }
 }
 
-const cliWrapper = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
+const cliWrapperPath = join(projectRootPath, 'bin', 'cyclonedx-npm-cli.js')
 
 /**
  * @param {string} caseName
@@ -112,7 +112,7 @@ module.exports = {
   NPM_LATETS,
   NPM_LOWEST_SUPPORTED,
   UPDATE_SNAPSHOTS,
-  cliWrapper,
+  cliWrapperPath,
   demoResultsRoot,
   dummyProjectsRoot,
   dummyResultsRoot,
