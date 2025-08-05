@@ -24,7 +24,7 @@ const { dirname, join } = require('node:path')
 const { describe, expect, test } = require('@jest/globals')
 
 const { getNpmVersion, makeReproducible, regexEscape } = require('../_helper')
-const { NPM_LOWEST_SUPPORTED, UPDATE_SNAPSHOTS, cliWrapper, demoResultsRoot, dummyProjectsRoot, dummyResultsRoot, latestCdxSpecVersion, mkTemp, projectDemoRootPath } = require('./')
+const { NPM_LOWEST_SUPPORTED, UPDATE_SNAPSHOTS, cliWrapperPath, demoResultsRoot, dummyProjectsRoot, dummyResultsRoot, latestCdxSpecVersion, mkTemp, projectDemoRootPath } = require('./')
 
 describe('integration.cli.from-setups', () => {
   // some test beds might be skipped
@@ -104,7 +104,7 @@ describe('integration.cli.from-setups', () => {
       // no need to create that outFile dir first - the tool is expected to do that for us
       const res = spawnSync(
         process.execPath,
-        ['--', cliWrapper,
+        ['--', cliWrapperPath,
           ...additionalCliArgs,
           '--spec-version', latestCdxSpecVersion,
           '--output-format', format,
@@ -184,7 +184,7 @@ describe('integration.cli.from-setups', () => {
       const outFile = join(tmpRoot, `${demo}_${oType}.${format}`)
       const res = spawnSync(
         process.execPath,
-        ['--', cliWrapper,
+        ['--', cliWrapperPath,
           ...additionalCliArgs,
           '--spec-version', latestCdxSpecVersion,
           '--output-format', format,
