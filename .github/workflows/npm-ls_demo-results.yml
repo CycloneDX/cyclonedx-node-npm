@@ -125,7 +125,7 @@ jobs:
     steps:
       - name: fetch and combine RESULTS
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           pattern: '${{ env.RESULTS_ARTIFACT }}_*'
           merge-multiple: true
