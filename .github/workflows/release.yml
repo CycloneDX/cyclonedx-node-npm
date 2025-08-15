@@ -150,7 +150,7 @@ jobs:
     steps:
       - name: fetch release result
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: ${{ env.PACKED_ARTIFACT }}
           path: ${{ env.ASSETS_DIR }}
