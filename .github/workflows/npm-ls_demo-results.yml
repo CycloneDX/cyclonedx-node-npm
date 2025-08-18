@@ -77,7 +77,7 @@ jobs:
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: prepare output
         run: |
           mkdir -p '${{ env.RESULTS_DIR }}'
