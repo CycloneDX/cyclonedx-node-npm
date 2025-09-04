@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 4.0.1 - 2025-09-04
+
 * Runtime Dependencies
   * Support `normalize-package-data@^8.0.0`, was `@^7.0.0` (via [#1327])
 * Build
