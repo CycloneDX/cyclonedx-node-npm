@@ -106,7 +106,7 @@ jobs:
         run: |
           npm install --ignore-scripts --include=optional --loglevel=silly
       - name: install tools
-        run: >
+        run: |
           echo "::group::install code-style deps"
           npm run -- dev-setup:tools:code-style --ignore-scripts --loglevel=silly
           echo "::endgroup::"
