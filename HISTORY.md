@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Runtime Dependencies
+  * Support `normalize-package-data@^8.0.0`, was `@^7.0.0` (via [#1327])
+* Build
+  * Use _TypeScript_ `v5.9.2` now, was `v5.8.3` (via [#1332])
+
+[#1327]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1327
+[#1332]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1332
+
 ## 4.0.0 - 2025-06-23
 
 * BREAKING Changes
