@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 4.0.2 - 2025-09-16
+
 * Runtime Dependencies
   * Support `@cyclonedx/cyclonedx-library@^9.0.0`, was `@^8.4.0` (via [#1349])
 
