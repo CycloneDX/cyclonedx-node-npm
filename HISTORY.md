@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Runtime Dependencies
+  * Support `@cyclonedx/cyclonedx-library@^9.0.0`, was `@^8.4.0` (via [#1349])
+
+[#1349]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1349
+
 ## 4.0.1 - 2025-09-04
 
 * Runtime Dependencies
