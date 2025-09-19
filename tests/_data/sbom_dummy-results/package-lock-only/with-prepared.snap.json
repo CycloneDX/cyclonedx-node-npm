@@ -125,6 +125,41 @@
     },
     {
       "type": "library",
+      "name": "cyclonedx-library",
+      "group": "@cyclonedx",
+      "version": "7.0.0",
+      "bom-ref": "@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0#2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@7.0.0",
+      "externalReferences": [
+        {
+          "url": "https://registry.npmjs.org/@cyclonedx/cyclonedx-library/-/cyclonedx-library-7.0.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "8c56fe517b693dc7bd8a71d37a2742a67ed8e9ec175b5f59e0661bad26eca7223fa3c3c48f747cf59dd23fba981b180825a3676dd1951323719ef73d414ba5fb"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@cyclonedx/cyclonedx-library-same_aliased"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "base",
       "group": "@db-ui",
       "version": "0.29.2",
@@ -6335,6 +6370,7 @@
       "ref": "@dummy-projects/with-prepared",
       "dependsOn": [
         "@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0",
+        "@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0#2",
         "@dummy-projects/with-prepared|@db-ui/base@0.29.2",
         "@dummy-projects/with-prepared|@types/node@20.14.10",
         "@dummy-projects/with-prepared|@types/uuid@8.3.4",
@@ -6349,6 +6385,18 @@
     },
     {
       "ref": "@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0",
+      "dependsOn": [
+        "@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1",
+        "@dummy-projects/with-prepared|ajv-formats@3.0.1",
+        "@dummy-projects/with-prepared|ajv@8.17.1",
+        "@dummy-projects/with-prepared|libxmljs2@0.35.0",
+        "@dummy-projects/with-prepared|packageurl-js@2.0.1",
+        "@dummy-projects/with-prepared|spdx-expression-parse@4.0.0",
+        "@dummy-projects/with-prepared|xmlbuilder2@3.1.1"
+      ]
+    },
+    {
+      "ref": "@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0#2",
       "dependsOn": [
         "@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1",
         "@dummy-projects/with-prepared|ajv-formats@3.0.1",
