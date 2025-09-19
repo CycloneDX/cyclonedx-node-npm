@@ -1,6 +1,6 @@
 {
   "name": "@cyclonedx/cyclonedx-npm",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.",
   "license": "Apache-2.0",
   "keywords": [
@@ -69,10 +69,16 @@
     }
   ],
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^8.4.0",
+    "@cyclonedx/cyclonedx-library": "^8.4.0||^9.0.0",
     "commander": "^14.0.0",
     "normalize-package-data": "^7.0.0 || ^8.0.0",
     "xmlbuilder2": "^3.0.2"
+  },
+  "optionalDependencies": {
+    "ajv": "^8.12.0",
+    "ajv-formats": "^3.0.1",
+    "ajv-formats-draft2019": "^1.6.1",
+    "libxmljs2": "^0.35||^0.37"
   },
   "devDependencies": {
     "@types/node": "ts5.8",
