@@ -232,7 +232,7 @@ export class BomBuilder {
     } catch (err) {
       this.console.debug('DEBUG | failed make rootComponent, fallback to existing one.', err)
       rootComponent = allComponents.get(rootPath)
-      if ( rootComponent === undefined) { throw new TypeError('missing rootComponent') }
+      if ( rootComponent === undefined) { throw new TypeError('missing rootComponent', {cause: err}) }
       rootComponent.type = this.metaComponentType
     }
 
