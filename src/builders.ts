@@ -621,7 +621,7 @@ export class TreeBuilder {
 
   private renderPR (tree: PTree, pref: PackagePath): void {
     // work with a copy of the tree, as we will modify it on the go
-    for (const [p, pTree] of [...tree]) {
+    for (const [p, pTree] of Array.from(tree)) {
       tree.delete(p)
       const pFull = pref + p
       this.renderPR(pTree, pFull)
@@ -630,11 +630,8 @@ export class TreeBuilder {
   }
 
   private nestPT(tree: PTree): void {
-    if (tree.size < 2) {
-      // nothing to compare ...
-      return
-    }
-    const treeI: PTreeI = [...tree]
+    if (tree.size < 2) { return } // nothing to compare ...
+    const treeI: PTreeI = Array.from(tree)
     for (const [a, aTree] of treeI) {
       for (const [b, bTree] of treeI) {
         if (a === b) { continue }
