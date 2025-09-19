@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Fixed
-  * Guarantee reproducible BomRef values fur alias/duplicated components ([#1351] via [#1352])
+  * If reproducible flag enabled, SBOM result's `bom-ref` for alias/duplicated components are reproducible ([#1351] via [#1352])
 
 [#1351]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1351
 [#1352]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1352
