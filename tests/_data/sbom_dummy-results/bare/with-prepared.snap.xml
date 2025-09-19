@@ -103,7 +103,7 @@
         </reference>
       </externalReferences>
       <properties>
-        <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library-same_aliased</property>
+        <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library</property>
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0#2">
@@ -137,7 +137,7 @@
         </reference>
       </externalReferences>
       <properties>
-        <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library</property>
+        <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library-same_aliased</property>
       </properties>
     </component>
     <component type="library" bom-ref="@dummy-projects/with-prepared|@db-ui/base@0.29.2">

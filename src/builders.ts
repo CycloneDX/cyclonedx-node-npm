@@ -300,11 +300,10 @@ export class BomBuilder {
     // prefix everything - also direct dependencies and such!
     // it could be that an inherited/outside/external dependency has the same bomRef otherwise ...
     const bRefCs: Record<string, number> = {}
-    const ps = Array.from(tree.keys())
-    if ( this.reproducible ) { ps.sort() }
-    for ( const p of ps ) {
-      const cTree = tree.get(p)
-      if ( cTree === undefined ) { throw new TypeError(`missing cTree for ${p}`) }
+    const treeI = this.reproducible
+      ? Array.from(tree).sort(([k1,], [k2,]) => k1.localeCompare(k2))
+      : tree
+    for ( const [p, cTree] of treeI ) {
       const component = allComponents.get(p)
       if ( component === undefined ) { throw new TypeError(`missing component for ${p}`) }
       const parts = []
