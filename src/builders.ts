@@ -296,10 +296,12 @@ export class BomBuilder {
   private setNestedBomRefs (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref = ''): void {
     // prefix everything - also direct dependencies and such!
     // it could be that an inherited/outside dependency has the same bomRef otherwise ...
+    const bRefCs: Record<string, number> = {}
     for (const [p, cTree] of tree) {
       const component = allComponents.get(p)
       if (component === undefined) { throw new TypeError(`missing component for ${p}`) }
-      const parts = [pref]
+
+      const parts = []
       if (component.group !== undefined && component.group.length > 0) {
         parts.push(component.group, '/')
       }
@@ -307,7 +309,10 @@ export class BomBuilder {
       if (component.version !== undefined && component.version.length > 0) {
         parts.push('@', component.version)
       }
-      component.bomRef.value = parts.join('')
+      const bRefD = parts.join('')
+      const bRefC = bRefCs[bRefD] = (bRefCs[bRefD] ?? 0) +1
+      component.bomRef.value = `${pref}${bRefD}${bRefC > 1 ? '#' + bRefC : ''}`
+
       this.setNestedBomRefs(allComponents, cTree, `${component.bomRef.value}|`)
     }
   }

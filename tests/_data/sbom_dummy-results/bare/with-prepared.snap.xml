@@ -103,6 +103,40 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library-same_aliased</property>
+      </properties>
+    </component>
+    <component type="library" bom-ref="@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0#2">
+      <author>Jan Kowalleck</author>
+      <group>@cyclonedx</group>
+      <name>cyclonedx-library</name>
+      <version>7.0.0</version>
+      <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@7.0.0</purl>
+      <externalReferences>
+        <reference type="distribution">
+          <url>https://registry.npmjs.org/@cyclonedx/cyclonedx-library/-/cyclonedx-library-7.0.0.tgz</url>
+          <comment>as detected from npm-ls property "resolved"</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <properties>
         <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library</property>
       </properties>
     </component>
@@ -7888,6 +7922,7 @@
   <dependencies>
     <dependency ref="@dummy-projects/with-prepared">
       <dependency ref="@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0#2"/>
       <dependency ref="@dummy-projects/with-prepared|@db-ui/base@0.29.2"/>
       <dependency ref="@dummy-projects/with-prepared|@types/node@20.14.10"/>
       <dependency ref="@dummy-projects/with-prepared|@types/uuid@8.3.4"/>
@@ -7900,6 +7935,15 @@
       <dependency ref="@dummy-projects/with-prepared|uuidv4@6.2.13"/>
     </dependency>
     <dependency ref="@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0">
+      <dependency ref="@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1"/>
+      <dependency ref="@dummy-projects/with-prepared|ajv-formats@3.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|ajv@8.17.1"/>
+      <dependency ref="@dummy-projects/with-prepared|libxmljs2@0.35.0"/>
+      <dependency ref="@dummy-projects/with-prepared|packageurl-js@2.0.1"/>
+      <dependency ref="@dummy-projects/with-prepared|spdx-expression-parse@4.0.0"/>
+      <dependency ref="@dummy-projects/with-prepared|xmlbuilder2@3.1.1"/>
+    </dependency>
+    <dependency ref="@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0#2">
       <dependency ref="@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1"/>
       <dependency ref="@dummy-projects/with-prepared|ajv-formats@3.0.1"/>
       <dependency ref="@dummy-projects/with-prepared|ajv@8.17.1"/>
