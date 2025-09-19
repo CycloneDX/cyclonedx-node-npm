@@ -293,9 +293,12 @@ export class BomBuilder {
     return bom
   }
 
+  /**
+   * @deprecated - use PackagePath-like for reproducible BomRef values
+   */
   private setNestedBomRefs (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref = ''): void {
     // prefix everything - also direct dependencies and such!
-    // it could be that an inherited/outside dependency has the same bomRef otherwise ...
+    // it could be that an inherited/outside/external dependency has the same bomRef otherwise ...
     const bRefCs: Record<string, number> = {}
     for (const [p, cTree] of tree) {
       const component = allComponents.get(p)
