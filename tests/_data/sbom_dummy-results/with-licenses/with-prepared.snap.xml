@@ -111,7 +111,7 @@
         </reference>
       </externalReferences>
       <properties>
-        <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library-same_aliased</property>
+        <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library</property>
       </properties>
       <evidence>
         <licenses>
@@ -157,7 +157,7 @@
         </reference>
       </externalReferences>
       <properties>
-        <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library</property>
+        <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library-same_aliased</property>
       </properties>
       <evidence>
         <licenses>

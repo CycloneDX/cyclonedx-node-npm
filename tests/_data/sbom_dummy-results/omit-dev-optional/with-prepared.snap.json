@@ -138,7 +138,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@cyclonedx/cyclonedx-library-same_aliased"
+          "value": "node_modules/@cyclonedx/cyclonedx-library"
         }
       ]
     },
@@ -184,7 +184,7 @@
       "properties": [
         {
           "name": "cdx:npm:package:path",
-          "value": "node_modules/@cyclonedx/cyclonedx-library"
+          "value": "node_modules/@cyclonedx/cyclonedx-library-same_aliased"
         }
       ]
     },
