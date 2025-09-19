@@ -299,8 +299,8 @@ export class BomBuilder {
   private setNestedBomRefs (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref = ''): void {
     // prefix everything - also direct dependencies and such!
     // it could be that an inherited/outside/external dependency has the same bomRef otherwise ...
-    const bRefCs: Record<string, number> = {}
-    const treeI = this.reproducible
+    const bRefCs: Record<PackagePath, number> = {}
+    const treeI:PTreeI = this.reproducible
       ? Array.from(tree).sort(([k1,], [k2,]) => k1.localeCompare(k2))
       : tree
     for ( const [p, cTree] of treeI ) {
@@ -599,6 +599,7 @@ class DummyComponent extends Models.Component {
 }
 
 type PTree = Map<PackagePath, PTree>
+type PTreeI = Iterable<[PackagePath, PTree]>
 
 export class TreeBuilder {
   fromPaths (root: PackagePath, paths: Iterable<PackagePath>, dirSeparator: string): PTree {
@@ -633,7 +634,7 @@ export class TreeBuilder {
       // nothing to compare ...
       return
     }
-    const treeI = [...tree]
+    const treeI: PTreeI = [...tree]
     for (const [a, aTree] of treeI) {
       for (const [b, bTree] of treeI) {
         if (a === b) { continue }
