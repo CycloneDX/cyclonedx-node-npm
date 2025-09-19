@@ -300,7 +300,7 @@ export class BomBuilder {
     // prefix everything - also direct dependencies and such!
     // it could be that an inherited/outside/external dependency has the same bomRef otherwise ...
     const bRefCs: Record<PackagePath, number> = {}
-    const treeI:PTreeI = this.reproducible
+    const treeI: PTreeI = this.reproducible
       ? Array.from(tree).sort(([k1,], [k2,]) => k1.localeCompare(k2))
       : tree
     for ( const [p, cTree] of treeI ) {
