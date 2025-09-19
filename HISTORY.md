@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Fixed
+  * guarantee reproducible bom-refs  
+
 ## 4.0.2 - 2025-09-16
 
 * Runtime Dependencies

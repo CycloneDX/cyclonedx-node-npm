@@ -300,10 +300,13 @@ export class BomBuilder {
     // prefix everything - also direct dependencies and such!
     // it could be that an inherited/outside/external dependency has the same bomRef otherwise ...
     const bRefCs: Record<string, number> = {}
-    for (const [p, cTree] of tree) {
+    const ps = Array.from(tree.keys())
+    if ( this.reproducible ) { ps.sort() }
+    for ( const p of ps ) {
+      const cTree = tree.get(p)
+      if ( cTree === undefined ) { throw new TypeError(`missing cTree for ${p}`) }
       const component = allComponents.get(p)
-      if (component === undefined) { throw new TypeError(`missing component for ${p}`) }
-
+      if ( component === undefined ) { throw new TypeError(`missing component for ${p}`) }
       const parts = []
       if (component.group !== undefined && component.group.length > 0) {
         parts.push(component.group, '/')
@@ -315,7 +318,6 @@ export class BomBuilder {
       const bRefD = parts.join('')
       const bRefC = bRefCs[bRefD] = (bRefCs[bRefD] ?? 0) +1
       component.bomRef.value = `${pref}${bRefD}${bRefC > 1 ? '#' + bRefC : ''}`
-
       this.setNestedBomRefs(allComponents, cTree, `${component.bomRef.value}|`)
     }
   }
