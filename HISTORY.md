@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 4.0.3 - 2025-09-22
+
 * Fixed
   * If reproducible flag enabled, SBOM result's `bom-ref` for alias/duplicated components are reproducible ([#1351] via [#1352])
 
