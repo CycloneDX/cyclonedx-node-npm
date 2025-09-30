@@ -49,7 +49,10 @@ export default [
   },
   {
     files: ['**/*.js'],
-    languageOptions: { sourceType: 'commonjs' }
+    languageOptions: { sourceType: 'commonjs' },
+    rules: {
+      'jsdoc/reject-any-type': 'off'
+    }
   },
   {
     files: [

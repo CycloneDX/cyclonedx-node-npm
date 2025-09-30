@@ -248,7 +248,7 @@ const npmMinVersion: Version = Object.freeze([9, 0, 0])
 
 /* eslint-disable-next-line complexity -- ack */
 export async function run (process_: NodeJS.Process): Promise<number> {
-  process_.title = 'cyclonedx-node-npm'
+  process_.title = 'cyclonedx-node-npm' /* eslint-disable-line  no-param-reassign -- ack */
 
   const program = makeCommand(process_)
   program.parse(process_.argv)
