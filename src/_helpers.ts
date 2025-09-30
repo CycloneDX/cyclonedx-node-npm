@@ -78,6 +78,7 @@ export function versionTuple (value: string): Version {
 }
 
 export function versionCompare (a: Version, b: Version): CompareResult {
+  /* eslint-disable-next-line no-plusplus -- save */
   for (let i = 0, l = Math.max(a.length, b.length); i < l; ++i) {
     // make values NaN-save, null-safe, undefined-safe
     const ai = a[i] || 0 /* eslint-disable-line @typescript-eslint/strict-boolean-expressions -- needed */
@@ -129,7 +130,7 @@ export function normalizePackageManifest (data: any): asserts data is normalizeP
 
   if (isString(oVersion)) {
     // normalizer might have stripped version or sanitized it to SemVer -- we want the original
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,  no-param-reassign -- ack */
     data.version = oVersion.trim()
   }
 }

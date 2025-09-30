@@ -243,11 +243,13 @@ export class BomBuilder {
       : [path.win32.relative, '\\', /\\/g]
     /* eslint-enable @typescript-eslint/unbound-method */
     allComponents.forEach((c, p) => {
+      /* eslint-disable no-param-reassign -- intended */
       c.purl = this.makePurl(c)
       c.properties.add(new Models.Property(
         PropertyNames.PackageInstallPath,
         relativePath(rootPath, p).replace(dirSepRE, '/')
       ))
+      /* eslint-enable no-param-reassign */
     })
 
     const pTree = this.treeBuilder.fromPaths(rootPath,allComponents.keys(), dirSep)
@@ -315,7 +317,7 @@ export class BomBuilder {
         parts.push('@', component.version)
       }
       const bRefD = parts.join('')
-      const bRefC = bRefCs[bRefD] = (bRefCs[bRefD] ?? 0) +1
+      const bRefC = bRefCs[bRefD] = (bRefCs[bRefD] ?? 0) +1 /* eslint-disable-line no-multi-assign -- ack */
       component.bomRef.value = `${pref}${bRefD}${bRefC > 1 ? '#' + bRefC : ''}`
       this.setNestedBomRefs(allComponents, cTree, `${component.bomRef.value}|`)
     }
@@ -404,30 +406,32 @@ export class BomBuilder {
     }
 
     component.licenses.forEach(l => {
+      /* eslint-disable no-param-reassign -- intended */
       l.acknowledgement = Enums.LicenseAcknowledgement.Declared
-    })
+      /* eslint-enable no-param-reassign */
+   })
 
-    if ( this.gatherLicenseTexts ) {
-      component.evidence = new Models.ComponentEvidence()
-      for (const le of this.fetchLicenseEvidence(ppath) ) {
-        component.evidence.licenses.add(le)
-      }
-    }
+   if ( this.gatherLicenseTexts ) {
+     component.evidence = new Models.ComponentEvidence()
+     for (const le of this.fetchLicenseEvidence(ppath) ) {
+       component.evidence.licenses.add(le)
+     }
+   }
 
-    // region properties
+   // region properties
 
-    if (manifest.private === true) {
-      component.properties.add(
-        new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
-      )
-    }
+   if (manifest.private === true) {
+     component.properties.add(
+       new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
+     )
+   }
 
-    // endregion properties
+   // endregion properties
 
-    return component
-  }
+   return component
+ }
 
-  /* eslint-disable-next-line complexity -- ack */
+ /* eslint-disable-next-line complexity -- ack */
   private makeComponentWithPackageData(data: PackageData, ppath: PackagePath, type: Enums.ComponentType = Enums.ComponentType.Library): Models.Component {
     const isOptional = data.optional === true || data.devOptional === false
     let isExcluded= false
@@ -462,49 +466,51 @@ export class BomBuilder {
       component = new DummyComponent(type, ppath)
     } else {
       component.licenses.forEach(l => {
+        /* eslint-disable no-param-reassign -- intended */
         l.acknowledgement = Enums.LicenseAcknowledgement.Declared
-      })
-    }
+        /* eslint-enable no-param-reassign */
+     })
+   }
 
-    if (isExcluded) {
-      component.scope = Enums.ComponentScope.Excluded
-    } else if (isOptional) {
-      component.scope = Enums.ComponentScope.Optional
-    }
+   if (isExcluded) {
+     component.scope = Enums.ComponentScope.Excluded
+   } else if (isOptional) {
+     component.scope = Enums.ComponentScope.Optional
+   }
 
-    // region properties
-    if (data.dev === true || data.devOptional ===  true) {
-      component.properties.add(
-        new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
-      )
-    }
-    if (data.extraneous === true) {
-      component.properties.add(
-        new Models.Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
-      )
-    }
-    if (data.inBundle === true) {
-      component.properties.add(
-        new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
-      )
-    }
-    // endregion properties
+   // region properties
+   if (data.dev === true || data.devOptional ===  true) {
+     component.properties.add(
+       new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
+     )
+   }
+   if (data.extraneous === true) {
+     component.properties.add(
+       new Models.Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
+     )
+   }
+   if (data.inBundle === true) {
+     component.properties.add(
+       new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
+     )
+   }
+   // endregion properties
 
-    // region resolved
-    const rref = this.makeExtRefDistFromPackageData(data)
-    if ( rref !== undefined ) {
-      component.externalReferences.add(rref)
-    }
-    // endregion resolved
+   // region resolved
+   const rref = this.makeExtRefDistFromPackageData(data)
+   if ( rref !== undefined ) {
+     component.externalReferences.add(rref)
+   }
+   // endregion resolved
 
-    return component
-  }
+   return component
+ }
 
-  /**
-   * Ignore pattern for `resolved`.
-   * - ignore: well, just ignore it ... i guess.
-   * - file: local dist cannot be shipped and therefore should be ignored.
-   */
+ /**
+  * Ignore pattern for `resolved`.
+  * - ignore: well, just ignore it ... i guess.
+  * - file: local dist cannot be shipped and therefore should be ignored.
+  */
   private readonly resolvedRE_ignore = /^(?:ignore|file):/i
 
   private makeExtRefDistFromPackageData (data: PackageData): Models.ExternalReference | undefined {
@@ -603,7 +609,7 @@ type PTreeI = Iterable<[PackagePath, PTree]>
 
 export class TreeBuilder {
   fromPaths (root: PackagePath, paths: Iterable<PackagePath>, dirSeparator: string): PTree {
-    root += dirSeparator
+    root += dirSeparator /* eslint-disable-line  no-param-reassign -- ack */
     const upaths = new Set<PackagePath>(iterableMap(paths, p => `${p}${dirSeparator}`))
     const outs = new Set<PackagePath>(iterableFilter(upaths, p => !p.startsWith(root)))
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
