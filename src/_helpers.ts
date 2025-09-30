@@ -78,8 +78,7 @@ export function versionTuple (value: string): Version {
 }
 
 export function versionCompare (a: Version, b: Version): CompareResult {
-  /* eslint-disable-next-line no-plusplus -- save */
-  for (let i = 0, l = Math.max(a.length, b.length); i < l; ++i) {
+  for (let i = 0, l = Math.max(a.length, b.length); i < l; i += 1) {
     // make values NaN-save, null-safe, undefined-safe
     const ai = a[i] || 0 /* eslint-disable-line @typescript-eslint/strict-boolean-expressions -- needed */
     const bi = b[i] || 0 /* eslint-disable-line @typescript-eslint/strict-boolean-expressions -- needed */
