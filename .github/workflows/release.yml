@@ -59,9 +59,10 @@ jobs:
           git config --local user.name "${GITHUB_ACTOR}"
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
       ## ! no npm build at the moment
       - name: bump VERSION
         id: bump
@@ -99,9 +100,10 @@ jobs:
           ref: ${{ needs.bump.outputs.version }}
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
       - name: setup project
         run: |
           npm install --ignore-scripts --include=optional --loglevel=silly

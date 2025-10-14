@@ -38,10 +38,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          # cache: 'npm'
+          package-manager-cache: false
       - name: setup subject
         run: npm i --ignore-scripts --loglevel=silly
       - name: build
@@ -64,11 +64,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          # cache: "npm"
-          # cache-dependency-path: "**/package-lock.json"
+          package-manager-cache: false
       - name: setup project
         run: |
           npm install --ignore-scripts --loglevel=silly
@@ -109,11 +108,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          # cache: "npm"
-          # cache-dependency-path: "**/package-lock.json"
+          package-manager-cache: false
       - name: setup project
         run: npm install --ignore-scripts --loglevel=silly
       - name: setup tools
@@ -146,10 +144,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
-          # cache: 'npm'
+          package-manager-cache: false
       - name: npm version
         run: npm --version
       - name: setup subject
@@ -225,10 +223,10 @@ jobs:
       - run: mkdir -p ${{ env.REPORTS_DIR }}
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version || env.NODE_ACTIVE_LTS }}
-          # cache: 'npm'
+          package-manager-cache: false
       - name: setup npm ${{ matrix.npm-version }}
         run: |
           npm i -g npm@${{ matrix.npm-version }}
