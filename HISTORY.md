@@ -8,7 +8,6 @@ All notable changes to this project will be documented in this file.
 
 * Dependencies
   * Support `xmlbuilder2@^3.0.2||^4.0.0`, was `@^3.0.2` (via [#1368])
-  * Support `@cyclonedx/cyclonedx-library@^9.1.0`, was `@^8.4.0||^9.0.0` (via [#1368])
 * Build
   * Use _TypeScript_ `v5.9.3` now, was `v5.9.2` (via [#1356])
 
