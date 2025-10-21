@@ -6,10 +6,14 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Dependencies
+  * Support `xmlbuilder2@^3.0.2||^4.0.0`, was `@^3.0.2` (via [#])
+  * Support `@cyclonedx/cyclonedx-library@^9.1.0`, was `@^8.4.0||^9.0.0` (via [#])
 * Build
   * Use _TypeScript_ `v5.9.3` now, was `v5.9.2` (via [#1356])
 
 [#1356]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1356
+[#]:
 
 ## 4.0.3 - 2025-09-22
 
