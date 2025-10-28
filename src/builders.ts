@@ -275,8 +275,8 @@ export class BomBuilder {
     // Add reproducible property to metadata
     bom.metadata.properties.add(
       new Models.Property(
-        'cdx:reproducible',
-        this.reproducible ? 'true' : 'false'
+        PropertyNames.BomReproducible,
+        this.reproducible ? PropertyValueBool.True : PropertyValueBool.False
       )
     )
     // region components

@@ -29,6 +29,7 @@ export const enum PropertyNames {
   PackagePrivate = 'cdx:npm:package:private',
   PackageDevelopment = 'cdx:npm:package:development',
   PackageInstallPath = 'cdx:npm:package:path',
+  BomReproducible = 'cdx:reproducible',
 }
 
 /**
