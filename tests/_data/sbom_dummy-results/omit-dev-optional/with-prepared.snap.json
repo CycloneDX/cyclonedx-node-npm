@@ -93,7 +93,13 @@
           "value": "true"
         }
       ]
-    }
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
   },
   "components": [
     {
