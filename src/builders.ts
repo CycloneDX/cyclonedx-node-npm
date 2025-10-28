@@ -270,15 +270,20 @@ export class BomBuilder {
     if (!this.reproducible) {
       bom.serialNumber = Utils.BomUtility.randomSerialNumber()
       bom.metadata.timestamp = new Date()
-    }
-
-    // Add reproducible property to metadata
-    bom.metadata.properties.add(
-      new Models.Property(
-        PropertyNames.BomReproducible,
-        this.reproducible ? PropertyValueBool.True : PropertyValueBool.False
+      bom.metadata.properties.add(
+        new Models.Property(
+          PropertyNames.BomReproducible,
+          PropertyValueBool.False
+        )
       )
-    )
+    } else {
+      bom.metadata.properties.add(
+        new Models.Property(
+          PropertyNames.BomReproducible,
+          PropertyValueBool.True
+        )
+      )
+    }
     // endregion metadata
     // region components
     if (this.flattenComponents) {
