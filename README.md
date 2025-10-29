@@ -20,6 +20,7 @@ criteria, this tool is capable of producing SBOM documents almost passing Level-
 
 The resulting SBOM documents follow [official specifications and standards](https://github.com/CycloneDX/specification), 
 and might have properties following [`cdx:npm` Namespace Taxonomy](https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md)
+and [`cdx` Namespace Taxonomy](https://cyclonedx.github.io/cyclonedx-property-taxonomy/cdx.htm)
 .
 
 ## Requirements
