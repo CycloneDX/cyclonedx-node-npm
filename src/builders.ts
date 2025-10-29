@@ -485,11 +485,14 @@ export class BomBuilder {
      })
    }
 
-   if (isExcluded) {
-     component.scope = Enums.ComponentScope.Excluded
-   } else if (isOptional) {
-     component.scope = Enums.ComponentScope.Optional
-   }
+    if (isExcluded) {
+      component.scope = Enums.ComponentScope.Excluded
+    } else if (isOptional) {
+      component.scope = Enums.ComponentScope.Optional
+    } else if (data.dev === true || data.devOptional === true) {
+      component.scope = Enums.ComponentScope.Excluded
+    }
+
 
    // region properties
    if (data.dev === true || data.devOptional ===  true) {
