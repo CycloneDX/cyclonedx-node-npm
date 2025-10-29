@@ -277,15 +277,9 @@ export class BomBuilder {
     } else {
       bom.serialNumber = Utils.BomUtility.randomSerialNumber()
       bom.metadata.timestamp = new Date()
-      bom.metadata.properties.add(
-        new Models.Property(
-          PropertyNames.BomReproducible,
-          PropertyValueBool.False
-        )
-      )
     }
-
     // endregion metadata
+
     // region components
     if (this.flattenComponents) {
       for (const c of allComponents.values()) {
