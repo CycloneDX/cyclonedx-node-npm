@@ -5,7 +5,10 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 <!-- unreleased changes go here -->
-* Added 
+
+## 4.1.0 - 2025-10-29
+
+* Added
   * Reproducible SBOM results have Metadata's property `cdx:reproducible` populated ([#1054] via [#1373])  
     See the [official property taxonomy `cdx`](https://cyclonedx.github.io/cyclonedx-property-taxonomy/cdx.html) for details.
 * Build
