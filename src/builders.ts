@@ -559,10 +559,10 @@ export class BomBuilder {
     const packageJsonPaths: Array<[string, Enums.ComponentType]> = [
       [path.resolve(module.path, '..', 'package.json'), Enums.ComponentType.Application]
     ]
-
     const libs = [
       '@cyclonedx/cyclonedx-library'
     ].map(s => s.split('/', 2))
+
     const nodeModulePaths = require.resolve.paths('__some_none-native_package__') ?? []
     /* eslint-disable no-labels -- needed */
     libsLoop:
