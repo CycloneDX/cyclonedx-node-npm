@@ -5,11 +5,15 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 <!-- unreleased changes go here -->
-
+* Added 
+  * Reproducible SBOM results have Metadata's property `cdx:reproducible` populated ([#1054] via [#1373])  
+    See the [official property taxonomy `cdx`](https://cyclonedx.github.io/cyclonedx-property-taxonomy/cdx.html) for details.
 * Build
   * Use _TypeScript_ `v5.9.3` now, was `v5.9.2` (via [#1356])
 
+[#1054]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1054
 [#1356]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1356
+[#1373]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1373
 
 ## 4.0.3 - 2025-09-22
 
