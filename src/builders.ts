@@ -267,12 +267,25 @@ export class BomBuilder {
     for (const toolC of this.makeToolCs()) {
       bom.metadata.tools.components.add(toolC)
     }
-    if (!this.reproducible) {
+    if (this.reproducible) {
+      bom.metadata.properties.add(
+        new Models.Property(
+          PropertyNames.BomReproducible,
+          PropertyValueBool.True
+        )
+      )
+    } else {
       bom.serialNumber = Utils.BomUtility.randomSerialNumber()
       bom.metadata.timestamp = new Date()
+      bom.metadata.properties.add(
+        new Models.Property(
+          PropertyNames.BomReproducible,
+          PropertyValueBool.False
+        )
+      )
     }
-    // endregion metadata
 
+    // endregion metadata
     // region components
     if (this.flattenComponents) {
       for (const c of allComponents.values()) {

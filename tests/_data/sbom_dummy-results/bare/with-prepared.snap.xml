@@ -70,6 +70,9 @@
         <property name="cdx:npm:package:private">true</property>
       </properties>
     </component>
+    <properties>
+      <property name="cdx:reproducible">true</property>
+    </properties>
   </metadata>
   <components>
     <component type="library" bom-ref="@dummy-projects/with-prepared|@cyclonedx/cyclonedx-library@7.0.0">
