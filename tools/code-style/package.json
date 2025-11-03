@@ -6,11 +6,11 @@
     "node": ">=20.18"
   },
   "dependencies": {
-    "@eslint/js": "9.38.0",
-    "eslint": "9.38.0",
+    "@eslint/js": "9.39.0",
+    "eslint": "9.39.0",
     "eslint-config-love": "133.0.0",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-jsdoc": "61.1.8",
+    "eslint-plugin-jsdoc": "61.1.11",
     "eslint-plugin-license-header": "0.8.0",
     "eslint-plugin-n": "17.23.1",
     "eslint-plugin-promise": "7.2.1",
