@@ -389,19 +389,20 @@ export async function run (process_: NodeJS.Process): Promise<number> {
       }
     }
   }
-  const directory = dirname(options.outputFile)
-  if (!existsSync(directory)) {
-    myConsole.info('INFO  | creating directory', directory)
-    mkdirSync(directory, { recursive: true })
+
+  let outputFD: number = process.stdout.fd
+  if (options.outputFile !== OutputStdOut) {
+    const outputFPn = resolve(process.cwd(), options.outputFile)
+    const outputFDir = dirname(outputFPn)
+    if (!existsSync(outputFDir)) {
+      myConsole.info('INFO  | creating directory', outputFDir)
+      mkdirSync(outputFDir, { recursive: true })
+    }
+    outputFD = openSync(outputFPn, 'w')
   }
-  myConsole.log('LOG   | writing BOM to', options.outputFile)
-  const written = await writeAllSync(
-    options.outputFile === OutputStdOut
-      ? process_.stdout.fd
-      : openSync(resolve(process_.cwd(), options.outputFile), 'w'),
-    serialized
-  )
-  myConsole.info('INFO  | wrote %d bytes to %s', written, options.outputFile)
+  myConsole.log('LOG   | writing BOM to: %s', options.outputFile)
+  const written = await writeAllSync(outputFD, serialized)
+  myConsole.info('INFO  | wrote %d bytes to: %s', written, options.outputFile)
 
   return written > 0
     ? ExitCode.SUCCESS
