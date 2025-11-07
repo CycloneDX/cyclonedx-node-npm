@@ -390,10 +390,10 @@ export async function run (process_: NodeJS.Process): Promise<number> {
     }
   }
 
-  let outputFD: number = process.stdout.fd
+  let outputFD: number = process_.stdout.fd
   if (options.outputFile !== OutputStdOut) {
-    const outputFPn = resolve(process.cwd(), options.outputFile)
-    logger.debug('DEBUG | outputFPn:', outputFPn)
+    const outputFPn = resolve(process_.cwd(), options.outputFile)
+    myConsole.debug('DEBUG | outputFPn:', outputFPn)
     const outputFDir = dirname(outputFPn)
     if (!existsSync(outputFDir)) {
       myConsole.info('INFO  | creating directory', outputFDir)
