@@ -62,7 +62,7 @@ interface CommandOptions {
 
 function makeCommand (process_: NodeJS.Process): Command {
   return new Command(
-    // aut-set the name
+    /* auto-set the name */
   ).description(
     'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
   ).usage(
