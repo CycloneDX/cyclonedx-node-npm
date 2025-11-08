@@ -68,6 +68,10 @@ function makeCommand(process_: NodeJS.Process): Command {
   ).usage(
     // Need to add the `[--]` manually, to indicate how to stop a variadic option.
     '[options] [--] [<package-manifest>]'
+  ).version(
+    // that is supposed to be the last option in the list on the help page.
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion, @typescript-eslint/no-unsafe-member-access -- ack */
+    loadJsonFile(resolve(module.path, '..', 'package.json')).version as string
   ).addOption(
     new Option(
       '--ignore-npm-errors',
@@ -226,10 +230,6 @@ function makeCommand(process_: NodeJS.Process): Command {
       'package.json',
       '"package.json" file in current working directory'
     )
-  ).version(
-    // that is supposed to be the last option in the list on the help page.
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion, @typescript-eslint/no-unsafe-member-access -- ack */
-    loadJsonFile(resolve(module.path, '..', 'package.json')).version as string
   ).allowExcessArguments(
     false
   )
@@ -253,6 +253,7 @@ export async function run(process_: NodeJS.Process): Promise<number> {
   const options: CommandOptions = program.opts()
   const myConsole = makeConsoleLogger(process_, options.verbose)
   myConsole.debug('DEBUG | options: %j', options)
+  myConsole.debug('DEBUG | args: %j', program.args)
 
   const npmRunner = new NpmRunner(process_, myConsole)
   const npmVersion = npmRunner.getVersion({env: process_.env})
