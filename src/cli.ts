@@ -62,6 +62,7 @@ interface CommandOptions {
 
 function makeCommand (process_: NodeJS.Process): Command {
   return new Command(
+    // aut-set the name
   ).description(
     'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
   ).usage(
@@ -161,7 +162,7 @@ function makeCommand (process_: NodeJS.Process): Command {
       'BOM_REPRODUCIBLE'
     )
   ).addOption(
-    (function () {
+    (()=> {
       const o = new Option(
         '--of, --output-format <format>',
         'Which output format to use.'
@@ -202,7 +203,7 @@ function makeCommand (process_: NodeJS.Process): Command {
       '--mc-type <type>',
       'Type of the main component.'
     ).choices(
-      // Object.values(Enums.ComponentType) -- use all possible
+      // Object.values(Enums.ComponentType) -- use all possible values
       [ // for the NPM context only the following make sense:
         Enums.ComponentType.Application,
         Enums.ComponentType.Firmware,
@@ -217,9 +218,7 @@ function makeCommand (process_: NodeJS.Process): Command {
       'Increase the verbosity of messages.\n' +
       'Use multiple times to increase the verbosity even more.'
     ).argParser<number>(
-      function (_: any, previous: number): number {
-        return previous + 1
-      }
+      (_, previous) => previous + 1
     ).default(0)
   ).addArgument(
     new Argument(
