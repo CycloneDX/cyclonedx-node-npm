@@ -17,16 +17,16 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { existsSync, mkdirSync, openSync } from 'node:fs'
-import { dirname, resolve } from 'node:path'
+import {existsSync, mkdirSync, openSync} from 'node:fs'
+import {dirname, resolve} from 'node:path'
 
-import { Builders, Enums, Factories, Serialize, Spec, Utils,Validation } from '@cyclonedx/cyclonedx-library'
-import { Argument, Command, Option } from 'commander'
+import {Builders, Enums, Factories, Serialize, Spec, Utils, Validation} from '@cyclonedx/cyclonedx-library'
+import {Argument, Command, Option} from 'commander'
 
-import { loadJsonFile, type Version, versionCompare, versionTuple, writeAllSync } from './_helpers'
-import { BomBuilder, TreeBuilder } from './builders'
-import { makeConsoleLogger } from './logger'
-import { NpmRunner } from './npmRunner'
+import {loadJsonFile, type Version, versionCompare, versionTuple, writeAllSync} from './_helpers'
+import {BomBuilder, TreeBuilder} from './builders'
+import {makeConsoleLogger} from './logger'
+import {NpmRunner} from './npmRunner'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -60,7 +60,7 @@ interface CommandOptions {
   verbose: number
 }
 
-function makeCommand (process_: NodeJS.Process): Command {
+function makeCommand(process_: NodeJS.Process): Command {
   return new Command(
     /* auto-set the name */
   ).description(
@@ -162,7 +162,7 @@ function makeCommand (process_: NodeJS.Process): Command {
       'BOM_REPRODUCIBLE'
     )
   ).addOption(
-    (()=> {
+    (() => {
       const o = new Option(
         '--of, --output-format <format>',
         'Which output format to use.'
@@ -209,9 +209,7 @@ function makeCommand (process_: NodeJS.Process): Command {
         Enums.ComponentType.Firmware,
         Enums.ComponentType.Library
       ].sort()
-    ).default(
-      Enums.ComponentType.Application
-    )
+    ).default(Enums.ComponentType.Application)
   ).addOption(
     new Option(
       '-v, --verbose',
@@ -246,7 +244,7 @@ const enum ExitCode {
 const npmMinVersion: Version = Object.freeze([9, 0, 0])
 
 /* eslint-disable-next-line complexity -- ack */
-export async function run (process_: NodeJS.Process): Promise<number> {
+export async function run(process_: NodeJS.Process): Promise<number> {
   process_.title = 'cyclonedx-node-npm' /* eslint-disable-line  no-param-reassign -- ack */
 
   const program = makeCommand(process_)
@@ -257,7 +255,7 @@ export async function run (process_: NodeJS.Process): Promise<number> {
   myConsole.debug('DEBUG | options: %j', options)
 
   const npmRunner = new NpmRunner(process_, myConsole)
-  const npmVersion = npmRunner.getVersion({ env: process_.env })
+  const npmVersion = npmRunner.getVersion({env: process_.env})
   if (versionCompare(versionTuple(npmVersion), npmMinVersion) < 0) {
     throw new RangeError('Unsupported NPM version. ' +
       `Expected >= ${npmMinVersion.join('.')}, got ${npmVersion}`)
@@ -391,7 +389,7 @@ export async function run (process_: NodeJS.Process): Promise<number> {
   const directory = dirname(options.outputFile)
   if (!existsSync(directory)) {
     myConsole.info('INFO  | creating directory', directory)
-    mkdirSync(directory, { recursive: true })
+    mkdirSync(directory, {recursive: true})
   }
   myConsole.log('LOG   | writing BOM to', options.outputFile)
   const written = await writeAllSync(
