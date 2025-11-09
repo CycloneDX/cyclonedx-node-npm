@@ -250,7 +250,7 @@ export async function run(process_: NodeJS.Process): Promise<number> {
   const program = makeCommand(process_)
   program.parse(process_.argv)
 
-  const options: CommandOptions = program.opts()
+  const options: Readonly<CommandOptions> = program.opts()
   const myConsole = makeConsoleLogger(process_, options.verbose)
   myConsole.debug('DEBUG | options: %j', options)
   myConsole.debug('DEBUG | args: %j', program.args)
