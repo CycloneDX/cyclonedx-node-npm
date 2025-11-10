@@ -21,12 +21,6 @@ import { readFileSync, writeSync } from 'node:fs'
 
 import normalizePackageData from 'normalize-package-data'
 
-export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
-  ? structuredClone
-  : function <T>(value: T): T {
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
-    return JSON.parse(JSON.stringify(value)) as T
-  }
 
 export function loadJsonFile (path: string): any {
   return JSON.parse(readFileSync(path, 'utf8'))
