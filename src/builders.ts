@@ -76,26 +76,26 @@ interface PackageData {
 }
 
 export class BomBuilder {
-  npmRunner: NpmRunner
-  componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
-  leGatherer: Utils.LicenseUtility.LicenseEvidenceGatherer
-  treeBuilder: TreeBuilder
-  purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
+  readonly npmRunner: NpmRunner
+  readonly componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
+  readonly leGatherer: Utils.LicenseUtility.LicenseEvidenceGatherer
+  readonly treeBuilder: TreeBuilder
+  readonly purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
 
-  ignoreNpmErrors: boolean
+  readonly ignoreNpmErrors: boolean
 
-  metaComponentType: Enums.ComponentType
-  packageLockOnly: boolean
-  omitDependencyTypes: Set<OmittableDependencyTypes>
-  reproducible: boolean
-  flattenComponents: boolean
-  shortPURLs: boolean
-  gatherLicenseTexts: boolean
-  workspace: string[]
-  includeWorkspaceRoot?: boolean
-  workspaces?: boolean
+  readonly metaComponentType: Enums.ComponentType
+  readonly packageLockOnly: boolean
+  readonly omitDependencyTypes: Set<OmittableDependencyTypes>
+  readonly reproducible: boolean
+  readonly flattenComponents: boolean
+  readonly shortPURLs: boolean
+  readonly gatherLicenseTexts: boolean
+  readonly workspace: string[]
+  readonly includeWorkspaceRoot?: boolean
+  readonly workspaces?: boolean
 
-  console: Console
+  readonly console: Console
 
 
   /* eslint-disable-next-line @typescript-eslint/max-params -- ack */

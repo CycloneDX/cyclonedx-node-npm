@@ -17,16 +17,16 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { existsSync, mkdirSync, openSync } from 'node:fs'
-import { dirname, resolve } from 'node:path'
+import {existsSync, mkdirSync, openSync} from 'node:fs'
+import {dirname, resolve} from 'node:path'
 
-import { Builders, Enums, Factories, Serialize, Spec, Utils,Validation } from '@cyclonedx/cyclonedx-library'
-import { Argument, Command, Option } from 'commander'
+import {Builders, Enums, Factories, Serialize, Spec, Utils, Validation} from '@cyclonedx/cyclonedx-library'
+import {Argument, Command, Option} from 'commander'
 
-import { loadJsonFile, type Version, versionCompare, versionTuple, writeAllSync } from './_helpers'
-import { BomBuilder, TreeBuilder } from './builders'
-import { makeConsoleLogger } from './logger'
-import { NpmRunner } from './npmRunner'
+import {loadJsonFile, type Version, versionCompare, versionTuple, writeAllSync} from './_helpers'
+import {BomBuilder, TreeBuilder} from './builders'
+import {makeConsoleLogger} from './logger'
+import {NpmRunner} from './npmRunner'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -60,13 +60,18 @@ interface CommandOptions {
   verbose: number
 }
 
-function makeCommand (process_: NodeJS.Process): Command {
+function makeCommand(process_: NodeJS.Process): Command {
   return new Command(
+    /* auto-set the name */
   ).description(
     'Create CycloneDX Software Bill of Materials (SBOM) from Node.js NPM projects.'
   ).usage(
     // Need to add the `[--]` manually, to indicate how to stop a variadic option.
     '[options] [--] [<package-manifest>]'
+  ).version(
+    // that is supposed to be the last option in the list on the help page.
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion, @typescript-eslint/no-unsafe-member-access -- ack */
+    loadJsonFile(resolve(module.path, '..', 'package.json')).version as string
   ).addOption(
     new Option(
       '--ignore-npm-errors',
@@ -161,7 +166,7 @@ function makeCommand (process_: NodeJS.Process): Command {
       'BOM_REPRODUCIBLE'
     )
   ).addOption(
-    (function () {
+    (() => {
       const o = new Option(
         '--of, --output-format <format>',
         'Which output format to use.'
@@ -202,24 +207,20 @@ function makeCommand (process_: NodeJS.Process): Command {
       '--mc-type <type>',
       'Type of the main component.'
     ).choices(
-      // Object.values(Enums.ComponentType) -- use all possible
+      // Object.values(Enums.ComponentType) -- use all possible values
       [ // for the NPM context only the following make sense:
         Enums.ComponentType.Application,
         Enums.ComponentType.Firmware,
         Enums.ComponentType.Library
       ].sort()
-    ).default(
-      Enums.ComponentType.Application
-    )
+    ).default(Enums.ComponentType.Application)
   ).addOption(
     new Option(
       '-v, --verbose',
       'Increase the verbosity of messages.\n' +
       'Use multiple times to increase the verbosity even more.'
     ).argParser<number>(
-      function (_: any, previous: number): number {
-        return previous + 1
-      }
+      (_, previous) => previous + 1
     ).default(0)
   ).addArgument(
     new Argument(
@@ -229,10 +230,6 @@ function makeCommand (process_: NodeJS.Process): Command {
       'package.json',
       '"package.json" file in current working directory'
     )
-  ).version(
-    // that is supposed to be the last option in the list on the help page.
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion, @typescript-eslint/no-unsafe-member-access -- ack */
-    loadJsonFile(resolve(module.path, '..', 'package.json')).version as string
   ).allowExcessArguments(
     false
   )
@@ -247,7 +244,7 @@ const enum ExitCode {
 const npmMinVersion: Version = Object.freeze([9, 0, 0])
 
 /* eslint-disable-next-line complexity -- ack */
-export async function run (process_: NodeJS.Process): Promise<number> {
+export async function run(process_: NodeJS.Process): Promise<number> {
   process_.title = 'cyclonedx-node-npm' /* eslint-disable-line  no-param-reassign -- ack */
 
   const program = makeCommand(process_)
@@ -256,9 +253,10 @@ export async function run (process_: NodeJS.Process): Promise<number> {
   const options: CommandOptions = program.opts()
   const myConsole = makeConsoleLogger(process_, options.verbose)
   myConsole.debug('DEBUG | options: %j', options)
+  myConsole.debug('DEBUG | args: %j', program.args)
 
   const npmRunner = new NpmRunner(process_, myConsole)
-  const npmVersion = npmRunner.getVersion({ env: process_.env })
+  const npmVersion = npmRunner.getVersion({env: process_.env})
   if (versionCompare(versionTuple(npmVersion), npmMinVersion) < 0) {
     throw new RangeError('Unsupported NPM version. ' +
       `Expected >= ${npmMinVersion.join('.')}, got ${npmVersion}`)
@@ -397,7 +395,7 @@ export async function run (process_: NodeJS.Process): Promise<number> {
     const outputFDir = dirname(outputFPn)
     if (!existsSync(outputFDir)) {
       myConsole.info('INFO  | creating directory', outputFDir)
-      mkdirSync(outputFDir, { recursive: true })
+      mkdirSync(outputFDir, {recursive: true})
     }
     outputFD = openSync(outputFPn, 'w')
   }
