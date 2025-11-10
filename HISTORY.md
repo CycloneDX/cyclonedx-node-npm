@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Fixed
+  * Create output dir properly if needed (via [#1377])
+
+[#1377]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1377
+
 ## 4.1.0 - 2025-10-29
 
 * Added
