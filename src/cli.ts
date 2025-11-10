@@ -401,7 +401,7 @@ export async function run(process_: NodeJS.Process): Promise<number> {
   }
   myConsole.log('LOG   | writing BOM to: %s', options.outputFile)
   const written = await writeAllSync(outputFD, serialized)
-  myConsole.info('INFO  | wrote %d bytes to: %s', written, options.outputFile)
+  myConsole.info('INFO  | wrote %d bytes to %s', written, options.outputFile)
 
   return written > 0
     ? ExitCode.SUCCESS
