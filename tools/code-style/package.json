@@ -15,10 +15,10 @@
     "eslint-plugin-n": "17.23.1",
     "eslint-plugin-promise": "7.2.1",
     "eslint-plugin-simple-import-sort": "12.1.1",
-    "eslint-plugin-tsdoc": "0.4.0",
+    "eslint-plugin-tsdoc": "0.5.0",
     "globals": "^16.0.0",
     "neostandard": "0.12.2",
-    "typescript-eslint": "8.46.3"
+    "typescript-eslint": "8.46.4"
   },
   "scripts": {
     "cs-fix": "npm exec -- eslint --fix ."
