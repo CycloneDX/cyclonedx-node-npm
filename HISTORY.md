@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 4.1.1 - 2025-11-11
+
 * Fixed
   * Create output dir properly if needed (via [#1377])
 
