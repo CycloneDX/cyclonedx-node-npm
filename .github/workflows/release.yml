@@ -1,6 +1,7 @@
 # docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
 name: Release
+run-name: Release ${{ inputs.newversion }} ${{ inputs.prerelease == 'true' && '(prerelease)' || '' }}
 
 on:
   workflow_dispatch:
