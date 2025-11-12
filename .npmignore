@@ -149,6 +149,13 @@ dist
 /tsconfig.json
 /tsconfig.*.json
 
+# ignore QA-tools and their configs
+/tools/
+/eslint.*
+/knip.*
+/tsdoc.*
+/typedoc.*
+
 /test/
 /tests/
 *.spec.*
