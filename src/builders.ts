@@ -345,7 +345,7 @@ export class BomBuilder {
   private gatherPackages(data: any): Map<PackagePath, PackageData> {
     const packages = new Map<PackagePath, PackageData>()
     const todo: Array<typeof data> = [data]
-    let w: any = undefined
+    let w // eslint-disable-line @typescript-eslint/init-declarations -- ack
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
     while ((w = todo.shift()) !== undefined) {
       /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- ack */
