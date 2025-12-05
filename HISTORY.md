@@ -6,10 +6,14 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Runtime Dependencies
+  * Support `xmlbuilder2@^3.0.2||^4.0.3`, was `@^3.0.2` ([#1392] via [#1390])
 * Style
   * Applied latest code standards (via [#1388])
 
 [#1388]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1388
+[#1390]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1390
+[#1392]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1392
 
 ## 4.1.1 - 2025-11-11
 
