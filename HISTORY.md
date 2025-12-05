@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Runtime Dependencies
-  * Support `xmlbuilder2@^3.0.2||^4.0.3`, was `@^3.0.2` ([#1392] via [#1390])
+  * Support runtime-dependency `xmlbuilder2@^3.0.2||^4.0.3`, was `@^3.0.2` ([#1392] via [#1390])
 * Style
   * Applied latest code standards (via [#1388])
 
