@@ -72,7 +72,7 @@
     "@cyclonedx/cyclonedx-library": "^8.4.0||^9.0.0",
     "commander": "^14.0.0",
     "normalize-package-data": "^7.0.0 || ^8.0.0",
-    "xmlbuilder2": "^4.0.1"
+    "xmlbuilder2": "^3.0.2 || ^4.0.3"
   },
   "optionalDependencies": {
     "ajv": "^8.12.0",
