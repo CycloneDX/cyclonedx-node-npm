@@ -111,7 +111,7 @@ jobs:
       - name: Artifact RESULTS
         # see https://github.com/actions/upload-artifact
         if: ${{ ! cancelled() }}
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: '${{ env.RESULTS_ARTIFACT }}_${{ matrix.subject }}${{ matrix.additional_npm-ls_args }}_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}'
           path: '${{ env.DEMO_ROOT_DIR}}/*/${{ env.RESULTS_DIR }}'
@@ -133,7 +133,7 @@ jobs:
           path: '${{ env.DEMO_ROOT_DIR}}'
       - name: Artifact RESULTS
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: '${{ env.RESULTS_ARTIFACT }}-combined'
           path: '${{ env.DEMO_ROOT_DIR}}'
