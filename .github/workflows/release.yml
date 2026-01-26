@@ -35,7 +35,7 @@ env:
   REPORTS_DIR: CI_reports
   PACKED_DIR: CI_packed
   PACKED_ARTIFACT: packed
-  NODE_ACTIVE_LTS: "22"  # https://nodejs.org/en/about/releases/
+  NODE_ACTIVE_LTS: "24"  # https://nodejs.org/en/about/releases/
 
 jobs:
   bump:

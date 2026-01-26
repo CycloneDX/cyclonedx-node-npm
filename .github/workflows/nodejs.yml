@@ -21,7 +21,7 @@ concurrency:
 permissions: {}
 
 env:
-  NODE_ACTIVE_LTS: '22'  # https://nodejs.org/en/about/releases/
+  NODE_ACTIVE_LTS: '24'  # https://nodejs.org/en/about/releases/
   DIST_DIR: dist
   REPORTS_DIR: "CI_reports"
   TESTS_REPORTS_ARTIFACT: tests-reports
@@ -129,8 +129,9 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '24'      # Current
-          - '22'      # active LTS
+          - '25'      # Current
+          - '24'      # active LTS
+          - '22'
           - '20'
           - '20.18.0' # lowest supported
         os:
