@@ -77,9 +77,12 @@ interface PackageData {
 
 export class BomBuilder {
   readonly npmRunner: NpmRunner
+  /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
   readonly componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
+  /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
   readonly leGatherer: Utils.LicenseUtility.LicenseEvidenceGatherer
   readonly treeBuilder: TreeBuilder
+  /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
   readonly purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
 
   readonly ignoreNpmErrors: boolean
@@ -237,11 +240,11 @@ export class BomBuilder {
     }
 
     // do not depend on `node:path.relative()` -- this would be runtime-dependent, not input-dependent
-    /* eslint-disable @typescript-eslint/unbound-method -- ack */
+
     const [relativePath, dirSep, dirSepRE] = rootPath.startsWith('/')
       ? [path.posix.relative, '/', /\//g]
       : [path.win32.relative, '\\', /\\/g]
-    /* eslint-enable @typescript-eslint/unbound-method */
+
     allComponents.forEach((c, p) => {
       /* eslint-disable no-param-reassign -- intended */
       c.purl = this.makePurl(c)
@@ -275,6 +278,7 @@ export class BomBuilder {
         )
       )
     } else {
+      /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
       bom.serialNumber = Utils.BomUtility.randomSerialNumber()
       bom.metadata.timestamp = new Date()
     }
@@ -295,6 +299,7 @@ export class BomBuilder {
     // endregion components
 
     // region dependency graph
+    /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
     this.setNestedBomRefs(allComponents, pTree)
     this.makeDependencyGraph(allComponents, allPackages)
     // endregion dependency graph
@@ -326,6 +331,7 @@ export class BomBuilder {
       const bRefD = parts.join('')
       const bRefC = bRefCs[bRefD] = (bRefCs[bRefD] ?? 0) +1 /* eslint-disable-line no-multi-assign -- ack */
       component.bomRef.value = `${pref}${bRefD}${bRefC > 1 ? '#' + bRefC : ''}`
+      /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
       this.setNestedBomRefs(allComponents, cTree, `${component.bomRef.value}|`)
     }
   }
@@ -534,6 +540,7 @@ export class BomBuilder {
       try {
         // actually not the hash of the file, but more of an integrity-check -- lets use it anyway.
         // see https://blog.npmjs.org/post/172999548390/new-pgp-machinery
+        /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
         rref.hashes.set(...Utils.NpmjsUtility.parsePackageIntegrity(integrity))
         rref.comment += ' and property "integrity"'
       } catch { /* pass */ }
