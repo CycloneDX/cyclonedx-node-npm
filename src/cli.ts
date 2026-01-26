@@ -307,12 +307,17 @@ export async function run(process_: NodeJS.Process): Promise<number> {
   myConsole.log('LOG   | gathering BOM data ...')
   const bom = new BomBuilder(
     npmRunner,
+    /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
     new Builders.FromNodePackageJson.ComponentBuilder(
+      /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
       new Factories.FromNodePackageJson.ExternalReferenceFactory(),
+      /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
       new Factories.LicenseFactory()
     ),
     new TreeBuilder(),
+    /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
     new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
+    /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
     new Utils.LicenseUtility.LicenseEvidenceGatherer(),
     {
       ignoreNpmErrors: options.ignoreNpmErrors,
