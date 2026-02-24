@@ -22,17 +22,29 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { existsSync } from 'node:fs'
 import path from 'node:path'
 
-import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
+import {
+  Builders as FromNodePackageJsonBuilders,
+  Utils as FromNodePackageJsonUtils
+} from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
+import { Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
+import { Utils as BomUtils } from '@cyclonedx/cyclonedx-library/Contrib/Bom'
+import { ComponentType, LicenseAcknowledgement, ComponentScope, ExternalReferenceType } from '@cyclonedx/cyclonedx-library/Enums'
+import { Bom, Property, Component, ComponentRepository, NamedLicense, ComponentEvidence, ExternalReference } from '@cyclonedx/cyclonedx-library/Models'
+import type { License } from '@cyclonedx/cyclonedx-library/Models'
+import type { PackageURL } from "packageurl-js"
 
 import {
   isString,
   iterableFilter, iterableMap,
   loadJsonFile, normalizePackageManifest,
+  resolvedIgnoreMatcher,
   setDifference,
   tryRemoveSecretsFromUrl
 } from './_helpers'
 import type { NpmRunner } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
+import type { PackagePath, PackageData } from "./types"
+import type {PackageUrlFactory} from "./factories"
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
@@ -50,44 +62,16 @@ interface BomBuilderOptions {
   workspaces?: BomBuilder['workspaces']
 }
 
-// is the dir/path in which a package resides
-type PackagePath = string
-interface PackageData {
-  name: string
-  /** !!! local packages might not have a version */
-  version?: any
-  funding?: any
-  license?: any
-  /** where was the package downloaded from? */
-  resolved?: string
-  /** kind-of checksum of that resolved version */
-  integrity?: string
-  /** is (transitive) optional */
-  optional?: boolean
-  /** is dev-dependency */
-  dev?: boolean
-  /*** is dev-dependency AND is (transitive) optional */
-  devOptional?: boolean
-  /** is not required by any dependency */
-  extraneous?: boolean
-  /** is bundled with another package */
-  inBundle?: boolean
-  dependencies: Set<PackagePath>
-}
-
 export class BomBuilder {
   readonly npmRunner: NpmRunner
-  /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
-  readonly componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
-  /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
-  readonly leGatherer: Utils.LicenseUtility.LicenseEvidenceGatherer
+  readonly componentBuilder: FromNodePackageJsonBuilders.ComponentBuilder
+  readonly leGatherer: LicenseUtils.LicenseEvidenceGatherer
   readonly treeBuilder: TreeBuilder
-  /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
-  readonly purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
+  readonly purlFactory: PackageUrlFactory
 
   readonly ignoreNpmErrors: boolean
 
-  readonly metaComponentType: Enums.ComponentType
+  readonly metaComponentType: ComponentType
   readonly packageLockOnly: boolean
   readonly omitDependencyTypes: Set<OmittableDependencyTypes>
   readonly reproducible: boolean
@@ -118,7 +102,7 @@ export class BomBuilder {
     this.leGatherer = leGatherer
 
     this.ignoreNpmErrors = options.ignoreNpmErrors ?? false
-    this.metaComponentType = options.metaComponentType ?? Enums.ComponentType.Library
+    this.metaComponentType = options.metaComponentType ?? ComponentType.Library
     this.packageLockOnly = options.packageLockOnly ?? false
     this.omitDependencyTypes = new Set(options.omitDependencyTypes ?? [])
     this.reproducible = options.reproducible ?? false
@@ -132,7 +116,7 @@ export class BomBuilder {
     this.console = console_
   }
 
-  buildFromProjectDir (projectDir: string, process_: NodeJS.Process): Models.Bom {
+  buildFromProjectDir (projectDir: string, process_: NodeJS.Process): Bom {
     return this.buildFromNpmLs(
       this.fetchNpmLs(projectDir, process_),
       this.npmRunner.getVersion({ env: process_.env })
@@ -213,7 +197,7 @@ export class BomBuilder {
     }
   }
 
-  private buildFromNpmLs (data: any, npmVersion: string): Models.Bom {
+  private buildFromNpmLs (data: any, npmVersion: string): Bom {
     this.console.info('INFO  | building BOM ...')
 
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment -- ack */
@@ -228,14 +212,15 @@ export class BomBuilder {
       ([p, packageData]) => [p, this.makeComponentWithPackageData(packageData, p)]
     ))
     /* eslint-disable-next-line @typescript-eslint/init-declarations -- ack */
-    let rootComponent
+    let rootComponent: Component
     try {
       rootComponent = this.makeComponentFromPackagePath(rootPath, this.metaComponentType)
       allComponents.set(rootPath, rootComponent)
     } catch (err) {
       this.console.debug('DEBUG | failed make rootComponent, fallback to existing one.', err)
-      rootComponent = allComponents.get(rootPath)
-      if ( rootComponent === undefined) { throw new TypeError('missing rootComponent', {cause: err}) }
+      const _rootComponent = allComponents.get(rootPath)
+      if ( _rootComponent === undefined) { throw new TypeError('missing rootComponent', {cause: err}) }
+      rootComponent = _rootComponent
       rootComponent.type = this.metaComponentType
     }
 
@@ -246,9 +231,7 @@ export class BomBuilder {
       : [path.win32.relative, '\\', /\\/g]
 
     allComponents.forEach((c, p) => {
-      /* eslint-disable no-param-reassign -- intended */
-      c.purl = this.makePurl(c)
-      c.properties.add(new Models.Property(
+      c.properties.add(new Property(
         PropertyNames.PackageInstallPath,
         relativePath(rootPath, p).replace(dirSepRE, '/')
       ))
@@ -257,12 +240,12 @@ export class BomBuilder {
 
     const pTree = this.treeBuilder.fromPaths(rootPath,allComponents.keys(), dirSep)
 
-    const bom = new Models.Bom()
+    const bom = new Bom()
 
     // region metadata
     bom.metadata.component = rootComponent
-    bom.metadata.tools.components.add(new Models.Component(
-      Enums.ComponentType.Application, 'npm', {
+    bom.metadata.tools.components.add(new Component(
+      ComponentType.Application, 'npm', {
         version: npmVersion
         // omit `group` and `externalReferences`, because we cannot be sure about the used tool's actual origin
         // omit `hashes`, because unfortunately there is no agreed process of generating them
@@ -272,14 +255,13 @@ export class BomBuilder {
     }
     if (this.reproducible) {
       bom.metadata.properties.add(
-        new Models.Property(
+        new Property(
           PropertyNames.BomReproducible,
           PropertyValueBool.True
         )
       )
     } else {
-      /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
-      bom.serialNumber = Utils.BomUtility.randomSerialNumber()
+      bom.serialNumber = BomUtils.randomSerialNumber()
       bom.metadata.timestamp = new Date()
     }
     // endregion metadata
@@ -310,7 +292,7 @@ export class BomBuilder {
   /**
    * @deprecated - use PackagePath-like for reproducible BomRef values
    */
-  private setNestedBomRefs (allComponents: Map<PackagePath, Models.Component>, tree: PTree, pref = ''): void {
+  private setNestedBomRefs (allComponents: Map<PackagePath, Component>, tree: PTree, pref = ''): void {
     // prefix everything - also direct dependencies and such!
     // it could be that an inherited/outside/external dependency has the same bomRef otherwise ...
     const bRefCs: Record<PackagePath, number> = {}
@@ -336,8 +318,8 @@ export class BomBuilder {
     }
   }
 
-  private nestComponents (allComponents: Map<PackagePath, Models.Component>, tree: PTree): Models.ComponentRepository {
-    const children = new Models.ComponentRepository()
+  private nestComponents (allComponents: Map<PackagePath, Component>, tree: PTree): ComponentRepository {
+    const children = new ComponentRepository()
     for (const [p, pTree] of tree) {
       const component = allComponents.get(p)
       if (component === undefined) { throw new TypeError(`missing component for ${p}`)}
@@ -387,7 +369,7 @@ export class BomBuilder {
     return packages
   }
 
-  private * fetchLicenseEvidence (dirPath: string): Generator<Models.License> {
+  private * fetchLicenseEvidence (dirPath: string): Generator<License> {
     const files = this.leGatherer.getFileAttachments(
       dirPath,
       error => {
@@ -398,7 +380,7 @@ export class BomBuilder {
     )
     try {
       for (const {file, text} of files) {
-        yield new Models.NamedLicense(`file: ${file}`, {text})
+        yield new NamedLicense(`file: ${file}`, {text})
       }
     }
     /* c8 ignore next 3 */
@@ -408,7 +390,7 @@ export class BomBuilder {
     }
   }
 
-  private makeComponentFromPackagePath(ppath: PackagePath, type: Enums.ComponentType): Models.Component {
+  private makeComponentFromPackagePath(ppath: PackagePath, type: ComponentType): Component {
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
     const manifest = loadJsonFile(path.join(ppath, 'package.json'))
     normalizePackageManifest(manifest)
@@ -420,22 +402,24 @@ export class BomBuilder {
 
     component.licenses.forEach(l => {
       /* eslint-disable no-param-reassign -- intended */
-      l.acknowledgement = Enums.LicenseAcknowledgement.Declared
+      l.acknowledgement = LicenseAcknowledgement.Declared
       /* eslint-enable no-param-reassign */
    })
 
    if ( this.gatherLicenseTexts ) {
-     component.evidence = new Models.ComponentEvidence()
+     component.evidence = new ComponentEvidence()
      for (const le of this.fetchLicenseEvidence(ppath) ) {
        component.evidence.licenses.add(le)
      }
    }
 
+   component.purl = this.finalizePurl(this.purlFactory.makeFromPackageJson(manifest))
+
    // region properties
 
    if (manifest.private === true) {
      component.properties.add(
-       new Models.Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
+       new Property(PropertyNames.PackagePrivate, PropertyValueBool.True)
      )
    }
 
@@ -445,11 +429,11 @@ export class BomBuilder {
  }
 
  /* eslint-disable-next-line complexity -- ack */
-  private makeComponentWithPackageData(data: PackageData, ppath: PackagePath, type: Enums.ComponentType = Enums.ComponentType.Library): Models.Component {
+  private makeComponentWithPackageData(data: PackageData, ppath: PackagePath, type: ComponentType = ComponentType.Library): Component {
     const isOptional = data.optional === true || data.devOptional === false
     let isExcluded= false
 
-    let component: Models.Component | undefined = undefined
+    let component: Component | undefined = undefined
     if (!this.packageLockOnly) {
       try {
         component = this.makeComponentFromPackagePath(ppath, type)
@@ -480,31 +464,33 @@ export class BomBuilder {
     } else {
       component.licenses.forEach(l => {
         /* eslint-disable no-param-reassign -- intended */
-        l.acknowledgement = Enums.LicenseAcknowledgement.Declared
+        l.acknowledgement = LicenseAcknowledgement.Declared
         /* eslint-enable no-param-reassign */
      })
+
+      component.purl =  this.finalizePurl(this.purlFactory.makeFromPackageData(data))
    }
 
    if (isExcluded) {
-     component.scope = Enums.ComponentScope.Excluded
+     component.scope = ComponentScope.Excluded
    } else if (isOptional) {
-     component.scope = Enums.ComponentScope.Optional
+     component.scope = ComponentScope.Optional
    }
 
    // region properties
    if (data.dev === true || data.devOptional ===  true) {
      component.properties.add(
-       new Models.Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
+       new Property(PropertyNames.PackageDevelopment, PropertyValueBool.True)
      )
    }
    if (data.extraneous === true) {
      component.properties.add(
-       new Models.Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
+       new Property(PropertyNames.PackageExtraneous, PropertyValueBool.True)
      )
    }
    if (data.inBundle === true) {
      component.properties.add(
-       new Models.Property(PropertyNames.PackageBundled, PropertyValueBool.True)
+       new Property(PropertyNames.PackageBundled, PropertyValueBool.True)
      )
    }
    // endregion properties
@@ -519,52 +505,39 @@ export class BomBuilder {
    return component
  }
 
- /**
-  * Ignore pattern for `resolved`.
-  * - ignore: well, just ignore it ... i guess.
-  * - file: local dist cannot be shipped and therefore should be ignored.
-  */
-  private readonly resolvedRE_ignore = /^(?:ignore|file):/i
-
-  private makeExtRefDistFromPackageData (data: PackageData): Models.ExternalReference | undefined {
+  private makeExtRefDistFromPackageData (data: PackageData): ExternalReference | undefined {
     const { resolved, integrity } = data
-    if (!isString(resolved) || this.resolvedRE_ignore.test(resolved)) {
+    if (!isString(resolved) || resolvedIgnoreMatcher.test(resolved)) {
       return undefined
     }
-    const rref = new Models.ExternalReference(
+    const rref = new ExternalReference(
       tryRemoveSecretsFromUrl(resolved),
-      Enums.ExternalReferenceType.Distribution,
+      ExternalReferenceType.Distribution,
       { comment: 'as detected from npm-ls property "resolved"' }
     )
     if (isString(integrity)) {
       try {
         // actually not the hash of the file, but more of an integrity-check -- lets use it anyway.
         // see https://blog.npmjs.org/post/172999548390/new-pgp-machinery
-        /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
-        rref.hashes.set(...Utils.NpmjsUtility.parsePackageIntegrity(integrity))
+        rref.hashes.set(...FromNodePackageJsonUtils.parsePackageIntegrity(integrity))
         rref.comment += ' and property "integrity"'
       } catch { /* pass */ }
     }
     return rref
   }
 
-  private makePurl (component: Models.Component): ReturnType<BomBuilder['purlFactory']['makeFromComponent']> {
-    const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
-    if (purl === undefined) {
-      return undefined
-    }
-
+  private finalizePurl (purl: PackageURL|undefined): string|undefined {
+    if (purl === undefined) { return purl }
     if (this.shortPURLs) {
       purl.qualifiers = undefined
       purl.subpath = undefined
     }
-
-    return purl
+    return purl.toString()
   }
 
-  private * makeToolCs (): Generator<Models.Component> {
-    const packageJsonPaths: Array<[string, Enums.ComponentType]> = [
-      [path.resolve(module.path, '..', 'package.json'), Enums.ComponentType.Application]
+  private * makeToolCs (): Generator<Component> {
+    const packageJsonPaths: Array<[string, ComponentType]> = [
+      [path.resolve(module.path, '..', 'package.json'), ComponentType.Application]
     ]
     const libs = [
       '@cyclonedx/cyclonedx-library'
@@ -577,7 +550,7 @@ export class BomBuilder {
       for (const nodeModulePath of nodeModulePaths) {
         const packageJsonPath = path.resolve(nodeModulePath, ...lib, 'package.json')
         if (existsSync(packageJsonPath)) {
-          packageJsonPaths.push([packageJsonPath, Enums.ComponentType.Library])
+          packageJsonPaths.push([packageJsonPath, ComponentType.Library])
           continue libsLoop
         }
       }
@@ -595,7 +568,7 @@ export class BomBuilder {
     }
   }
 
-  private makeDependencyGraph (allComponents: Map<PackagePath, Models.Component>, allPackages: Map<PackagePath, PackageData>): void {
+  private makeDependencyGraph (allComponents: Map<PackagePath, Component>, allPackages: Map<PackagePath, PackageData>): void {
     for (const [p, comp] of allComponents) {
       const pkg = allPackages.get(p)
       if (pkg === undefined) { throw new TypeError(`missing pkg for ${p}`) }
@@ -609,8 +582,8 @@ export class BomBuilder {
 
 }
 
-class DummyComponent extends Models.Component {
-  constructor(type: Models.Component['type'], name: Models.Component['name']) {
+class DummyComponent extends Component {
+  constructor(type: Component['type'], name: Component['name']) {
     super(type, `DummyComponent.${name}`, {
       bomRef: `DummyComponent.${name}`,
       description: `This is a dummy component "${name}" that fills the gap where the actual built failed.`
