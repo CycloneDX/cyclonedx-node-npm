@@ -22,8 +22,8 @@ import type normalizePackageData from "normalize-package-data"
 import type { PurlQualifiers } from "packageurl-js"
 import { PackageURL, PurlQualifierNames } from "packageurl-js"
 
-import type {PackageData} from "./types"
 import {resolvedIgnoreMatcher} from "./_helpers";
+import type {PackageData} from "./_types"
 
 
 export class PackageUrlFactory {

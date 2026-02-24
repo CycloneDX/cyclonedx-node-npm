@@ -20,28 +20,22 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import {existsSync, mkdirSync, openSync} from 'node:fs'
 import {dirname, resolve} from 'node:path'
 
-import {
-  Builders as FromNodePackageJsonBuilders,
-  Factories as FromNodePackageJsonFactories
-} from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
-import {
-  Factories as LicenseFactories,
-  Utils as LicenseUtils
-} from '@cyclonedx/cyclonedx-library/Contrib/License'
+import { Builders as FromNodePackageJsonBuilders, Factories as FromNodePackageJsonFactories } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
+import { Factories as LicenseFactories, Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
 import {ComponentType} from '@cyclonedx/cyclonedx-library/Enums'
-import {Version as SpecVersion, SpecVersionDict} from '@cyclonedx/cyclonedx-library/Spec'
-import { JsonSerializer, XmlSerializer, JSON as SerializeJSON, XML as SerializeXML } from '@cyclonedx/cyclonedx-library/Serialize'
-import { JsonValidator, XmlValidator, MissingOptionalDependencyError } from '@cyclonedx/cyclonedx-library/Validation'
-import type { Types as ValidationTypes } from '@cyclonedx/cyclonedx-library/Validation'
 import type { Types as SerializeTypes } from '@cyclonedx/cyclonedx-library/Serialize'
+import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
+import {SpecVersionDict, Version as SpecVersion} from '@cyclonedx/cyclonedx-library/Spec'
+import type { Types as ValidationTypes } from '@cyclonedx/cyclonedx-library/Validation'
+import { JsonValidator, MissingOptionalDependencyError, XmlValidator } from '@cyclonedx/cyclonedx-library/Validation'
 import {Argument, Command, Option} from 'commander'
 import spdxExpressionParse from "spdx-expression-parse"
 
 import {loadJsonFile, type Version, versionCompare, versionTuple, writeAllSync} from './_helpers'
 import {BomBuilder, TreeBuilder} from './builders'
+import {PackageUrlFactory} from "./factories";
 import {makeConsoleLogger} from './logger'
 import {NpmRunner} from './npmRunner'
-import {PackageUrlFactory} from "./factories";
 
 
 enum OutputFormat {

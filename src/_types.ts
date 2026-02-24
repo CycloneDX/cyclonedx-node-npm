@@ -17,11 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-
 // is the dir/path in which a package resides
 export type PackagePath = string
 
 export interface PackageData {
+  /** !!! only populated in project-root package */
   private?: boolean
   name: string
   /** !!! local packages might not have a version */

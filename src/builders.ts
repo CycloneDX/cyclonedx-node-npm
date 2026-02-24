@@ -22,15 +22,13 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { existsSync } from 'node:fs'
 import path from 'node:path'
 
-import {
-  Builders as FromNodePackageJsonBuilders,
-  Utils as FromNodePackageJsonUtils
-} from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
-import { Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
 import { Utils as BomUtils } from '@cyclonedx/cyclonedx-library/Contrib/Bom'
-import { ComponentType, LicenseAcknowledgement, ComponentScope, ExternalReferenceType } from '@cyclonedx/cyclonedx-library/Enums'
-import { Bom, Property, Component, ComponentRepository, NamedLicense, ComponentEvidence, ExternalReference } from '@cyclonedx/cyclonedx-library/Models'
+import type { Builders as FromNodePackageJsonBuilders} from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson';
+import { Utils as FromNodePackageJsonUtils } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
+import type { Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
+import { ComponentScope, ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
 import type { License } from '@cyclonedx/cyclonedx-library/Models'
+import { Bom, Component, ComponentEvidence, ComponentRepository, ExternalReference, NamedLicense, Property } from '@cyclonedx/cyclonedx-library/Models'
 import type { PackageURL } from "packageurl-js"
 
 import {
@@ -41,10 +39,11 @@ import {
   setDifference,
   tryRemoveSecretsFromUrl
 } from './_helpers'
+import type { PackageData, PackagePath } from "./_types"
+import type {PackageUrlFactory} from "./factories"
 import type { NpmRunner } from './npmRunner'
 import { PropertyNames, PropertyValueBool } from './properties'
-import type { PackagePath, PackageData } from "./types"
-import type {PackageUrlFactory} from "./factories"
+
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
@@ -235,7 +234,7 @@ export class BomBuilder {
         PropertyNames.PackageInstallPath,
         relativePath(rootPath, p).replace(dirSepRE, '/')
       ))
-      /* eslint-enable no-param-reassign */
+
     })
 
     const pTree = this.treeBuilder.fromPaths(rootPath,allComponents.keys(), dirSep)
@@ -529,8 +528,10 @@ export class BomBuilder {
   private finalizePurl (purl: PackageURL|undefined): string|undefined {
     if (purl === undefined) { return purl }
     if (this.shortPURLs) {
+      /* eslint-disable no-param-reassign -- ack */
       purl.qualifiers = undefined
       purl.subpath = undefined
+      /* eslint-enable no-param-reassign */
     }
     return purl.toString()
   }
