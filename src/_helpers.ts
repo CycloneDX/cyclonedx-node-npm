@@ -135,4 +135,6 @@ export function normalizePackageManifest (data: any): asserts data is normalizeP
  * - ignore: well, just ignore it ... i guess.
  * - file: local dist cannot be shipped and therefore should be ignored.
  */
-export const resolvedIgnoreMatcher = /^(?:ignore|file):/i
+export const npmResolvedIgnoreMatcher = /^(?:ignore|file):/i
+
+export const npmResolvedVcsMatcher = /^git(?:\+[^:]+)?:/i

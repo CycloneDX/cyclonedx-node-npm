@@ -22,7 +22,10 @@ import type normalizePackageData from "normalize-package-data"
 import type { PurlQualifiers } from "packageurl-js"
 import { PackageURL, PurlQualifierNames } from "packageurl-js"
 
-import {resolvedIgnoreMatcher} from "./_helpers";
+import {
+  isString,
+  npmResolvedIgnoreMatcher, npmResolvedVcsMatcher
+} from "./_helpers";
 import type {PackageData} from "./_types"
 
 
@@ -42,16 +45,17 @@ export class PackageUrlFactory {
       name = nameParts.join('/')
     }
 
-    const version = typeof data.version === 'string'
+    const version = isString(data.version)
       ? data.version
       : undefined
 
     const qualifiers: PurlQualifiers = {}
-    if ( typeof data.resolved === 'string'
-      && !resolvedIgnoreMatcher.test(data.resolved)
-      && !FromNodePackageJsonUtils.defaultRegistryMatcher.test(data.resolved)
-    ) {
-      qualifiers[PurlQualifierNames.DownloadUrl] = data.resolved
+    if ( isString(data.resolved) && !npmResolvedIgnoreMatcher.test(data.resolved)) {
+      if (npmResolvedVcsMatcher.test(data.resolved)) {
+        qualifiers[PurlQualifierNames.VcsUrl] = data.resolved
+      } else if (!FromNodePackageJsonUtils.defaultRegistryMatcher.test(data.resolved)) {
+        qualifiers[PurlQualifierNames.DownloadUrl] = data.resolved
+      }
     }
 
     try {
@@ -89,7 +93,7 @@ export class PackageUrlFactory {
     // docs: https://blog.npmjs.org/post/172999548390/new-pgp-machinery
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- acknowledged */
     const { tarball } = packageJson.dist ?? {}
-    if ( typeof tarball === 'string' && tarball.length > 5
+    if ( isString(tarball) && tarball.length > 5
       && !FromNodePackageJsonUtils.defaultRegistryMatcher.test(tarball)
     ) {
       qualifiers[PurlQualifierNames.DownloadUrl] = tarball
@@ -97,7 +101,7 @@ export class PackageUrlFactory {
       const url = new URL(packageJson.repository.url)
       /* @ts-expect-error -- missing type docs */
       const subdir =  packageJson.repository.directory /* eslint-disable-line @typescript-eslint/no-unsafe-assignment -- ack */
-      if ( typeof subdir === 'string' ) {
+      if ( isString(subdir) ) {
         url.hash = subdir
       }
       qualifiers[PurlQualifierNames.VcsUrl] = url.toString()

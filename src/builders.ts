@@ -35,7 +35,7 @@ import {
   isString,
   iterableFilter, iterableMap,
   loadJsonFile, normalizePackageManifest,
-  resolvedIgnoreMatcher,
+  npmResolvedIgnoreMatcher,
   setDifference,
   tryRemoveSecretsFromUrl
 } from './_helpers'
@@ -345,6 +345,7 @@ export class BomBuilder {
           dependencies: new Set<PackagePath>()
         })
       }
+      d.private ??= w.private
       d.version ??= w.version
       d.license ??= w.license
       d.resolved ??= w.resolved
@@ -448,6 +449,7 @@ export class BomBuilder {
     }
     if ( component === undefined ) {
       const manifest = {
+        private: data.private,
         name: data.name,
         /* eslint-disable @typescript-eslint/no-unsafe-assignment -- ack */
         version: data.version,
@@ -506,7 +508,7 @@ export class BomBuilder {
 
   private makeExtRefDistFromPackageData (data: PackageData): ExternalReference | undefined {
     const { resolved, integrity } = data
-    if (!isString(resolved) || resolvedIgnoreMatcher.test(resolved)) {
+    if (!isString(resolved) || npmResolvedIgnoreMatcher.test(resolved)) {
       return undefined
     }
     const rref = new ExternalReference(
