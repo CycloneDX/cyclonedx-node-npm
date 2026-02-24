@@ -47,7 +47,7 @@ export class PackageUrlFactory {
       : undefined
 
     const qualifiers: PurlQualifiers = {}
-    if ( data.resolved === 'string'
+    if ( typeof data.resolved === 'string'
       && !resolvedIgnoreMatcher.test(data.resolved)
       && !FromNodePackageJsonUtils.defaultRegistryMatcher.test(data.resolved)
     ) {
