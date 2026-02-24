@@ -6,7 +6,9 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
-TODO
+TODO (via [#1416])
+
+[#1416]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1416
 
 ## 4.1.2 - 2025-12-05
 
