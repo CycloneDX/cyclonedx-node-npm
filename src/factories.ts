@@ -98,13 +98,17 @@ export class PackageUrlFactory {
     ) {
       qualifiers[PurlQualifierNames.DownloadUrl] = tarball
     } else if ( typeof packageJson.repository === 'object' ) {
-      const url = new URL(packageJson.repository.url)
-      /* @ts-expect-error -- missing type docs */
-      const subdir =  packageJson.repository.directory /* eslint-disable-line @typescript-eslint/no-unsafe-assignment -- ack */
-      if ( isString(subdir) ) {
-        url.hash = subdir
+      try {
+        const url = new URL(packageJson.repository.url)
+        /* @ts-expect-error -- missing type docs */
+        const subdir = packageJson.repository.directory /* eslint-disable-line @typescript-eslint/no-unsafe-assignment -- ack */
+        if (isString(subdir)) {
+          url.hash = subdir
+        }
+        qualifiers[PurlQualifierNames.VcsUrl] = url.toString()
+      } catch (e) {
+        /* pass */
       }
-      qualifiers[PurlQualifierNames.VcsUrl] = url.toString()
     }
 
     try {
