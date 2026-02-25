@@ -139,6 +139,7 @@ export const npmResolvedIgnoreMatcher = /^(?:ignore|file):/i
 
 /**
  * VCS pattern for `resolved`.
- * - `^git:` & `^git+...:` & `.git$`- git
+ * - `^git:` & `^git+...:` & `*.git`- git
+ * - `^ssh:`                        - probably git
  */
-export const npmResolvedVcsMatcher = /^git(?:\+[^:]+)?:|.git$/i
+export const npmResolvedVcsMatcher = /^git(?:\+[^:]+)?:|\.git(?:#|$)|^ssh:/i
