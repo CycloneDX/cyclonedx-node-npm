@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Fixed
-  * Qualified PackageURLs
+  * Qualified PackageURLs (via [#1416])
 * Changed
   * Take care of PackageURL generation ourselves, now (via [#1416])  
     Previously, this was done at best-effort by a 3rd-party library.
