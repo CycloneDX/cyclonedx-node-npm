@@ -27,7 +27,7 @@ import type { Types as SerializeTypes } from '@cyclonedx/cyclonedx-library/Seria
 import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import {SpecVersionDict, Version as SpecVersion} from '@cyclonedx/cyclonedx-library/Spec'
 import type { Types as ValidationTypes } from '@cyclonedx/cyclonedx-library/Validation'
-import { JsonValidator, MissingOptionalDependencyError, XmlValidator } from '@cyclonedx/cyclonedx-library/Validation'
+import { JsonStrictValidator, MissingOptionalDependencyError, XmlValidator } from '@cyclonedx/cyclonedx-library/Validation'
 import {Argument, Command, Option} from 'commander'
 import spdxExpressionParse from "spdx-expression-parse"
 
@@ -356,7 +356,7 @@ export async function run(process_: NodeJS.Process): Promise<number> {
       break
     case OutputFormat.JSON:
       serializer = new JsonSerializer(new SerializeJSON.Normalize.Factory(spec))
-      validator = new JsonValidator(spec.version)
+      validator = new JsonStrictValidator(spec.version)
       break
   }
 
