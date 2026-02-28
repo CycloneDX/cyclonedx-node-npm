@@ -48,7 +48,7 @@ jobs:
         run: npm run build-dev
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
@@ -91,7 +91,7 @@ jobs:
           eslint-report: ${{ env.REPORTS_DIR }}/eslint.json
       - name: artifact eslint result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         if: ${{ failure() }}
         with:
           name: ${{ env.STANDARD_REPORTS_ARTIFACT }}
@@ -176,7 +176,7 @@ jobs:
       - name: artifact test logs
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: logs-jest_node${{ matrix.node-version }}_${{ matrix.os }}
           path: tests/_log
@@ -191,7 +191,7 @@ jobs:
       - name: artifact test reports
         if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: '${{ env.TESTS_REPORTS_ARTIFACT }}_node${{ matrix.node-version }}_${{ matrix.os }}'
           path: ${{ env.REPORTS_DIR }}
@@ -261,7 +261,7 @@ jobs:
       - name: artifact test reports
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: dogfooding-direct_npm${{ matrix.npm-version }}
           path: ${{ env.REPORTS_DIR }}
