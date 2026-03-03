@@ -20,13 +20,23 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import {existsSync, mkdirSync, openSync} from 'node:fs'
 import {dirname, resolve} from 'node:path'
 
-import {Builders, Enums, Factories, Serialize, Spec, Utils, Validation} from '@cyclonedx/cyclonedx-library'
+import { Builders as FromNodePackageJsonBuilders, Factories as FromNodePackageJsonFactories } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
+import { Factories as LicenseFactories, Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
+import {ComponentType} from '@cyclonedx/cyclonedx-library/Enums'
+import type { Types as SerializeTypes } from '@cyclonedx/cyclonedx-library/Serialize'
+import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
+import {SpecVersionDict, Version as SpecVersion} from '@cyclonedx/cyclonedx-library/Spec'
+import type { Types as ValidationTypes } from '@cyclonedx/cyclonedx-library/Validation'
+import { JsonStrictValidator, MissingOptionalDependencyError, XmlValidator } from '@cyclonedx/cyclonedx-library/Validation'
 import {Argument, Command, Option} from 'commander'
+import spdxExpressionParse from "spdx-expression-parse"
 
 import {loadJsonFile, type Version, versionCompare, versionTuple, writeAllSync} from './_helpers'
 import {BomBuilder, TreeBuilder} from './builders'
+import {PackageUrlFactory} from "./factories";
 import {makeConsoleLogger} from './logger'
 import {NpmRunner} from './npmRunner'
+
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -52,11 +62,11 @@ interface CommandOptions {
   flattenComponents: boolean
   shortPURLs: boolean
   outputReproducible: boolean
-  specVersion: Spec.Version
+  specVersion: SpecVersion
   outputFormat: OutputFormat
   outputFile: string
   validate: boolean | undefined
-  mcType: Enums.ComponentType
+  mcType: ComponentType
   verbose: number
 }
 
@@ -153,9 +163,9 @@ function makeCommand(process_: NodeJS.Process): Command {
       '--sv, --spec-version <version>',
       'Which version of CycloneDX spec to use.'
     ).choices(
-      Object.keys(Spec.SpecVersionDict).sort()
+      Object.keys(SpecVersionDict).sort()
     ).default(
-      Spec.Version.v1dot6
+      SpecVersion.v1dot6
     )
   ).addOption(
     new Option(
@@ -209,11 +219,11 @@ function makeCommand(process_: NodeJS.Process): Command {
     ).choices(
       // Object.values(Enums.ComponentType) -- use all possible values
       [ // for the NPM context only the following make sense:
-        Enums.ComponentType.Application,
-        Enums.ComponentType.Firmware,
-        Enums.ComponentType.Library
+        ComponentType.Application,
+        ComponentType.Firmware,
+        ComponentType.Library
       ].sort()
-    ).default(Enums.ComponentType.Application)
+    ).default(ComponentType.Application)
   ).addOption(
     new Option(
       '-v, --verbose',
@@ -307,18 +317,13 @@ export async function run(process_: NodeJS.Process): Promise<number> {
   myConsole.log('LOG   | gathering BOM data ...')
   const bom = new BomBuilder(
     npmRunner,
-    /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
-    new Builders.FromNodePackageJson.ComponentBuilder(
-      /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
-      new Factories.FromNodePackageJson.ExternalReferenceFactory(),
-      /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
-      new Factories.LicenseFactory()
+    new FromNodePackageJsonBuilders.ComponentBuilder(
+      new FromNodePackageJsonFactories.ExternalReferenceFactory(),
+      new LicenseFactories.LicenseFactory(spdxExpressionParse)
     ),
     new TreeBuilder(),
-    /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
-    new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
-    /* eslint-disable-next-line @typescript-eslint/no-deprecated -- TODO */
-    new Utils.LicenseUtility.LicenseEvidenceGatherer(),
+    new PackageUrlFactory(),
+    new LicenseUtils.LicenseEvidenceGatherer(),
     {
       ignoreNpmErrors: options.ignoreNpmErrors,
       metaComponentType: options.mcType,
@@ -335,23 +340,23 @@ export async function run(process_: NodeJS.Process): Promise<number> {
     myConsole
   ).buildFromProjectDir(projectDir, process_)
 
-  const spec = Spec.SpecVersionDict[options.specVersion]
+  const spec = SpecVersionDict[options.specVersion]
   if (undefined === spec) {
     throw new Error('unsupported spec-version')
   }
 
   /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
-  let serializer: Serialize.Types.Serializer
+  let serializer: SerializeTypes.Serializer
   /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
-  let validator: Validation.Types.Validator
+  let validator: ValidationTypes.Validator
   switch (options.outputFormat) {
     case OutputFormat.XML:
-      serializer = new Serialize.XmlSerializer(new Serialize.XML.Normalize.Factory(spec))
-      validator = new Validation.XmlValidator(spec.version)
+      serializer = new XmlSerializer(new SerializeXML.Normalize.Factory(spec))
+      validator = new XmlValidator(spec.version)
       break
     case OutputFormat.JSON:
-      serializer = new Serialize.JsonSerializer(new Serialize.JSON.Normalize.Factory(spec))
-      validator = new Validation.JsonValidator(spec.version)
+      serializer = new JsonSerializer(new SerializeJSON.Normalize.Factory(spec))
+      validator = new JsonStrictValidator(spec.version)
       break
   }
 
@@ -377,7 +382,7 @@ export async function run(process_: NodeJS.Process): Promise<number> {
         return ExitCode.FAILURE
       }
     } catch (err) {
-      if (err instanceof Validation.MissingOptionalDependencyError) {
+      if (err instanceof MissingOptionalDependencyError) {
         if (options.validate === true) {
           // if explicitly requested to validate, then warn about skip
           myConsole.warn('WARN  | skipped validating BOM:', err.message)

@@ -69,9 +69,11 @@
     }
   ],
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^8.4.0||^9.0.0",
+    "@cyclonedx/cyclonedx-library": "^10.0.0",
     "commander": "^14.0.0",
     "normalize-package-data": "^7.0.0 || ^8.0.0",
+    "packageurl-js": "^2.0.1",
+    "spdx-expression-parse": "^3.0.1 || ^4.0.0",
     "xmlbuilder2": "^3.0.2 || ^4.0.3"
   },
   "optionalDependencies": {
@@ -83,6 +85,7 @@
   "devDependencies": {
     "@types/node": "ts5.8",
     "@types/normalize-package-data": "^2.4.4",
+    "@types/spdx-expression-parse": "^3.0.5",
     "fast-glob": "^3.2.11",
     "imurmurhash": "^0.1.4",
     "c8": "^11",

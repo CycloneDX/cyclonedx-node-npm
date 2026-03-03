@@ -6,6 +6,18 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Fixed
+  * Qualified PackageURLs (via [#1416])
+* Changed
+  * Take care of PackageURL generation ourselves, now (via [#1416])  
+    Previously, this was done at best-effort by a 3rd-party library.
+* Dependencies
+  * Bumped dependency `@cyclonedx/cyclonedx-library@^10.0.0` now, was `@^8.4.0||^9.0.0` (via [#1416])
+  * Added dependency `packageurl-js@^2.0.1` (via [#1416])
+  * Added dependency `spdx-expression-parse@^3.0.1||^4.0.0` (via [#1416])
+
+[#1416]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1416
+
 ## 4.1.2 - 2025-12-05
 
 * Runtime Dependencies

@@ -90,7 +90,6 @@
           }
         }
       ],
-      "purl": "pkg:npm/juice-shop@14.1.1",
       "properties": [
         {
           "name": "cdx:npm:package:path",

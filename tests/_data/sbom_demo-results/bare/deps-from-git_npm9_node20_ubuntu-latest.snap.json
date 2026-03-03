@@ -82,7 +82,6 @@
       "name": "demo-deps-from-git",
       "version": "1.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0",
-      "purl": "pkg:npm/demo-deps-from-git@1.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:path",
@@ -112,7 +111,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.0.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23c887c803ac56deb5f91b617ef0486ca3fb98473b",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.0.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23c887c803ac56deb5f91b617ef0486ca3fb98473b",
       "externalReferences": [
         {
           "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#c887c803ac56deb5f91b617ef0486ca3fb98473b",
@@ -141,7 +140,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.1.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.1.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
       "externalReferences": [
         {
           "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
@@ -170,7 +169,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.2.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23d66d36280dde484bcf73a5c2139961663e3ba954",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.2.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23d66d36280dde484bcf73a5c2139961663e3ba954",
       "externalReferences": [
         {
           "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#d66d36280dde484bcf73a5c2139961663e3ba954",
@@ -199,7 +198,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.3.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%237a914980f0508368df54ca193347cec6ffd16415",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.3.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%237a914980f0508368df54ca193347cec6ffd16415",
       "externalReferences": [
         {
           "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#7a914980f0508368df54ca193347cec6ffd16415",
@@ -228,7 +227,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.4.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%233367c1638662d57c53caff0824ee94cd7859bee2",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.4.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%233367c1638662d57c53caff0824ee94cd7859bee2",
       "externalReferences": [
         {
           "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#3367c1638662d57c53caff0824ee94cd7859bee2",
@@ -257,7 +256,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.5.0?download_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%234cea42bf5ec78f17b86dcd308022b6d52e9a98f0",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.5.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%234cea42bf5ec78f17b86dcd308022b6d52e9a98f0",
       "externalReferences": [
         {
           "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#4cea42bf5ec78f17b86dcd308022b6d52e9a98f0",
