@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 4.2.0 - 2026-03-03
+
 * Fixed
   * Qualified PackageURLs (via [#1416])
 * Changed
