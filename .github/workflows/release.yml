@@ -117,10 +117,6 @@ jobs:
           npm run -- dev-setup:tools:test-dependencies --ignore-scripts --loglevel=silly
           echo "::endgroup::"
       # no explicit npm build. if a build is required, it should be configured as prepublish/prepublishOnly script of npm.
-      - name: login to NPMJS
-        run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
-        env:
-          NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: publish to NPMJS as "${{ env.NPMJS_RELEASE_TAG }}"
         run: >
           npm publish
