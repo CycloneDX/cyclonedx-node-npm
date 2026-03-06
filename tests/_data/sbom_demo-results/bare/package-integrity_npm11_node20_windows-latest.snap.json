@@ -81,6 +81,7 @@
       "type": "application",
       "name": "demo-package-integrity",
       "bom-ref": "demo-package-integrity",
+      "purl": "pkg:npm/demo-package-integrity",
       "properties": [
         {
           "name": "cdx:npm:package:path",

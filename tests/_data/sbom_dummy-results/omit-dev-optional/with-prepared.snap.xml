@@ -64,6 +64,7 @@
     <component type="application" bom-ref="@dummy-projects/with-prepared">
       <group>@dummy-projects</group>
       <name>with-prepared</name>
+      <purl>pkg:npm/%40dummy-projects/with-prepared</purl>
       <properties>
         <property name="cdx:npm:package:path"/>
         <property name="cdx:npm:package:private">true</property>

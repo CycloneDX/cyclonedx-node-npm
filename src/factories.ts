@@ -32,10 +32,7 @@ import type {PackageData} from "./_types"
 export class PackageUrlFactory {
 
   makeFromPackageData(data: PackageData): PackageURL | undefined {
-    if ( data.private === true ) {
-      // Per PackageUrl spec, private packages do not have one.
-      return undefined
-    }
+    // !REMINDER: even private packages may have a PURL
 
     let name: string = data.name
     let namespace: string | undefined = undefined
@@ -75,10 +72,7 @@ export class PackageUrlFactory {
   }
 
   makeFromPackageJson(packageJson: normalizePackageData.Package): PackageURL | undefined {
-    if ( packageJson.private === true ) {
-      // Per PackageUrl spec, private packages do not have one.
-      return undefined
-    }
+    // !REMINDER: even private packages may have a PURL
 
     let name: string = packageJson.name
     let namespace: string | undefined = undefined

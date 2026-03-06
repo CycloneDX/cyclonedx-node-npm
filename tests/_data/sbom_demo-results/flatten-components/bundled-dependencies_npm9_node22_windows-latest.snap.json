@@ -90,6 +90,7 @@
           }
         }
       ],
+      "purl": "pkg:npm/demo-bundled-deps@0.0.0",
       "properties": [
         {
           "name": "cdx:npm:package:path",
