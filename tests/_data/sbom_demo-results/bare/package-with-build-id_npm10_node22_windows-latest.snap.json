@@ -82,6 +82,7 @@
       "name": "demo-package-with-build-id",
       "version": "1.0.0-123+456",
       "bom-ref": "demo-package-with-build-id@1.0.0-123+456",
+      "purl": "pkg:npm/demo-package-with-build-id@1.0.0-123+456",
       "properties": [
         {
           "name": "cdx:npm:package:path",

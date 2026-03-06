@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Fixed
+  * Properly generate PackageURLs for private packages ([#1425] via [#]) 
+
+[#1425]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1425
+
 ## 4.2.0 - 2026-03-03
 
 * Fixed

@@ -82,6 +82,7 @@
       "name": "with-prepared",
       "group": "@dummy-projects",
       "bom-ref": "@dummy-projects/with-prepared",
+      "purl": "pkg:npm/%40dummy-projects/with-prepared",
       "properties": [
         {
           "name": "cdx:npm:package:path",
