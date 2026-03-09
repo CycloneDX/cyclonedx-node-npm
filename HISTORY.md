@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 4.2.1 - 2026-03-00
+
 * Fixed
   * Properly generate PackageURLs for private packages ([#1425] via [#1426]) 
 
