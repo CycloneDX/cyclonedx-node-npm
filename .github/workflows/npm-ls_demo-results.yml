@@ -78,7 +78,7 @@ jobs:
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: prepare output
         run: |
           mkdir -p '${{ env.RESULTS_DIR }}'
@@ -87,7 +87,7 @@ jobs:
         shell: bash # don't want to write tht code twice, windows and unix-like
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: ${{ matrix.node-version }}
           check-latest: true
@@ -112,7 +112,7 @@ jobs:
       - name: Artifact RESULTS
         # see https://github.com/actions/upload-artifact
         if: ${{ ! cancelled() }}
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: '${{ env.RESULTS_ARTIFACT }}_${{ matrix.subject }}${{ matrix.additional_npm-ls_args }}_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}'
           path: '${{ env.DEMO_ROOT_DIR}}/*/${{ env.RESULTS_DIR }}'
@@ -127,14 +127,14 @@ jobs:
     steps:
       - name: fetch and combine RESULTS
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
         with:
           pattern: '${{ env.RESULTS_ARTIFACT }}_*'
           merge-multiple: true
           path: '${{ env.DEMO_ROOT_DIR}}'
       - name: Artifact RESULTS
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: '${{ env.RESULTS_ARTIFACT }}-combined'
           path: '${{ env.DEMO_ROOT_DIR}}'

@@ -35,10 +35,10 @@ jobs:
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
@@ -48,7 +48,7 @@ jobs:
         run: npm run build-dev
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
@@ -61,10 +61,10 @@ jobs:
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
@@ -86,12 +86,12 @@ jobs:
       - name: Annotate Code
         if: ${{ failure() || success() }}
         # see https://github.com/DerLev/eslint-annotations
-        uses: DerLev/eslint-annotations@v2
+        uses: DerLev/eslint-annotations@a79ea65c1b45a649c48bcc6efc0103b6fd2e4c5f # v2
         with:
           eslint-report: ${{ env.REPORTS_DIR }}/eslint.json
       - name: artifact eslint result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         if: ${{ failure() }}
         with:
           name: ${{ env.STANDARD_REPORTS_ARTIFACT }}
@@ -105,10 +105,10 @@ jobs:
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
@@ -150,10 +150,10 @@ jobs:
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false
@@ -171,7 +171,7 @@ jobs:
           npm i --ignore-scripts --loglevel=silly --no-save $dev_requirements
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
@@ -184,7 +184,7 @@ jobs:
       - name: artifact test logs
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: logs-jest_node${{ matrix.node-version }}_${{ matrix.os }}
           path: tests/_log
@@ -199,7 +199,7 @@ jobs:
       - name: artifact test reports
         if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: '${{ env.TESTS_REPORTS_ARTIFACT }}_node${{ matrix.node-version }}_${{ matrix.os }}'
           path: ${{ env.REPORTS_DIR }}
@@ -225,11 +225,11 @@ jobs:
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - run: mkdir -p ${{ env.REPORTS_DIR }}
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: ${{ matrix.node-version || env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
@@ -251,7 +251,7 @@ jobs:
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2 || true
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
@@ -266,7 +266,7 @@ jobs:
       - name: artifact test reports
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: dogfooding-direct_npm${{ matrix.npm-version }}
           path: ${{ env.REPORTS_DIR }}
@@ -281,7 +281,7 @@ jobs:
     steps:
       - name: fetch test artifacts
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
         with:
           pattern: '${{ env.TESTS_REPORTS_ARTIFACT }}_*'
           merge-multiple: true
@@ -292,7 +292,7 @@ jobs:
         ## see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-secrets
         if: ${{ env.CODACY_PROJECT_TOKEN != '' }}
         # see https://github.com/codacy/codacy-coverage-reporter-action
-        uses: codacy/codacy-coverage-reporter-action@v1
+        uses: codacy/codacy-coverage-reporter-action@89d6c85cfafaec52c72b6c5e8b2878d33104c699 # v1
         with:
           project-token: ${{ env.CODACY_PROJECT_TOKEN }}
           coverage-reports: ${{ env.REPORTS_DIR }}/*/coverage/*
