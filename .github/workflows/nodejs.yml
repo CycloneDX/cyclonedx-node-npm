@@ -214,13 +214,10 @@ jobs:
         include:
           - npm-version: 'latest'
           - npm-version: '^11'
-            ## "node": "^20.17.0 || >=22.9.0"
-            node-version: '^22.9'
+            node-version: '^24'
           - npm-version: '^10'
-            ## "node": "^18.17.0 || >=20.5.0"
             node-version: '^20.18'
           - npm-version: '^9'
-            ## "node": "^14.17.0 || ^16.13.0 || >=18.0.0"
             node-version: '^20.18'
     env:
       npm_config_engine_strict: true
