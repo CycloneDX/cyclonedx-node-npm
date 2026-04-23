@@ -18,7 +18,7 @@
     "base64-js"
   ],
   "peerDependencies": {
-    "uuid": "8.3.2",
+    "uuid": "14.0.0",
     "@types/uuid": "8.3.4"
   },
   "peerDependenciesMeta": {
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/node": "20.14.10",
     "@types/uuid": "8.3.4",
-    "uuid": "8.3.2",
+    "uuid": "14.0.0",
     "ignore": "5.1.4"
   }
 }
