@@ -133,7 +133,7 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '25'      # Current
+          - '26'      # Current
           - '24'      # active LTS
           - '22'
           - '20'
@@ -142,9 +142,9 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
-        include:
-          - node-version: "25"
-            experimental: true
+        # include:
+        #  - node-version: "27"
+        #    experimental: true
     continue-on-error: ${{ matrix.experimental == true }}
     timeout-minutes: 15
     steps:
