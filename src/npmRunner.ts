@@ -92,7 +92,7 @@ export class NpmRunner {
     if (execPath === undefined) {
       console_.debug('DEBUG | makeNpmRunner caused execSync "npm"')
       // not shell-save - but this is okay four our use case - since we have complete control over `args` in the caller.
-      return (args, options) => execSync('npm ' + args.join(' '), options)
+      return (args, options) => execFileSync('npm', args, options)
     }
 
     if (NpmRunner.#jsMatcher.test(execPath)) {
