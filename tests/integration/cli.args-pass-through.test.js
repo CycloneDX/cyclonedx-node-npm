@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { mkdirSync, readFileSync } = require('node:fs')
+const { existsSync, mkdirSync, readFileSync } = require('node:fs')
 const { join } = require('node:path')
 
 const { describe, expect, test } = require('@jest/globals')
@@ -97,6 +97,54 @@ describe('integration.cli.args-pass-through', () => {
         process.stderr.write(readFileSync(errFile))
         throw err
       }
+    }, cliRunTestTimeout)
+  })
+
+  describe('no shell injection', () => {
+    const tmpRootRun = join(tmpRoot, 'shell_injection_proof')
+    mkdirSync(tmpRootRun)
+
+    function mkPayload (sentinelFile) {
+      return process.platform.startsWith('win')
+        ? `& > ${sentinelFile} &`
+        : `; touch ${sentinelFile} ;`
+    }
+
+    test.each([
+      // region workspace
+      (function () {
+        const sentinelFile = join(tmpRootRun, 'workspace-single')
+        return [
+          'single --workspace with shell metacharacters',
+          ['--workspace', mkPayload(sentinelFile)],
+          sentinelFile
+        ]
+      })(),
+      (function () {
+        const sentinelFile = join(tmpRootRun, 'workspace-chained')
+        return [
+          'chained --workspace: legitimate then malicious',
+          ['--workspace', 'legitimate-workspace', '-w', mkPayload(sentinelFile)],
+          sentinelFile
+        ]
+      })(),
+      // endregion workspace
+    ])('%s', async (purpose, cdxArgs, sentinelFile) => {
+      expect(existsSync(sentinelFile)).toBe(false)
+
+      const logFileBase = join(tmpRootRun, purpose.replace(/\W/g, '_'))
+      const cwd = dummyProjectsRoot
+
+      const { res } = runCLI([
+        ...cdxArgs,
+        '--',
+        join('with-lockfile', 'package.json')
+      ], logFileBase, cwd, {
+        npm_execpath: undefined
+      })
+      await res.catch(() => {/* pass */});
+
+      expect(existsSync(sentinelFile)).toBe(false)
     }, cliRunTestTimeout)
   })
 })
