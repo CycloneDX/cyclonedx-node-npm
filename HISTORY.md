@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Fixed
+  * Possible shell injection in `--workspace` argument (via [#1476])  
+    See <https://github.com/CycloneDX/cyclonedx-node-npm/security/advisories/GHSA-v75r-vx73-82pj>
+
+[#1476]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1476
+
 ## 4.2.1 - 2026-03-00
 
 * Fixed
