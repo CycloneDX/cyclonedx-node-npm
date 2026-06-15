@@ -142,7 +142,7 @@ describe('integration.cli.args-pass-through', () => {
       ], logFileBase, cwd, {
         npm_execpath: undefined
       })
-      await res.catch(() => {/* pass */});
+      await res.catch(() => { /* pass */ })
 
       expect(existsSync(sentinelFile)).toBe(false)
     }, cliRunTestTimeout)
