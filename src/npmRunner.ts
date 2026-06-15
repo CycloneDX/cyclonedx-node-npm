@@ -91,7 +91,6 @@ export class NpmRunner {
     const execPath = NpmRunner.#getExecPath(process_, console_)
     if (execPath === undefined) {
       console_.debug('DEBUG | makeNpmRunner caused execSync "npm"')
-      // not shell-save - but this is okay four our use case - since we have complete control over `args` in the caller.
       return (args, options) => execFileSync('npm', args, options)
     }
 
