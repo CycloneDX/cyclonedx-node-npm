@@ -100,14 +100,14 @@ describe('integration.cli.args-pass-through', () => {
     }, cliRunTestTimeout)
   })
 
-  describe('no shell injection', () => {
+  describe('prevent shell injection', () => {
     const tmpRootRun = join(tmpRoot, 'shell_injection_proof')
     mkdirSync(tmpRootRun)
 
     function mkPayload (sentinelFile) {
       return process.platform.startsWith('win')
-        ? `&type nul > "${sentinelFile}"&`
-        : `;touch '${sentinelFile}';`
+        ? `& type nul > "${sentinelFile}" &`
+        : `; touch '${sentinelFile}' ;`
     }
 
     test.each([
