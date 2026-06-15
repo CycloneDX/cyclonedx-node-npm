@@ -106,8 +106,8 @@ describe('integration.cli.args-pass-through', () => {
 
     function mkPayload (sentinelFile) {
       return process.platform.startsWith('win')
-        ? `& > ${sentinelFile} &`
-        : `; touch ${sentinelFile} ;`
+        ? `&type nul > "${sentinelFile}"&`
+        : `;touch '${sentinelFile}';`
     }
 
     test.each([
