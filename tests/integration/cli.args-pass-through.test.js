@@ -113,7 +113,7 @@ describe('integration.cli.args-pass-through', () => {
     test.each([
       // region workspace
       (function () {
-        const sentinelFile = join(tmpRootRun, 'workspace-single')
+        const sentinelFile = join(tmpRootRun, 'sentinelFile_workspace-single.txt')
         return [
           'single --workspace with shell metacharacters',
           ['--workspace', mkPayload(sentinelFile)],
@@ -121,7 +121,7 @@ describe('integration.cli.args-pass-through', () => {
         ]
       })(),
       (function () {
-        const sentinelFile = join(tmpRootRun, 'workspace-chained')
+        const sentinelFile = join(tmpRootRun, 'sentinelFile_workspace-chained.txt')
         return [
           'chained --workspace: legitimate then malicious',
           ['--workspace', 'legitimate-workspace', '-w', mkPayload(sentinelFile)],
