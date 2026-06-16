@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { type CommonExecOptions, execFileSync, type ExecSyncOptionsWithBufferEncoding } from 'node:child_process'
+import { type CommonExecOptions, execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'node:child_process'
 import { existsSync } from 'node:fs'
 import { resolve } from 'node:path'
 
@@ -42,6 +42,8 @@ export class NpmRunner {
    *   - npx-cli.js/foo.sh  // Directory of the same name
    */
   static readonly #npxMatcher = /(^|\\|\/)npx-cli\.js$/
+
+  static readonly #winExecMatcher = /\.(exe|bat|cmd|com)$/i
 
   constructor (process_: NodeJS.Process, console_: Console) {
     this.run = NpmRunner.#makeNpmRunner(process_, console_)
@@ -88,19 +90,32 @@ export class NpmRunner {
   }
 
   static #makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
-    const execPath = NpmRunner.#getExecPath(process_, console_)
+    let execPath = NpmRunner.#getExecPath(process_, console_)
     if (execPath === undefined) {
-      console_.debug('DEBUG | makeNpmRunner caused execSync "npm"')
-      return (args, options) => execFileSync('npm', args, options)
+      console_.debug('DEBUG | makeNpmRunner got no execPath, falling back to system lookup')
+      try {
+        execPath = process_.platform.startsWith('win')
+          ? execSync('where npm').toString().split(/\r?\n/).filter(s => this.#winExecMatcher.test(s))[0]
+          : execSync('which npm').toString().trim()
+      } catch (error) {
+        console_.debug('DEBUG | makeNpmRunner system lookup failed -', error);
+        throw Error('Failed to locate "npm" on PATH', {cause: error})
+      }
+      console_.debug('DEBUG | makeNpmRunner resolved via system lookup: %s', execPath)
+    } else {
+      console_.debug('DEBUG | makeNpmRunner using execPath: %s', execPath)
     }
 
     if (NpmRunner.#jsMatcher.test(execPath)) {
       const nodeExecPath = process_.execPath
-      console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with  "-- %s"', nodeExecPath, execPath)
+      console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with "-- %s"', nodeExecPath, execPath)
       return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
     }
 
     console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s"', execPath)
-    return (args, options) => execFileSync(execPath, args, options)
+    return (args, options) => {
+      console_.debug('execFileSync(', JSON.stringify(execPath), ',', args, ')', options)
+      return execFileSync(execPath, args, options)
+    }
   }
 }
