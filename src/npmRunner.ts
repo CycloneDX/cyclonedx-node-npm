@@ -98,7 +98,7 @@ export class NpmRunner {
       console_.debug('DEBUG | makeNpmRunner got no execPath, falling back to system lookup')
       try {
         execPath = isWin
-          ? execSync('where npm').toString().split(/\r?\n/).filter(s => this.#winExecMatcher.test(s) || this.#winCmdMatcher.test(s))[0]
+          ? execSync('where npm').toString().split(/\r?\n/).find(s => this.#winExecMatcher.test(s) || this.#winCmdMatcher.test(s))
           : execSync('which npm').toString().trim()
         if (execPath === undefined) { throw new Error('npm not found') }
       } catch (error) {
