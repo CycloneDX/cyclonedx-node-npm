@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file.
 
 * BREAKING Changes
   * Reworked npm handling - `npm` is executed explicitly rather than through a subshell;
-    previous behavior applies when `npm_execpath` is present.
+    same as the previous behavior applies when `npm_execpath` is present.
 * Fixed
   * Eliminated a potential shell‑injection vulnerability in the `--workspace` argument (via [#1476])  
     See <https://github.com/CycloneDX/cyclonedx-node-npm/security/advisories/GHSA-v75r-vx73-82pj>
