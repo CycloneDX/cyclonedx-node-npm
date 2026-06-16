@@ -9,8 +9,8 @@ All notable changes to this project will be documented in this file.
 ## 5.0.0 - 2026-06-16
 
 * BREAKING Changes
-  * Reworked npm handling - `npm` is executed explicitly rather than through a subshell;
-    same as the previous behavior applies when `npm_execpath` is present.
+  * Reworked npm handling - `npm` is now executed explicitly rather than through a subshell.  
+    The behavior when `npm_execpath` is present remains unchanged.
 * Fixed
   * Eliminated a potential shell‑injection vulnerability in the `--workspace` argument (via [#1476])  
     See <https://github.com/CycloneDX/cyclonedx-node-npm/security/advisories/GHSA-v75r-vx73-82pj>
