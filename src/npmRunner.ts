@@ -43,7 +43,8 @@ export class NpmRunner {
    */
   static readonly #npxMatcher = /(^|\\|\/)npx-cli\.js$/
 
-  static readonly #winExecMatcher = /\.(exe|bat|cmd|com)$/i
+  static readonly #winExecMatcher = /\.(exe|com)$/i
+  static readonly #winCmdMatcher = /\.(cmd|bat)$/i
 
   constructor (process_: NodeJS.Process, console_: Console) {
     this.run = NpmRunner.#makeNpmRunner(process_, console_)
@@ -90,13 +91,16 @@ export class NpmRunner {
   }
 
   static #makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
+    const isWin = process_.platform.startsWith('win')
+
     let execPath = NpmRunner.#getExecPath(process_, console_)
     if (execPath === undefined) {
       console_.debug('DEBUG | makeNpmRunner got no execPath, falling back to system lookup')
       try {
-        execPath = process_.platform.startsWith('win')
-          ? execSync('where npm').toString().split(/\r?\n/).filter(s => this.#winExecMatcher.test(s))[0]
+        execPath = isWin
+          ? execSync('where npm').toString().split(/\r?\n/).filter(s => this.#winExecMatcher.test(s) || this.#winCmdMatcher.test(s))[0]
           : execSync('which npm').toString().trim()
+        if (execPath === undefined) { throw new Error('npm not found') }
       } catch (error) {
         console_.debug('DEBUG | makeNpmRunner system lookup failed -', error);
         throw Error('Failed to locate "npm" on PATH', {cause: error})
@@ -112,10 +116,12 @@ export class NpmRunner {
       return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
     }
 
-    console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s"', execPath)
-    return (args, options) => {
-      console_.debug('execFileSync(', JSON.stringify(execPath), ',', args, ')', options)
-      return execFileSync(execPath, args, options)
+    if (isWin && this.#winCmdMatcher.test(execPath)) {
+      console_.debug('DEBUG | makeNpmRunner caused execFileSync "cmd.exe" with "/c %s"', execPath)
+      return (args, options) => execFileSync('cmd.exe', ['/c', execPath, ...args], options)
     }
+
+    console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s"', execPath)
+    return (args, options) => execFileSync(execPath, args, options)
   }
 }
