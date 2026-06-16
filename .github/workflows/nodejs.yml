@@ -215,8 +215,11 @@ jobs:
           - 'ubuntu-latest'
           - 'macos-latest'
           - 'windows-latest'
+        npm-version:
+          - 'latest'
+        node-version:
+          - '' # fallback to `NODE_ACTIVE_LTS`
         include:
-          - npm-version: 'latest'
           - npm-version: '^11'
             node-version: '^24'
           - npm-version: '^10'
