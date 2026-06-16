@@ -206,11 +206,15 @@ jobs:
 
   dogfooding:
     needs: [ 'build' ]
-    name: dogfooding npm ${{ matrix.npm-version }}
-    runs-on: ubuntu-latest
+    name: dogfooding npm ${{ matrix.os }} ${{ matrix.npm-version }}
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
+        os:
+          - 'ubuntu-latest'
+          - 'macos-latest'
+          - 'windows-latest'
         include:
           - npm-version: 'latest'
           - npm-version: '^11'
