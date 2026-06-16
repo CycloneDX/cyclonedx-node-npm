@@ -90,25 +90,21 @@ export class NpmRunner {
     throw new Error(`unexpected NPM execPath: ${execPath}`)
   }
 
-  static #makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
-    const isWin = process_.platform.startsWith('win')
-
-    let execPath = NpmRunner.#getExecPath(process_, console_)
-    if (execPath === undefined) {
-      console_.debug('DEBUG | makeNpmRunner got no execPath, falling back to system lookup')
-      try {
-        execPath = isWin
-          ? execSync('where npm').toString().split(/\r?\n/).find(s => this.#winExecMatcher.test(s) || this.#winCmdMatcher.test(s))
-          : execSync('which npm').toString().trim()
-        if (execPath === undefined) { throw new Error('npm not found') }
-      } catch (error) {
-        console_.debug('DEBUG | makeNpmRunner system lookup failed -', error);
-        throw Error('Failed to locate "npm" on PATH', {cause: error})
-      }
-      console_.debug('DEBUG | makeNpmRunner resolved via system lookup: %s', execPath)
-    } else {
-      console_.debug('DEBUG | makeNpmRunner using execPath: %s', execPath)
+  static #getSystemNpmPath (process_: NodeJS.Process, console_: Console): string {
+    console_.debug('DEBUG | lookup system NPM...')
+    const npmPath = process_.platform.startsWith('win')
+      ? execSync('where npm').toString().split(/\r?\n/).find(s => NpmRunner.#winExecMatcher.test(s) || NpmRunner.#winCmdMatcher.test(s))
+      : execSync('which npm').toString().trim()
+    if (npmPath === undefined || npmPath === '') {
+      throw new Error('missing system NPM')
     }
+    console_.debug('DEBUG | system NPM found: %s', npmPath)
+    return npmPath
+  }
+
+  static #makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
+    const execPath = NpmRunner.#getExecPath(process_, console_)
+      ?? NpmRunner.#getSystemNpmPath(process_, console_)
 
     if (NpmRunner.#jsMatcher.test(execPath)) {
       const nodeExecPath = process_.execPath
@@ -116,7 +112,7 @@ export class NpmRunner {
       return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
     }
 
-    if (isWin && this.#winCmdMatcher.test(execPath)) {
+    if (process_.platform.startsWith('win') && this.#winCmdMatcher.test(execPath)) {
       console_.debug('DEBUG | makeNpmRunner caused execFileSync "cmd.exe" with "/c %s"', execPath)
       return (args, options) => execFileSync('cmd.exe', ['/c', execPath, ...args], options)
     }
