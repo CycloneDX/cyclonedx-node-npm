@@ -43,7 +43,7 @@ export class NpmRunner {
    */
   static readonly #npxMatcher = /(^|\\|\/)npx-cli\.js$/
 
-  static readonly #winExecMatcher = /\.(exe|com)$/i
+  static readonly #winExeMatcher = /\.(exe|com)$/i
   static readonly #winCmdMatcher = /\.(cmd|bat)$/i
 
   constructor (process_: NodeJS.Process, console_: Console) {
@@ -92,8 +92,8 @@ export class NpmRunner {
 
   static #getSystemNpmPath (process_: NodeJS.Process, console_: Console): string {
     console_.debug('DEBUG | lookup system NPM...')
-    const npmPath = process_.platform.startsWith('win')
-      ? execSync('where npm').toString().split(/\r?\n/).find(s => NpmRunner.#winExecMatcher.test(s) || NpmRunner.#winCmdMatcher.test(s))
+    const npmPath = NpmRunner.#isWindows(process_)
+      ? execSync('where npm').toString().split(/\r?\n/).find(s => NpmRunner.#winExeMatcher.test(s) || NpmRunner.#winCmdMatcher.test(s))
       : execSync('which npm').toString().trim()
     if (npmPath === undefined || npmPath === '') {
       throw new Error('missing system NPM')
@@ -104,7 +104,7 @@ export class NpmRunner {
 
   static #makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
     const execPath = NpmRunner.#getExecPath(process_, console_)
-      ?? NpmRunner.#getSystemNpmPath(process_, console_)
+                  ?? NpmRunner.#getSystemNpmPath(process_, console_)
 
     if (NpmRunner.#jsMatcher.test(execPath)) {
       const nodeExecPath = process_.execPath
@@ -112,12 +112,16 @@ export class NpmRunner {
       return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
     }
 
-    if (process_.platform.startsWith('win') && this.#winCmdMatcher.test(execPath)) {
+    if (NpmRunner.#isWindows(process_) && NpmRunner.#winCmdMatcher.test(execPath)) {
       console_.debug('DEBUG | makeNpmRunner caused execFileSync "cmd.exe" with "/c %s"', execPath)
       return (args, options) => execFileSync('cmd.exe', ['/c', execPath, ...args], options)
     }
 
     console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s"', execPath)
     return (args, options) => execFileSync(execPath, args, options)
+  }
+
+  static #isWindows(process_: NodeJS.Process): boolean {
+    return process_.platform.startsWith('win')
   }
 }
