@@ -43,6 +43,9 @@ export class NpmRunner {
    */
   static readonly #npxMatcher = /(^|\\|\/)npx-cli\.js$/
 
+  static readonly #winExeMatcher = /\.(exe|com)$/i
+  static readonly #winCmdMatcher = /\.(cmd|bat)$/i
+
   constructor (process_: NodeJS.Process, console_: Console) {
     this.run = NpmRunner.#makeNpmRunner(process_, console_)
   }
@@ -87,21 +90,38 @@ export class NpmRunner {
     throw new Error(`unexpected NPM execPath: ${execPath}`)
   }
 
+  static #getSystemNpmPath (process_: NodeJS.Process, console_: Console): string {
+    console_.debug('DEBUG | lookup system NPM...')
+    const npmPath = NpmRunner.#isWindows(process_)
+      ? execSync('where npm').toString().split(/\r?\n/).find(s => NpmRunner.#winExeMatcher.test(s) || NpmRunner.#winCmdMatcher.test(s))
+      : execSync('which npm').toString().trim()
+    if (npmPath === undefined || npmPath === '') {
+      throw new Error('missing system NPM')
+    }
+    console_.debug('DEBUG | system NPM found: %s', npmPath)
+    return npmPath
+  }
+
   static #makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
     const execPath = NpmRunner.#getExecPath(process_, console_)
-    if (execPath === undefined) {
-      console_.debug('DEBUG | makeNpmRunner caused execSync "npm"')
-      // not shell-save - but this is okay four our use case - since we have complete control over `args` in the caller.
-      return (args, options) => execSync('npm ' + args.join(' '), options)
-    }
+                  ?? NpmRunner.#getSystemNpmPath(process_, console_)
 
     if (NpmRunner.#jsMatcher.test(execPath)) {
       const nodeExecPath = process_.execPath
-      console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with  "-- %s"', nodeExecPath, execPath)
+      console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with "-- %s"', nodeExecPath, execPath)
       return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
+    }
+
+    if (NpmRunner.#isWindows(process_) && NpmRunner.#winCmdMatcher.test(execPath)) {
+      console_.debug('DEBUG | makeNpmRunner caused execFileSync "cmd.exe" with "/c %s"', execPath)
+      return (args, options) => execFileSync('cmd.exe', ['/c', execPath, ...args], options)
     }
 
     console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s"', execPath)
     return (args, options) => execFileSync(execPath, args, options)
+  }
+
+  static #isWindows(process_: NodeJS.Process): boolean {
+    return process_.platform.startsWith('win')
   }
 }

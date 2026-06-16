@@ -87,7 +87,8 @@ function runCLI (args, logFileBase, cwd, env) {
       ...process.env,
       CT_VERSION: NPM_LOWEST_SUPPORTED.join('.'),
       ...env
-    }
+    },
+    platform: process.platform,
   }
 
   /**

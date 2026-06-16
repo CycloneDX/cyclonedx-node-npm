@@ -206,19 +206,27 @@ jobs:
 
   dogfooding:
     needs: [ 'build' ]
-    name: dogfooding npm ${{ matrix.npm-version }}
-    runs-on: ubuntu-latest
+    name: dogfooding npm ${{ matrix.npm-version }} ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         include:
-          - npm-version: 'latest'
+          - npm-version: latest
+            os: ubuntu-latest
+          - npm-version: latest
+            os: windows-latest
+          - npm-version: latest
+            os: macos-latest
           - npm-version: '^11'
             node-version: '^24'
+            os: ubuntu-latest
           - npm-version: '^10'
             node-version: '^20.18'
+            os: ubuntu-latest
           - npm-version: '^9'
             node-version: '^20.18'
+            os: ubuntu-latest
     env:
       npm_config_engine_strict: true
     timeout-minutes: 10
