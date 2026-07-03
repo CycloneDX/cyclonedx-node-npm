@@ -22,7 +22,7 @@ const { join } = require('node:path')
 
 const { describe, expect, test } = require('@jest/globals')
 
-const { dummyProjectsRoot, mkTemp, npmLsReplacement, runCLI } = require('./')
+const { dummyProjectsRoot, mkTemp, npmLsReplacement, runCLI, NPM_LATETS } = require('./')
 
 describe('integration.cli.args-pass-through', () => {
   const cliRunTestTimeout = 15000
@@ -83,6 +83,7 @@ describe('integration.cli.args-pass-through', () => {
 
       const { res, errFile } = runCLI([
         ...cdxArgs,
+        '-vvvv',
         '--',
         join('with-lockfile', 'package.json')
       ], logFileBase, cwd, {
@@ -104,45 +105,75 @@ describe('integration.cli.args-pass-through', () => {
     const tmpRootRun = join(tmpRoot, 'shell_injection_proof')
     mkdirSync(tmpRootRun)
 
-    function mkPayload (sentinelFile) {
-      return process.platform.startsWith('win')
-        ? `& type nul > "${sentinelFile}" &`
-        : `; touch '${sentinelFile}' ;`
+    const runsOnWindows = process.platform.startsWith('win')
+
+    const npmExecpaths = {
+      'js-file': npmLsReplacement.justExit,
+    }
+    if (runsOnWindows) {
+      npmExecpaths["cmd-file"] = npmLsReplacement.justExitCmd
     }
 
-    test.each([
-      // region workspace
-      (function () {
-        const sentinelFile = join(tmpRootRun, 'sentinelFile_workspace-single.txt')
-        return [
-          'single --workspace with shell metacharacters',
+    const mkPayload4type = {
+      'shell metacharacters': function (sentinelFile) {
+        return runsOnWindows
+          ? ` & type nul > "${sentinelFile}" & echo `
+          : ` ; touch '${sentinelFile}' ; echo `
+      },
+      'shell metacharacters single-quote': function (sentinelFile) {
+        return runsOnWindows
+          ? `' & type nul > "${sentinelFile}" & echo '`
+          : `' ; touch '${sentinelFile}' ; echo '`
+      },
+      'shell metacharacters double-quote': function (sentinelFile) {
+        return runsOnWindows
+          ? `" & type nul > "${sentinelFile}" & echo "`
+          : `" ; touch '${sentinelFile}' ; echo "`
+      },
+    }
+
+    const cases = []
+    for (const [npmExecpathLabel, npmExecpath] of Object.entries(npmExecpaths)) {
+      for (const [payloadType, mkPayload] of Object.entries(mkPayload4type)) {
+        const payloadFilePrefix = `${npmExecpathLabel}-${payloadType}`.replace(/\W/g, '-')
+        let sentinelFile = join(tmpRootRun, `sentinelFile_${payloadFilePrefix}_workspace-single.txt`)
+        cases.push([
+          `${payloadType} on ${npmExecpathLabel} with single --workspace with shell metacharacters`,
+          npmExecpath,
           ['--workspace', mkPayload(sentinelFile)],
           sentinelFile
-        ]
-      })(),
-      (function () {
-        const sentinelFile = join(tmpRootRun, 'sentinelFile_workspace-chained.txt')
-        return [
-          'chained --workspace: legitimate then malicious',
+        ])
+        sentinelFile = join(tmpRootRun, `sentinelFile_${payloadFilePrefix}_workspace-chained.txt`)
+        cases.push([
+          `${payloadType} on ${npmExecpathLabel} with chained --workspace: legitimate then malicious`,
+          npmExecpath,
           ['--workspace', 'legitimate-workspace', '-w', mkPayload(sentinelFile)],
           sentinelFile
-        ]
-      })(),
-      // endregion workspace
-    ])('%s', async (purpose, cdxArgs, sentinelFile) => {
+        ])
+      }
+    }
+
+    test.each(cases)('%s', async (purpose, npmExecpath, cdxArgs, sentinelFile) => {
       expect(existsSync(sentinelFile)).toBe(false)
 
       const logFileBase = join(tmpRootRun, purpose.replace(/\W/g, '_'))
       const cwd = dummyProjectsRoot
 
-      const { res } = runCLI([
+      const { res, outFile, errFile } = runCLI([
         ...cdxArgs,
+        '-vvvv',
         '--',
         join('with-lockfile', 'package.json')
       ], logFileBase, cwd, {
-        npm_execpath: undefined
+        npm_execpath: npmExecpath,
+        CT_VERSION: `${NPM_LATETS}.0.0`
       })
       await res.catch(() => { /* pass */ })
+
+      process.stdout.write(outFile)
+      process.stdout.write(readFileSync(outFile))
+      process.stderr.write(outFile)
+      process.stderr.write(readFileSync(errFile))
 
       expect(existsSync(sentinelFile)).toBe(false)
     }, cliRunTestTimeout)
