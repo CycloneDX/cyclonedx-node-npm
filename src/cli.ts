@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import {existsSync, mkdirSync, openSync} from 'node:fs'
+import {closeSync, existsSync, mkdirSync, openSync} from 'node:fs'
 import {dirname, resolve} from 'node:path'
 
 import { Builders as FromNodePackageJsonBuilders, Factories as FromNodePackageJsonFactories } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
@@ -409,11 +409,18 @@ export async function run(process_: NodeJS.Process): Promise<number> {
     }
     outputFD = openSync(outputFPn, 'w')
   }
-  myConsole.log('LOG   | writing BOM to: %s', options.outputFile)
-  const written = await writeAllSync(outputFD, serialized)
-  myConsole.info('INFO  | wrote %d bytes to %s', written, options.outputFile)
 
-  return written > 0
-    ? ExitCode.SUCCESS
-    : ExitCode.FAILURE
+  try {
+    myConsole.log('LOG   | writing BOM to: %s', options.outputFile)
+    const written = await writeAllSync(outputFD, serialized)
+    myConsole.info('INFO  | wrote %d bytes to %s', written, options.outputFile)
+
+    return written > 0
+      ? ExitCode.SUCCESS
+      : ExitCode.FAILURE
+  } finally {
+    if (outputFD !== process_.stdout.fd) {
+      closeSync(outputFD)
+    }
+  }
 }

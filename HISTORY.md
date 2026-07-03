@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Fixed
+  * Properly closing output file (via [#])
+
+[#]: 
+
 ## 5.0.0 - 2026-06-16
 
 * BREAKING Changes
