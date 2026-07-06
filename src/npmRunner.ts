@@ -117,10 +117,10 @@ export class NpmRunner {
     } finally {
       tmpDir.remove()
     }
+
     if (npmPath === '' || !existsSync(npmPath)) {
       throw new Error(`Missing system NPM ${JSON.stringify(npmPath)}`)
     }
-
     console_.debug('DEBUG | system NPM found: %s', npmPath)
     return npmPath
   }
