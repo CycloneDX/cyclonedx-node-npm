@@ -20,8 +20,7 @@ REM SPDX-License-Identifier: Apache-2.0
 REM ------------------------------------------------------------
 
 if "%~1"=="--version" (
-    REM echo %CT_VERSION%
-    echo 11.0.0
+    echo %CT_VERSION%
     exit /b 0
 )
 
