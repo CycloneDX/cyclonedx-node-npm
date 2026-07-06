@@ -65,32 +65,34 @@ export class NpmRunner {
     return this.#version
   }
 
-  static #getExecPath (process_: NodeJS.Process, console_: Console): string | undefined {
+  static #getExecPathEnv (process_: NodeJS.Process, console_: Console): string | undefined {
+    console_.debug('DEBUG | looking up env NPM...')
     // `npm_execpath` will be whichever cli script has called this application by npm.
     // This can be `npm`, `npx`, or `undefined` if called by `node` directly.
-    const execPath = process_.env.npm_execpath ?? ''
-    if (execPath === '') {
+     
+    let npmPath = process_.env.npm_execpath ?? ''
+    if (npmPath === '') {
+      console_.debug('DEBUG | env NPM empty')
       return undefined
     }
 
-    if (NpmRunner.#npxMatcher.test(execPath)) {
+    if (NpmRunner.#npxMatcher.test(npmPath)) {
       // https://github.com/npm/cli/issues/6662
       console_.debug('DEBUG | command: npx-cli.js usage detected, checking for npm-cli.js ...')
       // Typically `npm-cli.js` is alongside `npx-cli.js`, as such we attempt to use this and validate it exists.
       // Replace the script in the path, and normalise it with resolve (eliminates any extraneous path separators).
-      const npmPath = resolve(execPath.replace(NpmRunner.#npxMatcher, '$1npm-cli.js'))
-      if (existsSync(npmPath)) {
-        return npmPath
-      }
-    } else if (existsSync(execPath)) {
-      return execPath
+      npmPath = resolve(npmPath.replace(NpmRunner.#npxMatcher, '$1npm-cli.js'))
     }
 
-    throw new Error(`unexpected NPM execPath: ${execPath}`)
+    if (!existsSync(npmPath)) {
+      throw new Error(`Missing env NPM ${JSON.stringify(npmPath)}`)
+    }
+    console_.debug('DEBUG | env NPM found: %s', npmPath)
+    return npmPath
   }
 
-  static #getSystemNpmPath(console_: Console): string {
-    console_.debug('DEBUG |  looking up system NPM...')
+  static #getExecPathSys(console_: Console): string {
+    console_.debug('DEBUG | looking up system NPM...')
     /* eslint-disable-next-line no-useless-assignment -- ack */
     let npmPath = ''
 
@@ -129,8 +131,8 @@ export class NpmRunner {
   }
 
   static #makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
-    const execPath = NpmRunner.#getExecPath(process_, console_)
-      ?? NpmRunner.#getSystemNpmPath(console_)
+    const execPath = NpmRunner.#getExecPathEnv(process_, console_)
+      ?? NpmRunner.#getExecPathSys(console_)
 
     if (!NpmRunner.#jsMatcher.test(execPath)) {
       throw new Error(`unexpected NPM execPath: ${execPath}`)
