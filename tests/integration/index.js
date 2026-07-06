@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { closeSync, createWriteStream, openSync } = require('node:fs')
+const { createWriteStream, openSync } = require('node:fs')
 const { mkdtempSync } = require('node:fs')
 const { join, resolve } = require('node:path')
 
@@ -92,10 +92,10 @@ function runCLI (args, logFileBase, cwd, env) {
     platform: process.platform,
   }
 
-  const res = cli.run(mockProcess).finally(() => {
-    stdout.end()
-    stderr.end()
-  })
+  const res = cli.run(mockProcess).finally(() => Promise.all([
+    new Promise(resolve => { stdout.end(resolve) }),
+    new Promise(resolve => { stderr.end(resolve) })
+  ]))
 
   return { res, outFile, errFile }
 }
