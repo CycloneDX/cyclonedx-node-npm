@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { type CommonExecOptions, execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'node:child_process'
-import { existsSync, mkdtempDisposableSync, openSync, writeFileSync } from 'node:fs'
+import { closeSync, existsSync, mkdtempDisposableSync, openSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 
@@ -90,15 +90,15 @@ export class NpmRunner {
   }
 
   static #getSystemNpmPath(console_: Console): string {
-    console_.debug('DEBUG | looking up system NPM...')
+    console_.debug('DEBUG |  looking up system NPM...')
     /* eslint-disable-next-line no-useless-assignment -- ack */
     let npmPath = ''
 
     const tmpDir = mkdtempDisposableSync(join(tmpdir(), 'cyclonedx-npm_execpath-'))
     try {
-      writeFileSync(
-        openSync(join(tmpDir.path, 'package.json'), 'w'),
-        JSON.stringify({
+      const tempFile = openSync(join(tmpDir.path, 'package.json'), 'w')
+      try {
+        writeFileSync(tempFile, JSON.stringify({
           'private': true,
           'name': '@cyclonedx/cyclonedx-npm_execpath',
           'scripts': {
@@ -106,6 +106,9 @@ export class NpmRunner {
             'npm_execpath': 'node -p process.env.npm_execpath'
           }
         }))
+      } finally {
+        closeSync(tempFile)
+      }
       npmPath = execSync('npm --silent run npm_execpath', {
         cwd: tmpDir.path,
         stdio: ['ignore', 'pipe', 'ignore'],
@@ -113,7 +116,7 @@ export class NpmRunner {
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
       }).toString().trim()
     } catch (err) {
-      throw new Error('Failed looking up NPM', { cause: err })
+      throw new Error('Failed looking up system NPM', { cause: err })
     } finally {
       tmpDir.remove()
     }
