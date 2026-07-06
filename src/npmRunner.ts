@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { type CommonExecOptions, execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'node:child_process'
 import { existsSync } from 'node:fs'
-import { resolve } from 'node:path'
+import { join, resolve } from 'node:path'
 
 /** !attention: args might not be shell-save. */
 type runFunc = (args: string[], options: ExecSyncOptionsWithBufferEncoding) => Buffer
@@ -41,16 +41,14 @@ export class NpmRunner {
    *   - foo/npx-cli_js     // Invalid extension
    *   - npx-cli.js/foo.sh  // Directory of the same name
    */
-  static readonly #npxMatcher = /(^|\\|\/)npx-cli\.js$/
+  static readonly #npxMatcher = /(^|\\|\/)npx-cli\.[cm]?js$/
 
-  static readonly #winExeMatcher = /\.(exe|com)$/i
-  static readonly #winCmdMatcher = /\.(cmd|bat)$/i
+  run: runFunc
 
   constructor (process_: NodeJS.Process, console_: Console) {
     this.run = NpmRunner.#makeNpmRunner(process_, console_)
   }
 
-  run: runFunc
 
   #version: string | undefined
 
@@ -90,38 +88,33 @@ export class NpmRunner {
     throw new Error(`unexpected NPM execPath: ${execPath}`)
   }
 
-  static #getSystemNpmPath (process_: NodeJS.Process, console_: Console): string {
+  static #getSystemNpmPath (console_: Console): string {
     console_.debug('DEBUG | lookup system NPM...')
-    const npmPath = NpmRunner.#isWindows(process_)
-      ? execSync('where npm').toString().split(/\r?\n/).find(s => NpmRunner.#winExeMatcher.test(s) || NpmRunner.#winCmdMatcher.test(s))
-      : execSync('which npm').toString().trim()
-    if (npmPath === undefined || npmPath === '') {
-      throw new Error('missing system NPM')
+
+    const npmPathPrefix = execSync('npm prefix -g').toString().trim()
+    if (npmPathPrefix === '') {
+      throw new Error('missing system NPM prefix')
     }
+
+    const npmPath = join(npmPathPrefix, 'node_modules', 'npm', 'bin', 'npm-cli.js')
+    if (!existsSync(npmPath) ) {
+      throw new Error(`missing system NPM ${JSON.stringify(npmPath)}`)
+    }
+
     console_.debug('DEBUG | system NPM found: %s', npmPath)
     return npmPath
   }
 
   static #makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
     const execPath = NpmRunner.#getExecPath(process_, console_)
-                  ?? NpmRunner.#getSystemNpmPath(process_, console_)
+      ?? NpmRunner.#getSystemNpmPath(console_)
 
-    if (NpmRunner.#jsMatcher.test(execPath)) {
-      const nodeExecPath = process_.execPath
-      console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with "-- %s"', nodeExecPath, execPath)
-      return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
+    if (!NpmRunner.#jsMatcher.test(execPath)) {
+      throw new Error(`unexpected NPM execPath: ${execPath}`)
     }
 
-    if (NpmRunner.#isWindows(process_) && NpmRunner.#winCmdMatcher.test(execPath)) {
-      console_.debug('DEBUG | makeNpmRunner caused execFileSync "cmd.exe" with "/c %s"', execPath)
-      return (args, options) => execFileSync('cmd.exe', ['/c', execPath, ...args], options)
-    }
-
-    console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s"', execPath)
-    return (args, options) => execFileSync(execPath, args, options)
-  }
-
-  static #isWindows(process_: NodeJS.Process): boolean {
-    return process_.platform.startsWith('win')
+    const nodeExecPath = process_.execPath
+    console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with "-- %s"', nodeExecPath, execPath)
+    return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
   }
 }
