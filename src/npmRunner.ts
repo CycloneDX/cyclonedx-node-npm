@@ -18,7 +18,8 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { type CommonExecOptions, execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'node:child_process'
-import { existsSync } from 'node:fs'
+import { existsSync, mkdtempDisposableSync, openSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 
 /** !attention: args might not be shell-save. */
@@ -73,7 +74,7 @@ export class NpmRunner {
     }
 
     if (NpmRunner.#npxMatcher.test(execPath)) {
-      // `npm` must be used for executing `ls`.
+      // https://github.com/npm/cli/issues/6662
       console_.debug('DEBUG | command: npx-cli.js usage detected, checking for npm-cli.js ...')
       // Typically `npm-cli.js` is alongside `npx-cli.js`, as such we attempt to use this and validate it exists.
       // Replace the script in the path, and normalise it with resolve (eliminates any extraneous path separators).
@@ -88,17 +89,36 @@ export class NpmRunner {
     throw new Error(`unexpected NPM execPath: ${execPath}`)
   }
 
-  static #getSystemNpmPath (console_: Console): string {
-    console_.debug('DEBUG | lookup system NPM...')
+  static #getSystemNpmPath(console_: Console): string {
+    console_.debug('DEBUG | looking up system NPM...')
+    /* eslint-disable-next-line no-useless-assignment -- ack */
+    let npmPath = ''
 
-    const npmPathPrefix = execSync('npm prefix -g').toString().trim()
-    if (npmPathPrefix === '') {
-      throw new Error('missing system NPM prefix')
+    const tmpDir = mkdtempDisposableSync(join(tmpdir(), 'cyclonedx-npm_execpath-'))
+    try {
+      writeFileSync(
+        openSync(join(tmpDir.path, 'package.json'), 'w'),
+        JSON.stringify({
+          'private': true,
+          'name': '@cyclonedx/cyclonedx-npm_execpath',
+          'scripts': {
+            // no quotes - stay OS independent
+            'npm_execpath': 'node -p process.env.npm_execpath'
+          }
+        }))
+      npmPath = execSync('npm --silent run npm_execpath', {
+        cwd: tmpDir.path,
+        stdio: ['ignore', 'pipe', 'ignore'],
+        encoding: 'buffer',
+        maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
+      }).toString().trim()
+    } catch (err) {
+      throw new Error('Failed looking up NPM', { cause: err })
+    } finally {
+      tmpDir.remove()
     }
-
-    const npmPath = join(npmPathPrefix, 'node_modules', 'npm', 'bin', 'npm-cli.js')
-    if (!existsSync(npmPath) ) {
-      throw new Error(`missing system NPM ${JSON.stringify(npmPath)}`)
+    if (npmPath === '' || !existsSync(npmPath)) {
+      throw new Error(`Missing system NPM ${JSON.stringify(npmPath)}`)
     }
 
     console_.debug('DEBUG | system NPM found: %s', npmPath)
