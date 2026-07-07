@@ -8,7 +8,8 @@ All notable changes to this project will be documented in this file.
 
 
 * BREAKING Changes
-  * Reworked `npm` detection and handling.
+  * Reworked `npm` detection and handling.  
+    The behavior when `npm_execpath` is present remains unchanged.
 * Fixed
   * Eliminated a potential shell‑injection vulnerability in the `--workspace` argument on Windows (via [#1489])  
     See <https://github.com/CycloneDX/cyclonedx-node-npm/security/advisories/GHSA-q69g-4hcv-6jg4>
