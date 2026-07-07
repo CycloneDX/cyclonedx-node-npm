@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import type { NonSharedBuffer } from "node:buffer";
 import type { ExecFileSyncOptions, ExecFileSyncOptionsWithBufferEncoding, ExecFileSyncOptionsWithStringEncoding } from 'node:child_process'
-import { execFileSync, execSync } from 'node:child_process'
+import { execFileSync } from 'node:child_process'
 import { closeSync, existsSync, mkdtempSync, openSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
@@ -119,9 +119,10 @@ export class NpmRunner {
       } finally {
         closeSync(packageManifestFH)
       }
-      npmPath = execSync('npm run --silent npm_execpath', {
+      npmPath = execFileSync('npm', ['run', '--silent', 'npm_execpath'], {
         cwd: tmpDir,
         env: process_.env,
+        shell: false,
         windowsHide: true,
         stdio: ['ignore', 'pipe', 'ignore'],
         encoding: 'utf-8'
