@@ -92,7 +92,7 @@ export class NpmRunner {
     }
 
     if (!existsSync(npmPath)) {
-      throw new Error(`Missing env NPM ${JSON.stringify(npmPath)}`)
+      throw new Error(`Environment variable "npm_execpath" is set, but the path does not exist: ${JSON.stringify(npmPath)}`)
     }
     console_.debug('DEBUG | env NPM found: %s', npmPath)
     return npmPath
@@ -141,21 +141,22 @@ export class NpmRunner {
   }
 
   static #makeNpmRunner (process_: NodeJS.Process, console_: Console): RunFunc {
-    const execPath = NpmRunner.#getExecPathEnv(process_, console_)
+    const npmJsPath = NpmRunner.#getExecPathEnv(process_, console_)
       ?? NpmRunner.#getExecPathSys(process_, console_)
 
-    if (!NpmRunner.#jsMatcher.test(execPath)) {
-      throw new Error(`Unexpected NPM execPath: ${execPath}`)
+    if (!NpmRunner.#jsMatcher.test(npmJsPath)) {
+      // expected the NPM CLI js here ...
+      throw new Error(`Unexpected npmJsPath: ${npmJsPath}`)
     }
 
     const nodeExecPath = process_.execPath
-    console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with "-- %s"', nodeExecPath, execPath)
+    console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with "-- %s"', nodeExecPath, npmJsPath)
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- false-negative */
     return (
       (args, options) => execFileSync(
       nodeExecPath,
-      ['--', execPath, ...args],
-      {...(options??{}), shell: false, windowsHide: true})
+      ['--', npmJsPath, ...args],
+      {...(options??{}), shell:false, windowsHide:true})
     ) as RunFunc
   }
 }

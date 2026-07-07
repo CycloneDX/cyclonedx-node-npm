@@ -99,7 +99,7 @@ describe('integration.cli.edge-cases', () => {
       })
 
       try {
-        await expect(res).rejects.toThrow(/^missing env NPM/i)
+        await expect(res).rejects.toThrow(/does not exist/i)
       } catch (err) {
         process.stderr.write(readFileSync(errFile))
         throw err
@@ -115,7 +115,7 @@ describe('integration.cli.edge-cases', () => {
       })
 
       try {
-        await expect(res).rejects.toThrow(/^unexpected NPM execPath/i)
+        await expect(res).rejects.toThrow(/unexpected npmJsPath/i)
       } catch (err) {
         process.stderr.write(readFileSync(errFile))
         throw err
