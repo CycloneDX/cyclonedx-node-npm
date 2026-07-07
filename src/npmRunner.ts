@@ -17,15 +17,23 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { type CommonExecOptions, execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'node:child_process'
+import type { NonSharedBuffer } from "node:buffer";
+import type { ExecFileSyncOptions, ExecFileSyncOptionsWithBufferEncoding, ExecFileSyncOptionsWithStringEncoding } from 'node:child_process'
+import { execFileSync, execSync } from 'node:child_process'
 import { closeSync, existsSync, mkdtempSync, openSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 
-/** !attention: args might not be shell-save. */
-type runFunc = (args: string[], options: ExecSyncOptionsWithBufferEncoding) => Buffer
+/* eslint-disable @typescript-eslint/no-deprecated -- typing compat */
+interface RunFunc { // is a wrapper for `execFileSync`
+  (args: readonly string[], options: ExecFileSyncOptionsWithStringEncoding): string;
+  (args: readonly string[], options: ExecFileSyncOptionsWithBufferEncoding): NonSharedBuffer;
+  (args: readonly string[], options?: ExecFileSyncOptions): ReturnType<typeof execFileSync>;
+}
+/* eslint-enable @typescript-eslint/no-deprecated */
 
 export class NpmRunner {
+
   static readonly #jsMatcher = /\.[cm]?js$/
 
   /**
@@ -44,7 +52,7 @@ export class NpmRunner {
    */
   static readonly #npxMatcher = /(^|\\|\/)npx-cli\.js$/
 
-  run: runFunc
+  run: RunFunc
 
   constructor (process_: NodeJS.Process, console_: Console) {
     this.run = NpmRunner.#makeNpmRunner(process_, console_)
@@ -53,14 +61,13 @@ export class NpmRunner {
 
   #version: string | undefined
 
-  getVersion (options: CommonExecOptions = {}): string {
+  getVersion (options: ExecFileSyncOptions = {}): string {
     if (this.#version === undefined) {
       this.#version = this.run(['--version'], {
         ...options,
         stdio: ['ignore', 'pipe', 'ignore'],
-        encoding: 'buffer',
-        maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
-      }).toString().trim()
+        encoding: 'utf-8'
+      }).trim()
     }
     return this.#version
   }
@@ -115,15 +122,15 @@ export class NpmRunner {
       npmPath = execSync('npm run --silent npm_execpath', {
         cwd: tmpDir,
         env: process_.env,
+        windowsHide: true,
         stdio: ['ignore', 'pipe', 'ignore'],
-        encoding: 'buffer',
-        maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
-      }).toString().trim()
+        encoding: 'utf-8'
+      }).trim()
     } catch (err) {
-      throw new Error('Failed looking up system NPM', { cause: err })
+      throw new Error('Failed looking up system NPM', {cause:err})
     } finally {
-      rmSync(packageManifest, { force: true })
-      rmSync(tmpDir, { recursive: true, force: true })
+      rmSync(packageManifest, {force:true})
+      rmSync(tmpDir, {recursive:true, force:true})
     }
 
     if (npmPath === '' || !existsSync(npmPath)) {
@@ -133,7 +140,7 @@ export class NpmRunner {
     return npmPath
   }
 
-  static #makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
+  static #makeNpmRunner (process_: NodeJS.Process, console_: Console): RunFunc {
     const execPath = NpmRunner.#getExecPathEnv(process_, console_)
       ?? NpmRunner.#getExecPathSys(process_, console_)
 
@@ -143,6 +150,12 @@ export class NpmRunner {
 
     const nodeExecPath = process_.execPath
     console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with "-- %s"', nodeExecPath, execPath)
-    return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- false-negative */
+    return (
+      (args, options) => execFileSync(
+      nodeExecPath,
+      ['--', execPath, ...args],
+      {...(options??{}), shell: false, windowsHide: true})
+    ) as RunFunc
   }
 }
