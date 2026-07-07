@@ -18,7 +18,7 @@ All notable changes to this project will be documented in this file.
   * Added more regression test for shell injections (via [#1488])
 
 [#1484]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1484
-[=1488]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1488
+[#1488]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1488
 [#1489]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1489
 
 ## 5.0.0 - 2026-06-16
