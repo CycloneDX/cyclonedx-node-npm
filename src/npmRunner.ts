@@ -146,7 +146,7 @@ export class NpmRunner {
 
     if (!NpmRunner.#jsMatcher.test(npmJsPath)) {
       // expected the NPM CLI js here ...
-      throw new Error(`Unexpected npmJsPath: ${npmJsPath}`)
+      throw new Error(`Unexpected npmJsPath ${JSON.stringify(npmJsPath)}`)
     }
 
     const nodeExecPath = process_.execPath
