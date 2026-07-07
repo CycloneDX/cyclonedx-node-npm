@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { type CommonExecOptions, execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'node:child_process'
-import { closeSync, existsSync, mkdtempDisposableSync, openSync, writeFileSync } from 'node:fs'
+import { closeSync, existsSync, mkdtempSync, openSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 
@@ -96,11 +96,12 @@ export class NpmRunner {
     /* eslint-disable-next-line no-useless-assignment -- ack */
     let npmPath = ''
 
-    const tmpDir = mkdtempDisposableSync(join(tmpdir(), 'cyclonedx-npm_execpath-'))
+    const tmpDir = mkdtempSync(join(tmpdir(), 'cyclonedx-npm_execpath-'))
+    const packageManifest = join(tmpDir, 'package.json')
     try {
-      const tempFile = openSync(join(tmpDir.path, 'package.json'), 'w')
+      const packageManifestFH = openSync(packageManifest, 'w')
       try {
-        writeFileSync(tempFile, JSON.stringify({
+        writeFileSync(packageManifestFH, JSON.stringify({
           'private': true,
           'name': '@cyclonedx/cyclonedx-npm_execpath',
           'scripts': {
@@ -109,10 +110,10 @@ export class NpmRunner {
           }
         }))
       } finally {
-        closeSync(tempFile)
+        closeSync(packageManifestFH)
       }
       npmPath = execSync('npm run --silent npm_execpath', {
-        cwd: tmpDir.path,
+        cwd: tmpDir,
         env: process_.env,
         stdio: ['ignore', 'pipe', 'ignore'],
         encoding: 'buffer',
@@ -121,7 +122,8 @@ export class NpmRunner {
     } catch (err) {
       throw new Error('Failed looking up system NPM', { cause: err })
     } finally {
-      tmpDir.remove()
+      rmSync(packageManifest, { force: true })
+      rmSync(tmpDir, { recursive: true, force: true })
     }
 
     if (npmPath === '' || !existsSync(npmPath)) {
