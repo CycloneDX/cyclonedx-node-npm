@@ -174,3 +174,6 @@ dist
 
 ## caches
 /*.cache
+
+## test files
+*sentinel*
