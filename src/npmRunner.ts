@@ -42,7 +42,7 @@ export class NpmRunner {
    *   - foo/npx-cli_js     // Invalid extension
    *   - npx-cli.js/foo.sh  // Directory of the same name
    */
-  static readonly #npxMatcher = /(^|\\|\/)npx-cli\.[cm]?js$/
+  static readonly #npxMatcher = /(^|\\|\/)npx-cli\.js$/
 
   run: runFunc
 
