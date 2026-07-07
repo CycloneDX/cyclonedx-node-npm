@@ -69,7 +69,7 @@ export class NpmRunner {
     console_.debug('DEBUG | looking up env NPM...')
     // `npm_execpath` will be whichever cli script has called this application by npm.
     // This can be `npm`, `npx`, or `undefined` if called by `node` directly.
-     
+
     let npmPath = process_.env.npm_execpath ?? ''
     if (npmPath === '') {
       console_.debug('DEBUG | env NPM empty')
@@ -91,7 +91,7 @@ export class NpmRunner {
     return npmPath
   }
 
-  static #getExecPathSys(console_: Console): string {
+  static #getExecPathSys(process_: NodeJS.Process, console_: Console): string {
     console_.debug('DEBUG | looking up system NPM...')
     /* eslint-disable-next-line no-useless-assignment -- ack */
     let npmPath = ''
@@ -111,8 +111,9 @@ export class NpmRunner {
       } finally {
         closeSync(tempFile)
       }
-      npmPath = execSync('npm --silent run npm_execpath', {
+      npmPath = execSync('npm run --silent npm_execpath', {
         cwd: tmpDir.path,
+        env: process_.env,
         stdio: ['ignore', 'pipe', 'ignore'],
         encoding: 'buffer',
         maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
@@ -132,7 +133,7 @@ export class NpmRunner {
 
   static #makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
     const execPath = NpmRunner.#getExecPathEnv(process_, console_)
-      ?? NpmRunner.#getExecPathSys(console_)
+      ?? NpmRunner.#getExecPathSys(process_, console_)
 
     if (!NpmRunner.#jsMatcher.test(execPath)) {
       throw new Error(`unexpected NPM execPath: ${execPath}`)
