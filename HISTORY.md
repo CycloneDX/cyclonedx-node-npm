@@ -7,9 +7,9 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Fixed
-  * Properly closing output file (via [#])
+  * Properly closing output file (via [#1484])
 
-[#]: 
+[#1484]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1484
 
 ## 5.0.0 - 2026-06-16
 
