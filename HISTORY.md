@@ -15,7 +15,7 @@ All notable changes to this project will be documented in this file.
     See <https://github.com/CycloneDX/cyclonedx-node-npm/security/advisories/GHSA-q69g-4hcv-6jg4>
   * Properly closing output file (via [#1484])
 * Tests
-  * Added more regression test for shell injections (via [#1488], [#1489])
+  * Added more regression test for shell injections (via [#1488])
 
 [#1484]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1484
 [=1488]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1488
