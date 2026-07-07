@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 6.0.0 - 2026-07-07
 
 * BREAKING Changes
   * Reworked `npm` detection and handling.  
