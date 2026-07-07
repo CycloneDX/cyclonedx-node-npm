@@ -17,14 +17,23 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { type CommonExecOptions, execFileSync, execSync, type ExecSyncOptionsWithBufferEncoding } from 'node:child_process'
-import { existsSync } from 'node:fs'
-import { resolve } from 'node:path'
+import type { NonSharedBuffer } from "node:buffer";
+import type { ExecFileSyncOptions, ExecFileSyncOptionsWithBufferEncoding, ExecFileSyncOptionsWithStringEncoding } from 'node:child_process'
+import { execFileSync, execSync } from 'node:child_process'
+import { closeSync, existsSync, mkdtempSync, openSync, rmSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join, resolve } from 'node:path'
 
-/** !attention: args might not be shell-save. */
-type runFunc = (args: string[], options: ExecSyncOptionsWithBufferEncoding) => Buffer
+/* eslint-disable @typescript-eslint/no-deprecated -- typing compat */
+interface RunFunc { // is a wrapper for `execFileSync`
+  (args: readonly string[], options: ExecFileSyncOptionsWithStringEncoding): string;
+  (args: readonly string[], options: ExecFileSyncOptionsWithBufferEncoding): NonSharedBuffer;
+  (args: readonly string[], options?: ExecFileSyncOptions): ReturnType<typeof execFileSync>;
+}
+/* eslint-enable @typescript-eslint/no-deprecated */
 
 export class NpmRunner {
+
   static readonly #jsMatcher = /\.[cm]?js$/
 
   /**
@@ -43,85 +52,111 @@ export class NpmRunner {
    */
   static readonly #npxMatcher = /(^|\\|\/)npx-cli\.js$/
 
-  static readonly #winExeMatcher = /\.(exe|com)$/i
-  static readonly #winCmdMatcher = /\.(cmd|bat)$/i
+  run: RunFunc
 
   constructor (process_: NodeJS.Process, console_: Console) {
     this.run = NpmRunner.#makeNpmRunner(process_, console_)
   }
 
-  run: runFunc
 
   #version: string | undefined
 
-  getVersion (options: CommonExecOptions = {}): string {
+  getVersion (options: ExecFileSyncOptions = {}): string {
     if (this.#version === undefined) {
       this.#version = this.run(['--version'], {
         ...options,
         stdio: ['ignore', 'pipe', 'ignore'],
-        encoding: 'buffer',
-        maxBuffer: Number.MAX_SAFE_INTEGER // DIRTY but effective
-      }).toString().trim()
+        encoding: 'utf-8'
+      }).trim()
     }
     return this.#version
   }
 
-  static #getExecPath (process_: NodeJS.Process, console_: Console): string | undefined {
+  static #getExecPathEnv (process_: NodeJS.Process, console_: Console): string | undefined {
+    console_.debug('DEBUG | looking up env NPM...')
     // `npm_execpath` will be whichever cli script has called this application by npm.
     // This can be `npm`, `npx`, or `undefined` if called by `node` directly.
-    const execPath = process_.env.npm_execpath ?? ''
-    if (execPath === '') {
+
+    let npmPath = process_.env.npm_execpath ?? ''
+    if (npmPath === '') {
+      console_.debug('DEBUG | env NPM empty')
       return undefined
     }
 
-    if (NpmRunner.#npxMatcher.test(execPath)) {
-      // `npm` must be used for executing `ls`.
+    if (NpmRunner.#npxMatcher.test(npmPath)) {
+      // https://github.com/npm/cli/issues/6662
       console_.debug('DEBUG | command: npx-cli.js usage detected, checking for npm-cli.js ...')
       // Typically `npm-cli.js` is alongside `npx-cli.js`, as such we attempt to use this and validate it exists.
       // Replace the script in the path, and normalise it with resolve (eliminates any extraneous path separators).
-      const npmPath = resolve(execPath.replace(NpmRunner.#npxMatcher, '$1npm-cli.js'))
-      if (existsSync(npmPath)) {
-        return npmPath
-      }
-    } else if (existsSync(execPath)) {
-      return execPath
+      npmPath = resolve(npmPath.replace(NpmRunner.#npxMatcher, '$1npm-cli.js'))
     }
 
-    throw new Error(`unexpected NPM execPath: ${execPath}`)
+    if (!existsSync(npmPath)) {
+      throw new Error(`Environment variable "npm_execpath" is set, but the path does not exist: ${JSON.stringify(npmPath)}`)
+    }
+    console_.debug('DEBUG | env NPM found: %s', npmPath)
+    return npmPath
   }
 
-  static #getSystemNpmPath (process_: NodeJS.Process, console_: Console): string {
-    console_.debug('DEBUG | lookup system NPM...')
-    const npmPath = NpmRunner.#isWindows(process_)
-      ? execSync('where npm').toString().split(/\r?\n/).find(s => NpmRunner.#winExeMatcher.test(s) || NpmRunner.#winCmdMatcher.test(s))
-      : execSync('which npm').toString().trim()
-    if (npmPath === undefined || npmPath === '') {
-      throw new Error('missing system NPM')
+  static #getExecPathSys(process_: NodeJS.Process, console_: Console): string {
+    console_.debug('DEBUG | looking up system NPM...')
+    /* eslint-disable-next-line no-useless-assignment -- ack */
+    let npmPath = ''
+
+    const tmpDir = mkdtempSync(join(tmpdir(), 'cyclonedx-npm_execpath-'))
+    const packageManifest = join(tmpDir, 'package.json')
+    try {
+      const packageManifestFH = openSync(packageManifest, 'w')
+      try {
+        writeFileSync(packageManifestFH, JSON.stringify({
+          'private': true,
+          'name': '@cyclonedx/cyclonedx-npm_execpath',
+          'scripts': {
+            // no quotes - stay OS independent
+            'npm_execpath': 'node -p process.env.npm_execpath'
+          }
+        }))
+      } finally {
+        closeSync(packageManifestFH)
+      }
+      npmPath = execSync('npm run --silent npm_execpath', {
+        cwd: tmpDir,
+        env: process_.env,
+        windowsHide: true,
+        stdio: ['ignore', 'pipe', 'ignore'],
+        encoding: 'utf-8'
+      }).trim()
+    } catch (err) {
+      throw new Error('Failed looking up system NPM', {cause:err})
+    } finally {
+      rmSync(packageManifest, {force:true})
+      rmSync(tmpDir, {recursive:true, force:true})
+    }
+
+    if (npmPath === '' || !existsSync(npmPath)) {
+      throw new Error(`Missing system NPM ${JSON.stringify(npmPath)}`)
     }
     console_.debug('DEBUG | system NPM found: %s', npmPath)
     return npmPath
   }
 
-  static #makeNpmRunner (process_: NodeJS.Process, console_: Console): runFunc {
-    const execPath = NpmRunner.#getExecPath(process_, console_)
-                  ?? NpmRunner.#getSystemNpmPath(process_, console_)
+  static #makeNpmRunner (process_: NodeJS.Process, console_: Console): RunFunc {
+    const npmJsPath = NpmRunner.#getExecPathEnv(process_, console_)
+      ?? NpmRunner.#getExecPathSys(process_, console_)
 
-    if (NpmRunner.#jsMatcher.test(execPath)) {
-      const nodeExecPath = process_.execPath
-      console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with "-- %s"', nodeExecPath, execPath)
-      return (args, options) => execFileSync(nodeExecPath, ['--', execPath, ...args], options)
+    if (!NpmRunner.#jsMatcher.test(npmJsPath)) {
+      // expected the NPM CLI js here ...
+      throw new Error(`Unexpected npmJsPath ${JSON.stringify(npmJsPath)}`)
     }
 
-    if (NpmRunner.#isWindows(process_) && NpmRunner.#winCmdMatcher.test(execPath)) {
-      console_.debug('DEBUG | makeNpmRunner caused execFileSync "cmd.exe" with "/c %s"', execPath)
-      return (args, options) => execFileSync('cmd.exe', ['/c', execPath, ...args], options)
-    }
-
-    console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s"', execPath)
-    return (args, options) => execFileSync(execPath, args, options)
-  }
-
-  static #isWindows(process_: NodeJS.Process): boolean {
-    return process_.platform.startsWith('win')
+    const nodeExecPath = process_.execPath
+    console_.debug('DEBUG | makeNpmRunner caused execFileSync "%s" with "-- %s"', nodeExecPath, npmJsPath)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- false-negative */
+    return (
+      (args, options) => execFileSync(
+      nodeExecPath,
+      ['--', npmJsPath, ...args],
+      {...(options??{}), shell:false, windowsHide:true})
+    ) as RunFunc
   }
 }
