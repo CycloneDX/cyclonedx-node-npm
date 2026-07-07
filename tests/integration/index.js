@@ -41,6 +41,7 @@ const npmLsReplacement = {
   checkArgs: join(npmLsReplacementPath, 'check-args.js'),
   demoResults: join(npmLsReplacementPath, 'demo-results.js'),
   justExit: join(npmLsReplacementPath, 'just-exit.js'),
+  justExitCmd: join(npmLsReplacementPath, 'just-exit.cmd'),
   nonExistingBinary: join(npmLsReplacementPath, 'aNonExistingBinary')
 }
 
@@ -91,10 +92,10 @@ function runCLI (args, logFileBase, cwd, env) {
     platform: process.platform,
   }
 
-  /**
-   * @type {Promise<number>}
-   */
-  const res = cli.run(mockProcess)
+  const res = cli.run(mockProcess).finally(() => Promise.all([
+    new Promise(resolve => { stdout.end(resolve) }),
+    new Promise(resolve => { stderr.end(resolve) })
+  ]))
 
   return { res, outFile, errFile }
 }

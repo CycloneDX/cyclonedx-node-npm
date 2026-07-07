@@ -17,12 +17,12 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { existsSync, mkdirSync, readFileSync } = require('node:fs')
+const { existsSync, mkdirSync, readFileSync, writeFileSync } = require('node:fs')
 const { join } = require('node:path')
 
 const { describe, expect, test } = require('@jest/globals')
 
-const { dummyProjectsRoot, mkTemp, npmLsReplacement, runCLI } = require('./')
+const { NPM_LATETS, dummyProjectsRoot, mkTemp, npmLsReplacement, runCLI } = require('./')
 
 describe('integration.cli.args-pass-through', () => {
   const cliRunTestTimeout = 15000
@@ -83,6 +83,7 @@ describe('integration.cli.args-pass-through', () => {
 
       const { res, errFile } = runCLI([
         ...cdxArgs,
+        '-vvvv',
         '--',
         join('with-lockfile', 'package.json')
       ], logFileBase, cwd, {
@@ -104,47 +105,91 @@ describe('integration.cli.args-pass-through', () => {
     const tmpRootRun = join(tmpRoot, 'shell_injection_proof')
     mkdirSync(tmpRootRun)
 
-    function mkPayload (sentinelFile) {
-      return process.platform.startsWith('win')
-        ? `& type nul > "${sentinelFile}" &`
-        : `; touch '${sentinelFile}' ;`
+    const runsOnWindows = process.platform.startsWith('win')
+
+    const npmExecpaths = {
+      system: undefined,
+      'js-file': npmLsReplacement.justExit,
+    }
+    if (runsOnWindows) {
+      npmExecpaths['cmd-file'] = npmLsReplacement.justExitCmd
     }
 
-    test.each([
-      // region workspace
-      (function () {
-        const sentinelFile = join(tmpRootRun, 'sentinelFile_workspace-single.txt')
-        return [
-          'single --workspace with shell metacharacters',
-          ['--workspace', mkPayload(sentinelFile)],
-          sentinelFile
-        ]
-      })(),
-      (function () {
-        const sentinelFile = join(tmpRootRun, 'sentinelFile_workspace-chained.txt')
-        return [
-          'chained --workspace: legitimate then malicious',
-          ['--workspace', 'legitimate-workspace', '-w', mkPayload(sentinelFile)],
-          sentinelFile
-        ]
-      })(),
-      // endregion workspace
-    ])('%s', async (purpose, cdxArgs, sentinelFile) => {
+    const mkPayload4type = {
+      'shell metacharacters': function (sentinelFile) {
+        return runsOnWindows
+          ? `x & type nul > ${sentinelFile} & echo `
+          : `x ; touch ${sentinelFile} ; echo `
+      },
+      'shell metacharacters heading single-quote': function (sentinelFile) {
+        return runsOnWindows
+          ? `x' & type nul > ${sentinelFile} & echo `
+          : `x' ; touch ${sentinelFile} ; echo '`
+      },
+      'shell metacharacters heading double-quote': function (sentinelFile) {
+        return runsOnWindows
+          ? `x" & type nul > ${sentinelFile} & echo `
+          : `x" ; touch ${sentinelFile} ; echo "`
+      },
+      'shell metacharacters surrounding single-quote': function (sentinelFile) {
+        return runsOnWindows
+          ? `x' & type nul > ${sentinelFile} & echo '`
+          : `x' ; touch ${sentinelFile} ; echo '`
+      },
+      'shell metacharacters surrounding double-quote': function (sentinelFile) {
+        return runsOnWindows
+          ? `x" & type nul > ${sentinelFile} & echo "`
+          : `x" ; touch ${sentinelFile} ; echo "`
+      },
+    }
+
+    const cases = []
+    for (const [npmExecpathLabel, npmExecpath] of Object.entries(npmExecpaths)) {
+      for (const [payloadType, mkPayload] of Object.entries(mkPayload4type)) {
+        const payloadFilePrefix = `${npmExecpathLabel}-${payloadType}`.replace(/\W/g, '-')
+        let sentinelFileName = `sentinelFile_${payloadFilePrefix}_workspace-single.txt`
+        cases.push([
+          `${payloadType} on ${npmExecpathLabel} with single --workspace`,
+          npmExecpath,
+          ['--workspace', mkPayload(sentinelFileName)],
+          sentinelFileName
+        ])
+        sentinelFileName = `sentinelFile_${payloadFilePrefix}_workspace-chained.txt`
+        cases.push([
+          `${payloadType} on ${npmExecpathLabel} with chained --workspace`,
+          npmExecpath,
+          ['--workspace', 'legitimate-workspace', '-w', mkPayload(sentinelFileName)],
+          sentinelFileName
+        ])
+      }
+    }
+
+    writeFileSync(join(tmpRootRun, 'package.json'), '{}')
+    writeFileSync(join(tmpRootRun, 'package-lock.json'), '{}')
+
+    test.each(cases)('%s', async (purpose, npmExecpath, cdxArgs, sentinelFileName) => {
+      const sentinelFile = join(tmpRootRun, sentinelFileName)
       expect(existsSync(sentinelFile)).toBe(false)
 
       const logFileBase = join(tmpRootRun, purpose.replace(/\W/g, '_'))
-      const cwd = dummyProjectsRoot
+      const cwd = tmpRootRun
 
-      const { res } = runCLI([
+      const { res, errFile } = runCLI([
         ...cdxArgs,
-        '--',
-        join('with-lockfile', 'package.json')
+        '-vvvv',
       ], logFileBase, cwd, {
-        npm_execpath: undefined
+        npm_execpath: npmExecpath,
+        CT_VERSION: `${NPM_LATETS}.0.0`
       })
+
       await res.catch(() => { /* pass */ })
 
-      expect(existsSync(sentinelFile)).toBe(false)
+      try {
+        expect(existsSync(sentinelFile)).toBe(false)
+      } catch (err) {
+        process.stderr.write(readFileSync(errFile))
+        throw err
+      }
     }, cliRunTestTimeout)
   })
 })
