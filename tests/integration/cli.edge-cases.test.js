@@ -90,16 +90,32 @@ describe('integration.cli.edge-cases', () => {
     const tmpRootRun = join(tmpRoot, 'with-broken')
     mkdirSync(tmpRootRun)
 
-    test('error on non-existing binary', async () => {
+    test('error on non-existing file', async () => {
       const logFileBase = join(tmpRootRun, 'non-existing')
       const cwd = join(dummyProjectsRoot, 'with-lockfile')
 
       const { res, errFile } = runCLI([], logFileBase, cwd, {
-        npm_execpath: npmLsReplacement.nonExistingBinary
+        npm_execpath: npmLsReplacement.nonExistingFile
       })
 
       try {
-        await expect(res).rejects.toThrow(/^unexpected npm execpath/i)
+        await expect(res).rejects.toThrow(/^missing env NPM/i)
+      } catch (err) {
+        process.stderr.write(readFileSync(errFile))
+        throw err
+      }
+    }, cliRunTestTimeout)
+
+    test('error on non-JS file', async () => {
+      const logFileBase = join(tmpRootRun, 'non-existing')
+      const cwd = join(dummyProjectsRoot, 'with-lockfile')
+
+      const { res, errFile } = runCLI([], logFileBase, cwd, {
+        npm_execpath: npmLsReplacement.justExitCmd
+      })
+
+      try {
+        await expect(res).rejects.toThrow(/^unexpected NPM execPath/i)
       } catch (err) {
         process.stderr.write(readFileSync(errFile))
         throw err

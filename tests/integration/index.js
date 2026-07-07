@@ -42,7 +42,7 @@ const npmLsReplacement = {
   demoResults: join(npmLsReplacementPath, 'demo-results.js'),
   justExit: join(npmLsReplacementPath, 'just-exit.js'),
   justExitCmd: join(npmLsReplacementPath, 'just-exit.cmd'),
-  nonExistingBinary: join(npmLsReplacementPath, 'aNonExistingBinary')
+  nonExistingFile: join(npmLsReplacementPath, 'aNonExistingFile')
 }
 
 /* we might run only the latest most advanced */

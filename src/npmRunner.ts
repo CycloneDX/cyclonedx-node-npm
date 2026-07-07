@@ -145,7 +145,7 @@ export class NpmRunner {
       ?? NpmRunner.#getExecPathSys(process_, console_)
 
     if (!NpmRunner.#jsMatcher.test(execPath)) {
-      throw new Error(`unexpected NPM execPath: ${execPath}`)
+      throw new Error(`Unexpected NPM execPath: ${execPath}`)
     }
 
     const nodeExecPath = process_.execPath
