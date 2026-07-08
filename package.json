@@ -94,9 +94,6 @@
     "npm-run-all2": "^7 || ^8",
     "typescript": "5.9.3"
   },
-  "overrides": {
-    "yargs": ">=17.7.2 && <19"
-  },
   "type": "commonjs",
   "engines": {
     "node": ">=20.18.0",
