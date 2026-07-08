@@ -139,5 +139,8 @@
     "suiteName": "jest tests",
     "outputDirectory": "reports/jest",
     "outputName": "tests.junit.xml"
+  },
+  "allowScripts": {
+    "libxmljs2@0.37.0": true
   }
 }
