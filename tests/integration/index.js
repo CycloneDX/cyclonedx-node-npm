@@ -46,7 +46,7 @@ const npmLsReplacement = {
 }
 
 /* we might run only the latest most advanced */
-const latestCdxSpecVersion = Spec.Version.v1dot6
+const latestCdxSpecVersion = Spec.Version.v1dot7
 
 const UPDATE_SNAPSHOTS = !!process.env.CNPM_TEST_UPDATE_SNAPSHOTS
 
