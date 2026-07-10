@@ -21,21 +21,21 @@ jobs:
       fail-fast: false # gather all the results !
       matrix:
         subject:
-          # - deps-from-git
-          # - alternative-package-registry
+          - deps-from-git
+          - alternative-package-registry
           - bundled-dependencies
-          # - dev-dependencies
-          # - juice-shop
-          # - local-dependencies
-          # - local-workspaces
-          # - package-integrity
-          # - package-with-build-id
+          - dev-dependencies
+          - juice-shop
+          - local-dependencies
+          - local-workspaces
+          - package-integrity
+          - package-with-build-id
         additional_npm-ls_args: [ '' ]
         npm-version:
           ## see https://www.npmjs.com/package/npm?activeTab=versions
           ## see also: https://github.com/npm/cli/releases
           - '12'     # Current
-          #- '11'
+          - '11'
           #- '10'
           #- '9'      # Lowest supported
         node-version:
@@ -66,6 +66,9 @@ jobs:
             node-version: '24'  # LTS
             os: ubuntu-latest
         exclude:
+          - # npm12 requires node ^22.22.2 || ^24.15.0 || >=26.0.0
+            npm-version: '12'
+            node-version: '20'
           - # our specific version of juice-shop might not be node22 compatible
             subject: juice-shop
             node-version: '22'
