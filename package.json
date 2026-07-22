@@ -88,7 +88,7 @@
     "@types/spdx-expression-parse": "^3.0.5",
     "fast-glob": "^3.2.11",
     "imurmurhash": "^0.1.4",
-    "c8": "^11|^12",
+    "c8": "^11 || ^12",
     "jest": "30.4.2",
     "jest-junit": "17.0.0",
     "npm-run-all2": "^7 || ^8",
