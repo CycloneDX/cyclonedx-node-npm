@@ -11,7 +11,7 @@
   },
   "_id": "demo-local-deps@0.0.0",
   "extraneous": false,
-  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
+  "path": "D:\\...\\cyclonedx-node-npm\\demo\\local-dependencies\\project",
   "_dependencies": {
     "my-local-a": "file:packages/my-local-a",
     "my-noname": "file:packages/my-noname"
@@ -27,7 +27,7 @@
       "license": "Apache-2.0",
       "_id": "my-local-a@0.0.0",
       "extraneous": false,
-      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\node_modules\\my-local-a",
+      "path": "D:\\...\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\node_modules\\my-local-a",
       "_dependencies": {
         "my-local-b-off": "file:../my-local-b"
       },
@@ -42,7 +42,7 @@
           "license": "Apache-2.0",
           "_id": "my-local-b-off@0.0.0",
           "extraneous": false,
-          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\node_modules\\my-local-b-off",
+          "path": "D:\\...\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\node_modules\\my-local-b-off",
           "_dependencies": {},
           "devDependencies": {},
           "peerDependencies": {}
@@ -57,7 +57,7 @@
       "license": "Apache-2.0",
       "_id": "my-noname@0.0.0",
       "extraneous": false,
-      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\node_modules\\my-noname",
+      "path": "D:\\...\\cyclonedx-node-npm\\demo\\local-dependencies\\project\\node_modules\\my-noname",
       "_dependencies": {},
       "devDependencies": {},
       "peerDependencies": {}
