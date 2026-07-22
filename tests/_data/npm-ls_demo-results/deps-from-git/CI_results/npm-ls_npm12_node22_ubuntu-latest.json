@@ -81,17 +81,17 @@
           "devDependencies": {},
           "dependencies": {
             "ajv": {
-              "version": "8.17.1",
+              "version": "8.20.0",
               "name": "ajv",
-              "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz",
-              "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+              "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz",
+              "integrity": "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==",
               "license": "MIT",
               "optional": true,
               "funding": {
                 "type": "github",
                 "url": "https://github.com/sponsors/epoberezkin"
               },
-              "_id": "ajv@8.17.1",
+              "_id": "ajv@8.20.0",
               "extraneous": false,
               "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
               "_dependencies": {
@@ -221,14 +221,14 @@
                       "peerDependencies": {}
                     },
                     "moo": {
-                      "version": "0.5.2",
-                      "resolved": "https://registry.npmjs.org/moo/-/moo-0.5.2.tgz",
+                      "version": "0.5.3",
+                      "resolved": "https://registry.npmjs.org/moo/-/moo-0.5.3.tgz",
                       "overridden": false,
                       "name": "moo",
-                      "integrity": "sha512-iSAJLHYKnX41mKcJKjqvnAN9sf0LMDTXDEvFv+ffuRR9a1MIuXLjMNL6EsnDHSkKLTWNqQQ5uo61P4EbU4NU+Q==",
+                      "integrity": "sha512-m2fmM2dDm7GZQsY7KK2cme8agi+AAljILjQnof7p1ZMDe6dQ4bdnSMx0cPppudoeNv5hEFQirN6u+O4fDE0IWA==",
                       "license": "BSD-3-Clause",
                       "optional": true,
-                      "_id": "moo@0.5.2",
+                      "_id": "moo@0.5.3",
                       "extraneous": false,
                       "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/moo",
                       "_dependencies": {},
@@ -373,17 +373,17 @@
           "devDependencies": {},
           "dependencies": {
             "ajv": {
-              "version": "8.17.1",
+              "version": "8.20.0",
               "name": "ajv",
-              "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz",
-              "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+              "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz",
+              "integrity": "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==",
               "license": "MIT",
               "optional": true,
               "funding": {
                 "type": "github",
                 "url": "https://github.com/sponsors/epoberezkin"
               },
-              "_id": "ajv@8.17.1",
+              "_id": "ajv@8.20.0",
               "extraneous": false,
               "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
               "_dependencies": {
@@ -398,18 +398,18 @@
           }
         },
         "ajv": {
-          "version": "8.17.1",
-          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz",
+          "version": "8.20.0",
+          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz",
           "overridden": false,
           "name": "ajv",
-          "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+          "integrity": "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==",
           "license": "MIT",
           "optional": true,
           "funding": {
             "type": "github",
             "url": "https://github.com/sponsors/epoberezkin"
           },
-          "_id": "ajv@8.17.1",
+          "_id": "ajv@8.20.0",
           "extraneous": false,
           "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
           "_dependencies": {
@@ -437,11 +437,11 @@
               "peerDependencies": {}
             },
             "fast-uri": {
-              "version": "3.0.6",
-              "resolved": "https://registry.npmjs.org/fast-uri/-/fast-uri-3.0.6.tgz",
+              "version": "3.1.4",
+              "resolved": "https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.4.tgz",
               "overridden": false,
               "name": "fast-uri",
-              "integrity": "sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==",
+              "integrity": "sha512-8JnbkQ4juDyvYs4mgFGQqg4yCYtFDtUtmp2QIQq11ZZe5CFQ5wcqm1rqDgAh/QdMySuBnPzMUiJUNZG5N/AiQw==",
               "funding": [
                 {
                   "type": "github",
@@ -454,7 +454,7 @@
               ],
               "license": "BSD-3-Clause",
               "optional": true,
-              "_id": "fast-uri@3.0.6",
+              "_id": "fast-uri@3.1.4",
               "extraneous": false,
               "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/fast-uri",
               "_dependencies": {},
@@ -548,17 +548,17 @@
               "peerDependencies": {},
               "dependencies": {
                 "detect-libc": {
-                  "version": "2.0.4",
-                  "resolved": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.4.tgz",
+                  "version": "2.1.2",
+                  "resolved": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz",
                   "overridden": false,
                   "name": "detect-libc",
-                  "integrity": "sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==",
+                  "integrity": "sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==",
                   "license": "Apache-2.0",
                   "optional": true,
                   "engines": {
                     "node": ">=8"
                   },
-                  "_id": "detect-libc@2.0.4",
+                  "_id": "detect-libc@2.1.2",
                   "extraneous": false,
                   "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/detect-libc",
                   "_dependencies": {},
@@ -607,10 +607,10 @@
                       "peerDependencies": {},
                       "dependencies": {
                         "debug": {
-                          "version": "4.4.1",
+                          "version": "4.4.3",
                           "name": "debug",
-                          "resolved": "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz",
-                          "integrity": "sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==",
+                          "resolved": "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz",
+                          "integrity": "sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==",
                           "license": "MIT",
                           "optional": true,
                           "engines": {
@@ -621,7 +621,7 @@
                               "optional": true
                             }
                           },
-                          "_id": "debug@4.4.1",
+                          "_id": "debug@4.4.3",
                           "extraneous": false,
                           "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/debug",
                           "_dependencies": {
@@ -633,11 +633,11 @@
                       }
                     },
                     "debug": {
-                      "version": "4.4.1",
-                      "resolved": "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz",
+                      "version": "4.4.3",
+                      "resolved": "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz",
                       "overridden": false,
                       "name": "debug",
-                      "integrity": "sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==",
+                      "integrity": "sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==",
                       "license": "MIT",
                       "optional": true,
                       "engines": {
@@ -648,7 +648,7 @@
                           "optional": true
                         }
                       },
-                      "_id": "debug@4.4.1",
+                      "_id": "debug@4.4.3",
                       "extraneous": false,
                       "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/debug",
                       "_dependencies": {
@@ -1045,14 +1045,14 @@
                       "peerDependencies": {},
                       "dependencies": {
                         "aproba": {
-                          "version": "2.0.0",
-                          "resolved": "https://registry.npmjs.org/aproba/-/aproba-2.0.0.tgz",
+                          "version": "2.1.0",
+                          "resolved": "https://registry.npmjs.org/aproba/-/aproba-2.1.0.tgz",
                           "overridden": false,
                           "name": "aproba",
-                          "integrity": "sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==",
+                          "integrity": "sha512-tLIEcj5GuR2RSTnxNKdkK0dJ/GrC7P38sUkiDmDuHfsHmbagTFAxDVIBltoklXEVIQ/f14IL8IMJ5pn9Hez1Ew==",
                           "license": "ISC",
                           "optional": true,
-                          "_id": "aproba@2.0.0",
+                          "_id": "aproba@2.1.0",
                           "extraneous": false,
                           "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/aproba",
                           "_dependencies": {},
@@ -1344,7 +1344,7 @@
                       "overridden": false,
                       "name": "glob",
                       "integrity": "sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==",
-                      "deprecated": "Glob versions prior to v9 are no longer supported",
+                      "deprecated": "Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me",
                       "license": "ISC",
                       "optional": true,
                       "engines": {
@@ -1450,17 +1450,17 @@
                           "peerDependencies": {}
                         },
                         "minimatch": {
-                          "version": "3.1.2",
-                          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz",
+                          "version": "3.1.5",
+                          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.5.tgz",
                           "overridden": false,
                           "name": "minimatch",
-                          "integrity": "sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==",
+                          "integrity": "sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==",
                           "license": "ISC",
                           "optional": true,
                           "engines": {
                             "node": "*"
                           },
-                          "_id": "minimatch@3.1.2",
+                          "_id": "minimatch@3.1.5",
                           "extraneous": false,
                           "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/minimatch",
                           "_dependencies": {
@@ -1470,14 +1470,14 @@
                           "peerDependencies": {},
                           "dependencies": {
                             "brace-expansion": {
-                              "version": "1.1.11",
-                              "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
+                              "version": "1.1.16",
+                              "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.16.tgz",
                               "overridden": false,
                               "name": "brace-expansion",
-                              "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
+                              "integrity": "sha512-IDw48K2/2kRkg9LdJxurvq3lV3aBgq0REY89duEqFRthjlPdXHKMj7EnQOXVckxzgisinf3nHfrcE2FufFLXMw==",
                               "license": "MIT",
                               "optional": true,
-                              "_id": "brace-expansion@1.1.11",
+                              "_id": "brace-expansion@1.1.16",
                               "extraneous": false,
                               "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/brace-expansion",
                               "_dependencies": {
@@ -1577,11 +1577,11 @@
                   }
                 },
                 "semver": {
-                  "version": "7.7.2",
-                  "resolved": "https://registry.npmjs.org/semver/-/semver-7.7.2.tgz",
+                  "version": "7.8.5",
+                  "resolved": "https://registry.npmjs.org/semver/-/semver-7.8.5.tgz",
                   "overridden": false,
                   "name": "semver",
-                  "integrity": "sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==",
+                  "integrity": "sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==",
                   "license": "ISC",
                   "optional": true,
                   "bin": {
@@ -1590,7 +1590,7 @@
                   "engines": {
                     "node": ">=10"
                   },
-                  "_id": "semver@7.7.2",
+                  "_id": "semver@7.8.5",
                   "extraneous": false,
                   "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/semver",
                   "_dependencies": {},
@@ -1603,6 +1603,7 @@
                   "overridden": false,
                   "name": "tar",
                   "integrity": "sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==",
+                  "deprecated": "Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me",
                   "license": "ISC",
                   "optional": true,
                   "engines": {
@@ -1926,13 +1927,13 @@
               "peerDependencies": {}
             },
             "spdx-license-ids": {
-              "version": "3.0.21",
-              "resolved": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.21.tgz",
+              "version": "3.0.23",
+              "resolved": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.23.tgz",
               "overridden": false,
               "name": "spdx-license-ids",
-              "integrity": "sha512-Bvg/8F5XephndSK3JffaRqdT+gyhfqIPwDHpX80tJrF8QQRYMo8sNMeaZ2Dp5+jhwKnUmIOyFFQfHRkjJm5nXg==",
+              "integrity": "sha512-CWLcCCH7VLu13TgOH+r8p1O/Znwhqv/dbb6lqWy67G+pT1kHmeD/+V36AVb/vq8QMIQwVShJ6Ssl5FPh0fuSdw==",
               "license": "CC0-1.0",
-              "_id": "spdx-license-ids@3.0.21",
+              "_id": "spdx-license-ids@3.0.23",
               "extraneous": false,
               "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/spdx-license-ids",
               "_dependencies": {},
@@ -2225,7 +2226,7 @@
     },
     "lib1": {
       "version": "6.1.0",
-      "resolved": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
+      "resolved": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git#e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
       "overridden": false,
       "name": "@cyclonedx/cyclonedx-library",
       "funding": [
@@ -2309,17 +2310,17 @@
           "devDependencies": {}
         },
         "ajv": {
-          "version": "8.17.1",
+          "version": "8.20.0",
           "name": "ajv",
-          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz",
-          "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz",
+          "integrity": "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==",
           "license": "MIT",
           "optional": true,
           "funding": {
             "type": "github",
             "url": "https://github.com/sponsors/epoberezkin"
           },
-          "_id": "ajv@8.17.1",
+          "_id": "ajv@8.20.0",
           "extraneous": false,
           "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
           "_dependencies": {
@@ -2492,17 +2493,17 @@
           "devDependencies": {}
         },
         "ajv": {
-          "version": "8.17.1",
+          "version": "8.20.0",
           "name": "ajv",
-          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz",
-          "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz",
+          "integrity": "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==",
           "license": "MIT",
           "optional": true,
           "funding": {
             "type": "github",
             "url": "https://github.com/sponsors/epoberezkin"
           },
-          "_id": "ajv@8.17.1",
+          "_id": "ajv@8.20.0",
           "extraneous": false,
           "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
           "_dependencies": {
@@ -2675,17 +2676,17 @@
           "devDependencies": {}
         },
         "ajv": {
-          "version": "8.17.1",
+          "version": "8.20.0",
           "name": "ajv",
-          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz",
-          "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz",
+          "integrity": "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==",
           "license": "MIT",
           "optional": true,
           "funding": {
             "type": "github",
             "url": "https://github.com/sponsors/epoberezkin"
           },
-          "_id": "ajv@8.17.1",
+          "_id": "ajv@8.20.0",
           "extraneous": false,
           "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
           "_dependencies": {
@@ -2854,17 +2855,17 @@
           "devDependencies": {}
         },
         "ajv": {
-          "version": "8.17.1",
+          "version": "8.20.0",
           "name": "ajv",
-          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz",
-          "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz",
+          "integrity": "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==",
           "license": "MIT",
           "optional": true,
           "funding": {
             "type": "github",
             "url": "https://github.com/sponsors/epoberezkin"
           },
-          "_id": "ajv@8.17.1",
+          "_id": "ajv@8.20.0",
           "extraneous": false,
           "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
           "_dependencies": {
@@ -3033,17 +3034,17 @@
           "devDependencies": {}
         },
         "ajv": {
-          "version": "8.17.1",
+          "version": "8.20.0",
           "name": "ajv",
-          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz",
-          "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz",
+          "integrity": "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==",
           "license": "MIT",
           "optional": true,
           "funding": {
             "type": "github",
             "url": "https://github.com/sponsors/epoberezkin"
           },
-          "_id": "ajv@8.17.1",
+          "_id": "ajv@8.20.0",
           "extraneous": false,
           "path": "/.../cyclonedx-node-npm/demo/deps-from-git/project/node_modules/ajv",
           "_dependencies": {

@@ -141,10 +141,10 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.1.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-javascript-library.git%23e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
       "externalReferences": [
         {
-          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
+          "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git#e1a99f9871ca1cbd9b7f7b097c0e2aa8f1e79fe7",
           "type": "distribution",
           "comment": "as detected from npm-ls property \"resolved\""
         }
@@ -279,6 +279,14 @@
       "version": "1.0.11",
       "bom-ref": "demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/%40mapbox/node-pre-gyp@1.0.11",
       "externalReferences": [
         {
@@ -307,6 +315,14 @@
       "version": "1.15.10",
       "bom-ref": "demo-deps-from-git@1.0.0|@oozcitak/dom@1.15.10",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/%40oozcitak/dom@1.15.10",
       "externalReferences": [
         {
@@ -335,6 +351,14 @@
       "version": "1.0.8",
       "bom-ref": "demo-deps-from-git@1.0.0|@oozcitak/infra@1.0.8",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/%40oozcitak/infra@1.0.8",
       "externalReferences": [
         {
@@ -363,6 +387,14 @@
       "version": "1.0.4",
       "bom-ref": "demo-deps-from-git@1.0.0|@oozcitak/url@1.0.4",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/%40oozcitak/url@1.0.4",
       "externalReferences": [
         {
@@ -391,6 +423,14 @@
       "version": "8.3.8",
       "bom-ref": "demo-deps-from-git@1.0.0|@oozcitak/util@8.3.8",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/%40oozcitak/util@8.3.8",
       "externalReferences": [
         {
@@ -418,6 +458,14 @@
       "version": "1.1.1",
       "bom-ref": "demo-deps-from-git@1.0.0|abbrev@1.1.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/abbrev@1.1.1",
       "externalReferences": [
         {
@@ -445,6 +493,14 @@
       "version": "6.0.2",
       "bom-ref": "demo-deps-from-git@1.0.0|agent-base@6.0.2",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/agent-base@6.0.2",
       "externalReferences": [
         {
@@ -472,6 +528,14 @@
       "version": "1.6.1",
       "bom-ref": "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/ajv-formats-draft2019@1.6.1",
       "externalReferences": [
         {
@@ -499,6 +563,14 @@
       "version": "2.1.1",
       "bom-ref": "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/ajv-formats@2.1.1",
       "externalReferences": [
         {
@@ -523,18 +595,26 @@
     {
       "type": "library",
       "name": "ajv",
-      "version": "8.17.1",
-      "bom-ref": "demo-deps-from-git@1.0.0|ajv@8.17.1",
+      "version": "8.20.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|ajv@8.20.0",
       "scope": "optional",
-      "purl": "pkg:npm/ajv@8.17.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ajv@8.20.0",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz",
+          "url": "https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "07f801b8d8394a2313acf902f80dbe716d11b33c316269fa558c41fe29e5052b52e67c7ac4722dfde84a46120c86abac97b6bc2e34286678c2b39be1c31390d6"
+              "content": "4e16e58be3a53a3fa230f60505505f2773a60809da4b2367e0cd6fcfd4fa1a46b926df5b6bf1c8479ea3a32eb9b58ea4c7f142179557341f35f58eff194ac118"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -553,6 +633,14 @@
       "version": "5.0.1",
       "bom-ref": "demo-deps-from-git@1.0.0|ansi-regex@5.0.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/ansi-regex@5.0.1",
       "externalReferences": [
         {
@@ -577,18 +665,26 @@
     {
       "type": "library",
       "name": "aproba",
-      "version": "2.0.0",
-      "bom-ref": "demo-deps-from-git@1.0.0|aproba@2.0.0",
+      "version": "2.1.0",
+      "bom-ref": "demo-deps-from-git@1.0.0|aproba@2.1.0",
       "scope": "optional",
-      "purl": "pkg:npm/aproba@2.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/aproba@2.1.0",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/aproba/-/aproba-2.0.0.tgz",
+          "url": "https://registry.npmjs.org/aproba/-/aproba-2.1.0.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "9587b81b1ed04fe30a19b0ec03e67e85efd6b5e7f4062c033a52bf5e406b75fb21f49fe33cf5db5f4b44f71f5c976ed39aee608374146d4ad061aff2f8a3873d"
+              "content": "b4b204723e46b91d914939f134a7642b4749fc6ac2ecfdfcb149220e60ee1dfb0799b6a04c50310d520196da24957115210fdfd7820bf08309e699fd1decf513"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -607,6 +703,14 @@
       "version": "2.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|are-we-there-yet@2.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/are-we-there-yet@2.0.0",
       "externalReferences": [
         {
@@ -634,6 +738,14 @@
       "version": "1.0.10",
       "bom-ref": "demo-deps-from-git@1.0.0|argparse@1.0.10",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/argparse@1.0.10",
       "externalReferences": [
         {
@@ -661,6 +773,14 @@
       "version": "1.0.2",
       "bom-ref": "demo-deps-from-git@1.0.0|balanced-match@1.0.2",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/balanced-match@1.0.2",
       "externalReferences": [
         {
@@ -688,6 +808,14 @@
       "version": "1.5.0",
       "bom-ref": "demo-deps-from-git@1.0.0|bindings@1.5.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/bindings@1.5.0",
       "externalReferences": [
         {
@@ -712,18 +840,26 @@
     {
       "type": "library",
       "name": "brace-expansion",
-      "version": "1.1.11",
-      "bom-ref": "demo-deps-from-git@1.0.0|brace-expansion@1.1.11",
+      "version": "1.1.16",
+      "bom-ref": "demo-deps-from-git@1.0.0|brace-expansion@1.1.16",
       "scope": "optional",
-      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/brace-expansion@1.1.16",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
+          "url": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.16.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "882b8f1c3160ac75fb1f6bc423fe71a73d3bcd21c1d344e9ba0aa1998b5598c3bae75f260ae44ca0e60595d101974835f3bb9fa3375a1e058a71815beb5a8688"
+              "content": "203c38f0adbfda446483d2dd271babbeade557768182ad11118f3d76e12a151b618e53dd5c728c8fb12740e5d5724c73822b229dfde71dfadc13616e7c52d733"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -742,6 +878,14 @@
       "version": "2.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|chownr@2.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/chownr@2.0.0",
       "externalReferences": [
         {
@@ -769,6 +913,14 @@
       "version": "1.1.3",
       "bom-ref": "demo-deps-from-git@1.0.0|color-support@1.1.3",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/color-support@1.1.3",
       "externalReferences": [
         {
@@ -796,6 +948,14 @@
       "version": "2.20.3",
       "bom-ref": "demo-deps-from-git@1.0.0|commander@2.20.3",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/commander@2.20.3",
       "externalReferences": [
         {
@@ -823,6 +983,14 @@
       "version": "0.0.1",
       "bom-ref": "demo-deps-from-git@1.0.0|concat-map@0.0.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/concat-map@0.0.1",
       "externalReferences": [
         {
@@ -850,6 +1018,14 @@
       "version": "1.1.0",
       "bom-ref": "demo-deps-from-git@1.0.0|console-control-strings@1.1.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/console-control-strings@1.1.0",
       "externalReferences": [
         {
@@ -874,18 +1050,26 @@
     {
       "type": "library",
       "name": "debug",
-      "version": "4.4.1",
-      "bom-ref": "demo-deps-from-git@1.0.0|debug@4.4.1",
+      "version": "4.4.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|debug@4.4.3",
       "scope": "optional",
-      "purl": "pkg:npm/debug@4.4.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/debug@4.4.3",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz",
+          "url": "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "29c282aa27ed049719afefbbca4a03204c126b75d6a304df34fa3dd816318d78b260456b51087668bca1c410b0c30fa17a8aed505c44258711ce8b2cb5310161"
+              "content": "446c305a7c10be455f6af295b76d8518bc3ec5849dcc04709b4aeee83853540dee994e6165cdbc57790ee2cb6062bcab4e52e9baf808f468a28e5b408cd6dca8"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -904,6 +1088,14 @@
       "version": "1.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|delegates@1.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/delegates@1.0.0",
       "externalReferences": [
         {
@@ -928,18 +1120,26 @@
     {
       "type": "library",
       "name": "detect-libc",
-      "version": "2.0.4",
-      "bom-ref": "demo-deps-from-git@1.0.0|detect-libc@2.0.4",
+      "version": "2.1.2",
+      "bom-ref": "demo-deps-from-git@1.0.0|detect-libc@2.1.2",
       "scope": "optional",
-      "purl": "pkg:npm/detect-libc@2.0.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/detect-libc@2.1.2",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.4.tgz",
+          "url": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "dd40eff86f42b0228ed5628c1b0f5fc2afd258961b23473963b2d4d405d8a0375b844d801d0e8de8d6f7e2c1bc163ed3e403f2f2a5c308abae207775051d2d54"
+              "content": "06d8f604e38ef37a375b21f9f5ef0c817b3111055c6ab9143a9118aee6c1d2eaf09cdd74c90dfae2bb22072535d67665a966199b4e62fe87fb8a8e26ce2841b5"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -958,6 +1158,14 @@
       "version": "1.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|discontinuous-range@1.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/discontinuous-range@1.0.0",
       "externalReferences": [
         {
@@ -985,6 +1193,14 @@
       "version": "8.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|emoji-regex@8.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/emoji-regex@8.0.0",
       "externalReferences": [
         {
@@ -1012,6 +1228,14 @@
       "version": "4.0.1",
       "bom-ref": "demo-deps-from-git@1.0.0|esprima@4.0.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/esprima@4.0.1",
       "externalReferences": [
         {
@@ -1039,6 +1263,14 @@
       "version": "3.0.2",
       "bom-ref": "demo-deps-from-git@1.0.0|extend@3.0.2",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/extend@3.0.2",
       "externalReferences": [
         {
@@ -1066,6 +1298,14 @@
       "version": "3.1.3",
       "bom-ref": "demo-deps-from-git@1.0.0|fast-deep-equal@3.1.3",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/fast-deep-equal@3.1.3",
       "externalReferences": [
         {
@@ -1090,18 +1330,26 @@
     {
       "type": "library",
       "name": "fast-uri",
-      "version": "3.0.6",
-      "bom-ref": "demo-deps-from-git@1.0.0|fast-uri@3.0.6",
+      "version": "3.1.4",
+      "bom-ref": "demo-deps-from-git@1.0.0|fast-uri@3.1.4",
       "scope": "optional",
-      "purl": "pkg:npm/fast-uri@3.0.6",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/fast-uri@3.1.4",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/fast-uri/-/fast-uri-3.0.6.tgz",
+          "url": "https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.4.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "02d7e8d783a26d2bf9c00a7855636c15813501c850453bfd701196113e296561f362c845492f4d408e88e7badd2a7f5cae859531b6056cb849fb226f9992081f"
+              "content": "f099db910e23b83caf62ce26805190aa0e32098b450ed52d9a9d90210ab5d5965ee42150e7072a9b5aea0e0021fd074cc92b819cfccc5222543591b937f02243"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -1120,6 +1368,14 @@
       "version": "1.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|file-uri-to-path@1.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/file-uri-to-path@1.0.0",
       "externalReferences": [
         {
@@ -1147,6 +1403,14 @@
       "version": "2.1.0",
       "bom-ref": "demo-deps-from-git@1.0.0|fs-minipass@2.1.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/fs-minipass@2.1.0",
       "externalReferences": [
         {
@@ -1174,6 +1438,14 @@
           "version": "3.3.6",
           "bom-ref": "demo-deps-from-git@1.0.0|fs-minipass@2.1.0|minipass@3.3.6",
           "scope": "optional",
+          "licenses": [
+            {
+              "license": {
+                "id": "ISC",
+                "acknowledgement": "declared"
+              }
+            }
+          ],
           "purl": "pkg:npm/minipass@3.3.6",
           "externalReferences": [
             {
@@ -1203,6 +1475,14 @@
       "version": "1.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|fs.realpath@1.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/fs.realpath@1.0.0",
       "externalReferences": [
         {
@@ -1230,6 +1510,14 @@
       "version": "3.0.2",
       "bom-ref": "demo-deps-from-git@1.0.0|gauge@3.0.2",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/gauge@3.0.2",
       "externalReferences": [
         {
@@ -1257,6 +1545,14 @@
       "version": "7.2.3",
       "bom-ref": "demo-deps-from-git@1.0.0|glob@7.2.3",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/glob@7.2.3",
       "externalReferences": [
         {
@@ -1284,6 +1580,14 @@
       "version": "2.0.1",
       "bom-ref": "demo-deps-from-git@1.0.0|has-unicode@2.0.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/has-unicode@2.0.1",
       "externalReferences": [
         {
@@ -1311,6 +1615,14 @@
       "version": "5.0.1",
       "bom-ref": "demo-deps-from-git@1.0.0|https-proxy-agent@5.0.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/https-proxy-agent@5.0.1",
       "externalReferences": [
         {
@@ -1338,6 +1650,14 @@
       "version": "1.0.6",
       "bom-ref": "demo-deps-from-git@1.0.0|inflight@1.0.6",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/inflight@1.0.6",
       "externalReferences": [
         {
@@ -1365,6 +1685,14 @@
       "version": "2.0.4",
       "bom-ref": "demo-deps-from-git@1.0.0|inherits@2.0.4",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/inherits@2.0.4",
       "externalReferences": [
         {
@@ -1392,6 +1720,14 @@
       "version": "3.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|is-fullwidth-code-point@3.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
       "externalReferences": [
         {
@@ -1419,6 +1755,14 @@
       "version": "3.14.1",
       "bom-ref": "demo-deps-from-git@1.0.0|js-yaml@3.14.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/js-yaml@3.14.1",
       "externalReferences": [
         {
@@ -1446,6 +1790,14 @@
       "version": "1.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|json-schema-traverse@1.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/json-schema-traverse@1.0.0",
       "externalReferences": [
         {
@@ -1473,6 +1825,14 @@
       "version": "0.32.0",
       "bom-ref": "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/libxmljs2@0.32.0",
       "externalReferences": [
         {
@@ -1500,6 +1860,14 @@
       "version": "3.1.0",
       "bom-ref": "demo-deps-from-git@1.0.0|make-dir@3.1.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/make-dir@3.1.0",
       "externalReferences": [
         {
@@ -1527,6 +1895,14 @@
           "version": "6.3.1",
           "bom-ref": "demo-deps-from-git@1.0.0|make-dir@3.1.0|semver@6.3.1",
           "scope": "optional",
+          "licenses": [
+            {
+              "license": {
+                "id": "ISC",
+                "acknowledgement": "declared"
+              }
+            }
+          ],
           "purl": "pkg:npm/semver@6.3.1",
           "externalReferences": [
             {
@@ -1553,18 +1929,26 @@
     {
       "type": "library",
       "name": "minimatch",
-      "version": "3.1.2",
-      "bom-ref": "demo-deps-from-git@1.0.0|minimatch@3.1.2",
+      "version": "3.1.5",
+      "bom-ref": "demo-deps-from-git@1.0.0|minimatch@3.1.5",
       "scope": "optional",
-      "purl": "pkg:npm/minimatch@3.1.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/minimatch@3.1.5",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz",
+          "url": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.5.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "27ba7ade1462023c35343130c355bb8b7efe07222b3963b95d0400cd9dd539c2f43cdc9bc297e657f374e73140cf043d512c84717eaddd43be2b96aa0503881f"
+              "content": "5608d652c9e74fa9fe35493a799abbef37857695b62d60f33facc51ab09b1d789836e9790f3aa4d871d0e6e147d83356e576e9f3e8d5cda78db7de2cb04125e3"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -1583,6 +1967,14 @@
       "version": "5.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|minipass@5.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/minipass@5.0.0",
       "externalReferences": [
         {
@@ -1610,6 +2002,14 @@
       "version": "2.1.2",
       "bom-ref": "demo-deps-from-git@1.0.0|minizlib@2.1.2",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/minizlib@2.1.2",
       "externalReferences": [
         {
@@ -1637,6 +2037,14 @@
           "version": "3.3.6",
           "bom-ref": "demo-deps-from-git@1.0.0|minizlib@2.1.2|minipass@3.3.6",
           "scope": "optional",
+          "licenses": [
+            {
+              "license": {
+                "id": "ISC",
+                "acknowledgement": "declared"
+              }
+            }
+          ],
           "purl": "pkg:npm/minipass@3.3.6",
           "externalReferences": [
             {
@@ -1666,6 +2074,14 @@
       "version": "1.0.4",
       "bom-ref": "demo-deps-from-git@1.0.0|mkdirp@1.0.4",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/mkdirp@1.0.4",
       "externalReferences": [
         {
@@ -1690,18 +2106,26 @@
     {
       "type": "library",
       "name": "moo",
-      "version": "0.5.2",
-      "bom-ref": "demo-deps-from-git@1.0.0|moo@0.5.2",
+      "version": "0.5.3",
+      "bom-ref": "demo-deps-from-git@1.0.0|moo@0.5.3",
       "scope": "optional",
-      "purl": "pkg:npm/moo@0.5.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/moo@0.5.3",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/moo/-/moo-0.5.2.tgz",
+          "url": "https://registry.npmjs.org/moo/-/moo-0.5.3.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "8920092c760a9d7e3598a7092a3aaf9c037db1fd0b3034d70c4bc5bfe7dfb9147d6b5308b972e330d2fa12c9c31d290a2d358da90439ba8eb53f811b538354f9"
+              "content": "9b67e63367439bb19942c63b28ad9c99ef1a822f800258c82e3427a1fee9d593037ba750e1b76748cc7470fa69b9da1e36fe61105422acdeaef8ee1f0c4d0858"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -1720,6 +2144,14 @@
       "version": "2.1.3",
       "bom-ref": "demo-deps-from-git@1.0.0|ms@2.1.3",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/ms@2.1.3",
       "externalReferences": [
         {
@@ -1747,6 +2179,14 @@
       "version": "2.17.0",
       "bom-ref": "demo-deps-from-git@1.0.0|nan@2.17.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/nan@2.17.0",
       "externalReferences": [
         {
@@ -1774,6 +2214,14 @@
       "version": "2.20.1",
       "bom-ref": "demo-deps-from-git@1.0.0|nearley@2.20.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/nearley@2.20.1",
       "externalReferences": [
         {
@@ -1801,6 +2249,14 @@
       "version": "2.7.0",
       "bom-ref": "demo-deps-from-git@1.0.0|node-fetch@2.7.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/node-fetch@2.7.0",
       "externalReferences": [
         {
@@ -1828,6 +2284,14 @@
       "version": "5.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|nopt@5.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/nopt@5.0.0",
       "externalReferences": [
         {
@@ -1855,6 +2319,14 @@
       "version": "5.0.1",
       "bom-ref": "demo-deps-from-git@1.0.0|npmlog@5.0.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/npmlog@5.0.1",
       "externalReferences": [
         {
@@ -1882,6 +2354,14 @@
       "version": "4.1.1",
       "bom-ref": "demo-deps-from-git@1.0.0|object-assign@4.1.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/object-assign@4.1.1",
       "externalReferences": [
         {
@@ -1909,6 +2389,14 @@
       "version": "1.4.0",
       "bom-ref": "demo-deps-from-git@1.0.0|once@1.4.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/once@1.4.0",
       "externalReferences": [
         {
@@ -1935,6 +2423,14 @@
       "name": "packageurl-js",
       "version": "1.2.1",
       "bom-ref": "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/packageurl-js@1.2.1",
       "externalReferences": [
         {
@@ -1962,6 +2458,14 @@
       "version": "1.0.1",
       "bom-ref": "demo-deps-from-git@1.0.0|path-is-absolute@1.0.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/path-is-absolute@1.0.1",
       "externalReferences": [
         {
@@ -1989,6 +2493,14 @@
       "version": "2.3.1",
       "bom-ref": "demo-deps-from-git@1.0.0|punycode@2.3.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/punycode@2.3.1",
       "externalReferences": [
         {
@@ -2016,6 +2528,14 @@
       "version": "1.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|railroad-diagrams@1.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "CC0-1.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/railroad-diagrams@1.0.0",
       "externalReferences": [
         {
@@ -2043,6 +2563,14 @@
       "version": "0.4.6",
       "bom-ref": "demo-deps-from-git@1.0.0|randexp@0.4.6",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/randexp@0.4.6",
       "externalReferences": [
         {
@@ -2070,6 +2598,14 @@
       "version": "3.6.2",
       "bom-ref": "demo-deps-from-git@1.0.0|readable-stream@3.6.2",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/readable-stream@3.6.2",
       "externalReferences": [
         {
@@ -2097,6 +2633,14 @@
       "version": "2.0.2",
       "bom-ref": "demo-deps-from-git@1.0.0|require-from-string@2.0.2",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/require-from-string@2.0.2",
       "externalReferences": [
         {
@@ -2124,6 +2668,14 @@
       "version": "0.1.15",
       "bom-ref": "demo-deps-from-git@1.0.0|ret@0.1.15",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/ret@0.1.15",
       "externalReferences": [
         {
@@ -2151,6 +2703,14 @@
       "version": "3.0.2",
       "bom-ref": "demo-deps-from-git@1.0.0|rimraf@3.0.2",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/rimraf@3.0.2",
       "externalReferences": [
         {
@@ -2178,6 +2738,14 @@
       "version": "5.2.1",
       "bom-ref": "demo-deps-from-git@1.0.0|safe-buffer@5.2.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/safe-buffer@5.2.1",
       "externalReferences": [
         {
@@ -2205,6 +2773,14 @@
       "version": "1.4.0",
       "bom-ref": "demo-deps-from-git@1.0.0|schemes@1.4.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/schemes@1.4.0",
       "externalReferences": [
         {
@@ -2229,18 +2805,26 @@
     {
       "type": "library",
       "name": "semver",
-      "version": "7.7.2",
-      "bom-ref": "demo-deps-from-git@1.0.0|semver@7.7.2",
+      "version": "7.8.5",
+      "bom-ref": "demo-deps-from-git@1.0.0|semver@7.8.5",
       "scope": "optional",
-      "purl": "pkg:npm/semver@7.7.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/semver@7.8.5",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/semver/-/semver-7.7.2.tgz",
+          "url": "https://registry.npmjs.org/semver/-/semver-7.8.5.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "445d05c3eacee4031ff4c0326915c8e005745258f994c1ea571c5d4a08956e2c52097a049a65ff8e4d02b89c38fb74aaae860ef55a1487e1dcb898afbed25e98"
+              "content": "63bfca0ec6fc2e3a28669c1aa86cae94ee8342592c8029dc7211c693eb19218e1206f52870c044147e54af57c8e1d57e26f974c3a723bee71a222e34a6e462a0"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -2259,6 +2843,14 @@
       "version": "2.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|set-blocking@2.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/set-blocking@2.0.0",
       "externalReferences": [
         {
@@ -2286,6 +2878,14 @@
       "version": "3.0.7",
       "bom-ref": "demo-deps-from-git@1.0.0|signal-exit@3.0.7",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/signal-exit@3.0.7",
       "externalReferences": [
         {
@@ -2313,6 +2913,14 @@
       "version": "1.1.0",
       "bom-ref": "demo-deps-from-git@1.0.0|smtp-address-parser@1.1.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/smtp-address-parser@1.1.0",
       "externalReferences": [
         {
@@ -2339,6 +2947,14 @@
       "name": "spdx-exceptions",
       "version": "2.5.0",
       "bom-ref": "demo-deps-from-git@1.0.0|spdx-exceptions@2.5.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "CC-BY-3.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/spdx-exceptions@2.5.0",
       "externalReferences": [
         {
@@ -2365,6 +2981,14 @@
       "name": "spdx-expression-parse",
       "version": "3.0.1",
       "bom-ref": "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/spdx-expression-parse@3.0.1",
       "externalReferences": [
         {
@@ -2389,17 +3013,25 @@
     {
       "type": "library",
       "name": "spdx-license-ids",
-      "version": "3.0.21",
-      "bom-ref": "demo-deps-from-git@1.0.0|spdx-license-ids@3.0.21",
-      "purl": "pkg:npm/spdx-license-ids@3.0.21",
+      "version": "3.0.23",
+      "bom-ref": "demo-deps-from-git@1.0.0|spdx-license-ids@3.0.23",
+      "licenses": [
+        {
+          "license": {
+            "id": "CC0-1.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/spdx-license-ids@3.0.23",
       "externalReferences": [
         {
-          "url": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.21.tgz",
+          "url": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.23.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "06f83ff05e577a98677522b725f7da46a753fa0ca17ea20fc031e95fcd2d26b17c410458328f2c34c79a6760e9e7e8e1c0a9d49883b214541f1d1923266e675e"
+              "content": "0962dc0821fb54bbb5dd380e1feafca753bf667c21aaffdd6dbea5a96cbaec6fa94f590799e0fff95dfa0156ffbeaf10308430552849e92b25e453e1d1fb9277"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -2418,6 +3050,14 @@
       "version": "1.0.3",
       "bom-ref": "demo-deps-from-git@1.0.0|sprintf-js@1.0.3",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/sprintf-js@1.0.3",
       "externalReferences": [
         {
@@ -2445,6 +3085,14 @@
       "version": "1.3.0",
       "bom-ref": "demo-deps-from-git@1.0.0|string_decoder@1.3.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/string_decoder@1.3.0",
       "externalReferences": [
         {
@@ -2472,6 +3120,14 @@
       "version": "4.2.3",
       "bom-ref": "demo-deps-from-git@1.0.0|string-width@4.2.3",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/string-width@4.2.3",
       "externalReferences": [
         {
@@ -2499,6 +3155,14 @@
       "version": "6.0.1",
       "bom-ref": "demo-deps-from-git@1.0.0|strip-ansi@6.0.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/strip-ansi@6.0.1",
       "externalReferences": [
         {
@@ -2526,6 +3190,14 @@
       "version": "6.2.1",
       "bom-ref": "demo-deps-from-git@1.0.0|tar@6.2.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/tar@6.2.1",
       "externalReferences": [
         {
@@ -2553,6 +3225,14 @@
       "version": "0.0.3",
       "bom-ref": "demo-deps-from-git@1.0.0|tr46@0.0.3",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/tr46@0.0.3",
       "externalReferences": [
         {
@@ -2580,6 +3260,14 @@
       "version": "4.4.1",
       "bom-ref": "demo-deps-from-git@1.0.0|uri-js@4.4.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/uri-js@4.4.1",
       "externalReferences": [
         {
@@ -2607,6 +3295,14 @@
       "version": "1.0.2",
       "bom-ref": "demo-deps-from-git@1.0.0|util-deprecate@1.0.2",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/util-deprecate@1.0.2",
       "externalReferences": [
         {
@@ -2634,6 +3330,14 @@
       "version": "3.0.1",
       "bom-ref": "demo-deps-from-git@1.0.0|webidl-conversions@3.0.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/webidl-conversions@3.0.1",
       "externalReferences": [
         {
@@ -2661,6 +3365,14 @@
       "version": "5.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|whatwg-url@5.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/whatwg-url@5.0.0",
       "externalReferences": [
         {
@@ -2688,6 +3400,14 @@
       "version": "1.1.5",
       "bom-ref": "demo-deps-from-git@1.0.0|wide-align@1.1.5",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/wide-align@1.1.5",
       "externalReferences": [
         {
@@ -2715,6 +3435,14 @@
       "version": "1.0.2",
       "bom-ref": "demo-deps-from-git@1.0.0|wrappy@1.0.2",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/wrappy@1.0.2",
       "externalReferences": [
         {
@@ -2742,6 +3470,14 @@
       "version": "3.1.1",
       "bom-ref": "demo-deps-from-git@1.0.0|xmlbuilder2@3.1.1",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/xmlbuilder2@3.1.1",
       "externalReferences": [
         {
@@ -2769,6 +3505,14 @@
       "version": "4.0.0",
       "bom-ref": "demo-deps-from-git@1.0.0|yallist@4.0.0",
       "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
       "purl": "pkg:npm/yallist@4.0.0",
       "externalReferences": [
         {
@@ -2808,7 +3552,7 @@
       "dependsOn": [
         "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
         "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
-        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|ajv@8.20.0",
         "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
         "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
         "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
@@ -2820,7 +3564,7 @@
       "dependsOn": [
         "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
         "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
-        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|ajv@8.20.0",
         "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
         "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
         "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
@@ -2832,7 +3576,7 @@
       "dependsOn": [
         "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
         "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
-        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|ajv@8.20.0",
         "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
         "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
         "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
@@ -2844,7 +3588,7 @@
       "dependsOn": [
         "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
         "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
-        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|ajv@8.20.0",
         "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
         "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
         "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
@@ -2856,7 +3600,7 @@
       "dependsOn": [
         "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
         "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
-        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|ajv@8.20.0",
         "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
         "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
         "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
@@ -2868,7 +3612,7 @@
       "dependsOn": [
         "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
         "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
-        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|ajv@8.20.0",
         "demo-deps-from-git@1.0.0|libxmljs2@0.32.0",
         "demo-deps-from-git@1.0.0|packageurl-js@1.2.1",
         "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
@@ -2878,14 +3622,14 @@
     {
       "ref": "demo-deps-from-git@1.0.0|@mapbox/node-pre-gyp@1.0.11",
       "dependsOn": [
-        "demo-deps-from-git@1.0.0|detect-libc@2.0.4",
+        "demo-deps-from-git@1.0.0|detect-libc@2.1.2",
         "demo-deps-from-git@1.0.0|https-proxy-agent@5.0.1",
         "demo-deps-from-git@1.0.0|make-dir@3.1.0",
         "demo-deps-from-git@1.0.0|node-fetch@2.7.0",
         "demo-deps-from-git@1.0.0|nopt@5.0.0",
         "demo-deps-from-git@1.0.0|npmlog@5.0.1",
         "demo-deps-from-git@1.0.0|rimraf@3.0.2",
-        "demo-deps-from-git@1.0.0|semver@7.7.2",
+        "demo-deps-from-git@1.0.0|semver@7.8.5",
         "demo-deps-from-git@1.0.0|tar@6.2.1"
       ]
     },
@@ -2919,13 +3663,13 @@
     {
       "ref": "demo-deps-from-git@1.0.0|agent-base@6.0.2",
       "dependsOn": [
-        "demo-deps-from-git@1.0.0|debug@4.4.1"
+        "demo-deps-from-git@1.0.0|debug@4.4.3"
       ]
     },
     {
       "ref": "demo-deps-from-git@1.0.0|ajv-formats-draft2019@1.6.1",
       "dependsOn": [
-        "demo-deps-from-git@1.0.0|ajv@8.17.1",
+        "demo-deps-from-git@1.0.0|ajv@8.20.0",
         "demo-deps-from-git@1.0.0|punycode@2.3.1",
         "demo-deps-from-git@1.0.0|schemes@1.4.0",
         "demo-deps-from-git@1.0.0|smtp-address-parser@1.1.0",
@@ -2935,14 +3679,14 @@
     {
       "ref": "demo-deps-from-git@1.0.0|ajv-formats@2.1.1",
       "dependsOn": [
-        "demo-deps-from-git@1.0.0|ajv@8.17.1"
+        "demo-deps-from-git@1.0.0|ajv@8.20.0"
       ]
     },
     {
-      "ref": "demo-deps-from-git@1.0.0|ajv@8.17.1",
+      "ref": "demo-deps-from-git@1.0.0|ajv@8.20.0",
       "dependsOn": [
         "demo-deps-from-git@1.0.0|fast-deep-equal@3.1.3",
-        "demo-deps-from-git@1.0.0|fast-uri@3.0.6",
+        "demo-deps-from-git@1.0.0|fast-uri@3.1.4",
         "demo-deps-from-git@1.0.0|json-schema-traverse@1.0.0",
         "demo-deps-from-git@1.0.0|require-from-string@2.0.2"
       ]
@@ -2951,7 +3695,7 @@
       "ref": "demo-deps-from-git@1.0.0|ansi-regex@5.0.1"
     },
     {
-      "ref": "demo-deps-from-git@1.0.0|aproba@2.0.0"
+      "ref": "demo-deps-from-git@1.0.0|aproba@2.1.0"
     },
     {
       "ref": "demo-deps-from-git@1.0.0|are-we-there-yet@2.0.0",
@@ -2976,7 +3720,7 @@
       ]
     },
     {
-      "ref": "demo-deps-from-git@1.0.0|brace-expansion@1.1.11",
+      "ref": "demo-deps-from-git@1.0.0|brace-expansion@1.1.16",
       "dependsOn": [
         "demo-deps-from-git@1.0.0|balanced-match@1.0.2",
         "demo-deps-from-git@1.0.0|concat-map@0.0.1"
@@ -2998,7 +3742,7 @@
       "ref": "demo-deps-from-git@1.0.0|console-control-strings@1.1.0"
     },
     {
-      "ref": "demo-deps-from-git@1.0.0|debug@4.4.1",
+      "ref": "demo-deps-from-git@1.0.0|debug@4.4.3",
       "dependsOn": [
         "demo-deps-from-git@1.0.0|ms@2.1.3"
       ]
@@ -3007,7 +3751,7 @@
       "ref": "demo-deps-from-git@1.0.0|delegates@1.0.0"
     },
     {
-      "ref": "demo-deps-from-git@1.0.0|detect-libc@2.0.4"
+      "ref": "demo-deps-from-git@1.0.0|detect-libc@2.1.2"
     },
     {
       "ref": "demo-deps-from-git@1.0.0|discontinuous-range@1.0.0"
@@ -3025,7 +3769,7 @@
       "ref": "demo-deps-from-git@1.0.0|fast-deep-equal@3.1.3"
     },
     {
-      "ref": "demo-deps-from-git@1.0.0|fast-uri@3.0.6"
+      "ref": "demo-deps-from-git@1.0.0|fast-uri@3.1.4"
     },
     {
       "ref": "demo-deps-from-git@1.0.0|file-uri-to-path@1.0.0"
@@ -3048,7 +3792,7 @@
     {
       "ref": "demo-deps-from-git@1.0.0|gauge@3.0.2",
       "dependsOn": [
-        "demo-deps-from-git@1.0.0|aproba@2.0.0",
+        "demo-deps-from-git@1.0.0|aproba@2.1.0",
         "demo-deps-from-git@1.0.0|color-support@1.1.3",
         "demo-deps-from-git@1.0.0|console-control-strings@1.1.0",
         "demo-deps-from-git@1.0.0|has-unicode@2.0.1",
@@ -3065,7 +3809,7 @@
         "demo-deps-from-git@1.0.0|fs.realpath@1.0.0",
         "demo-deps-from-git@1.0.0|inflight@1.0.6",
         "demo-deps-from-git@1.0.0|inherits@2.0.4",
-        "demo-deps-from-git@1.0.0|minimatch@3.1.2",
+        "demo-deps-from-git@1.0.0|minimatch@3.1.5",
         "demo-deps-from-git@1.0.0|once@1.4.0",
         "demo-deps-from-git@1.0.0|path-is-absolute@1.0.1"
       ]
@@ -3077,7 +3821,7 @@
       "ref": "demo-deps-from-git@1.0.0|https-proxy-agent@5.0.1",
       "dependsOn": [
         "demo-deps-from-git@1.0.0|agent-base@6.0.2",
-        "demo-deps-from-git@1.0.0|debug@4.4.1"
+        "demo-deps-from-git@1.0.0|debug@4.4.3"
       ]
     },
     {
@@ -3121,9 +3865,9 @@
       "ref": "demo-deps-from-git@1.0.0|make-dir@3.1.0|semver@6.3.1"
     },
     {
-      "ref": "demo-deps-from-git@1.0.0|minimatch@3.1.2",
+      "ref": "demo-deps-from-git@1.0.0|minimatch@3.1.5",
       "dependsOn": [
-        "demo-deps-from-git@1.0.0|brace-expansion@1.1.11"
+        "demo-deps-from-git@1.0.0|brace-expansion@1.1.16"
       ]
     },
     {
@@ -3146,7 +3890,7 @@
       "ref": "demo-deps-from-git@1.0.0|mkdirp@1.0.4"
     },
     {
-      "ref": "demo-deps-from-git@1.0.0|moo@0.5.2"
+      "ref": "demo-deps-from-git@1.0.0|moo@0.5.3"
     },
     {
       "ref": "demo-deps-from-git@1.0.0|ms@2.1.3"
@@ -3158,7 +3902,7 @@
       "ref": "demo-deps-from-git@1.0.0|nearley@2.20.1",
       "dependsOn": [
         "demo-deps-from-git@1.0.0|commander@2.20.3",
-        "demo-deps-from-git@1.0.0|moo@0.5.2",
+        "demo-deps-from-git@1.0.0|moo@0.5.3",
         "demo-deps-from-git@1.0.0|railroad-diagrams@1.0.0",
         "demo-deps-from-git@1.0.0|randexp@0.4.6"
       ]
@@ -3242,7 +3986,7 @@
       ]
     },
     {
-      "ref": "demo-deps-from-git@1.0.0|semver@7.7.2"
+      "ref": "demo-deps-from-git@1.0.0|semver@7.8.5"
     },
     {
       "ref": "demo-deps-from-git@1.0.0|set-blocking@2.0.0"
@@ -3263,11 +4007,11 @@
       "ref": "demo-deps-from-git@1.0.0|spdx-expression-parse@3.0.1",
       "dependsOn": [
         "demo-deps-from-git@1.0.0|spdx-exceptions@2.5.0",
-        "demo-deps-from-git@1.0.0|spdx-license-ids@3.0.21"
+        "demo-deps-from-git@1.0.0|spdx-license-ids@3.0.23"
       ]
     },
     {
-      "ref": "demo-deps-from-git@1.0.0|spdx-license-ids@3.0.21"
+      "ref": "demo-deps-from-git@1.0.0|spdx-license-ids@3.0.23"
     },
     {
       "ref": "demo-deps-from-git@1.0.0|sprintf-js@1.0.3"
