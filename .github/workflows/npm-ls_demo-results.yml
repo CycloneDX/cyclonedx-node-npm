@@ -110,10 +110,11 @@ jobs:
       - name: npm-ls ls --json --all --long
         # important: the command in use is the same used by the internal builders of this project
         env:
-          ADDITIONAL_NPM_LS_ARGS: ${{ matrix.additional_npm-ls_args }}
+          ADDITIONAL_NPM_LS_ARGS: ${{ matrix.additional_npm-ls_args ||'' }}
         run: >
           npm --prefix project
-          ls --json --all --long $ADDITIONAL_NPM_LS_ARGS
+          ls --json --all --long 
+          ${ADDITIONAL_NPM_LS_ARGS:-}
           2> "${OUT_FILE_PREFIX}.err.log"
           1> "${OUT_FILE_PREFIX}.json"
         working-directory: '${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}'
