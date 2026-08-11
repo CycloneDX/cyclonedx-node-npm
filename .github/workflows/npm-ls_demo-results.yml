@@ -82,7 +82,9 @@ jobs:
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v6
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0  # v7.0.0
+        with:
+          persist-credentials: false
       - name: prepare output
         run: |
           mkdir -p '${{ env.RESULTS_DIR }}'
@@ -97,7 +99,7 @@ jobs:
           check-latest: true
           package-manager-cache: false
       - name: up-/down-grade npm to ${{ matrix.npm-version }}
-        run: npm i -g 'npm@${{ matrix.npm-version }}'
+        run: npm i -g 'npm@${{ matrix.npm-version }}'  # zizmor: ignore[adhoc-packages] -- global npm
       - name: report versions
         run: |
           node --version
@@ -107,11 +109,13 @@ jobs:
         working-directory: ${{ env.DEMO_ROOT_DIR }}/${{ matrix.subject }}/project
       - name: npm-ls ls --json --all --long
         # important: the command in use is the same used by the internal builders of this project
+        env:
+          ADDITIONAL_NPM_LS_ARGS: ${{ matrix.additional_npm-ls_args }}
         run: >
           npm --prefix project
-          ls --json --all --long ${{ matrix.additional_npm-ls_args }}
-          2> '${{ env.OUT_FILE_PREFIX }}.err.log'
-          1> '${{ env.OUT_FILE_PREFIX }}.json'
+          ls --json --all --long $ADDITIONAL_NPM_LS_ARGS
+          2> "${OUT_FILE_PREFIX}.err.log"
+          1> "${OUT_FILE_PREFIX}.json"
         working-directory: '${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}'
       - name: Artifact RESULTS
         # see https://github.com/actions/upload-artifact
