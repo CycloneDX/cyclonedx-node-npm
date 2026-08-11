@@ -90,7 +90,7 @@ jobs:
       - name: Annotate Code
         if: ${{ failure() || success() }}
         # see https://github.com/DerLev/eslint-annotations
-        uses: DerLev/eslint-annotations@a79ea65c1b45a649c48bcc6efc0103b6fd2e4c5f # v2
+        uses: DerLev/eslint-annotations@a79ea65c1b45a649c48bcc6efc0103b6fd2e4c5f # v2.1.0
         with:
           eslint-report: ${{ env.REPORTS_DIR }}/eslint.json
       - name: artifact eslint result
@@ -310,7 +310,7 @@ jobs:
         ## see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-secrets
         if: ${{ env.CODACY_PROJECT_TOKEN != '' }}
         # see https://github.com/codacy/codacy-coverage-reporter-action
-        uses: codacy/codacy-coverage-reporter-action@89d6c85cfafaec52c72b6c5e8b2878d33104c699 # v1
+        uses: codacy/codacy-coverage-reporter-action@89d6c85cfafaec52c72b6c5e8b2878d33104c699 # v1.3.0
         with:
           project-token: ${{ env.CODACY_PROJECT_TOKEN }}
           coverage-reports: ${{ env.REPORTS_DIR }}/*/coverage/*
