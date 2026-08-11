@@ -97,7 +97,7 @@ jobs:
           git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $AUTH_B64" \
             push --follow-tags "https://github.com/${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
   dep-test:
-    name: Dependencie stest
+    name: Dependencies tests
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
