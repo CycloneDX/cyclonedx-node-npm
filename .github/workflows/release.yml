@@ -84,10 +84,22 @@ jobs:
           NPMV_PREID: ${{ github.event.inputs.preid }}
       - name: git push back
         run: git push --follow-tags
-
+  dep-test:
+    # TODO
+    # npm run test:dependencies
+  build:
+    # TODO
+    # npm run build
+  quick-test:
+    # TODO
+    # npm run setup-tests
+    # npm run test:jest
   publish-NPMJS:
     needs:
+      - "dep-test"
       - "bump"
+      - "build"
+      - "quick-test"
     name: publish NPMJS
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -137,7 +149,6 @@ jobs:
           name: ${{ env.PACKED_ARTIFACT }}
           path: ${{ env.PACKED_DIR }}/
           if-no-files-found: error
-
   release-GH:
     needs:
       - "bump"
