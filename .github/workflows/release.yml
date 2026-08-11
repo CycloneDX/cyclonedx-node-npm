@@ -51,7 +51,9 @@ jobs:
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v6
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0  # v7.0.0
+        with:
+          persist-credentials: false
       - name: Configure Git
         # needed for push back of changes
         run: |
@@ -96,9 +98,10 @@ jobs:
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v6
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0  # v7.0.0
         with:
           ref: ${{ needs.bump.outputs.version }}
+          persist-credentials: false
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
@@ -154,14 +157,24 @@ jobs:
           name: ${{ env.PACKED_ARTIFACT }}
           path: ${{ env.ASSETS_DIR }}
       - name: Create Release
-        id: release
-        # see https://github.com/softprops/action-gh-release
-        uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name:   ${{ needs.bump.outputs.version }}
-          name:       ${{ needs.bump.outputs.version_plain }}
-          prerelease: ${{ github.event.inputs.prerelease }}
-          files:      '${{ env.ASSETS_DIR }}/*'
-          target_commitish: ${{ github.head_ref || github.ref_name }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ needs.bump.outputs.version }}
+          TITLE: ${{ needs.bump.outputs.version_plain }}
+          TARGET: ${{ github.head_ref || github.ref_name }}
+          PRERELEASE: ${{ github.event.inputs.prerelease }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=(
+            "$TAG"
+            "${ASSETS_DIR}"/*
+            --repo "${GITHUB_REPOSITORY}"
+            --title "$TITLE"
+            --target "$TARGET"
+            --verify-tag
+          )
+          if [ "$PRERELEASE" = "true" ]; then
+            args+=(--prerelease)
+          fi
+          gh release create "${args[@]}"
