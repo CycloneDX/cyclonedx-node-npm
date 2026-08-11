@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 6.0.1 - 2026-08-11
+
+Maintenance release.
+
 ## 6.0.0 - 2026-07-07
 
 * BREAKING Changes
