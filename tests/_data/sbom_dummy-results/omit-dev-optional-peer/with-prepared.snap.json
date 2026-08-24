@@ -41,6 +41,12 @@
               "type": "website",
               "comment": "as detected from PackageJson property \"homepage\""
             }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=20.18.0"
+            }
           ]
         },
         {
@@ -72,6 +78,16 @@
               "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
               "type": "website",
               "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=20.18.0"
+            },
+            {
+              "name": "cdx:npm:package:constraint:engine:npm",
+              "value": ">=9"
             }
           ]
         }
@@ -143,6 +159,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=14.0.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/@cyclonedx/cyclonedx-library"
         }
@@ -188,6 +208,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=14.0.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/@cyclonedx/cyclonedx-library-same_aliased"
@@ -281,6 +305,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/@isaacs/cliui"
         }
@@ -326,6 +354,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^16.14.0 || >=18.0.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/@npmcli/agent"
@@ -373,6 +405,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/@npmcli/fs"
         }
@@ -418,6 +454,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/@oozcitak/dom"
@@ -465,6 +505,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/@oozcitak/infra"
         }
@@ -510,6 +554,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/@oozcitak/url"
@@ -557,6 +605,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/@oozcitak/util"
         }
@@ -601,6 +653,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=14"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/@pkgjs/parseargs"
@@ -647,6 +703,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/abbrev"
         }
@@ -692,6 +752,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 14"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/agent-base"
         }
@@ -736,6 +800,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/aggregate-error"
@@ -917,6 +985,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/ansi-regex"
         }
@@ -961,6 +1033,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/ansi-styles"
@@ -1142,6 +1218,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 0.4"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/base64-js"
@@ -1465,6 +1545,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/ansi-regex"
             }
@@ -1516,6 +1600,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/builtin-modules"
             }
@@ -1566,6 +1654,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/camelcase"
@@ -1669,6 +1761,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/code-point-at"
             }
@@ -1719,6 +1815,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/decamelize"
@@ -1821,6 +1921,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.8.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/escape-string-regexp"
             }
@@ -1872,6 +1976,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/find-up"
             }
@@ -1921,6 +2029,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.4.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/graceful-fs"
@@ -2024,6 +2136,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/invert-kv"
             }
@@ -2126,6 +2242,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/is-builtin-module"
             }
@@ -2176,6 +2296,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/is-fullwidth-code-point"
@@ -2279,6 +2403,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/lcid"
             }
@@ -2329,6 +2457,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/load-json-file"
@@ -2585,6 +2717,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/number-is-nan"
             }
@@ -2635,6 +2771,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/object-assign"
@@ -2687,6 +2827,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/os-locale"
             }
@@ -2737,6 +2881,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/parse-json"
@@ -2789,6 +2937,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/path-exists"
             }
@@ -2839,6 +2991,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/path-type"
@@ -2891,6 +3047,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/pify"
             }
@@ -2941,6 +3101,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/pinkie-promise"
@@ -2993,6 +3157,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/pinkie"
             }
@@ -3043,6 +3211,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/pkg-conf"
@@ -3095,6 +3267,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/read-pkg-up"
             }
@@ -3145,6 +3321,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/read-pkg"
@@ -3500,6 +3680,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/string-width"
             }
@@ -3551,6 +3735,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/strip-ansi"
             }
@@ -3601,6 +3789,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/strip-bom"
@@ -3755,6 +3947,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">= 0.10.0"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/window-size"
             }
@@ -3805,6 +4001,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=0.10.0"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/bundle-dependencies/node_modules/wrap-ansi"
@@ -4005,6 +4205,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^16.14.0 || >=18.0.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/cacache"
         }
@@ -4049,6 +4253,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/chownr"
@@ -4095,6 +4303,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/clean-stack"
         }
@@ -4139,6 +4351,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=7.0.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/color-convert"
@@ -4275,6 +4491,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 8"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/cross-spawn"
         }
@@ -4365,6 +4585,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">= 8"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/cross-spawn/node_modules/which"
             }
@@ -4412,6 +4636,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/debug"
         }
@@ -4456,6 +4684,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/decompress-response"
@@ -4509,6 +4741,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=4.0.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/deep-extend"
         }
@@ -4553,6 +4789,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/detect-libc"
@@ -4824,6 +5064,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/env-paths"
         }
@@ -4914,6 +5158,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=4"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/esprima"
         }
@@ -4956,6 +5204,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/expand-template"
@@ -5227,6 +5479,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=14"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/foreground-child"
         }
@@ -5316,6 +5572,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/fs-minipass"
@@ -5541,6 +5801,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 14"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/http-proxy-agent"
         }
@@ -5586,6 +5850,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 14"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/https-proxy-agent"
         }
@@ -5630,6 +5898,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/iconv-lite"
@@ -5721,6 +5993,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.8.19"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/imurmurhash"
         }
@@ -5765,6 +6041,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/indent-string"
@@ -5900,6 +6180,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 12"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/ip-address"
         }
@@ -5944,6 +6228,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/is-fullwidth-code-point"
@@ -6035,6 +6323,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/is-obj"
         }
@@ -6079,6 +6371,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=16"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/isexe"
@@ -6305,6 +6601,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=18"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/libxmljs2"
         }
@@ -6395,6 +6695,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^16.14.0 || >=18.0.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/make-fetch-happen"
         }
@@ -6440,6 +6744,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/mimic-response"
         }
@@ -6484,6 +6792,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=16 || 14 >=14.17"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/minimatch"
@@ -6575,6 +6887,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=16 || 14 >=14.17"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/minipass-collect"
         }
@@ -6619,6 +6935,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/minipass-fetch"
@@ -6665,6 +6985,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 8"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/minipass-flush"
         }
@@ -6710,6 +7034,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=8"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/minipass-flush/node_modules/minipass"
             }
@@ -6741,6 +7069,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/minipass-pipeline"
@@ -6786,6 +7118,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=8"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/minipass-pipeline/node_modules/minipass"
@@ -6834,6 +7170,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/minipass-sized"
         }
@@ -6878,6 +7218,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=8"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/minipass-sized/node_modules/minipass"
@@ -6926,6 +7270,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=16 || 14 >=14.17"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/minipass"
         }
@@ -6971,6 +7319,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 8"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/minizlib"
         }
@@ -7015,6 +7367,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=8"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/minizlib/node_modules/minipass"
@@ -7106,6 +7462,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/mkdirp"
@@ -7374,6 +7734,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 0.6"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/negotiator"
         }
@@ -7418,6 +7782,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/node-abi"
@@ -7464,6 +7832,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^16.14.0 || >=18.0.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/node-gyp"
         }
@@ -7508,6 +7880,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/nopt"
@@ -7598,6 +7974,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/p-map"
@@ -7734,6 +8114,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/path-key"
         }
@@ -7778,6 +8162,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=16 || 14 >=14.18"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/path-scurry"
@@ -7824,6 +8212,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/prebuild-install"
         }
@@ -7869,6 +8261,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/proc-log"
         }
@@ -7913,6 +8309,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/promise-retry"
@@ -8004,6 +8404,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/punycode"
         }
@@ -8094,6 +8498,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.12"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/randexp"
         }
@@ -8181,6 +8589,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 6"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/readable-stream"
         }
@@ -8225,6 +8637,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/require-from-string"
@@ -8271,6 +8687,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.12"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/ret"
         }
@@ -8315,6 +8735,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 4"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/retry"
@@ -8496,6 +8920,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/semver"
         }
@@ -8540,6 +8968,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/shebang-command"
@@ -8586,6 +9018,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/shebang-regex"
         }
@@ -8630,6 +9066,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=14"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/signal-exit"
@@ -8766,6 +9206,14 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 6.0.0"
+        },
+        {
+          "name": "cdx:npm:package:constraint:engine:npm",
+          "value": ">= 3.0.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/smart-buffer"
         }
@@ -8810,6 +9258,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/smtp-address-parser"
@@ -8856,6 +9308,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 14"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/socks-proxy-agent"
         }
@@ -8900,6 +9356,14 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 10.0.0"
+        },
+        {
+          "name": "cdx:npm:package:constraint:engine:npm",
+          "value": ">= 3.0.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/socks"
@@ -9126,6 +9590,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/ssri"
         }
@@ -9215,6 +9683,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/string-width-cjs"
         }
@@ -9259,6 +9731,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=8"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/string-width-cjs/node_modules/ansi-regex"
@@ -9350,6 +9826,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=8"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/string-width-cjs/node_modules/strip-ansi"
             }
@@ -9397,6 +9877,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/string-width"
         }
@@ -9442,6 +9926,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/strip-ansi-cjs"
         }
@@ -9486,6 +9974,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=8"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/strip-ansi-cjs/node_modules/ansi-regex"
@@ -9534,6 +10026,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/strip-ansi"
         }
@@ -9578,6 +10074,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/strip-json-comments"
@@ -9716,6 +10216,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/tar-stream"
         }
@@ -9760,6 +10264,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/tar"
@@ -9806,6 +10314,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">= 8"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/tar/node_modules/fs-minipass"
             }
@@ -9850,6 +10362,10 @@
                 }
               ],
               "properties": [
+                {
+                  "name": "cdx:npm:package:constraint:engine:node",
+                  "value": ">=8"
+                },
                 {
                   "name": "cdx:npm:package:path",
                   "value": "node_modules/tar/node_modules/fs-minipass/node_modules/minipass"
@@ -9898,6 +10414,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=8"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/tar/node_modules/minipass"
             }
@@ -9945,6 +10465,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "*"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/tunnel-agent"
         }
@@ -9990,6 +10514,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/unique-filename"
         }
@@ -10034,6 +10562,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/unique-slug"
@@ -10170,6 +10702,10 @@
       ],
       "properties": [
         {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^16.13.0 || >=18.0.0"
+        },
+        {
           "name": "cdx:npm:package:path",
           "value": "node_modules/which"
         }
@@ -10214,6 +10750,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/wrap-ansi-cjs"
@@ -10260,6 +10800,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=8"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/wrap-ansi-cjs/node_modules/ansi-regex"
             }
@@ -10304,6 +10848,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=8"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/wrap-ansi-cjs/node_modules/ansi-styles"
@@ -10395,6 +10943,10 @@
           ],
           "properties": [
             {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=8"
+            },
+            {
               "name": "cdx:npm:package:path",
               "value": "node_modules/wrap-ansi-cjs/node_modules/string-width"
             }
@@ -10439,6 +10991,10 @@
             }
           ],
           "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=8"
+            },
             {
               "name": "cdx:npm:package:path",
               "value": "node_modules/wrap-ansi-cjs/node_modules/strip-ansi"
@@ -10486,6 +11042,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/wrap-ansi"
@@ -10576,6 +11136,10 @@
         }
       ],
       "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12.0"
+        },
         {
           "name": "cdx:npm:package:path",
           "value": "node_modules/xmlbuilder2"
