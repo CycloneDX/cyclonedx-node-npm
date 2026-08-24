@@ -85,14 +85,14 @@
   "devDependencies": {
     "@types/node": "ts5.8",
     "@types/normalize-package-data": "^2.4.4",
-    "@types/spdx-expression-parse": "^3.0.5",
+    "@types/spdx-expression-parse": "^4.0.0",
     "fast-glob": "^3.2.11",
     "imurmurhash": "^0.1.4",
     "c8": "^11 || ^12",
     "jest": "30.4.2",
     "jest-junit": "17.0.0",
     "npm-run-all2": "^7 || ^8",
-    "typescript": "5.9.3"
+    "typescript": "7.0.2"
   },
   "type": "commonjs",
   "engines": {
