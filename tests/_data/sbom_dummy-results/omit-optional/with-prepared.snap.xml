@@ -32,6 +32,9 @@
               <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=20.18.0</property>
+          </properties>
         </component>
         <component type="application">
           <author>Jan Kowalleck</author>
@@ -58,6 +61,10 @@
               <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=20.18.0</property>
+            <property name="cdx:npm:package:constraint:engine:npm">&gt;=9</property>
+          </properties>
         </component>
       </components>
     </tools>
@@ -106,6 +113,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=14.0.0</property>
         <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library</property>
       </properties>
     </component>
@@ -140,6 +148,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=14.0.0</property>
         <property name="cdx:npm:package:path">node_modules/@cyclonedx/cyclonedx-library-same_aliased</property>
       </properties>
     </component>
@@ -208,6 +217,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
         <property name="cdx:npm:package:path">node_modules/@isaacs/cliui</property>
       </properties>
     </component>
@@ -242,6 +252,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^16.14.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/@npmcli/agent</property>
       </properties>
     </component>
@@ -276,6 +287,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/@npmcli/fs</property>
       </properties>
     </component>
@@ -310,6 +322,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8.0</property>
         <property name="cdx:npm:package:path">node_modules/@oozcitak/dom</property>
       </properties>
     </component>
@@ -344,6 +357,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6.0</property>
         <property name="cdx:npm:package:path">node_modules/@oozcitak/infra</property>
       </properties>
     </component>
@@ -378,6 +392,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8.0</property>
         <property name="cdx:npm:package:path">node_modules/@oozcitak/url</property>
       </properties>
     </component>
@@ -412,6 +427,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8.0</property>
         <property name="cdx:npm:package:path">node_modules/@oozcitak/util</property>
       </properties>
     </component>
@@ -445,6 +461,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=14</property>
         <property name="cdx:npm:package:path">node_modules/@pkgjs/parseargs</property>
       </properties>
     </component>
@@ -544,6 +561,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/abbrev</property>
       </properties>
     </component>
@@ -577,6 +595,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 14</property>
         <property name="cdx:npm:package:path">node_modules/agent-base</property>
       </properties>
     </component>
@@ -610,6 +629,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
         <property name="cdx:npm:package:path">node_modules/aggregate-error</property>
       </properties>
     </component>
@@ -742,6 +762,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
         <property name="cdx:npm:package:path">node_modules/ansi-regex</property>
       </properties>
     </component>
@@ -775,6 +796,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
         <property name="cdx:npm:package:path">node_modules/ansi-styles</property>
       </properties>
     </component>
@@ -908,6 +930,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 0.4</property>
         <property name="cdx:npm:package:path">node_modules/base64-js</property>
       </properties>
     </component>
@@ -1143,6 +1166,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/ansi-regex</property>
           </properties>
         </component>
@@ -1179,6 +1203,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/builtin-modules</property>
           </properties>
         </component>
@@ -1215,6 +1240,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/camelcase</property>
           </properties>
         </component>
@@ -1287,6 +1313,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/code-point-at</property>
           </properties>
         </component>
@@ -1323,6 +1350,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/decamelize</property>
           </properties>
         </component>
@@ -1394,6 +1422,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.8.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/escape-string-regexp</property>
           </properties>
         </component>
@@ -1430,6 +1459,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/find-up</property>
           </properties>
         </component>
@@ -1465,6 +1495,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.4.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/graceful-fs</property>
           </properties>
         </component>
@@ -1537,6 +1568,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/invert-kv</property>
           </properties>
         </component>
@@ -1609,6 +1641,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/is-builtin-module</property>
           </properties>
         </component>
@@ -1645,6 +1678,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/is-fullwidth-code-point</property>
           </properties>
         </component>
@@ -1717,6 +1751,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/lcid</property>
           </properties>
         </component>
@@ -1753,6 +1788,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/load-json-file</property>
           </properties>
         </component>
@@ -1933,6 +1969,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/number-is-nan</property>
           </properties>
         </component>
@@ -1969,6 +2006,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/object-assign</property>
           </properties>
         </component>
@@ -2005,6 +2043,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/os-locale</property>
           </properties>
         </component>
@@ -2041,6 +2080,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/parse-json</property>
           </properties>
         </component>
@@ -2077,6 +2117,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/path-exists</property>
           </properties>
         </component>
@@ -2113,6 +2154,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/path-type</property>
           </properties>
         </component>
@@ -2149,6 +2191,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/pify</property>
           </properties>
         </component>
@@ -2185,6 +2228,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/pinkie-promise</property>
           </properties>
         </component>
@@ -2221,6 +2265,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/pinkie</property>
           </properties>
         </component>
@@ -2257,6 +2302,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/pkg-conf</property>
           </properties>
         </component>
@@ -2293,6 +2339,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/read-pkg-up</property>
           </properties>
         </component>
@@ -2329,6 +2376,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/read-pkg</property>
           </properties>
         </component>
@@ -2578,6 +2626,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/string-width</property>
           </properties>
         </component>
@@ -2614,6 +2663,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/strip-ansi</property>
           </properties>
         </component>
@@ -2650,6 +2700,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/strip-bom</property>
           </properties>
         </component>
@@ -2758,6 +2809,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;= 0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/window-size</property>
           </properties>
         </component>
@@ -2794,6 +2846,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
             <property name="cdx:npm:package:path">node_modules/bundle-dependencies/node_modules/wrap-ansi</property>
           </properties>
         </component>
@@ -2936,6 +2989,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^16.14.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/cacache</property>
       </properties>
     </component>
@@ -2969,6 +3023,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
         <property name="cdx:npm:package:path">node_modules/chownr</property>
       </properties>
     </component>
@@ -3002,6 +3057,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6</property>
         <property name="cdx:npm:package:path">node_modules/clean-stack</property>
       </properties>
     </component>
@@ -3035,6 +3091,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=7.0.0</property>
         <property name="cdx:npm:package:path">node_modules/color-convert</property>
       </properties>
     </component>
@@ -3134,6 +3191,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 8</property>
         <property name="cdx:npm:package:path">node_modules/cross-spawn</property>
       </properties>
       <components>
@@ -3200,6 +3258,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;= 8</property>
             <property name="cdx:npm:package:path">node_modules/cross-spawn/node_modules/which</property>
           </properties>
         </component>
@@ -3235,6 +3294,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6.0</property>
         <property name="cdx:npm:package:path">node_modules/debug</property>
       </properties>
     </component>
@@ -3268,6 +3328,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
         <property name="cdx:npm:package:path">node_modules/decompress-response</property>
       </properties>
     </component>
@@ -3305,6 +3366,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=4.0.0</property>
         <property name="cdx:npm:package:path">node_modules/deep-extend</property>
       </properties>
     </component>
@@ -3338,6 +3400,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
         <property name="cdx:npm:package:path">node_modules/detect-libc</property>
       </properties>
     </component>
@@ -3536,6 +3599,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6</property>
         <property name="cdx:npm:package:path">node_modules/env-paths</property>
       </properties>
     </component>
@@ -3602,6 +3666,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=4</property>
         <property name="cdx:npm:package:path">node_modules/esprima</property>
       </properties>
     </component>
@@ -3633,6 +3698,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6</property>
         <property name="cdx:npm:package:path">node_modules/expand-template</property>
       </properties>
     </component>
@@ -3831,6 +3897,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=14</property>
         <property name="cdx:npm:package:path">node_modules/foreground-child</property>
       </properties>
     </component>
@@ -3897,6 +3964,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/fs-minipass</property>
       </properties>
     </component>
@@ -4061,6 +4129,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 14</property>
         <property name="cdx:npm:package:path">node_modules/http-proxy-agent</property>
       </properties>
     </component>
@@ -4094,6 +4163,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 14</property>
         <property name="cdx:npm:package:path">node_modules/https-proxy-agent</property>
       </properties>
     </component>
@@ -4127,6 +4197,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
         <property name="cdx:npm:package:path">node_modules/iconv-lite</property>
       </properties>
     </component>
@@ -4193,6 +4264,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 4</property>
         <property name="cdx:npm:package:path">node_modules/ignore</property>
       </properties>
     </component>
@@ -4226,6 +4298,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.8.19</property>
         <property name="cdx:npm:package:path">node_modules/imurmurhash</property>
       </properties>
     </component>
@@ -4259,6 +4332,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
         <property name="cdx:npm:package:path">node_modules/indent-string</property>
       </properties>
     </component>
@@ -4357,6 +4431,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 12</property>
         <property name="cdx:npm:package:path">node_modules/ip-address</property>
       </properties>
     </component>
@@ -4390,6 +4465,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
         <property name="cdx:npm:package:path">node_modules/is-fullwidth-code-point</property>
       </properties>
     </component>
@@ -4456,6 +4532,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
         <property name="cdx:npm:package:path">node_modules/is-obj</property>
       </properties>
     </component>
@@ -4489,6 +4566,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=16</property>
         <property name="cdx:npm:package:path">node_modules/isexe</property>
       </properties>
     </component>
@@ -4654,6 +4732,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=18</property>
         <property name="cdx:npm:package:path">node_modules/libxmljs2</property>
       </properties>
     </component>
@@ -4720,6 +4799,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^16.14.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/make-fetch-happen</property>
       </properties>
     </component>
@@ -4753,6 +4833,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
         <property name="cdx:npm:package:path">node_modules/mimic-response</property>
       </properties>
     </component>
@@ -4786,6 +4867,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=16 || 14 &gt;=14.17</property>
         <property name="cdx:npm:package:path">node_modules/minimatch</property>
       </properties>
     </component>
@@ -4852,6 +4934,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=16 || 14 &gt;=14.17</property>
         <property name="cdx:npm:package:path">node_modules/minipass-collect</property>
       </properties>
     </component>
@@ -4885,6 +4968,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/minipass-fetch</property>
       </properties>
     </component>
@@ -4918,6 +5002,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 8</property>
         <property name="cdx:npm:package:path">node_modules/minipass-flush</property>
       </properties>
       <components>
@@ -4951,6 +5036,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
             <property name="cdx:npm:package:path">node_modules/minipass-flush/node_modules/minipass</property>
           </properties>
         </component>
@@ -4974,6 +5060,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
         <property name="cdx:npm:package:path">node_modules/minipass-pipeline</property>
       </properties>
       <components>
@@ -5007,6 +5094,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
             <property name="cdx:npm:package:path">node_modules/minipass-pipeline/node_modules/minipass</property>
           </properties>
         </component>
@@ -5042,6 +5130,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
         <property name="cdx:npm:package:path">node_modules/minipass-sized</property>
       </properties>
       <components>
@@ -5075,6 +5164,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
             <property name="cdx:npm:package:path">node_modules/minipass-sized/node_modules/minipass</property>
           </properties>
         </component>
@@ -5110,6 +5200,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=16 || 14 &gt;=14.17</property>
         <property name="cdx:npm:package:path">node_modules/minipass</property>
       </properties>
     </component>
@@ -5143,6 +5234,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 8</property>
         <property name="cdx:npm:package:path">node_modules/minizlib</property>
       </properties>
       <components>
@@ -5176,6 +5268,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
             <property name="cdx:npm:package:path">node_modules/minizlib/node_modules/minipass</property>
           </properties>
         </component>
@@ -5243,6 +5336,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
         <property name="cdx:npm:package:path">node_modules/mkdirp</property>
       </properties>
     </component>
@@ -5438,6 +5532,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 0.6</property>
         <property name="cdx:npm:package:path">node_modules/negotiator</property>
       </properties>
     </component>
@@ -5471,6 +5566,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
         <property name="cdx:npm:package:path">node_modules/node-abi</property>
       </properties>
     </component>
@@ -5504,6 +5600,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^16.14.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/node-gyp</property>
       </properties>
     </component>
@@ -5537,6 +5634,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/nopt</property>
       </properties>
     </component>
@@ -5603,6 +5701,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
         <property name="cdx:npm:package:path">node_modules/p-map</property>
       </properties>
     </component>
@@ -5702,6 +5801,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
         <property name="cdx:npm:package:path">node_modules/path-key</property>
       </properties>
     </component>
@@ -5735,6 +5835,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=16 || 14 &gt;=14.18</property>
         <property name="cdx:npm:package:path">node_modules/path-scurry</property>
       </properties>
     </component>
@@ -5768,6 +5869,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
         <property name="cdx:npm:package:path">node_modules/prebuild-install</property>
       </properties>
     </component>
@@ -5801,6 +5903,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/proc-log</property>
       </properties>
     </component>
@@ -5834,6 +5937,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
         <property name="cdx:npm:package:path">node_modules/promise-retry</property>
       </properties>
     </component>
@@ -5900,6 +6004,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6</property>
         <property name="cdx:npm:package:path">node_modules/punycode</property>
       </properties>
     </component>
@@ -5966,6 +6071,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.12</property>
         <property name="cdx:npm:package:path">node_modules/randexp</property>
       </properties>
     </component>
@@ -6029,6 +6135,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 6</property>
         <property name="cdx:npm:package:path">node_modules/readable-stream</property>
       </properties>
     </component>
@@ -6062,6 +6169,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
         <property name="cdx:npm:package:path">node_modules/require-from-string</property>
       </properties>
     </component>
@@ -6095,6 +6203,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.12</property>
         <property name="cdx:npm:package:path">node_modules/ret</property>
       </properties>
     </component>
@@ -6128,6 +6237,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 4</property>
         <property name="cdx:npm:package:path">node_modules/retry</property>
       </properties>
     </component>
@@ -6260,6 +6370,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
         <property name="cdx:npm:package:path">node_modules/semver</property>
       </properties>
     </component>
@@ -6293,6 +6404,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
         <property name="cdx:npm:package:path">node_modules/shebang-command</property>
       </properties>
     </component>
@@ -6326,6 +6438,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
         <property name="cdx:npm:package:path">node_modules/shebang-regex</property>
       </properties>
     </component>
@@ -6359,6 +6472,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=14</property>
         <property name="cdx:npm:package:path">node_modules/signal-exit</property>
       </properties>
     </component>
@@ -6458,6 +6572,8 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 6.0.0</property>
+        <property name="cdx:npm:package:constraint:engine:npm">&gt;= 3.0.0</property>
         <property name="cdx:npm:package:path">node_modules/smart-buffer</property>
       </properties>
     </component>
@@ -6491,6 +6607,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10</property>
         <property name="cdx:npm:package:path">node_modules/smtp-address-parser</property>
       </properties>
     </component>
@@ -6524,6 +6641,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 14</property>
         <property name="cdx:npm:package:path">node_modules/socks-proxy-agent</property>
       </properties>
     </component>
@@ -6557,6 +6675,8 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 10.0.0</property>
+        <property name="cdx:npm:package:constraint:engine:npm">&gt;= 3.0.0</property>
         <property name="cdx:npm:package:path">node_modules/socks</property>
       </properties>
     </component>
@@ -6722,6 +6842,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/ssri</property>
       </properties>
     </component>
@@ -6787,6 +6908,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
         <property name="cdx:npm:package:path">node_modules/string-width-cjs</property>
       </properties>
       <components>
@@ -6820,6 +6942,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
             <property name="cdx:npm:package:path">node_modules/string-width-cjs/node_modules/ansi-regex</property>
           </properties>
         </component>
@@ -6886,6 +7009,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
             <property name="cdx:npm:package:path">node_modules/string-width-cjs/node_modules/strip-ansi</property>
           </properties>
         </component>
@@ -6921,6 +7045,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
         <property name="cdx:npm:package:path">node_modules/string-width</property>
       </properties>
     </component>
@@ -6954,6 +7079,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
         <property name="cdx:npm:package:path">node_modules/strip-ansi-cjs</property>
       </properties>
       <components>
@@ -6987,6 +7113,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
             <property name="cdx:npm:package:path">node_modules/strip-ansi-cjs/node_modules/ansi-regex</property>
           </properties>
         </component>
@@ -7022,6 +7149,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
         <property name="cdx:npm:package:path">node_modules/strip-ansi</property>
       </properties>
     </component>
@@ -7055,6 +7183,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
         <property name="cdx:npm:package:path">node_modules/strip-json-comments</property>
       </properties>
     </component>
@@ -7156,6 +7285,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6</property>
         <property name="cdx:npm:package:path">node_modules/tar-stream</property>
       </properties>
     </component>
@@ -7189,6 +7319,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
         <property name="cdx:npm:package:path">node_modules/tar</property>
       </properties>
       <components>
@@ -7222,6 +7353,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;= 8</property>
             <property name="cdx:npm:package:path">node_modules/tar/node_modules/fs-minipass</property>
           </properties>
           <components>
@@ -7255,6 +7387,7 @@
                 </reference>
               </externalReferences>
               <properties>
+                <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
                 <property name="cdx:npm:package:path">node_modules/tar/node_modules/fs-minipass/node_modules/minipass</property>
               </properties>
             </component>
@@ -7290,6 +7423,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
             <property name="cdx:npm:package:path">node_modules/tar/node_modules/minipass</property>
           </properties>
         </component>
@@ -7325,6 +7459,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">*</property>
         <property name="cdx:npm:package:path">node_modules/tunnel-agent</property>
       </properties>
     </component>
@@ -7390,6 +7525,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/unique-filename</property>
       </properties>
     </component>
@@ -7423,6 +7559,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/unique-slug</property>
       </properties>
     </component>
@@ -7554,6 +7691,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^16.13.0 || &gt;=18.0.0</property>
         <property name="cdx:npm:package:path">node_modules/which</property>
       </properties>
     </component>
@@ -7587,6 +7725,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
         <property name="cdx:npm:package:path">node_modules/wrap-ansi-cjs</property>
       </properties>
       <components>
@@ -7620,6 +7759,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
             <property name="cdx:npm:package:path">node_modules/wrap-ansi-cjs/node_modules/ansi-regex</property>
           </properties>
         </component>
@@ -7653,6 +7793,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
             <property name="cdx:npm:package:path">node_modules/wrap-ansi-cjs/node_modules/ansi-styles</property>
           </properties>
         </component>
@@ -7719,6 +7860,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
             <property name="cdx:npm:package:path">node_modules/wrap-ansi-cjs/node_modules/string-width</property>
           </properties>
         </component>
@@ -7752,6 +7894,7 @@
             </reference>
           </externalReferences>
           <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
             <property name="cdx:npm:package:path">node_modules/wrap-ansi-cjs/node_modules/strip-ansi</property>
           </properties>
         </component>
@@ -7787,6 +7930,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
         <property name="cdx:npm:package:path">node_modules/wrap-ansi</property>
       </properties>
     </component>
@@ -7853,6 +7997,7 @@
         </reference>
       </externalReferences>
       <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12.0</property>
         <property name="cdx:npm:package:path">node_modules/xmlbuilder2</property>
       </properties>
     </component>

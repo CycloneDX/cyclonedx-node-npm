@@ -32,6 +32,9 @@
               <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=20.18.0</property>
+          </properties>
         </component>
         <component type="application">
           <author>Jan Kowalleck</author>
@@ -58,6 +61,10 @@
               <comment>as detected from PackageJson property "homepage"</comment>
             </reference>
           </externalReferences>
+          <properties>
+            <property name="cdx:npm:package:constraint:engine:node">&gt;=20.18.0</property>
+            <property name="cdx:npm:package:constraint:engine:npm">&gt;=9</property>
+          </properties>
         </component>
       </components>
     </tools>

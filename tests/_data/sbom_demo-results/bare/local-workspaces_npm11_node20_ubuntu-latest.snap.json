@@ -41,6 +41,12 @@
               "type": "website",
               "comment": "as detected from PackageJson property \"homepage\""
             }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=20.18.0"
+            }
           ]
         },
         {
@@ -72,6 +78,16 @@
               "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
               "type": "website",
               "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=20.18.0"
+            },
+            {
+              "name": "cdx:npm:package:constraint:engine:npm",
+              "value": ">=9"
             }
           ]
         }
