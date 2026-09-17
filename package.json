@@ -80,7 +80,7 @@
     "ajv": "^8.12.0",
     "ajv-formats": "^3.0.1",
     "ajv-formats-draft2019": "^1.6.1",
-    "libxmljs2": "^0.35||^0.37"
+    "libxml2-wasm": "^0.7.2"
   },
   "devDependencies": {
     "@types/node": "ts5.8",
@@ -137,6 +137,6 @@
     "outputName": "tests.junit.xml"
   },
   "allowScripts": {
-    "libxmljs2@0.37.0": true
+    "libxml2-wasm@0.7.2": true
   }
 }
