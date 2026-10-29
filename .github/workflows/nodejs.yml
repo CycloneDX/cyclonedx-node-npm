@@ -151,6 +151,9 @@ jobs:
         # include:
         #  - node-version: "27"
         #    experimental: true
+    env:
+      NODE_VERSION: ${{ matrix.node-version }}
+      OS: ${{ matrix.os }}
     continue-on-error: ${{ matrix.experimental == true }}
     timeout-minutes: 15
     steps:
@@ -203,7 +206,7 @@ jobs:
           node -- node_modules/c8/bin/c8.js
           report
           --reporter clover
-          --reports-dir '${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}/coverage'
+          --reports-dir "${REPORTS_DIR}/node${NODE_VERSION}_${OS}/coverage"
       - name: artifact test reports
         if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
@@ -236,6 +239,7 @@ jobs:
             node-version: '^20.18'
             os: ubuntu-latest
     env:
+      NODE_VERSION: ${{ matrix.node-version }}
       npm_config_engine_strict: true
     timeout-minutes: 10
     steps:
@@ -253,13 +257,13 @@ jobs:
           package-manager-cache: false
       - name: setup npm ${{ matrix.npm-version }}
         run: |  # zizmor: ignore[adhoc-packages] -- global npm
-          npm i -g npm@${{ matrix.npm-version }}
+          npm i -g "npm@${NODE_VERSION}"
           npm --version
       - name: setup subject
         shell: bash
         run: |  # zizmor: ignore[adhoc-packages] -- npm install partially with locked 
           set -ex
-          if [[ '${{ matrix.npm-version }}' = '^9' ]]
+          if [[ "$NODE_VERSION" = '^9' ]]
           then
             # npm9 is bugged, - it does not properly check dependencies' engine requirements to select sufficient candidates... lets do this manually
             npm i --no-save --ignore-scripts --loglevel=silly npm-run-all2@^7
@@ -280,7 +284,7 @@ jobs:
           --ignore-npm-errors
           --omit=dev
           --validate
-          --output-file=${{ env.REPORTS_DIR }}/bom.json
+          --output-file="${REPORTS_DIR}/bom.json"
       - name: artifact test reports
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
