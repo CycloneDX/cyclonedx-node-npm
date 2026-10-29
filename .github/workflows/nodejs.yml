@@ -279,7 +279,6 @@ jobs:
           -vvv
           --ignore-npm-errors
           --omit=dev
-          --validate
           --output-file=${{ env.REPORTS_DIR }}/bom.json
       - name: artifact test reports
         if: ${{ failure() }}
