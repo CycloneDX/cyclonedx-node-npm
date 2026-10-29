@@ -24,10 +24,10 @@ import { Builders as FromNodePackageJsonBuilders, Factories as FromNodePackageJs
 import { Factories as LicenseFactories, Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
 import {ComponentType} from '@cyclonedx/cyclonedx-library/Enums'
 import type { Types as SerializeTypes } from '@cyclonedx/cyclonedx-library/Serialize'
-import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
+import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML, XmlSerializer, MissingOptionalDependencyError as SerializationMissingOptionalDependencyError } from '@cyclonedx/cyclonedx-library/Serialize'
 import {SpecVersionDict, Version as SpecVersion} from '@cyclonedx/cyclonedx-library/Spec'
 import type { Types as ValidationTypes } from '@cyclonedx/cyclonedx-library/Validation'
-import { JsonStrictValidator, MissingOptionalDependencyError, XmlValidator } from '@cyclonedx/cyclonedx-library/Validation'
+import { JsonStrictValidator, MissingOptionalDependencyError as ValidationMissingOptionalDependencyError, XmlValidator } from '@cyclonedx/cyclonedx-library/Validation'
 import {Argument, Command, Option} from 'commander'
 import spdxExpressionParse from "spdx-expression-parse"
 
@@ -179,7 +179,8 @@ function makeCommand(process_: NodeJS.Process): Command {
     (() => {
       const o = new Option(
         '--of, --output-format <format>',
-        'Which output format to use.'
+        'Which output format to use.\n'
+        + 'XML serialization fail, if requirements not met - see the README.'
       ).choices(
         Object.values(OutputFormat).sort()
       ).default(
@@ -205,7 +206,7 @@ function makeCommand(process_: NodeJS.Process): Command {
     new Option(
       '--validate',
       'Validate resulting BOM before outputting.\n' +
-      'Validation is skipped, if requirements not met. See the README.'
+      'Validation fails, if requirements not met - see the README.'
     ).default(undefined)
   ).addOption(
     new Option(
@@ -361,10 +362,22 @@ export async function run(process_: NodeJS.Process): Promise<number> {
   }
 
   myConsole.log('LOG   | serializing BOM ...')
-  const serialized = serializer.serialize(bom, {
-    sortLists: options.outputReproducible,
-    space: 2
-  })
+  let serialized
+  try {
+    serialized = serializer.serialize(bom, {
+      sortLists: options.outputReproducible,
+      space: 2
+    })
+  } catch (err) {
+    if (err instanceof SerializationMissingOptionalDependencyError) {
+      myConsole.debug('DEBUG | cannot serialize BOM. details:', err)
+      myConsole.error('ERROR | cannot serialize BOM.')
+    } else {
+      myConsole.debug('DEBUG | unexpected serialization error. details:', err)
+      myConsole.error('ERROR | unexpected serialization error')
+    }
+    throw err
+  }
 
   if (options.validate ?? true) {
     myConsole.log('LOG   | try validating BOM result ...')
@@ -382,17 +395,16 @@ export async function run(process_: NodeJS.Process): Promise<number> {
         return ExitCode.FAILURE
       }
     } catch (err) {
-      if (err instanceof MissingOptionalDependencyError) {
+      if (err instanceof ValidationMissingOptionalDependencyError) {
+        myConsole.debug('DEBUG | cannot validate BOM. details:', err)
         if (options.validate === true) {
-          // if explicitly requested to validate, then warn about skip
-          myConsole.warn('WARN  | skipped validating BOM:', err.message)
-          // @TODO breaking change: forward error, do not skip/continue
-        } else {
-          myConsole.info('INFO  | skipped validating BOM:', err.message)
+          myConsole.error('ERROR | cannot validate BOM.')
+          throw err
         }
+        myConsole.info('INFO  | skipped validating BOM:', err.message)
       } else {
-        myConsole.debug('DEBUG | unexpected error. details: ', err)
-        myConsole.error('ERROR | unexpected error')
+        myConsole.debug('DEBUG | unexpected validation error. details:', err)
+        myConsole.error('ERROR | unexpected validation error')
         throw err
       }
     }
