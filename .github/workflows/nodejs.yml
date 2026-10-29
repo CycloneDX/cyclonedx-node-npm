@@ -172,7 +172,7 @@ jobs:
         run: |  # zizmor: ignore[adhoc-packages] -- npm install partially with locked
           set -ex
           dev_requirements='c8 jest jest-junit imurmurhash fast-glob'
-          npm i --ignore-scripts --omit=peer --omit=dev --only=prod --production --loglevel=silly
+          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2 || true
           ## install the needed dev-deps
