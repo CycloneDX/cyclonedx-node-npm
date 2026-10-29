@@ -24,7 +24,7 @@ import { Builders as FromNodePackageJsonBuilders, Factories as FromNodePackageJs
 import { Factories as LicenseFactories, Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
 import {ComponentType} from '@cyclonedx/cyclonedx-library/Enums'
 import type { Types as SerializeTypes } from '@cyclonedx/cyclonedx-library/Serialize'
-import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML, XmlSerializer, MissingOptionalDependencyError as SerializationMissingOptionalDependencyError } from '@cyclonedx/cyclonedx-library/Serialize'
+import { JSON as SerializeJSON, JsonSerializer, MissingOptionalDependencyError as SerializationMissingOptionalDependencyError,XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import {SpecVersionDict, Version as SpecVersion} from '@cyclonedx/cyclonedx-library/Spec'
 import type { Types as ValidationTypes } from '@cyclonedx/cyclonedx-library/Validation'
 import { JsonStrictValidator, MissingOptionalDependencyError as ValidationMissingOptionalDependencyError, XmlValidator } from '@cyclonedx/cyclonedx-library/Validation'
@@ -362,7 +362,8 @@ export async function run(process_: NodeJS.Process): Promise<number> {
   }
 
   myConsole.log('LOG   | serializing BOM ...')
-  let serialized
+  /* eslint-disable-next-line @typescript-eslint/init-declarations -- ack */
+  let serialized: string
   try {
     serialized = serializer.serialize(bom, {
       sortLists: options.outputReproducible,
