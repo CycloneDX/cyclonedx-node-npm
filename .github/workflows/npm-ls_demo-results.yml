@@ -93,7 +93,7 @@ jobs:
       - name: prepare output
         run: |
           mkdir -p "$RESULTS_DIR"
-          echo "OUT_FILE_PREFIX=${RESULTS_DIR}/npm-ls${ADDITIONAL_NPM_LS_ARGS}_npm${NPM_VERSION}_node${NODE_VERSION}_${OS}' >> "$GITHUB_ENV"
+          echo "OUT_FILE_PREFIX=${RESULTS_DIR}/npm-ls${ADDITIONAL_NPM_LS_ARGS}_npm${NPM_VERSION}_node${NODE_VERSION}_${OS}" >> "$GITHUB_ENV"
         working-directory: '${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}'
         shell: bash # don't want to write tht code twice, windows and unix-like
       - name: Setup Node.js ${{ env.NODE_VERSION }}
