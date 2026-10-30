@@ -6,12 +6,16 @@ name: npm-ls demo results
 on:
   workflow_dispatch:
 
-permissions: {}
+permissions: { }
 
 env:
   DEMO_ROOT_DIR: demo
   RESULTS_DIR: CI_results
   RESULTS_ARTIFACT: npm-ls-results
+
+defaults:
+  run:
+    shell: bash # don't want to write tht code twice, windows and unix-like
 
 jobs:
   demo-results:
@@ -84,9 +88,6 @@ jobs:
       NODE_VERSION: ${{ matrix.node-version }}
       OS: ${{ matrix.os }}
     timeout-minutes: 10 # this is a large matrix, just don't waste time!
-    defaults:
-      run:
-        shell: bash # don't want to write tht code twice, windows and unix-like
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout

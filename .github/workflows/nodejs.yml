@@ -27,6 +27,11 @@ env:
   TESTS_REPORTS_ARTIFACT: tests-reports
   CNPM_TEST_UPDATE_SNAPSHOTS: ''  # set to a string that nodeJS would not evaluate to TRUE - which can only be an empty string
 
+
+defaults:
+  run:
+    shell: bash # don't want to write tht code twice, windows and unix-like
+
 jobs:
   build:
     name: build
@@ -171,7 +176,6 @@ jobs:
       - name: npm version
         run: npm --version
       - name: setup subject
-        shell: bash
         run: |  # zizmor: ignore[adhoc-packages] -- npm install partially with locked
           set -ex
           dev_requirements='c8 jest jest-junit imurmurhash fast-glob'
@@ -240,10 +244,16 @@ jobs:
             os: ubuntu-latest
     env:
       NPM_VERSION: ${{ matrix.npm-version }}
-      NODE_VERSION: ${{ matrix.node-version || env.NODE_ACTIVE_LTS }}
+      NODE_VERSION: ${{ matrix.node-version }}
       npm_config_engine_strict: true
     timeout-minutes: 10
     steps:
+      - name: NODE_VERSION fallback to NODE_ACTIVE_LTS
+        run: |
+          if test -z "$NODE_VERSION"
+          then
+            echo "NODE_VERSION=${NODE_ACTIVE_LTS}" >> "$GITHUB_ENV"
+          fi
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
@@ -262,7 +272,6 @@ jobs:
           npm i -g "npm@${NPM_VERSION}"
           npm --version
       - name: setup subject
-        shell: bash
         run: |  # zizmor: ignore[adhoc-packages] -- npm install partially with locked 
           set -ex
           if [[ "$NPM_VERSION" = '^9' ]]
