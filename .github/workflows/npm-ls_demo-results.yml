@@ -84,6 +84,9 @@ jobs:
       NODE_VERSION: ${{ matrix.node-version }}
       OS: ${{ matrix.os }}
     timeout-minutes: 10 # this is a large matrix, just don't waste time!
+    defaults:
+      run:
+        shell: bash # don't want to write tht code twice, windows and unix-like
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
@@ -95,7 +98,6 @@ jobs:
           mkdir -p "$RESULTS_DIR"
           echo "OUT_FILE_PREFIX=${RESULTS_DIR}/npm-ls${ADDITIONAL_NPM_LS_ARGS}_npm${NPM_VERSION}_node${NODE_VERSION}_${OS}" >> "$GITHUB_ENV"
         working-directory: '${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}'
-        shell: bash # don't want to write tht code twice, windows and unix-like
       - name: Setup Node.js ${{ env.NODE_VERSION }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
@@ -114,7 +116,6 @@ jobs:
         working-directory: ${{ env.DEMO_ROOT_DIR }}/${{ matrix.subject }}/project
       - name: npm-ls --json --all --long
         # important: the command in use is the same used by the internal builders of this project
-        shell: bash
         run: >
           npm --prefix project
           ls --json --all --long
