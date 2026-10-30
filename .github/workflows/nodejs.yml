@@ -18,7 +18,7 @@ concurrency:
   group: '${{ github.workflow }}-${{ github.ref }}'
   cancel-in-progress: true
 
-permissions: {}
+permissions: { }
 
 env:
   NODE_ACTIVE_LTS: '24'  # https://nodejs.org/en/about/releases/
@@ -178,12 +178,10 @@ jobs:
       - name: setup subject
         run: |  # zizmor: ignore[adhoc-packages] -- npm install partially with locked
           set -ex
-          dev_requirements='c8 jest jest-junit imurmurhash fast-glob'
-          npm i --ignore-scripts --omit=peer --omit=dev --only=prod --production --loglevel=silly
-          ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
-          npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2 || true
-          ## install the needed dev-deps
-          npm i --ignore-scripts --loglevel=silly --no-save $dev_requirements
+          npm i --ignore-scripts --omit=peer --only=prod --production --loglevel=silly
+          ## install ([transitive] optional peer) deps
+          npm i --no-save --omit=dev --omit=peer --omit=prod --loglevel=silly 'libxmljs2@^0.35||^0.37' \
+          || npm uninstall --no-save libxmljs2 || true
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
@@ -281,7 +279,7 @@ jobs:
           fi
           npm i --ignore-scripts --omit=dev --omit=peer --only=prod --production --loglevel=silly
           ## install ([transitive] optional peer) deps
-          npm i --no-save --omit=dev --only=peer --omit=prod --loglevel=silly 'libxmljs2@^0.35||^0.37' \
+          npm i --no-save --omit=dev --omit=peer --omit=prod --loglevel=silly 'libxmljs2@^0.35||^0.37' \
           || npm uninstall --no-save libxmljs2 || true
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
