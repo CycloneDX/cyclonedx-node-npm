@@ -80,7 +80,6 @@
     "ajv": "^8.12.0",
     "ajv-formats": "^3.0.1",
     "ajv-formats-draft2019": "^1.6.1",
-    "libxmljs2": "^0.35 || ^0.37",
     "@types/node": "ts5.8",
     "@types/normalize-package-data": "^2.4.4",
     "@types/spdx-expression-parse": "^3.0.5",
@@ -135,6 +134,7 @@
     "outputName": "tests.junit.xml"
   },
   "allowScripts": {
+    "libxmljs2@0.35.0": true,
     "libxmljs2@0.37.0": true
   }
 }
