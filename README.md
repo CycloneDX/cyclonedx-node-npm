@@ -122,12 +122,13 @@ Options:
                                   This requires more resources, and might result in loss of time- and random-based-values.
                                   (env: BOM_REPRODUCIBLE)
   --of, --output-format <format>  Which output format to use.
+                                  XML serialization fail, if requirements not met - see the README.
                                   (choices: "JSON", "XML", default: "JSON")
   -o, --output-file <file>        Path to the output file.
                                   Set to "-" to write to STDOUT.
                                   (default: write to STDOUT)
   --validate                      Validate resulting BOM before outputting.
-                                  Validation is skipped, if requirements not met. See the README.
+                                  Validation fails, if requirements not met - see the README.
   --no-validate                   Disable validation of resulting BOM.
   --mc-type <type>                Type of the main component.
                                   (choices: "application", "firmware", "library", default: "application")
@@ -136,6 +137,14 @@ Options:
   -V, --version                   output the version number
   -h, --help                      display help for command
 ```
+
+## Optional features
+
+The following features of this tool are optional:
+* output validation (`--validate`)
+* XML output (`--of XML`)
+
+To use either feature, ensure that the required dependencies are installed. For details, see the [optional peer dependencies documentation of the underlying library](https://github.com/CycloneDX/cyclonedx-javascript-library#optional-peer-dependencies).
 
 ## Demo
 
@@ -155,8 +164,7 @@ Read more on the topic in the [dedicated docs "Component Deduplication"](https:/
 
 ## Internals
 
-This tool utilizes the [CycloneDX library][cyclonedx-library] to generate the actual data structures, and serialize and validate them.  
-Validation requires [transitive optional dependencies](https://github.com/CycloneDX/cyclonedx-javascript-library/blob/main/README.md#optional-dependencies).
+This tool utilizes the [CycloneDX library][cyclonedx-library] to generate the actual data structures, and serialize and validate them. Some features require the additional dependencies, see above - [section "Optional features"](#optional-features).
 
 This tool does **not** expose any additional _public_ API or classes - all code is intended to be internal and might change without any notice during version upgrades.
 However, the CLI is stable - you may call it programmatically like:

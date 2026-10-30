@@ -18,7 +18,7 @@ concurrency:
   group: '${{ github.workflow }}-${{ github.ref }}'
   cancel-in-progress: true
 
-permissions: {}
+permissions: { }
 
 env:
   NODE_ACTIVE_LTS: '24'  # https://nodejs.org/en/about/releases/
@@ -177,13 +177,10 @@ jobs:
         run: npm --version
       - name: setup subject
         run: |  # zizmor: ignore[adhoc-packages] -- npm install partially with locked
-          set -ex
-          dev_requirements='c8 jest jest-junit imurmurhash fast-glob'
-          npm i --ignore-scripts --omit=peer --omit=dev --only=prod --production --loglevel=silly
-          ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
-          npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2 || true
-          ## install the needed dev-deps
-          npm i --ignore-scripts --loglevel=silly --no-save $dev_requirements
+          npm i --ignore-scripts --loglevel=silly
+          ## install ([transitive] optional peer) deps
+          npm i --no-save --loglevel=silly 'libxmljs2@^0.35||^0.37' \
+            || npm uninstall --no-save libxmljs2 || true
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
@@ -273,15 +270,10 @@ jobs:
           npm --version
       - name: setup subject
         run: |  # zizmor: ignore[adhoc-packages] -- npm install partially with locked 
-          set -ex
-          if [[ "$NPM_VERSION" = '^9' ]]
-          then
-            # npm9 is bugged, - it does not properly check dependencies' engine requirements to select sufficient candidates... lets do this manually
-            npm i --no-save --ignore-scripts --loglevel=silly npm-run-all2@^7
-          fi
-          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
-          ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
-          npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2 || true
+          npm i --ignore-scripts --omit=dev --omit=peer --only=prod --production --loglevel=silly
+          ## install ([transitive] optional peer) deps
+          npm i --no-save --ignore-scripts --omit=dev --omit=peer --loglevel=silly \
+            ajv ajv-formats ajv-formats-draft2019
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
@@ -294,7 +286,6 @@ jobs:
           -vvv
           --ignore-npm-errors
           --omit=dev
-          --validate
           --output-file="${REPORTS_DIR}/bom.json"
       - name: artifact test reports
         if: ${{ failure() }}

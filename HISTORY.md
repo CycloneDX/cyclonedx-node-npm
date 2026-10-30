@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* BREAKING Changes
+  * Removed optional dependencies for optional features from package manifest ([#1528] via [#1529])  
+    Validation and XML output require their respective optional peer dependencies to be installed.
+    See the [underlying library’s optional peer dependencies documentation](https://github.com/CycloneDX/cyclonedx-javascript-library#optional-peer-dependencies).
+
+[#1528]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1528
+[#1529]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1529
+
 ## 6.0.1 - 2026-08-11
 
 Maintenance release.
