@@ -279,9 +279,9 @@ jobs:
             # npm9 is bugged, - it does not properly check dependencies' engine requirements to select sufficient candidates... lets do this manually
             npm i --no-save --ignore-scripts --loglevel=silly npm-run-all2@^7
           fi
-          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
+          npm i --ignore-scripts --omit=dev --omit=peer --only=prod --production --loglevel=silly
           ## install ([transitive] optional peer) deps
-          npm install --loglevel=silly 'xmlbuilder2@^3.0.2||^4.0.3' \
+          npm i --no-save --omit=dev --only=peer --omit=prod --loglevel=silly 'xmlbuilder2@^3.0.2||^4.0.3' \
           || npm uninstall --no-save libxmljs2 || true
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
