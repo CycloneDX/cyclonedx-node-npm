@@ -27,6 +27,11 @@ env:
   TESTS_REPORTS_ARTIFACT: tests-reports
   CNPM_TEST_UPDATE_SNAPSHOTS: ''  # set to a string that nodeJS would not evaluate to TRUE - which can only be an empty string
 
+
+defaults:
+  run:
+    shell: bash # don't want to write tht code twice, windows and unix-like
+
 jobs:
   build:
     name: build
@@ -151,6 +156,9 @@ jobs:
         # include:
         #  - node-version: "27"
         #    experimental: true
+    env:
+      NODE_VERSION: ${{ matrix.node-version }}
+      OS: ${{ matrix.os }}
     continue-on-error: ${{ matrix.experimental == true }}
     timeout-minutes: 15
     steps:
@@ -159,20 +167,19 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: false
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ env.NODE_VERSION }}
           package-manager-cache: false
       - name: npm version
         run: npm --version
       - name: setup subject
-        shell: bash
         run: |  # zizmor: ignore[adhoc-packages] -- npm install partially with locked
           set -ex
           dev_requirements='c8 jest jest-junit imurmurhash fast-glob'
-          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
+          npm i --ignore-scripts --omit=peer --omit=dev --only=prod --production --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2 || true
           ## install the needed dev-deps
@@ -188,13 +195,13 @@ jobs:
       - name: test
         run: npm run test:jest
         env:
-          JEST_JUNIT_OUTPUT_DIR: '${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}'
+          JEST_JUNIT_OUTPUT_DIR: '${{ env.REPORTS_DIR }}/node${{ env.NODE_VERSION }}_${{ env.OS }}'
       - name: artifact test logs
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: logs-jest_node${{ matrix.node-version }}_${{ matrix.os }}
+          name: logs-jest_node${{ env.NODE_VERSION }}_${{ env.OS }}
           path: tests/_log
           if-no-files-found: error
       - name: collect coverage
@@ -203,13 +210,13 @@ jobs:
           node -- node_modules/c8/bin/c8.js
           report
           --reporter clover
-          --reports-dir '${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}/coverage'
+          --reports-dir "${REPORTS_DIR}/node${NODE_VERSION}_${OS}/coverage"
       - name: artifact test reports
         if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: '${{ env.TESTS_REPORTS_ARTIFACT }}_node${{ matrix.node-version }}_${{ matrix.os }}'
+          name: '${{ env.TESTS_REPORTS_ARTIFACT }}_node${{ env.NODE_VERSION }}_${{ env.OS }}'
           path: ${{ env.REPORTS_DIR }}
 
   dogfooding:
@@ -236,30 +243,38 @@ jobs:
             node-version: '^20.18'
             os: ubuntu-latest
     env:
+      NPM_VERSION: ${{ matrix.npm-version }}
+      NODE_VERSION: ${{ matrix.node-version }}
       npm_config_engine_strict: true
     timeout-minutes: 10
     steps:
+      - name: NODE_VERSION fallback to NODE_ACTIVE_LTS
+        run: |
+          if test -z "$NODE_VERSION"
+          then
+            echo "NODE_VERSION=${NODE_ACTIVE_LTS}" >> "$GITHUB_ENV"
+          fi
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: false
-      - run: mkdir -p ${{ env.REPORTS_DIR }}
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: make REPORTS_DIR
+        run: mkdir -p "$REPORTS_DIR"
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
         with:
-          node-version: ${{ matrix.node-version || env.NODE_ACTIVE_LTS }}
+          node-version: ${{ env.NODE_VERSION }}
           package-manager-cache: false
-      - name: setup npm ${{ matrix.npm-version }}
+      - name: setup npm ${{ env.NPM_VERSION }}
         run: |  # zizmor: ignore[adhoc-packages] -- global npm
-          npm i -g npm@${{ matrix.npm-version }}
+          npm i -g "npm@${NPM_VERSION}"
           npm --version
       - name: setup subject
-        shell: bash
         run: |  # zizmor: ignore[adhoc-packages] -- npm install partially with locked 
           set -ex
-          if [[ '${{ matrix.npm-version }}' = '^9' ]]
+          if [[ "$NPM_VERSION" = '^9' ]]
           then
             # npm9 is bugged, - it does not properly check dependencies' engine requirements to select sufficient candidates... lets do this manually
             npm i --no-save --ignore-scripts --loglevel=silly npm-run-all2@^7
@@ -279,13 +294,13 @@ jobs:
           -vvv
           --ignore-npm-errors
           --omit=dev
-          --output-file=${{ env.REPORTS_DIR }}/bom.json
+          --output-file="${REPORTS_DIR}/bom.json"
       - name: artifact test reports
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: dogfooding-direct_npm${{ matrix.npm-version }}
+          name: dogfooding-direct_npm${{ env.NPM_VERSION }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
 

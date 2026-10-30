@@ -6,12 +6,16 @@ name: npm-ls demo results
 on:
   workflow_dispatch:
 
-permissions: {}
+permissions: { }
 
 env:
   DEMO_ROOT_DIR: demo
   RESULTS_DIR: CI_results
   RESULTS_ARTIFACT: npm-ls-results
+
+defaults:
+  run:
+    shell: bash # don't want to write tht code twice, windows and unix-like
 
 jobs:
   demo-results:
@@ -78,6 +82,11 @@ jobs:
           - # git-foo seams bugged in macos
             subject: deps-from-git
             os: macos-latest
+    env:
+      ADDITIONAL_NPM_LS_ARGS: ${{ matrix.additional_npm-ls_args || '' }}
+      NPM_VERSION: ${{ matrix.npm-version }}
+      NODE_VERSION: ${{ matrix.node-version }}
+      OS: ${{ matrix.os }}
     timeout-minutes: 10 # this is a large matrix, just don't waste time!
     steps:
       - name: Checkout
@@ -87,19 +96,18 @@ jobs:
           persist-credentials: false
       - name: prepare output
         run: |
-          mkdir -p '${{ env.RESULTS_DIR }}'
-          echo 'OUT_FILE_PREFIX=${{ env.RESULTS_DIR }}/npm-ls${{ matrix.additional_npm-ls_args }}_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}' >> $GITHUB_ENV
+          mkdir -p "$RESULTS_DIR"
+          echo "OUT_FILE_PREFIX=${RESULTS_DIR}/npm-ls${ADDITIONAL_NPM_LS_ARGS}_npm${NPM_VERSION}_node${NODE_VERSION}_${OS}" >> "$GITHUB_ENV"
         working-directory: '${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}'
-        shell: bash # don't want to write tht code twice, windows and unix-like
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ env.NODE_VERSION }}
           check-latest: true
           package-manager-cache: false
-      - name: up-/down-grade npm to ${{ matrix.npm-version }}
-        run: npm i -g 'npm@${{ matrix.npm-version }}'  # zizmor: ignore[adhoc-packages] -- global npm
+      - name: up-/down-grade npm to ${{ env.NPM_VERSION }}
+        run: npm i -g "npm@${NPM_VERSION}"  # zizmor: ignore[adhoc-packages] -- global npm
       - name: report versions
         run: |
           node --version
@@ -109,13 +117,10 @@ jobs:
         working-directory: ${{ env.DEMO_ROOT_DIR }}/${{ matrix.subject }}/project
       - name: npm-ls --json --all --long
         # important: the command in use is the same used by the internal builders of this project
-        shell: bash
-        env:
-          ADDITIONAL_NPM_LS_ARGS: ${{ matrix.additional_npm-ls_args ||'' }}
         run: >
           npm --prefix project
-          ls --json --all --long 
-          ${ADDITIONAL_NPM_LS_ARGS:-}
+          ls --json --all --long
+          ${ADDITIONAL_NPM_LS_ARGS}
           2> "${OUT_FILE_PREFIX}.err.log"
           1> "${OUT_FILE_PREFIX}.json"
         working-directory: '${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}'
@@ -124,7 +129,7 @@ jobs:
         if: ${{ ! cancelled() }}
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: '${{ env.RESULTS_ARTIFACT }}_${{ matrix.subject }}${{ matrix.additional_npm-ls_args }}_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}'
+          name: '${{ env.RESULTS_ARTIFACT }}_${{ matrix.subject }}${{ env.ADDITIONAL_NPM_LS_ARGS }}_npm${{ env.NPM_VERSION }}_node${{ env.NODE_VERSION }}_${{ env.OS }}'
           path: '${{ env.DEMO_ROOT_DIR}}/*/${{ env.RESULTS_DIR }}'
           if-no-files-found: error
           retention-days: 3
