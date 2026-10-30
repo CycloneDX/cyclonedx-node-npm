@@ -280,8 +280,9 @@ jobs:
             npm i --no-save --ignore-scripts --loglevel=silly npm-run-all2@^7
           fi
           npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
-          ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
-          npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2 || true
+          ## install ([transitive] optional peer) deps
+          npm install --loglevel=silly 'xmlbuilder2@^3.0.2||^4.0.3' \
+          || npm uninstall --no-save libxmljs2 || true
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2

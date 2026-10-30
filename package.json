@@ -76,10 +76,10 @@
     "spdx-expression-parse": "^3.0.1 || ^4.0.0"
   },
   "devDependencies": {
-    "xmlbuilder2": "^3.0.2 || ^4.0.3",
     "ajv": "^8.12.0",
     "ajv-formats": "^3.0.1",
     "ajv-formats-draft2019": "^1.6.1",
+    "xmlbuilder2": "^3.0.2 || ^4.0.3",
     "@types/node": "ts5.8",
     "@types/normalize-package-data": "^2.4.4",
     "@types/spdx-expression-parse": "^3.0.5",
