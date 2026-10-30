@@ -177,7 +177,6 @@ jobs:
         run: npm --version
       - name: setup subject
         run: |  # zizmor: ignore[adhoc-packages] -- npm install partially with locked
-          set -ex
           npm i --ignore-scripts --loglevel=silly
           ## install ([transitive] optional peer) deps
           npm i --no-save --omit=dev --omit=peer --omit=prod --loglevel=silly 'libxmljs2@^0.35||^0.37' \
@@ -271,16 +270,9 @@ jobs:
           npm --version
       - name: setup subject
         run: |  # zizmor: ignore[adhoc-packages] -- npm install partially with locked 
-          set -ex
-          if [[ "$NPM_VERSION" = '^9' ]]
-          then
-            # npm9 is bugged, - it does not properly check dependencies' engine requirements to select sufficient candidates... lets do this manually
-            npm i --no-save --ignore-scripts --loglevel=silly npm-run-all2@^7
-          fi
           npm i --ignore-scripts --omit=dev --omit=peer --only=prod --production --loglevel=silly
           ## install ([transitive] optional peer) deps
-          npm i --no-save --omit=dev --omit=peer --omit=prod --loglevel=silly 'libxmljs2@^0.35||^0.37' \
-          || npm uninstall --no-save libxmljs2 || true
+          npm i --no-save -omit=dev --omit=peer --omit=prod --loglevel=silly 'ajv ajv-formats ajv-formats-draft2019'
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
