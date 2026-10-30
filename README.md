@@ -142,7 +142,7 @@ Options:
 
 The following features of this tool are optional:
 * output validation (`--validate`)
-* XML serialization (`--of XML`)
+* XML output (`--of XML`)
 
 To use either feature, ensure that the required dependencies are installed. For details, see the [optional peer dependencies documentation of the underlying library](https://github.com/CycloneDX/cyclonedx-javascript-library#optional-peer-dependencies).
 
