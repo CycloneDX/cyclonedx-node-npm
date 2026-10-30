@@ -8,8 +8,8 @@ All notable changes to this project will be documented in this file.
 
 * BREAKING Changes
   * Removed optional dependencies for optional features from package manifest ([#1528] via [#1529])  
-    They still are optional peer dependencies from direct dependencies.
-    To use either feature validation or XML output, ensure that the required dependencies are installed. For details, see the [optional peer dependencies documentation of the underlying library](https://github.com/CycloneDX/cyclonedx-javascript-library#optional-peer-dependencies).  
+    Validation and XML output require their respective optional peer dependencies to be installed.
+    See the [underlying library’s optional peer dependencies documentation](https://github.com/CycloneDX/cyclonedx-javascript-library#optional-peer-dependencies).
 
 [#1528]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1528
 [#1529]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1529
