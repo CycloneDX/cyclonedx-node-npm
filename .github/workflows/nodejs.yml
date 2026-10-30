@@ -249,7 +249,8 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: false
-      - run: mkdir -p "$REPORTS_DIR}"
+      - name: make REPORTS_DIR
+        run: mkdir -p "$REPORTS_DIR"
       - name: Setup Node.js ${{ env.NODE_VERSION }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
@@ -264,7 +265,7 @@ jobs:
         shell: bash
         run: |  # zizmor: ignore[adhoc-packages] -- npm install partially with locked 
           set -ex
-          if [[ "$NODE_VERSION" = '^9' ]]
+          if [[ "$NPM_VERSION" = '^9' ]]
           then
             # npm9 is bugged, - it does not properly check dependencies' engine requirements to select sufficient candidates... lets do this manually
             npm i --no-save --ignore-scripts --loglevel=silly npm-run-all2@^7
