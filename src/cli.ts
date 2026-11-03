@@ -256,9 +256,9 @@ function makeCommand(process_: NodeJS.Process): Command {
 }
 
 const enum ExitCode {
-  SUCCESS = 0,
-  FAILURE = 1,
-  INVALID = 2
+  SUCCESS = 0, // all good
+  FAILURE = 1, // something went wrong
+  INVALID = 2, // invalid options or setup
 }
 
 const npmMinVersion: Version = Object.freeze([9, 0, 0])
