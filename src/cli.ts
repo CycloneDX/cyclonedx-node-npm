@@ -20,14 +20,23 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import {closeSync, existsSync, mkdirSync, openSync} from 'node:fs'
 import {dirname, resolve} from 'node:path'
 
-import { Builders as FromNodePackageJsonBuilders, Factories as FromNodePackageJsonFactories } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
-import { Factories as LicenseFactories, Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
+import {
+  Builders as FromNodePackageJsonBuilders,
+  Factories as FromNodePackageJsonFactories
+} from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
+import {Factories as LicenseFactories, Utils as LicenseUtils} from '@cyclonedx/cyclonedx-library/Contrib/License'
 import {ComponentType} from '@cyclonedx/cyclonedx-library/Enums'
-import type { Types as SerializeTypes } from '@cyclonedx/cyclonedx-library/Serialize'
-import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
+import type {Types as SerializeTypes} from '@cyclonedx/cyclonedx-library/Serialize'
+import {
+  JSON as SerializeJSON,
+  JsonSerializer,
+  MissingOptionalDependencyError as SerializationMissingOptionalDependencyError,
+  XML as SerializeXML,
+  XmlSerializer
+} from '@cyclonedx/cyclonedx-library/Serialize'
 import {SpecVersionDict, Version as SpecVersion} from '@cyclonedx/cyclonedx-library/Spec'
-import type { Types as ValidationTypes } from '@cyclonedx/cyclonedx-library/Validation'
-import { JsonStrictValidator, MissingOptionalDependencyError, XmlValidator } from '@cyclonedx/cyclonedx-library/Validation'
+import type {Types as ValidationTypes} from '@cyclonedx/cyclonedx-library/Validation'
+import {JsonStrictValidator, XmlValidator} from '@cyclonedx/cyclonedx-library/Validation'
 import {Argument, Command, Option} from 'commander'
 import spdxExpressionParse from "spdx-expression-parse"
 
@@ -179,7 +188,8 @@ function makeCommand(process_: NodeJS.Process): Command {
     (() => {
       const o = new Option(
         '--of, --output-format <format>',
-        'Which output format to use.'
+        'Which output format to use.\n'
+        + 'XML serialization fail, if requirements not met - see the README.'
       ).choices(
         Object.values(OutputFormat).sort()
       ).default(
@@ -205,7 +215,7 @@ function makeCommand(process_: NodeJS.Process): Command {
     new Option(
       '--validate',
       'Validate resulting BOM before outputting.\n' +
-      'Validation is skipped, if requirements not met. See the README.'
+      'Process fails if requirements not met - see the README.'
     ).default(undefined)
   ).addOption(
     new Option(
@@ -246,9 +256,9 @@ function makeCommand(process_: NodeJS.Process): Command {
 }
 
 const enum ExitCode {
-  SUCCESS = 0,
-  FAILURE = 1,
-  INVALID = 2
+  SUCCESS = 0, // all good
+  FAILURE = 1, // something went wrong
+  INVALID = 2, // invalid options or setup
 }
 
 const npmMinVersion: Version = Object.freeze([9, 0, 0])
@@ -349,52 +359,72 @@ export async function run(process_: NodeJS.Process): Promise<number> {
   let serializer: SerializeTypes.Serializer
   /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
   let validator: ValidationTypes.Validator
+  /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
+  let cannotValidate
   switch (options.outputFormat) {
     case OutputFormat.XML:
       serializer = new XmlSerializer(new SerializeXML.Normalize.Factory(spec))
       validator = new XmlValidator(spec.version)
+      cannotValidate = XmlValidator.cannot
       break
     case OutputFormat.JSON:
       serializer = new JsonSerializer(new SerializeJSON.Normalize.Factory(spec))
       validator = new JsonStrictValidator(spec.version)
+      cannotValidate = JsonStrictValidator.cannot
       break
   }
 
   myConsole.log('LOG   | serializing BOM ...')
-  const serialized = serializer.serialize(bom, {
-    sortLists: options.outputReproducible,
-    space: 2
-  })
+  /* eslint-disable-next-line @typescript-eslint/init-declarations -- ack */
+  let serialized: string
+  try {
+    serialized = serializer.serialize(bom, {
+      sortLists: options.outputReproducible,
+      space: 2
+    })
+  } catch (err) {
+    if (err instanceof SerializationMissingOptionalDependencyError) {
+      myConsole.debug('DEBUG | cannot serialize BOM. details:', err)
+      myConsole.error('ERROR | cannot serialize BOM.')
+    } else {
+      myConsole.debug('DEBUG | unexpected serialization error. details:', err)
+      myConsole.error('ERROR | unexpected serialization error')
+    }
+    throw err
+  }
 
-  if (options.validate ?? true) {
-    myConsole.log('LOG   | try validating BOM result ...')
-    try {
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- false-positive  */
-      const validationErrors = await validator.validate(serialized)
-      if (validationErrors === null) {
-        myConsole.info('INFO  | BOM result appears valid')
-      } else {
-        myConsole.debug('DEBUG | BOM result invalid. details: ', validationErrors)
-        myConsole.error('ERROR | Failed to generate valid BOM.')
-        myConsole.warn(
-          'WARN  | Please report the issue and provide the npm lock file of the current project to:\n' +
-          '      | https://github.com/CycloneDX/cyclonedx-node-npm/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D')
-        return ExitCode.FAILURE
-      }
-    } catch (err) {
-      if (err instanceof MissingOptionalDependencyError) {
-        if (options.validate === true) {
-          // if explicitly requested to validate, then warn about skip
-          myConsole.warn('WARN  | skipped validating BOM:', err.message)
-          // @TODO breaking change: forward error, do not skip/continue
-        } else {
-          myConsole.info('INFO  | skipped validating BOM:', err.message)
-        }
-      } else {
-        myConsole.debug('DEBUG | unexpected error. details: ', err)
-        myConsole.error('ERROR | unexpected error')
-        throw err
-      }
+  let validate = false
+  if (options.validate === false) {
+    // validation is forbidden
+  } else if (options.validate === true) {
+    // validation is enforced
+    validate = true
+    if (cannotValidate !== false) {
+      myConsole.debug('DEBUG | cannot validate BOM. details:', cannotValidate.message)
+      myConsole.error('ERROR | cannot validate BOM.')
+      return ExitCode.INVALID
+    }
+  } else {
+    // validation is optional
+    validate = cannotValidate === false
+    if (cannotValidate !== false) {
+      myConsole.debug('DEBUG | skip validate BOM. details:', cannotValidate.message)
+      myConsole.info('INFO  | skip validate BOM.')
+    }
+  }
+  if (validate) {
+    myConsole.log('LOG   | validating BOM result ...')
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack  */
+    const validationErrors = await validator.validate(serialized)
+    if (validationErrors === null) {
+      myConsole.info('INFO  | BOM result appears valid')
+    } else {
+      myConsole.debug('DEBUG | BOM result invalid. details: ', validationErrors)
+      myConsole.error('ERROR | Failed to generate valid BOM.')
+      myConsole.warn(
+        'WARN  | Please report the issue and provide the npm lock file of the current project to:\n' +
+        '      | https://github.com/CycloneDX/cyclonedx-node-npm/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D')
+      return ExitCode.FAILURE
     }
   }
 

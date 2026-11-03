@@ -34,7 +34,10 @@ describe('integration.cli.from-setups', () => {
 
   const tmpRoot = mkTemp('cli.from-setups')
 
-  const formats = ['json', 'xml']
+  const FORMAT_JSON = 'json'
+  const FORMAT_XML = 'xml'
+
+  const formats = [FORMAT_JSON, FORMAT_XML]
 
   describe('dummy_projects', () => {
     const useCases = [
@@ -110,7 +113,6 @@ describe('integration.cli.from-setups', () => {
           '--output-format', format,
           '--output-reproducible',
           '--output-file', outFile,
-          '--validate',
           '-vvv'
         ], {
           cwd: join(dummyProjectsRoot, project),
@@ -151,7 +153,12 @@ describe('integration.cli.from-setups', () => {
             ? test.skip
             : test
           )('run', () => {
-            runTest(ud.subject, dummyProject, format, ud.args)
+            const args = [...ud.args]
+            if (format !== FORMAT_XML) {
+              // XML validator is optional, and might not be installed
+              args.push('--validate')
+            }
+            runTest(ud.subject, dummyProject, format, args)
           }, cliRunTestTimeout)
         })
       })
