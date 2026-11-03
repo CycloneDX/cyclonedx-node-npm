@@ -407,8 +407,8 @@ export async function run(process_: NodeJS.Process): Promise<number> {
   } else {
     // validation is optional
     if (cannotValidate !== false) {
-      myConsole.debug('DEBUG | skipping validate BOM. details:', cannotValidate.message)
-      myConsole.info('INFO  | skipping validate BOM.')
+      myConsole.debug('DEBUG | skip validate BOM. details:', cannotValidate.message)
+      myConsole.info('INFO  | skip validate BOM.')
     }
     validate = cannotValidate === false
   }
