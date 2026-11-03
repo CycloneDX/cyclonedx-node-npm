@@ -398,19 +398,19 @@ export async function run(process_: NodeJS.Process): Promise<number> {
     // validation is forbidden
   } else if (options.validate === true) {
     // validation is enforced
+    validate = true
     if (cannotValidate !== false) {
       myConsole.debug('DEBUG | cannot validate BOM. details:', cannotValidate.message)
       myConsole.error('ERROR | cannot validate BOM.')
       return ExitCode.INVALID
     }
-    validate = true
   } else {
     // validation is optional
+    validate = cannotValidate === false
     if (cannotValidate !== false) {
       myConsole.debug('DEBUG | skip validate BOM. details:', cannotValidate.message)
       myConsole.info('INFO  | skip validate BOM.')
     }
-    validate = cannotValidate === false
   }
   if (validate) {
     myConsole.log('LOG   | validating BOM result ...')
