@@ -128,7 +128,7 @@ Options:
                                   Set to "-" to write to STDOUT.
                                   (default: write to STDOUT)
   --validate                      Validate resulting BOM before outputting.
-                                  Validation fails, if requirements not met - see the README.
+                                  Process fails if requirements not met - see the README.
   --no-validate                   Disable validation of resulting BOM.
   --mc-type <type>                Type of the main component.
                                   (choices: "application", "firmware", "library", default: "application")

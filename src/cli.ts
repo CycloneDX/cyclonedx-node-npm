@@ -215,7 +215,7 @@ function makeCommand(process_: NodeJS.Process): Command {
     new Option(
       '--validate',
       'Validate resulting BOM before outputting.\n' +
-      'Validation fails, if requirements not met - see the README.'
+      'Process fails if requirements not met - see the README.'
     ).default(undefined)
   ).addOption(
     new Option(
