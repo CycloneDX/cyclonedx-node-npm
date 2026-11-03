@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* BREAKING Changes
+  * CLI option `--spec-version` defaults to `1.7`, was `1.6` ([#] via [#1533])
+
+[#1533]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1533
+
 ## 6.0.1 - 2026-08-11
 
 Maintenance release.
