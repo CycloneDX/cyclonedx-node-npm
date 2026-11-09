@@ -6,10 +6,13 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 7.0.0 - 2026-11-09
+
 * BREAKING Changes
   * CLI option `--spec-version` defaults to `1.7`, was `1.6` ([#1534] via [#1533])
   * Removed optional dependencies for optional features from package manifest ([#1528] via [#1529])  
     Validation and XML output require their respective optional peer dependencies to be installed.
+    Users are responsible for installing the optional peer dependencies required by the features they intend to use.
     See the [underlying library’s optional peer dependencies documentation](https://github.com/CycloneDX/cyclonedx-javascript-library#optional-peer-dependencies).
 * Changed
   * Validation enforcement and detection (via [#1529])
