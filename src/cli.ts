@@ -26,7 +26,6 @@ import {
 } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
 import {Factories as LicenseFactories, Utils as LicenseUtils} from '@cyclonedx/cyclonedx-library/Contrib/License'
 import {ComponentType} from '@cyclonedx/cyclonedx-library/Enums'
-import type {Types as SerializeTypes} from '@cyclonedx/cyclonedx-library/Serialize'
 import {
   JSON as SerializeJSON,
   JsonSerializer,
