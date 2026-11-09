@@ -14,7 +14,7 @@ All notable changes to this project will be documented in this file.
 * Changed
   * Validation enforcement and detection (via [#1529])
 * Dependencies
-  * Bumped dependency `@cyclonedx/cyclonedx-library@^10.5.0` now, was `@^10.0.0` (via [#1529])
+  * Bumped dependency `@cyclonedx/cyclonedx-library@^10.4.0` now, was `@^10.0.0` (via [#1529])
 
 [#1528]: https://github.com/CycloneDX/cyclonedx-node-npm/issues/1528
 [#1529]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1529

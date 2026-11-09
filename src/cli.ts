@@ -26,7 +26,6 @@ import {
 } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
 import {Factories as LicenseFactories, Utils as LicenseUtils} from '@cyclonedx/cyclonedx-library/Contrib/License'
 import {ComponentType} from '@cyclonedx/cyclonedx-library/Enums'
-import type * as OptionalFeature from '@cyclonedx/cyclonedx-library/OptionalFeature'
 import type {Types as SerializeTypes} from '@cyclonedx/cyclonedx-library/Serialize'
 import {
   JSON as SerializeJSON,
@@ -359,19 +358,15 @@ export async function run(process_: NodeJS.Process): Promise<number> {
   /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
   let serializer: SerializeTypes.Serializer
   /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
-  let validator: ValidationTypes.Validator
-  /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
-  let cannotValidate: OptionalFeature.Cannot
+  let validatorClass: typeof XmlValidator | typeof JsonStrictValidator
   switch (options.outputFormat) {
     case OutputFormat.XML:
       serializer = new XmlSerializer(new SerializeXML.Normalize.Factory(spec))
-      validator = new XmlValidator(spec.version)
-      cannotValidate = XmlValidator.cannot
+      validatorClass = XmlValidator
       break
     case OutputFormat.JSON:
       serializer = new JsonSerializer(new SerializeJSON.Normalize.Factory(spec))
-      validator = new JsonStrictValidator(spec.version)
-      cannotValidate = JsonStrictValidator.cannot
+      validatorClass = JsonStrictValidator
       break
   }
 
@@ -394,32 +389,16 @@ export async function run(process_: NodeJS.Process): Promise<number> {
     throw err
   }
 
-  let validate = false
   if (options.validate === false) {
     // validation is forbidden
-  } else if (options.validate === true) {
-    // validation is enforced
-    validate = true
-    if (cannotValidate !== false) {
-      myConsole.debug('DEBUG | cannot validate BOM. details:', cannotValidate.message)
-      myConsole.error('ERROR | cannot validate BOM.')
-      return ExitCode.INVALID
-    }
-  } else {
-    // validation is optional
-    validate = cannotValidate === false
-    if (cannotValidate !== false) {
-      myConsole.debug('DEBUG | skip validate BOM. details:', cannotValidate.message)
-      myConsole.info('INFO  | skip validate BOM.')
-    }
-  }
-  if (validate) {
+  } else if (validatorClass.cannot === false) {
+    // validation can and should act
+    /* eslint-disable-next-line new-cap -- ack  */
+    const validator: ValidationTypes.Validator = new validatorClass(spec.version)
     myConsole.log('LOG   | validating BOM result ...')
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack  */
     const validationErrors = await validator.validate(serialized)
-    if (validationErrors === null) {
-      myConsole.info('INFO  | BOM result appears valid')
-    } else {
+    if (validationErrors !== null) {
       myConsole.debug('DEBUG | BOM result invalid. details: ', validationErrors)
       myConsole.error('ERROR | Failed to generate valid BOM.')
       myConsole.warn(
@@ -427,6 +406,18 @@ export async function run(process_: NodeJS.Process): Promise<number> {
         '      | https://github.com/CycloneDX/cyclonedx-node-npm/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D')
       return ExitCode.FAILURE
     }
+    myConsole.info('INFO  | BOM result appears valid')
+  } else {
+    // cannot validate
+    if (options.validate === true) {
+      // validation is enforced -> error
+      myConsole.debug('DEBUG | cannot validate BOM. details:', validatorClass.cannot.message)
+      myConsole.error('ERROR | cannot validate BOM.')
+      return ExitCode.INVALID
+    }
+    // validation is optional -> skip
+    myConsole.debug('DEBUG | skip validate BOM. details:', validatorClass.cannot.message)
+    myConsole.info('INFO  | skip validate BOM.')
   }
 
   let outputFD: number = process_.stdout.fd
