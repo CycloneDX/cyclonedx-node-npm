@@ -26,6 +26,7 @@ import {
 } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
 import {Factories as LicenseFactories, Utils as LicenseUtils} from '@cyclonedx/cyclonedx-library/Contrib/License'
 import {ComponentType} from '@cyclonedx/cyclonedx-library/Enums'
+import type * as OptionalFeature from '@cyclonedx/cyclonedx-library/OptionalFeature'
 import type {Types as SerializeTypes} from '@cyclonedx/cyclonedx-library/Serialize'
 import {
   JSON as SerializeJSON,
@@ -360,7 +361,7 @@ export async function run(process_: NodeJS.Process): Promise<number> {
   /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
   let validator: ValidationTypes.Validator
   /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
-  let cannotValidate
+  let cannotValidate: OptionalFeature.Cannot
   switch (options.outputFormat) {
     case OutputFormat.XML:
       serializer = new XmlSerializer(new SerializeXML.Normalize.Factory(spec))
