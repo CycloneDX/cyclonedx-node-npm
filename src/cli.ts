@@ -356,17 +356,17 @@ export async function run(process_: NodeJS.Process): Promise<number> {
   }
 
   /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
-  let serializer: SerializeTypes.Serializer
+  let serializer: JsonSerializer | XmlSerializer
   /* eslint-disable-next-line  @typescript-eslint/init-declarations -- needed */
-  let validatorClass: typeof XmlValidator | typeof JsonStrictValidator
+  let validatorClass: typeof JsonStrictValidator | typeof XmlValidator
   switch (options.outputFormat) {
-    case OutputFormat.XML:
-      serializer = new XmlSerializer(new SerializeXML.Normalize.Factory(spec))
-      validatorClass = XmlValidator
-      break
     case OutputFormat.JSON:
       serializer = new JsonSerializer(new SerializeJSON.Normalize.Factory(spec))
       validatorClass = JsonStrictValidator
+      break
+    case OutputFormat.XML:
+      serializer = new XmlSerializer(new SerializeXML.Normalize.Factory(spec))
+      validatorClass = XmlValidator
       break
   }
 
