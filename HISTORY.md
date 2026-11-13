@@ -6,8 +6,10 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 7.0.1 - 2026-11-13
+
 * Docs
-  * Added examples how to install optional feature's dependnecies (via [#1537]) 
+  * Added examples how to install optional feature's dependencies (via [#1537]) 
 
 [#1537]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/1537
 
