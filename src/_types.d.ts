@@ -38,6 +38,8 @@ export interface PackageData {
   dev?: boolean
   /*** is dev-dependency AND is (transitive) optional */
   devOptional?: boolean
+  /** is peer-dependency */
+  peer?: boolean
   /** is not required by any dependency */
   extraneous?: boolean
   /** is bundled with another package */

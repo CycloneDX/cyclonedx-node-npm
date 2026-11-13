@@ -11439,7 +11439,6 @@
     {
       "ref": "@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1",
       "dependsOn": [
-        "@dummy-projects/with-prepared|ajv@8.17.1",
         "@dummy-projects/with-prepared|punycode@2.3.1",
         "@dummy-projects/with-prepared|schemes@1.4.0",
         "@dummy-projects/with-prepared|smtp-address-parser@1.1.0",
