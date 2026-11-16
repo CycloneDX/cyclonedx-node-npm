@@ -1,0 +1,174 @@
+{
+  "name": "root-app",
+  "version": "1.0.0",
+  "path": "/app",
+  "_dependencies": {
+    "prod-lib": "^1.0.0",
+    "root-opt": "^1.0.0"
+  },
+  "optionalDependencies": {
+    "root-opt": "^1.0.0"
+  },
+  "devDependencies": {
+    "dev-tool": "^1.0.0"
+  },
+  "peerDependencies": {
+    "root-peer": "^1.0.0",
+    "root-peer-opt": "^1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "root-peer-opt": { "optional": true }
+  },
+  "dependencies": {
+    "prod-lib": {
+      "name": "prod-lib",
+      "version": "1.0.0",
+      "path": "/app/node_modules/prod-lib",
+      "_dependencies": {
+        "prod-child": "^1.0.0",
+        "trans-opt": "^1.0.0"
+      },
+      "optionalDependencies": {
+        "trans-opt": "^1.0.0"
+      },
+      "peerDependencies": {
+        "prod-child": "^1.0.0",
+        "trans-peer": "^1.0.0"
+      },
+      "dependencies": {
+        "prod-child": {
+          "name": "prod-child",
+          "version": "1.0.0",
+          "path": "/app/node_modules/prod-child",
+          "_dependencies": {},
+          "peerDependencies": {}
+        },
+        "trans-opt": {
+          "name": "trans-opt",
+          "version": "1.0.0",
+          "path": "/app/node_modules/trans-opt",
+          "optional": true,
+          "_dependencies": {
+            "shared-dev-opt": "^1.0.0",
+            "dedup-shared": "^1.0.0"
+          },
+          "peerDependencies": {},
+          "dependencies": {
+            "shared-dev-opt": {
+              "name": "shared-dev-opt",
+              "version": "1.0.0",
+              "path": "/app/node_modules/shared-dev-opt",
+              "devOptional": true,
+              "_dependencies": {
+                "dev-opt-leaf": "^1.0.0"
+              },
+              "peerDependencies": {},
+              "dependencies": {
+                "dev-opt-leaf": {
+                  "name": "dev-opt-leaf",
+                  "version": "1.0.0",
+                  "path": "/app/node_modules/dev-opt-leaf",
+                  "devOptional": true,
+                  "_dependencies": {},
+                  "peerDependencies": {}
+                }
+              }
+            },
+            "dedup-shared": {
+              "name": "dedup-shared",
+              "version": "1.0.0",
+              "path": "/app/node_modules/dedup-shared",
+              "_dependencies": {
+                "dedup-child": "^1.0.0"
+              },
+              "peerDependencies": {},
+              "dependencies": {
+                "dedup-child": {
+                  "name": "dedup-child",
+                  "version": "1.0.0",
+                  "path": "/app/node_modules/dedup-child",
+                  "_dependencies": {},
+                  "peerDependencies": {}
+                }
+              }
+            }
+          }
+        },
+        "trans-peer": {
+          "name": "trans-peer",
+          "version": "1.0.0",
+          "path": "/app/node_modules/trans-peer",
+          "peer": true,
+          "_dependencies": {},
+          "peerDependencies": {}
+        }
+      }
+    },
+    "root-opt": {
+      "name": "root-opt",
+      "version": "1.0.0",
+      "path": "/app/node_modules/root-opt",
+      "optional": true,
+      "_dependencies": {},
+      "peerDependencies": {}
+    },
+    "dev-tool": {
+      "name": "dev-tool",
+      "version": "1.0.0",
+      "path": "/app/node_modules/dev-tool",
+      "dev": true,
+      "_dependencies": {
+        "shared-dev-opt": "^1.0.0"
+      },
+      "peerDependencies": {},
+      "dependencies": {
+        "shared-dev-opt": {
+          "name": "shared-dev-opt",
+          "version": "1.0.0",
+          "path": "/app/node_modules/shared-dev-opt",
+          "devOptional": true,
+          "_dependencies": {
+            "dev-opt-leaf": "^1.0.0"
+          },
+          "peerDependencies": {}
+        }
+      }
+    },
+    "root-peer": {
+      "name": "root-peer",
+      "version": "1.0.0",
+      "path": "/app/node_modules/root-peer",
+      "peer": true,
+      "_dependencies": {
+        "dedup-shared": "^1.0.0"
+      },
+      "peerDependencies": {},
+      "dependencies": {
+        "dedup-shared": {
+          "name": "dedup-shared",
+          "version": "1.0.0",
+          "path": "/app/node_modules/dedup-shared",
+          "_dependencies": {
+            "dedup-child": "^1.0.0"
+          },
+          "peerDependencies": {}
+        }
+      }
+    },
+    "root-peer-opt": {
+      "name": "root-peer-opt",
+      "version": "1.0.0",
+      "path": "/app/node_modules/root-peer-opt",
+      "_dependencies": {},
+      "peerDependencies": {}
+    },
+    "extra-pkg": {
+      "name": "extra-pkg",
+      "version": "1.0.0",
+      "path": "/app/node_modules/extra-pkg",
+      "extraneous": true,
+      "_dependencies": {},
+      "peerDependencies": {}
+    }
+  }
+}
