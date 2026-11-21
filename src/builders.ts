@@ -47,6 +47,20 @@ import { PropertyNames, PropertyValueBool } from './properties'
 
 type OmittableDependencyTypes = 'dev' | 'optional' | 'peer'
 
+const PACKAGE_MERGE_FIELDS = [
+  'private',
+  'version',
+  'license',
+  'resolved',
+  'integrity',
+  'inBundle',
+  'extraneous',
+  'optional',
+  'devOptional',
+  'dev',
+  'peer'
+] as const
+
 interface BomBuilderOptions {
   ignoreNpmErrors?: BomBuilder['ignoreNpmErrors']
   metaComponentType?: BomBuilder['metaComponentType']
@@ -333,7 +347,7 @@ export class BomBuilder {
     const packages = new Map<PackagePath, PackageData>()
     const topPaths = new Set<PackagePath>([rootPath])
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
-    const hasWorkspaces = data.workspaces !== undefined && data.workspaces !== null
+    const hasWorkspaces = Boolean(data.workspaces)
     const omitActive = this.omitDependencyTypes.size > 0
     const todo: Array<typeof data> = [data]
     let w // eslint-disable-line @typescript-eslint/init-declarations -- ack
@@ -349,29 +363,22 @@ export class BomBuilder {
           dependencies: new Set<PackagePath>()
         })
       }
-      d.private ??= w.private
-      d.version ??= w.version
-      d.license ??= w.license
-      d.resolved ??= w.resolved
-      d.integrity ??= w.integrity
-      d.inBundle ??= w.inBundle
-      d.extraneous ??= w.extraneous
-      d.optional ??= w.optional
-      d.devOptional ??= w.devOptional
-      d.dev ??= w.dev
-      d.peer ??= w.peer
+      for (const field of PACKAGE_MERGE_FIELDS) {
+        if (d[field] === undefined) {
+          Object.assign(d, { [field]: w[field] })
+        }
+      }
       const isTop = topPaths.has(wpath)
+      const isRootWorkspace = hasWorkspaces && wpath === rootPath
       // `dependencies` might be missing to prevent circles...
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- ack */
       for (const [depName, depObj] of Object.entries<any>(w.dependencies ?? {})) {
-        if (depObj === null || typeof depObj !== 'object') { continue }
-        const depPath = depObj.path
+        const depPath = depObj?.path
         if (!isString(depPath)) { continue }
-        const depResolved = depObj.resolved
-        if (hasWorkspaces && wpath === rootPath && isString(depResolved) && depResolved.startsWith('file:')) {
+        if (isRootWorkspace && String(depObj.resolved).startsWith('file:')) {
           topPaths.add(depPath)
         }
-        if (!omitActive || depObj.extraneous === true || !this.shouldOmitDependencyEdge(w, depName, isTop)) {
+        if (depObj.extraneous === true || !this.shouldOmitDependencyEdge(w, depName, isTop)) {
           d.dependencies.add(depPath)
         }
         todo.push(depObj)
@@ -387,69 +394,50 @@ export class BomBuilder {
     packages: Map<PackagePath, PackageData>,
     rootPath: PackagePath
   ): Map<PackagePath, PackageData> {
-    const reachable = new Map<PackagePath, PackageData>()
-    const queue: PackagePath[] = [rootPath]
-    let currentPath: PackagePath | undefined // eslint-disable-line @typescript-eslint/init-declarations -- ack
-    while ((currentPath = queue.shift()) !== undefined) {
-      if (reachable.has(currentPath)) { continue }
-      const pkg = packages.get(currentPath)
-      if (pkg === undefined) { continue }
-      if (currentPath !== rootPath && this.shouldOmitPackage(pkg)) { continue }
+    const rootPkg = packages.get(rootPath)
+    if (rootPkg === undefined) { return new Map() }
+    const omitDevOptional = this.omitDependencyTypes.has('dev') && this.omitDependencyTypes.has('optional')
+    const activeOmitFlags: Array<'dev' | 'optional' | 'peer' | 'devOptional'> = [
+      ...this.omitDependencyTypes,
+      ...(omitDevOptional ? ['devOptional' as const] : [])
+    ]
+    const reachable = new Map<PackagePath, PackageData>([[rootPath, rootPkg]])
+    const queue: PackageData[] = [rootPkg]
+    for (const pkg of queue) {
       const filteredDeps = new Set<PackagePath>()
       for (const depPath of pkg.dependencies) {
         const depPkg = packages.get(depPath)
-        if (depPkg === undefined || this.shouldOmitPackage(depPkg)) { continue }
+        if (depPkg === undefined || activeOmitFlags.some((flag) => depPkg[flag] === true)) { continue }
         filteredDeps.add(depPath)
         if (!reachable.has(depPath)) {
-          queue.push(depPath)
+          reachable.set(depPath, depPkg)
+          queue.push(depPkg)
         }
       }
       pkg.dependencies = filteredDeps
-      reachable.set(currentPath, pkg)
     }
     return reachable
   }
 
   private shouldOmitDependencyEdge (parent: any, depName: string, isTop: boolean): boolean {
-    /* eslint-disable @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access -- ack */
-    if (isTop && Object.hasOwn(parent.devDependencies ?? {}, depName)) {
-      return this.omitDependencyTypes.has('dev')
-    }
-    if (Object.hasOwn(parent.optionalDependencies ?? {}, depName)) {
-      return this.omitDependencyTypes.has('optional')
-    }
-    if (Object.hasOwn(parent._dependencies ?? {}, depName)) {
-      return false
-    }
-    if (Object.hasOwn(parent.peerDependencies ?? {}, depName)) {
-      if (this.omitDependencyTypes.has('peer')) {
-        return true
+    /* eslint-disable @typescript-eslint/no-unsafe-member-access -- ack */
+    const edgeRules: Array<[unknown, boolean]> = [
+      [isTop ? parent.devDependencies : undefined, this.omitDependencyTypes.has('dev')],
+      [parent.optionalDependencies, this.omitDependencyTypes.has('optional')],
+      [parent._dependencies, false],
+      [
+        parent.peerDependencies,
+        this.omitDependencyTypes.has('peer') ||
+          (this.omitDependencyTypes.has('optional') &&
+            parent.peerDependenciesMeta?.[depName]?.optional === true)
+      ]
+    ]
+    for (const [depMap, shouldOmit] of edgeRules) {
+      if (Object.hasOwn(depMap ?? {}, depName)) {
+        return shouldOmit
       }
-      if (parent.peerDependenciesMeta?.[depName]?.optional === true) {
-        return this.omitDependencyTypes.has('optional')
-      }
     }
-    /* eslint-enable @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access */
-    return false
-  }
-
-  private shouldOmitPackage (data: PackageData): boolean {
-    if (data.dev === true && this.omitDependencyTypes.has('dev')) {
-      return true
-    }
-    if (data.optional === true && this.omitDependencyTypes.has('optional')) {
-      return true
-    }
-    if (
-      data.devOptional === true &&
-      this.omitDependencyTypes.has('dev') &&
-      this.omitDependencyTypes.has('optional')
-    ) {
-      return true
-    }
-    if (data.peer === true && this.omitDependencyTypes.has('peer')) {
-      return true
-    }
+    /* eslint-enable @typescript-eslint/no-unsafe-member-access */
     return false
   }
 
