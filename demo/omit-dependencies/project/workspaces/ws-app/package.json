@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "ws-app",
+  "version": "1.0.0",
+  "description": "demo: ws-app workspace",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/omit-dependencies/project/workspaces/ws-app"
+  },
+  "dependencies": {
+    "prod-lib": "file:../../packages/prod-lib"
+  },
+  "devDependencies": {
+    "ws-dev": "file:../../packages/ws-dev"
+  },
+  "peerDependencies": {
+    "ws-dev": "1.0.0"
+  },
+  "optionalDependencies": {
+    "ws-opt": "file:../../packages/ws-opt"
+  }
+}

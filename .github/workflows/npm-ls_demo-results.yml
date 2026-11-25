@@ -32,6 +32,7 @@ jobs:
           - juice-shop
           - local-dependencies
           - local-workspaces
+          - omit-dependencies
           - package-integrity
           - package-with-build-id
         additional_npm-ls_args: [ '' ]
@@ -66,6 +67,41 @@ jobs:
             os: ubuntu-latest
           - subject: local-workspaces
             additional_npm-ls_args: '--no-workspaces'
+            npm-version: '12'   # Current
+            node-version: '24'  # LTS
+            os: ubuntu-latest
+          - subject: omit-dependencies
+            additional_npm-ls_args: '--omit=dev'
+            npm-version: '12'   # Current
+            node-version: '24'  # LTS
+            os: ubuntu-latest
+          - subject: omit-dependencies
+            additional_npm-ls_args: '--omit=optional'
+            npm-version: '12'   # Current
+            node-version: '24'  # LTS
+            os: ubuntu-latest
+          - subject: omit-dependencies
+            additional_npm-ls_args: '--omit=peer'
+            npm-version: '12'   # Current
+            node-version: '24'  # LTS
+            os: ubuntu-latest
+          - subject: omit-dependencies
+            additional_npm-ls_args: '--omit=dev --omit=optional'
+            npm-version: '12'   # Current
+            node-version: '24'  # LTS
+            os: ubuntu-latest
+          - subject: omit-dependencies
+            additional_npm-ls_args: '--omit=dev --omit=peer'
+            npm-version: '12'   # Current
+            node-version: '24'  # LTS
+            os: ubuntu-latest
+          - subject: omit-dependencies
+            additional_npm-ls_args: '--omit=optional --omit=peer'
+            npm-version: '12'   # Current
+            node-version: '24'  # LTS
+            os: ubuntu-latest
+          - subject: omit-dependencies
+            additional_npm-ls_args: '--omit=dev --omit=optional --omit=peer'
             npm-version: '12'   # Current
             node-version: '24'  # LTS
             os: ubuntu-latest
