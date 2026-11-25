@@ -7,6 +7,7 @@ Each project demonstrates an individual use case:
 * [use of `devDependencies`](dev-dependencies)
 * [use of local dependencies](local-dependencies)
 * [use of workspaces](local-workspaces)
+* [omitting dependencies (`--omit`)](omit-dependencies)
 * [the Juice Shop](juice-shop)
 * [package-integrity](package-integrity)
 * [package with buildID in version](package-with-build-id)

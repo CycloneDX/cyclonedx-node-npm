@@ -1,0 +1,11 @@
+{
+  "name": "ws-dev",
+  "version": "1.0.0",
+  "description": "demo: workspace devDependency and peerDependency",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/omit-dependencies/project/packages/ws-dev"
+  }
+}

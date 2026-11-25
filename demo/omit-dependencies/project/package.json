@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "demo-omit-dependencies",
+  "description": "demo: demo-omit-dependencies -- showcase --omit across workspaces, transitive optional/peer, and devOptional dependencies",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/omit-dependencies/project"
+  },
+  "workspaces": [
+    "workspaces/*"
+  ],
+  "dependencies": {
+    "ws-app": "*"
+  },
+  "devDependencies": {
+    "shared-dev-opt": "file:packages/shared-dev-opt",
+    "trans-peer-opt": "file:packages/trans-peer-opt"
+  },
+  "peerDependencies": {
+    "trans-peer": "file:packages/trans-peer"
+  }
+}
