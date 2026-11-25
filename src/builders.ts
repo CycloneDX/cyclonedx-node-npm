@@ -205,7 +205,7 @@ export class BomBuilder {
       throw new Error(`unexpected path ${JSON.stringify(rootPath)}`)
     }
 
-    const allPackages = this.gatherPackages(data)
+    const allPackages = this.gatherPackages(data, rootPath)
     const allComponents = new Map(iterableMap(
       allPackages,
       ([p, packageData]) => [p, this.makeComponentWithPackageData(packageData, p)]
@@ -329,8 +329,12 @@ export class BomBuilder {
   }
 
   /* eslint-disable-next-line complexity -- ack */
-  private gatherPackages(data: any): Map<PackagePath, PackageData> {
+  private gatherPackages (data: any, rootPath: PackagePath): Map<PackagePath, PackageData> {
     const packages = new Map<PackagePath, PackageData>()
+    const topPaths = new Set<PackagePath>([rootPath])
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
+    const hasWorkspaces = data.workspaces !== undefined && data.workspaces !== null
+    const omitActive = this.omitDependencyTypes.size > 0
     const todo: Array<typeof data> = [data]
     let w // eslint-disable-line @typescript-eslint/init-declarations -- ack
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
@@ -355,18 +359,98 @@ export class BomBuilder {
       d.optional ??= w.optional
       d.devOptional ??= w.devOptional
       d.dev ??= w.dev
+      d.peer ??= w.peer
+      const isTop = topPaths.has(wpath)
       // `dependencies` might be missing to prevent circles...
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- ack */
-      const dependencies: Array<typeof data> = Object.values(w.dependencies ?? {})
-      for (const { path: depPath } of dependencies) {
+      for (const [depName, depObj] of Object.entries<any>(w.dependencies ?? {})) {
+        if (depObj === null || typeof depObj !== 'object') { continue }
+        const depPath = depObj.path
         if (!isString(depPath)) { continue }
-        d.dependencies.add(depPath)
+        const depResolved = depObj.resolved
+        if (hasWorkspaces && wpath === rootPath && isString(depResolved) && depResolved.startsWith('file:')) {
+          topPaths.add(depPath)
+        }
+        if (!omitActive || depObj.extraneous === true || !this.shouldOmitDependencyEdge(w, depName, isTop)) {
+          d.dependencies.add(depPath)
+        }
+        todo.push(depObj)
       }
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- fp */
-      todo.push(...dependencies)
       /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
     }
-    return packages
+    return omitActive
+      ? this.filterReachablePackages(packages, rootPath)
+      : packages
+  }
+
+  private filterReachablePackages (
+    packages: Map<PackagePath, PackageData>,
+    rootPath: PackagePath
+  ): Map<PackagePath, PackageData> {
+    const reachable = new Map<PackagePath, PackageData>()
+    const queue: PackagePath[] = [rootPath]
+    let currentPath: PackagePath | undefined // eslint-disable-line @typescript-eslint/init-declarations -- ack
+    while ((currentPath = queue.shift()) !== undefined) {
+      if (reachable.has(currentPath)) { continue }
+      const pkg = packages.get(currentPath)
+      if (pkg === undefined) { continue }
+      if (currentPath !== rootPath && this.shouldOmitPackage(pkg)) { continue }
+      const filteredDeps = new Set<PackagePath>()
+      for (const depPath of pkg.dependencies) {
+        const depPkg = packages.get(depPath)
+        if (depPkg === undefined || this.shouldOmitPackage(depPkg)) { continue }
+        filteredDeps.add(depPath)
+        if (!reachable.has(depPath)) {
+          queue.push(depPath)
+        }
+      }
+      pkg.dependencies = filteredDeps
+      reachable.set(currentPath, pkg)
+    }
+    return reachable
+  }
+
+  private shouldOmitDependencyEdge (parent: any, depName: string, isTop: boolean): boolean {
+    /* eslint-disable @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access -- ack */
+    if (isTop && Object.hasOwn(parent.devDependencies ?? {}, depName)) {
+      return this.omitDependencyTypes.has('dev')
+    }
+    if (Object.hasOwn(parent.optionalDependencies ?? {}, depName)) {
+      return this.omitDependencyTypes.has('optional')
+    }
+    if (Object.hasOwn(parent._dependencies ?? {}, depName)) {
+      return false
+    }
+    if (Object.hasOwn(parent.peerDependencies ?? {}, depName)) {
+      if (this.omitDependencyTypes.has('peer')) {
+        return true
+      }
+      if (parent.peerDependenciesMeta?.[depName]?.optional === true) {
+        return this.omitDependencyTypes.has('optional')
+      }
+    }
+    /* eslint-enable @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access */
+    return false
+  }
+
+  private shouldOmitPackage (data: PackageData): boolean {
+    if (data.dev === true && this.omitDependencyTypes.has('dev')) {
+      return true
+    }
+    if (data.optional === true && this.omitDependencyTypes.has('optional')) {
+      return true
+    }
+    if (
+      data.devOptional === true &&
+      this.omitDependencyTypes.has('dev') &&
+      this.omitDependencyTypes.has('optional')
+    ) {
+      return true
+    }
+    if (data.peer === true && this.omitDependencyTypes.has('peer')) {
+      return true
+    }
+    return false
   }
 
   private * fetchLicenseEvidence (dirPath: string): Generator<License> {

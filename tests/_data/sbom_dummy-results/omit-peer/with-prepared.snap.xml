@@ -8144,7 +8144,6 @@
       <dependency ref="@dummy-projects/with-prepared|indent-string@4.0.0"/>
     </dependency>
     <dependency ref="@dummy-projects/with-prepared|ajv-formats-draft2019@1.6.1">
-      <dependency ref="@dummy-projects/with-prepared|ajv@8.17.1"/>
       <dependency ref="@dummy-projects/with-prepared|punycode@2.3.1"/>
       <dependency ref="@dummy-projects/with-prepared|schemes@1.4.0"/>
       <dependency ref="@dummy-projects/with-prepared|smtp-address-parser@1.1.0"/>

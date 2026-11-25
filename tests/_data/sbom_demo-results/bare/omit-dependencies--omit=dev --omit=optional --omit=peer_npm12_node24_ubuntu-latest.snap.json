@@ -166,99 +166,6 @@
     },
     {
       "type": "library",
-      "name": "shared-dev-opt",
-      "version": "1.0.0",
-      "bom-ref": "demo-omit-dependencies@0.0.0|shared-dev-opt@1.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/shared-dev-opt@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:development",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/shared-dev-opt"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "trans-opt",
-      "version": "1.0.0",
-      "bom-ref": "demo-omit-dependencies@0.0.0|trans-opt@1.0.0",
-      "scope": "optional",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/trans-opt@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/trans-opt"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "trans-peer-opt",
-      "version": "1.0.0",
-      "bom-ref": "demo-omit-dependencies@0.0.0|trans-peer-opt@1.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/trans-peer-opt@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:development",
-          "value": "true"
-        },
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/trans-peer-opt"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "trans-peer",
-      "version": "1.0.0",
-      "bom-ref": "demo-omit-dependencies@0.0.0|trans-peer@1.0.0",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/trans-peer@1.0.0",
-      "properties": [
-        {
-          "name": "cdx:npm:package:path",
-          "value": "node_modules/trans-peer"
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "ws-app",
       "version": "1.0.0",
       "bom-ref": "demo-omit-dependencies@0.0.0|ws-app@1.0.0",
@@ -292,24 +199,8 @@
     {
       "ref": "demo-omit-dependencies@0.0.0|prod-lib@1.0.0",
       "dependsOn": [
-        "demo-omit-dependencies@0.0.0|prod-child@1.0.0",
-        "demo-omit-dependencies@0.0.0|shared-dev-opt@1.0.0",
-        "demo-omit-dependencies@0.0.0|trans-opt@1.0.0",
-        "demo-omit-dependencies@0.0.0|trans-peer-opt@1.0.0",
-        "demo-omit-dependencies@0.0.0|trans-peer@1.0.0"
+        "demo-omit-dependencies@0.0.0|prod-child@1.0.0"
       ]
-    },
-    {
-      "ref": "demo-omit-dependencies@0.0.0|shared-dev-opt@1.0.0"
-    },
-    {
-      "ref": "demo-omit-dependencies@0.0.0|trans-opt@1.0.0"
-    },
-    {
-      "ref": "demo-omit-dependencies@0.0.0|trans-peer-opt@1.0.0"
-    },
-    {
-      "ref": "demo-omit-dependencies@0.0.0|trans-peer@1.0.0"
     },
     {
       "ref": "demo-omit-dependencies@0.0.0|ws-app@1.0.0",
