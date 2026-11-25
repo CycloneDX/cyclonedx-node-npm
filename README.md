@@ -36,40 +36,40 @@ However, there are older versions of this tool that support
 
 There are multiple methods for installing this tool:
 
-* As a global tool ala `npm`:
-
-  ```shell
-  npm install --global @cyclonedx/cyclonedx-npm
-  ```
-
-* As a global tool ala `npx`:
-
-  ```shell
-  npx --package @cyclonedx/cyclonedx-npm --call exit
-  ```
-
 * As a development dependency of the current project:
 
   ```shell
   npm install --save-dev @cyclonedx/cyclonedx-npm
   ```
 
+* As a global tool ala `npx`:
+
+  ```shell
+  npx --package=@cyclonedx/cyclonedx-npm --call exit
+  ```
+
+* As a global tool ala `npm`:
+
+  ```shell
+  npm install --global @cyclonedx/cyclonedx-npm
+  ```
+
 ## Usage
 
 Depending on the installation method, the following describes the proper usage:
+
+* If installed as a development dependency of the current projects:  
+  — or —  
+  If installed as a global tool ala `npx`:
+
+  ```shell
+  npx @cyclonedx/cyclonedx-npm --help
+  ```
 
 * If installed as a global tool ala `npm`:
 
   ```shell
   cyclonedx-npm --help
-  ```
-
-* If installed as a global tool ala `npx`:  
-  — or —  
-  If installed as a development dependency of the current projects:
-
-  ```shell
-  npx @cyclonedx/cyclonedx-npm --help
   ```
 
 The help page:
@@ -145,6 +145,30 @@ The following features of this tool are optional:
 * XML output (`--of XML`)
 
 To use either feature, ensure that the required dependencies are installed. For details, see the [optional peer dependencies documentation of the underlying library](https://github.com/CycloneDX/cyclonedx-javascript-library#optional-peer-dependencies).
+
+Examples:
+
+* As a development dependency of the current project:
+
+  ```shell
+  npm install --save-dev @cyclonedx/cyclonedx-npm
+  npm install --save-dev xmlbuilder2
+  npx @cyclonedx/cyclonedx-npm --of XML
+  ```
+
+* As a global tool ala `npx`:
+
+  ```shell
+  npx --package=@cyclonedx/cyclonedx-npm --package=xmlbuilder2 cyclonedx-npm --of XML
+  ```
+
+* As a global tool ala `npm`:
+
+  ```shell
+  npm install --global @cyclonedx/cyclonedx-npm
+  npm install --global xmlbuilder2
+  npx @cyclonedx/cyclonedx-npm --of XML
+  ```
 
 ## Demo
 

@@ -1,0 +1,27 @@
+{
+  "name": "prod-lib",
+  "version": "1.0.0",
+  "description": "demo: prod-lib with transitive optional and peer dependencies",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/omit-dependencies/project/packages/prod-lib"
+  },
+  "dependencies": {
+    "prod-child": "file:../prod-child"
+  },
+  "optionalDependencies": {
+    "shared-dev-opt": "file:../shared-dev-opt",
+    "trans-opt": "file:../trans-opt"
+  },
+  "peerDependencies": {
+    "trans-peer": "1.0.0",
+    "trans-peer-opt": "1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "trans-peer-opt": {
+      "optional": true
+    }
+  }
+}

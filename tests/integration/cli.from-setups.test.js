@@ -175,6 +175,7 @@ describe('integration.cli.from-setups', () => {
       // 'juice-shop',
       'local-dependencies',
       'local-workspaces',
+      'omit-dependencies',
       'package-integrity',
       'package-with-build-id'
     ]

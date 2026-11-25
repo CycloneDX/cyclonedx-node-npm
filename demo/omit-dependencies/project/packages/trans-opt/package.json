@@ -1,0 +1,11 @@
+{
+  "name": "trans-opt",
+  "version": "1.0.0",
+  "description": "demo: strictly transitive optionalDependency",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/omit-dependencies/project/packages/trans-opt"
+  }
+}

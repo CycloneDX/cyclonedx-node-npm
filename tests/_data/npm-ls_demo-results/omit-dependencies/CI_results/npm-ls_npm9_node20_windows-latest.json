@@ -1,0 +1,219 @@
+{
+  "version": "0.0.0",
+  "name": "demo-omit-dependencies",
+  "private": true,
+  "description": "demo: demo-omit-dependencies -- showcase --omit across workspaces, transitive optional/peer, and devOptional dependencies",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+    "directory": "demo/omit-dependencies/project"
+  },
+  "workspaces": [
+    "workspaces/*"
+  ],
+  "devDependencies": {
+    "shared-dev-opt": "file:packages/shared-dev-opt",
+    "trans-peer-opt": "file:packages/trans-peer-opt"
+  },
+  "peerDependencies": {
+    "trans-peer": "file:packages/trans-peer"
+  },
+  "_id": "demo-omit-dependencies@0.0.0",
+  "extraneous": false,
+  "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project",
+  "_dependencies": {
+    "ws-app": "*"
+  },
+  "dependencies": {
+    "shared-dev-opt": {
+      "version": "1.0.0",
+      "resolved": "file:../packages/shared-dev-opt",
+      "overridden": false,
+      "name": "shared-dev-opt",
+      "devOptional": true,
+      "license": "Apache-2.0",
+      "_id": "shared-dev-opt@1.0.0",
+      "extraneous": false,
+      "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project\\node_modules\\shared-dev-opt",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
+    },
+    "trans-peer-opt": {
+      "version": "1.0.0",
+      "resolved": "file:../packages/trans-peer-opt",
+      "overridden": false,
+      "name": "trans-peer-opt",
+      "devOptional": true,
+      "license": "Apache-2.0",
+      "_id": "trans-peer-opt@1.0.0",
+      "extraneous": false,
+      "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project\\node_modules\\trans-peer-opt",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
+    },
+    "trans-peer": {
+      "version": "1.0.0",
+      "resolved": "file:../packages/trans-peer",
+      "overridden": false,
+      "name": "trans-peer",
+      "license": "Apache-2.0",
+      "peer": true,
+      "_id": "trans-peer@1.0.0",
+      "extraneous": false,
+      "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project\\node_modules\\trans-peer",
+      "_dependencies": {},
+      "devDependencies": {},
+      "peerDependencies": {}
+    },
+    "ws-app": {
+      "version": "1.0.0",
+      "resolved": "file:../workspaces/ws-app",
+      "overridden": false,
+      "name": "ws-app",
+      "license": "Apache-2.0",
+      "devDependencies": {
+        "ws-dev": "file:../../packages/ws-dev"
+      },
+      "optionalDependencies": {
+        "ws-opt": "file:../../packages/ws-opt"
+      },
+      "peerDependencies": {
+        "ws-dev": "1.0.0"
+      },
+      "_id": "ws-app@1.0.0",
+      "extraneous": false,
+      "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project\\node_modules\\ws-app",
+      "_dependencies": {
+        "prod-lib": "file:../../packages/prod-lib",
+        "ws-opt": "file:../../packages/ws-opt"
+      },
+      "dependencies": {
+        "prod-lib": {
+          "version": "1.0.0",
+          "resolved": "file:../packages/prod-lib",
+          "overridden": false,
+          "name": "prod-lib",
+          "license": "Apache-2.0",
+          "optionalDependencies": {
+            "shared-dev-opt": "file:../shared-dev-opt",
+            "trans-opt": "file:../trans-opt"
+          },
+          "peerDependencies": {
+            "trans-peer": "1.0.0",
+            "trans-peer-opt": "1.0.0"
+          },
+          "peerDependenciesMeta": {
+            "trans-peer-opt": {
+              "optional": true
+            }
+          },
+          "_id": "prod-lib@1.0.0",
+          "extraneous": false,
+          "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project\\node_modules\\prod-lib",
+          "_dependencies": {
+            "prod-child": "file:../prod-child",
+            "shared-dev-opt": "file:../shared-dev-opt",
+            "trans-opt": "file:../trans-opt"
+          },
+          "devDependencies": {},
+          "dependencies": {
+            "prod-child": {
+              "version": "1.0.0",
+              "resolved": "file:../packages/prod-child",
+              "overridden": false,
+              "name": "prod-child",
+              "license": "Apache-2.0",
+              "_id": "prod-child@1.0.0",
+              "extraneous": false,
+              "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project\\node_modules\\prod-child",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            },
+            "shared-dev-opt": {
+              "version": "1.0.0",
+              "name": "shared-dev-opt",
+              "devOptional": true,
+              "license": "Apache-2.0",
+              "_id": "shared-dev-opt@1.0.0",
+              "extraneous": false,
+              "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project\\node_modules\\shared-dev-opt",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            },
+            "trans-opt": {
+              "version": "1.0.0",
+              "resolved": "file:../packages/trans-opt",
+              "overridden": false,
+              "name": "trans-opt",
+              "license": "Apache-2.0",
+              "optional": true,
+              "_id": "trans-opt@1.0.0",
+              "extraneous": false,
+              "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project\\node_modules\\trans-opt",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            },
+            "trans-peer-opt": {
+              "version": "1.0.0",
+              "name": "trans-peer-opt",
+              "devOptional": true,
+              "license": "Apache-2.0",
+              "_id": "trans-peer-opt@1.0.0",
+              "extraneous": false,
+              "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project\\node_modules\\trans-peer-opt",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            },
+            "trans-peer": {
+              "version": "1.0.0",
+              "name": "trans-peer",
+              "license": "Apache-2.0",
+              "peer": true,
+              "_id": "trans-peer@1.0.0",
+              "extraneous": false,
+              "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project\\node_modules\\trans-peer",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            }
+          }
+        },
+        "ws-dev": {
+          "version": "1.0.0",
+          "resolved": "file:../packages/ws-dev",
+          "overridden": false,
+          "name": "ws-dev",
+          "dev": true,
+          "license": "Apache-2.0",
+          "_id": "ws-dev@1.0.0",
+          "extraneous": false,
+          "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project\\node_modules\\ws-dev",
+          "_dependencies": {},
+          "devDependencies": {},
+          "peerDependencies": {}
+        },
+        "ws-opt": {
+          "version": "1.0.0",
+          "resolved": "file:../packages/ws-opt",
+          "overridden": false,
+          "name": "ws-opt",
+          "license": "Apache-2.0",
+          "optional": true,
+          "_id": "ws-opt@1.0.0",
+          "extraneous": false,
+          "path": "D:\\...\\cyclonedx-node-npm\\demo\\omit-dependencies\\project\\node_modules\\ws-opt",
+          "_dependencies": {},
+          "devDependencies": {},
+          "peerDependencies": {}
+        }
+      }
+    }
+  }
+}
